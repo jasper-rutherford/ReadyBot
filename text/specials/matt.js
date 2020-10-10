@@ -7,7 +7,7 @@ module.exports = {
     description: "",
     execute(message, bot)
     {
-        if (true)
+        if (false)
         {
             message.delete();
         }

@@ -85,7 +85,6 @@ module.exports = {
 
             //--------------------------------------------------------------------
 
-            console.log(atHours);
 
             bot.readySoon.set(message.member.id, [message.member.id, atHours, atMinutes]);
 

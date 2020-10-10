@@ -194,9 +194,11 @@ var bot = {
 
         let millis = (1000 * 60 * 60 * 24) - (1000 * 60 * 60 * hour) - (1000 * 60 * minute) - (1000 * seconds);
 
+
+        let aBot = this;
         setTimeout(function ()
         {
-            client.things.get('textcommands').get('reset').execute('auto', 'auto', this);
+            client.things.get('textcommands').get('reset').execute('auto', 'auto', aBot);
         }, millis);
     }
 }
