@@ -7,7 +7,10 @@ module.exports = {
     {
         if (true)
         {
-            message.react('🤓');
+            if (Math.random() < .1)
+            {
+                message.react('🤓');
+            }
         }
     }
 }  

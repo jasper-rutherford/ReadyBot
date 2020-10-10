@@ -44,37 +44,48 @@ module.exports = {
             let currentMinutes = date.getMinutes();
             let currentHours = date.getHours();
 
-//------------------------------------------------------------------
-            if (atHours > 24)
-            {
-                atHours %= 24;
-            }
-
+            //------------------------------------------------------------------ Josiah wrote most of the stuff between these lines
             command = args.shift();
 
-            if (command === undefined)
+            // convert excess minutes to hours instead
+
+            while (atMinutes >= 60)
             {
-
+                atMinutes -= 60;
+                atHours += 1;
             }
-            else if (command === 'am')
+
+            if (command === 'am') //next am occurance
             {
-
+                if (atHours > 12)
+                    atHours %= 12;
             }
-            else if (command === 'pm')
+            else if (command === 'pm') //next pm occurance
             {
-
+                if (atHours > 12)
+                    atHours %= 12;
+                atHours += 12
             }
-            else 
+            else //military 
             {
-
+                if (atHours > 24)
+                    atHours %= 24;
             }
-            
 
-            //the amount of milliseconds between now and the goal
-            let totMillis = 0;
+            atMillis = (atHours * 60 + atMinutes) * 60 * 1000;
+            currentMillis = ((currentHours * 60 + currentMinutes) * 60 + date.getSeconds()) * 1000;
+
+            let totMillis = atMillis - currentMillis;
+
+            //if the time has already passed today assume that the user wants to ready at that time on the next day
+
+            if (totMillis < 0)
+                totMillis += (24 * 60 * 60 * 1000);
 
 
-//--------------------------------------------------------------------
+            //--------------------------------------------------------------------
+
+            console.log(atHours);
 
             bot.readySoon.set(message.member.id, [message.member.id, atHours, atMinutes]);
 
@@ -82,7 +93,7 @@ module.exports = {
 
             let out = 'I\'ve got you marked down for ';
 
-            if (atHours > 12)
+            if ((command === 'am' || command === 'pm') && atHours > 12)
             {
                 atHours -= 12;
             }
@@ -96,13 +107,17 @@ module.exports = {
 
             out += atMinutes;
 
-            if (atPm)
+            if (command === 'am')
+            {
+                out += 'am';
+            }
+            else if (command === 'pm')
             {
                 out += 'pm';
             }
             else
             {
-                out += 'am';
+                out += ' Military Time'
             }
 
             message.channel.send(out);

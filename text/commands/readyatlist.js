@@ -31,14 +31,46 @@ module.exports = {
             {
                 let minutes = member[2];
                 let hours = member[1];
-                if (minutes < 10)
+
+                let am = true;
+
+                if (hours > 11)
                 {
-                    list = list + bot.guild.members.cache.get(member[0]).displayName + ' will be ready at ' + hours + ':0' + minutes + '\n';
+                    am = false;
+                }
+
+
+                list += bot.guild.members.cache.get(member[0]).displayName + ' will be ready at ';
+
+                if (am)
+                {
+                    list += hours;
                 }
                 else
                 {
-                    list = list + bot.guild.members.cache.get(member[0]).displayName + ' will be ready at ' + hours + ':' + minutes + '\n';
+                    list += (hours - 12);
                 }
+
+
+                if (minutes < 10)
+                {
+                    list += ':0'
+                }
+                else
+                {
+                    list += ':'
+                }
+
+                if (am)
+                {
+                    list += minutes + 'am';
+                }
+                else
+                {
+                    list += minutes + 'pm';
+                }
+
+                list += '\n';
             })
 
 

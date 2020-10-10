@@ -1,7 +1,7 @@
 const { MessageFlags } = require("discord.js")
 
 module.exports = {
-    id: '111579235059060736',
+    id: '321665327845081089',
     name: 'matt',
     secret: false,
     description: "",
