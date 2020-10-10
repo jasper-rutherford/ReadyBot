@@ -7,8 +7,8 @@ module.exports = {
     {
         if (true) //reacts to boris' messages with a 🎄
         {
-            let date = new Date();
-            let hours = date.getHours();
+            var date = new Date();
+            var hours = date.getHours();
 
             hours -= 3;
             if (hours < 0)

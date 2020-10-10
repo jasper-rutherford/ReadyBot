@@ -19,8 +19,8 @@ module.exports = {
         {
             if (bot.readySoon.get(message.member.id) != undefined)
             {
-                let minutes = bot.readySoon.get(message.member.id)[2]
-                let hours = bot.readySoon.get(message.member.id)[1]
+                var minutes = bot.readySoon.get(message.member.id)[2]
+                var hours = bot.readySoon.get(message.member.id)[1]
 
                 if (minutes < 10)
                 {
@@ -40,15 +40,15 @@ module.exports = {
         //try to parse it
         else 
         {
-            let digits = command.replace(/\D/g, '');
+            var digits = command.replace(/\D/g, '');
 
-            let atMinutes = digits % 100;
-            let atHours = (digits - atMinutes) / 100;
+            var atMinutes = digits % 100;
+            var atHours = (digits - atMinutes) / 100;
 
-            let date = new Date();
+            var date = new Date();
 
-            let currentMinutes = date.getMinutes();
-            let currentHours = date.getHours();
+            var currentMinutes = date.getMinutes();
+            var currentHours = date.getHours();
 
             //------------------------------------------------------------------ Josiah wrote most of the stuff between these lines
             command = args.shift();
@@ -81,7 +81,7 @@ module.exports = {
             atMillis = (atHours * 60 + atMinutes) * 60 * 1000;
             currentMillis = ((currentHours * 60 + currentMinutes) * 60 + date.getSeconds()) * 1000;
 
-            let totMillis = atMillis - currentMillis;
+            var totMillis = atMillis - currentMillis;
 
             //if the time has already passed today assume that the user wants to ready at that time on the next day
 
@@ -99,7 +99,7 @@ module.exports = {
 
             message.react('✅');
 
-            let out = 'I\'ve got you marked down for ';
+            var out = 'I\'ve got you marked down for ';
 
             if ((command === 'am' || command === 'pm') && atHours > 12)
             {
@@ -132,13 +132,13 @@ module.exports = {
 
             setTimeout(function ()
             {
-                let atMinutes = bot.readySoon.get(message.member.id)[2];
-                let atHours = bot.readySoon.get(message.member.id)[1];
+                var atMinutes = bot.readySoon.get(message.member.id)[2];
+                var atHours = bot.readySoon.get(message.member.id)[1];
 
-                let date = new Date();
+                var date = new Date();
 
-                let currentMinutes = date.getMinutes();
-                let currentHours = date.getHours();
+                var currentMinutes = date.getMinutes();
+                var currentHours = date.getHours();
 
                 if (bot.readySoon.get(message.member.id) != undefined && atMinutes === currentMinutes && atHours === currentHours)
                 {
@@ -156,7 +156,7 @@ module.exports = {
     {
         const FileSystem = require("fs");
 
-        let wrapper =
+        var wrapper =
         {
             readyAtList: []
         }
@@ -167,7 +167,7 @@ module.exports = {
             wrapper.readyAtList.push(thing);
         });
 
-        let fileName = 'readyAtList.json';
+        var fileName = 'readyAtList.json';
         if (bot.testbuild)
         {
             fileName = 'testReadyAtList.json';

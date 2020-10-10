@@ -26,7 +26,7 @@ module.exports = {
             else
             {
                 //sets the person being sent to the gulag
-                let gulaguy = message.mentions.members.first();
+                var gulaguy = message.mentions.members.first();
 
                 bot.gulaguy = gulaguy;
                 bot.gulaguyID = gulaguy.id;

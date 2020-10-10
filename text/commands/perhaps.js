@@ -16,8 +16,8 @@ module.exports = {
 
                 bot.gulagVoters.push(message.member.id);
 
-                let tempYes = bot.gulagYesVotes;
-                let tempNo = bot.gulagNoVotes;
+                var tempYes = bot.gulagYesVotes;
+                var tempNo = bot.gulagNoVotes;
 
                 //update vote message to display current vote tallies
                 var index = bot.voteMessage.content.indexOf("\n");

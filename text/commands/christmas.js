@@ -5,7 +5,7 @@ module.exports = {
     description: "christmas",
     execute(message, args, bot)
     {
-        let date = new Date();
+        var date = new Date();
 
         if (date.getDay === 25 && date.getMonth() === 12)
         {

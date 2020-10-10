@@ -3,7 +3,7 @@ module.exports = {
     description: "Jaspa Stuff",
     execute(message, bot)
     {
-        let specialPref = '\\';
+        var specialPref = '\\';
 
         //run special commands for jaspa
         if (message.content.startsWith(specialPref))
