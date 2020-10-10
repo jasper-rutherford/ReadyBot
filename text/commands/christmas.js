@@ -7,7 +7,7 @@ module.exports = {
     {
         let date = new Date();
 
-        if (date.getDay === 25 && date.getMonth() === 'Dec')
+        if (date.getDay === 25 && date.getMonth() === 12)
         {
             message.channel.send('yes');
         }
