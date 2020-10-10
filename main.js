@@ -206,7 +206,7 @@ var bot = {
     readReadySoonList: function (bot)
     {
         let fileName = 'readyAtList.json';
-        if (bot.testBuild)
+        if (bot.testbuild)
         {
             fileName = 'testReadyAtList.json';
         }
