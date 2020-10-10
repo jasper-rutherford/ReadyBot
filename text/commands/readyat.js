@@ -1,3 +1,6 @@
+const { Collection } = require("discord.js");
+const { errorMonitor } = require("stream");
+
 module.exports = {
     name: 'readyat',
     alt: 'readysoon',
@@ -29,6 +32,9 @@ module.exports = {
                 }
 
                 bot.readySoon.delete(message.member.id);
+
+                //save the list of people who are ready soon to a file
+                this.savetoFile(bot);
             }
         }
         //try to parse it
@@ -88,6 +94,9 @@ module.exports = {
 
             bot.readySoon.set(message.member.id, [message.member.id, atHours, atMinutes]);
 
+            //save the list of people who are ready soon to a file
+            this.savetoFile(bot);
+
             message.react('✅');
 
             let out = 'I\'ve got you marked down for ';
@@ -135,8 +144,33 @@ module.exports = {
                 {
                     message.channel.send('Are ya ready yet, ' + `<@${message.member.id}>` + '?');
                     bot.readySoon.delete(message.member.id);
+
+                    //save the list of people who are ready soon to a file
+                    this.savetoFile(bot);
                 }
             }, totMillis);
         }
+    },
+
+    savetoFile: function (bot)
+    {
+        const FileSystem = require("fs");
+
+        let wrapper =
+        {
+            readyAtList: []
+        }
+
+        //converts the collection of readyat times to an array of readyat times
+        bot.readySoon.forEach(thing =>
+        {
+            wrapper.readyAtList.push(thing);
+        });
+
+        //saves the array to a file
+        FileSystem.writeFile('readyAtList.json', JSON.stringify(wrapper), e =>
+        {
+            if (e) throw e;
+        });
     }
 }

@@ -6,7 +6,7 @@ const { token, testToken } = require('./config.json');
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: false,
+    testbuild: true,
     token: token,
     prefix: '~',
     client: client,
@@ -103,6 +103,7 @@ var bot = {
         this.readyBotChannel = client.channels.cache.get(bot.readyBotChannelID);
         this.startHour = new Date().getHours();
         this.resetAtMidnight();
+        this.readReadySoonList(this);
     },
 
 
@@ -200,6 +201,20 @@ var bot = {
         {
             client.things.get('textcommands').get('reset').execute('auto', 'auto', aBot);
         }, millis);
+    },
+
+    readReadySoonList: function (bot)
+    {
+        //reads in the array of readyat times from the file
+        var data = JSON.parse(fs.readFileSync('readyAtList.json'));
+
+        //converts the array into the collection in the bot
+        data.readyAtList.forEach(thing =>
+        {
+            bot.readySoon.set(thing[0], thing);
+        });
+
+        console.log('ReadySoon data has been read in');
     }
 }
 
