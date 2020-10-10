@@ -22,9 +22,9 @@ module.exports = {
                 message.member.roles.add(bot.readyRole);
                 bot.updateNumReady();
 
-                if (bot.client.things.get(message.member.id) != undefined)
+                if (bot.readySoon.get(message.member.id) != undefined)
                 {
-                    bot.client.things.delete(message.member.id);
+                    bot.readySoon.delete(message.member.id);
                 }
                 
                 message.react('👍');

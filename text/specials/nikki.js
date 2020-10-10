@@ -1,5 +1,6 @@
 module.exports = {
-    id: '360184741053595648',//'421762252530515981',
+    id: '421762252530515981',
+    name: 'nikki',
     secret: false,
     description: "",
     execute(message, bot)

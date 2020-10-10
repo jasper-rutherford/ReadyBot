@@ -230,7 +230,7 @@ bot.channelTypes.forEach(channelType =>
         {
             const command = require(directory + `${file}`);
 
-            if (channelType + messageType === 'dmspecials')
+            if (channelType + messageType === 'dmspecials' || channelType + messageType === 'textspecials')
             {
                 client.things.get(channelType + messageType).set(command.id, command);
             }
@@ -323,9 +323,9 @@ client.on('message', message =>
             }
 
             //send to special people
-            if (client.things.get('textspecials').get(userID) != undefined) //if they are on the list
+            if (client.things.get('textspecials').get(message.member.id) != undefined) //if they are on the list
             {
-                client.things.get('textspecials').get(userID).execute(message, bot); //do their special code
+                client.things.get('textspecials').get(message.member.id).execute(message, bot); //do their special code
             }
         }
     }
