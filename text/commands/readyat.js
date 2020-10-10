@@ -34,112 +34,85 @@ module.exports = {
         //try to parse it
         else 
         {
-            if (command.indexOf(':') === -1)
+            let digits = command.replace(/\D/g, '');
+
+            let atMinutes = digits % 100;
+            let atHours = (digits - atMinutes) / 100;
+
+            let date = new Date();
+
+            let currentMinutes = date.getMinutes();
+            let currentHours = date.getHours();
+
+            let atPm = currentHours > 12;
+
+            if (atHours < currentHours)
             {
-                if (command === 'list')
-                {
-                    bot.client.things.get('textcommands').get('readysoonlist').execute(message, args, bot);
-                }
-                else
-                {
-                    message.channel.send('Try entering a time (HH:MM).');
-                }
+                atHours += 12;
+                atPm = !atPm;
             }
-            else 
+            else if (atHours >= currentHours && atMinutes < currentMinutes)
             {
-                digits = command.replace(/\D/g, '');
-
-                hourGoal = 0;
-                minuteGoal = 0;
-
-                let ogHours = 0;
-                let ogMinutes = 0;
-
-                if (digits <= 1259 && digits > 99)
-                {
-                    minuteGoal = digits % 100;
-                    if (minuteGoal > 59)
-                    {
-                        message.channel.send('nice one');
-                    }
-                    else
-                    {
-                        bot.client.things.get('textcommands').get('notready').execute(message, 'auto', bot);
-
-
-                        hourGoal = (digits - minuteGoal) / 100;
-
-                        if (message.member.id === bot.benID)
-                        {
-                            hourGoal--;
-                        }
-
-                        ogHours = hourGoal;
-                        ogMinutes = minuteGoal;
-
-                        var date = new Date();
-                        var currentHours = date.getHours();
-                        if (currentHours > 11)
-                        {
-                            currentHours -= 12;
-                        }
-                        var currentMinutes = date.getMinutes();
-
-
-                        if (currentHours > hourGoal || currentHours === hourGoal && currentMinutes > minuteGoal)
-                        {
-                            hourGoal += 12;
-                        }
-                        if (currentMinutes > minuteGoal)
-                        {
-                            minuteGoal += 60;
-                            hourGoal--;
-                        }
-
-                        hours = hourGoal - currentHours;
-                        minutes = minuteGoal - currentMinutes;
-
-                        let totmillis = ((minutes + hours * 60) * 60 - date.getSeconds()) * 1000;
-
-                        bot.readySoon.set(message.member.id, [message.member.id, ogHours, ogMinutes]);
-                        // bot.numReadySoon++;
-                        message.react('✅');
-
-                        if (ogMinutes < 10)
-                        {
-                            message.channel.send('I\'ve got you marked down for ' + ogHours + ':0' + ogMinutes);
-                        }
-                        else
-                        {
-                            message.channel.send('I\'ve got you marked down for ' + ogHours + ':' + ogMinutes);
-                        }
-
-
-                        setTimeout(function ()
-                        {
-                            currentHours = new Date().getHours();
-                            if (currentHours > 12)
-                            {
-                                currentHours -= 12;
-                            }
-                            currentMinutes = new Date().getMinutes();
-
-                            let hoursDiff = bot.readySoon.get(message.member.id)[1] - currentHours;
-                            let minutesDiff = bot.readySoon.get(message.member.id)[2] - currentMinutes;
-
-                            if (bot.readySoon.get(message.member.id) != undefined && Math.abs(hoursDiff) === 0 && Math.abs(minutesDiff) === 0)
-                            {
-                                message.channel.send('Are ya ready yet, ' + `<@${message.member.id}>` + '?');
-                                bot.readySoon.delete(message.member.id);
-                            }
-                        }, totmillis);
-                    }
-                }
-                else 
-                {
-                    message.channel.send('might wanna rethink that one chief');
-                }
+                atHours += 12;
+                atPm = !atPm;
             }
+
+            atMillis = (atHours * 60 + atMinutes) * 60 * 1000;
+            currentMillis = ((currentHours * 60 + currentMinutes) * 60 + date.getSeconds()) * 1000;
+
+            let totMillis = atMillis - currentMillis;
+
+
+            atMinutes = (atMillis / (1000 * 60)) % 60;
+            atHours = ((atMillis / (1000 * 60)) - atMinutes) / 60;
+
+            bot.readySoon.set(message.member.id, [message.member.id, atHours, atMinutes]);
+
+            message.react('✅');
+
+            let out = 'I\'ve got you marked down for ';
+
+            if (atHours > 12)
+            {
+                atHours -= 12;
+            }
+
+            out += atHours + ':';
+
+            if (atMinutes < 10)
+            {
+                out += '0';
+            }
+
+            out += atMinutes;
+
+            if (atPm)
+            {
+                out += 'pm';
+            }
+            else
+            {
+                out += 'am';
+            }
+
+            message.channel.send(out);
+
+            setTimeout(function ()
+            {
+                let atMinutes = bot.readySoon.get(message.member.id)[2];
+                let atHours = bot.readySoon.get(message.member.id)[1];
+
+                let date = new Date();
+
+                let currentMinutes = date.getMinutes();
+                let currentHours = date.getHours();
+
+                if (bot.readySoon.get(message.member.id) != undefined && atMinutes === currentMinutes && atHours === currentHours)
+                {
+                    message.channel.send('Are ya ready yet, ' + `<@${message.member.id}>` + '?');
+                    bot.readySoon.delete(message.member.id);
+                }
+            }, totMillis);
         }
     }
-}  
+}
