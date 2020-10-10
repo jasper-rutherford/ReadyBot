@@ -8,6 +8,7 @@ module.exports = {
         if (message.member.roles.cache.has(bot.readyRoleID))
         {
             message.member.roles.remove(bot.readyRole);
+            bot.updateNumReady();
 
             if (args != 'auto')
             {
@@ -15,12 +16,11 @@ module.exports = {
                 bot.react(message, bot.numReady() - 1);
                 message.react('✅');
             }
-            bot.updateNumReady(bot.numReady() - 1);
         }
         else if (args != 'auto')
         {
             message.channel.send('We get it, you aren\'t ready');
-            bot.updateNumReady(bot.numReady());
+            bot.updateNumReady();
         }
     }    
 }  

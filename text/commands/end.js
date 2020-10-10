@@ -5,7 +5,7 @@ module.exports = {
     description: "",
     execute(message, args, bot)
     {
-        if (message === 'auto' || (message.member.roles.cache.has(bot.imposterRoleID) && bot.voteActive))
+        if (message === 'auto' || message.member.roles.cache.has(bot.imposterRoleID))
         {
             if (bot.gulagYesVotes > bot.gulagNoVotes)
             {

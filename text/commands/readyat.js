@@ -38,43 +38,34 @@ module.exports = {
 
             let atMinutes = digits % 100;
             let atHours = (digits - atMinutes) / 100;
+            atHours %= 12;
 
             let date = new Date();
 
             let currentMinutes = date.getMinutes();
             let currentHours = date.getHours();
 
-//------------------------------------------------------------------
-            if (atHours > 24)
+            let atPm = currentHours > 12;
+
+            if (atHours < currentHours)
             {
-                atHours %= 24;
+                atHours += 12;
+                atPm = !atPm;
+            }
+            else if (atHours >= currentHours && atMinutes < currentMinutes)
+            {
+                atHours += 12;
+                atPm = !atPm;
             }
 
-            command = args.shift();
+            atMillis = (atHours * 60 + atMinutes) * 60 * 1000;
+            currentMillis = ((currentHours * 60 + currentMinutes) * 60 + date.getSeconds()) * 1000;
 
-            if (command === undefined)
-            {
-
-            }
-            else if (command === 'am')
-            {
-
-            }
-            else if (command === 'pm')
-            {
-
-            }
-            else 
-            {
-
-            }
-            
-
-            //the amount of milliseconds between now and the goal
-            let totMillis = 0;
+            let totMillis = atMillis - currentMillis;
 
 
-//--------------------------------------------------------------------
+            atMinutes = (atMillis / (1000 * 60)) % 60;
+            atHours = ((atMillis / (1000 * 60)) - atMinutes) / 60;
 
             bot.readySoon.set(message.member.id, [message.member.id, atHours, atMinutes]);
 
