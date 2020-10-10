@@ -13,7 +13,7 @@ module.exports = {
 
                 bot.readyBotChannel.send('It\'s Tomorrow! I\'ll reset the list.');
 
-                bot.updateNumReady();
+                bot.updateNumReady(0);
         }
         else
         {
@@ -31,9 +31,9 @@ module.exports = {
                     })
 
                     message.channel.send('Nobody is ready!');
-
-                    bot.updateNumReady();
                 }
+
+                bot.updateNumReady(0);
             }
             else
             {

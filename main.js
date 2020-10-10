@@ -99,7 +99,7 @@ var bot = {
         this.gulagRole = this.guild.roles.cache.get(this.gulagRoleID);
         this.memberRole = this.guild.roles.cache.get(this.memberRoleID);
         this.proxyChannel = client.channels.cache.get(bot.proxyChannelID);
-        this.updateNumReady();
+        this.updateNumReady(this.numReady());
         this.readyBotChannel = client.channels.cache.get(bot.readyBotChannelID);
         this.startHour = new Date().getHours();
         this.resetAtMidnight();
@@ -112,23 +112,23 @@ var bot = {
             .then()
             .catch(console.error);
 
-        return this.guild.roles.cache.get(this.readyRoleID).members.size;;
+        return this.guild.roles.cache.get(this.readyRoleID).members.size;
     },
 
-    updateNumReady: function ()
+    updateNumReady: function (numReady)
     {
         //updates to say the bot is playing how many people are ready
-        if (this.numReady() === 0)
+        if (numReady === 0)
         {
             client.user.setActivity('Nobody is ready!');
         }
-        else if (this.numReady() === 1)
+        else if (numReady === 1)
         {
             client.user.setActivity('1 person is ready!');
         }
         else 
         {
-            client.user.setActivity(this.numReady() + ' people are ready!');
+            client.user.setActivity(numReady + ' people are ready!');
         }
     },
 

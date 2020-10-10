@@ -15,12 +15,12 @@ module.exports = {
             if (message.member.roles.cache.has(bot.readyRoleID))
             {
                 message.channel.send('We get it, you\'re ready');
-                bot.updateNumReady();
+
+                bot.updateNumReady(bot.numReady());
             }
             else
             {
                 message.member.roles.add(bot.readyRole);
-                bot.updateNumReady();
 
                 if (bot.readySoon.get(message.member.id) != undefined)
                 {
@@ -30,6 +30,8 @@ module.exports = {
                 message.react('👍');
                 bot.react(message, bot.numReady() + 1);
                 message.react('✅');
+
+                bot.updateNumReady(bot.numReady() + 1);
             }
         }
     }
