@@ -1,13 +1,13 @@
 module.exports = {
-    id: '111579235059060736',
-    name: 'ben',
+    id: '367706124926844929',
+    name: 'boris',
     secret: false,
     description: "",
     execute(message, bot)
     {
         if (true)
         {
-            message.react('🤓');
+            message.react('🎄');
         }
     }
 }  

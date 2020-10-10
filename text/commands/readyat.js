@@ -38,6 +38,7 @@ module.exports = {
 
             let atMinutes = digits % 100;
             let atHours = (digits - atMinutes) / 100;
+            atHours %= 12;
 
             let date = new Date();
 
