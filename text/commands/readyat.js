@@ -167,8 +167,14 @@ module.exports = {
             wrapper.readyAtList.push(thing);
         });
 
+        let fileName = 'readyAtList.json';
+        if (bot.testBuild)
+        {
+            fileName = 'testReadyAtList.json';
+        }
+
         //saves the array to a file
-        FileSystem.writeFile('readyAtList.json', JSON.stringify(wrapper), e =>
+        FileSystem.writeFile(fileName, JSON.stringify(wrapper), e =>
         {
             if (e) throw e;
         });

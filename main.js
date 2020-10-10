@@ -6,7 +6,7 @@ const { token, testToken } = require('./config.json');
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: true,
+    testbuild: false,
     token: token,
     prefix: '~',
     client: client,
@@ -205,8 +205,14 @@ var bot = {
 
     readReadySoonList: function (bot)
     {
+        let fileName = 'readyAtList.json';
+        if (bot.testBuild)
+        {
+            fileName = 'testReadyAtList.json';
+        }
+
         //reads in the array of readyat times from the file
-        var data = JSON.parse(fs.readFileSync('readyAtList.json'));
+        var data = JSON.parse(fs.readFileSync(fileName));
 
         //converts the array into the collection in the bot
         data.readyAtList.forEach(thing =>
