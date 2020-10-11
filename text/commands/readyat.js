@@ -1,3 +1,5 @@
+//written by Ben Esposito
+
 const { Collection } = require("discord.js");
 const { errorMonitor } = require("stream");
 
@@ -27,7 +29,7 @@ function execute(message, args, bot) {
 			bot.readySoon.delete(message.member.id);
 			savetoFile(bot);
 		} else
-			message.channel.send(`You weren't on the list in the first place, friend`);
+			message.channel.send(`You weren't on the list in the first place, nerd`);
 	} else {
 		let readyTime = parseTime(arg);
 
@@ -55,7 +57,7 @@ function execute(message, args, bot) {
 			bot.readySoon.set(message.member.id, [message.member.id, readyTime.hour, readyTime.minute]);
 			savetoFile(bot);
 		} else
-			message.channel.send(`That's an invalid format, try again`);
+			message.channel.send(`Nah, try again`);
 	}
 }
 
