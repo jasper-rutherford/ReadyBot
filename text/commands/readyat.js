@@ -86,8 +86,11 @@ function parseTime(timeString) {
 				let currentTime = new Date();
 
 				/* if the current time is later than the time requested, add 12 hours */
-				if(currentTime.getHours() % 12 > time.hour ||
-						(currentTime.getHours() % 12 == time.hour && currentTime.getMinutes() > time.minute)) {
+				let flipMeridian = currentTime.getHours() % 12 > time.hour ||
+									(currentTime.getHours() % 12 == time.hour && currentTime.getMinutes() >= time.minute);
+				let isPm = currentTime.getHours() >= 12;
+				/* ^ is XOR */
+				if(isPm ^ flipMeridian) {
 					time.hour += 12;
 				}
 			}
