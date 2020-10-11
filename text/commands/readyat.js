@@ -26,14 +26,15 @@ function execute(message, args, bot) {
 			
 			bot.readySoon.delete(message.member.id);
 			savetoFile(bot);
-		}
+		} else
+			message.channel.send(`You weren't on the list in the first place, friend`);
 	} else {
 		let readyTime = parseTime(arg);
 
 		if(readyTime) {
 			message.channel.send(`I've got you marked down for ${getTimeString(readyTime)}`);
 
-			/* -------- thanks Josiah ---------- */
+			/* -------- thanks Jasper & Josiah ---------- */
 			let currentTime = new Date();
 			let readyAtMillis = (readyTime.hour * 60 + readyTime.minute) * 60 * 1000;
 			let currentMillis = ((currentTime.getHours() * 60 + currentTime.getMinutes()) * 60 + currentTime.getSeconds()) * 1000;
@@ -54,7 +55,7 @@ function execute(message, args, bot) {
 			bot.readySoon.set(message.member.id, [message.member.id, readyTime.hour, readyTime.minute]);
 			savetoFile(bot);
 		} else
-			message.channel.send('Failed to parse time, try again');
+			message.channel.send(`That's an invalid format, try again`);
 	}
 }
 
@@ -62,19 +63,21 @@ function parseTime(timeString) {
 	let time;
 	let matches;
 	
+	/* normal time format */
 	if(matches = /^(\d{1,2})(?::(\d{2}))?(?:\s*(am|pm))?$/.exec(timeString)) {
 		time = {
 			hour: Number(matches[1]),
 			minute: Number(matches[2])
 		}
 
+		/* if the time is greater than 12, use miltime instead */
 		if(time.hour > 12)
 			time = null;
 		else {
-			let meridian = matches[3];
-
 			if(!time.minute)
 				time.minute = 0;
+
+			let meridian = matches[3];
 
 			if(meridian) {
 				if(meridian == 'pm' && time.hour != 12)
@@ -82,6 +85,7 @@ function parseTime(timeString) {
 			} else {
 				let currentTime = new Date();
 
+				/* if the current time is later than the time requested, add 12 hours */
 				if(currentTime.getHours() % 12 > time.hour ||
 						(currentTime.getHours() % 12 == time.hour && currentTime.getMinutes() > time.minute)) {
 					time.hour += 12;
@@ -92,6 +96,7 @@ function parseTime(timeString) {
 		}
 	}
 	
+	/* military time format */
 	if(!time && (matches = /^(\d{2}):?(\d{2})$/.exec(timeString))) {
 		time = {
 			hour: Number(matches[1]),
