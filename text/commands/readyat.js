@@ -6,151 +6,94 @@ module.exports = {
     alt: 'readysoon',
     param: 'time',
     secret: false,
-    description: "Declares yourself as ready, but in the future",
-    execute(message, args, bot)
-    {
-        command = args.shift();
+	description: "Declares yourself as ready, but in the future",
+	
+    execute(message, args, bot) {
+		console.log(args);
+		let arg = args.join(' ');
+		
+		if(!arg) {
+			message.channel.send('Try entering a time');
+		} else {
+			let readyTime = this.parseTime(arg);
 
-        if (command === undefined)
-        {
-            message.channel.send('Try entering a time (HH:MM).');
-        }
-        else if (command === 'cancel')
-        {
-            if (bot.readySoon.get(message.member.id) != undefined)
-            {
-                var minutes = bot.readySoon.get(message.member.id)[2]
-                var hours = bot.readySoon.get(message.member.id)[1]
+			if(readyTime) {
+				if(arg == 'cancel') {
+					if(bot.readySoon.get(message.member.id)) {
+						message.channel.send(`${message.member.displayName} will no longer be ready at ${this.getTimeString(readyTime)}`);
+						bot.readySoon.delete(message.member.id);
+					}
+				} else {
+					message.channel.send(`I've got you marked down for ${this.getTimeString(readyTime)}`);
 
-                if (minutes < 10)
-                {
-                    message.channel.send(message.member.displayName + ' will no longer be ready at ' + hours + ':0' + minutes);
-                }
-                else
-                {
-                    message.channel.send(message.member.displayName + ' will no longer be ready at ' + hours + ':' + minutes);
-                }
+					/* -------- thanks Josiah ---------- */
+					let currentTime = new Date();
+					let readyAtMillis = (readyTime.hour * 60 + readyTime.minute) * 60 * 1000;
+					let currentMillis = ((currentTime.getHours() * 60 + currentTime.getMinutes()) * 60 + currentTime.getSeconds()) * 1000;
 
-                bot.readySoon.delete(message.member.id);
+					let delay = readyAtMillis - currentMillis;
+					
+					if(delay < 0)
+						delay += (24 * 60 * 60 * 1000);
+					/* --------------------------------- */
 
-                //save the list of people who are ready soon to a file
-                this.savetoFile(bot);
-            }
-        }
-        //try to parse it
-        else 
-        {
-            var digits = command.replace(/\D/g, '');
+					setTimeout(function() {
+						message.channel.send(`Are ya ready yet, <@${message.member.id}>?`);
+						bot.readySoon.delete(message.member.id);
+						this.savetoFile(bot);
+					}, delay);
+					
+				}
 
-            var atMinutes = digits % 100;
-            var atHours = (digits - atMinutes) / 100;
+				message.react('✅');
+				bot.readySoon.set(message.member.id, [message.member.id, readyTime.hour, readyTime.minute]);
+				this.savetoFile(bot);
+			} else
+				message.channel.send('Failed to parse time, try again');
+		}
+	},
 
-            var date = new Date();
+	parseTime(timeString) {
+		let matches = /(\d+)(?::(\d+))?(?:\s*(am|pm))?$/.exec(timeString);
+		
+		if(matches) {
+			let time = {
+				hour: Number(matches[1]),
+				minute: Number(matches[2])
+			}
 
-            var currentMinutes = date.getMinutes();
-            var currentHours = date.getHours();
+			let meridian = matches[3];
 
-            //------------------------------------------------------------------ Josiah wrote most of the stuff between these lines
-            command = args.shift();
+			if(!time.minute)
+				time.minute = 0;
+			
+			if(meridian) {
+				if(meridian == 'pm')
+					time.hour += 12;
+			} else {
+				let currentTime = new Date();
 
-            // convert excess minutes to hours instead
+				if(!(currentTime.getHours() % 12 > time.hour ||
+						currentTime.getHours() % 12 == time.hour && currentTime.getMinutes() > time.minute))
+					time.hour += 12;
+			}
 
-            while (atMinutes >= 60)
-            {
-                atMinutes -= 60;
-                atHours += 1;
-            }
+			time.hour %= 24;
 
-            if (command === 'am') //next am occurance
-            {
-                if (atHours > 12)
-                    atHours %= 12;
-            }
-            else if (command === 'pm') //next pm occurance
-            {
-                if (atHours > 12)
-                    atHours %= 12;
-                atHours += 12
-            }
-            else //military 
-            {
-                if (atHours > 24)
-                    atHours %= 24;
-            }
+			return time;
+		} else
+			return null;
+	},
 
-            atMillis = (atHours * 60 + atMinutes) * 60 * 1000;
-            currentMillis = ((currentHours * 60 + currentMinutes) * 60 + date.getSeconds()) * 1000;
+	getTimeString(time) {
+		let meridian = (time.hour >= 12)? 'pm' : 'am';
+		let hourStr = time.hour % 12;
 
-            var totMillis = atMillis - currentMillis;
-
-            //if the time has already passed today assume that the user wants to ready at that time on the next day
-
-            if (totMillis < 0)
-                totMillis += (24 * 60 * 60 * 1000);
-
-
-            //--------------------------------------------------------------------
-
-
-            bot.readySoon.set(message.member.id, [message.member.id, atHours, atMinutes]);
-
-            //save the list of people who are ready soon to a file
-            this.savetoFile(bot);
-
-            message.react('✅');
-
-            var out = 'I\'ve got you marked down for ';
-
-            if ((command === 'am' || command === 'pm') && atHours > 12)
-            {
-                atHours -= 12;
-            }
-
-            out += atHours + ':';
-
-            if (atMinutes < 10)
-            {
-                out += '0';
-            }
-
-            out += atMinutes;
-
-            if (command === 'am')
-            {
-                out += 'am';
-            }
-            else if (command === 'pm')
-            {
-                out += 'pm';
-            }
-            else
-            {
-                out += ' Military Time'
-            }
-
-            message.channel.send(out);
-
-            setTimeout(function ()
-            {
-                var atMinutes = bot.readySoon.get(message.member.id)[2];
-                var atHours = bot.readySoon.get(message.member.id)[1];
-
-                var date = new Date();
-
-                var currentMinutes = date.getMinutes();
-                var currentHours = date.getHours();
-
-                if (bot.readySoon.get(message.member.id) != undefined && atMinutes === currentMinutes && atHours === currentHours)
-                {
-                    message.channel.send('Are ya ready yet, ' + `<@${message.member.id}>` + '?');
-                    bot.readySoon.delete(message.member.id);
-
-                    //save the list of people who are ready soon to a file
-                    this.savetoFile(bot);
-                }
-            }, totMillis);
-        }
-    },
+		if(hourStr == '0')
+			hourStr = '12';
+		
+		return `${hourStr % 12}:${String(time.minute).padStart(2, '0')}${meridian}`;
+	},
 
     savetoFile: function (bot)
     {
