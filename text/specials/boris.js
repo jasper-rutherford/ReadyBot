@@ -10,7 +10,7 @@ module.exports = {
             var date = new Date();
             var hours = date.getHours();
 
-            hours -= 3;
+            hours -= 2;
             if (hours < 0)
             {
                 hours += 24;
