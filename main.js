@@ -47,7 +47,7 @@ var bot = {
 
     relayMessageToJaspa: function (message)
     {
-        let jaspaChannel = this.client.channels.cache.get(this.jaspaDM)
+        var jaspaChannel = this.client.channels.cache.get(this.jaspaDM)
 
         if (message.channel.type === 'dm')
         {
@@ -187,16 +187,16 @@ var bot = {
 
     resetAtMidnight: function ()
     {
-        let date = new Date();
+        var date = new Date();
 
-        let hour = date.getHours();
-        let minute = date.getMinutes();
-        let seconds = date.getSeconds();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var seconds = date.getSeconds();
 
-        let millis = (1000 * 60 * 60 * 24) - (1000 * 60 * 60 * hour) - (1000 * 60 * minute) - (1000 * seconds);
+        var millis = (1000 * 60 * 60 * 24) - (1000 * 60 * 60 * hour) - (1000 * 60 * minute) - (1000 * seconds);
 
 
-        let aBot = this;
+        var aBot = this;
         setTimeout(function ()
         {
             client.things.get('textcommands').get('reset').execute('auto', 'auto', aBot);
@@ -205,8 +205,14 @@ var bot = {
 
     readReadySoonList: function (bot)
     {
+        var fileName = 'readyAtList.json';
+        if (bot.testbuild)
+        {
+            fileName = 'testReadyAtList.json';
+        }
+
         //reads in the array of readyat times from the file
-        var data = JSON.parse(fs.readFileSync('readyAtList.json'));
+        var data = JSON.parse(fs.readFileSync(fileName));
 
         //converts the array into the collection in the bot
         data.readyAtList.forEach(thing =>

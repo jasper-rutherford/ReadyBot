@@ -4,8 +4,8 @@ module.exports = {
     description: "duh",
     execute(message, args, bot)
     {
-        let out = '';
-        let commands = [];
+        var out = '';
+        var commands = [];
 
         bot.client.things.get('textcommands').forEach(command =>
         {

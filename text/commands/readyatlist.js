@@ -12,7 +12,7 @@ module.exports = {
         else
         {
             //generates the first line of the list
-            let list = 'The following ';
+            var list = 'The following ';
 
 
             if (bot.readySoon.size === 1)
@@ -29,10 +29,10 @@ module.exports = {
             //adds each ready person to the list
             bot.readySoon.forEach(member =>
             {
-                let minutes = member[2];
-                let hours = member[1];
+                var minutes = member[2];
+                var hours = member[1];
 
-                let am = true;
+                var am = true;
 
                 if (hours > 11)
                 {

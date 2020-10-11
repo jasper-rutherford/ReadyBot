@@ -4,7 +4,7 @@ module.exports = {
     description: "Lists all the people who are ready",
     execute(message, args, bot)
     {
-        let numReady = message.guild.roles.cache.get(bot.readyRoleID).members.size;
+        var numReady = message.guild.roles.cache.get(bot.readyRoleID).members.size;
 
         if (numReady === 0)
         {
@@ -13,7 +13,7 @@ module.exports = {
         else
         {
             //generates the first line of the list
-            let list = 'The following ';
+            var list = 'The following ';
             
 
             if (numReady === 1)

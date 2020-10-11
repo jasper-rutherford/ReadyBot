@@ -6,7 +6,8 @@ module.exports = {
     alt: 'readysoon',
     param: 'time',
     secret: false,
-    description: "Declares yourself as ready, but in the future",
+	description: "Declares yourself as ready, but in the future",
+	
     execute(message, args, bot) {
 		console.log(args);
 		let arg = args.join(' ');
@@ -44,6 +45,7 @@ module.exports = {
 					
 				}
 
+				message.react('✅');
 				bot.readySoon.set(message.member.id, [message.member.id, readyTime.hour, readyTime.minute]);
 				this.savetoFile(bot);
 			} else
@@ -71,7 +73,8 @@ module.exports = {
 			} else {
 				let currentTime = new Date();
 
-				if(!(currentTime.getHours() % 12 >= time.hour && currentTime.getMinutes() > time.minute))
+				if(!(currentTime.getHours() % 12 > time.hour ||
+						currentTime.getHours() % 12 == time.hour && currentTime.getMinutes() > time.minute))
 					time.hour += 12;
 			}
 
@@ -96,7 +99,7 @@ module.exports = {
     {
         const FileSystem = require("fs");
 
-        let wrapper =
+        var wrapper =
         {
             readyAtList: []
         }
@@ -107,8 +110,14 @@ module.exports = {
             wrapper.readyAtList.push(thing);
         });
 
+        var fileName = 'readyAtList.json';
+        if (bot.testbuild)
+        {
+            fileName = 'testReadyAtList.json';
+        }
+
         //saves the array to a file
-        FileSystem.writeFile('readyAtList.json', JSON.stringify(wrapper), e =>
+        FileSystem.writeFile(fileName, JSON.stringify(wrapper), e =>
         {
             if (e) throw e;
         });
