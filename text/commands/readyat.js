@@ -48,9 +48,16 @@ function execute(message, args, bot) {
 			/* --------------------------------- */
 
 			setTimeout(function() {
-				message.channel.send(`Are ya ready yet, <@${message.member.id}>?`);
-				bot.readySoon.delete(message.member.id);
-				savetoFile(bot);
+				var date = new Date();
+				var nowHour = date.getHours();
+				var nowMinute = date.getMinutes();
+
+				if (nowHour === bot.readySoon.get(message.member.id)[1] && nowMinute === bot.readySoon.get(message.member.id)[2])
+				{
+					message.channel.send(`Are ya ready yet, <@${message.member.id}>?`);
+					bot.readySoon.delete(message.member.id);
+					savetoFile(bot);
+				}
 			}, delay);
 			
 			message.react('✅');

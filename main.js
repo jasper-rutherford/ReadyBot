@@ -221,6 +221,62 @@ var bot = {
         });
 
         console.log('ReadySoon data has been read in');
+    },
+
+    checkReadyAtList: function (bot)
+    {
+        var date = new Date();
+
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+
+        bot.readySoon.forEach(thing =>
+        {
+            if (thing[1] === hour && thing[2] === minute)
+            {
+                bot.readyBotChannel.send(`Are ya ready yet, <@${message.member.id}>?`);
+                bot.readySoon.delete(message.member.id);
+                savetoFile(bot);
+            }
+        });
+    },
+
+    savetoFile: function (bot)
+    {
+        const FileSystem = require("fs");
+
+        var wrapper =
+        {
+            readyAtList: []
+        }
+
+        //converts the collection of readyat times to an array of readyat times
+        bot.readySoon.forEach(thing =>
+        {
+            wrapper.readyAtList.push(thing);
+        });
+
+        var fileName = 'readyAtList.json';
+        if (bot.testbuild)
+        {
+            fileName = 'testReadyAtList.json';
+        }
+
+        //saves the array to a file
+        FileSystem.writeFile(fileName, JSON.stringify(wrapper), e =>
+        {
+            if (e) throw e;
+        });
+    },
+
+    helper: function (name, params)
+    {
+        //check if the helper exists
+        if (client.things.get('helpers').get(name) != undefined)
+        {
+            //run the helper
+            client.things.get('helpers').get(name).execute(params, this);
+        }
     }
 }
 
@@ -240,6 +296,7 @@ if (bot.testbuild)
 
 client.things = new Discord.Collection();
 
+//sets up the text and dm folders
 bot.channelTypes.forEach(channelType =>
 {
     bot.messageTypes.forEach(messageType =>
@@ -268,7 +325,25 @@ bot.channelTypes.forEach(channelType =>
             }
         }
     })
-})
+});
+
+//sets up the helper folder
+client.things.set('helpers', new Discord.Collection());
+
+var directory = './helpers/';
+
+const files = fs.readdirSync(directory).filter(file => file.endsWith('.js'));
+for (const file of files)
+{
+    const command = require(directory + `${file}`);
+
+    client.things.get('helpers').set(command.name, command);
+
+    if (command.alt != undefined)
+    {
+        client.things.get('helpers').set(command.alt, command);
+    }
+}
 
 
 
