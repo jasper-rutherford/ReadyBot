@@ -5,7 +5,7 @@ module.exports = {
     description: "Lists the people who will be ready soon.",
     execute(message, args, bot)
     {
-        if (bot.readySoon.size === 0)
+        if (bot.sooners.size === 0)
         {
             message.channel.send('Nobody has indicated they will be ready soon');
         }
@@ -15,44 +15,44 @@ module.exports = {
             var list = 'The following ';
 
 
-            if (bot.readySoon.size === 1)
+            if (bot.sooners.size === 1)
             {
                 list = list + 'person';
             }
             else
             {
-                list = list + bot.readySoon.size + ' people';
+                list = list + bot.sooners.size + ' people';
             }
 
             list = list + ' will be ready soon:\n';
 
             //adds each ready person to the list
-            bot.readySoon.forEach(member =>
+            bot.sooners.forEach(sooner =>
             {
-                var minutes = member[2];
-                var hours = member[1];
+                var hour = sooner.hour;
+                var minute = sooner.minute;
 
                 var am = true;
 
-                if (hours > 11)
+                if (hour > 11)
                 {
                     am = false;
                 }
 
 
-                list += bot.guild.members.cache.get(member[0]).displayName + ' will be ready at ';
+                list += bot.guild.members.cache.get(sooner.id).displayName + ' will be ready at ';
 
                 if (am)
                 {
-                    list += hours;
+                    list += hour;
                 }
                 else
                 {
-                    list += (hours - 12);
+                    list += (hour - 12);
                 }
 
 
-                if (minutes < 10)
+                if (minute < 10)
                 {
                     list += ':0'
                 }
@@ -63,11 +63,11 @@ module.exports = {
 
                 if (am)
                 {
-                    list += minutes + 'am';
+                    list += minute + 'am';
                 }
                 else
                 {
-                    list += minutes + 'pm';
+                    list += minute + 'pm';
                 }
 
                 list += '\n';

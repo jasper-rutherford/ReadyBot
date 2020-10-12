@@ -33,7 +33,7 @@ module.exports = {
 
                 if (bot.proxyChannel.type === 'text')
                 {
-                    message.channel.send('ProxyChat set to ' + proxyChannel.name);
+                    message.channel.send('ProxyChat set to ' + bot.proxyChannel.name);
                 }
                 else if (bot.proxyChannel.type === 'dm')
                 {

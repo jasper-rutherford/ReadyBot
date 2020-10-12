@@ -12,15 +12,24 @@ module.exports = {
             if (args != 'auto')
             {
                 message.react('👎');
-                bot.react(message, bot.numReady() - 1);
+
+                var param =
+                {
+                    message: message,
+                    num: bot.helper('numReady', 0) - 1
+                }
+                bot.helper('react', param);
+
                 message.react('✅');
             }
-            bot.updateNumReady(bot.numReady() - 1);
+
+            bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) - 1 });
         }
         else if (args != 'auto')
         {
             message.channel.send('We get it, you aren\'t ready');
-            bot.updateNumReady(bot.numReady());
+
+            bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) })
         }
-    }    
+    }
 }  

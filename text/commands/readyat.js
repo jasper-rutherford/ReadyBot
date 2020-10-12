@@ -18,16 +18,16 @@ function execute(message, args, bot) {
 	if(!arg)
 		message.channel.send('Try entering a time');
 	else if(arg == 'cancel') {
-		if(bot.readySoon.get(message.member.id)) {
+		if(bot.sooners.get(message.member.id)) {
 			time = {
-				hour: bot.readySoon.get(message.member.id)[1],
-				minute: bot.readySoon.get(message.member.id)[2]
+				hour: bot.sooners.get(message.member.id).hour,
+				minute: bot.sooners.get(message.member.id).minute
 			}
 
 			message.channel.send(`${message.member.displayName} will no longer be ready at ${getTimeString(time)}`);
 			
-			bot.readySoon.delete(message.member.id);
-			savetoFile(bot);
+			bot.sooners.delete(message.member.id);
+			bot.helper('saveRAL', 0);
 		} else
 			message.channel.send(`You weren't on the list in the first place, nerd`);
 	} else {
@@ -36,33 +36,41 @@ function execute(message, args, bot) {
 		if(readyTime) {
 			message.channel.send(`I've got you marked down for ${getTimeString(readyTime)}`);
 
-			/* -------- thanks Jasper & Josiah ---------- */
-			let currentTime = new Date();
-			let readyAtMillis = (readyTime.hour * 60 + readyTime.minute) * 60 * 1000;
-			let currentMillis = ((currentTime.getHours() * 60 + currentTime.getMinutes()) * 60 + currentTime.getSeconds()) * 1000;
+			// /* -------- thanks Jasper & Josiah ---------- */
+			// let currentTime = new Date();
+			// let readyAtMillis = (readyTime.hour * 60 + readyTime.minute) * 60 * 1000;
+			// let currentMillis = ((currentTime.getHours() * 60 + currentTime.getMinutes()) * 60 + currentTime.getSeconds()) * 1000;
 
-			let delay = readyAtMillis - currentMillis;
+
+			// let delay = readyAtMillis - currentMillis;
 			
-			if(delay < 0)
-				delay += (24 * 60 * 60 * 1000);
-			/* --------------------------------- */
+			// if(delay < 0)
+			// 	delay += (24 * 60 * 60 * 1000);
+			// /* --------------------------------- */
 
-			setTimeout(function() {
-				var date = new Date();
-				var nowHour = date.getHours();
-				var nowMinute = date.getMinutes();
+			// setTimeout(function() {
+			// 	var date = new Date();
+			// 	var nowHour = date.getHours();
+			// 	var nowMinute = date.getMinutes();
 
-				if (nowHour === bot.readySoon.get(message.member.id)[1] && nowMinute === bot.readySoon.get(message.member.id)[2])
-				{
-					message.channel.send(`Are ya ready yet, <@${message.member.id}>?`);
-					bot.readySoon.delete(message.member.id);
-					savetoFile(bot);
-				}
-			}, delay);
+			// 	if (nowHour === bot.readySoon.get(message.member.id)[1] && nowMinute === bot.readySoon.get(message.member.id)[2])
+			// 	{
+			// 		message.channel.send(`Are ya ready yet, <@${message.member.id}>?`);
+			// 		bot.readySoon.delete(message.member.id);
+			// 		savetoFile(bot);
+			// 	}
+			// }, delay);
 			
+			var sooner = 
+			{
+				id: message.member.id,
+				hour: readyTime.hour,
+				minute: readyTime.minute
+			}
+
 			message.react('✅');
-			bot.readySoon.set(message.member.id, [message.member.id, readyTime.hour, readyTime.minute]);
-			savetoFile(bot);
+			bot.sooners.set(sooner.id, sooner);
+			bot.helper('saveRAL', 0);
 		} else
 			message.channel.send(`Nah, try again`);
 	}
@@ -138,30 +146,30 @@ function getTimeString(time) {
 	return `${hourStr}:${String(time.minute).padStart(2, '0')}${meridian}`;
 }
 
-function savetoFile(bot)
-{
-	const FileSystem = require("fs");
+// function savetoFile(bot)
+// {
+// 	const FileSystem = require("fs");
 
-	var wrapper =
-	{
-		readyAtList: []
-	}
+// 	var wrapper =
+// 	{
+// 		readyAtList: []
+// 	}
 
-	//converts the collection of readyat times to an array of readyat times
-	bot.readySoon.forEach(thing =>
-	{
-		wrapper.readyAtList.push(thing);
-	});
+// 	//converts the collection of readyat times to an array of readyat times
+// 	bot.readySoon.forEach(thing =>
+// 	{
+// 		wrapper.readyAtList.push(thing);
+// 	});
 
-	var fileName = 'readyAtList.json';
-	if (bot.testbuild)
-	{
-		fileName = 'testReadyAtList.json';
-	}
+// 	var fileName = 'readyAtList.json';
+// 	if (bot.testbuild)
+// 	{
+// 		fileName = 'testReadyAtList.json';
+// 	}
 
-	//saves the array to a file
-	FileSystem.writeFile(fileName, JSON.stringify(wrapper), e =>
-	{
-		if (e) throw e;
-	});
-}
+// 	//saves the array to a file
+// 	FileSystem.writeFile(fileName, JSON.stringify(wrapper), e =>
+// 	{
+// 		if (e) throw e;
+// 	});
+// }

@@ -15,23 +15,34 @@ module.exports = {
             if (message.member.roles.cache.has(bot.readyRoleID))
             {
                 message.channel.send('We get it, you\'re ready');
-
-                bot.updateNumReady(bot.numReady());
+                bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) });
             }
             else
             {
                 message.member.roles.add(bot.readyRole);
 
-                if (bot.readySoon.get(message.member.id) != undefined)
+                if (bot.sooners.get(message.member.id) != undefined)
                 {
-                    bot.readySoon.delete(message.member.id);
+                    bot.sooners.delete(message.member.id);
                 }
-                
+
                 message.react('👍');
-                bot.react(message, bot.numReady() + 1);
+
+                // console.log(bot.helper('numReady', 0));
+
+                var param =
+                {
+                    message: message,
+                    num: bot.helper('numReady', 0) + 1
+                }
+
+                // console.log(param.num);
+
+                bot.helper('react', param);
+
                 message.react('✅');
 
-                bot.updateNumReady(bot.numReady() + 1);
+                bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) + 1 });
             }
         }
     }
