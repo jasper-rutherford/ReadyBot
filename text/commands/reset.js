@@ -7,13 +7,13 @@ module.exports = {
         if (args === 'auto')
         {
             bot.readyRole.members.forEach(member =>
-                {
-                    member.roles.remove(bot.readyRole);
-                })
+            {
+                member.roles.remove(bot.readyRole);
+            })
 
-                bot.readyBotChannel.send('It\'s Tomorrow! I\'ll reset the list.');
+            bot.readyBotChannel.send('It\'s Tomorrow! I\'ll reset the list.');
 
-                bot.updateNumReady(0);
+            bot.helper('updateNumReady', { numReady: 0 });
         }
         else
         {
@@ -33,7 +33,7 @@ module.exports = {
                     message.channel.send('Nobody is ready!');
                 }
 
-                bot.updateNumReady(0);
+                bot.helper('updateNumReady', { numReady: 0 });
             }
             else
             {
