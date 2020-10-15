@@ -32,8 +32,13 @@ module.exports = {
                 bot.gulaguyID = gulaguy.id;
 
 
+                //no
+                if (gulaguy.id === '754498512359653466' || gulaguy.id === '754865264390176839')
+                {
+                    message.channel.send('no');
+                }
                 //check if gulaguy is an imposter
-                if (gulaguy.roles.cache.has(bot.imposterRoleID))
+                else if (gulaguy.roles.cache.has(bot.imposterRoleID))
                 {
                     message.channel.send('I couldn\'t send them to the gulag if I wanted to.');
                 }

@@ -1,15 +1,14 @@
 module.exports = {
-    name: 'readyatlist',
-    alt: 'readysoonlist',
+    name: 'readyuntillist',
     secret: false,
-    description: "Lists the people who will be ready soon.",
+    description: "Lists the people who will ready for a while.",
     execute(message, args, bot)
     {
         var num = 0;
 
         bot.sooners.forEach(sooner =>
         {
-            if (sooner.type === 'at')
+            if (sooner.type === 'until')
             {
                 num++;
             }
@@ -17,7 +16,7 @@ module.exports = {
 
         if (num === 0)
         {
-            message.channel.send('Nobody has indicated they will be ready soon');
+            message.channel.send('Nobody has indicated they will no longer be ready soon');
         }
         else
         {
@@ -34,12 +33,12 @@ module.exports = {
                 list = list + num + ' people';
             }
 
-            list = list + ' will be ready soon:\n';
+            list = list + ' will be ready for a while:\n';
 
             //adds each ready person to the list
             bot.sooners.forEach(sooner =>
             {
-                if (sooner.type === 'at')
+                if (sooner.type === 'until')
                 {
                     var hour = sooner.hour;
                     var minute = sooner.minute;
@@ -52,7 +51,7 @@ module.exports = {
                     }
 
 
-                    list += bot.guild.members.cache.get(sooner.id).displayName + ' will be ready at ';
+                    list += bot.guild.members.cache.get(sooner.id).displayName + ' will be ready until ';
 
                     if (am)
                     {

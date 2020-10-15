@@ -6,7 +6,7 @@ const { token, testToken } = require('./config.json');
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: true,
+    testbuild: false,
     token: token,
     prefix: '~',
     client: client,
@@ -26,7 +26,7 @@ var bot = {
     gulagRole: undefined,
     memberRoleID: '752728384408256553',
     memberRole: undefined,
-    readySoon: new Discord.Collection,
+    sooners: new Discord.Collection,
     numReadySoon: 0,
     gulagYesVotes: 0,
     gulagNoVotes: 0,
@@ -44,53 +44,7 @@ var bot = {
     readyBotChannel: undefined,
     startHour: undefined,
 
-
-    relayMessageToJaspa: function (message)
-    {
-        var jaspaChannel = this.client.channels.cache.get(this.jaspaDM)
-
-        if (message.channel.type === 'dm')
-        {
-            if (jaspaChannel === undefined)
-            {
-                if (message.channel != this.recentProxyChannel)
-                {
-                    console.log('DIRECT MESSAGE [' + message.channel.id + '] \n' + message.author.username + ': ' + message.content);
-                    this.recentProxyChannel = message.channel;
-                }
-                else
-                {
-                    console.log(message.author.username + ': ' + message.content);
-                }
-            }
-            else
-            {
-                if (message.channel != this.recentProxyChannel)
-                {
-                    jaspaChannel.send('DIRECT MESSAGE [' + message.channel.id + '] \n' + message.author.username + ': ' + message.content);
-                    this.recentProxyChannel = message.channel;
-                }
-                else
-                {
-                    jaspaChannel.send(message.author.username + ': ' + message.content);
-                }
-            }
-        }
-        else if (message.channel.type === 'text')
-        {
-            if (message.channel != this.recentProxyChannel)
-            {
-                jaspaChannel.send(message.channel.name.toUpperCase() + ' [' + message.channel.id + '] \n' + message.member.displayName + ': ' + message.content);
-                this.recentProxyChannel = message.channel;
-            }
-            else
-            {
-                jaspaChannel.send(message.member.displayName + ': ' + message.content);
-            }
-        }
-
-    },
-
+    
     initialUpdates: function ()
     {
         this.guild = client.guilds.cache.get(this.guildID);
@@ -99,128 +53,29 @@ var bot = {
         this.gulagRole = this.guild.roles.cache.get(this.gulagRoleID);
         this.memberRole = this.guild.roles.cache.get(this.memberRoleID);
         this.proxyChannel = client.channels.cache.get(bot.proxyChannelID);
-        this.updateNumReady(this.numReady());
+
+        bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) });
+
         this.readyBotChannel = client.channels.cache.get(bot.readyBotChannelID);
         this.startHour = new Date().getHours();
-        this.resetAtMidnight();
-        this.readReadySoonList(this);
+
+        this.helper('midnightReset', 0);
+        this.helper('scanRAL', 0);
     },
 
-
-    numReady: function ()
+    helper: function (name, params)
     {
-        this.guild.members.fetch()
-            .then()
-            .catch(console.error);
+        //check if the helper exists
+        if (client.things.get('helpers').get(name) != undefined)
+        {
+            //run the helper
+            var out = client.things.get('helpers').get(name).execute(params, this);
 
-        return this.guild.roles.cache.get(this.readyRoleID).members.size;
-    },
-
-    updateNumReady: function (numReady)
-    {
-        //updates to say the bot is playing how many people are ready
-        if (numReady === 0)
-        {
-            client.user.setActivity('Nobody is ready!');
+            if (out != undefined)
+            {
+                return out;
+            }
         }
-        else if (numReady === 1)
-        {
-            client.user.setActivity('1 person is ready!');
-        }
-        else 
-        {
-            client.user.setActivity(numReady + ' people are ready!');
-        }
-    },
-
-    react: function (message, num)
-    {
-        if (num === 0)
-        {
-            message.react('\u0030\u20E3');
-        }
-        else if (num === 1)
-        {
-            message.react('\u0031\u20E3');
-        }
-        else if (num === 2)
-        {
-            message.react('\u0032\u20E3');
-        }
-        else if (num === 3)
-        {
-            message.react('\u0033\u20E3');
-        }
-        else if (num === 4)
-        {
-            message.react('\u0034\u20E3');
-        }
-        else if (num === 5)
-        {
-            message.react('\u0035\u20E3');
-        }
-        else if (num === 6)
-        {
-            message.react('\u0036\u20E3');
-        }
-        else if (num === 7)
-        {
-            message.react('\u0037\u20E3');
-        }
-        else if (num === 8)
-        {
-            message.react('\u0038\u20E3');
-        }
-        else if (num === 9)
-        {
-            message.react('\u0039\u20E3');
-        }
-        else if (num === 10)
-        {
-            message.react('\u0031\u20E3')
-            message.react('\u0030\u20E3')
-        }
-        else
-        {
-        }
-    },
-
-    resetAtMidnight: function ()
-    {
-        var date = new Date();
-
-        var hour = date.getHours();
-        var minute = date.getMinutes();
-        var seconds = date.getSeconds();
-
-        var millis = (1000 * 60 * 60 * 24) - (1000 * 60 * 60 * hour) - (1000 * 60 * minute) - (1000 * seconds);
-
-
-        var aBot = this;
-        setTimeout(function ()
-        {
-            client.things.get('textcommands').get('reset').execute('auto', 'auto', aBot);
-        }, millis);
-    },
-
-    readReadySoonList: function (bot)
-    {
-        var fileName = 'readyAtList.json';
-        if (bot.testbuild)
-        {
-            fileName = 'testReadyAtList.json';
-        }
-
-        //reads in the array of readyat times from the file
-        var data = JSON.parse(fs.readFileSync(fileName));
-
-        //converts the array into the collection in the bot
-        data.readyAtList.forEach(thing =>
-        {
-            bot.readySoon.set(thing[0], thing);
-        });
-
-        console.log('ReadySoon data has been read in');
     }
 }
 
@@ -229,7 +84,7 @@ if (bot.testbuild)
 {
     bot.token = testToken;
     bot.guildID = '254631721620733952';
-    bot.jaspaDM = '761050632291352609';
+    bot.jaspaDM = '755291736871272490';
     bot.readyRoleID = '360182681943932930';
     bot.imposterRoleID = '756313923363405824';
     bot.gulagRoleID = '589261878383869962';
@@ -240,6 +95,7 @@ if (bot.testbuild)
 
 client.things = new Discord.Collection();
 
+//sets up the text and dm folders
 bot.channelTypes.forEach(channelType =>
 {
     bot.messageTypes.forEach(messageType =>
@@ -268,14 +124,40 @@ bot.channelTypes.forEach(channelType =>
             }
         }
     })
-})
+});
+
+//sets up the helper folder
+client.things.set('helpers', new Discord.Collection());
+
+var directory = './helpers/';
+
+const files = fs.readdirSync(directory).filter(file => file.endsWith('.js'));
+for (const file of files)
+{
+    const command = require(directory + `${file}`);
+
+    client.things.get('helpers').set(command.name, command);
+
+    if (command.alt != undefined)
+    {
+        client.things.get('helpers').set(command.alt, command);
+    }
+}
 
 
 
 client.once('ready', () =>
 {
     bot.initialUpdates();
+
+    bot.helper('checkRAL', 0);
+
     console.log('Readybot 2 confirmed');
+
+    if (bot.testbuild)
+    {
+        console.log('<test build>');
+    }
 });
 
 
@@ -303,7 +185,7 @@ client.on('message', message =>
                 client.things.get('dmspecials').get(userID).execute(message, bot); //do their special code
             }
 
-            bot.relayMessageToJaspa(message);
+            bot.helper('relayMsgToJaspa', { message: message });
         }
     }
     else if (message.channel.type === 'text')
@@ -342,7 +224,7 @@ client.on('message', message =>
         {
             if (bot.proxyChat && message.content != null)
             {
-                bot.relayMessageToJaspa(message);
+                bot.helper('relayMsgToJaspa', { message: message });
             }
 
             //send to special people

@@ -1,14 +1,13 @@
-//written by Ben Esposito
+//tweaked from Ben's Readyat Code
 
 const { Collection } = require("discord.js");
 const { errorMonitor } = require("stream");
 
 module.exports = {
-    name: 'readyat',
-    alt: 'readysoon',
+    name: 'readyuntil',
     param: 'time',
     secret: false,
-	description: "Declares yourself as ready, but in the future",
+	description: "Declares yourself as ready until a certain time",
 	execute
 }
 
@@ -24,27 +23,27 @@ function execute(message, args, bot) {
 				minute: bot.sooners.get(message.member.id).minute
 			}
 
-			message.channel.send(`${message.member.displayName} will no longer be ready at ${getTimeString(time)}`);
+			message.channel.send(`${message.member.displayName} will no longer not be ready at ${getTimeString(time)}`);
 			
 			bot.sooners.delete(message.member.id);
 			bot.helper('saveRAL', 0);
 		} else
-			message.channel.send(`You weren't on the list in the first place, nerd`);
+			message.channel.send(`You weren't not going to be ready in the first place, nerd`);
 	} else {
 		let readyTime = parseTime(arg);
 
 		if(readyTime) {
-			message.channel.send(`I've got you marked down for ${getTimeString(readyTime)}`);
+			message.channel.send(`I've got you marked down until ${getTimeString(readyTime)}`);
 			
 			//ensure that they are not currently ready
-			bot.client.things.get('textcommands').get('notready').execute(message, 'auto', bot);
-
+			bot.client.things.get('textcommands').get('ready').execute(message, 'auto', bot);
+			
 			var sooner = 
 			{
 				id: message.member.id,
 				hour: readyTime.hour,
-				minute: readyTime.minute,
-				type: 'at'
+                minute: readyTime.minute,
+                type: 'until'
 			}
 
 			message.react('✅');
@@ -66,7 +65,10 @@ function parseTime(timeString) {
 			minute: Number(matches[2])
 		}
 
-		if(time.hour > 0 && time.hour <= 12) {
+		/* if the time is greater than 12, use miltime instead */
+		if(time.hour > 12)
+			time = null;
+		else {
 			if(!time.minute)
 				time.minute = 0;
 
@@ -78,7 +80,7 @@ function parseTime(timeString) {
 			} else {
 				let currentTime = new Date();
 
-				/* if the current time is later than the time requested, flip meridian */
+				/* if the current time is later than the time requested, add 12 hours */
 				let flipMeridian = currentTime.getHours() % 12 > time.hour ||
 									(currentTime.getHours() % 12 == time.hour && currentTime.getMinutes() >= time.minute);
 				let isPm = currentTime.getHours() >= 12;
@@ -89,9 +91,6 @@ function parseTime(timeString) {
 			}
 
 			time.hour %= 24;
-		} else {
-			/* if the time is greater than 12, use miltime instead */
-			time = null;
 		}
 	}
 	
