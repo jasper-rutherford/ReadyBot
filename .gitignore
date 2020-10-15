@@ -1,4 +1,6 @@
 .vs/
+node_modules/
+
 config.json
 readyAtList.json
 testReadyAtList.json
