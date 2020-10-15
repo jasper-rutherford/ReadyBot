@@ -5,7 +5,7 @@ module.exports = {
     execute(message, args, bot)
     {
         var command;
-        
+
         if (args != 'auto')
             command = args.shift();
 
