@@ -70,10 +70,7 @@ function parseTime(timeString) {
 			minute: Number(matches[2])
 		}
 
-		/* if the time is greater than 12, use miltime instead */
-		if(time.hour > 12)
-			time = null;
-		else {
+		if(time.hour > 0 && time.hour <= 12) {
 			if(!time.minute)
 				time.minute = 0;
 
@@ -85,7 +82,7 @@ function parseTime(timeString) {
 			} else {
 				let currentTime = new Date();
 
-				/* if the current time is later than the time requested, add 12 hours */
+				/* if the current time is later than the time requested, flip meridian */
 				let flipMeridian = currentTime.getHours() % 12 > time.hour ||
 									(currentTime.getHours() % 12 == time.hour && currentTime.getMinutes() >= time.minute);
 				let isPm = currentTime.getHours() >= 12;
@@ -96,6 +93,9 @@ function parseTime(timeString) {
 			}
 
 			time.hour %= 24;
+		} else {
+			/* if the time is greater than 12, use miltime instead */
+			time = null;
 		}
 	}
 	
