@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "JasperRutherford",
-  "license": "ISC",
+  "author": "Jasper Rutherford",
+  "license": "MIT",
   "keywords": [],
   "description": "",
   "dependencies": {
