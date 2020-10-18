@@ -14,7 +14,7 @@ module.exports = {
         //converts the collection of readyat times to an array of readyat times
         bot.sooners.forEach(sooner =>
         {
-            var soonerArray = [sooner.id, sooner.hour, sooner.minute, sooner.type];
+            var soonerArray = [sooner.id, sooner.hour, sooner.minute];
 
             wrapper.readyAtList.push(soonerArray);
         });

@@ -18,20 +18,9 @@ module.exports = {
             {
                 if (hour === sooner.hour && minute === sooner.minute)
                 {
-                    if (sooner.type === 'at')
-                    {
-                        bot.readyBotChannel.send(`Are ya ready yet, <@${sooner.id}>?`);
-                        bot.sooners.delete(sooner.id);
-                        bot.helper('saveRAL', 0);
-                    }
-                    else 
-                    {
-                        bot.readyBotChannel.send(`<@${sooner.id}> is no longer ready.`);
-                        bot.sooners.delete(sooner.id);
-                        bot.helper('saveRAL', 0);
-
-                        bot.client.things.get('textcommands').get('notready').execute(sooner.id, 'until', bot);
-                    }
+                    bot.readyBotChannel.send(`Are ya ready yet, <@${sooner.id}>?`);
+                    bot.sooners.delete(sooner.id);
+                    bot.helper('saveRAL', 0);
                 }
             });
         }

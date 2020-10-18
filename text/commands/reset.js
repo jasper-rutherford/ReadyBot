@@ -17,7 +17,7 @@ module.exports = {
         }
         else
         {
-            if (message.member.hasPermission('MANAGE_ROLES') || message.member.id === bot.jaspaID)
+            if (message.member.hasPermission('MANAGE_ROLES'))
             {
                 if (message.member.id === bot.mattID)
                 {
