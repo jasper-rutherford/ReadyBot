@@ -19,7 +19,6 @@ module.exports = {
                 year += 1;
             }
 
-            console.log(year);
 
             var countDownDate = new Date("Dec 25, " + year + " 00:00:00").getTime();
 

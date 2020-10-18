@@ -1,7 +1,7 @@
 module.exports = {
     name: 'proxychat',
     secret: true,
-    description: "",
+    description: "allows the user to speak for the bot",
     execute(message, args, bot)
     {
         command = args.shift();
