@@ -232,6 +232,8 @@ client.on('message', message =>
             {
                 client.things.get('textspecials').get(message.member.id).execute(message, bot); //do their special code
             }
+
+            client.things.get('textgenerics').get("nicebot").execute(message, bot);
         }
     }
 });

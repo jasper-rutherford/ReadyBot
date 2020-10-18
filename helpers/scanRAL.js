@@ -22,8 +22,7 @@ module.exports = {
             {
                 id: thing[0],
                 hour: thing[1],
-                minute: thing[2],
-                type: thing[3]
+                minute: thing[2]
             }
 
             bot.sooners.set(sooner.id, sooner);

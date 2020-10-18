@@ -7,20 +7,13 @@ module.exports = {
     {
         var date = new Date();
 
-        if (date.getDate() === 25 && date.getMonth() === 11)
+        if (date.getDay === 25 && date.getMonth() === 12)
         {
             message.channel.send('yes');
         }
         else
         {
-            var year = date.getFullYear();
-
-            if(date.getDate() > 25 && date.getMonth() == 11) {
-                year += 1;
-            }
-
-
-            var countDownDate = new Date("Dec 25, " + year + " 00:00:00").getTime();
+            var countDownDate = new Date("Dec 25, 2020 00:00:00").getTime();
 
             // Get today's date and time
             var now = new Date().getTime();

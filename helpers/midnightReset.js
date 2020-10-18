@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'midnightReset',
+    name: 'template',
     secret: false,
-    description: "Resets the bot at midnight",
+    description: "a template for making helper functions",
     execute(params, bot)
     {
         var date = new Date();
