@@ -87,7 +87,7 @@ module.exports = {
 
         }
         else {
-            if ((red && (msg.includes("sorry")) || msg.includes("sry"))) {
+            if (red && (msg.includes("sorry") || msg.includes("sry"))) {
                 message.channel.send("Apology accepted " + `<@${message.author.id}>` + ".");
 
                 var data = fs.readFileSync(file, 'utf8');

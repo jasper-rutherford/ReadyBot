@@ -31,6 +31,9 @@ module.exports = {
         {
             if (message.member.roles.cache.has(bot.readyRoleID))
             {
+                
+                bot.helper('readyAU', message.author.id);
+    
                 message.member.roles.remove(bot.readyRole);
 
                 //if they said they are readyuntil, erase that (because they clearly are not ready now)

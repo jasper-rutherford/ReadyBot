@@ -18,6 +18,7 @@ function execute(message, args, bot) {
 	if(!arg)
 		message.channel.send('Try entering a time');
 	else if(arg == 'cancel') {
+		bot.helper('readyAU', message.author.id);
 		if(bot.sooners.get(message.member.id)) {
 			time = {
 				hour: bot.sooners.get(message.member.id).hour,
@@ -34,6 +35,7 @@ function execute(message, args, bot) {
 		let readyTime = parseTime(arg);
 
 		if(readyTime) {
+			bot.helper('readyAU', message.author.id);
 			message.channel.send(`I've got you marked down for ${getTimeString(readyTime)}`);
 			
 			//ensure that they are not currently ready
