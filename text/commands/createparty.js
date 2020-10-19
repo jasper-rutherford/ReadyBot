@@ -13,7 +13,7 @@ module.exports = {
             yeet++;
         }
         var name = name.substring(1);
-        var quote = name.includes('"') || name.includes('\\');
+        var quote = name.includes('"') || name.includes('\\') || name.includes('*') || name.includes('_') || name.includes('`');
         if (args.length && !quote) {
             //create necessary variables
             const fs = require('fs');
