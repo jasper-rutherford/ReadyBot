@@ -4,15 +4,17 @@ module.exports = {
     secret: false,
     description: "annoys the members of an established game party",
     execute(message, args, bot) {
+        if (!bot.temp)
+        {
         if (args.length) {
             //create necessary variables
             const fs = require('fs');
             var user = message.author.username + ", " + message.author.id;
             //create a file directory sring that represents the party
-            var filename = bot.helper('constructFile', args);
+            var filename = bot.helpers('constructFile', args);
             //checks the file to see if the user is there
             para = [filename, user];
-            var x = bot.helper("fileContainsUser", para);
+            var x = bot.helpers("fileContainsUser", para);
             //if the file exists and the user is in the file ping the other members
             if (fs.existsSync(filename) && x) {
                 //create a list of users in the file
@@ -48,4 +50,4 @@ module.exports = {
             message.channel.send("I can't ping without a party");
         }
     }
-}
+}}

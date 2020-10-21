@@ -4,6 +4,8 @@ module.exports = {
     secret: false,
     description: "Lists members of the selected party",
     execute(message, args, bot) {
+        if (!bot.temp)
+        {
         if (args.length) {
             //create necessary variables
             const fs = require('fs');
@@ -17,7 +19,7 @@ module.exports = {
             }
             var name = name.substring(1);
             //create a file directory sring that represents the party
-            var filename = bot.helper('constructFile', args);
+            var filename = bot.helpers('constructFile', args);
             //create an array of words in the 'name' string
             var namearr = name.split(" ");
             name = "";
@@ -53,4 +55,4 @@ module.exports = {
             message.channel.send("Try entering a party to list");
         }
     }
-}
+}}

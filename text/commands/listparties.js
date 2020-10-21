@@ -3,6 +3,8 @@ module.exports = {
     secret: false,
     description: "Declares yourself not ready",
     execute(message, args, bot) {
+        if (!bot.temp)
+        {
         //create necessary variables
         const Discord = require('discord.js');
         const fs = require('fs');
@@ -38,4 +40,4 @@ module.exports = {
             message.channel.send("There are no active parties at the moment");
         }
     }
-}
+}}

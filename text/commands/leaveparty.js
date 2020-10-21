@@ -5,6 +5,8 @@ module.exports = {
     secret: false,
     description: "Leaves an established game party",
     execute(message, args, bot) {
+        if (!bot.temp)
+        {
         if (args.length) {
             //create necessary variables
             const fs = require('fs');
@@ -18,11 +20,11 @@ module.exports = {
             }
             var name = name.substring(1);
             //create a file directory sring that represents the party
-            var filename = bot.helper('constructFile', args);
+            var filename = bot.helpers('constructFile', args);
             if (fs.existsSync(filename)) {
                 //check the file to see if the user that sent the message is in it
                 para = [filename, user];
-                var x = bot.helper("fileContainsUser", para);
+                var x = bot.helpers("fileContainsUser", para);
                 var data = fs.readFileSync(filename, 'utf8').substring(1, fs.readFileSync(filename, 'utf8').length - 1);
                 //if the file exists and the user is in it, yeet them
                 if (x) {
@@ -81,5 +83,5 @@ module.exports = {
         else {
             message.channel.send("Try naming a party");
         }
-    }
+    }}
 }

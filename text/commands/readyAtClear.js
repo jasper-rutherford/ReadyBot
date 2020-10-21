@@ -11,7 +11,7 @@ module.exports = {
                 bot.sooners.delete(sooner.id);
             });
 
-            bot.helper('saveRAL', 0);
+            bot.helpers('saveRAL', 0);
 
             message.channel.send('Nobody is ready soon!');
         }

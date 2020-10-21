@@ -20,7 +20,7 @@ module.exports = {
                 {
                     bot.readyBotChannel.send(`Are ya ready yet, <@${sooner.id}>?`);
                     bot.sooners.delete(sooner.id);
-                    bot.helper('saveRAL', 0);
+                    bot.helpers('saveRAL', 0);
                 }
             });
         }

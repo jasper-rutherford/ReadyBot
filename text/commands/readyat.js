@@ -27,7 +27,7 @@ function execute(message, args, bot) {
 			message.channel.send(`${message.member.displayName} will no longer be ready at ${getTimeString(time)}`);
 			
 			bot.sooners.delete(message.member.id);
-			bot.helper('saveRAL', 0);
+			bot.helpers('saveRAL', 0);
 		} else
 			message.channel.send(`You weren't on the list in the first place, nerd`);
 	} else {
@@ -49,7 +49,7 @@ function execute(message, args, bot) {
 
 			message.react('✅');
 			bot.sooners.set(sooner.id, sooner);
-			bot.helper('saveRAL', 0);
+			bot.helpers('saveRAL', 0);
 		} else
 			message.channel.send(`Nah, try again`);
 	}

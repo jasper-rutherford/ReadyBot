@@ -2,11 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 
-const { token, testToken } = require('./config.json');
+const { token, testToken } = require('./data/config.json');
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
     testbuild: true,
+    temp: true,
     token: token,
     prefix: '~',
     client: client,
@@ -43,6 +44,8 @@ var bot = {
     readyBotChannelID: '759869338584612874',
     readyBotChannel: undefined,
     startHour: undefined,
+    parties: new Discord.Collection,
+    josiahMap: new Discord.Collection,
 
     
     initialUpdates: function ()
@@ -54,16 +57,17 @@ var bot = {
         this.memberRole = this.guild.roles.cache.get(this.memberRoleID);
         this.proxyChannel = client.channels.cache.get(bot.proxyChannelID);
 
-        bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) });
+        bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) });
 
         this.readyBotChannel = client.channels.cache.get(bot.readyBotChannelID);
         this.startHour = new Date().getHours();
 
-        this.helper('midnightReset', 0);
-        this.helper('scanRAL', 0);
+        this.helpers('midnightReset', 0);
+        this.helpers('scanRAL', 0);
+        this.helpers('scanParties', 0);
     },
 
-    helper: function (name, params)
+    helpers: function (name, params)
     {
         //check if the helper exists
         if (client.things.get('helpers').get(name) != undefined)
@@ -150,7 +154,7 @@ client.once('ready', () =>
 {
     bot.initialUpdates();
 
-    bot.helper('checkRAL', 0);
+    bot.helpers('checkRAL', 0);
 
     console.log('Readybot 2 confirmed');
 
@@ -185,7 +189,7 @@ client.on('message', message =>
                 client.things.get('dmspecials').get(userID).execute(message, bot); //do their special code
             }
 
-            bot.helper('relayMsgToJaspa', { message: message });
+            bot.helpers('relayMsgToJaspa', { message: message });
         }
     }
     else if (message.channel.type === 'text')
@@ -224,7 +228,7 @@ client.on('message', message =>
         {
             if (bot.proxyChat && message.content != null)
             {
-                bot.helper('relayMsgToJaspa', { message: message });
+                bot.helpers('relayMsgToJaspa', { message: message });
             }
 
             //send to special people

@@ -22,7 +22,7 @@ module.exports = {
                 {
                     message.member.roles.add(bot.readyRole);
 
-                    bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) + 1 });
+                    bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) + 1 });
                 }
             }
             //called directly
@@ -37,7 +37,7 @@ module.exports = {
                     if (sooner != undefined && sooner.type === 'at')
                     {
                         bot.sooners.delete(sooner.id);
-                        bot.helper('saveRAL', 0);
+                        bot.helpers('saveRAL', 0);
                     }
 
                     message.react('👍');
@@ -45,18 +45,18 @@ module.exports = {
                     var param =
                     {
                         message: message,
-                        num: bot.helper('numReady', 0) + 1
+                        num: bot.helpers('numReady', 0) + 1
                     }
-                    bot.helper('react', param);
+                    bot.helpers('react', param);
 
                     message.react('✅');
 
-                    bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) + 1 });
+                    bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) + 1 });
                 }
                 else
                 {
                     message.channel.send('We get it, you\'re ready');
-                    bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) });
+                    bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) });
                 }
             }
         }

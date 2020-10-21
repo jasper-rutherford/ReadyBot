@@ -5,6 +5,8 @@ module.exports = {
     secret: false,
     description: "OBLITERATES an established game party",
     execute(message, args, bot) {
+        if (!bot.temp)
+        {
         const fs = require('fs');
         if (args.length) {
             //create necessary variables
@@ -18,7 +20,7 @@ module.exports = {
             }
             var name = name.substring(1);
             //create a file directory sring that represents the party
-            var filename = bot.helper('constructFile', args);
+            var filename = bot.helpers('constructFile', args);
             //determines if the file exists/should be deleted
             if ((message.member.hasPermission('MANAGE_ROLES')) && (fs.existsSync(filename))) {
                 fs.unlinkSync(filename);
@@ -48,5 +50,5 @@ module.exports = {
                 message.channel.send("That party doesn't exist");
             }
         }
-    }
+    }}
 }

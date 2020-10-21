@@ -5,6 +5,8 @@ module.exports = {
     description: "",
     execute(message, bot)
     {
+        if (!bot.temp)
+        {
         const fs = require('fs');
         var user = message.author.id;
         file = "./unforgiven.json";
@@ -164,4 +166,4 @@ module.exports = {
             }
         }
     }
-}  
+}  }
