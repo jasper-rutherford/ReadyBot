@@ -6,38 +6,49 @@ module.exports = {
     description: "Creates a game party",
     execute(message, args, bot) {
         //read the args and create a name
-        name = '';
-        yeet = 0;
-        while (args.length > yeet) {
-            name += " " + args[yeet];
-            yeet++;
-        }
-        var name = name.substring(1);
+        var name = args.join(' ');
         var quote = name.includes('"') || name.includes('\\') || name.includes('*') || name.includes('_') || name.includes('`');
         if (args.length && !quote) {
             //create necessary variables
             const fs = require('fs');
-            var user = message.author.username + ", " + message.author.id;
-            //create a file directory sring that represents the party
+            var user = [message.author.username, message.author.id];
+            //create a file directory string that represents the party
+            args.push('CREATE');
             var filename = bot.helper('constructFile', args);
+
+            var wrapper = {
+                userList: []
+            }
+
             //if the file does not exist create it and add the user
             if (!fs.existsSync(filename)) {
-                fs.writeFile(filename, JSON.stringify(user), e => {
+                wrapper.userList.push(user);
+                fs.writeFile(filename, JSON.stringify(wrapper), e => {
                     if (e) throw e;
                 });
                 message.channel.send("I've created a party called '" + name + "' for you!");
             }
             //if the file already exists and the user isn't in it, add them
             else {
+                var data = JSON.parse(fs.readFileSync(filename));
                 //checks the file to see if the user is there
                 para = [filename, user];
                 var x = bot.helper("fileContainsUser", para);
                 //if the user isn't in the file, add them
                 if (!x) {
+                    data.userList.forEach(element =>
+                    {
+                        if (!element[0].includes(message.author.id))
+                        {
+                            var userArr = [element[0], element[1]];
+                
+                            wrapper.userList.push(userArr);
+                        }
+                    });
+        
+                    wrapper.userList.push(user);
                     //add the user to the party
-                    var data = fs.readFileSync(filename, 'utf8').substring(1, fs.readFileSync(filename, 'utf8').length - 1);
-                    data = data + " : " + user;
-                    fs.writeFile(filename, JSON.stringify(data), e => {
+                    fs.writeFile(filename, JSON.stringify(wrapper), e => {
                         if (e) throw e;
                     });
                     message.channel.send("That party already exists, so I added you to it!");

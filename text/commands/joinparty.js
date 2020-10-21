@@ -9,26 +9,36 @@ module.exports = {
         if (args.length) {
             //create necessary variables
             const fs = require('fs');
-            var user = message.author.username + ", " + message.author.id;
-            //read the args and create a name
-            name = '';
-            yeet = 0;
-            while (args.length > yeet) {
-                name += " " + args[yeet];
-                yeet++;
+            var user = [message.author.username, message.author.id];
+            var name = args.join(' ');
+
+            var wrapper = {
+                userList: []
             }
-            var name = name.substring(1);
+
             //create a file directory sring that represents the party
             var filename = bot.helper('constructFile', args);
             //check the file to see if the user that sent the message is in it
             para = [filename, user];
             var x = bot.helper("fileContainsUser", para);
-            var data = fs.readFileSync(filename, 'utf8').substring(1, fs.readFileSync(filename, 'utf8').length - 1);
             //if the file exists and the user is not in it, add them
             if (fs.existsSync(filename) && !x) {
                 //add the user to the party
-                data = data + " : " + user;
-                fs.writeFile(filename, JSON.stringify(data), e => {
+                var data = JSON.parse(fs.readFileSync(filename));
+                
+                data.userList.forEach(element =>
+                {
+                    if (!element[0].includes(message.author.id))
+                    {
+                        var userArr = [element[0], element[1]];
+            
+                        wrapper.userList.push(userArr);
+                    }
+                });
+    
+                wrapper.userList.push(user);
+    
+                fs.writeFile(filename, JSON.stringify(wrapper), e => {
                     if (e) throw e;
                 });
                 message.channel.send("I've added you to '" + name + "'");

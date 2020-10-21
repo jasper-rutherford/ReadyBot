@@ -7,7 +7,7 @@ module.exports = {
     execute(params, bot)
     {
         const fs = require("fs");
-        filename = "readyAtUntilList.json";
+        const filename = "readyAtUntilList.json";
         var time = (60 - new Date().getSeconds()) * 1000;
 
         var check = function (bot)

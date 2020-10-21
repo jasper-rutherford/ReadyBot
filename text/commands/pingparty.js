@@ -7,7 +7,7 @@ module.exports = {
         if (args.length) {
             //create necessary variables
             const fs = require('fs');
-            var user = message.author.username + ", " + message.author.id;
+            var user = [message.author.username, message.author.id];
             //create a file directory sring that represents the party
             var filename = bot.helper('constructFile', args);
             //checks the file to see if the user is there
@@ -16,20 +16,16 @@ module.exports = {
             //if the file exists and the user is in the file ping the other members
             if (fs.existsSync(filename) && x) {
                 //create a list of users in the file
-                var data = fs.readFileSync(filename, 'utf8').substring(1, fs.readFileSync(filename, 'utf8').length - 1);
-                var arr = data.split(" : ");
+                var data = JSON.parse(fs.readFileSync(filename));
                 var strnewlist = "";
                 y = 0;
-                while (y < data.split(" : ").length) {
-                    if (data.split(" : ")[y].localeCompare(user) == 0) {
-                        //don't add the user that sent the message to the ping string
+
+                data.userList.forEach(element => {
+                    if (element[1].localeCompare(message.author.id) != 0) {
+                        //construct a ping string and don't add the user that sent the message to the ping string
+                        strnewlist += ", " + `<@${element[1]}>`;
                     }
-                    else {
-                        //construct a ping string
-                        strnewlist += ", " + `<@${data.split(" : ")[y].split(", ")[1]}>`;
-                    }
-                    y++;
-                }
+                });
                 //remove the ", " at the start of the string
                 strnewlist = strnewlist.substring(2);
                 //PING!!!!
