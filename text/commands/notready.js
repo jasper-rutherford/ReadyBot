@@ -12,7 +12,7 @@ module.exports = {
             {
                 message.member.roles.remove(bot.readyRole);
 
-                bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) - 1 });
+                bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) - 1 });
             }
         }
         //called through readyuntil
@@ -23,7 +23,7 @@ module.exports = {
             {
                 member.roles.remove(bot.readyRole);
 
-                bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) - 1 });
+                bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) - 1 });
             }
         }
         //called directly
@@ -31,9 +31,6 @@ module.exports = {
         {
             if (message.member.roles.cache.has(bot.readyRoleID))
             {
-                
-                bot.helper('readyAU', message.author.id);
-    
                 message.member.roles.remove(bot.readyRole);
 
                 //if they said they are readyuntil, erase that (because they clearly are not ready now)
@@ -41,7 +38,7 @@ module.exports = {
                 if (sooner != undefined && sooner.type === 'until')
                 {
                     bot.sooners.delete(sooner.id);
-                    bot.helper('saveRAL', 0);
+                    bot.helpers('saveRAL', 0);
                 }
 
                 message.react('👎');
@@ -49,20 +46,20 @@ module.exports = {
                 var param =
                 {
                     message: message,
-                    num: bot.helper('numReady', 0) - 1
+                    num: bot.helpers('numReady', 0) - 1
                 }
-                bot.helper('react', param);
+                bot.helpers('react', param);
 
                 message.react('✅');
 
 
-                bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) - 1 });
+                bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) - 1 });
             }
             else 
             {
                 message.channel.send('We get it, you aren\'t ready');
 
-                bot.helper('updateNumReady', { numReady: bot.helper('numReady', 0) })
+                bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) })
             }
         }
     }

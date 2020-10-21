@@ -3,21 +3,18 @@ module.exports = {
     secret: false,
     description: "Declares yourself not ready",
     execute(message, args, bot) {
+        if (!bot.temp)
+        {
         //create necessary variables
         const Discord = require('discord.js');
         const fs = require('fs');
         const partyembed = new Discord.MessageEmbed().setTitle("Parties");
         //read file directory and construct an array of file names
-        var data = JSON.parse(fs.readFileSync('partyarchive.json'));
-        var strfiles = [];
-        wrapper2 = {
-            partyList: []
+        var data = fs.readFileSync('partyarchive.json', 'utf8').substring(1, fs.readFileSync('partyarchive.json', 'utf8').length - 1);
+        var strfiles = data.split(" : ");
+        for (i = 0; i < strfiles.length; i++) {
+            strfiles[i] = (strfiles[i].split(", ")[1]);
         }
-        data.partyList.forEach(element => {
-            strfiles.push(element[1]);
-            wrapper2.partyList.push(element[1]);
-        });
-        
         //convert the items in the array into properly capitalized names
         var desc = "";
         for (i = 0; i < strfiles.length; i++) {
@@ -32,7 +29,7 @@ module.exports = {
             desc += (i + 1) + ". " + strfiles[i] + "\n";
         }
         //if the list has at least one element, print
-        if (strfiles.length != 0) {
+        if (desc.localeCompare("") != 0) {
             partyembed.setDescription(desc);
             partyembed.color = 0x7289da;
             //print the embed with the list of parties
@@ -43,4 +40,4 @@ module.exports = {
             message.channel.send("There are no active parties at the moment");
         }
     }
-}
+}}

@@ -23,6 +23,8 @@ module.exports = {
             }
             else
             {
+                console.log(bot.recentProxyChannel);
+                console.log(message.channel);
                 if (message.channel != bot.recentProxyChannel)
                 {
                     jaspaChannel.send('DIRECT MESSAGE [' + message.channel.id + '] \n' + message.author.username + ': ' + message.content);

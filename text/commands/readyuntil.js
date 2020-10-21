@@ -17,7 +17,6 @@ function execute(message, args, bot) {
 	if(!arg)
 		message.channel.send('Try entering a time');
 	else if(arg == 'cancel') {
-		bot.helper('readyAU', message.author.id);
 		if(bot.sooners.get(message.member.id)) {
 			time = {
 				hour: bot.sooners.get(message.member.id).hour,
@@ -27,14 +26,13 @@ function execute(message, args, bot) {
 			message.channel.send(`${message.member.displayName} will no longer not be ready at ${getTimeString(time)}`);
 			
 			bot.sooners.delete(message.member.id);
-			bot.helper('saveRAL', 0);
+			bot.helpers('saveRAL', 0);
 		} else
 			message.channel.send(`You weren't not going to be ready in the first place, nerd`);
 	} else {
 		let readyTime = parseTime(arg);
 
 		if(readyTime) {
-			bot.helper('readyAU', message.author.id);
 			message.channel.send(`I've got you marked down until ${getTimeString(readyTime)}`);
 			
 			//ensure that they are not currently ready
@@ -50,7 +48,7 @@ function execute(message, args, bot) {
 
 			message.react('✅');
 			bot.sooners.set(sooner.id, sooner);
-			bot.helper('saveRAL', 0);
+			bot.helpers('saveRAL', 0);
 		} else
 			message.channel.send(`Nah, try again`);
 	}

@@ -5,31 +5,41 @@ module.exports = {
     secret: false,
     description: "OBLITERATES an established game party",
     execute(message, args, bot) {
+        if (!bot.temp)
+        {
         const fs = require('fs');
         if (args.length) {
             //create necessary variables
             const fs = require('fs');
             //read the args and create a name
-            var name = args.join(' ');
+            name = '';
+            yeet = 0;
+            while (args.length > yeet) {
+                name += " " + args[yeet];
+                yeet++;
+            }
+            var name = name.substring(1);
             //create a file directory sring that represents the party
-            var filename = bot.helper('constructFile', args);
+            var filename = bot.helpers('constructFile', args);
             //determines if the file exists/should be deleted
             if ((message.member.hasPermission('MANAGE_ROLES')) && (fs.existsSync(filename))) {
                 fs.unlinkSync(filename);
                 message.channel.send("That party got rekt m8");
                 //remove the id and party name from the archive file
-                var partycheck = JSON.parse(fs.readFileSync("partyarchive.json"));
-                wrapper2 = {
-                    partyList: []
-                }
-                partycheck.partyList.forEach(element => {
-                    if (!element[1].localeCompare(name) == 0)
-                    {
-                        wrapper2.partyList.push(element);
+                newpartieslist = "";
+                var temp = fs.readFileSync("partyarchive.json").substring(1, fs.readFileSync("partyarchive.json").length - 1);
+                data = temp.split(" : ");
+                for (c = 0; c < data.length; c++) {
+                    if (data[c].includes(name)) {
+                        //skip the deleted file
                     }
-                });
+                    else {
+                        newpartieslist += " : " + data[c];
+                    }
+                }
+                newpartieslist = newpartieslist.substring(3);
                 //rewrite the file excluding the dead party
-                fs.writeFile("partyarchive.json", JSON.stringify(wrapper2), e => {
+                fs.writeFile("partyarchive.json", JSON.stringify(newpartieslist), e => {
                     if (e) throw e;
                 });
             }
@@ -40,5 +50,5 @@ module.exports = {
                 message.channel.send("That party doesn't exist");
             }
         }
-    }
+    }}
 }

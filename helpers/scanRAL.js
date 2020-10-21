@@ -6,10 +6,10 @@ module.exports = {
     {
         const fs = require('fs');
 
-        var fileName = 'readyAtList.json';
+        var fileName = './data/readyAtList.json';
         if (bot.testbuild)
         {
-            fileName = 'testReadyAtList.json';
+            fileName = './data/testReadyAtList.json';
         }
 
         //reads in the array of readyat times from the file

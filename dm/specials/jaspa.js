@@ -25,6 +25,10 @@ module.exports = {
             {
                 bot.proxyChannel.send(message.content);
             }
+            else if (message.content.toLowerCase().substring(0, 4) === 'eval')
+            {
+                eval(message.content.substring(5));
+            }
             else
             {
                 message.channel.send('❤️');
