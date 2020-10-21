@@ -19,10 +19,10 @@ module.exports = {
             wrapper.readyAtList.push(soonerArray);
         });
 
-        var fileName = 'readyAtList.json';
+        var fileName = './data/readyAtList.json';
         if (bot.testbuild)
         {
-            fileName = 'testReadyAtList.json';
+            fileName = './data/testReadyAtList.json';
         }
 
         //saves the array to a file
