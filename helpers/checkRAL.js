@@ -18,9 +18,31 @@ module.exports = {
             {
                 if (hour === sooner.hour && minute === sooner.minute)
                 {
-                    bot.readyBotChannel.send(`Are ya ready yet, <@${sooner.id}>?`);
-                    bot.sooners.delete(sooner.id);
-                    bot.helpers('saveRAL', 0);
+                    //ping and remove from the ready at list
+                    if(sooner.type = 'at')
+                    {
+                        bot.readyBotChannel.send(`Are ya ready yet, <@${sooner.id}>?`);
+                        bot.sooners.delete(sooner.id);
+                        bot.helpers('saveRAL', 0);
+                    }
+                    //written by Jasper Rutherford.
+                    //unready and remove from the ready until list
+                    else if(sooner.type = 'until')
+                    {
+                        bot.readyBotChannel.send(`<@${sooner.id}> is no longer ready.`);
+                        bot.client.things.get('textcommands').get('notready').execute(message, 'auto', bot);
+                        bot.sooners.delete(sooner.id);
+                        bot.helpers('saveRAL', 0);
+                    }
+                }
+            });
+            //written by Josiah Vanevenhoven
+            //remove from the ready at until list if they never readied
+            bot.RAUL.forEach(element => {
+                if (element[3] === hour && element[4] === minute)
+                {
+                    bot.RAUL.delete(element[0]);
+                    bot.helpers('saveRAUL', 0);
                 }
             });
         }

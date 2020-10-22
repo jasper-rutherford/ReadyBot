@@ -13,6 +13,9 @@ module.exports = {
 
 function execute(message, args, bot) {
 	let arg = args.join(' ');
+
+	bot.RAUL.delete(message.author.id);
+	bot.helpers('saveRAUL', 0);
 	
 	if(!arg)
 		message.channel.send('Try entering a time');

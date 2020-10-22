@@ -17,7 +17,7 @@ module.exports = {
         }
         else
         {
-            if (name.includes('\\') || name.includes('\‌'))
+            if (name.includes('\\') || name.includes('\"‌'))
             {
                 message.channel.send('That\'s an illegal character bucko');
             }

@@ -13,7 +13,7 @@ var bot = {
     client: client,
     channelTypes: ['dm', 'text'],
     messageTypes: ['commands', 'generics', 'specials'],
-    guildID: '752727453918691402',
+    guildID: '327645289303244821',
     guild: undefined,
     jaspaDM: '754507044312317962',
     jaspaID: '130880023069589505',
@@ -45,7 +45,7 @@ var bot = {
     readyBotChannel: undefined,
     startHour: undefined,
     parties: new Discord.Collection,
-    josiahMap: new Discord.Collection,
+    RAUL: new Discord.Collection,
 
     
     initialUpdates: function ()
@@ -64,6 +64,7 @@ var bot = {
 
         this.helpers('midnightReset', 0);
         this.helpers('scanRAL', 0);
+        this.helpers('scanRAUL', 0);
         this.helpers('scanParties', 0);
     },
 
@@ -87,14 +88,14 @@ var bot = {
 if (bot.testbuild)
 {
     bot.token = testToken;
-    bot.guildID = '254631721620733952';
+    bot.guildID = '327645289303244821';
     bot.jaspaDM = '755291736871272490';
-    bot.readyRoleID = '360182681943932930';
+    bot.readyRoleID = '768668981979906088';
     bot.imposterRoleID = '756313923363405824';
     bot.gulagRoleID = '589261878383869962';
     bot.memberRole = '589261880862834688';
     bot.proxyChannelID = '754762580408533072';
-    bot.readyBotChannelID = '754762580408533072';
+    bot.readyBotChannelID = '443103629101105152';
 }
 
 client.things = new Discord.Collection();

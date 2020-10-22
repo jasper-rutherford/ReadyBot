@@ -6,8 +6,6 @@ module.exports = {
 	description: "Declares yourself as ready, but in the future, until future-er",
 	execute(message, args, bot)
     {
-        const fs = require("fs");
-        filename = "readyAtUntilList.json";
         if (args.length == 2)
         {
             let raTime = parseTime(args[0]);
@@ -17,30 +15,17 @@ module.exports = {
             if (raTime && ruTime)
             {
                 //reads in the array of readyat times from the file
-                var data = JSON.parse(fs.readFileSync(filename));
-                bot.client.things.get('textcommands').get('readyat').execute(message, arrT1, bot);
-                var RAU = [message.member.id, raTime.hour, raTime.minute, ruTime.hour, ruTime.minute];
-                var RAUO = 
-                {
-                    RAUL: []
-                }
+				bot.client.things.get('textcommands').get('readyat').execute(message, arrT1, bot);
+				var RAUO = {
+					id: message.member.id,
+                    hour1: raTime.hour,
+                    minute1: raTime.minute,
+                    hour2: ruTime.hour,
+                    minute2: ruTime.minute,
+				}
 
-                data.RAUL.forEach(element =>
-                {
-                    if (!element[0].includes(message.author.id))
-                    {
-                        var timeArr = [element[0], element[1], element[2], element[3], element[4]];
-            
-                        RAUO.RAUL.push(timeArr);
-                    }
-                });
-
-                RAUO.RAUL.push(RAU);
-
-                fs.writeFile(filename, JSON.stringify(RAUO), e =>
-                {
-                    if (e) throw e;
-                });
+                bot.RAUL.set(message.author.id, RAUO);
+				bot.helpers('saveRAUL', 0);
             }
             else
             {

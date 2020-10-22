@@ -5,6 +5,9 @@ module.exports = {
     description: "Declares yourself not ready",
     execute(message, args, bot)
     {
+        bot.RAUL.delete(message.author.id);
+	    bot.helpers('saveRAUL', 0);
+	
         //called through readyat
         if (args === 'auto')
         {
