@@ -5,7 +5,7 @@ const fs = require('fs');
 const express = require('express');
 
 
-const { tokenDiscord, testTokenDiscord, clientId, clientSecret} = require('./data/config.json');
+const { tokenDiscord, testTokenDiscord, clientId, clientSecret } = require('./data/config.json');
 
 
 const app = express();
@@ -47,7 +47,9 @@ var bot = {
     currentTheme: '',                            //the current theme
     themeSet: false,                    //whether or not the theme has been set yet
 
-    playlistIDs: [null, null, null, null, null, null],
+    playlistIDs: [null, null, null, null, null, null], //list of playlist ID's for the theme
+
+    clearing: false,        //stupid helper variable that makes sure we dont add things while things are being deleted
 
     // benID: '111579235059060736',
     // mattID: '321665327845081089',
@@ -485,7 +487,14 @@ var bot = {
         for (let lcv = 0; lcv < 6; lcv++)
         {
             //clear each playlist
+            bot.clearing = true;
+
             this.clearPlaylist(this.playlistIDs[lcv]);
+
+            while (bot.clearing)
+            {
+                //waiting for async stuff
+            }
 
             //determine how long each playlist should be
             let len = 0;
@@ -544,7 +553,7 @@ var bot = {
 
                 length = data.body.tracks.total;
                 loops = length / 100;
-
+                let tracksRemoved = 0;
 
                 //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
                 for (var lcv = 0; lcv < loops; lcv++)
@@ -555,31 +564,47 @@ var bot = {
                         limit: 100,
                         fields: 'items'
                     })
-                        .then(
-                            function (data)
+                        .then(function (data)
+                        {
+                            //the list of objects containing uri's to add onto
+                            let tracks = [];
+
+                            data.body.items.forEach(item =>
                             {
-                                //the list of objects containing uri's to add onto
-                                let tracks = [];
+                                //convert each track to an object and add it to the list
+                                tracks.push({ uri: item.track.uri });
+                            });
 
-                                data.body.items.forEach(item =>
+                            //delete all the tracks covered by this chunk of the for loop
+                            bot.spotifyApi.removeTracksFromPlaylist(id, tracks)
+                                .then(function (data)
                                 {
-                                    //convert each track to an object and add it to the list
-                                    tracks.push({ uri: item.track.uri });
-                                });
+                                    //increase number of times tracks have been removed
+                                    tracksRemoved++;
 
-                                //delete all the tracks covered by this chunk of the for loop
-                                bot.spotifyApi.removeTracksFromPlaylist(id, tracks);
+                                    //if all tracks have been removed
+                                    if (tracksRemoved = Math.ceil(loops))
+                                    {
+                                        //tell the bot that clearing has finished
+                                        bot.clearing = false;
 
-                            },
+                                        //tell the console the same
+                                        console.log("cleared a playlist");
+                                    }
+                                }
+                                );
+                        },
                             function (err)
                             {
                                 console.log('Something went wrong!', err);
+                                bot.clearing = false;
                             }
                         );
                 }
             }, function (err)
             {
                 console.log('Something went wrong!', err);
+                bot.clearing = false;
             });
     }
 }
