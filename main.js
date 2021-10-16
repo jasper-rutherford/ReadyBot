@@ -24,7 +24,7 @@ var bot = {
     jaspaDM: '754507044312317962',
     jaspaID: '130880023069589505',
 
-    // credentials are optional
+    // credentials are optional /////this comment is from the template I built off of. Maybe it is true? Maybe not.
     spotifyApi: new SpotifyWebApi({
         clientId: clientId,
         clientSecret: clientSecret,
@@ -134,6 +134,7 @@ var bot = {
         //read the base list of songs
         bot.readBarrelList();
 
+        console.log("testbarrel");
         //get wrapper from file
         var fileName = './data/spotify/themes.json';
         var wrapper = JSON.parse(fs.readFileSync(fileName));
@@ -155,6 +156,7 @@ var bot = {
         bot.spotifyApi.getPlaylist(bot.barrelID)
             .then(function (data)
             {
+                console.log("GOT A PLAYLIST BY ID: " + bot.barrelID);
                 length = data.body.tracks.total;
                 loops = length / 100;
                 let chunkNum = 0;
@@ -175,10 +177,12 @@ var bot = {
                                 {
                                     // console.log(val, item.track.name);
 
+                                    //BARRELNODE DEFINITION
                                     let node =
                                     {
                                         name: item.track.name,
                                         id: item.track.id,
+                                        value: null,
                                         prev: null,
                                         next: null,
 
@@ -298,13 +302,30 @@ var bot = {
             while (barrelNode != null)
             {
                 //create the list node for this step
+                //LISTNODE DEFINITION
                 let listNode =
                 {
                     name: barrelNode.name,
                     id: barrelNode.id,
                     value: 0,
                     prev: null,
-                    next: null
+                    next: null,
+
+                    list: function ()
+                    {
+                        let num = 1;
+                        this.listing(num);
+                    },
+
+                    listing: function (num)
+                    {
+                        console.log(num, this.name);    //print the name
+
+                        if (this.next != null)
+                        {
+                            this.next.listing(num + 1); //list the next node
+                        }
+                    }
                 }
 
                 //add the node to the map
@@ -432,21 +453,39 @@ var bot = {
         bot.listHead = null;
         bot.listTail = null;
 
-        /////
+        //set the list length
         bot.listLength = wrapper.songs.length;
-        bot.barrelLength = wrapper.songs.length;
 
         //build the node list from the array in the wrapper
         for (let lcv = 0; lcv < wrapper.songs.length; lcv++)
         {
             //create the list node for this step
+            //LISTNODE 
             let listNode =
             {
                 name: wrapper.songs[lcv].name,
                 id: wrapper.songs[lcv].id,
                 value: wrapper.songs[lcv].value,
                 prev: null,
-                next: null
+                next: null,
+
+                list: function ()
+                {
+                    let num = 1;
+                    this.listing(num);
+                },
+
+                listing: function (num)
+                {
+                    console.log(num, this.name);    //print the name
+
+                    if (this.next != null)
+                    {
+                        this.next.listing(num + 1); //list the next node
+                    }
+                },
+
+                
             }
 
             //add the node to the map
@@ -475,6 +514,32 @@ var bot = {
         if (bot.barrelRead && bot.themeSet)
         {
             //TODO: sync
+            //check if anything has been added to the barrel 
+            //loop through the barrel list
+            let barrelNode = bot.barrelHead;
+            while (barrelNode != null)
+            {
+                //check if the barrel node is in the list
+                let contains = false;
+                let listNode = bot.listHead;
+                while (listNode != null)
+                {
+                    if (barrelNode.id == listNode.id)
+                    {
+                        contains = true;
+                        listNode = null;
+                    }
+                    else
+                    {
+                        listNode = listNode.next;
+                    }
+                }
+
+
+            }
+
+
+            //check if anything has been removed from the barrel
 
             //reload the playlists
             this.reloadPlaylists();
@@ -489,12 +554,23 @@ var bot = {
             //clear each playlist
             bot.clearing = true;
 
+            console.log("boutta run the clear on \'" + this.playlistIDs[lcv] + "\"");
             this.clearPlaylist(this.playlistIDs[lcv]);
 
+            console.log("waiting for clear to complete");
+
+            let waitcount = 0;
             while (bot.clearing)
             {
                 //waiting for async stuff
+                waitcount++;
+                if (waitcount % 100 == 0)
+                {
+                    // console.log("waiting")
+                }
             }
+
+            console.log("finished waiting for clear to complete");
 
             //determine how long each playlist should be
             let len = 0;
@@ -510,6 +586,8 @@ var bot = {
             {
                 len = Math.floor(0.25 * (lcv - 1) * this.barrelLength);
             }
+
+            console.log("Playlist " + lcv + " should have a length of [" + len + "]\n");
 
             //convert len songs into a list to be sent into the api (added to the playlist)
             let listNode = bot.listHead;
@@ -545,7 +623,7 @@ var bot = {
 
     clearPlaylist: function (id)
     {
-        // Get the bottom of the barrel length
+        // Get the playlist length
         bot.spotifyApi.getPlaylist(id)
             .then(function (data)
             {
@@ -554,10 +632,12 @@ var bot = {
                 length = data.body.tracks.total;
                 loops = length / 100;
                 let tracksRemoved = 0;
+                console.log("stuck 2");
 
                 //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
                 for (var lcv = 0; lcv < loops; lcv++)
                 {
+                    console.log("stuck 3");
                     // Get tracks 
                     bot.spotifyApi.getPlaylistTracks(id, {
                         offset: lcv * 100,
@@ -600,6 +680,8 @@ var bot = {
                                 bot.clearing = false;
                             }
                         );
+        console.log("stuck 4");
+
                 }
             }, function (err)
             {
@@ -683,7 +765,7 @@ client.once('ready', () =>
     // bot.helpers('checkRAL', 0);
     client.user.setStatus('invisible')
 
-    console.log('Readybot 3 confirmed');
+    console.log('Readybot 3: Spotify Edition');
 
     if (bot.testbuild)
     {
