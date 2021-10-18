@@ -10,6 +10,57 @@ const { tokenDiscord, testTokenDiscord, clientId, clientSecret } = require('./da
 
 const app = express();
 
+//LISTNODE DEFINITION
+class Node
+{
+    constructor(name, id, value, prev, next)
+    {
+        this.name = name;
+        this.id = id;
+        this.value = value;
+        this.prev = prev;
+        this.next = next;
+
+        this.list = function ()
+        {
+            let num = 1;
+            this.listing(num);
+        };
+
+        this.listing = function (num)
+        {
+            console.log(num, this.name); //print the name
+
+            if (this.next != null)
+            {
+                this.next.listing(num + 1); //list the next node
+            }
+        };
+
+        //function that checks if this node or any of its nexts have the given id
+        this.contains = function (id)
+        {
+            //if this node has the id return true
+            if (this.id == id)
+            {
+                return true;
+            }
+
+            //otherwise if there are no more nexts return false
+            else if (this.next == null)
+            {
+                return false;
+            }
+
+
+            //otherwise call the function on the next node
+            else
+            {
+                return this.next.contains(id);
+            }
+        };
+    }
+}
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
     testbuild: true,
@@ -30,26 +81,26 @@ var bot = {
         clientSecret: clientSecret,
         redirectUri: 'http://localhost:8888/callback'
     }),
-    spotifyUserID: '446i69szgjkow87ew9yjbbhnn',     //my user id
+    spotifyUserID: '446i69szgjkow87ew9yjbbhnn',             //my user id
 
-    barrelID: '4jCZqEM3AdWj3uSpjuY9IK',             //bottom of the barrel
-    barrelHead: null,                               //stores bottom of the barrel as a linked list
-    barrelTail: null,                               //head is first node, tail is last
+    barrelID: "4jCZqEM3AdWj3uSpjuY9IK",  // "5GFPI2Hii5HfpUUnStQN2r", //             //bottom of the barrel
+    barrelHead: null,                                       //stores bottom of the barrel as a linked list
+    barrelTail: null,                                       //head is first node, tail is last
     barrelLength: 0,
-    barrelRead: false,              //whether or not the barrel has been read in yet
+    barrelRead: false,                                      //whether or not the barrel has been read in yet
 
-    listHead: null,                 //stores the song values list
-    listTail: null,                 //head is first, tail is last
-    listMap: new Discord.Collection,    //maps the song id's to their nodes in the list
-    listLength: 0,                      //length of the list (should be the same as barrelLength?)
+    valuesHead: null,                                       //stores the song values list
+    valuesTail: null,                                       //head is first, tail is last
+    valuesMap: new Discord.Collection,                      //maps the song id's to their nodes in the list
+    valuesLength: 0,                                        //length of the values list 
 
-    themes: [],                                         //a list of all the themes
-    currentTheme: '',                            //the current theme
-    themeSet: false,                    //whether or not the theme has been set yet
+    themes: [],                                             //a list of all the themes
+    currentTheme: '',                                       //the current theme
+    themeSet: false,                                        //whether or not the theme has been set yet
 
-    playlistIDs: [null, null, null, null, null, null], //list of playlist ID's for the theme
+    playlistIDs: [null, null, null, null, null, null],      //list of playlist ID's for the theme
 
-    clearing: false,        //stupid helper variable that makes sure we dont add things while things are being deleted
+    clearing: false,                                        //stupid helper variable that makes sure we dont add things while things are being deleted
 
     // benID: '111579235059060736',
     // mattID: '321665327845081089',
@@ -134,7 +185,6 @@ var bot = {
         //read the base list of songs
         bot.readBarrelList();
 
-        console.log("testbarrel");
         //get wrapper from file
         var fileName = './data/spotify/themes.json';
         var wrapper = JSON.parse(fs.readFileSync(fileName));
@@ -144,21 +194,22 @@ var bot = {
         bot.themes = wrapper.themes;
 
         //set the theme to the current theme (aka what the theme was last time the bot saved)
-        this.setTheme(this.currentTheme);
+        bot.setTheme(this.currentTheme);
+
+        // bot.syncLengths();
     },
 
     readBarrelList: function ()
     {
-        var length = null;
+        console.log("Reading barrel");
         var loops = null;
 
         // Get the bottom of the barrel length
         bot.spotifyApi.getPlaylist(bot.barrelID)
             .then(function (data)
             {
-                console.log("GOT A PLAYLIST BY ID: " + bot.barrelID);
-                length = data.body.tracks.total;
-                loops = length / 100;
+                bot.barrelLength = data.body.tracks.total;
+                loops = bot.barrelLength / 100;
                 let chunkNum = 0;
 
                 //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
@@ -175,33 +226,8 @@ var bot = {
                             {
                                 data.body.items.forEach(item =>         //read each song in the chunk into barrelList
                                 {
-                                    // console.log(val, item.track.name);
-
-                                    //BARRELNODE DEFINITION
-                                    let node =
-                                    {
-                                        name: item.track.name,
-                                        id: item.track.id,
-                                        value: null,
-                                        prev: null,
-                                        next: null,
-
-                                        list: function ()
-                                        {
-                                            let num = 1;
-                                            this.listing(num);
-                                        },
-
-                                        listing: function (num)
-                                        {
-                                            console.log(num, this.name);    //print the name
-
-                                            if (this.next != null)
-                                            {
-                                                this.next.listing(num + 1); //list the next node
-                                            }
-                                        }
-                                    }
+                                    //node for the song being read
+                                    let node = new Node(item.track.name, item.track.id, null, null, null);
 
                                     //if the list hasn't been created, make this node the first and last node
                                     if (bot.barrelHead == null)
@@ -228,7 +254,8 @@ var bot = {
                                     bot.barrelRead = true;
 
                                     //tell the console the same
-                                    console.log("Read Barrel");
+                                    console.log("Barrel has been read");
+                                    // bot.newTheme("Default", ["5GFPI2Hii5HfpUUnStQN2r","1sk0YLFu6qEeV3E57Nu6L7","1vl2nOZuGj0Apadn7T4ChC","31fTXPEzreUh3AKkXgOnIF","7CzAPNHwxvwC2Yk54QjLY6","03DqdGqj9o5mDuBAlImvoL"]);
 
                                     //Try to sync the length of the list to the length of the barrel
                                     bot.syncLengths();
@@ -249,10 +276,10 @@ var bot = {
 
     newTheme: function (theme, playlistIDs)
     {
-        console.log("Trying to make a new theme");
+        console.log("Trying to make a new theme called \"" + theme + "\"");
 
         //if theme already exists
-        if (bot.themes.indexOf(theme) != -1)
+        if (bot.themes.indexOf(theme) != -1 && false)
         {
             console.log("Tried to add a theme that already exists.");
         }
@@ -263,7 +290,7 @@ var bot = {
             bot.themes.push(theme);
 
             //clear the old map
-            this.listMap.clear();
+            this.valuesMap.clear();
 
             //build the new list, each song defaults to a value of 0
             bot.buildNewList();
@@ -277,8 +304,18 @@ var bot = {
                 this.playlistIDs[lcv] = playlistIDs[lcv];
             }
 
+            // //print the values list
+            // let valNode = bot.valuesHead;
+            // let count = 0;
+            // while (valNode != null)
+            // {
+            //     count++;
+            //     console.log(count + ", " + valNode.name);
+            //     valNode = valNode.next;
+            // }
+
             //save all the new stuff to files
-            this.saveSpotify();
+            bot.saveSpotify();
         }
 
         console.log("Made a new theme");
@@ -293,8 +330,8 @@ var bot = {
         else
         {
             //clear the list from what was there
-            bot.listHead = null;
-            bot.listTail = null;
+            bot.valuesHead = null;
+            bot.valuesTail = null;
 
             //loop through the barrelList
             let barrelNode = bot.barrelHead;
@@ -302,48 +339,24 @@ var bot = {
             while (barrelNode != null)
             {
                 //create the list node for this step
-                //LISTNODE DEFINITION
-                let listNode =
-                {
-                    name: barrelNode.name,
-                    id: barrelNode.id,
-                    value: 0,
-                    prev: null,
-                    next: null,
-
-                    list: function ()
-                    {
-                        let num = 1;
-                        this.listing(num);
-                    },
-
-                    listing: function (num)
-                    {
-                        console.log(num, this.name);    //print the name
-
-                        if (this.next != null)
-                        {
-                            this.next.listing(num + 1); //list the next node
-                        }
-                    }
-                }
+                let listNode = new Node(barrelNode.name, barrelNode.id, 0, null, null);
 
                 //add the node to the map
-                bot.listMap.set(listNode.id, listNode);
+                bot.valuesMap.set(listNode.id, listNode);
 
                 //if it is the first node in the loop 
-                if (bot.listHead == null)
+                if (bot.valuesHead == null)
                 {
                     //set the node to be head and tail
-                    bot.listHead = listNode;
-                    bot.listTail = listNode;
+                    bot.valuesHead = listNode;
+                    bot.valuesTail = listNode;
                 }
                 //otherwise
                 else
                 {
-                    listNode.prev = bot.listTail;       //update the new node's previous 
-                    bot.listTail.next = listNode;   //update the tail's next
-                    bot.listTail = listNode;        //set the new node to be the tail
+                    listNode.prev = bot.valuesTail;         //update the new node's previous 
+                    bot.valuesTail.next = listNode;         //update the tail's next
+                    bot.valuesTail = listNode;              //set the new node to be the tail
                 }
 
                 barrelNode = barrelNode.next;
@@ -353,11 +366,12 @@ var bot = {
 
     saveSpotify: function ()
     {
-        this.saveThemes();
-        this.saveList();
+        bot.saveValuesList();
+        bot.saveThemes();
     },
 
-    saveList: function ()
+    //saves the list of themes
+    saveThemes: function ()
     {
         var wrapper =
         {
@@ -374,32 +388,38 @@ var bot = {
         });
     },
 
-    saveThemes: function ()
+    //saves the values list to file
+    saveValuesList: function ()
     {
         var wrapper =
         {
-            playlistIDs: this.playlistIDs,
+            playlistIDs: bot.playlistIDs,
             songs: []
         }
 
         //converts the linked list of songs to an array
-        let node = this.listHead;
+        let node = bot.valuesHead;
         while (node != null)
         {
-            wrapper.songs.push(
-                {
-                    name: node.name,
-                    id: node.id,
-                    value: node.value
-                });
+            let wrapSong =
+            {
+                name: node.name,
+                id: node.id,
+                value: node.value
+            }
+
+            wrapper.songs.push(wrapSong);
 
             node = node.next;
         }
 
-        var fileName = './data/spotify/themes/' + this.currentTheme + '.json';
+        //where to save to
+        var fileName = './data/spotify/themes/' + bot.currentTheme + '.json';
+
+        console.log(JSON.stringify(wrapper));
 
         //saves the thing to the file
-        fs.writeFile(fileName, JSON.stringify(wrapper), e =>
+        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
         {
             if (e) throw e;
         });
@@ -424,7 +444,7 @@ var bot = {
             //tell the console the same
             console.log("Theme has been set to", theme);
 
-            //Try to sync the length of the list to the length of the barrel
+            // Try to sync the length of the list to the length of the barrel
             bot.syncLengths();
         }
         else
@@ -436,7 +456,7 @@ var bot = {
     buildListFromFile: function ()
     {
         //clear the old map
-        this.listMap.clear();
+        this.valuesMap.clear();
 
         //get wrapper from file
         var fileName = './data/spotify/themes/' + this.currentTheme + '.json';
@@ -450,60 +470,34 @@ var bot = {
         }
 
         //clear the list from what was there
-        bot.listHead = null;
-        bot.listTail = null;
+        bot.valuesHead = null;
+        bot.valuesTail = null;
 
         //set the list length
-        bot.listLength = wrapper.songs.length;
+        bot.valuesLength = wrapper.songs.length;
 
         //build the node list from the array in the wrapper
         for (let lcv = 0; lcv < wrapper.songs.length; lcv++)
         {
             //create the list node for this step
-            //LISTNODE 
-            let listNode =
-            {
-                name: wrapper.songs[lcv].name,
-                id: wrapper.songs[lcv].id,
-                value: wrapper.songs[lcv].value,
-                prev: null,
-                next: null,
-
-                list: function ()
-                {
-                    let num = 1;
-                    this.listing(num);
-                },
-
-                listing: function (num)
-                {
-                    console.log(num, this.name);    //print the name
-
-                    if (this.next != null)
-                    {
-                        this.next.listing(num + 1); //list the next node
-                    }
-                },
-
-                
-            }
+            let listNode = new Node(wrapper.songs[lcv].name, wrapper.songs[lcv].id, wrapper.songs[lcv].value, null, null);
 
             //add the node to the map
-            bot.listMap.set(listNode.id, listNode);
+            bot.valuesMap.set(listNode.id, listNode);
 
             //if it is the first node in the loop 
-            if (bot.listHead == null)
+            if (bot.valuesHead == null)
             {
                 //set the node to be head and tail
-                bot.listHead = listNode;
-                bot.listTail = listNode;
+                bot.valuesHead = listNode;
+                bot.valuesTail = listNode;
             }
             //otherwise
             else
             {
-                listNode.prev = bot.listTail;   //update the new node's previous 
-                bot.listTail.next = listNode;   //update the tail's next
-                bot.listTail = listNode;        //set the new node to be the tail
+                listNode.prev = bot.valuesTail;   //update the new node's previous 
+                bot.valuesTail.next = listNode;   //update the tail's next
+                bot.valuesTail = listNode;        //set the new node to be the tail
             }
         }
     },
@@ -513,181 +507,241 @@ var bot = {
     {
         if (bot.barrelRead && bot.themeSet)
         {
-            //TODO: sync
-            //check if anything has been added to the barrel 
+            console.log("Syncing lengths: \nB[" + bot.barrelLength + "], V[" + bot.valuesLength + "] -> ");
+
+            //check if anything has been added to the barrel
             //loop through the barrel list
             let barrelNode = bot.barrelHead;
             while (barrelNode != null)
             {
-                //check if the barrel node is in the list
-                let contains = false;
-                let listNode = bot.listHead;
-                while (listNode != null)
+                //if barrelNode is not in the values list
+                if (!bot.valuesHead.contains(barrelNode.id))
                 {
-                    if (barrelNode.id == listNode.id)
+                    //TODO: fix this
+                    //find the right spot in the value list to add the song (according to a default value of 0)
+                    let valueNode = bot.valuesHead;
+                    while (valueNode.next != null)
                     {
-                        contains = true;
-                        listNode = null;
+                        //if a node is found with a negative value
+                        if (valueNode.value < 0)
+                        {
+                            //insert the new node before the node with a negative value
+                            valueNode.prev = new Node(barrelNode.name, barrelNode.id, 0, valueNode.prev, valueNode);
+
+                            //if inserted before the head, update the head (it would be truly unfortunate if the head had negative value, but ya gotta plan for these things i guess)
+                            if (valueNode.prev.prev == null)
+                            {
+                                bot.valuesHead = valueNode.prev;
+                            }
+
+                            //stop searching once the new node is inserted
+                            break;
+                        }
+
+                        //advance to next node in list
+                        valueNode = valueNode.next;
                     }
-                    else
+
+                    //if the node was not inserted, and no songs had negative value
+                    if (valueNode == null)
                     {
-                        listNode = listNode.next;
+                        //insert the new node at the end of the list
+                        bot.valuesTail.next = new Node(barrelNode.name, barrelNode.id, 0, bot.valuesTail, null);
+                        bot.valuesTail = bot.valuesTail.next;   //(update the value list tail)
                     }
+
+                    //update the length of the value list
+                    bot.valuesLength++;
                 }
-
-
+                barrelNode = barrelNode.next;
             }
 
-
             //check if anything has been removed from the barrel
+            //loop through the values list
+            let valuesNode = bot.valuesHead;
+            while (valuesNode != null)
+            {
+                //if valuesNode is not in the barrel
+                if (!bot.barrelHead.contains(valuesNode.id))
+                {
+                    //remove the node from the values list
+                    //special case for if the valuesNode is the head
+                    if (valuesNode.id == bot.valuesHead.id)
+                    {
+                        bot.valuesHead = bot.valuesHead.next;
+                        bot.valuesHead.prev = null;
+                    }
+                    //special case for if the valuesNode is the tail
+                    else if (valuesNode.id == bot.valuesTail.id)
+                    {
+                        bot.valuesTail = bot.valuesTail.prev;
+                        bot.valuesTail.next = null;
+                    }
+                    //standard case for any other node
+                    else
+                    {
+                        valuesNode.prev.next = valuesNode.next;
+                        valuesNode.next.prev = valuesNode.prev;
+                    }
+                    bot.valuesLength--;
+                }
+                valuesNode = valuesNode.next;
+            }
+
+            console.log("B[" + bot.barrelLength + "], V[" + bot.valuesLength + "]\nSynced lengths.");
+
+            //save the updated list to file
+            bot.saveValuesList();
 
             //reload the playlists
-            this.reloadPlaylists();
+            console.log("Reloading all playlists");
+            bot.reloadPlaylists(0);
+            // bot.reloadPlaylists();
         }
     },
 
-    reloadPlaylists: function ()
+    reloadPlaylists: function (lcv)
     {
-        //reload each playlist for this theme
-        for (let lcv = 0; lcv < 6; lcv++)
+        // console.log(lcv);
+        if (lcv > 11)
         {
-            //clear each playlist
-            bot.clearing = true;
+            console.log("Finished Reloading All Playlists");
+        }
+        //Clear the playlist related to lcv / 2
+        else if (lcv % 2 == 0)
+        {
+            let realLCV = lcv / 2;
+            let id = bot.playlistIDs[realLCV];
 
-            console.log("boutta run the clear on \'" + this.playlistIDs[lcv] + "\"");
-            this.clearPlaylist(this.playlistIDs[lcv]);
-
-            console.log("waiting for clear to complete");
-
-            let waitcount = 0;
-            while (bot.clearing)
-            {
-                //waiting for async stuff
-                waitcount++;
-                if (waitcount % 100 == 0)
+            console.log("Reloading Playlist " + realLCV);
+            // Get the playlist length
+            bot.spotifyApi.getPlaylist(id)
+                .then(function (data)
                 {
-                    // console.log("waiting")
-                }
-            }
+                    console.log("attempting to clear #" + realLCV);
 
-            console.log("finished waiting for clear to complete");
+                    length = data.body.tracks.total;
+                    loops = length / 100;
+                    let tracksRemoved = 0;
 
-            //determine how long each playlist should be
+                    //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
+                    for (var lcv2 = 0; lcv2 < loops; lcv2++) 
+                    {
+                        // Get tracks 
+                        bot.spotifyApi.getPlaylistTracks(id, {
+                            offset: lcv2 * 100,
+                            limit: 100,
+                            fields: 'items'
+                        })
+                            .then(function (data)
+                            {
+                                //the list of objects containing uri's to add onto
+                                let tracks = [];
+
+                                data.body.items.forEach(item =>
+                                {
+                                    //convert each track to an object and add it to the list
+                                    tracks.push({ uri: item.track.uri });
+                                });
+
+                                //delete all the tracks covered by this chunk of the for loop
+                                bot.spotifyApi.removeTracksFromPlaylist(id, tracks)
+                                    .then(function (data)
+                                    {
+                                        //increase number of times tracks have been removed
+                                        tracksRemoved++;
+
+                                        //if all tracks have been removed
+                                        if (tracksRemoved = Math.ceil(loops))
+                                        {
+                                            //tell the console the same
+                                            console.log("cleared #" + realLCV);
+                                            bot.reloadPlaylists(lcv + 1);
+                                        }
+                                    });
+                            },
+                                function (err)
+                                {
+                                    console.log('Something went wrong with #' + realLCV + err);
+                                }
+                            );
+
+                    }
+                }, function (err)
+                {
+                    console.log('Something went wrong!', err);
+                    bot.clearing = false;
+                });
+        }
+        //Clear the playlist related to (lcv - 1) / 2
+        else
+        {
+            let realLCV = (lcv - 1) / 2;
+            console.log("attempting to load #" + realLCV);
+
+            //determine how long the playlist should be
             let len = 0;
-            if (lcv == 0)
+            if (realLCV == 0)
             {
                 len = 1;
             }
-            else if (lcv == 1)
+            else if (realLCV == 1)
             {
-                len = Math.floor(0.05 * this.barrelLength);
+                console.log("BL: " + bot.barrelLength + " Mult: " + Math.floor(0.05 * bot.barrelLength));
+                len = Math.floor(0.05 * bot.barrelLength);
             }
             else
             {
-                len = Math.floor(0.25 * (lcv - 1) * this.barrelLength);
+                len = Math.floor(0.25 * (realLCV - 1) * bot.barrelLength);
             }
 
-            console.log("Playlist " + lcv + " should have a length of [" + len + "]\n");
+            console.log("Playlist #" + realLCV + " should have a length of [" + len + "]");
 
             //convert len songs into a list to be sent into the api (added to the playlist)
-            let listNode = bot.listHead;
 
-            let chunks = len / 100;
-            let extra = len % 100;
+            //gets the head of the value list
+            let listNode = bot.valuesHead;
 
-
+            //the list of songs to add to the playlist (sent in chunks)
             let tracks = [];
+
+            //loop for however long the playlist should be
             for (let lcv2 = 0; lcv2 < len; lcv2++)
             {
+                console.log(lcv2);
                 tracks.push("spotify:track:" + listNode.id);
 
-                //add tracks to the playlist in chunks of 100, or add the last chunk when on the last loop
+                //if the chunk is full or this is the last step of the loop
                 if (tracks.length == 100 || lcv2 == len - 1)
                 {
-                    bot.spotifyApi.addTracksToPlaylist(this.playlistIDs[lcv], tracks)
+                    console.log(tracks);
+                    //send the current chunk to the playlist
+                    bot.spotifyApi.addTracksToPlaylist(bot.playlistIDs[realLCV], tracks)
                         .then(function (data)
                         {
-                            console.log('Added tracks to playlist', lcv);
+                            //if this is the last step of the loop
+                            if (lcv2 == len - 1)
+                            {
+                                //tell the console this playlist is done
+                                console.log("Finished adding tracks to #" + realLCV);
+                                console.log("Finished reloading #" + realLCV);
+
+                                //reload the next playlist
+                                bot.reloadPlaylists(lcv + 1);
+                            }
                         }, function (err)
                         {
-                            console.log('Failed to add tracks to playlist', lcv);//, "\n", err);
+                            console.log('Failed to add tracks to playlist', realLCV);//, "\n", err);
                         });
 
+                    //clear the chunk after it is sent
                     tracks = [];
                 }
 
+                //advance to next value node in the list
                 listNode = listNode.next;
             }
         }
-    },
-
-    clearPlaylist: function (id)
-    {
-        // Get the playlist length
-        bot.spotifyApi.getPlaylist(id)
-            .then(function (data)
-            {
-                console.log("attempting to clear", data.body.name);
-
-                length = data.body.tracks.total;
-                loops = length / 100;
-                let tracksRemoved = 0;
-                console.log("stuck 2");
-
-                //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
-                for (var lcv = 0; lcv < loops; lcv++)
-                {
-                    console.log("stuck 3");
-                    // Get tracks 
-                    bot.spotifyApi.getPlaylistTracks(id, {
-                        offset: lcv * 100,
-                        limit: 100,
-                        fields: 'items'
-                    })
-                        .then(function (data)
-                        {
-                            //the list of objects containing uri's to add onto
-                            let tracks = [];
-
-                            data.body.items.forEach(item =>
-                            {
-                                //convert each track to an object and add it to the list
-                                tracks.push({ uri: item.track.uri });
-                            });
-
-                            //delete all the tracks covered by this chunk of the for loop
-                            bot.spotifyApi.removeTracksFromPlaylist(id, tracks)
-                                .then(function (data)
-                                {
-                                    //increase number of times tracks have been removed
-                                    tracksRemoved++;
-
-                                    //if all tracks have been removed
-                                    if (tracksRemoved = Math.ceil(loops))
-                                    {
-                                        //tell the bot that clearing has finished
-                                        bot.clearing = false;
-
-                                        //tell the console the same
-                                        console.log("cleared a playlist");
-                                    }
-                                }
-                                );
-                        },
-                            function (err)
-                            {
-                                console.log('Something went wrong!', err);
-                                bot.clearing = false;
-                            }
-                        );
-        console.log("stuck 4");
-
-                }
-            }, function (err)
-            {
-                console.log('Something went wrong!', err);
-                bot.clearing = false;
-            });
     }
 }
 
@@ -907,7 +961,7 @@ app.get('/callback', (req, res) =>
             // console.log('refresh_token:', refresh_token);
 
             console.log(
-                `Successfully retreived access token. Expires in ${expires_in} s.`
+                `Successfully retrieved access token. Expires in ${expires_in} s.`
             );
             res.send('Success! You can now close the window.');
 
