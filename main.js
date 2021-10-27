@@ -544,7 +544,6 @@ var bot = {
                 //if barrelNode is not in the values list
                 if (!bot.valuesHead.contains(barrelNode.uri))
                 {
-                    //TODO: fix this
                     //find the right spot in the value list to add the song (according to a default value of 0)
                     let valueNode = bot.valuesHead;
                     while (valueNode != null)
@@ -639,11 +638,10 @@ var bot = {
         else if (lcv % 2 == 0)
         {
             let realLCV = lcv / 2;
-            let id = bot.playlistIDs[realLCV];
-            console.log("\t\tattempting to clear #" + realLCV);
-
             console.log("\tReloading Playlist " + realLCV);
+            console.log("\t\tattempting to clear #" + realLCV);
             // Get the playlist length
+            let id = bot.playlistIDs[realLCV];
             bot.spotifyApi.getPlaylist(id)
                 .then(function (data)
                 {
@@ -654,14 +652,8 @@ var bot = {
                     //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
                     for (var lcv2 = 0; lcv2 < loops; lcv2++) 
                     {
-                        //make each async function run more out of sync from each other
-                        setTimeout(function () 
-                        {
-                            console.log('Hello World!');
-                        }, 20 * lcv2);
-                     
                         // Get tracks 
-                        bot.spotifyApi.getPlaylistTracks(id, {
+                        await bot.spotifyApi.getPlaylistTracks(id, {
                             offset: lcv2 * 100,
                             limit: 100,
                             fields: 'items'
@@ -681,7 +673,7 @@ var bot = {
                                 bot.spotifyApi.removeTracksFromPlaylist(id, tracks)
                                     .then(function (data)
                                     {
-                                        
+
                                         //increase number of times tracks have been removed
                                         tracksRemoved++;
 
@@ -708,7 +700,7 @@ var bot = {
                     bot.clearing = false;
                 });
         }
-        //Clear the playlist related to (lcv - 1) / 2
+        //load the playlist related to (lcv - 1) / 2
         else
         {
             let realLCV = (lcv - 1) / 2;
@@ -789,6 +781,216 @@ var bot = {
                 listNode = listNode.next;
             }
         }
+    },
+
+    reloadPlaylistsFixed: function (lcv)
+    {
+        // console.log(lcv);
+        if (lcv > 11)
+        {
+            console.log("Finished Reloading All Playlists");
+        }
+        //Clear the playlist related to lcv / 2
+        else if (lcv % 2 == 0)
+        {
+            let realLCV = lcv / 2;
+            console.log("\tReloading Playlist " + realLCV);
+            console.log("\t\tattempting to clear #" + realLCV);
+            // Get the playlist length
+            let id = bot.playlistIDs[realLCV];
+            bot.spotifyApi.getPlaylist(id)
+                .then(function (data)
+                {
+                    length = data.body.tracks.total;
+                    loops = length / 100;
+                    let tracksRemoved = 0;
+                    
+                    let chunks = [];
+                    //split all the songs in the playlist into chunks of up to 100 songs (only the last chunk will be less than 100)
+                    for (var lcv2 = 0; lcv2 < loops; lcv2++) 
+                    {
+                        // Get tracks 
+                        await bot.spotifyApi.getPlaylistTracks(id, {
+                            offset: lcv2 * 100,
+                            limit: 100,
+                            fields: 'items'
+                        })
+                            .then(function (data)
+                            {
+                                //the list of objects containing uri's to add onto (ie songs will be added to this list then the list will be sent to the api and all songs from the list will be removed from the playlist)
+                                let tracks = [];
+
+                                data.body.items.forEach(item =>
+                                {
+                                    //convert each track to an object and add it to the list
+                                    tracks.push({ uri: item.track.uri });
+                                });
+
+                                //delete all the tracks covered by this chunk of the for loop
+                                bot.spotifyApi.removeTracksFromPlaylist(id, tracks)
+                                    .then(function (data)
+                                    {
+
+                                        //increase number of times tracks have been removed
+                                        tracksRemoved++;
+
+                                        //if all tracks have been removed
+                                        if (tracksRemoved = Math.ceil(loops))
+                                        {
+                                            //tell the console the same
+                                            console.log("\t\tcleared #" + realLCV);
+                                            // console.log("about to launch " + lcv + 1);
+                                            // bot.reloadPlaylists(lcv + 1);
+                                            // console.log("launched " + lcv + 1);
+                                        }
+                                    });
+                            },
+                                function (err)
+                                {
+                                    console.log('Something went wrong with clearing #' + realLCV + err);
+                                }
+                            );
+                    }
+                }, function (err)
+                {
+                    console.log('Something went wrong clearing #' + realLCV + err);
+                    bot.clearing = false;
+                });
+        }
+        //load the playlist related to (lcv - 1) / 2
+        else
+        {
+            let realLCV = (lcv - 1) / 2;
+            console.log("\n\t\tattempting to load #" + realLCV);
+
+            //determine how long the playlist should be
+            let len = 0;
+            if (realLCV == 0)
+            {
+                len = 1;
+            }
+            else if (realLCV == 1)
+            {
+                // console.log("BL: " + bot.barrelLength + " Mult: " + Math.floor(0.05 * bot.barrelLength));
+                len = Math.floor(0.05 * bot.barrelLength);
+            }
+            else
+            {
+                len = Math.floor(0.25 * (realLCV - 1) * bot.barrelLength);
+            }
+
+            console.log("\t\tPlaylist #" + realLCV + " should have a length of [" + len + "]");
+
+            //convert len songs into a list to be sent into the api (added to the playlist)
+
+            //gets the head of the value list
+            let listNode = bot.valuesHead;
+
+            // //the list of songs to add to the playlist (sent in chunks)
+            // let tracks = [];
+
+            //update helper vars
+            bot.pushes = 0;
+            bot.totPushes = Math.ceil(len / 100);
+
+            //setup the building/addition of the chunks
+            for (let lcv2 = 0; lcv2 < len; lcv2++)
+            {
+                if (lcv2 % 100 == 0)
+                {
+                    bot.addTracks(listNode, len, realLCV);
+                }
+
+                // listNode = listNode.next;
+                // tracks.push("spotify:track:" + listNode.id); //deprecated, id is the uri now
+
+                // //if the chunk is full or this is the last step of the loop
+                // if (tracks.length == 100 || lcv2 == len - 1)
+                // {
+                //     // console.log(tracks);
+                //     //send the current chunk to the playlist
+                //     bot.spotifyApi.addTracksToPlaylist(bot.playlistIDs[realLCV], tracks)
+                //         .then(function (data)
+                //         {
+                //             pushes++;
+                //             console.log("\t\t\tAdded tracks to #" + realLCV);
+
+                //             //if this is the last step of the loop
+                //             if (pushes == Math.ceil(len / 100))
+                //             {
+                //                 //tell the console this playlist is done
+                //                 console.log("\t\tFinished loading #" + realLCV);
+                //                 console.log("\tFinished reloading #" + realLCV + "\n");
+
+                //                 //reload the next playlist
+                //                 bot.reloadPlaylists(lcv + 1);
+                //             }
+                //         }, function (err)
+                //         {
+                //             console.log('\t\t\tFailed to add tracks to playlist', realLCV);//, "\n", err);
+                //         });
+
+                //     //clear the chunk after it is sent
+                //     tracks = [];
+                // }
+
+                //advance to next value node in the list
+                listNode = listNode.next;
+            }
+        }
+    },
+
+    //id:           id of the playlist to clear
+    //reloading:    whether or not to load the playlist after it has been cleared
+    clearPlaylist: function(id, reloading) //TODO: switch id to index in playlistIDs
+    {
+        //get the length of the playlist 
+        bot.spotifyApi.getPlaylist(id)
+        .then(function (data)
+        {
+            let length = data.body.tracks.total;
+
+            //if the playlist is not empty
+            if (length != 0)
+            {
+                //api limits the limit to 100 tracks
+                bot.spotifyApi.getPlaylistTracks(id, {
+                    limit: 100,
+                    fields: 'items'
+                }).then(function (data)
+                {
+                    let tracks = [];
+
+                    data.body.items.forEach(item =>
+                    {
+                        //convert each track to an object and add it to the list
+                        tracks.push({ uri: item.track.uri });
+                    });
+
+                    //delete all the tracks covered by this chunk of the for loop
+                    bot.spotifyApi.removeTracksFromPlaylist(id, tracks).then(function (data)
+                    {
+                        clearPlaylist(id, reloading);
+                    }, function (err)
+                    {
+                        console.log('failed to remove tracks from playlist ' + id);
+                    });
+                }, function (err)
+                {
+                    console.log('failed to get tracks from playlist ' + id);
+                });
+            }
+            //otherwise if the length == 0
+            else
+            {
+                console.log("cleared playlist " + id);
+                //TODO: finish this
+                load()
+            }
+        }, function (err)
+        {
+            console.log('failed to get the length of playlist ' + id);
+        });
     },
 
     //add up to 100 tracks starting at startNode to the given playlist
