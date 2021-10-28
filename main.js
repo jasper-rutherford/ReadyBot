@@ -127,7 +127,7 @@ var bot = {
 
     pushes: 0,                                              //helper var for loading playlists (current number of playlist chunks that have been pushed)
     totPushes: 0,                                           //helper var for loading playlists (total number of playlist chunks to push)
-
+    testClear: 0,
     // benID: '111579235059060736',
     // mattID: '321665327845081089',
     // readyRoleID: '754789734563315834',
@@ -204,15 +204,14 @@ var bot = {
 
     loadSpot: async function ()
     {
-        let test = await bot.spotifyApi.getPlaylist(bot.barrelID);
-        console.log(test.body.name);
-        console.log("^^^^^^");
+        // let test = await bot.spotifyApi.getPlaylist(bot.barrelID);
+        // console.log(test.body.name);
+        // console.log("^^^^^^");
         //tell the bot that barrel/list need to be read/set
         bot.barrelRead = false;
         bot.themeSet = false;
 
-        //read the base list of songs
-        bot.readBarrelList();
+        
 
         //get wrapper from file
         var fileName = './data/spotify/themes.json';
@@ -228,14 +227,14 @@ var bot = {
         // bot.syncLengths();
     },
 
-    readBarrelList: async function ()
+    readBarrelList: function ()
     {
         console.log("Reading barrel");
         var loops = null;
 
         // Get the bottom of the barrel length
-        await bot.spotifyApi.getPlaylist(bot.barrelID)
-            .then(async function (data)
+        bot.spotifyApi.getPlaylist(bot.barrelID)
+            .then(function (data)
             {
                 bot.barrelLength = data.body.tracks.total;
                 loops = bot.barrelLength / 100;
@@ -245,7 +244,7 @@ var bot = {
                 for (var lcv = 0; lcv < loops; lcv++)
                 {
                     // Get tracks 
-                    await bot.spotifyApi.getPlaylistTracks(bot.barrelID, {
+                    bot.spotifyApi.getPlaylistTracks(bot.barrelID, {
                         offset: lcv * 100,
                         limit: 100,
                         fields: 'items'
@@ -471,8 +470,11 @@ var bot = {
             //tell the console the same
             console.log("Theme has been set to", theme);
 
-            // Try to sync the length of the list to the length of the barrel
-            bot.syncLengths();
+//read the base list of songs
+bot.readBarrelList();
+
+            // // Try to sync the length of the list to the length of the barrel
+            // bot.syncLengths();
         }
         else
         {
@@ -532,7 +534,7 @@ var bot = {
     //TODO: finish this
     syncLengths: function ()
     {
-        if (bot.barrelRead && bot.themeSet)
+        if (bot.barrelRead && bot.themeSet || true)
         {
             console.log("Syncing lengths: \nB[" + bot.barrelLength + "], V[" + bot.valuesLength + "] -> ");
 
@@ -622,7 +624,8 @@ var bot = {
 
             //reload the playlists
             console.log("Reloading all playlists");
-            bot.reloadPlaylists(0);
+            bot.clearPlaylist(0, true);
+            // bot.reloadPlaylists(0);
             // bot.reloadPlaylists();
         }
     },
@@ -653,7 +656,7 @@ var bot = {
                     for (var lcv2 = 0; lcv2 < loops; lcv2++) 
                     {
                         // Get tracks 
-                        await bot.spotifyApi.getPlaylistTracks(id, {
+                        bot.spotifyApi.getPlaylistTracks(id, {
                             offset: lcv2 * 100,
                             limit: 100,
                             fields: 'items'
@@ -810,7 +813,7 @@ var bot = {
                     for (var lcv2 = 0; lcv2 < loops; lcv2++) 
                     {
                         // Get tracks 
-                        await bot.spotifyApi.getPlaylistTracks(id, {
+                        bot.spotifyApi.getPlaylistTracks(id, {
                             offset: lcv2 * 100,
                             limit: 100,
                             fields: 'items'
@@ -942,8 +945,10 @@ var bot = {
 
     //id:           id of the playlist to clear
     //reloading:    whether or not to load the playlist after it has been cleared
-    clearPlaylist: function(id, reloading) //TODO: switch id to index in playlistIDs
+    clearPlaylist: function(id, reloading) 
     {
+        console.log(bot.testClear);
+        bot.testClear++;
         //get the length of the playlist 
         bot.spotifyApi.getPlaylist(id)
         .then(function (data)
@@ -984,8 +989,17 @@ var bot = {
             else
             {
                 console.log("cleared playlist " + id);
+                if (reloading)
+                {
+
+                    console.log("reload");
+                }
+                else
+                {
+                    console.log("not reloading");
+                }
                 //TODO: finish this
-                load()
+                // console.log("here we would load");
             }
         }, function (err)
         {
