@@ -122,6 +122,7 @@ var bot = {
     themeSet: false,                                        //whether or not the theme has been set yet
 
     playlistIDs: [null, null, null, null, null, null],      //list of playlist ID's for the theme
+    playlistMap: new Discord.Collection,                    //maps each playlist id to its index in playlistIDs
 
     clearing: false,                                        //stupid helper variable that makes sure we dont add things while things are being deleted
 
@@ -211,7 +212,7 @@ var bot = {
         bot.barrelRead = false;
         bot.themeSet = false;
 
-        
+
 
         //get wrapper from file
         var fileName = './data/spotify/themes.json';
@@ -470,8 +471,8 @@ var bot = {
             //tell the console the same
             console.log("Theme has been set to", theme);
 
-//read the base list of songs
-bot.readBarrelList();
+            //read the base list of songs
+            bot.readBarrelList();
 
             // // Try to sync the length of the list to the length of the barrel
             // bot.syncLengths();
@@ -495,7 +496,8 @@ bot.readBarrelList();
         //set the new playlist IDs
         for (let lcv = 0; lcv < 6; lcv++)
         {
-            this.playlistIDs[lcv] = wrapper.playlistIDs[lcv];
+            bot.playlistIDs[lcv] = wrapper.playlistIDs[lcv];
+            bot.playlistMap.set(wrapper.playlistIDs[lcv], lcv);
         }
 
         //clear the list from what was there
@@ -531,7 +533,7 @@ bot.readBarrelList();
         }
     },
 
-    //TODO: finish this
+    
     syncLengths: function ()
     {
         if (bot.barrelRead && bot.themeSet || true)
@@ -624,7 +626,7 @@ bot.readBarrelList();
 
             //reload the playlists
             console.log("Reloading all playlists");
-            bot.clearPlaylist(0, true);
+            bot.clearPlaylist(bot.playlistIDs[0], true);
             // bot.reloadPlaylists(0);
             // bot.reloadPlaylists();
         }
@@ -807,7 +809,7 @@ bot.readBarrelList();
                     length = data.body.tracks.total;
                     loops = length / 100;
                     let tracksRemoved = 0;
-                    
+
                     let chunks = [];
                     //split all the songs in the playlist into chunks of up to 100 songs (only the last chunk will be less than 100)
                     for (var lcv2 = 0; lcv2 < loops; lcv2++) 
@@ -943,15 +945,23 @@ bot.readBarrelList();
         }
     },
 
-    //id:           id of the playlist to clear
+    //id:           the id of the playlist to clear
     //reloading:    whether or not to load the playlist after it has been cleared
-    clearPlaylist: function(id, reloading) 
+    clearPlaylist: function (id, reloading) 
     {
-        console.log(bot.testClear);
-        bot.testClear++;
+        console.log("Clearing a chunk from playlist " + id);
+
+        //get the index of the playlist id from the map
+        /* 
+            Q. But Jasper, if you're already storing the ids in an array, wouldn't it make more sense to send in the index and get the id from the array? 
+            Surely then you wouldn't need to create a whole extra map to get the id's index?
+            
+            A. No. I tried that. And it just wouldn't work. getPlaylist would error out every time, even though it would print out the correct id. 
+        */
+        let idIndex = bot.playlistMap.get(id);
+
         //get the length of the playlist 
-        bot.spotifyApi.getPlaylist(id)
-        .then(function (data)
+        bot.spotifyApi.getPlaylist(id).then(function (data)
         {
             let length = data.body.tracks.total;
 
@@ -975,7 +985,7 @@ bot.readBarrelList();
                     //delete all the tracks covered by this chunk of the for loop
                     bot.spotifyApi.removeTracksFromPlaylist(id, tracks).then(function (data)
                     {
-                        clearPlaylist(id, reloading);
+                        bot.clearPlaylist(id, reloading);
                     }, function (err)
                     {
                         console.log('failed to remove tracks from playlist ' + id);
@@ -988,18 +998,15 @@ bot.readBarrelList();
             //otherwise if the length == 0
             else
             {
+                //report that the playlist has been cleared
                 console.log("cleared playlist " + id);
+                //if currently reloading, then load the playlist back in
                 if (reloading)
                 {
-
-                    console.log("reload");
+                    console.log("loading the playlist back in");
+                    // console.log("valuehead uri before loading: " + bot.valuesHead.uri);
+                    bot.loadPlaylist(id, reloading, bot.valuesHead, 0);
                 }
-                else
-                {
-                    console.log("not reloading");
-                }
-                //TODO: finish this
-                // console.log("here we would load");
             }
         }, function (err)
         {
@@ -1007,54 +1014,142 @@ bot.readBarrelList();
         });
     },
 
-    //add up to 100 tracks starting at startNode to the given playlist
-    addTracks: function (startNode, len, playlistNum)
+    //id:           id of the playlist to load
+    //reloading:    whether or not to reload the next playlist after this one is loaded
+    //listNode:     add up to 100 songs from the valueList to the playlist starting from this one
+    //added:        the number of songs that have already been added to the playlist
+    loadPlaylist: function (id, reloading, aNode, added)
     {
-        let aNode = startNode;
+        //get the index of the playlist id from the map
+        /* 
+            Q. But Jasper, if you're already storing the ids in an array, wouldn't it make more sense to send in the index and get the id from the array? 
+            Surely then you wouldn't need to create a whole extra map to get the id's index?
+            
+            A. No. I tried that. And it just wouldn't work. getPlaylist would error out every time, even though it would print out the correct id. 
+        */
+        let idIndex = bot.playlistMap.get(id);
+
+
+        //determine how long the playlist should be
+        let len = 0;
+        if (idIndex == 0)
+        {
+            len = 1;
+        }
+        else if (idIndex == 1)
+        {
+            // console.log("BL: " + bot.barrelLength + " Mult: " + Math.floor(0.05 * bot.barrelLength));
+            len = Math.floor(0.05 * bot.barrelLength);
+        }
+        else
+        {
+            len = Math.floor(0.25 * (idIndex - 1) * bot.barrelLength);
+        }
+
+        console.log("Adding a chunk to playlist " + id + " [" + len + "]");
+        // console.log("\t\tPlaylist #" + idIndex + " should have a length of [" + len + "]");
+
+        //build the chunk to be sent to the playlist
         let tracks = [];
 
-        if (aNode != null)
+        //loop will add songs to the chunk until either the length of the playlist has been reached, or until listNode runs out of songs, or until this chunk reaches 100 songs (api limitation)
+        let newAdded = 0;
+        let valueNode = aNode;
+        while (added + newAdded < len && valueNode != null && newAdded < 100)
         {
-            //build the chunk to send to the playlist
-            for (let lcv = 0; lcv < 100 || lcv < len; lcv++)
+            // console.log("looping");
+            //add the current song from the valuesList
+            tracks.push(valueNode.uri);
+
+            // console.log("valuenode uri during load: " + valueNode.uri);
+
+            //increment the number of songs added in this chunk
+            newAdded++;
+
+            //advance to the next valueNode
+            valueNode = valueNode.next;
+        }
+
+        //send the chunk to the playlist
+        bot.spotifyApi.addTracksToPlaylist(id, tracks).then(function (data)
+        {
+            //if the length of the playlist has been reached or if listNode has run out of songs, stop loading the playlist
+            if (added + newAdded == len || valueNode == null)
             {
-                tracks.push(aNode.uri);
-
-                aNode = aNode.next;
-
-                //stop the loop if end of values list is reached
-                if (aNode == null)
+                //if reloading, start clearing the next playlist
+                if (reloading)
                 {
-                    break;
+                    console.log("loaded playlist " + id);
+                    //unless this is the last playlist
+                    if (idIndex != 5)
+                    {
+                        bot.clearPlaylist(bot.playlistIDs[idIndex + 1], reloading);
+                    }
+                    else
+                    {
+                        console.log("reloaded all playlists");
+                    }
                 }
             }
+            //otherwise, load the next chunk
+            else
+            {
+                bot.loadPlaylist(id, reloading, valueNode, added + newAdded);
+            }
+        }, function (err)
+        {
+            console.log('\t\t\tFailed to add chunk to playlist', id);
+        });
+    },
 
-            // console.log(tracks);
+    // //add up to 100 tracks starting at startNode to the given playlist
+    // addTracks: function (startNode, len, playlistNum)
+    // {
+    //     let aNode = startNode;
+    //     let tracks = [];
 
-            //send the chunk to the playlist
-            bot.spotifyApi.addTracksToPlaylist(bot.playlistIDs[playlistNum], tracks)
-                .then(function (data)
-                {
-                    bot.pushes++;
-                    console.log("\t\t\tAdded tracks from [" + startNode.name + "] to #" + playlistNum);
+    //     if (aNode != null)
+    //     {
+    //         //build the chunk to send to the playlist
+    //         for (let lcv = 0; lcv < 100 || lcv < len; lcv++)
+    //         {
+    //             tracks.push(aNode.uri);
 
-                    //if this is the last step of the loop
-                    if (bot.pushes == bot.totPushes)
-                    {
-                        //tell the console this playlist is done
-                        console.log("\t\tFinished loading #" + playlistNum + " len: " + tracks.length);
-                        console.log("\tFinished reloading #" + playlistNum + "\n");
+    //             aNode = aNode.next;
 
-                        //reload the next playlist
-                        bot.reloadPlaylists(2 * playlistNum + 1);
-                    }
-                }, function (err)
-                {
-                    console.log("\t\t\tFailed to add tracks from [" + startNode.name + "]  " + " len: " + tracks.length + " to playlist, retrying", playlistNum);//, "\n", err);
-                    bot.addTracks(startNode, playlistNum);
-                });
-        }
-    }
+    //             //stop the loop if end of values list is reached
+    //             if (aNode == null)
+    //             {
+    //                 break;
+    //             }
+    //         }
+
+    //         // console.log(tracks);
+
+    //         //send the chunk to the playlist
+    //         bot.spotifyApi.addTracksToPlaylist(bot.playlistIDs[playlistNum], tracks)
+    //             .then(function (data)
+    //             {
+    //                 bot.pushes++;
+    //                 console.log("\t\t\tAdded tracks from [" + startNode.name + "] to #" + playlistNum);
+
+    //                 //if this is the last step of the loop
+    //                 if (bot.pushes == bot.totPushes)
+    //                 {
+    //                     //tell the console this playlist is done
+    //                     console.log("\t\tFinished loading #" + playlistNum + " len: " + tracks.length);
+    //                     console.log("\tFinished reloading #" + playlistNum + "\n");
+
+    //                     //reload the next playlist
+    //                     bot.reloadPlaylists(2 * playlistNum + 1);
+    //                 }
+    //             }, function (err)
+    //             {
+    //                 console.log("\t\t\tFailed to add tracks from [" + startNode.name + "]  " + " len: " + tracks.length + " to playlist, retrying", playlistNum);//, "\n", err);
+    //                 bot.addTracks(startNode, playlistNum);
+    //             });
+    //     }
+    // }
 }
 
 //switches the variables to the test bot's stuff
