@@ -82,6 +82,113 @@ class Node
                 return len;
             }
         };
+
+        //moves this node up the valueList according to its value
+        this.up = function (aPrev)
+        {
+            //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
+            if (aPrev == null || aPrev.value >= this.value)
+            {
+                //disconnect the node from the list
+
+                //special case for if the node being moved is the head
+                if (bot.valuesHead == this)
+                {
+                    this.next.prev = null;
+                }
+                //special case for if the node being moved is the tail
+                else if (bot.valuesTail == this)
+                {
+                    this.prev.next = null;
+                }
+                //standard case
+                else
+                {
+                    this.next.prev = this.prev;
+                    this.prev.next = this.next;
+                }
+
+                //reconnect it in the right spot
+
+                //special case for if being inserted as the new head
+                if (aPrev == null)
+                {
+                    this.next = bot.valuesHead;
+                    this.prev = null;
+                    bot.valuesHead.prev = this;
+                    bot.valuesHead = this;
+                }
+                //standard case
+                else
+                {
+                    this.next = aPrev.next;
+                    this.prev = aPrev;
+                    this.next.prev = this;
+                    this.prev.next = this;
+                }
+
+                //save new configuration
+                bot.saveSpotify();
+            }
+            //if a spot hasn't been found yet then keep searching
+            else
+            {
+                this.up(aPrev.prev);
+            }
+        };
+
+        //moves this node down the valueList according to its value
+        this.down = function (aNext)
+        {
+            //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
+            if (aNext == null || aNext.value <= this.value)
+            {
+                //disconnect the node from the list
+
+                //special case for if the node being moved is the head
+                if (bot.valuesHead == this)
+                {
+                    this.next.prev = null;
+                }
+                //special case for if the node being moved is the tail
+                else if (bot.valuesTail == this)
+                {
+                    this.prev.next = null;
+                }
+                //standard case
+                else
+                {
+                    this.next.prev = this.prev;
+                    this.prev.next = this.next;
+                }
+
+                //reconnect it in the right spot
+
+                //special case for if being inserted as the new tail
+                if (aNext == null)
+                {
+                    this.prev = bot.valuesTail;
+                    this.next = null;
+                    bot.valuesTail.next = this;
+                    bot.valuesTail = this;
+                }
+                //standard case
+                else
+                {
+                    this.next = aNext;
+                    this.prev = aNext.prev;
+                    this.next.prev = this;
+                    this.prev.next = this;
+                }
+
+                //save new configuration
+                bot.saveSpotify();
+            }
+            else
+            {
+                this.down(aNext.next);
+            }
+        };
     }
 }
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
@@ -122,11 +229,7 @@ var bot = {
     playlistIDs: [null, null, null, null, null, null],      //list of playlist ID's for the theme
     playlistMap: new Discord.Collection,                    //maps each playlist id to its index in playlistIDs
 
-    clearing: false,                                        //stupid helper variable that makes sure we dont add things while things are being deleted
-
-    pushes: 0,                                              //helper var for loading playlists (current number of playlist chunks that have been pushed)
-    totPushes: 0,                                           //helper var for loading playlists (total number of playlist chunks to push)
-    testClear: 0,
+    songMessage: null,                                      //the message to check for reactions on for song manipulation
     // benID: '111579235059060736',
     // mattID: '321665327845081089',
     // readyRoleID: '754789734563315834',
@@ -296,7 +399,7 @@ var bot = {
         console.log("Trying to make a new theme called \"" + theme + "\"");
 
         //if theme already exists
-        if (bot.themes.indexOf(theme) != -1 && false)
+        if (bot.themes.indexOf(theme) != -1)
         {
             console.log("Tried to add a theme that already exists.");
         }
@@ -320,16 +423,6 @@ var bot = {
             {
                 this.playlistIDs[lcv] = playlistIDs[lcv];
             }
-
-            // //print the values list
-            // let valNode = bot.valuesHead;
-            // let count = 0;
-            // while (valNode != null)
-            // {
-            //     count++;
-            //     console.log(count + ", " + valNode.name);
-            //     valNode = valNode.next;
-            // }
 
             //save all the new stuff to files
             bot.saveSpotify();
@@ -537,6 +630,9 @@ var bot = {
                         //insert the new node before the node with a negative value
                         valueNode.prev = new Node(barrelNode.name, barrelNode.uri, 0, valueNode.prev, valueNode);
 
+                        //add the new node to the map
+                        bot.valuesMap.set(valueNode.prev.uri, valueNode.prev);
+
                         //if inserted before the head, update the head (it would be truly unfortunate if the head had negative value, but ya gotta plan for these things i guess)
                         if (valueNode.prev.prev == null)
                         {
@@ -556,6 +652,10 @@ var bot = {
                 {
                     //insert the new node at the end of the list
                     bot.valuesTail.next = new Node(barrelNode.name, barrelNode.uri, 0, bot.valuesTail, null);
+
+                    //add the new node to the map
+                    bot.valuesMap.set(bot.valuesTail.next.uri, bot.valuesTail.next);
+
                     bot.valuesTail = bot.valuesTail.next;   //(update the value list tail)                     
                 }
 
@@ -573,6 +673,9 @@ var bot = {
             //if valuesNode is not in the barrel
             if (!bot.barrelHead.contains(valuesNode.uri))
             {
+                //remove the node from the map
+                bot.valuesMap.delete(valuesNode.uri);
+
                 //remove the node from the values list
                 //special case for if the valuesNode is the head
                 if (valuesNode.uri == bot.valuesHead.uri)
@@ -924,6 +1027,89 @@ client.on('message', message =>
         // }
     }
 });
+
+client.on('messageReactionAdd', (reaction, user) =>
+{
+    if (bot.songMessage != null && reaction.message.id === bot.songMessage.id && user.id === bot.jaspaID)
+    {
+        // Get Information About The User's Current Playback State
+        bot.spotifyApi.getMyCurrentPlaybackState().then(function (data)
+        {
+            // Output items
+            if (data.body && data.body.is_playing)
+            {
+                //get current song
+                bot.spotifyApi.getMyCurrentPlayingTrack().then(function (data)
+                {
+                    //get node of the song from the list
+                    let aNode = bot.valuesMap.get(data.body.item.uri);
+
+                    //check if the song isn't in the playlist (yet?)
+                    if (aNode === undefined)
+                    {
+                        console.log("this song is not in the barrel. TODO: add the song to the valuelist/barrel with a value or smthn");
+                        //TODO: the else would go away if you did that, because then you could just follow through with the other code
+                    }
+                    //if the song is in the valuelist, adjust the song's value accordingly
+                    else
+                    {
+                        if (reaction.emoji.name === "🥰")
+                        {
+                            aNode.value += 3;
+                            aNode.up(aNode.prev);
+                        }
+                        if (reaction.emoji.name === "👍")
+                        {
+                            aNode.value += 1
+                            aNode.up(aNode.prev);
+                        }
+                        if (reaction.emoji.name === "👎")
+                        {
+                            aNode.value -= 1;
+                            aNode.down(aNode.next);
+
+                            // Skip User’s Playback To Next Track
+                            bot.spotifyApi.skipToNext().then(function ()
+                            {
+                                // console.log('Skip to next');
+                            }, function (err)
+                            {
+                                //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
+                                console.log('failed to skip');
+                            });
+                        }
+                        if (reaction.emoji.name === "🤮")
+                        {
+                            aNode.value -= 3;
+                            aNode.down(aNode.next);
+
+                            // Skip User’s Playback To Next Track
+                            bot.spotifyApi.skipToNext().then(function ()
+                            {
+                                // console.log('Skip to next');
+                            }, function (err)
+                            {
+                                //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
+                                console.log('failed to skip');
+                            });
+                        }
+                    }
+                }, function (err)
+                {
+                    console.log('couldn\'t get current song');
+                });
+            }
+            else
+            {
+                console.log("User is not playing anything, or doing so in private.");
+            }
+        }, function (err)
+        {
+            console.log('couldn\'t get current playback state');
+        });
+    }
+});
+
 const scopes = [
     'ugc-image-upload',
     'user-read-playback-state',
