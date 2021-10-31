@@ -52,7 +52,6 @@ class Node
                 return false;
             }
 
-
             //otherwise call the function on the next node
             else
             {
@@ -89,45 +88,85 @@ class Node
             //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
             if (aPrev == null || aPrev.value >= this.value)
             {
-                //disconnect the node from the list
+                //only move things if aPrev isn't already this node's prev
+                if (this.prev != aPrev)
+                {
+                    // //before anything is rearranged, save the the last song in each playlist (so that we can check which playlists are affected by the movement of this node)
+                    // let endNodes = [];
+                    // for (let lcv = 0; lcv < 5; lcv++)
+                    // {
+                    //     endNodes.push(bot.valuesHead.get(bot.playlistLengths[lcv] - 1));
 
-                //special case for if the node being moved is the head
-                if (bot.valuesHead == this)
-                {
-                    this.next.prev = null;
-                }
-                //special case for if the node being moved is the tail
-                else if (bot.valuesTail == this)
-                {
-                    this.prev.next = null;
-                }
-                //standard case
-                else
-                {
-                    this.next.prev = this.prev;
-                    this.prev.next = this.next;
+                    //     if (endNodes[lcv] != null)
+                    //     {
+                    //         console.log(endNodes[lcv].index());
+                    //         console.log(bot.playlistLengths[lcv] - 1);
+                    //     }
+                    // }
+
+                    //disconnect the node from the list
+                    if (this.prev != null)
+                    {
+                        this.prev.next = this.next;
+                    }
+                    if (this.next != null)
+                    {
+                        this.next.prev = this.prev;
+                    }
+
+
+                    //reconnect it in the right spot
+
+                    //special case for if being inserted as the new head
+                    if (aPrev == null)
+                    {
+                        this.next = bot.valuesHead;
+                        this.prev = null;
+                        bot.valuesHead.prev = this;
+                        bot.valuesHead = this;
+                    }
+                    //standard case
+                    else
+                    {
+                        this.next = aPrev.next;
+                        this.prev = aPrev;
+                        this.next.prev = this;
+                        this.prev.next = this;
+                    }
+
+                    // //now that things have moved, check which nodes have a new index and readjust those playlists accordingly
+                    // let adjustments = [];
+                    // for (let lcv = 0; lcv < 5; lcv++)
+                    // {
+                    //     if (endNodes[lcv] != null)
+                    //     {
+                    //         console.log(endNodes[lcv].index());
+                    //         console.log(bot.playlistLengths[lcv] - 1);
+                    //         if (endNodes[lcv].index() != bot.playlistLengths[lcv] - 1)
+                    //         {
+                    //             //clear the song that was just pushed out of the playlist
+                    //             adjustments.push(
+                    //                 {
+                    //                     adjustment: "clear",
+                    //                     id: bot.playlistIDs[lcv],
+                    //                     uri: endNodes[lcv].uri
+                    //                 });
+
+                    //             //add the song that just moved up the chain into the playlist
+                    //             adjustments.push(
+                    //                 {
+                    //                     adjustment: "add",
+                    //                     id: bot.playlistIDs[lcv],
+                    //                     uri: this.uri
+                    //                 });
+                    //         }
+                    //     }
+                    // }
+
+                    // bot.adjust(adjustments);
                 }
 
-                //reconnect it in the right spot
-
-                //special case for if being inserted as the new head
-                if (aPrev == null)
-                {
-                    this.next = bot.valuesHead;
-                    this.prev = null;
-                    bot.valuesHead.prev = this;
-                    bot.valuesHead = this;
-                }
-                //standard case
-                else
-                {
-                    this.next = aPrev.next;
-                    this.prev = aPrev;
-                    this.next.prev = this;
-                    this.prev.next = this;
-                }
-
-                //save new configuration
+                //save new configuration/values
                 bot.saveSpotify();
             }
             //if a spot hasn't been found yet then keep searching
@@ -143,42 +182,70 @@ class Node
             //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
             if (aNext == null || aNext.value <= this.value)
             {
-                //disconnect the node from the list
+                //only move things if this node doesn't already have aNext as its next node
+                if (aNext != this.next)
+                {
+                    // //before anything is rearranged, save the the last song in each playlist (so that we can check which playlists are affected by the movement of this node)
+                    // let endNodes = [];
+                    // for (let lcv = 0; lcv < 5; lcv++)
+                    // {
+                    //     endNodes.push(bot.valuesHead.get(bot.playlistLengths[lcv]));
+                    // }
 
-                //special case for if the node being moved is the head
-                if (bot.valuesHead == this)
-                {
-                    this.next.prev = null;
-                }
-                //special case for if the node being moved is the tail
-                else if (bot.valuesTail == this)
-                {
-                    this.prev.next = null;
-                }
-                //standard case
-                else
-                {
-                    this.next.prev = this.prev;
-                    this.prev.next = this.next;
-                }
+                    //disconnect the node from the list
+                    if (this.prev != null)
+                    {
+                        this.prev.next = this.next;
+                    }
+                    if (this.next != null)
+                    {
+                        this.next.prev = this.prev;
+                    }
 
-                //reconnect it in the right spot
+                    //reconnect it in the right spot
 
-                //special case for if being inserted as the new tail
-                if (aNext == null)
-                {
-                    this.prev = bot.valuesTail;
-                    this.next = null;
-                    bot.valuesTail.next = this;
-                    bot.valuesTail = this;
-                }
-                //standard case
-                else
-                {
-                    this.next = aNext;
-                    this.prev = aNext.prev;
-                    this.next.prev = this;
-                    this.prev.next = this;
+                    //special case for if being inserted as the new tail
+                    if (aNext == null)
+                    {
+                        this.prev = bot.valuesTail;
+                        this.next = null;
+                        bot.valuesTail.next = this;
+                        bot.valuesTail = this;
+                    }
+                    //standard case
+                    else
+                    {
+                        this.next = aNext;
+                        this.prev = aNext.prev;
+                        this.next.prev = this;
+                        this.prev.next = this;
+                    }
+
+                    // //now that things have moved, check which nodes have a new index and readjust those playlists accordingly
+                    // let adjustments = [];
+                    // for (let lcv = 0; lcv < 5; lcv++)
+                    // {
+                    //     if (endNodes[lcv].index() != bot.playlistLengths[lcv])
+                    //     {
+                    //         //clear the song that just moved down and out of the playlist
+                    //         adjustments.push(
+                    //             {
+                    //                 adjustment: "clear",
+                    //                 id: bot.playlistIDs[lcv],
+                    //                 uri: this.uri
+                    //             });
+
+                    //         //add the song that was just bumped up into the playlist
+                    //         adjustments.push(
+                    //             {
+                    //                 adjustment: "add",
+                    //                 id: bot.playlistIDs[lcv],
+                    //                 uri: endNodes[lcv].uri
+                    //             });
+                    //     }
+                    // }
+
+                    // bot.adjust(adjustments);
                 }
 
                 //save new configuration
@@ -189,6 +256,43 @@ class Node
                 this.down(aNext.next);
             }
         };
+
+        //returns the index of the node in its list
+        this.index = function ()
+        {
+            if (this.prev == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1 + this.prev.index();
+            }
+        };
+
+        //returns the node at the requested index in the list, starting at this node. returns null if index is too big or too small.
+        this.get = function (index)
+        {
+            if (index < 0)
+            {
+                return null;
+            }
+            else if (index === 0)
+            {
+                return this;
+            }
+            else if (index > 0)
+            {
+                if (this.next === null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return this.next.get(index - 1);
+                }
+            }
+        }
     }
 }
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
@@ -197,6 +301,7 @@ var bot = {
     temp: true,
     tokenDiscord: tokenDiscord,
     prefix: '~',
+    altPrefix: '\\',
     client: client,
     channelTypes: ['dm', 'text'],
     messageTypes: ['commands', 'generics', 'specials'],
@@ -221,15 +326,17 @@ var bot = {
     valuesHead: null,                                       //stores the song values list
     valuesTail: null,                                       //head is first, tail is last
     valuesMap: new Discord.Collection,                      //maps the song id's to their nodes in the list
-    valuesLength: 0,                                        //length of the values list 
 
     themes: [],                                             //a list of all the themes
     currentTheme: '',                                       //the current theme
 
     playlistIDs: [null, null, null, null, null, null],      //list of playlist ID's for the theme
     playlistMap: new Discord.Collection,                    //maps each playlist id to its index in playlistIDs
+    playlistLengths: [-1, -1, -1, -1, -1, -1],              //the length of each playlist
 
     songMessage: null,                                      //the message to check for reactions on for song manipulation
+    testVal: 0,
+
     // benID: '111579235059060736',
     // mattID: '321665327845081089',
     // readyRoleID: '754789734563315834',
@@ -306,6 +413,7 @@ var bot = {
 
     loadSpot: async function ()
     {
+        bot.testStuff();
         //get wrapper from file
         var fileName = './data/spotify/themes.json';
         var wrapper = JSON.parse(fs.readFileSync(fileName));
@@ -514,7 +622,7 @@ var bot = {
             let wrapSong =
             {
                 name: node.name,
-                id: node.uri,
+                uri: node.uri,
                 value: node.value
             }
 
@@ -575,17 +683,15 @@ var bot = {
             bot.playlistMap.set(wrapper.playlistIDs[lcv], lcv);
         }
 
-        //clear the list from what was there
+        //clear the old list
         bot.valuesHead = null;
         bot.valuesTail = null;
-
-        //set the list length
-        bot.valuesLength = wrapper.songs.length;
 
         //build the node list from the array in the wrapper
         for (let lcv = 0; lcv < wrapper.songs.length; lcv++)
         {
             //create the list node for this step
+            // console.log("uri: " + wrapper.songs[lcv].uri);
             let listNode = new Node(wrapper.songs[lcv].name, wrapper.songs[lcv].uri, wrapper.songs[lcv].value, null, null);
 
             //add the node to the map
@@ -606,11 +712,12 @@ var bot = {
                 bot.valuesTail = listNode;        //set the new node to be the tail
             }
         }
+        // console.log(bot.valuesHead);
     },
 
     syncLengths: function ()
     {
-        console.log("Syncing lengths: \nB[" + bot.barrelLength + "], V[" + bot.valuesLength + "] -> ");
+        console.log("Syncing lengths: \nB[" + bot.barrelHead.length() + "], V[" + bot.valuesHead.length() + "] -> ");
 
         //check if anything has been added to the barrel
         //loop through the barrel list
@@ -620,47 +727,50 @@ var bot = {
             //if barrelNode is not in the values list
             if (!bot.valuesHead.contains(barrelNode.uri))
             {
-                //find the right spot in the value list to add the song (according to a default value of 0)
-                let valueNode = bot.valuesHead;
-                while (valueNode != null)
-                {
-                    //if a node is found with a negative value
-                    if (valueNode.value < 0)
-                    {
-                        //insert the new node before the node with a negative value
-                        valueNode.prev = new Node(barrelNode.name, barrelNode.uri, 0, valueNode.prev, valueNode);
+                //create a node with a default value of 0
+                let newNode = new Node(barrelNode.name, barrelNode.uri, 0, null, null);
 
-                        //add the new node to the map
-                        bot.valuesMap.set(valueNode.prev.uri, valueNode.prev);
+                //send the new node into the playlist
+                newNode.up(bot.valuesTail);
 
-                        //if inserted before the head, update the head (it would be truly unfortunate if the head had negative value, but ya gotta plan for these things i guess)
-                        if (valueNode.prev.prev == null)
-                        {
-                            bot.valuesHead = valueNode.prev;
-                        }
+                // //find the right spot in the value list to add the song (according to a default value of 0)
+                // let valueNode = bot.valuesHead;
+                // while (valueNode != null)
+                // {
+                //     //if a node is found with a negative value
+                //     if (valueNode.value < 0)
+                //     {
+                //         //insert the new node before the node with a negative value
+                //         valueNode.prev = new 
 
-                        //stop searching once the new node is inserted
-                        break;
-                    }
+                //         //add the new node to the map
+                //         bot.valuesMap.set(valueNode.prev.uri, valueNode.prev);
 
-                    //advance to next node in list
-                    valueNode = valueNode.next;
-                }
+                //         //if inserted before the head, update the head (it would be truly unfortunate if the head had negative value, but ya gotta plan for these things i guess)
+                //         if (valueNode.prev.prev == null)
+                //         {
+                //             bot.valuesHead = valueNode.prev;
+                //         }
 
-                //if the node was not inserted, and no songs had negative value
-                if (valueNode == null)
-                {
-                    //insert the new node at the end of the list
-                    bot.valuesTail.next = new Node(barrelNode.name, barrelNode.uri, 0, bot.valuesTail, null);
+                //         //stop searching once the new node is inserted
+                //         break;
+                //     }
 
-                    //add the new node to the map
-                    bot.valuesMap.set(bot.valuesTail.next.uri, bot.valuesTail.next);
+                //     //advance to next node in list
+                //     valueNode = valueNode.next;
+                // }
 
-                    bot.valuesTail = bot.valuesTail.next;   //(update the value list tail)                     
-                }
+                // //if the node was not inserted, and no songs had negative value
+                // if (valueNode == null)
+                // {
+                //     //insert the new node at the end of the list
+                //     bot.valuesTail.next = new Node(barrelNode.name, barrelNode.uri, 0, bot.valuesTail, null);
 
-                //update the length of the value list
-                bot.valuesLength++;
+                //     //add the new node to the map
+                //     bot.valuesMap.set(bot.valuesTail.next.uri, bot.valuesTail.next);
+
+                //     bot.valuesTail = bot.valuesTail.next;   //(update the value list tail)                     
+                // }
             }
             barrelNode = barrelNode.next;
         }
@@ -695,12 +805,11 @@ var bot = {
                     valuesNode.prev.next = valuesNode.next;
                     valuesNode.next.prev = valuesNode.prev;
                 }
-                bot.valuesLength--;
             }
             valuesNode = valuesNode.next;
         }
 
-        console.log("B[" + bot.barrelLength + "], V[" + bot.valuesLength + "]\nSynced lengths.");
+        console.log("B[" + bot.barrelHead.length() + "], V[" + bot.valuesHead.length() + "]\nSynced lengths.");
 
         //save the updated list to file
         bot.saveValuesList();
@@ -794,7 +903,6 @@ var bot = {
         */
         let idIndex = bot.playlistMap.get(id);
 
-
         //determine how long the playlist should be
         let len = 0;
         if (idIndex == 0)
@@ -810,6 +918,9 @@ var bot = {
         {
             len = Math.floor(0.25 * (idIndex - 1) * bot.barrelLength);
         }
+
+        //update the lengths into the bot
+        bot.playlistLengths[idIndex] = len;
 
         console.log("Adding a chunk to playlist " + id + " [" + len + "]");
         // console.log("\t\tPlaylist #" + idIndex + " should have a length of [" + len + "]");
@@ -865,6 +976,146 @@ var bot = {
         {
             console.log('\t\t\tFailed to add chunk to playlist', id);
         });
+    },
+
+    adjust: function (adjustments)
+    {
+        //only adjust things if there are things to adjust
+        if (adjustments.length != 0)
+        {
+            // console.log(adjustments.length + "(adjusts)");
+            //adjust the first thing in the list (this also trims the first thing out of the playlist, how handy)
+            let adjustment = adjustments.shift();
+
+            //clear the given song from the given playlist
+            if (adjustment.adjustment === "clear")
+            {
+                bot.spotifyApi.removeTracksFromPlaylist(adjustment.id, [{ uri: adjustment.uri }]).then(function (data)
+                {
+                    //after this adjustment is complete, perform the rest of the adjustments
+                    bot.adjust(adjustments);
+                }, function (err)
+                {
+                    console.log('failed to clear ' + adjustment.uri + ' from playlist ' + adjustment.id);
+                });
+            }
+            //add the given song to the given playlist
+            else
+            {
+                bot.spotifyApi.addTracksToPlaylist(adjustment.id, [adjustment.uri]).then(function (data)
+                {
+                    //after this adjustment is complete, perform the rest of the adjustments
+                    bot.adjust(adjustments);
+                }, function (err)
+                {
+                    console.log('failed to add ' + adjustment.uri + ' to playlist ' + adjustment.id);
+                });
+            }
+        }
+    },
+
+    testStuff: function ()
+    {
+        let node1 = new Node("song1", "song1", 0, null, null);
+        let node2 = new Node("song2", "song2", 0, node1, null);
+        node1.next = node2;
+        let node3 = new Node("song3", "song3", 0, node2, null);
+        node2.next = node3;
+        let node4 = new Node("song4", "song4", 0, node3, null);
+        node3.next = node4;
+        let node5 = new Node("song5", "song5", 0, node4, null);
+        node4.next = node5;
+
+        // console.log(node5.index());
+    },
+
+    //aNode: the node whose value is to be changed
+    //diff: how much to change the value by
+    changeValue: function (aNode, diff)
+    {
+        //Step 1: save what songs are currently in which playlists
+        //list of all the songs in each playlist (2d array)
+        let uriLists = [];
+
+        //add all the songs for each playlist
+        for (let playlistIndex = 0; playlistIndex < 6; playlistIndex++)
+        {
+            //the list of songs in this playlist
+            let uriList = [];
+
+            //loop through every song in this playlist
+            let aNode = bot.valuesHead;
+            for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
+            {
+                //add each song to the list
+                uriList.push(aNode.uri);
+                aNode = aNode.next;
+            }
+
+            //add the list of songs to the list of songs per list
+            uriLists.push(uriList);
+        }
+
+        //Step 2: change the node's value and move it accordingly
+        aNode.value += diff;
+
+        if (diff > 0) 
+        {
+            aNode.up(aNode.prev);
+        }
+        else if (diff < 0)
+        {
+            aNode.down(aNode.next);
+        }
+
+        //Step 3: check for differences between new order of songs and old order of songs and build the list of adjustments (figure out which songs have changed playlists)
+
+        //initialize the list of adjustments
+        let adjustments = [];
+
+        //(only check the first 5 playlists because the last playlist will always contain all the songs by definition)
+        for (let playlistIndex = 0; playlistIndex < 5; playlistIndex++)
+        {
+            //temporarily disconnect the lcvth playlist from the rest of the songs
+            let stitch = bot.valuesHead.get(bot.playlistLengths[playlistIndex]);
+            stitch.prev.next = null;
+
+            let aNode = bot.valuesHead;
+            for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++) 
+            {
+                //if the valueslist no longer contains a song from the urilist 
+                if (!bot.valuesHead.contains(uriLists[playlistIndex][songIndex]))
+                {
+                    //add an adjustment to remove the song from the playlist
+                    adjustments.push(
+                        {
+                            adjustment: "clear",
+                            id: bot.playlistIDs[playlistIndex],
+                            uri: uriLists[playlistIndex][songIndex]
+                        });
+                }
+
+                //if a node in valuesList is not in the urilist
+                if (uriLists[playlistIndex].indexOf(aNode.uri) == -1)
+                {
+                    //add an adjustment to add the song to the playlist
+                    adjustments.push(
+                        {
+                            adjustment: "add",
+                            id: bot.playlistIDs[playlistIndex],
+                            uri: aNode.uri
+                        });
+                }
+
+                aNode = aNode.next;
+            }
+
+            //reconnect the lcvth playlist to the rest of the songs
+            stitch.prev.next = stitch;
+        }
+
+        //Step 4: adjust playlists accordingly
+        bot.adjust(adjustments);
     }
 }
 
@@ -980,7 +1231,23 @@ client.on('message', message =>
     }
     else if (message.channel.type === 'text')
     {
-        // //commands
+        //if the message starts with \ and is from jasper
+        if (message.content.startsWith(bot.altPrefix) && message.author.id === bot.jaspaID)
+        {
+            //splits the message into words after the prefix
+            const args = message.content.slice(bot.prefix.length).split(/ +/);
+
+            //the first word in the message following the prefix
+            const command = args.shift().toLowerCase();
+
+            //check if the command is in the list
+            if (client.things.get('textcommands').get(command) != undefined)
+            {
+                //run the command
+                client.things.get('textcommands').get(command).execute(message, args, bot);
+            }
+        }
+        //commands
         // if (message.content.startsWith(bot.prefix))
         // {
         //     //splits the message into words after the prefix
@@ -996,11 +1263,11 @@ client.on('message', message =>
         //         client.things.get('textcommands').get(command).execute(message, args, bot);
 
 
-        //         //check if the command is in the readybot channel, and if its a spammy command
-        //         if (message.channel.id != bot.readyBotChannelID && client.things.get('textcommands').get(command).spam != false)
-        //         {
-        //             message.channel.send('ayo, consider using the readybot channel (just an idea tho)');
-        //         }
+        //         // //check if the command is in the readybot channel, and if its a spammy command
+        //         // if (message.channel.id != bot.readyBotChannelID && client.things.get('textcommands').get(command).spam != false)
+        //         // {
+        //         //     message.channel.send('ayo, consider using the readybot channel (just an idea tho)');
+        //         // }
         //     }
         //     //if the command is not in the list
         //     else
@@ -1009,21 +1276,21 @@ client.on('message', message =>
         //         message.channel.send('That\'s not a command, bucko');
         //     }
         // }
-        //not commands
+        // // not commands
         // else
         // {
-        // if (bot.proxyChat && message.content != null)
-        // {
-        //     bot.helpers('relayMsgToJaspa', { message: message });
-        // }
+        //     if (bot.proxyChat && message.content != null)
+        //     {
+        //         bot.helpers('relayMsgToJaspa', { message: message });
+        //     }
 
-        // //send to special people
-        // if (client.things.get('textspecials').get(message.member.id) != undefined) //if they are on the list
-        // {
-        //     client.things.get('textspecials').get(message.member.id).execute(message, bot); //do their special code
-        // }
+        //     //send to special people
+        //     if (client.things.get('textspecials').get(message.member.id) != undefined) //if they are on the list
+        //     {
+        //         client.things.get('textspecials').get(message.member.id).execute(message, bot); //do their special code
+        //     }
 
-        // client.things.get('textgenerics').get("nicebot").execute(message, bot);
+        //     client.things.get('textgenerics').get("nicebot").execute(message, bot);
         // }
     }
 });
@@ -1055,18 +1322,18 @@ client.on('messageReactionAdd', (reaction, user) =>
                     {
                         if (reaction.emoji.name === "🥰")
                         {
-                            aNode.value += 3;
-                            aNode.up(aNode.prev);
+                            bot.changeValue(aNode, 3);
+                            console.log(aNode.name + " 🥰");
                         }
                         if (reaction.emoji.name === "👍")
                         {
-                            aNode.value += 1
-                            aNode.up(aNode.prev);
+                            bot.changeValue(aNode, 1);
+                            console.log(aNode.name + " 👍");
                         }
                         if (reaction.emoji.name === "👎")
                         {
-                            aNode.value -= 1;
-                            aNode.down(aNode.next);
+                            bot.changeValue(aNode, -1);
+                            console.log(aNode.name + " 👎");
 
                             // Skip User’s Playback To Next Track
                             bot.spotifyApi.skipToNext().then(function ()
@@ -1080,8 +1347,8 @@ client.on('messageReactionAdd', (reaction, user) =>
                         }
                         if (reaction.emoji.name === "🤮")
                         {
-                            aNode.value -= 3;
-                            aNode.down(aNode.next);
+                            bot.changeValue(aNode, -3);
+                            console.log(aNode.name + " 🤮");
 
                             // Skip User’s Playback To Next Track
                             bot.spotifyApi.skipToNext().then(function ()
@@ -1093,6 +1360,7 @@ client.on('messageReactionAdd', (reaction, user) =>
                                 console.log('failed to skip');
                             });
                         }
+                        reaction.users.remove(user);
                     }
                 }, function (err)
                 {
