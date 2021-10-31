@@ -1323,17 +1323,17 @@ client.on('messageReactionAdd', (reaction, user) =>
                         if (reaction.emoji.name === "🥰")
                         {
                             bot.changeValue(aNode, 3);
-                            console.log(aNode.name + " 🥰");
+                            console.log(aNode.name + " 3");
                         }
                         if (reaction.emoji.name === "👍")
                         {
                             bot.changeValue(aNode, 1);
-                            console.log(aNode.name + " 👍");
+                            console.log(aNode.name + " 1");
                         }
                         if (reaction.emoji.name === "👎")
                         {
                             bot.changeValue(aNode, -1);
-                            console.log(aNode.name + " 👎");
+                            console.log(aNode.name + " -1");
 
                             // Skip User’s Playback To Next Track
                             bot.spotifyApi.skipToNext().then(function ()
@@ -1348,7 +1348,7 @@ client.on('messageReactionAdd', (reaction, user) =>
                         if (reaction.emoji.name === "🤮")
                         {
                             bot.changeValue(aNode, -3);
-                            console.log(aNode.name + " 🤮");
+                            console.log(aNode.name + " -1");
 
                             // Skip User’s Playback To Next Track
                             bot.spotifyApi.skipToNext().then(function ()
