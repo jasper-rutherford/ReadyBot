@@ -29,8 +29,6 @@ class Node
 
         this.listing = function (num)
         {
-            console.log(num, this.name); //print the name
-
             if (this.next != null)
             {
                 this.next.listing(num + 1); //list the next node
@@ -88,84 +86,54 @@ class Node
             //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
             if (aPrev == null || aPrev.value >= this.value)
             {
-                //only move things if aPrev isn't already this node's prev
-                if (this.prev != aPrev)
+                //disconnect the node from the list
+                if (this.prev != null)
                 {
-                    // //before anything is rearranged, save the the last song in each playlist (so that we can check which playlists are affected by the movement of this node)
-                    // let endNodes = [];
-                    // for (let lcv = 0; lcv < 5; lcv++)
-                    // {
-                    //     endNodes.push(bot.valuesHead.get(bot.playlistLengths[lcv] - 1));
+                    this.prev.next = this.next;
 
-                    //     if (endNodes[lcv] != null)
-                    //     {
-                    //         console.log(endNodes[lcv].index());
-                    //         console.log(bot.playlistLengths[lcv] - 1);
-                    //     }
-                    // }
-
-                    //disconnect the node from the list
-                    if (this.prev != null)
+                    //special handling if this is the valueTail
+                    if (this == bot.valuesTail)
                     {
-                        this.prev.next = this.next;
+                        bot.valuesTail = this.prev;
                     }
-                    if (this.next != null)
+                }
+                if (this.next != null)
+                {
+                    this.next.prev = this.prev;
+
+                    //special handling if this is the valueHead
+                    if (this == bot.valuesHead)
                     {
-                        this.next.prev = this.prev;
+                        bot.valuesHead = this.next;
                     }
-
-
-                    //reconnect it in the right spot
-
-                    //special case for if being inserted as the new head
-                    if (aPrev == null)
-                    {
-                        this.next = bot.valuesHead;
-                        this.prev = null;
-                        bot.valuesHead.prev = this;
-                        bot.valuesHead = this;
-                    }
-                    //standard case
-                    else
-                    {
-                        this.next = aPrev.next;
-                        this.prev = aPrev;
-                        this.next.prev = this;
-                        this.prev.next = this;
-                    }
-
-                    // //now that things have moved, check which nodes have a new index and readjust those playlists accordingly
-                    // let adjustments = [];
-                    // for (let lcv = 0; lcv < 5; lcv++)
-                    // {
-                    //     if (endNodes[lcv] != null)
-                    //     {
-                    //         console.log(endNodes[lcv].index());
-                    //         console.log(bot.playlistLengths[lcv] - 1);
-                    //         if (endNodes[lcv].index() != bot.playlistLengths[lcv] - 1)
-                    //         {
-                    //             //clear the song that was just pushed out of the playlist
-                    //             adjustments.push(
-                    //                 {
-                    //                     adjustment: "clear",
-                    //                     id: bot.playlistIDs[lcv],
-                    //                     uri: endNodes[lcv].uri
-                    //                 });
-
-                    //             //add the song that just moved up the chain into the playlist
-                    //             adjustments.push(
-                    //                 {
-                    //                     adjustment: "add",
-                    //                     id: bot.playlistIDs[lcv],
-                    //                     uri: this.uri
-                    //                 });
-                    //         }
-                    //     }
-                    // }
-
-                    // bot.adjust(adjustments);
                 }
 
+                //reconnect it in the right spot
+
+                //special case for if being inserted as the new head
+                if (aPrev == null)
+                {
+                    this.prev = null;
+                    this.next = bot.valuesHead;
+                    bot.valuesHead.prev = this;
+                    bot.valuesHead = this;
+                }
+                //special case for if being inserted as the new tail
+                else if (aPrev == bot.valuesTail)
+                {
+                    this.prev = bot.valuesTail;
+                    this.next = null;
+                    bot.valuesTail.next = this;
+                    bot.valuesTail = this;
+                }
+                //standard case
+                else
+                {
+                    this.next = aPrev.next;
+                    this.prev = aPrev;
+                    this.next.prev = this;
+                    this.prev.next = this;
+                }
                 //save new configuration/values
                 bot.saveSpotify();
             }
@@ -182,70 +150,54 @@ class Node
             //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
             if (aNext == null || aNext.value <= this.value)
             {
-                //only move things if this node doesn't already have aNext as its next node
-                if (aNext != this.next)
+                //disconnect the node from the list
+                if (this.prev != null)
                 {
-                    // //before anything is rearranged, save the the last song in each playlist (so that we can check which playlists are affected by the movement of this node)
-                    // let endNodes = [];
-                    // for (let lcv = 0; lcv < 5; lcv++)
-                    // {
-                    //     endNodes.push(bot.valuesHead.get(bot.playlistLengths[lcv]));
-                    // }
+                    this.prev.next = this.next;
 
-                    //disconnect the node from the list
-                    if (this.prev != null)
+                    //special handling if this is the valueTail
+                    if (this == bot.valuesTail)
                     {
-                        this.prev.next = this.next;
+                        bot.valuesTail = this.prev;
                     }
-                    if (this.next != null)
+                }
+                if (this.next != null)
+                {
+                    this.next.prev = this.prev;
+
+                    //special handling if this is the valueHead
+                    if (this == bot.valuesHead)
                     {
-                        this.next.prev = this.prev;
+                        bot.valuesHead = this.next;
                     }
+                }
 
-                    //reconnect it in the right spot
 
-                    //special case for if being inserted as the new tail
-                    if (aNext == null)
-                    {
-                        this.prev = bot.valuesTail;
-                        this.next = null;
-                        bot.valuesTail.next = this;
-                        bot.valuesTail = this;
-                    }
-                    //standard case
-                    else
-                    {
-                        this.next = aNext;
-                        this.prev = aNext.prev;
-                        this.next.prev = this;
-                        this.prev.next = this;
-                    }
+                //reconnect it in the right spot
 
-                    // //now that things have moved, check which nodes have a new index and readjust those playlists accordingly
-                    // let adjustments = [];
-                    // for (let lcv = 0; lcv < 5; lcv++)
-                    // {
-                    //     if (endNodes[lcv].index() != bot.playlistLengths[lcv])
-                    //     {
-                    //         //clear the song that just moved down and out of the playlist
-                    //         adjustments.push(
-                    //             {
-                    //                 adjustment: "clear",
-                    //                 id: bot.playlistIDs[lcv],
-                    //                 uri: this.uri
-                    //             });
-
-                    //         //add the song that was just bumped up into the playlist
-                    //         adjustments.push(
-                    //             {
-                    //                 adjustment: "add",
-                    //                 id: bot.playlistIDs[lcv],
-                    //                 uri: endNodes[lcv].uri
-                    //             });
-                    //     }
-                    // }
-
-                    // bot.adjust(adjustments);
+                //special case for if being inserted as the new head
+                if (aNext == bot.valuesHead)
+                {
+                    this.prev = null;
+                    this.next = bot.valuesHead;
+                    bot.valuesHead.prev = this;
+                    bot.valuesHead = this;
+                }
+                //special case for if being inserted as the new tail
+                if (aNext == null)
+                {
+                    this.prev = bot.valuesTail;
+                    this.next = null;
+                    bot.valuesTail.next = this;
+                    bot.valuesTail = this;
+                }
+                //standard case
+                else
+                {
+                    this.next = aNext;
+                    this.prev = aNext.prev;
+                    this.next.prev = this;
+                    this.prev.next = this;
                 }
 
                 //save new configuration
@@ -336,6 +288,8 @@ var bot = {
 
     songMessage: null,                                      //the message to check for reactions on for song manipulation
     testVal: 0,
+
+    setThemeMsg: null,
 
     // benID: '111579235059060736',
     // mattID: '321665327845081089',
@@ -614,7 +568,6 @@ var bot = {
             playlistIDs: bot.playlistIDs,
             songs: []
         }
-
         //converts the linked list of songs to an array
         let node = bot.valuesHead;
         while (node != null)
@@ -717,7 +670,7 @@ var bot = {
 
     syncLengths: function ()
     {
-        console.log("Syncing lengths: \nB[" + bot.barrelHead.length() + "], V[" + bot.valuesHead.length() + "] -> ");
+        console.log("Syncing lengths: \nB[" + bot.barrelHead.length() + "], V[" + bot.valuesHead.length() + "], M[" + bot.valuesMap.size + "] -> ");
 
         //check if anything has been added to the barrel
         //loop through the barrel list
@@ -733,44 +686,7 @@ var bot = {
                 //send the new node into the playlist
                 newNode.up(bot.valuesTail);
 
-                // //find the right spot in the value list to add the song (according to a default value of 0)
-                // let valueNode = bot.valuesHead;
-                // while (valueNode != null)
-                // {
-                //     //if a node is found with a negative value
-                //     if (valueNode.value < 0)
-                //     {
-                //         //insert the new node before the node with a negative value
-                //         valueNode.prev = new 
-
-                //         //add the new node to the map
-                //         bot.valuesMap.set(valueNode.prev.uri, valueNode.prev);
-
-                //         //if inserted before the head, update the head (it would be truly unfortunate if the head had negative value, but ya gotta plan for these things i guess)
-                //         if (valueNode.prev.prev == null)
-                //         {
-                //             bot.valuesHead = valueNode.prev;
-                //         }
-
-                //         //stop searching once the new node is inserted
-                //         break;
-                //     }
-
-                //     //advance to next node in list
-                //     valueNode = valueNode.next;
-                // }
-
-                // //if the node was not inserted, and no songs had negative value
-                // if (valueNode == null)
-                // {
-                //     //insert the new node at the end of the list
-                //     bot.valuesTail.next = new Node(barrelNode.name, barrelNode.uri, 0, bot.valuesTail, null);
-
-                //     //add the new node to the map
-                //     bot.valuesMap.set(bot.valuesTail.next.uri, bot.valuesTail.next);
-
-                //     bot.valuesTail = bot.valuesTail.next;   //(update the value list tail)                     
-                // }
+                bot.valuesMap.set(newNode.uri, newNode);
             }
             barrelNode = barrelNode.next;
         }
@@ -809,7 +725,7 @@ var bot = {
             valuesNode = valuesNode.next;
         }
 
-        console.log("B[" + bot.barrelHead.length() + "], V[" + bot.valuesHead.length() + "]\nSynced lengths.");
+        console.log("B[" + bot.barrelHead.length() + "], V[" + bot.valuesHead.length() + "], M[" + bot.valuesMap.size + "]\nSynced lengths.");
 
         //save the updated list to file
         bot.saveValuesList();
@@ -964,6 +880,12 @@ var bot = {
                     else
                     {
                         console.log("reloaded all playlists");
+                        console.log("Current theme: " + bot.currentTheme);
+                        if (bot.setThemeMsg != null)
+                        {
+                            bot.setThemeMsg.react('✅')
+                            .catch(error => console.error('One of the emojis failed to react:', error));
+                        }
                     }
                 }
             }
@@ -1033,6 +955,8 @@ var bot = {
     //diff: how much to change the value by
     changeValue: function (aNode, diff)
     {
+        // console.log("changing value, length is: " + bot.valuesHead.length());
+
         //Step 1: save what songs are currently in which playlists
         //list of all the songs in each playlist (2d array)
         let uriLists = [];
@@ -1047,9 +971,16 @@ var bot = {
             let aNode = bot.valuesHead;
             for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
             {
-                //add each song to the list
-                uriList.push(aNode.uri);
-                aNode = aNode.next;
+                if (aNode != null)
+                {
+                    //add each song to the list
+                    uriList.push(aNode.uri);
+                    aNode = aNode.next;
+                }
+                else
+                {
+                    console.log("null, songIndex: " + songIndex);
+                }
             }
 
             //add the list of songs to the list of songs per list
@@ -1069,6 +1000,7 @@ var bot = {
         }
 
         //Step 3: check for differences between new order of songs and old order of songs and build the list of adjustments (figure out which songs have changed playlists)
+        // console.log("step 2 complete");
 
         //initialize the list of adjustments
         let adjustments = [];
@@ -1078,6 +1010,7 @@ var bot = {
         {
             //temporarily disconnect the lcvth playlist from the rest of the songs
             let stitch = bot.valuesHead.get(bot.playlistLengths[playlistIndex]);
+            // console.log(playlistIndex);
             stitch.prev.next = null;
 
             let aNode = bot.valuesHead;
@@ -1113,9 +1046,12 @@ var bot = {
             //reconnect the lcvth playlist to the rest of the songs
             stitch.prev.next = stitch;
         }
+        // console.log("step 3 complete");
 
         //Step 4: adjust playlists accordingly
         bot.adjust(adjustments);
+        // console.log("changed value, length is: " + bot.valuesHead.length());
+
     }
 }
 
@@ -1348,7 +1284,7 @@ client.on('messageReactionAdd', (reaction, user) =>
                         if (reaction.emoji.name === "🤮")
                         {
                             bot.changeValue(aNode, -3);
-                            console.log(aNode.name + " -1");
+                            console.log(aNode.name + " -3");
 
                             // Skip User’s Playback To Next Track
                             bot.spotifyApi.skipToNext().then(function ()

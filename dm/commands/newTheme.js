@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'createTheme',
+    name: 'newtheme',
     secret: true,
     spam: false,
     description: "",
@@ -22,7 +22,7 @@ module.exports = {
 
             if (failed)
             {
-                message.channel.send('newTheme <themeName> <playlist id 1> <playlist id 2> <playlist id 3> <playlist id 4> <playlist id 5> <playlist id 6>');
+                message.channel.send('newtheme <themename> <playlist id 1> <playlist id 2> <playlist id 3> <playlist id 4> <playlist id 5> <playlist id 6>');
             }
             else
             {

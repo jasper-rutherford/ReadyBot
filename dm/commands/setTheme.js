@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'setTheme',
+    name: 'settheme',
     secret: true,
     spam: false,
     description: "",
@@ -11,10 +11,11 @@ module.exports = {
 
             if (themeName === undefined)
             {
-                message.channel.send('newTheme <themeName>');
+                message.channel.send('newtheme <themename>');
             }
             else
             {
+                bot.setThemeMsg = message;
                 bot.setTheme(themeName);
             }
         }
