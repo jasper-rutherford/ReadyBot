@@ -1296,7 +1296,6 @@ client.on('messageReactionAdd', (reaction, user) =>
                                 console.log('failed to skip');
                             });
                         }
-                        reaction.users.remove(user);
                     }
                 }, function (err)
                 {
@@ -1311,6 +1310,8 @@ client.on('messageReactionAdd', (reaction, user) =>
         {
             console.log('couldn\'t get current playback state');
         });
+
+        reaction.users.remove(user);
     }
 });
 
