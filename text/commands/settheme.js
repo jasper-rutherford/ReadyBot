@@ -19,7 +19,7 @@ module.exports = {
                 message.react('⌚')
                     .catch(error => console.error('One of the emojis failed to react'));
 
-                bot.setThemeMsg = message;
+                bot.setThemeMsg = null;
                 bot.setTheme(themeName);
 
             }

@@ -36,10 +36,10 @@ class Node
         };
 
         //function that checks if this node or any of its nexts have the given id
-        this.contains = function (id)
+        this.contains = function (uri)
         {
             //if this node has the id return true
-            if (this.uri == id)
+            if (this.uri == uri)
             {
                 return true;
             }
@@ -53,7 +53,7 @@ class Node
             //otherwise call the function on the next node
             else
             {
-                return this.next.contains(id);
+                return this.next.contains(uri);
             }
         };
 
@@ -274,7 +274,7 @@ var bot = {
     barrelID: "4jCZqEM3AdWj3uSpjuY9IK",  // "5GFPI2Hii5HfpUUnStQN2r", //             //bottom of the barrel
     barrelHead: null,                                       //stores bottom of the barrel as a linked list
     barrelTail: null,                                       //head is first node, tail is last
-    barrelLength: 0,
+    // barrelLength: 0,
 
     valuesHead: null,                                       //stores the song values list
     valuesTail: null,                                       //head is first, tail is last
@@ -380,20 +380,25 @@ var bot = {
 
         //set the theme to the current theme (aka what the theme was last time the bot saved)
         //setTheme automatically calls the next step
-        bot.setTheme(this.currentTheme);
+        bot.setTheme(bot.currentTheme);
     },
 
     readBarrelList: function ()
     {
         console.log("Reading barrel");
+
+        //reset the head/tail
+        bot.barrelHead = null;
+        bot.barrelTail = null;
+
         var loops = null;
 
         // Get the bottom of the barrel length
         bot.spotifyApi.getPlaylist(bot.barrelID)
             .then(function (data)
             {
-                bot.barrelLength = data.body.tracks.total;
-                loops = bot.barrelLength / 100;
+                let length = data.body.tracks.total;
+                loops = length / 100;
                 let chunkNum = 0;
 
                 //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
@@ -434,9 +439,6 @@ var bot = {
 
                                 if (chunkNum == chunks)
                                 {
-                                    //tell the bot that the barrel has been read
-                                    bot.barrelRead = true;
-
                                     //tell the console the same
                                     console.log("Barrel has been read");
                                     // bot.newTheme("Default", ["5GFPI2Hii5HfpUUnStQN2r","1sk0YLFu6qEeV3E57Nu6L7","1vl2nOZuGj0Apadn7T4ChC","31fTXPEzreUh3AKkXgOnIF","7CzAPNHwxvwC2Yk54QjLY6","03DqdGqj9o5mDuBAlImvoL"]);
@@ -806,6 +808,31 @@ var bot = {
         });
     },
 
+    // updateLengths: function ()
+    // {
+    //     for (let lcv = 0; lcv < 6; lcv++)
+    //     {
+    //         //determine how long the playlist should be
+    //         let len = 0;
+    //         if (lcv == 0)
+    //         {
+    //             len = 1;
+    //         }
+    //         else if (lcv == 1)
+    //         {
+    //             // console.log("BL: " + bot.barrelLength + " Mult: " + Math.floor(0.05 * bot.barrelLength));
+    //             len = Math.floor(0.05 * bot.barrelHead.length());
+    //         }
+    //         else
+    //         {
+    //             len = Math.floor(0.25 * (idIndex - 1) * bot.barrelHead.length());
+    //         }
+
+    //         //update the lengths into the bot
+    //         bot.playlistLengths[lcv] = len;
+    //     }
+    // },
+
     //id:           id of the playlist to load
     //reloading:    whether or not to reload the next playlist after this one is loaded
     //listNode:     add up to 100 songs from the valueList to the playlist starting from this one
@@ -830,11 +857,11 @@ var bot = {
         else if (idIndex == 1)
         {
             // console.log("BL: " + bot.barrelLength + " Mult: " + Math.floor(0.05 * bot.barrelLength));
-            len = Math.floor(0.05 * bot.barrelLength);
+            len = Math.floor(0.05 * bot.barrelHead.length());
         }
         else
         {
-            len = Math.floor(0.25 * (idIndex - 1) * bot.barrelLength);
+            len = Math.floor(0.25 * (idIndex - 1) * bot.barrelHead.length());
         }
 
         //update the lengths into the bot
@@ -886,7 +913,7 @@ var bot = {
                         if (bot.setThemeMsg != null)
                         {
                             bot.setThemeMsg.react('✅')
-                            .catch(error => console.error('One of the emojis failed to react:', error));
+                                .catch(error => console.error('One of the emojis failed to react'));
                         }
                         else
                         {
@@ -1240,7 +1267,16 @@ client.on('message', message =>
 
 client.on('messageReactionAdd', (reaction, user) =>
 {
-    if (bot.songMessage != null && reaction.message.id === bot.songMessage.id && user.id === bot.jaspaID)
+    //special case automatically clears ✅, ❌, and ⌚ if they are from the bot and on the songMessage
+    if ((reaction.emoji.name === "✅" || reaction.emoji.name === "❌" || reaction.emoji.name === "⌚")
+        && bot.songMessage != null && bot.songMessage.id === reaction.message.id && user.id === bot.botID)
+    {
+        reaction.users.remove(user);
+    }
+
+    //case for voting based on 🥰, 👍, 👎, and 🤮, only works if the reaction is to the songMessage by Jaspa
+    if ((reaction.emoji.name === "🥰" || reaction.emoji.name === "👍" || reaction.emoji.name === "👎" || reaction.emoji.name === "🤮")
+        && bot.songMessage != null && reaction.message.id === bot.songMessage.id && user.id === bot.jaspaID)
     {
         // Get Information About The User's Current Playback State
         bot.spotifyApi.getMyCurrentPlaybackState().then(function (data)
@@ -1251,14 +1287,50 @@ client.on('messageReactionAdd', (reaction, user) =>
                 //get current song
                 bot.spotifyApi.getMyCurrentPlayingTrack().then(function (data)
                 {
-                    //get node of the song from the list
-                    let aNode = bot.valuesMap.get(data.body.item.uri);
+                    //info about the current song
+                    let name = data.body.item.name;
+                    let uri = data.body.item.uri;
 
-                    //check if the song isn't in the playlist (yet?)
+                    //get node of the song from the list
+                    let aNode = bot.valuesMap.get(uri);
+
+                    //if the song isn't in the values list 
                     if (aNode === undefined)
                     {
-                        console.log("this song is not in the barrel. TODO: add the song to the valuelist/barrel with a value or smthn");
-                        //TODO: the else would go away if you did that, because then you could just follow through with the other code
+                        //create node version of new song for barrel
+                        newBarrel = new Node(name, uri, null, null, null);
+
+                        //check if this new song is already in the barrel
+                        if (bot.barrelHead.contains(uri))
+                        {
+                            console.log("[" + name + "] has already been added to the barrel and will go into circulation after the next reload.");
+
+                            bot.songMessage.react('⌚')
+                                .catch(error => console.error('One of the emojis failed to react'));
+                        }
+                        //otherwise if the new song is not in the barrel 
+                        else
+                        {
+                            //add it to the barrel
+                            console.log("[" + name + "] is new! Adding to barrel now.");
+
+                            //add new song to barrel playlist
+                            bot.spotifyApi.addTracksToPlaylist(bot.barrelID, [uri]).then(function (data)
+                            {
+                                //add node to barrel list 
+                                bot.barrelTail.next = newBarrel;
+                                newBarrel.prev = bot.barrelTail;
+                                bot.barrelTail = newBarrel;
+
+                                bot.songMessage.react('✅')
+                                    .catch(error => console.error('One of the emojis failed to react'));
+                            }, function (err)
+                            {
+                                console.log('\t\t\tFailed to add [' + name + '] to the barrel');
+                                bot.songMessage.react('❌')
+                                    .catch(error => console.error('One of the emojis failed to react'));
+                            });
+                        }
                     }
                     //if the song is in the valuelist, adjust the song's value accordingly
                     else
