@@ -261,6 +261,7 @@ var bot = {
     guild: undefined,
     jaspaDM: '754507044312317962',
     jaspaID: '130880023069589505',
+    botID: '754498512359653466',
 
     // credentials are optional /////this comment is from the template I built off of. Maybe it is true? Maybe not.
     spotifyApi: new SpotifyWebApi({
@@ -289,7 +290,8 @@ var bot = {
     songMessage: null,                                      //the message to check for reactions on for song manipulation
     testVal: 0,
 
-    setThemeMsg: null,
+    setThemeMsg: null,                                      //the ballot for spotify votes
+    spotifyChannel: '904467973434134589',                   //default location to send ballot on startup
 
     // benID: '111579235059060736',
     // mattID: '321665327845081089',
@@ -886,6 +888,10 @@ var bot = {
                             bot.setThemeMsg.react('✅')
                             .catch(error => console.error('One of the emojis failed to react:', error));
                         }
+                        else
+                        {
+                            bot.helpers('sendballot', bot.client.channels.cache.get(bot.spotifyChannel));
+                        }
                     }
                 }
             }
@@ -1061,6 +1067,7 @@ if (bot.testbuild)
     bot.tokenDiscord = testTokenDiscord;
     bot.guildID = '254631721620733952';
     bot.jaspaDM = '755291736871272490';
+    bot.botID = '754865264390176839';
     // bot.readyRoleID = '360182681943932930';
     // bot.imposterRoleID = '756313923363405824';
     // bot.gulagRoleID = '589261878383869962';
