@@ -4,7 +4,7 @@ module.exports = {
     description: "sends a song ballot to the desired channel",
     execute(channel, bot)
     {
-        channel.send("react").then(sent =>
+        channel.send(" ").then(sent =>
         {
             bot.songMessage = sent;
             sent.react('🤮')
