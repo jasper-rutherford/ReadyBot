@@ -1,5 +1,6 @@
 module.exports = {
     name: 'newtheme',
+    alt: 'createtheme',
     secret: true,
     spam: false,
     description: "",
