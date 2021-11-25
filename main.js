@@ -808,31 +808,6 @@ var bot = {
         });
     },
 
-    // updateLengths: function ()
-    // {
-    //     for (let lcv = 0; lcv < 6; lcv++)
-    //     {
-    //         //determine how long the playlist should be
-    //         let len = 0;
-    //         if (lcv == 0)
-    //         {
-    //             len = 1;
-    //         }
-    //         else if (lcv == 1)
-    //         {
-    //             // console.log("BL: " + bot.barrelLength + " Mult: " + Math.floor(0.05 * bot.barrelLength));
-    //             len = Math.floor(0.05 * bot.barrelHead.length());
-    //         }
-    //         else
-    //         {
-    //             len = Math.floor(0.25 * (idIndex - 1) * bot.barrelHead.length());
-    //         }
-
-    //         //update the lengths into the bot
-    //         bot.playlistLengths[lcv] = len;
-    //     }
-    // },
-
     //id:           id of the playlist to load
     //reloading:    whether or not to reload the next playlist after this one is loaded
     //listNode:     add up to 100 songs from the valueList to the playlist starting from this one
