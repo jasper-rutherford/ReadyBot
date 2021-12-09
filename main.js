@@ -1310,20 +1310,21 @@ client.on('messageReactionAdd', (reaction, user) =>
                     //if the song is in the valuelist, adjust the song's value accordingly
                     else
                     {
+                        let prevVal = aNode.value;
                         if (reaction.emoji.name === "🥰")
                         {
                             bot.changeValue(aNode, 3);
-                            console.log(aNode.name + " 3");
+                            console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
                         }
                         if (reaction.emoji.name === "👍")
                         {
                             bot.changeValue(aNode, 1);
-                            console.log(aNode.name + " 1");
+                            console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
                         }
                         if (reaction.emoji.name === "👎")
                         {
                             bot.changeValue(aNode, -1);
-                            console.log(aNode.name + " -1");
+                            console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
 
                             // Skip User’s Playback To Next Track
                             bot.spotifyApi.skipToNext().then(function ()
@@ -1338,7 +1339,7 @@ client.on('messageReactionAdd', (reaction, user) =>
                         if (reaction.emoji.name === "🤮")
                         {
                             bot.changeValue(aNode, -3);
-                            console.log(aNode.name + " -3");
+                            console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
 
                             // Skip User’s Playback To Next Track
                             bot.spotifyApi.skipToNext().then(function ()
