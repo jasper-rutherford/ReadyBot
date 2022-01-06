@@ -1599,11 +1599,11 @@ client.on('messageReactionAdd', (reaction, user) =>
                         let name = data.body.item.name;
                         let uri = data.body.item.uri;
 
-                        //if the song isn't in rotation, add it to rotation 
+                        //if the song isnt in the map, add it to the map 
                         if (bot.voteScores.get(uri) == undefined)
                         {
                             //add to score map
-                            bot.voteScores.put(uri, 0);
+                            bot.voteScores.set(uri, 0);
 
                             //add to from playlist
                             bot.spotifyApi.addTracksToPlaylist(bot.fromList, [uri])
@@ -1615,100 +1615,97 @@ client.on('messageReactionAdd', (reaction, user) =>
                                     console.log("\tfailed to add " + name + " to rotation")
                                 });
                         }
-                        //if the song's uri is in bot.voteScores
-                        else
+
+                        let prevVal = bot.voteScores.get(uri);
+                        let bad = prevVal < bot.voteMin;
+                        let good = prevVal > bot.voteMax;
+
+                        let big = 5;
+                        let small = 1;
+
+                        if (reaction.emoji.name === "🥰")
                         {
-                            let prevVal = bot.voteScores.get(uri);
-                            let bad = prevVal < bot.voteMin;
-                            let good = prevVal > bot.voteMax;
+                            bot.voteScores.set(uri, bot.voteScores.get(uri) + big);
+                        }
+                        if (reaction.emoji.name === "👍")
+                        {
+                            bot.voteScores.set(uri, bot.voteScores.get(uri) + small);
+                        }
+                        if (reaction.emoji.name === "👎")
+                        {
+                            bot.voteScores.set(uri, bot.voteScores.get(uri) - small);
+                        }
+                        if (reaction.emoji.name === "🤮")
+                        {
+                            bot.voteScores.set(uri, bot.voteScores.get(uri) - big);
+                        }
 
-                            let big = 5;
-                            let small = 1;
+                        let newScore = bot.voteScores.get(uri);
 
-                            if (reaction.emoji.name === "🥰")
+                        //if not already bad and score is less than minimum
+                        if (!bad && newScore < bot.voteMin)
+                        {
+                            console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ") [bad]");
+                            //remove from from
+                            bot.spotifyApi.removeTracksFromPlaylist(bot.fromList, [{ uri: uri }]).then(function (data)
                             {
-                                bot.voteScores.set(uri, bot.voteScores.get(uri) + big);
-                            }
-                            if (reaction.emoji.name === "👍")
-                            {
-                                bot.voteScores.set(uri, bot.voteScores.get(uri) + small);
-                            }
-                            if (reaction.emoji.name === "👎")
-                            {
-                                bot.voteScores.set(uri, bot.voteScores.get(uri) - small);
-                            }
-                            if (reaction.emoji.name === "🤮")
-                            {
-                                bot.voteScores.set(uri, bot.voteScores.get(uri) - big);
-                            }
-
-                            let newScore = bot.voteScores.get(uri);
-
-                            //if not already bad and score is less than minimum
-                            if (!bad && newScore < bot.voteMin)
-                            {
-                                console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ") [bad]");
-                                //remove from from
-                                bot.spotifyApi.removeTracksFromPlaylist(bot.fromList, [{ uri: uri }]).then(function (data)
-                                {
-                                    console.log("\tremoved " + name + " from rotation")
-                                }, function (err)
-                                {
-                                    console.log("\tfailed to remove " + name + " from rotation")
-                                });
-
-                                //add to bad
-                                bot.spotifyApi.addTracksToPlaylist(bot.badList, [uri])
-                                    .then(function (data)
-                                    {
-                                        console.log("\tadded " + name + " to bad playlist")
-                                    }, function (err)
-                                    {
-                                        console.log("\tfailed to add " + name + " to bad playlist")
-                                    });
-                            }
-                            //if not already good and score is greater than maximum
-                            else if (bot.voteMax < newScore && newScore < bot.voteMax + big + 1) 
-                            {
-                                console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ") [good]");
-                                //remove from from
-                                bot.spotifyApi.removeTracksFromPlaylist(bot.fromList, [{ uri: uri }]).then(function (data)
-                                {
-                                    console.log("\tremoved " + name + " from rotation")
-                                }, function (err)
-                                {
-                                    console.log("\tfailed to remove " + name + " from rotation")
-                                });
-
-                                //add to good
-                                bot.spotifyApi.addTracksToPlaylist(bot.goodList, [uri])
-                                    .then(function (data)
-                                    {
-                                        console.log("\tadded " + name + " to good playlist")
-                                    }, function (err)
-                                    {
-                                        console.log("\tfailed to add " + name + " to good playlist")
-                                    });
-                            }
-                            //if score still in range
-                            else
-                            {
-                                console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ")");
-                            }
-
-                            //save to file
-                            bot.saveVoteMode();
-
-                            // Skip User’s Playback To Next Track
-                            bot.spotifyApi.skipToNext().then(function ()
-                            {
-                                // console.log('Skip to next');
+                                console.log("\tremoved " + name + " from rotation")
                             }, function (err)
                             {
-                                //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
-                                console.log('failed to skip during vote mode');
+                                console.log("\tfailed to remove " + name + " from rotation")
                             });
+
+                            //add to bad
+                            bot.spotifyApi.addTracksToPlaylist(bot.badList, [uri])
+                                .then(function (data)
+                                {
+                                    console.log("\tadded " + name + " to bad playlist")
+                                }, function (err)
+                                {
+                                    console.log("\tfailed to add " + name + " to bad playlist")
+                                });
                         }
+                        //if not already good and score is greater than maximum
+                        else if (!good && voteMax < newScore) 
+                        {
+                            console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ") [good]");
+                            //remove from from
+                            bot.spotifyApi.removeTracksFromPlaylist(bot.fromList, [{ uri: uri }]).then(function (data)
+                            {
+                                console.log("\tremoved " + name + " from rotation")
+                            }, function (err)
+                            {
+                                console.log("\tfailed to remove " + name + " from rotation")
+                            });
+
+                            //add to good
+                            bot.spotifyApi.addTracksToPlaylist(bot.goodList, [uri])
+                                .then(function (data)
+                                {
+                                    console.log("\tadded " + name + " to good playlist")
+                                }, function (err)
+                                {
+                                    console.log("\tfailed to add " + name + " to good playlist")
+                                });
+                        }
+                        //if score still in range
+                        else
+                        {
+                            console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ")");
+                        }
+
+                        //save to file
+                        bot.saveVoteMode();
+
+                        // Skip User’s Playback To Next Track
+                        bot.spotifyApi.skipToNext().then(function ()
+                        {
+                            // console.log('Skip to next');
+                        }, function (err)
+                        {
+                            //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
+                            console.log('failed to skip during vote mode');
+                        });
                     }, function (err)
                     {
                         console.log('couldn\'t get current song');
