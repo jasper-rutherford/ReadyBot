@@ -1666,7 +1666,7 @@ client.on('messageReactionAdd', (reaction, user) =>
                                 });
                         }
                         //if not already good and score is greater than maximum
-                        else if (!good && voteMax < newScore) 
+                        else if (!good && bot.voteMax < newScore) 
                         {
                             console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ") [good]");
                             //remove from from
