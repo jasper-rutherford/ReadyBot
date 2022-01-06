@@ -8,7 +8,7 @@ module.exports = {
     {
         if (message.author.id === bot.jaspaID)
         {
-           if (mode == "vote")
+           if (bot.mode == "vote")
            {
                let min = args.shift();
                if (min != undefined)

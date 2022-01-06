@@ -8,7 +8,7 @@ module.exports = {
     {
         if (message.author.id === bot.jaspaID)
         {
-           if (mode == "vote")
+           if (bot.mode == "vote")
            {
                let max = args.shift();
                if (max != undefined)
