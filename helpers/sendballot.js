@@ -4,7 +4,13 @@ module.exports = {
     description: "sends a song ballot to the desired channel",
     execute(channel, bot)
     {
-        channel.send("🎶 " + bot.currentTheme + " 🎶").then(sent =>
+        let content = "🎶 " + bot.currentTheme + " 🎶";
+
+        if (bot.mode == "vote") 
+        {
+            content = "📉 Voting: " + bot.voteName + " 📈";
+        }
+        channel.send(content).then(sent =>
         {
             bot.songMessage = sent;
             sent.react('🤮')

@@ -11,7 +11,7 @@ module.exports = {
 
             if (themeName === undefined)
             {
-                message.channel.send('newtheme <themename>');
+                message.channel.send('settheme <themename>');
             }
             else
             {
