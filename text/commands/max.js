@@ -14,7 +14,7 @@ module.exports = {
                if (max != undefined)
                {
                     bot.voteMax = max;
-                    bot.saveVoteMode;
+                    bot.saveVoteMode();
                     message.react('✅')
                     .catch(error => console.error('One of the emojis failed to react'));
                }
