@@ -1604,7 +1604,7 @@ client.on('messageReactionAdd', (reaction, user) =>
                         {
                             //add to score map
                             bot.voteScores.set(uri, 0);
-
+revert this test
                             //add to from playlist
                             bot.spotifyApi.addTracksToPlaylist(bot.fromList, [uri])
                                 .then(function (data)
