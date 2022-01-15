@@ -6,7 +6,7 @@ const { token, testToken } = require('./config.json');
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: false,
+    testbuild: true,
     token: token,
     prefix: '~',
     client: client,
