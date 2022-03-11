@@ -14,7 +14,7 @@ module.exports = {
                if (min != undefined)
                {
                     bot.voteMin = min;
-                    bot.saveVoteMode();
+                    bot.saveVoteMode;
                     message.react('✅')
                     .catch(error => console.error('One of the emojis failed to react'));
                }
