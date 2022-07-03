@@ -184,7 +184,7 @@ class Node
                     bot.valuesHead = this;
                 }
                 //special case for if being inserted as the new tail
-                if (aNext == null)
+                else if (aNext == null)
                 {
                     this.prev = bot.valuesTail;
                     this.next = null;
@@ -393,7 +393,7 @@ var bot = {
         //setTheme automatically calls the next step
 
         //UNCOMMENT THIS TO MAKE THE THEME STUFF HAPPEN
-        // bot.setTheme(bot.currentTheme); 
+        bot.setTheme(bot.currentTheme);
     },
 
     readBarrelList: function ()
@@ -462,18 +462,18 @@ var bot = {
                             },
                             function (err)
                             {
-                                console.log('Something went wrong!', err);
+                                console.log('Something went wrong! 111', err);
                             }
                         );
 
                 }
             }, function (err)
             {
-                console.log('Something went wrong!', err);
+                console.log('Something went wrong! 222', err);
             });
     },
 
-    newTheme: function (theme, playlistIDs)
+    newTheme: function (theme, playlistIDs, message = undefined)
     {
         console.log("Trying to make a new theme called \"" + theme + "\"");
 
@@ -508,6 +508,14 @@ var bot = {
         }
 
         console.log("Made a new theme");
+
+        if (message !== undefined) 
+        {
+            message.react('⌚')
+                .catch(error => console.error('One of the emojis failed to react'));
+            message.react('✅')
+                .catch(error => console.error('One of the emojis failed to react'));
+        }
     },
 
     buildNewList: function ()
@@ -882,7 +890,7 @@ var bot = {
                     {
                         //convert each track to an object and add it to the list
                         tracks.push({ uri: item.track.uri });
-                        console.log(item);
+                        // console.log(item);
                     });
 
                     //delete all the tracks covered by this chunk of the for loop
@@ -1126,7 +1134,7 @@ var bot = {
 
         //Step 1: save what songs are currently in which playlists
         //list of all the songs in each playlist (2d array)
-        let uriLists = [];
+        let oldUriLists = [];
 
         //add all the songs for each playlist
         for (let playlistIndex = 0; playlistIndex < 6; playlistIndex++)
@@ -1135,14 +1143,14 @@ var bot = {
             let uriList = [];
 
             //loop through every song in this playlist
-            let aNode = bot.valuesHead;
+            let head = bot.valuesHead;
             for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
             {
-                if (aNode != null)
+                if (head != null)
                 {
                     //add each song to the list
-                    uriList.push(aNode.uri);
-                    aNode = aNode.next;
+                    uriList.push(head.uri);
+                    head = head.next;
                 }
                 else
                 {
@@ -1151,7 +1159,7 @@ var bot = {
             }
 
             //add the list of songs to the list of songs per list
-            uriLists.push(uriList);
+            oldUriLists.push(uriList);
         }
 
         //Step 2: change the node's value and move it accordingly
@@ -1166,7 +1174,43 @@ var bot = {
             aNode.down(aNode.next);
         }
 
-        //Step 3: check for differences between new order of songs and old order of songs and build the list of adjustments (figure out which songs have changed playlists)
+
+        //Step 3: save what songs are now in which playlists
+        //list of all the songs in each playlist (2d array)
+        let newUriLists = [];
+
+        //add all the songs for each playlist
+        for (let playlistIndex = 0; playlistIndex < 6; playlistIndex++)
+        {
+            //the list of songs in this playlist
+            let uriList = [];
+
+            //loop through every song in this playlist
+            let head = bot.valuesHead;
+            for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
+            {
+                if (head != null)
+                {
+                    //add each song to the list
+                    uriList.push(head.uri);
+                    head = head.next;
+                }
+                else
+                {
+                    console.log("null, songIndex: " + songIndex);
+                }
+            }
+
+            //add the list of songs to the list of songs per list
+            newUriLists.push(uriList);
+        }
+
+        console.log("old:");
+        console.log(oldUriLists[1]);
+        console.log("new:");
+        console.log(newUriLists[1]);
+
+        //Step 4: check for differences between new order of songs and old order of songs and build the list of adjustments (figure out which songs have changed playlists)
         // console.log("step 2 complete");
 
         //initialize the list of adjustments
@@ -1175,47 +1219,38 @@ var bot = {
         //(only check the first 5 playlists because the last playlist will always contain all the songs by definition)
         for (let playlistIndex = 0; playlistIndex < 5; playlistIndex++)
         {
-            //temporarily disconnect the lcvth playlist from the rest of the songs
-            let stitch = bot.valuesHead.get(bot.playlistLengths[playlistIndex]);
-            // console.log(playlistIndex);
-            stitch.prev.next = null;
-
-            let aNode = bot.valuesHead;
             for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++) 
             {
-                //if the valueslist no longer contains a song from the urilist 
-                if (!bot.valuesHead.contains(uriLists[playlistIndex][songIndex]))
+                //if the new urilist no longer contains a song from the old urilist 
+                if (!newUriLists[playlistIndex].includes(oldUriLists[playlistIndex][songIndex]))
                 {
                     //add an adjustment to remove the song from the playlist
                     adjustments.push(
                         {
                             adjustment: "clear",
                             id: bot.playlistIDs[playlistIndex],
-                            uri: uriLists[playlistIndex][songIndex]
+                            uri: oldUriLists[playlistIndex][songIndex]
                         });
+                    console.log("identified " + bot.valuesHead.get(songIndex).name + " (" + oldUriLists[playlistIndex][songIndex] + ") for clearing from playlist " + playlistIndex);
                 }
 
-                //if a node in valuesList is not in the urilist
-                if (uriLists[playlistIndex].indexOf(aNode.uri) == -1)
+                //if a song in the new urilist is not in the old urilist
+                if (!oldUriLists[playlistIndex].includes(newUriLists[playlistIndex][songIndex]))
                 {
                     //add an adjustment to add the song to the playlist
                     adjustments.push(
                         {
                             adjustment: "add",
                             id: bot.playlistIDs[playlistIndex],
-                            uri: aNode.uri
+                            uri: newUriLists[playlistIndex][songIndex]
                         });
+                    console.log("identified " + bot.valuesHead.get(songIndex).name + " (" + newUriLists[playlistIndex][songIndex] + ") for adding to playlist " + playlistIndex);
                 }
-
-                aNode = aNode.next;
             }
-
-            //reconnect the lcvth playlist to the rest of the songs
-            stitch.prev.next = stitch;
         }
         // console.log("step 3 complete");
 
-        //Step 4: adjust playlists accordingly
+        //Step 5: adjust playlists accordingly
         bot.adjust(adjustments);
         // console.log("changed value, length is: " + bot.valuesHead.length());
 
@@ -1353,7 +1388,7 @@ client.once('ready', () =>
     bot.initialUpdates();
 
     // bot.helpers('checkRAL', 0);
-    client.user.setStatus('invisible')
+    // client.user.setStatus('invisible')
 
     console.log('Readybot 3: Spotify Edition');
 
