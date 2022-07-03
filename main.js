@@ -391,7 +391,9 @@ var bot = {
 
         //set the theme to the current theme (aka what the theme was last time the bot saved)
         //setTheme automatically calls the next step
-        bot.setTheme(bot.currentTheme);
+
+        //UNCOMMENT THIS TO MAKE THE THEME STUFF HAPPEN
+        // bot.setTheme(bot.currentTheme); 
     },
 
     readBarrelList: function ()
@@ -880,6 +882,7 @@ var bot = {
                     {
                         //convert each track to an object and add it to the list
                         tracks.push({ uri: item.track.uri });
+                        console.log(item);
                     });
 
                     //delete all the tracks covered by this chunk of the for loop
