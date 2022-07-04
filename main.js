@@ -463,6 +463,10 @@ var bot = {
                             function (err)
                             {
                                 console.log('Something went wrong! 111', err);
+                                if (err.statusCode == 500)
+                                {
+                                    this.readBarrelList;
+                                }
                             }
                         );
 
