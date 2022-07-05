@@ -6,6 +6,7 @@ const express = require('express');
 
 
 const { tokenDiscord, testTokenDiscord, clientId, clientSecret } = require('./data/config.json');
+const { resolve } = require('path');
 
 
 const app = express();
@@ -398,83 +399,109 @@ var bot = {
 
     readBarrelList: function ()
     {
+        //update console
         console.log("Reading barrel");
 
         //reset the head/tail
         bot.barrelHead = null;
         bot.barrelTail = null;
 
-        var loops = null;
-
-        // Get the bottom of the barrel length
-        bot.spotifyApi.getPlaylist(bot.barrelID)
-            .then(function (data)
+        // Get the tracks from the barrel
+        this.getTracks(bot.barrelID)
+        .then(function (tracks)
+        {
+            //convert to a linked list
+            tracks.forEach(item =>         
             {
-                let length = data.body.tracks.total;
-                loops = length / 100;
-                let chunkNum = 0;
+                //node for the song being read
+                let node = new Node(item.track.name, item.track.uri, null, null, null);
 
-                //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
-                for (var lcv = 0; lcv < loops; lcv++)
+                //if the list hasn't been created, make this node the first and last node
+                if (bot.barrelHead == null)
                 {
-                    // Get tracks 
-                    bot.spotifyApi.getPlaylistTracks(bot.barrelID, {
-                        offset: lcv * 100,
-                        limit: 100,
-                        fields: 'items'
-                    })
-                        .then(
-                            function (data)
-                            {
-                                data.body.items.forEach(item =>         //read each song in the chunk into barrelList
-                                {
-                                    //node for the song being read
-                                    let node = new Node(item.track.name, item.track.uri, null, null, null);
-
-                                    //if the list hasn't been created, make this node the first and last node
-                                    if (bot.barrelHead == null)
-                                    {
-                                        bot.barrelHead = node;
-                                        bot.barrelTail = node;
-                                    }
-                                    //otherwise, add this node to the end of the list
-                                    else
-                                    {
-                                        node.prev = bot.barrelTail;     //sets the tail as the node's prev
-                                        bot.barrelTail.next = node;     //sets the node as the tail's next
-                                        bot.barrelTail = node;          //sets the node as the new tail
-                                    }
-                                });
-
-                                chunkNum++;
-                                let chunks = Math.ceil(loops);
-                                // console.log("Read chunk " + chunkNum + "/" + chunks);
-
-                                if (chunkNum == chunks)
-                                {
-                                    //tell the console the same
-                                    console.log("Barrel has been read");
-                                    // bot.newTheme("Default", ["5GFPI2Hii5HfpUUnStQN2r","1sk0YLFu6qEeV3E57Nu6L7","1vl2nOZuGj0Apadn7T4ChC","31fTXPEzreUh3AKkXgOnIF","7CzAPNHwxvwC2Yk54QjLY6","03DqdGqj9o5mDuBAlImvoL"]);
-
-                                    //Try to sync the length of the list to the length of the barrel
-                                    bot.syncLengths();
-                                }
-                            },
-                            function (err)
-                            {
-                                console.log('Something went wrong! 111', err);
-                                if (err.statusCode == 500)
-                                {
-                                    this.readBarrelList;
-                                }
-                            }
-                        );
-
+                    bot.barrelHead = node;
+                    bot.barrelTail = node;
                 }
-            }, function (err)
-            {
-                console.log('Something went wrong! 222', err);
+                //otherwise, add this node to the end of the list
+                else
+                {
+                    node.prev = bot.barrelTail;     //sets the tail as the node's prev
+                    bot.barrelTail.next = node;     //sets the node as the tail's next
+                    bot.barrelTail = node;          //sets the node as the new tail
+                }
             });
+
+            //send an update to the console
+            console.log("Barrel has been read");
+
+            //Try to sync the length of the list to the length of the barrel
+            bot.syncLengths();
+        })
+        .catch(function (error) 
+        {
+            if (error.statusCode === 500)
+            {
+                console.log("Server error, trying again");
+                bot.readBarrelList();
+            }
+            else
+            {
+                console.log('Something went wrong! 111');
+                console.log(error);
+            }
+        });
+    },
+    getTracks(playlistID)
+    {
+        console.log("reading in playlist", playlistID);
+
+        //return a promise
+        return new Promise((resolve, reject) =>
+        {
+            //read info from the playlist 
+            bot.spotifyApi.getPlaylist(playlistID)
+
+            //send the length of the playlist into this.reading so that reading knows how much to scan
+            .then((playlistInfo) => this.gettingTracks(playlistInfo.body.tracks.total, playlistID))
+            
+            //resolve the tracks back out to the promise
+            .then((tracks) => resolve(tracks))
+
+            //error handling 
+            .catch((error) => reject(error));
+        });
+    },
+    gettingTracks(goal, playlistID, totTracks = [], newTracks = [])
+    {
+        //add the next batch of tracks onto the total list of tracks
+        Array.prototype.push.apply(totTracks, newTracks);
+
+        console.log("reading chunk " + (1 + Math.ceil(totTracks.length / 100)) + "/" + (1 + Math.ceil(goal / 100)));
+
+        //return a promise 
+        return new Promise((resolve, reject) =>
+        {
+            //if we have read all tracks, resolve with the tracks
+            if (totTracks.length == goal)
+            {
+                resolve(totTracks);
+            }
+            //otherwise
+            else
+            {
+                //get the next batch of tracks
+                bot.spotifyApi.getPlaylistTracks(playlistID, {offset: totTracks.length})
+
+                //pass that next batch into the next step of this.reading
+                .then((tracksInfo) => this.gettingTracks(goal, playlistID, totTracks, tracksInfo.body.items))
+
+                //the results of that step will be the final results (recursion go brrr)
+                .then((result) => resolve(result))
+
+                //error handling (sHouLd NeVeR hApPeN)
+                .catch((error) => reject(error));
+            }
+        })
     },
 
     newTheme: function (theme, playlistIDs, message = undefined)
