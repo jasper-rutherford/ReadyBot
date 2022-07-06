@@ -413,21 +413,29 @@ var bot = {
             //convert to a linked list
             tracks.forEach(item =>         
             {
-                //node for the song being read
-                let node = new Node(item.track.name, item.track.uri, null, null, null);
-
-                //if the list hasn't been created, make this node the first and last node
-                if (bot.barrelHead == null)
+                //only support non-local songs
+                if (item.track.uri.indexOf("spotify:local") == -1)
                 {
-                    bot.barrelHead = node;
-                    bot.barrelTail = node;
+                    //node for the song being read
+                    let node = new Node(item.track.name, item.track.uri, null, null, null);
+
+                    //if the list hasn't been created, make this node the first and last node
+                    if (bot.barrelHead == null)
+                    {
+                        bot.barrelHead = node;
+                        bot.barrelTail = node;
+                    }
+                    //otherwise, add this node to the end of the list
+                    else
+                    {
+                        node.prev = bot.barrelTail;     //sets the tail as the node's prev
+                        bot.barrelTail.next = node;     //sets the node as the tail's next
+                        bot.barrelTail = node;          //sets the node as the new tail
+                    }
                 }
-                //otherwise, add this node to the end of the list
                 else
                 {
-                    node.prev = bot.barrelTail;     //sets the tail as the node's prev
-                    bot.barrelTail.next = node;     //sets the node as the tail's next
-                    bot.barrelTail = node;          //sets the node as the new tail
+                    console.log(item.track.uri + " is local and unsupported.");
                 }
             });
 
@@ -439,7 +447,7 @@ var bot = {
         })
         .catch(function (error) 
         {
-            if (error.statusCode === 500)
+            if (error.statusCode === 500 || error.statusCode === 502)
             {
                 console.log("Server error, trying again");
                 bot.readBarrelList();
@@ -453,8 +461,6 @@ var bot = {
     },
     getTracks(playlistID)
     {
-        console.log("reading in playlist", playlistID);
-
         //return a promise
         return new Promise((resolve, reject) =>
         {
@@ -468,7 +474,28 @@ var bot = {
             .then((tracks) => resolve(tracks))
 
             //error handling 
-            .catch((error) => reject(error));
+            .catch(function (error) 
+            {
+                if (error.statusCode === 500 || error.statusCode === 502)
+                {
+                    //report server error
+                    console.log("Server error, trying again");
+                    
+                    //try again
+                    this.getTracks(playlistID)
+
+                    //resolve with results of successful attempt
+                    .then((tracks) => resolve(tracks))
+
+                    //error handling
+                    .catch((error) => console.log("error while retrying this.getTracks\n", error));
+                }
+                else
+                {
+                    console.log('Something went wrong in this.getTracks');
+                    console.log(error);
+                }
+            });
         });
     },
     gettingTracks(goal, playlistID, totTracks = [], newTracks = [])
@@ -499,7 +526,28 @@ var bot = {
                 .then((result) => resolve(result))
 
                 //error handling (sHouLd NeVeR hApPeN)
-                .catch((error) => reject(error));
+                .catch(function (error) 
+                {
+                    if (error.statusCode === 500 || error.statusCode === 502)
+                    {
+                        //report server error
+                        console.log("Server error, trying again");
+
+                        //try again
+                        bot.gettingTracks(goal, playlistID, totTracks, newTracks)
+
+                        //resolve with the result when successful
+                        .then((result) => resolve(result))
+
+                        //error handling
+                        .catch((error) => console.log("error while retrying this.gettingTracks\n", error));
+                    }
+                    else
+                    {
+                        console.log('Something went wrong in this.gettingTracks');
+                        console.log(error);
+                    }
+                });
             }
         })
     },
@@ -881,265 +929,275 @@ var bot = {
         //save the updated list to file
         bot.saveValuesList();
 
-        //reload the playlists
-        console.log("Reloading all playlists");
-        bot.clearPlaylist(bot.playlistIDs[0], true);
-    },
-
-    //id:           the id of the playlist to clear
-    //reloading:    whether or not to load the playlist after it has been cleared
-    clearPlaylist: function (id, reloading) 
-    {
-        console.log("Clearing a chunk from playlist " + id);
-
-        //get the index of the playlist id from the map
-        /* 
-            Q. But Jasper, if you're already storing the ids in an array, wouldn't it make more sense to send in the index and get the id from the array? 
-            Surely then you wouldn't need to create a whole extra map to get the id's index?
-            
-            A. No. I tried that. And it just wouldn't work. getPlaylist would error out every time, even though it would print out the correct id. 
-        */
-        let idIndex = bot.playlistMap.get(id);
-
-        //get the length of the playlist 
-        bot.spotifyApi.getPlaylist(id).then(function (data)
+        //determine how long each playlist should be
+        for (let idIndex = 0; idIndex < this.playlistLengths.length; idIndex++)
         {
-            let length = data.body.tracks.total;
-
-            //if the playlist is not empty
-            if (length != 0)
+            //determine how long the playlist should be
+            let len = 0;
+            if (idIndex == 0)
             {
-                //api limits the limit to 100 tracks
-                bot.spotifyApi.getPlaylistTracks(id, {
-                    limit: 100,
-                    fields: 'items'
-                }).then(function (data)
-                {
-                    let tracks = [];
-
-                    data.body.items.forEach(item =>
-                    {
-                        //convert each track to an object and add it to the list
-                        tracks.push({ uri: item.track.uri });
-                        // console.log(item);
-                    });
-
-                    //delete all the tracks covered by this chunk of the for loop
-                    bot.spotifyApi.removeTracksFromPlaylist(id, tracks).then(function (data)
-                    {
-                        bot.clearPlaylist(id, reloading);
-                    }, function (err)
-                    {
-                        console.log('failed to remove tracks from playlist ' + id);
-                    });
-                }, function (err)
-                {
-                    console.log('failed to get tracks from playlist ' + id);
-                });
+                len = 1;
             }
-            //otherwise if the length == 0
+            else if (idIndex == 1)
+            {
+                len = Math.floor(0.05 * bot.barrelHead.length());
+            }
             else
             {
-                //report that the playlist has been cleared
-                console.log("cleared playlist " + id);
-                //if currently reloading, then load the playlist back in
-                if (reloading)
-                {
-                    console.log("loading the playlist back in");
-                    // console.log("valuehead uri before loading: " + bot.valuesHead.uri);
-                    bot.loadPlaylist(id, reloading, bot.valuesHead, 0);
-                }
+                len = Math.floor(0.25 * (idIndex - 1) * bot.barrelHead.length());
             }
-        }, function (err)
-        {
-            console.log('failed to get the length of playlist ' + id);
-        });
+
+            //update the lengths into the bot
+            bot.playlistLengths[idIndex] = len;
+        }
+
+        //reload the playlists
+        console.log("Reloading all playlists");
+        this.reloadPlaylists();
+        // bot.clearPlaylist(bot.playlistIDs[0], true);
     },
-
-    //id:           id of the playlist to load
-    //reloading:    whether or not to reload the next playlist after this one is loaded
-    //listNode:     add up to 100 songs from the valueList to the playlist starting from this one
-    //added:        the number of songs that have already been added to the playlist
-    loadPlaylist: function (id, reloading, aNode, added)
+    
+    //reload all active playlists
+    reloadPlaylists(playlistIndex = 0)
     {
-        //get the index of the playlist id from the map
-        /* 
-            Q. But Jasper, if you're already storing the ids in an array, wouldn't it make more sense to send in the index and get the id from the array? 
-            Surely then you wouldn't need to create a whole extra map to get the id's index?
-            
-            A. No. I tried that. And it just wouldn't work. getPlaylist would error out every time, even though it would print out the correct id. 
-        */
-        let idIndex = bot.playlistMap.get(id);
+        //if all playlists have been reloaded
+        if (playlistIndex >= bot.playlistIDs.length)
+        {
+            console.log("Reloaded all playlists");
+            console.log("Current theme: " + bot.currentTheme);
+            if (bot.setThemeMsg != null)
+            {
+                bot.setThemeMsg.react('✅')
+                    .catch(error => console.error('One of the emojis failed to react'));
+            }
+            else
+            {
+                bot.helpers('sendballot', bot.client.channels.cache.get(bot.spotifyChannel));
+            }
+        }
 
-        //determine how long the playlist should be
-        let len = 0;
-        if (idIndex == 0)
-        {
-            len = 1;
-        }
-        else if (idIndex == 1)
-        {
-            // console.log("BL: " + bot.barrelLength + " Mult: " + Math.floor(0.05 * bot.barrelLength));
-            len = Math.floor(0.05 * bot.barrelHead.length());
-        }
+        //otherwise
         else
         {
-            len = Math.floor(0.25 * (idIndex - 1) * bot.barrelHead.length());
-        }
+            //the id of the playlist being reloaded this step of the loop
+            let playlistID = bot.playlistIDs[playlistIndex];
 
-        //update the lengths into the bot
-        bot.playlistLengths[idIndex] = len;
-
-        console.log("Adding a chunk to playlist " + id + " [" + len + "]");
-        // console.log("\t\tPlaylist #" + idIndex + " should have a length of [" + len + "]");
-
-        //build the chunk to be sent to the playlist
-        let tracks = [];
-
-        //loop will add songs to the chunk until either the length of the playlist has been reached, or until listNode runs out of songs, or until this chunk reaches 100 songs (api limitation)
-        let newAdded = 0;
-        let valueNode = aNode;
-        while (added + newAdded < len && valueNode != null && newAdded < 100)
-        {
-            // console.log("looping");
-            //add the current song from the valuesList
-            tracks.push(valueNode.uri);
-
-            // console.log("valuenode uri during load: " + valueNode.uri);
-
-            //increment the number of songs added in this chunk
-            newAdded++;
-
-            //advance to the next valueNode
-            valueNode = valueNode.next;
-        }
-
-        //send the chunk to the playlist
-        bot.spotifyApi.addTracksToPlaylist(id, tracks).then(function (data)
-        {
-            //if the length of the playlist has been reached or if listNode has run out of songs, stop loading the playlist
-            if (added + newAdded == len || valueNode == null)
+            console.log("Reading playlist ", playlistIndex);
+            //get the tracks that are currently in the playlist
+            this.getTracks(playlistID)
+            .then((tracks) =>
             {
-                //if reloading, start clearing the next playlist
-                if (reloading)
+                //convert to a list of uris
+                let currentUris = [];
+
+                tracks.forEach(function (item)
                 {
-                    console.log("loaded playlist " + id);
-                    //unless this is the last playlist
-                    if (idIndex != 2)//TODO CHANGE THIS BACK TO 5 OR MAKE A BETTER REAL WORKAROUND
+                    currentUris.push(item.track.uri);
+                })
 
 
+                //get the list of uris that should be in the playlist according to the valueslist
+                let correctUris = [];
+        
+                //loop through every song that should be in this playlist
+                let someNode = bot.valuesHead;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    //^^^^^^^
+                for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
+                {
+                    if (someNode != null)
                     {
-                        bot.clearPlaylist(bot.playlistIDs[idIndex + 1], reloading);
+                        //add each song to the list
+                        correctUris.push(someNode.uri);
+                        someNode = someNode.next;
                     }
                     else
                     {
-                        console.log("reloaded all playlists");
-                        console.log("Current theme: " + bot.currentTheme);
-                        if (bot.setThemeMsg != null)
-                        {
-                            bot.setThemeMsg.react('✅')
-                                .catch(error => console.error('One of the emojis failed to react'));
-                        }
-                        else
-                        {
-                            bot.helpers('sendballot', bot.client.channels.cache.get(bot.spotifyChannel));
-                        }
+                        console.log("null, songIndex: " + songIndex);
                     }
                 }
-            }
-            //otherwise, load the next chunk
-            else
+
+                //get a list of the adjustments that need to be made to the playlist
+                let adjustments = this.compareUriLists(playlistID, currentUris, correctUris);
+
+                //make those adjustments
+                return this.adjust(adjustments);
+            })
+
+            //after adjustments have been made, reload the next playlist
+            .then(() => this.reloadPlaylists(playlistIndex + 1))
+
+            //error handling
+            .catch(function (error) 
             {
-                bot.loadPlaylist(id, reloading, valueNode, added + newAdded);
-            }
-        }, function (err)
-        {
-            console.log('\t\t\tFailed to add chunk to playlist', id);
-        });
+                if (error.statusCode === 500 || error.statusCode === 502)
+                {
+                    console.log("Server error, trying again");
+                    bot.reloadPlaylists(playlistIndex);
+                }
+                else
+                {
+                    console.log('Error while reloading playlists');
+                    console.log(error);
+                }
+            });
+        }
     },
 
     adjust: function (adjustments)
     {
-        //only adjust things if there are things to adjust
-        if (adjustments.length != 0)
+        // console.log("this.adjustments received:\n", adjustments);
+        return new Promise((resolve, reject) =>
         {
-            // console.log(adjustments.length + "(adjusts)");
-            //adjust the first thing in the list (this also trims the first thing out of the playlist, how handy)
-            let adjustment = adjustments.shift();
-
-            //clear the given song from the given playlist
-            if (adjustment.adjustment === "clear")
+            //only adjust things if there are things to adjust
+            if (adjustments.length > 0)
             {
-                bot.spotifyApi.removeTracksFromPlaylist(adjustment.id, [{ uri: adjustment.uri }]).then(function (data)
+                //get a bunch of uris to send out to the api in one batch
+                
+                //a list for all the uris in the batch
+                let uris = [];
+
+                //a list of all adjustments in the batch (used for retrying on server errors)
+                let batchAdjustments = [];
+
+                //grab an adjustment from the list (all adjustments in this batch will be similar to this one)
+                let template = adjustments[0];
+
+                //remove that adjustment from the list
+                adjustments.splice(0, 1);
+
+                //add it to relevant lists
+                uris.push(template.uri);
+                batchAdjustments.push(template);
+
+                //loop through all other adjustments
+                for (let i = adjustments.length - 1; i > 0 && uris.length < 100; i--)
                 {
-                    //after this adjustment is complete, perform the rest of the adjustments
-                    bot.adjust(adjustments);
-                }, function (err)
+                    //the adjustment at this step
+                    let temp = adjustments[i];
+
+                    // console.log("adjustments[", i, "]:\n",temp);
+
+                    //if the adjustment at this step matches the template
+                    if (temp.adjustment === template.adjustment && temp.id === template.id)
+                    {
+                        //remove it from the list of adjustments
+                        adjustments.splice(i, 1);
+
+                        //dont support songs that are local
+                        if (temp.uri.indexOf("spotify:local") == -1)
+                        {
+                            //add its uri to the relevant lists
+                            uris.push(temp.uri);
+                            batchAdjustments.push(temp);
+                        }
+                        else
+                        {
+                            console.log(temp.uri + " is local and unsupported.");
+                        }
+                    }
+                }
+
+                //adjust the playlist via the batch
+                
+                //if the adjustment is a clear
+                if (template.adjustment === "clear")
                 {
-                    console.log('failed to clear ' + adjustment.uri + ' from playlist ' + adjustment.id);
-                });
+                    //convert the uris to a list of objects (api is stupid)
+                    let objectUris = [];
+
+                    uris.forEach(uri =>
+                    {
+                        objectUris.push({uri: uri});
+                    });
+
+                    console.log("removing " + objectUris.length + " songs from playlist " + template.id);
+
+                    //remove the provided uris from the template's playlist
+                    bot.spotifyApi.removeTracksFromPlaylist(template.id, objectUris)
+                    
+                    //on success, adjust the remaining adjustments
+                    .then(() => this.adjust(adjustments))
+
+                    //after all other adjustments have been adjusted, resolve 
+                    .then((() => resolve()))
+
+                    //error handling
+                    .catch(function (error) 
+                    {
+                        //if it is a server error we can just retry
+                        if (error.statusCode === 500 || error.statusCode === 502)
+                        {
+                            //report server error to console
+                            console.log("Server error, trying again");
+
+                            //add batch adjustments back into the list of adjustments
+                            Array.prototype.push.apply(adjustments, batchAdjustments);
+
+                            //retry
+                            bot.adjust(adjustments)
+
+                            //resolve
+                            .then(() => resolve())
+
+                            //report error (is this dead code?)
+                            .catch((error) => console.log("error while retrying a clear in this.adjust", error));
+                        }
+                        else
+                        {
+                            console.log('error while clearing in this.adjust');
+                            console.log(error);
+                        }
+                    });
+                }
+                //if this adjustment is an addition
+                if (template.adjustment === "add")
+                {
+                    console.log("adding " + uris.length + " songs to playlist " + template.id);
+
+                    //remove the provided uris from the template's playlist
+                    bot.spotifyApi.addTracksToPlaylist(template.id, uris)
+                    
+                    //on success, adjust the remaining adjustments
+                    .then(() => this.adjust(adjustments))
+
+                    //after all other adjustments have been adjusted, resolve 
+                    .then((() => resolve()))
+
+                    //error handling
+                    .catch(function (error) 
+                    {
+                        //if it is a server error we can just retry
+                        if (error.statusCode === 500 || error.statusCode === 502)
+                        {
+                            //report server error to console
+                            console.log("Server error, trying again");
+
+                            //add batch adjustments back into the list of adjustments
+                            Array.prototype.push.apply(adjustments, batchAdjustments);
+
+                            //retry
+                            bot.adjust(adjustments)
+
+                            //resolve
+                            .then(() => resolve())
+
+                            //report error (is this dead code?)
+                            .catch((error) => console.log("error while retrying an add in this.adjust", error));
+                        }
+                        else
+                        {
+                            console.log('error while adding in this.adjust');
+                            console.log(error);
+                        }
+                    });
+                }
             }
-            //add the given song to the given playlist
             else
             {
-                bot.spotifyApi.addTracksToPlaylist(adjustment.id, [adjustment.uri]).then(function (data)
-                {
-                    //after this adjustment is complete, perform the rest of the adjustments
-                    bot.adjust(adjustments);
-                }, function (err)
-                {
-                    console.log('failed to add ' + adjustment.uri + ' to playlist ' + adjustment.id);
-                });
+                console.log("All adjustments adjusted.")
+                resolve();
             }
-        }
+        });
     },
 
     testStuff: function ()
@@ -1157,12 +1215,70 @@ var bot = {
         // console.log(node5.index());
     },
 
+    //gets a list of all the adjustments that need to be made to the old list to make it match the new list
+    compareUriLists(playlistID, oldUriList, newUriList)
+    {
+        let adjustments = [];
+
+        //for all uri's in the old list
+        for (let oldIndex in oldUriList) 
+        {
+            //get each uri
+            let oldUri = oldUriList[oldIndex];
+
+            //if the new list doesn't contain that uri
+            if (!newUriList.includes(oldUri))
+            {
+                //add an adjustment to remove the song with that uri from the playlist
+                adjustments.push(
+                    {
+                        adjustment: "clear",
+                        id: playlistID,
+                        uri: oldUri
+                    });
+            }
+        }
+
+        let clears = adjustments.length;
+
+        if (clears > 0)
+        {
+            console.log("identified " + clears + " songs to be cleared from playlist " + playlistID);
+        }
+
+        //for all uri's in the new list
+        for (let newIndex in newUriList) 
+        {
+            //get each uri
+            let newUri = newUriList[newIndex];
+
+            //if the old list doesn't contain that uri
+            if (!oldUriList.includes(newUri))
+            {
+                //add an adjustment to add the song with that uri to the playlist
+                adjustments.push(
+                    {
+                        adjustment: "add",
+                        id: playlistID,
+                        uri: newUri
+                    });
+            }
+        }
+
+        let adds = adjustments.length - clears;
+
+        if (adds > 0)
+        {
+            console.log("identified " + adds + " songs to be added to playlist " + playlistID);
+        }
+
+        return adjustments;
+    },
+
     //aNode: the node whose value is to be changed
     //diff: how much to change the value by
     changeValue: function (aNode, diff)
     {
-        // console.log("changing value, length is: " + bot.valuesHead.length());
-
         //Step 1: save what songs are currently in which playlists
         //list of all the songs in each playlist (2d array)
         let oldUriLists = [];
@@ -1174,14 +1290,14 @@ var bot = {
             let uriList = [];
 
             //loop through every song in this playlist
-            let head = bot.valuesHead;
+            let someNode = bot.valuesHead;
             for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
             {
-                if (head != null)
+                if (someNode != null)
                 {
                     //add each song to the list
-                    uriList.push(head.uri);
-                    head = head.next;
+                    uriList.push(someNode.uri);
+                    someNode = someNode.next;
                 }
                 else
                 {
@@ -1236,13 +1352,7 @@ var bot = {
             newUriLists.push(uriList);
         }
 
-        console.log("old:");
-        console.log(oldUriLists[1]);
-        console.log("new:");
-        console.log(newUriLists[1]);
-
         //Step 4: check for differences between new order of songs and old order of songs and build the list of adjustments (figure out which songs have changed playlists)
-        // console.log("step 2 complete");
 
         //initialize the list of adjustments
         let adjustments = [];
@@ -1250,41 +1360,17 @@ var bot = {
         //(only check the first 5 playlists because the last playlist will always contain all the songs by definition)
         for (let playlistIndex = 0; playlistIndex < 5; playlistIndex++)
         {
-            for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++) 
-            {
-                //if the new urilist no longer contains a song from the old urilist 
-                if (!newUriLists[playlistIndex].includes(oldUriLists[playlistIndex][songIndex]))
-                {
-                    //add an adjustment to remove the song from the playlist
-                    adjustments.push(
-                        {
-                            adjustment: "clear",
-                            id: bot.playlistIDs[playlistIndex],
-                            uri: oldUriLists[playlistIndex][songIndex]
-                        });
-                    console.log("identified " + bot.valuesHead.get(songIndex).name + " (" + oldUriLists[playlistIndex][songIndex] + ") for clearing from playlist " + playlistIndex);
-                }
+            //get the adjustments for this playlist
+            let newAdjustments = this.compareUriLists(bot.playlistIDs[playlistIndex], oldUriLists[playlistIndex], newUriLists[playlistIndex]);
 
-                //if a song in the new urilist is not in the old urilist
-                if (!oldUriLists[playlistIndex].includes(newUriLists[playlistIndex][songIndex]))
-                {
-                    //add an adjustment to add the song to the playlist
-                    adjustments.push(
-                        {
-                            adjustment: "add",
-                            id: bot.playlistIDs[playlistIndex],
-                            uri: newUriLists[playlistIndex][songIndex]
-                        });
-                    console.log("identified " + bot.valuesHead.get(songIndex).name + " (" + newUriLists[playlistIndex][songIndex] + ") for adding to playlist " + playlistIndex);
-                }
-            }
+            // console.log(newAdjustments);
+            //add those new adjustments onto the total list of adjustments
+            Array.prototype.push.apply(adjustments, newAdjustments);
+            // console.log(adjustments);
         }
-        // console.log("step 3 complete");
 
         //Step 5: adjust playlists accordingly
         bot.adjust(adjustments);
-        // console.log("changed value, length is: " + bot.valuesHead.length());
-
     },
 
     //initializes the voteScores to 0
