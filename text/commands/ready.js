@@ -32,13 +32,13 @@ module.exports = {
                 {
                     message.member.roles.add(bot.readyRole);
 
-                    //if they said they are readyat, erase that (because they clearly are ready now)
-                    var sooner = bot.sooners.get(message.member.id)
-                    if (sooner != undefined && sooner.type === 'at')
-                    {
-                        bot.sooners.delete(sooner.id);
-                        bot.helpers('saveRAL', 0);
-                    }
+                    // //if they said they are readyat, erase that (because they clearly are ready now)
+                    // var sooner = bot.sooners.get(message.member.id)
+                    // if (sooner != undefined && sooner.type === 'at')
+                    // {
+                    //     bot.sooners.delete(sooner.id);
+                    //     bot.helpers('saveRAL', 0);
+                    // }
 
                     message.react('👍');
 

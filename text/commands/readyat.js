@@ -9,7 +9,7 @@ module.exports = {
     param: 'time',
     secret: false,
 	description: "Declares yourself as ready, but in the future",
-	execute
+	// execute
 }
 
 function execute(message, args, bot) {

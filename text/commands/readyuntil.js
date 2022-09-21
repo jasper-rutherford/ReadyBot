@@ -8,7 +8,7 @@ module.exports = {
     param: 'time',
     secret: false,
 	description: "Declares yourself as ready until a certain time",
-	execute
+	// execute
 }
 
 function execute(message, args, bot) {

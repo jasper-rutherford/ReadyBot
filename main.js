@@ -1557,6 +1557,7 @@ client.on('message', message =>
             //check if the command is in the list
             if (client.things.get('textcommands').get(command) != undefined)
             {
+                console.log("running " + command);
                 //run the command
                 client.things.get('textcommands').get(command).execute(message, args, bot);
             }
@@ -1628,6 +1629,7 @@ client.on('messageReactionAdd', (reaction, user) =>
             // Get Information About The User's Current Playback State
             bot.spotifyApi.getMyCurrentPlaybackState().then(function (data)
             {
+                console.log(data);
                 // Output items
                 if (data.body && data.body.is_playing)
                 {
