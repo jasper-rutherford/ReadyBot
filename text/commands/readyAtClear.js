@@ -6,12 +6,12 @@ module.exports = {
     {
         if (message.member.hasPermission('MANAGE_ROLES'))
         {
-            // bot.sooners.forEach(sooner =>
-            // {
-            //     bot.sooners.delete(sooner.id);
-            // });
+            bot.sooners.forEach(sooner =>
+            {
+                bot.sooners.delete(sooner.id);
+            });
 
-            // bot.helpers('saveRAL', 0);
+            bot.helpers('saveRAL', 0);
 
             message.channel.send('Nobody is ready soon!');
         }
