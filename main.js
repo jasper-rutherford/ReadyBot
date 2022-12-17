@@ -1194,7 +1194,7 @@ var bot = {
             }
             else
             {
-                console.log("All adjustments adjusted.")
+                console.log("All adjustments adjusted.\n")
                 resolve();
             }
         });
