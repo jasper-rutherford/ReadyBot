@@ -4,250 +4,11 @@ const client = new Discord.Client();
 const fs = require('fs');
 const express = require('express');
 
-
 const { tokenDiscord, testTokenDiscord, clientId, clientSecret } = require('./data/config.json');
 const { resolve } = require('path');
 
-
 const app = express();
 
-//LISTNODE DEFINITION
-class Node
-{
-    constructor(name, uri, value, prev, next)
-    {
-        this.name = name;
-        this.uri = uri;
-        this.value = value;
-        this.prev = prev;
-        this.next = next;
-
-        this.list = function ()
-        {
-            let num = 1;
-            this.listing(num);
-        };
-
-        this.listing = function (num)
-        {
-            if (this.next != null)
-            {
-                this.next.listing(num + 1); //list the next node
-            }
-        };
-
-        //function that checks if this node or any of its nexts have the given id
-        this.contains = function (uri)
-        {
-            //if this node has the id return true
-            if (this.uri == uri)
-            {
-                return true;
-            }
-
-            //otherwise if there are no more nexts return false
-            else if (this.next == null)
-            {
-                return false;
-            }
-
-            //otherwise call the function on the next node
-            else
-            {
-                return this.next.contains(uri);
-            }
-        };
-
-        //recursively finds the length
-        this.length = function ()
-        {
-            return this.lengthing(1);
-        };
-
-        //helps recursively find the length
-        this.lengthing = function (len)
-        {
-            //if there is a next node
-            if (this.next != null)
-            {
-                //return the current length + the length of the next node
-                return this.next.lengthing(len + 1);
-            }
-            //if there is no next node 
-            else
-            {
-                //return the current length
-                return len;
-            }
-        };
-
-        //moves this node up the valueList according to its value
-        this.up = function (aPrev)
-        {
-            //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
-            if (aPrev == null || aPrev.value >= this.value)
-            {
-                //disconnect the node from the list
-                if (this.prev != null)
-                {
-                    this.prev.next = this.next;
-
-                    //special handling if this is the valueTail
-                    if (this == bot.valuesTail)
-                    {
-                        bot.valuesTail = this.prev;
-                    }
-                }
-                if (this.next != null)
-                {
-                    this.next.prev = this.prev;
-
-                    //special handling if this is the valueHead
-                    if (this == bot.valuesHead)
-                    {
-                        bot.valuesHead = this.next;
-                    }
-                }
-
-                //reconnect it in the right spot
-
-                //special case for if being inserted as the new head
-                if (aPrev == null)
-                {
-                    this.prev = null;
-                    this.next = bot.valuesHead;
-                    bot.valuesHead.prev = this;
-                    bot.valuesHead = this;
-                }
-                //special case for if being inserted as the new tail
-                else if (aPrev == bot.valuesTail)
-                {
-                    this.prev = bot.valuesTail;
-                    this.next = null;
-                    bot.valuesTail.next = this;
-                    bot.valuesTail = this;
-                }
-                //standard case
-                else
-                {
-                    this.next = aPrev.next;
-                    this.prev = aPrev;
-                    this.next.prev = this;
-                    this.prev.next = this;
-                }
-                //save new configuration/values
-                bot.saveSpotify();
-            }
-            //if a spot hasn't been found yet then keep searching
-            else
-            {
-                this.up(aPrev.prev);
-            }
-        };
-
-        //moves this node down the valueList according to its value
-        this.down = function (aNext)
-        {
-            //a spot has been found when the top of the list is reached or a song is found that has a value equal or greater than the searching node's value
-            if (aNext == null || aNext.value <= this.value)
-            {
-                //disconnect the node from the list
-                if (this.prev != null)
-                {
-                    this.prev.next = this.next;
-
-                    //special handling if this is the valueTail
-                    if (this == bot.valuesTail)
-                    {
-                        bot.valuesTail = this.prev;
-                    }
-                }
-                if (this.next != null)
-                {
-                    this.next.prev = this.prev;
-
-                    //special handling if this is the valueHead
-                    if (this == bot.valuesHead)
-                    {
-                        bot.valuesHead = this.next;
-                    }
-                }
-
-
-                //reconnect it in the right spot
-
-                //special case for if being inserted as the new head
-                if (aNext == bot.valuesHead)
-                {
-                    this.prev = null;
-                    this.next = bot.valuesHead;
-                    bot.valuesHead.prev = this;
-                    bot.valuesHead = this;
-                }
-                //special case for if being inserted as the new tail
-                else if (aNext == null)
-                {
-                    this.prev = bot.valuesTail;
-                    this.next = null;
-                    bot.valuesTail.next = this;
-                    bot.valuesTail = this;
-                }
-                //standard case
-                else
-                {
-                    this.next = aNext;
-                    this.prev = aNext.prev;
-                    this.next.prev = this;
-                    this.prev.next = this;
-                }
-
-                //save new configuration
-                bot.saveSpotify();
-            }
-            else
-            {
-                this.down(aNext.next);
-            }
-        };
-
-        //returns the index of the node in its list
-        this.index = function ()
-        {
-            if (this.prev == null)
-            {
-                return 0;
-            }
-            else
-            {
-                return 1 + this.prev.index();
-            }
-        };
-
-        //returns the node at the requested index in the list, starting at this node. returns null if index is too big or too small.
-        this.get = function (index)
-        {
-            if (index < 0)
-            {
-                return null;
-            }
-            else if (index === 0)
-            {
-                return this;
-            }
-            else if (index > 0)
-            {
-                if (this.next === null)
-                {
-                    return null;
-                }
-                else
-                {
-                    return this.next.get(index - 1);
-                }
-            }
-        }
-    }
-}
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
     testbuild: true,
@@ -273,192 +34,99 @@ var bot = {
     spotifyUserID: '446i69szgjkow87ew9yjbbhnn',             //my user id
 
     barrelID: "4jCZqEM3AdWj3uSpjuY9IK",  // "5GFPI2Hii5HfpUUnStQN2r", //             //bottom of the barrel
-    barrelHead: null,                                       //stores bottom of the barrel as a linked list
-    barrelTail: null,                                       //head is first node, tail is last
-    // barrelLength: 0,
 
-    valuesHead: null,                                       //stores the song values list
-    valuesTail: null,                                       //head is first, tail is last
-    valuesMap: new Discord.Collection,                      //maps the song id's to their nodes in the list
-
-    themes: [],                                             //a list of all the themes
-    currentTheme: '',                                       //the current theme
-
-    playlistIDs: [null, null, null, null, null, null],      //list of playlist ID's for the theme
-    playlistMap: new Discord.Collection,                    //maps each playlist id to its index in playlistIDs
-    playlistLengths: [-1, -1, -1, -1, -1, -1],              //the length of each playlist
-
-    songMessage: null,                                      //the message to check for reactions on for song manipulation
-    testVal: 0,
-
-    setThemeMsg: null,                                      //the ballot for spotify votes
-    spotifyChannel: '904467973434134589',                   //default location to send ballot on startup
-
-    mode: "normal",
-    voteScores: new Discord.Collection,                     //maps the song uris to their scores 
-    voteNames: [],                                          //list of all voteNames (like themes, but for vote mode)
-    voteName: null,                                         //the current voteName
-    voteMin: null,                                          //the minimum allowed score a uri can have
-    voteMax: null,                                          //the maximum allowed score a uri can have
-    fromList: null,                                         //where songs are drawn from in vote mode
-    badList: null,                                          //where songs with scores below the minimum are sent
-    goodList: null,                                         //where songs with scores above the maximum are sent
-
-    // benID: '111579235059060736',
-    // mattID: '321665327845081089',
-    // readyRoleID: '754789734563315834',
-    // readyRole: undefined,
-    // imposterRoleID: '752728482433335357',
-    // imposterRole: undefined,
-    // gulagRoleID: '755905663565299852',
-    // gulagRole: undefined,
-    // memberRoleID: '752728384408256553',
-    // memberRole: undefined,
-    // sooners: new Discord.Collection,
-    // numReadySoon: 0,
-    // gulagYesVotes: 0,
-    // gulagNoVotes: 0,
-    // gulagVoters: [],
-    // gulaguy: undefined,
-    // gulaguyID: undefined,
-    // voteActive: false,
-    // votesNeeded: 3,
-    // voteMessage: undefined,
-    // proxyChat: false,
-    // proxyChannelID: '752727454358962247',
-    // proxyChannel: undefined,
-    // recentProxyChannel: undefined,
-    // readyBotChannelID: '759869338584612874',
-    // readyBotChannel: undefined,
-    // startHour: undefined,
-    // parties: new Discord.Collection,
-
+    //NEW 12/17 - keep
+    barrelList: [],                                         // json friendly list of songs in the barrel 
+    songlist: [],                                           // json friendly list of songs in the theme
+    playlistID: null,                                       // id of the current theme's playlist
+    currentTheme: '',                                       // the current theme
+    themes: [],                                             // a list of all the themes
+    ballotMessage: null,                                    // the message from the bot which the user reacts to 
+    commandMessage: null,                                   // the message from the user which requested a command
+    spotifyChannel: '904467973434134589',                   // default location to send ballot 
+    defaultSongScore: 2,
 
     initialUpdates: function ()
     {
-        // console.log(spotifyApi.getTrack())
-        // console.log(spotifyApi.getTrack());
-        // const path = './data/songGroup.json'
-
-        // //file exists
-        // if (fs.existsSync(path))
-        // {
-        //     //reads in the name of the folder that contains the song group
-        //     var data = JSON.parse(fs.readFileSync(fileName));
-        // }
-        // this.guild = client.guilds.cache.get(this.guildID);
-        // this.readyRole = this.guild.roles.cache.get(this.readyRoleID);
-        // this.imposterRole = this.guild.roles.cache.get(this.imposterRoleID);
-        // this.gulagRole = this.guild.roles.cache.get(this.gulagRoleID);
-        // this.memberRole = this.guild.roles.cache.get(this.memberRoleID);
-        // this.proxyChannel = client.channels.cache.get(bot.proxyChannelID);
-
-        // bot.helpers('updateNumReady', { numReady: bot.helpers('numReady', 0) });
-
-        // this.readyBotChannel = client.channels.cache.get(bot.readyBotChannelID);
-        // this.startHour = new Date().getHours();
-
-        // this.helpers('midnightReset', 0);
-        // this.helpers('scanRAL', 0);
-        // this.helpers('scanParties', 0);
-    },
-
-    helpers: function (name, params)
-    {
-        //check if the helper exists
-        if (client.things.get('helpers').get(name) != undefined)
-        {
-            //run the helper
-            var out = client.things.get('helpers').get(name).execute(params, this);
-
-            if (out != undefined)
-            {
-                return out;
-            }
-        }
+        // this shit runs right after the bot starts up, but not necessarily before or after teh spotify stuff starts happening
     },
 
     loadSpot: async function ()
     {
         bot.testStuff();
-        //get wrapper from file
-        var fileName = './data/spotify/themes.json';
-        var wrapper = JSON.parse(fs.readFileSync(fileName));
 
-        //read in current theme, themes, and voteNames
-        bot.currentTheme = wrapper.currentTheme;
-        bot.themes = wrapper.themes;
-        bot.voteNames = wrapper.voteNames;
+        // read the barrel from spotify
+        bot.readBarrelList()
+        .then(() => 
+        {
+            //read in current theme/available themes
+            let wrapper = JSON.parse(fs.readFileSync("./data/spotify/themes.json"));
+            bot.currentTheme = wrapper.currentTheme
+            bot.themes = wrapper.themes
 
-        //set the theme to the current theme (aka what the theme was last time the bot saved)
-        //setTheme automatically calls the next step
-
-        //UNCOMMENT THIS TO MAKE THE THEME STUFF HAPPEN
-        bot.setTheme(bot.currentTheme);
+            //set theme to most recent theme
+            bot.setTheme(bot.currentTheme);
+        })
     },
 
     readBarrelList: function ()
     {
-        //update console
-        console.log("Reading barrel");
-
-        //reset the head/tail
-        bot.barrelHead = null;
-        bot.barrelTail = null;
-
-        // Get the tracks from the barrel
-        this.getTracks(bot.barrelID)
-        .then(function (tracks)
+        //promise time
+        return new Promise((resolve, reject) =>
         {
-            //convert to a linked list
-            tracks.forEach(item =>         
-            {
-                //only support non-local songs
-                if (item.track.uri.indexOf("spotify:local") == -1)
-                {
-                    //node for the song being read
-                    let node = new Node(item.track.name, item.track.uri, null, null, null);
+            //update console
+            console.log("Reading barrel");
 
-                    //if the list hasn't been created, make this node the first and last node
-                    if (bot.barrelHead == null)
+            // Get the tracks from the barrel
+            this.getTracks(bot.barrelID)
+                .then(function (tracks)
+                {
+                    //convert to json friendly list of songs
+                    tracks.forEach(item =>         
                     {
-                        bot.barrelHead = node;
-                        bot.barrelTail = node;
+                        //only support non-local songs
+                        if (item.track.uri.indexOf("spotify:local") == -1)
+                        {
+                            //json representation of the song
+                            let song =
+                            {
+                                name: item.track.name,
+                                uri: item.track.uri,
+                                score: -1
+                            }
+
+                            //push the song onto the barrel list
+                            bot.barrelList.push(song);
+                        }
+                        else
+                        {
+                            console.log(item.track.uri + " is local and unsupported.");
+                        }
+                    });
+
+                    //send an update to the console
+                    console.log("Barrel has been read");
+
+                    //barrel has been read, so resolve
+                    resolve();
+                })
+                .catch(function (error) 
+                {
+                    if (error.statusCode === 500 || error.statusCode === 502)
+                    {
+                        console.log("Server error while reading the barrel, trying again");
+                        bot.readBarrelList()
+                            .then(() => resolve())
                     }
-                    //otherwise, add this node to the end of the list
                     else
                     {
-                        node.prev = bot.barrelTail;     //sets the tail as the node's prev
-                        bot.barrelTail.next = node;     //sets the node as the tail's next
-                        bot.barrelTail = node;          //sets the node as the new tail
+                        console.log('Something went wrong while reading the barrel! 111');
+                        console.log(error);
                     }
-                }
-                else
-                {
-                    console.log(item.track.uri + " is local and unsupported.");
-                }
-            });
-
-            //send an update to the console
-            console.log("Barrel has been read");
-
-            //Try to sync the length of the list to the length of the barrel
-            bot.syncLengths();
+                });
         })
-        .catch(function (error) 
-        {
-            if (error.statusCode === 500 || error.statusCode === 502)
-            {
-                console.log("Server error, trying again");
-                bot.readBarrelList();
-            }
-            else
-            {
-                console.log('Something went wrong! 111');
-                console.log(error);
-            }
-        });
     },
+
     getTracks(playlistID)
     {
         //return a promise
@@ -467,37 +135,38 @@ var bot = {
             //read info from the playlist 
             bot.spotifyApi.getPlaylist(playlistID)
 
-            //send the length of the playlist into this.reading so that reading knows how much to scan
-            .then((playlistInfo) => this.gettingTracks(playlistInfo.body.tracks.total, playlistID))
-            
-            //resolve the tracks back out to the promise
-            .then((tracks) => resolve(tracks))
+                //send the length of the playlist into this.reading so that reading knows how much to scan
+                .then((playlistInfo) => this.gettingTracks(playlistInfo.body.tracks.total, playlistID))
 
-            //error handling 
-            .catch(function (error) 
-            {
-                if (error.statusCode === 500 || error.statusCode === 502)
+                //resolve the tracks back out to the promise
+                .then((tracks) => resolve(tracks))
+
+                //error handling 
+                .catch(function (error) 
                 {
-                    //report server error
-                    console.log("Server error, trying again");
-                    
-                    //try again
-                    this.getTracks(playlistID)
+                    if (error.statusCode === 500 || error.statusCode === 502)
+                    {
+                        //report server error
+                        console.log("Server error, trying again");
 
-                    //resolve with results of successful attempt
-                    .then((tracks) => resolve(tracks))
+                        //try again
+                        this.getTracks(playlistID)
 
-                    //error handling
-                    .catch((error) => console.log("error while retrying this.getTracks\n", error));
-                }
-                else
-                {
-                    console.log('Something went wrong in this.getTracks');
-                    console.log(error);
-                }
-            });
+                            //resolve with results of successful attempt
+                            .then((tracks) => resolve(tracks))
+
+                            //error handling
+                            .catch((error) => console.log("error while retrying this.getTracks\n", error));
+                    }
+                    else
+                    {
+                        console.log('Something went wrong in this.getTracks');
+                        console.log(error);
+                    }
+                });
         });
     },
+
     gettingTracks(goal, playlistID, totTracks = [], newTracks = [])
     {
         //add the next batch of tracks onto the total list of tracks
@@ -517,280 +186,191 @@ var bot = {
             else
             {
                 //get the next batch of tracks
-                bot.spotifyApi.getPlaylistTracks(playlistID, {offset: totTracks.length})
+                bot.spotifyApi.getPlaylistTracks(playlistID, { offset: totTracks.length })
 
-                //pass that next batch into the next step of this.reading
-                .then((tracksInfo) => this.gettingTracks(goal, playlistID, totTracks, tracksInfo.body.items))
+                    //pass that next batch into the next step of this.reading
+                    .then((tracksInfo) => this.gettingTracks(goal, playlistID, totTracks, tracksInfo.body.items))
 
-                //the results of that step will be the final results (recursion go brrr)
-                .then((result) => resolve(result))
+                    //the results of that step will be the final results (recursion go brrr)
+                    .then((result) => resolve(result))
 
-                //error handling (sHouLd NeVeR hApPeN)
-                .catch(function (error) 
-                {
-                    if (error.statusCode === 500 || error.statusCode === 502)
+                    //error handling (sHouLd NeVeR hApPeN)
+                    .catch(function (error) 
                     {
-                        //report server error
-                        console.log("Server error, trying again");
+                        if (error.statusCode === 500 || error.statusCode === 502)
+                        {
+                            //report server error
+                            console.log("Server error, trying again");
 
-                        //try again
-                        bot.gettingTracks(goal, playlistID, totTracks, newTracks)
+                            //try again
+                            bot.gettingTracks(goal, playlistID, totTracks, newTracks)
 
-                        //resolve with the result when successful
-                        .then((result) => resolve(result))
+                                //resolve with the result when successful
+                                .then((result) => resolve(result))
 
-                        //error handling
-                        .catch((error) => console.log("error while retrying this.gettingTracks\n", error));
-                    }
-                    else
-                    {
-                        console.log('Something went wrong in this.gettingTracks');
-                        console.log(error);
-                    }
-                });
+                                //error handling
+                                .catch((error) => console.log("error while retrying this.gettingTracks\n", error));
+                        }
+                        else
+                        {
+                            console.log('Something went wrong in this.gettingTracks');
+                            console.log(error);
+                        }
+                    });
             }
         })
     },
 
-    newTheme: function (theme, playlistIDs, message = undefined)
+    addTheme(themeName)
     {
-        console.log("Trying to make a new theme called \"" + theme + "\"");
+        bot.themes.push(themeName);
+        bot.saveThemes();
+    },
+
+    saveThemes()
+    {
+        //what to save
+        var wrapper =
+        {
+            currentTheme: bot.currentTheme,
+            themes: bot.themes
+        }
+
+        //where to save to
+        var fileName = './data/spotify/themes.json';
+
+        //saves the thing to the file
+        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
+        {
+            if (e) throw e;
+        });
+    },
+
+    saveTheme(themeName = bot.currentTheme, playlistID = bot.playlistID, songList = bot.songlist)
+    {
+        //what to save
+        var wrapper =
+        {
+            playlistID: playlistID,
+            songs: songList
+        }
+
+        // for (let i = 0; i < songList; i++)
+        // {
+        //     listSong = songList[i];
+
+        //     let song = 
+        //     {
+        //         name: listSong.name, 
+        //         uri: listSong.uri,
+        //         score: listSong.score
+        //     }
+
+        //     wrapper.songs.push(song)
+        // }
+
+        //where to save to
+        var fileName = './data/spotify/themes/' + themeName + '.json';
+
+        //saves the thing to the file
+        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
+        {
+            if (e) throw e;
+        });
+    },
+
+    createTheme: function (themeName, message)
+    {
+        console.log('Trying to create a theme called "' + themeName + '"');
 
         //if theme already exists
-        if (bot.themes.indexOf(theme) != -1)
+        if (bot.themes.indexOf(themeName) != -1)
         {
-            console.log("Tried to add a theme that already exists.");
+            console.log("Tried to create a theme that already exists.");
         }
         //if theme does not exist
         else
         {
             //add theme to list of themes
-            bot.themes.push(theme);
+            bot.addTheme(themeName); 
 
-            //clear the old map
-            this.valuesMap.clear();
-
-            //build the new list, each song defaults to a value of 0
-            bot.buildNewList();
-
-            //set the new theme
-            bot.currentTheme = theme;
-
-            //set the new playlist IDs
-            for (let lcv = 0; lcv < 6; lcv++)
+            //build the new list, each song defaults to a value of bot.defaultSongScore
+            let newList = bot.buildNewList();
+            
+            //create a playlist                             probably messier than it could be :/
+            bot.createPlaylist(themeName)
+            .then ((playlistID, playlistURL) =>
             {
-                this.playlistIDs[lcv] = playlistIDs[lcv];
-            }
+                //save the created theme to file
+                bot.saveTheme(themeName, playlistID, newList)
 
-            //save all the new stuff to files
-            bot.saveSpotify();
-        }
+                //add all songs to the playlist
+                bot.addSongsToPlaylist(playlistID, newList)
 
-        console.log("Made a new theme");
-
-        if (message !== undefined) 
-        {
-            message.react('⌚')
-                .catch(error => console.error('One of the emojis failed to react'));
-            message.react('✅')
-                .catch(error => console.error('One of the emojis failed to react'));
+                //send link to playlist
+                .then(() => message.channel.send("Here's " + themeName + ":\n" + playlistURL))
+            });
         }
     },
 
-    buildNewList: function ()
+    createPlaylist: function (themeName)
     {
-        if (this.barrelHead == null)
+        return new Promise((resolve, reject) => 
         {
-            console.log("Tried to make a new list, but barrelHead was null");
-        }
-        else
-        {
-            //clear the list from what was there
-            bot.valuesHead = null;
-            bot.valuesTail = null;
+            //create the playlist
+            bot.spotifyApi.createPlaylist(bot.userID, themeName, { public : true })
 
-            //loop through the barrelList
-            let barrelNode = bot.barrelHead;
+            //resolve with the playlistinfo
+            .then((playlistInfo) => resolve(playlistInfo.playlistID, playlistInfo.playlistURL)) //TODO this is certainly wrong
 
-            while (barrelNode != null)
+            //errors :)
+            .catch((error) => 
             {
-                //create the list node for this step
-                let listNode = new Node(barrelNode.name, barrelNode.uri, 0, null, null);
-
-                //add the node to the map
-                bot.valuesMap.set(listNode.uri, listNode);
-
-                //if it is the first node in the loop 
-                if (bot.valuesHead == null)
+                if (error.statusCode === 500 || error.statusCode === 502)
                 {
-                    //set the node to be head and tail
-                    bot.valuesHead = listNode;
-                    bot.valuesTail = listNode;
+                    console.log("Server error, trying again");
+                    bot.createPlaylist(themeName)
+                    .then((playlistID, playlistURL) => resolve(playlistID, playlistURL))
                 }
-                //otherwise
                 else
                 {
-                    listNode.prev = bot.valuesTail;         //update the new node's previous 
-                    bot.valuesTail.next = listNode;         //update the tail's next
-                    bot.valuesTail = listNode;              //set the new node to be the tail
+                    console.log("failed to create playlist - ")
+                    console.log(error)
                 }
+            })
+        })
+    },
 
-                barrelNode = barrelNode.next;
+    //creates a fresh list of songs from the barrel, each song with a default score of bot.defaultSongScore
+    buildNewList()
+    {
+        list = [];
+        for (var i = 0; i < bot.barrelList.length; i++)
+        {
+            barrelSong = barrel[i];
+
+            listSong = 
+            {
+                name: barrelSong.name,
+                uri: barrelSong.uri,
+                score: bot.defaultSongScore
             }
+
+            list.push(listSong);
         }
+
+        return list
+    },
+
+    addSongsToPlaylist(playlistID, newList)
+    {
+        
     },
 
     saveSpotify: function ()
     {
-        bot.saveValuesList();
+        bot.saveTheme();
         bot.saveThemes();
-    },
-
-    //saves the current theme, the themes, and the voteNames
-    saveThemes: function ()
-    {
-        var wrapper =
-        {
-            currentTheme: this.currentTheme,
-            themes: this.themes,
-            voteNames: this.voteNames
-        }
-
-        var fileName = './data/spotify/themes.json';
-
-        //saves the stuff to a file
-        fs.writeFile(fileName, JSON.stringify(wrapper), e =>
-        {
-            if (e) throw e;
-        });
-    },
-
-    //saves the values list to file
-    saveValuesList: function ()
-    {
-        var wrapper =
-        {
-            playlistIDs: bot.playlistIDs,
-            songs: []
-        }
-        //converts the linked list of songs to an array
-        let node = bot.valuesHead;
-        while (node != null)
-        {
-            let wrapSong =
-            {
-                name: node.name,
-                uri: node.uri,
-                value: node.value
-            }
-
-            wrapper.songs.push(wrapSong);
-
-            node = node.next;
-        }
-
-        //where to save to
-        var fileName = './data/spotify/themes/' + bot.currentTheme + '.json';
-
-        //saves the thing to the file
-        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
-        {
-            if (e) throw e;
-        });
-    },
-
-    saveVoteMode: function ()
-    {
-        bot.saveVoteScores();
-        bot.saveThemes();
-    },
-
-    //saves the info relevant to the voteName
-    saveVoteScores: function ()
-    {
-        var wrapper =
-        {
-            voteScores: [],
-            min: bot.voteMin,
-            max: bot.voteMax,
-            from: bot.fromList,
-            bad: bot.badList,
-            good: bot.goodList
-        }
-
-        //convert the voteScores map into the wrapper's voteScores
-        let keys = bot.voteScores.keys();
-        let key = keys.next();
-        while (!key.done)
-        {
-            wrapper.voteScores.push([key.value, bot.voteScores.get(key.value)]);
-            key = keys.next();
-        }
-
-
-        var fileName = './data/spotify/voteNames/' + bot.voteName + '.json';
-
-        //saves the stuff to a file
-        fs.writeFile(fileName, JSON.stringify(wrapper), e =>
-        {
-            if (e) throw e;
-        });
-    },
-
-    //reads in the relevant votemode stuff from the given voteName
-    loadVoteScores: function (name)
-    {
-        //get wrapper from file
-        var fileName = './data/spotify/voteNames/' + name + '.json';
-        var wrapper = JSON.parse(fs.readFileSync(fileName));
-
-        bot.voteMin = wrapper.min;
-        bot.voteMax = wrapper.max;
-        bot.fromList = wrapper.from;
-        bot.badList = wrapper.bad;
-        bot.goodList = wrapper.good;
-        bot.voteName = name;
-        bot.mode = "vote";
-
-        //convert to map 
-        wrapper.voteScores.forEach(item =>
-        {
-            bot.voteScores.set(item[0], item[1]);
-        });
-    },
-
-    //saves the values list to file
-    saveValuesList: function ()
-    {
-        var wrapper =
-        {
-            playlistIDs: bot.playlistIDs,
-            songs: []
-        }
-        //converts the linked list of songs to an array
-        let node = bot.valuesHead;
-        while (node != null)
-        {
-            let wrapSong =
-            {
-                name: node.name,
-                uri: node.uri,
-                value: node.value
-            }
-
-            wrapper.songs.push(wrapSong);
-
-            node = node.next;
-        }
-
-        //where to save to
-        var fileName = './data/spotify/themes/' + bot.currentTheme + '.json';
-
-        //saves the thing to the file
-        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
-        {
-            if (e) throw e;
-        });
     },
 
     setTheme: function (theme)
@@ -956,7 +536,7 @@ var bot = {
         this.reloadPlaylists();
         // bot.clearPlaylist(bot.playlistIDs[0], true);
     },
-    
+
     //reload all active playlists
     reloadPlaylists(playlistIndex = 0)
     {
@@ -985,61 +565,61 @@ var bot = {
             console.log("Reading playlist ", playlistIndex);
             //get the tracks that are currently in the playlist
             this.getTracks(playlistID)
-            .then((tracks) =>
-            {
-                //convert to a list of uris
-                let currentUris = [];
-
-                tracks.forEach(function (item)
+                .then((tracks) =>
                 {
-                    currentUris.push(item.track.uri);
+                    //convert to a list of uris
+                    let currentUris = [];
+
+                    tracks.forEach(function (item)
+                    {
+                        currentUris.push(item.track.uri);
+                    })
+
+
+                    //get the list of uris that should be in the playlist according to the valueslist
+                    let correctUris = [];
+
+                    //loop through every song that should be in this playlist
+                    let someNode = bot.valuesHead;
+
+                    for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
+                    {
+                        if (someNode != null)
+                        {
+                            //add each song to the list
+                            correctUris.push(someNode.uri);
+                            someNode = someNode.next;
+                        }
+                        else
+                        {
+                            console.log("null, songIndex: " + songIndex);
+                        }
+                    }
+
+                    //get a list of the adjustments that need to be made to the playlist
+                    let adjustments = this.compareUriLists(playlistID, currentUris, correctUris);
+
+                    //make those adjustments
+                    return this.adjust(adjustments);
                 })
 
+                //after adjustments have been made, reload the next playlist
+                .then(() => this.reloadPlaylists(playlistIndex + 1))
 
-                //get the list of uris that should be in the playlist according to the valueslist
-                let correctUris = [];
-        
-                //loop through every song that should be in this playlist
-                let someNode = bot.valuesHead;
-
-                for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
+                //error handling
+                .catch(function (error) 
                 {
-                    if (someNode != null)
+                    if (error.statusCode === 500 || error.statusCode === 502)
                     {
-                        //add each song to the list
-                        correctUris.push(someNode.uri);
-                        someNode = someNode.next;
+                        console.log("Server error, trying again");
+                        bot.reloadPlaylists(playlistIndex);
                     }
                     else
                     {
-                        console.log("null, songIndex: " + songIndex);
+                        console.log('Error while reloading playlists');
+                        console.log(error);
                     }
-                }
-
-                //get a list of the adjustments that need to be made to the playlist
-                let adjustments = this.compareUriLists(playlistID, currentUris, correctUris);
-
-                //make those adjustments
-                return this.adjust(adjustments);
-            })
-
-            //after adjustments have been made, reload the next playlist
-            .then(() => this.reloadPlaylists(playlistIndex + 1))
-
-            //error handling
-            .catch(function (error) 
-            {
-                if (error.statusCode === 500 || error.statusCode === 502)
-                {
-                    console.log("Server error, trying again");
-                    bot.reloadPlaylists(playlistIndex);
-                }
-                else
-                {
-                    console.log('Error while reloading playlists');
-                    console.log(error);
-                }
-            });
+                });
         }
     },
 
@@ -1052,7 +632,7 @@ var bot = {
             if (adjustments.length > 0)
             {
                 //get a bunch of uris to send out to the api in one batch
-                
+
                 //a list for all the uris in the batch
                 let uris = [];
 
@@ -1098,7 +678,7 @@ var bot = {
                 }
 
                 //adjust the playlist via the batch
-                
+
                 //if the adjustment is a clear
                 if (template.adjustment === "clear")
                 {
@@ -1107,47 +687,47 @@ var bot = {
 
                     uris.forEach(uri =>
                     {
-                        objectUris.push({uri: uri});
+                        objectUris.push({ uri: uri });
                     });
 
                     console.log("removing " + objectUris.length + " songs from playlist " + template.id);
 
                     //remove the provided uris from the template's playlist
                     bot.spotifyApi.removeTracksFromPlaylist(template.id, objectUris)
-                    
-                    //on success, adjust the remaining adjustments
-                    .then(() => this.adjust(adjustments))
 
-                    //after all other adjustments have been adjusted, resolve 
-                    .then((() => resolve()))
+                        //on success, adjust the remaining adjustments
+                        .then(() => this.adjust(adjustments))
 
-                    //error handling
-                    .catch(function (error) 
-                    {
-                        //if it is a server error we can just retry
-                        if (error.statusCode === 500 || error.statusCode === 502)
+                        //after all other adjustments have been adjusted, resolve 
+                        .then((() => resolve()))
+
+                        //error handling
+                        .catch(function (error) 
                         {
-                            //report server error to console
-                            console.log("Server error, trying again");
+                            //if it is a server error we can just retry
+                            if (error.statusCode === 500 || error.statusCode === 502)
+                            {
+                                //report server error to console
+                                console.log("Server error, trying again");
 
-                            //add batch adjustments back into the list of adjustments
-                            Array.prototype.push.apply(adjustments, batchAdjustments);
+                                //add batch adjustments back into the list of adjustments
+                                Array.prototype.push.apply(adjustments, batchAdjustments);
 
-                            //retry
-                            bot.adjust(adjustments)
+                                //retry
+                                bot.adjust(adjustments)
 
-                            //resolve
-                            .then(() => resolve())
+                                    //resolve
+                                    .then(() => resolve())
 
-                            //report error (is this dead code?)
-                            .catch((error) => console.log("error while retrying a clear in this.adjust", error));
-                        }
-                        else
-                        {
-                            console.log('error while clearing in this.adjust');
-                            console.log(error);
-                        }
-                    });
+                                    //report error (is this dead code?)
+                                    .catch((error) => console.log("error while retrying a clear in this.adjust", error));
+                            }
+                            else
+                            {
+                                console.log('error while clearing in this.adjust');
+                                console.log(error);
+                            }
+                        });
                 }
                 //if this adjustment is an addition
                 if (template.adjustment === "add")
@@ -1156,40 +736,40 @@ var bot = {
 
                     //remove the provided uris from the template's playlist
                     bot.spotifyApi.addTracksToPlaylist(template.id, uris)
-                    
-                    //on success, adjust the remaining adjustments
-                    .then(() => this.adjust(adjustments))
 
-                    //after all other adjustments have been adjusted, resolve 
-                    .then((() => resolve()))
+                        //on success, adjust the remaining adjustments
+                        .then(() => this.adjust(adjustments))
 
-                    //error handling
-                    .catch(function (error) 
-                    {
-                        //if it is a server error we can just retry
-                        if (error.statusCode === 500 || error.statusCode === 502)
+                        //after all other adjustments have been adjusted, resolve 
+                        .then((() => resolve()))
+
+                        //error handling
+                        .catch(function (error) 
                         {
-                            //report server error to console
-                            console.log("Server error, trying again");
+                            //if it is a server error we can just retry
+                            if (error.statusCode === 500 || error.statusCode === 502)
+                            {
+                                //report server error to console
+                                console.log("Server error, trying again");
 
-                            //add batch adjustments back into the list of adjustments
-                            Array.prototype.push.apply(adjustments, batchAdjustments);
+                                //add batch adjustments back into the list of adjustments
+                                Array.prototype.push.apply(adjustments, batchAdjustments);
 
-                            //retry
-                            bot.adjust(adjustments)
+                                //retry
+                                bot.adjust(adjustments)
 
-                            //resolve
-                            .then(() => resolve())
+                                    //resolve
+                                    .then(() => resolve())
 
-                            //report error (is this dead code?)
-                            .catch((error) => console.log("error while retrying an add in this.adjust", error));
-                        }
-                        else
-                        {
-                            console.log('error while adding in this.adjust');
-                            console.log(error);
-                        }
-                    });
+                                    //report error (is this dead code?)
+                                    .catch((error) => console.log("error while retrying an add in this.adjust", error));
+                            }
+                            else
+                            {
+                                console.log('error while adding in this.adjust');
+                                console.log(error);
+                            }
+                        });
                 }
             }
             else
@@ -1202,17 +782,7 @@ var bot = {
 
     testStuff: function ()
     {
-        let node1 = new Node("song1", "song1", 0, null, null);
-        let node2 = new Node("song2", "song2", 0, node1, null);
-        node1.next = node2;
-        let node3 = new Node("song3", "song3", 0, node2, null);
-        node2.next = node3;
-        let node4 = new Node("song4", "song4", 0, node3, null);
-        node3.next = node4;
-        let node5 = new Node("song5", "song5", 0, node4, null);
-        node4.next = node5;
-
-        // console.log(node5.index());
+        // use this method for testing shit
     },
 
     //gets a list of all the adjustments that need to be made to the old list to make it match the new list
@@ -1372,64 +942,6 @@ var bot = {
         //Step 5: adjust playlists accordingly
         bot.adjust(adjustments);
     },
-
-    //initializes the voteScores to 0
-    initializeVoteScores: function ()
-    {
-        console.log("setting vote mode stuff");
-
-        //reset the vote stuff
-        bot.voteScores.clear();
-
-        var loops = null;
-
-        // Get the length of the fromList
-        bot.spotifyApi.getPlaylist(bot.fromList)
-            .then(function (data)
-            {
-                let length = data.body.tracks.total;
-                loops = length / 100;
-                let chunkNum = 0;
-
-                //read in all the songs from the playlist in sections (the api limits you to 100 at a time)
-                for (var lcv = 0; lcv < loops; lcv++)
-                {
-                    // Get tracks 
-                    bot.spotifyApi.getPlaylistTracks(bot.fromList, {
-                        offset: lcv * 100,
-                        limit: 100,
-                        fields: 'items'
-                    })
-                        .then(
-                            function (data)
-                            {
-                                data.body.items.forEach(item =>         //read each song in the chunk into relevant stuff
-                                {
-                                    bot.voteScores.set(item.track.uri, 0);
-                                });
-
-                                chunkNum++;
-                                let chunks = Math.ceil(loops);
-
-                                if (chunkNum == chunks)
-                                {
-                                    //tell the console the same
-                                    console.log("set vote stuff from the list at " + bot.fromList);
-                                    bot.saveVoteMode();
-                                }
-                            },
-                            function (err)
-                            {
-                                console.log('Something went wrong! 6758', err);
-                            }
-                        );
-
-                }
-            }, function (err)
-            {
-                console.log('Something went wrong! 3333', err);
-            });
-    }
 }
 
 //switches the variables to the test bot's stuff
@@ -1439,15 +951,7 @@ if (bot.testbuild)
     bot.guildID = '254631721620733952';
     bot.jaspaDM = '755291736871272490';
     bot.botID = '754865264390176839';
-    // bot.readyRoleID = '360182681943932930';
-    // bot.imposterRoleID = '756313923363405824';
-    // bot.gulagRoleID = '589261878383869962';
-    // bot.memberRole = '589261880862834688';
-    // bot.proxyChannelID = '754762580408533072';
-    // bot.readyBotChannelID = '754762580408533072';
 }
-
-client.things = new Discord.Collection();
 
 //sets up the text and dm folders
 bot.channelTypes.forEach(channelType =>
@@ -1480,41 +984,17 @@ bot.channelTypes.forEach(channelType =>
     })
 });
 
-//sets up the helper folder
-client.things.set('helpers', new Discord.Collection());
-
-var directory = './helpers/';
-
-const files = fs.readdirSync(directory).filter(file => file.endsWith('.js'));
-for (const file of files)
-{
-    const command = require(directory + `${file}`);
-
-    client.things.get('helpers').set(command.name, command);
-
-    if (command.alt != undefined)
-    {
-        client.things.get('helpers').set(command.alt, command);
-    }
-}
-
-
-
 client.once('ready', () =>
 {
     bot.initialUpdates();
 
-    // bot.helpers('checkRAL', 0);
-    // client.user.setStatus('invisible')
-
-    console.log('Readybot 3: Spotify Edition');
+    console.log('Readybot 4: Spotify Edition 2');
 
     if (bot.testbuild)
     {
         console.log('<test build>');
     }
 });
-
 
 client.on('message', message =>
 {
@@ -1534,12 +1014,6 @@ client.on('message', message =>
         //everybody that's not me
         else
         {
-            // //other special treatment
-            // if (client.things.get('dmspecials').get(userID) != undefined) //if they are on the list
-            // {
-            //     client.things.get('dmspecials').get(userID).execute(message, bot); //do their special code
-            // }
-
             bot.helpers('relayMsgToJaspa', { message: message });
         }
     }
@@ -1561,51 +1035,6 @@ client.on('message', message =>
                 client.things.get('textcommands').get(command).execute(message, args, bot);
             }
         }
-        //commands
-        // if (message.content.startsWith(bot.prefix))
-        // {
-        //     //splits the message into words after the prefix
-        //     const args = message.content.slice(bot.prefix.length).split(/ +/);
-
-        //     //the first word in the message following the prefix
-        //     const command = args.shift().toLowerCase();
-
-        //     //check if the command is in the list
-        //     if (client.things.get('textcommands').get(command) != undefined)
-        //     {
-        //         //run the command
-        //         client.things.get('textcommands').get(command).execute(message, args, bot);
-
-
-        //         // //check if the command is in the readybot channel, and if its a spammy command
-        //         // if (message.channel.id != bot.readyBotChannelID && client.things.get('textcommands').get(command).spam != false)
-        //         // {
-        //         //     message.channel.send('ayo, consider using the readybot channel (just an idea tho)');
-        //         // }
-        //     }
-        //     //if the command is not in the list
-        //     else
-        //     {
-        //         //react accordingly
-        //         message.channel.send('That\'s not a command, bucko');
-        //     }
-        // }
-        // // not commands
-        // else
-        // {
-        //     if (bot.proxyChat && message.content != null)
-        //     {
-        //         bot.helpers('relayMsgToJaspa', { message: message });
-        //     }
-
-        //     //send to special people
-        //     if (client.things.get('textspecials').get(message.member.id) != undefined) //if they are on the list
-        //     {
-        //         client.things.get('textspecials').get(message.member.id).execute(message, bot); //do their special code
-        //     }
-
-        //     client.things.get('textgenerics').get("nicebot").execute(message, bot);
-        // }
     }
 });
 
@@ -1900,8 +1329,6 @@ const scopes = [
     'user-follow-read',
     'user-follow-modify'
 ];
-
-
 
 app.get('/login', (req, res) =>
 {
