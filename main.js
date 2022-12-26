@@ -51,6 +51,22 @@ var bot = {
         // this shit runs right after the bot starts up, but not necessarily before or after teh spotify stuff starts happening
     },
 
+    //i despise this helpers stuff, but removing it is just gonna have to wait.
+    helpers: function (name, params)
+    {
+        //check if the helper exists
+        if (client.things.get('helpers').get(name) != undefined)
+        {
+            //run the helper
+            var out = client.things.get('helpers').get(name).execute(params, this);
+
+            if (out != undefined)
+            {
+                return out;
+            }
+        }
+    },
+
     loadSpot: async function ()
     {
         bot.testStuff();
@@ -64,11 +80,27 @@ var bot = {
             bot.currentTheme = wrapper.currentTheme
             bot.themes = wrapper.themes
 
-            //set theme to most recent theme
-            bot.setTheme(bot.currentTheme);
+            //if there is no current theme, create a default theme
+            if (bot.themes.length == 0)
+            {
+                //send a message announcing the creation of a default theme
+                bot.client.channels.cache.get(bot.spotifyChannel).send("No themes found! Creating a default theme.")
+
+                //create a theme
+                .then(sent => bot.createTheme("Default", sent))        
+                
+                //set the theme to this new default theme
+                .then(() => bot.setTheme("Default"))
+            }
+            else
+            {
+                //set theme to most recent theme
+                bot.setTheme(bot.currentTheme);
+            }
         })
     },
 
+    //reads the songs from the barrel into the barrel list (json friendly)
     readBarrelList: function ()
     {
         //promise time
@@ -94,7 +126,7 @@ var bot = {
                                 uri: item.track.uri,
                                 score: -1
                             }
-
+                            
                             //push the song onto the barrel list
                             bot.barrelList.push(song);
                         }
@@ -248,6 +280,7 @@ var bot = {
 
     saveTheme(themeName = bot.currentTheme, playlistID = bot.playlistID, songList = bot.songlist)
     {
+        console.log(`Saving '${themeName}' to file`)
         //what to save
         var wrapper =
         {
@@ -277,40 +310,50 @@ var bot = {
         {
             if (e) throw e;
         });
+
+        //log to console
+        console.log(`Saved '${themeName}' to file`)
     },
 
     createTheme: function (themeName, message)
     {
-        console.log('Trying to create a theme called "' + themeName + '"');
-
-        //if theme already exists
-        if (bot.themes.indexOf(themeName) != -1)
+        return new Promise((resolve, reject) => 
         {
-            console.log("Tried to create a theme that already exists.");
-        }
-        //if theme does not exist
-        else
-        {
-            //add theme to list of themes
-            bot.addTheme(themeName); 
+            console.log('Trying to create a theme called "' + themeName + '"');
 
-            //build the new list, each song defaults to a value of bot.defaultSongScore
-            let newList = bot.buildNewList();
-            
-            //create a playlist                             probably messier than it could be :/
-            bot.createPlaylist(themeName)
-            .then ((playlistID, playlistURL) =>
+            //if theme already exists
+            if (bot.themes.indexOf(themeName) != -1)
             {
-                //save the created theme to file
-                bot.saveTheme(themeName, playlistID, newList)
+                console.log("Tried to create a theme that already exists.");
+            }
+            //if theme does not exist
+            else
+            {
+                //add theme to list of themes
+                bot.addTheme(themeName); 
+    
+                //build the new list, each song defaults to a value of bot.defaultSongScore
+                let newList = bot.buildNewList();
+                
+                //create a playlist                             probably messier than it could be :/
+                bot.createPlaylist(themeName)
+                .then ((playlistStuff) =>
+                {
+                    //save the created theme to file
+                    bot.saveTheme(themeName, playlistStuff.playlistID, newList)
 
-                //add all songs to the playlist
-                bot.addSongsToPlaylist(playlistID, newList)
-
-                //send link to playlist
-                .then(() => message.channel.send("Here's " + themeName + ":\n" + playlistURL))
-            });
-        }
+                    //add all songs to the playlist
+                    bot.addSongsToPlaylist(playlistStuff.playlistID, newList)
+    
+                    //send link to playlist
+                    .then(() =>
+                    {
+                        message.channel.send("Here's " + themeName + ":\n" + playlistStuff.playlistURL)
+                        resolve()
+                    })
+                });
+            }
+        })
     },
 
     createPlaylist: function (themeName)
@@ -318,10 +361,18 @@ var bot = {
         return new Promise((resolve, reject) => 
         {
             //create the playlist
-            bot.spotifyApi.createPlaylist(bot.userID, themeName, { public : true })
+            bot.spotifyApi.createPlaylist(themeName, { public : true })
 
             //resolve with the playlistinfo
-            .then((playlistInfo) => resolve(playlistInfo.playlistID, playlistInfo.playlistURL)) //TODO this is certainly wrong
+            .then((playlistInfo) => 
+            {
+                console.log(`Here's ${themeName}:\n${playlistInfo.body.external_urls.spotify}`)
+                resolve(
+                {
+                    playlistID: playlistInfo.body.id, 
+                    playlistURL: playlistInfo.body.external_urls.spotify
+                }) 
+            })
 
             //errors :)
             .catch((error) => 
@@ -330,7 +381,7 @@ var bot = {
                 {
                     console.log("Server error, trying again");
                     bot.createPlaylist(themeName)
-                    .then((playlistID, playlistURL) => resolve(playlistID, playlistURL))
+                    .then((playlistStuff) => resolve(playlistStuff))
                 }
                 else
                 {
@@ -345,9 +396,10 @@ var bot = {
     buildNewList()
     {
         list = [];
+
         for (var i = 0; i < bot.barrelList.length; i++)
         {
-            barrelSong = barrel[i];
+            let barrelSong = bot.barrelList[i];
 
             listSong = 
             {
@@ -362,9 +414,31 @@ var bot = {
         return list
     },
 
-    addSongsToPlaylist(playlistID, newList)
+    addSongsToPlaylist(playlistID, songs)
     {
-        
+        return new Promise((resolve, reject) => 
+        {
+            //convert to list of uris
+            let uris = bot.convertSongsToUris(songs)
+
+            console.log("getting adjustments")
+
+            //get adjustments
+            let adjustments = this.compareUriLists(playlistID, [], uris);
+            console.log("got adjustments")
+
+            //adjust them
+            this.adjust(adjustments)
+
+            //resolve
+            .then(() => {
+                console.log("adjusted adjustments")
+                resolve()
+            })
+
+            //error
+            .catch((error) => console.log("Errored: ", error))
+        })
     },
 
     saveSpotify: function ()
@@ -378,24 +452,58 @@ var bot = {
         //check if theme exists
         if (this.themes.indexOf(theme) != -1)
         {
-            console.log("Setting theme to", theme);
+            //only save the current theme if there is a current theme that has been set properly
+            if (bot.currentTheme.length != 0 && bot.playlistID != null)
+            {
+                //save current theme
+                bot.saveTheme(bot.currentTheme, bot.playlistID, bot.songlist)
+            }
 
-            //set the new theme
-            bot.currentTheme = theme;
+            //read new theme from file
+            let wrapper = JSON.parse(fs.readFileSync(`./data/spotify/themes/${theme}.json`));
 
-            //build the linked list from the current theme's file
-            bot.buildListFromFile();
+            bot.playlistID = wrapper.playlistID
+            bot.songlist = wrapper.songs
+            bot.currentTheme = theme
 
-            //tell the console the same
-            console.log("Theme has been set to", theme);
+            console.log(`Wrapper had the following id: ${bot.playlistID} aka ${wrapper.playlistID}`)
 
-            //read the base list of songs (this function then calls the next step when finished)
-            bot.readBarrelList();
+            // --- check vs barrel, add new songs
+            
+            //build adjustments
+            let oldUriList = bot.convertSongsToUris(bot.songlist)
+            let newUriList = bot.convertSongsToUris(bot.barrelList)
+            let adjustments = bot.compareUriLists(bot.playlistID, oldUriList, newUriList)
+
+            //adjust
+            bot.adjust(adjustments)
+
+            .then(() => 
+            {
+                //send ballot
+                bot.helpers('sendballot', bot.client.channels.cache.get(bot.spotifyChannel));
+
+                //alert the console 
+                console.log("Theme has been set to", theme);
+            })
         }
         else
         {
             console.log("theme does not exist");
         }
+    },
+
+    convertSongsToUris: function (songs)
+    {
+        let uris = []
+
+        for (let songIndex in songs)
+        {
+            let song = songs[songIndex]
+            uris.push(song.uri);
+        }
+
+        return uris
     },
 
     buildListFromFile: function ()
@@ -655,8 +763,6 @@ var bot = {
                     //the adjustment at this step
                     let temp = adjustments[i];
 
-                    // console.log("adjustments[", i, "]:\n",temp);
-
                     //if the adjustment at this step matches the template
                     if (temp.adjustment === template.adjustment && temp.id === template.id)
                     {
@@ -734,7 +840,7 @@ var bot = {
                 {
                     console.log("adding " + uris.length + " songs to playlist " + template.id);
 
-                    //remove the provided uris from the template's playlist
+                    //add the provided uris to the template's playlist
                     bot.spotifyApi.addTracksToPlaylist(template.id, uris)
 
                         //on success, adjust the remaining adjustments
@@ -813,7 +919,7 @@ var bot = {
 
         if (clears > 0)
         {
-            console.log("identified " + clears + " songs to be cleared from playlist " + playlistID);
+            console.log(`identified ${clears} songs to be cleared from playlist [${playlistID}]`);
         }
 
         //for all uri's in the new list
@@ -839,7 +945,7 @@ var bot = {
 
         if (adds > 0)
         {
-            console.log("identified " + adds + " songs to be added to playlist " + playlistID);
+            console.log(`identified ${adds} songs to be added to playlist [${playlistID}]`);
         }
 
         return adjustments;
@@ -953,6 +1059,8 @@ if (bot.testbuild)
     bot.botID = '754865264390176839';
 }
 
+client.things = new Discord.Collection();
+
 //sets up the text and dm folders
 bot.channelTypes.forEach(channelType =>
 {
@@ -983,6 +1091,24 @@ bot.channelTypes.forEach(channelType =>
         }
     })
 });
+
+//sets up the helper folder
+client.things.set('helpers', new Discord.Collection());
+
+var directory = './helpers/';
+
+const files = fs.readdirSync(directory).filter(file => file.endsWith('.js'));
+for (const file of files)
+{
+    const command = require(directory + `${file}`);
+
+    client.things.get('helpers').set(command.name, command);
+
+    if (command.alt != undefined)
+    {
+        client.things.get('helpers').set(command.alt, command);
+    }
+}
 
 client.once('ready', () =>
 {

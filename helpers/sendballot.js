@@ -13,10 +13,10 @@ module.exports = {
         channel.send(content).then(sent =>
         {
             bot.songMessage = sent;
-            sent.react('🤮')
-            .then(() => sent.react('👎'))
-            .then(() => sent.react('👍'))
-            .then(() => sent.react('🥰'))
+            sent.react('⬇')
+            .then(() => sent.react('⬆'))
+            .then(() => sent.react('🔀'))
+            .then(() => sent.react('↕'))
             .catch(error => console.error('One of the emojis failed to react'));
         });
     }
