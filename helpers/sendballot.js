@@ -12,7 +12,7 @@ module.exports = {
         }
         channel.send(content).then(sent =>
         {
-            bot.songMessage = sent;
+            bot.ballotMessage = sent;
             sent.react('⬇')
             .then(() => sent.react('⬆'))
             .then(() => sent.react('🔀'))

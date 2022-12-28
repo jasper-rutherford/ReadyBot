@@ -414,6 +414,80 @@ var bot = {
         return list
     },
 
+    //gets the song which corresponds with the provided uri from the provided list of songs
+    //returns null if uri is not found
+    getSongByUri(uri, songs)
+    {
+        for (let i in songs)
+        {
+            let song = songs[i]
+
+            if (song.uri === uri)
+            {
+                return song
+            }
+        }
+        
+        return null;
+    },
+
+    //upon resolve, the provided uri will be in the barrel playlist, the barrel list, and the song list
+    ensureUriIsInBarrel(uri)
+    {
+        return new Promise((resolve, reject) =>
+        {
+
+            // this is hard :(
+            // todo :/
+            if (bot.getSongByUri(uri, bot.barrelList) === null)
+            {
+                console.log("that song's not in the barrel, thats on the to do list. ignored for now.")
+            }
+            resolve(uri)
+
+            // //if song not in barrel
+            // if (bot.getSongByUri(uri, bot.barrelList) === null)
+            // {
+            //     //alert user somehow TODO
+            //     console.log("todo")
+
+            //     // add to barrel playlist
+            //     bot.addUriToPlaylist(uri, bot.barrelID)
+
+            //     //add to theme playlist
+            //     .then(() => bot.addUriToPlaylist(uri, bot.playlistID))
+
+            //     //update bot.barrelList and bot.songList
+            //     .then(() => 
+            //     {
+                    
+            //     })
+
+            //     // add to barrel list
+            //     // add to song list
+            // }
+        })
+    },
+
+    addUriToPlaylist(uri, playlistID)
+    {
+        return bot.addSongsToPlaylist(playlistID, [{uri: uri}])
+    },
+
+    removeUriFromPlaylist(uri, playlistID)
+    {
+        let adjustments = []
+        
+        adjustments.push(
+        {
+            adjustment: "clear",
+            id: playlistID,
+            uri: uri
+        })
+
+        bot.adjust(adjustments)
+    },
+
     addSongsToPlaylist(playlistID, songs)
     {
         return new Promise((resolve, reject) => 
@@ -439,6 +513,38 @@ var bot = {
             //error
             .catch((error) => console.log("Errored: ", error))
         })
+    },
+
+    removeSongsFromPlaylist(playlistID, songs)
+    {
+        return new Promise((resolve, reject) => 
+        {
+            //convert to list of uris
+            let uris = bot.convertSongsToUris(songs)
+
+            console.log("getting adjustments")
+
+            //get adjustments
+            let adjustments = this.compareUriLists(playlistID, uris, []);
+            console.log("got adjustments")
+
+            //adjust them
+            this.adjust(adjustments)
+
+            //resolve
+            .then(() => {
+                console.log("adjusted adjustments")
+                resolve()
+            })
+
+            //error
+            .catch((error) => console.log("Errored: ", error))
+        })
+    },
+
+    updateBallot(update)
+    {
+        bot.ballotMessage.edit(`🎶 Current Theme: [${bot.currentTheme}] 🎶\n${update}`)
     },
 
     saveSpotify: function ()
@@ -951,102 +1057,15 @@ var bot = {
         return adjustments;
     },
 
-    //aNode: the node whose value is to be changed
-    //diff: how much to change the value by
-    changeValue: function (aNode, diff)
+    //song: the song whose score is to be changed
+    //diff: how much to change the score by
+    changeSongScore: function (song, diff)
     {
-        //Step 1: save what songs are currently in which playlists
-        //list of all the songs in each playlist (2d array)
-        let oldUriLists = [];
+        //change the score
+        song.score = song.score + diff
 
-        //add all the songs for each playlist
-        for (let playlistIndex = 0; playlistIndex < 6; playlistIndex++)
-        {
-            //the list of songs in this playlist
-            let uriList = [];
-
-            //loop through every song in this playlist
-            let someNode = bot.valuesHead;
-            for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
-            {
-                if (someNode != null)
-                {
-                    //add each song to the list
-                    uriList.push(someNode.uri);
-                    someNode = someNode.next;
-                }
-                else
-                {
-                    console.log("null, songIndex: " + songIndex);
-                }
-            }
-
-            //add the list of songs to the list of songs per list
-            oldUriLists.push(uriList);
-        }
-
-        //Step 2: change the node's value and move it accordingly
-        aNode.value += diff;
-
-        if (diff > 0) 
-        {
-            aNode.up(aNode.prev);
-        }
-        else if (diff < 0)
-        {
-            aNode.down(aNode.next);
-        }
-
-
-        //Step 3: save what songs are now in which playlists
-        //list of all the songs in each playlist (2d array)
-        let newUriLists = [];
-
-        //add all the songs for each playlist
-        for (let playlistIndex = 0; playlistIndex < 6; playlistIndex++)
-        {
-            //the list of songs in this playlist
-            let uriList = [];
-
-            //loop through every song in this playlist
-            let head = bot.valuesHead;
-            for (let songIndex = 0; songIndex < bot.playlistLengths[playlistIndex]; songIndex++)
-            {
-                if (head != null)
-                {
-                    //add each song to the list
-                    uriList.push(head.uri);
-                    head = head.next;
-                }
-                else
-                {
-                    console.log("null, songIndex: " + songIndex);
-                }
-            }
-
-            //add the list of songs to the list of songs per list
-            newUriLists.push(uriList);
-        }
-
-        //Step 4: check for differences between new order of songs and old order of songs and build the list of adjustments (figure out which songs have changed playlists)
-
-        //initialize the list of adjustments
-        let adjustments = [];
-
-        //(only check the first 5 playlists because the last playlist will always contain all the songs by definition)
-        for (let playlistIndex = 0; playlistIndex < 5; playlistIndex++)
-        {
-            //get the adjustments for this playlist
-            let newAdjustments = this.compareUriLists(bot.playlistIDs[playlistIndex], oldUriLists[playlistIndex], newUriLists[playlistIndex]);
-
-            // console.log(newAdjustments);
-            //add those new adjustments onto the total list of adjustments
-            Array.prototype.push.apply(adjustments, newAdjustments);
-            // console.log(adjustments);
-        }
-
-        //Step 5: adjust playlists accordingly
-        bot.adjust(adjustments);
+        //save the updated song list to file
+        bot.saveTheme()
     },
 }
 
@@ -1173,264 +1192,16 @@ client.on('messageReactionAdd', (reaction, user) =>
         reaction.users.remove(user);
     }
 
-    //case for voting based on 🥰, 👍, 👎, and 🤮, only works if the reaction is to the songMessage by Jaspa
-    if ((reaction.emoji.name === "🥰" || reaction.emoji.name === "👍" || reaction.emoji.name === "👎" || reaction.emoji.name === "🤮")
-        && bot.songMessage != null && reaction.message.id === bot.songMessage.id && user.id === bot.jaspaID)
+    // if there is a ballot and this message is the ballot and the person who reacted is jasper
+    if (bot.ballotMessage != null && reaction.message.id === bot.ballotMessage.id && user.id === bot.jaspaID)
     {
-        //vote according to normal mode
-        if (bot.mode == "normal")
+        //check that emoji is valid
+        if (["⬇", "⬆", "🔀", "↕"].includes(reaction.emoji.name))
         {
-            // Get Information About The User's Current Playback State
-            bot.spotifyApi.getMyCurrentPlaybackState().then(function (data)
-            {
-                // Output items
-                if (data.body && data.body.is_playing)
-                {
-                    //get current song
-                    bot.spotifyApi.getMyCurrentPlayingTrack().then(function (data)
-                    {
-                        //info about the current song
-                        let name = data.body.item.name;
-                        let uri = data.body.item.uri;
-
-                        //get node of the song from the list
-                        let aNode = bot.valuesMap.get(uri);
-
-                        //if the song isn't in the values list 
-                        if (aNode === undefined)
-                        {
-                            //create node version of new song for barrel
-                            newBarrel = new Node(name, uri, null, null, null);
-
-                            //check if this new song is already in the barrel
-                            if (bot.barrelHead.contains(uri))
-                            {
-                                console.log("[" + name + "] has already been added to the barrel and will go into circulation after the next reload.");
-
-                                bot.songMessage.react('⌚')
-                                    .catch(error => console.error('One of the emojis failed to react'));
-                            }
-                            //otherwise if the new song is not in the barrel 
-                            else
-                            {
-                                //add it to the barrel
-                                console.log("[" + name + "] is new! Adding to barrel now.");
-
-                                //add new song to barrel playlist
-                                bot.spotifyApi.addTracksToPlaylist(bot.barrelID, [uri]).then(function (data)
-                                {
-                                    //add node to barrel list 
-                                    bot.barrelTail.next = newBarrel;
-                                    newBarrel.prev = bot.barrelTail;
-                                    bot.barrelTail = newBarrel;
-
-                                    bot.songMessage.react('✅')
-                                        .catch(error => console.error('One of the emojis failed to react'));
-                                }, function (err)
-                                {
-                                    console.log('\t\t\tFailed to add [' + name + '] to the barrel');
-                                    bot.songMessage.react('❌')
-                                        .catch(error => console.error('One of the emojis failed to react'));
-                                });
-                            }
-                        }
-                        //if the song is in the valuelist, adjust the song's value accordingly
-                        else
-                        {
-                            let prevVal = aNode.value;
-                            if (reaction.emoji.name === "🥰")
-                            {
-                                bot.changeValue(aNode, 3);
-                                console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
-                            }
-                            if (reaction.emoji.name === "👍")
-                            {
-                                bot.changeValue(aNode, 1);
-                                console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
-                            }
-                            if (reaction.emoji.name === "👎")
-                            {
-                                bot.changeValue(aNode, -1);
-                                console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
-
-                                // Skip User’s Playback To Next Track
-                                bot.spotifyApi.skipToNext().then(function ()
-                                {
-                                    // console.log('Skip to next');
-                                }, function (err)
-                                {
-                                    //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
-                                    console.log('failed to skip');
-                                });
-                            }
-                            if (reaction.emoji.name === "🤮")
-                            {
-                                bot.changeValue(aNode, -3);
-                                console.log(aNode.name + " (" + prevVal + " -> " + aNode.value + ")");
-
-                                // Skip User’s Playback To Next Track
-                                bot.spotifyApi.skipToNext().then(function ()
-                                {
-                                    // console.log('Skip to next');
-                                }, function (err)
-                                {
-                                    //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
-                                    console.log('failed to skip');
-                                });
-                            }
-                        }
-                    }, function (err)
-                    {
-                        console.log('couldn\'t get current song');
-                    });
-                }
-                else
-                {
-                    console.log("User is not playing anything, or doing so in private.");
-                }
-            }, function (err)
-            {
-                console.log('couldn\'t get current playback state');
-            });
+            // call helper for emoji
+            bot.helpers(reaction.emoji.name, {reaction: reaction, user: user});
+            reaction.users.remove(user);
         }
-        //vote according to vote mode
-        else if (bot.mode == "vote")
-        {
-            // Get Information About The User's Current Playback State
-            bot.spotifyApi.getMyCurrentPlaybackState().then(function (data)
-            {
-                // Output items
-                if (data.body && data.body.is_playing)
-                {
-                    //get current song
-                    bot.spotifyApi.getMyCurrentPlayingTrack().then(function (data)
-                    {
-                        //info about the current song
-                        let name = data.body.item.name;
-                        let uri = data.body.item.uri;
-
-                        //if the song isnt in the map, add it to the map 
-                        if (bot.voteScores.get(uri) == undefined)
-                        {
-                            //add to score map
-                            bot.voteScores.set(uri, 0);
-
-                            //add to from playlist
-                            bot.spotifyApi.addTracksToPlaylist(bot.fromList, [uri])
-                                .then(function (data)
-                                {
-                                    console.log("\tadded " + name + " to rotation");
-                                }, function (err)
-                                {
-                                    console.log("\tfailed to add " + name + " to rotation")
-                                });
-                        }
-
-                        let prevVal = bot.voteScores.get(uri);
-                        let bad = prevVal < bot.voteMin;
-                        let good = prevVal > bot.voteMax;
-
-                        let big = 5;
-                        let small = 1;
-
-                        if (reaction.emoji.name === "🥰")
-                        {
-                            bot.voteScores.set(uri, bot.voteScores.get(uri) + big);
-                        }
-                        if (reaction.emoji.name === "👍")
-                        {
-                            bot.voteScores.set(uri, bot.voteScores.get(uri) + small);
-                        }
-                        if (reaction.emoji.name === "👎")
-                        {
-                            bot.voteScores.set(uri, bot.voteScores.get(uri) - small);
-                        }
-                        if (reaction.emoji.name === "🤮")
-                        {
-                            bot.voteScores.set(uri, bot.voteScores.get(uri) - big);
-                        }
-
-                        let newScore = bot.voteScores.get(uri);
-
-                        //if not already bad and score is less than minimum
-                        if (!bad && newScore < bot.voteMin)
-                        {
-                            console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ") [bad]");
-                            //remove from from
-                            bot.spotifyApi.removeTracksFromPlaylist(bot.fromList, [{ uri: uri }]).then(function (data)
-                            {
-                                console.log("\tremoved " + name + " from rotation")
-                            }, function (err)
-                            {
-                                console.log("\tfailed to remove " + name + " from rotation")
-                            });
-
-                            //add to bad
-                            bot.spotifyApi.addTracksToPlaylist(bot.badList, [uri])
-                                .then(function (data)
-                                {
-                                    console.log("\tadded " + name + " to bad playlist")
-                                }, function (err)
-                                {
-                                    console.log("\tfailed to add " + name + " to bad playlist")
-                                });
-                        }
-                        //if not already good and score is greater than maximum
-                        else if (!good && bot.voteMax < newScore) 
-                        {
-                            console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ") [good]");
-                            //remove from from
-                            bot.spotifyApi.removeTracksFromPlaylist(bot.fromList, [{ uri: uri }]).then(function (data)
-                            {
-                                console.log("\tremoved " + name + " from rotation")
-                            }, function (err)
-                            {
-                                console.log("\tfailed to remove " + name + " from rotation")
-                            });
-
-                            //add to good
-                            bot.spotifyApi.addTracksToPlaylist(bot.goodList, [uri])
-                                .then(function (data)
-                                {
-                                    console.log("\tadded " + name + " to good playlist")
-                                }, function (err)
-                                {
-                                    console.log("\tfailed to add " + name + " to good playlist")
-                                });
-                        }
-                        //if score still in range
-                        else
-                        {
-                            console.log(name + " (" + prevVal + " -> " + bot.voteScores.get(uri) + ")");
-                        }
-
-                        //save to file
-                        bot.saveVoteMode();
-
-                        // Skip User’s Playback To Next Track
-                        bot.spotifyApi.skipToNext().then(function ()
-                        {
-                            // console.log('Skip to next');
-                        }, function (err)
-                        {
-                            //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
-                            console.log('failed to skip during vote mode');
-                        });
-                    }, function (err)
-                    {
-                        console.log('couldn\'t get current song');
-                    });
-                }
-                else
-                {
-                    console.log("User is not playing anything, or doing so in private.");
-                }
-            }, function (err)
-            {
-                console.log('couldn\'t get current playback state');
-            });
-        }
-        reaction.users.remove(user);
     }
 });
 
