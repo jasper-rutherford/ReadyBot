@@ -51,12 +51,12 @@ module.exports = {
 
 
             //remove songs with low scores
-            console.log(`checking if score is too low (${song.score})`)
+            console.log(`checking if score is too low [${song.name}](${song.score})`)
 
             //if score is too low
             if (song.score < 0)
             {
-                console.log("Score too low, removing uri from playlist")
+                console.log(`Score too low, removing ${song.name} from ${bot.currentTheme}`)
                 
                 //remove the song from the theme playlist
                 bot.removeUriFromPlaylist(song.uri, bot.playlistID)

@@ -4,6 +4,9 @@ module.exports = {
     description: "orders the songs in the current theme's playlist by score, most to least",
     execute(params, bot)
     {
+        //update the ballot
+        bot.updateBallot(`Ordering`)
+
         // order songs list
         let orderedList = []
 
@@ -29,7 +32,9 @@ module.exports = {
             orderedList.push(bigSong)
         }
 
-        console.log(orderedList)
+        console.log(orderedList[0])
+        console.log(orderedList[1])
+        console.log(orderedList[2])
 
         //set the songlist to the shuffled list 
         bot.songlist = orderedList
@@ -38,7 +43,7 @@ module.exports = {
         bot.removeSongsFromPlaylist(bot.playlistID, bot.songlist)
         
         //add all songs to playlist
-        .then(() => bot.addSongsToPlaylist(bot.playlistID, bot.songlist)) 
+        .then(() => bot.addSongsToPlaylist(bot.playlistID, bot.nonNegativeScores(bot.songlist))) 
 
         //update ballot
         .then(() => bot.updateBallot(`Order Complete`))

@@ -469,6 +469,24 @@ var bot = {
         })
     },
 
+    //takes a list of songs, returns a list of all the songs that have non-negative scores
+    nonNegativeScores(songs)
+    {
+        let nonNegativeScores = []
+
+        for (let songIndex in songs)
+        {
+            let song = songs[songIndex]
+
+            if (song.score >= 0)
+            {
+                nonNegativeScores.push(song)
+            }
+        }
+        
+        return nonNegativeScores
+    },
+
     addUriToPlaylist(uri, playlistID)
     {
         return bot.addSongsToPlaylist(playlistID, [{uri: uri}])
@@ -500,6 +518,10 @@ var bot = {
             //get adjustments
             let adjustments = this.compareUriLists(playlistID, [], uris);
             console.log("got adjustments")
+
+            console.log(adjustments[0])
+            console.log(adjustments[1])
+            console.log(adjustments[2])
 
             //adjust them
             this.adjust(adjustments)
@@ -586,6 +608,9 @@ var bot = {
 
             .then(() => 
             {
+                //save the themes
+                bot.saveThemes()
+
                 //send ballot
                 bot.helpers('sendballot', bot.client.channels.cache.get(bot.spotifyChannel));
 
@@ -864,7 +889,7 @@ var bot = {
                 batchAdjustments.push(template);
 
                 //loop through all other adjustments
-                for (let i = adjustments.length - 1; i > 0 && uris.length < 100; i--)
+                for (let i = 0; i < adjustments.length && uris.length < 100; i++)
                 {
                     //the adjustment at this step
                     let temp = adjustments[i];
@@ -874,6 +899,7 @@ var bot = {
                     {
                         //remove it from the list of adjustments
                         adjustments.splice(i, 1);
+                        i--
 
                         //dont support songs that are local
                         if (temp.uri.indexOf("spotify:local") == -1)
@@ -881,7 +907,7 @@ var bot = {
                             //add its uri to the relevant lists
                             uris.push(temp.uri);
                             batchAdjustments.push(temp);
-                        }
+                        } 
                         else
                         {
                             console.log(temp.uri + " is local and unsupported.");

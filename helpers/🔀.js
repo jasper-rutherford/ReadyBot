@@ -4,6 +4,9 @@ module.exports = {
     description: "shuffles the songs in the current theme's playlist",
     execute(params, bot)
     {
+        //update the ballot
+        bot.updateBallot(`Shuffling`)
+        
         //shuffle songs list
         let shuffledList = []
 
@@ -27,7 +30,7 @@ module.exports = {
         bot.removeSongsFromPlaylist(bot.playlistID, bot.songlist)
         
         //add all songs to playlist
-        .then(() => bot.addSongsToPlaylist(bot.playlistID, bot.songlist)) 
+        .then(() => bot.addSongsToPlaylist(bot.playlistID, bot.nonNegativeScores(bot.songlist))) 
 
         //update ballot
         .then(() => bot.updateBallot(`Shuffle Complete`))
