@@ -1,8 +1,8 @@
 module.exports = {
     name: 'settheme',
-    secret: true,
+    secret: false,
     spam: false,
-    description: "",
+    description: "Sets the current theme",
     execute(message, args, bot)
     {
         if (message.author.id === bot.jaspaID)

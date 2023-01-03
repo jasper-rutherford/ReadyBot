@@ -1,11 +1,13 @@
-// module.exports = {
-//     name: 'ultraextendplaylist',
-//     secret: true,
-//     spam: false,
-//     description: "",
-//     bot: undefined,
-//     execute(message, args, bot)
-//     {
+module.exports = {
+    name: 'ultraextendplaylist',
+    secret: true,
+    spam: false,
+    description: "",
+    bot: undefined,
+    execute(message, args, bot)
+    {
+    }
+}
 //         this.bot = bot;
 //         if (message.author.id === bot.jaspaID)
 //         {

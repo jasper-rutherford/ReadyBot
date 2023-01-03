@@ -1,9 +1,9 @@
 const fs = require('fs');
 module.exports = {
     name: 'listthemes',
-    secret: true,
+    secret: false,
     spam: false,
-    description: "",
+    description: "Lists all themes that currently exist",
     execute(message, args, bot)
     {
         if (message.author.id === bot.jaspaID)

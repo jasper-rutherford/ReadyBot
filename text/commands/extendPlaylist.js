@@ -1,8 +1,8 @@
 module.exports = {
     name: 'extendplaylist',
-    secret: true,
+    secret: false,
     spam: false,
-    description: "",
+    description: "Takes a playlist and extends it into another playlist",
     bot: undefined,
     execute(message, args, bot)
     {

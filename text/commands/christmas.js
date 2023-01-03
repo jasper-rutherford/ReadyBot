@@ -13,10 +13,11 @@ module.exports = {
         }
         else
         {
-            var countDownDate = new Date("Dec 25, 2020 00:00:00").getTime();
-
             // Get today's date and time
-            var now = new Date().getTime();
+            var today = new Date()
+            var now = today.getTime();
+
+            var countDownDate = new Date(`Dec 25, ${today.getFullYear()} 00:00:00`).getTime();
 
             // Find the distance between now and the count down date
             var distance = countDownDate - now;

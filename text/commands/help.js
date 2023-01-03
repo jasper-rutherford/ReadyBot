@@ -11,7 +11,6 @@ module.exports = {
         {
             if (commands.indexOf(command.name) === -1 && !command.secret)
             {
-                // this.addToOut(out, command, commands);
                 if (out === '')
                 {
                     out = command.name;

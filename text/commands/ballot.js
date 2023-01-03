@@ -1,6 +1,6 @@
 module.exports = {
     name: 'ballot',
-    secret: true,
+    secret: false,
     spam: false,
     description: "sends the ballot",
     execute(message, args, bot)

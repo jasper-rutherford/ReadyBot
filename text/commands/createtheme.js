@@ -1,8 +1,8 @@
 module.exports = {
     name: 'createtheme',
-    secret: true,
+    secret: false,
     spam: false,
-    description: "",
+    description: "Creates a theme",
     execute(message, args, bot)
     {
         if (message.author.id === bot.jaspaID)
