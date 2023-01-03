@@ -442,6 +442,7 @@ var bot = {
             if (bot.getSongByUri(uri, bot.barrelList) === null)
             {
                 console.log("that song's not in the barrel, thats on the to do list. ignored for now.")
+                reject("Song not in barrel")
             }
             resolve(uri)
 
@@ -603,7 +604,26 @@ var bot = {
             let newUriList = bot.convertSongsToUris(bot.barrelList)
             let adjustments = bot.compareUriLists(bot.playlistID, oldUriList, newUriList)
 
-            //adjust
+            //adjust song list
+            for (let adjIndex in adjustments) 
+            {
+                let adjustment = adjustments[adjIndex]
+
+                //for each add adjustment
+                if (adjustment.adjustment === "add")
+                {
+                    //add the song that matches the adjustment to the songlist
+                    let song = bot.getSongByUri(adjustment.uri, bot.barrelList)
+                    bot.songlist.push
+                    ({
+                        name: song.name,
+                        uri: adjustment.uri,
+                        score: bot.defaultSongScore
+                    })
+                }
+            }
+
+            //adjust playlist
             bot.adjust(adjustments)
 
             .then(() => 
@@ -1222,7 +1242,7 @@ client.on('messageReactionAdd', (reaction, user) =>
     if (bot.ballotMessage != null && reaction.message.id === bot.ballotMessage.id && user.id === bot.jaspaID)
     {
         //check that emoji is valid
-        if (["⬇", "⬆", "🔀", "↕"].includes(reaction.emoji.name))
+        if (["⏬", "⬇", "⬆", "🔀", "↕"].includes(reaction.emoji.name))
         {
             // call helper for emoji
             bot.helpers(reaction.emoji.name, {reaction: reaction, user: user});

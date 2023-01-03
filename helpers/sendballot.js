@@ -13,7 +13,8 @@ module.exports = {
         channel.send(content).then(sent =>
         {
             bot.ballotMessage = sent;
-            sent.react('⬇')
+            sent.react('⏬')
+            .then(() => sent.react('⬇'))
             .then(() => sent.react('⬆'))
             .then(() => sent.react('🔀'))
             .then(() => sent.react('↕'))
