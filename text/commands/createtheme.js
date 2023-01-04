@@ -7,7 +7,7 @@ module.exports = {
     {
         if (message.author.id === bot.jaspaID)
         {
-            let themeName = args.shift();
+            let themeName = args.shift().toLowerCase();
 
             console.log("create theme command has been run");
             if (themeName === undefined)

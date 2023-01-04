@@ -18,7 +18,7 @@ var bot = {
     altPrefix: '\\',
     client: client,
     channelTypes: ['dm', 'text'],
-    messageTypes: ['commands', 'generics', 'specials'],
+    messageTypes: ['commands', 'specials'],
     guildID: '752727453918691402',
     guild: undefined,
     jaspaDM: '754507044312317962',
@@ -45,6 +45,7 @@ var bot = {
     commandMessage: null,                                   // the message from the user which requested a command
     spotifyChannel: '904467973434134589',                   // default location to send ballot 
     defaultSongScore: 2,
+    themeToDelete: undefined,                               // used to confirm that a theme should be deleted
 
     initialUpdates: function ()
     {
@@ -87,10 +88,10 @@ var bot = {
                 bot.client.channels.cache.get(bot.spotifyChannel).send("No themes found! Creating a default theme.")
 
                 //create a theme
-                .then(sent => bot.createTheme("Default", sent))        
+                .then(sent => bot.createTheme("default", sent))        
                 
                 //set the theme to this new default theme
-                .then(() => bot.setTheme("Default"))
+                .then(() => bot.setTheme("default"))
             }
             else
             {
@@ -287,20 +288,6 @@ var bot = {
             playlistID: playlistID,
             songs: songList
         }
-
-        // for (let i = 0; i < songList; i++)
-        // {
-        //     listSong = songList[i];
-
-        //     let song = 
-        //     {
-        //         name: listSong.name, 
-        //         uri: listSong.uri,
-        //         score: listSong.score
-        //     }
-
-        //     wrapper.songs.push(song)
-        // }
 
         //where to save to
         var fileName = './data/spotify/themes/' + themeName + '.json';
@@ -519,10 +506,6 @@ var bot = {
             //get adjustments
             let adjustments = this.compareUriLists(playlistID, [], uris);
             console.log("got adjustments")
-
-            console.log(adjustments[0])
-            console.log(adjustments[1])
-            console.log(adjustments[2])
 
             //adjust them
             this.adjust(adjustments)
@@ -1060,7 +1043,7 @@ client.on('messageReactionAdd', (reaction, user) =>
     if (bot.ballotMessage != null && reaction.message.id === bot.ballotMessage.id && user.id === bot.jaspaID)
     {
         //check that emoji is valid
-        if (["⏬", "⬇", "⬆", "🔀", "↕"].includes(reaction.emoji.name))
+        if (["⏬", "⬇", "⏭", "⬆", "🔀", "↕"].includes(reaction.emoji.name))
         {
             // call helper for emoji
             bot.helpers(reaction.emoji.name, {reaction: reaction, user: user});

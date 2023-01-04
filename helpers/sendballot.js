@@ -12,6 +12,7 @@ module.exports = {
             sent.react('⏬')
             .then(() => sent.react('⬇'))
             .then(() => sent.react('⬆'))
+            .then(() => sent.react('⏭'))
             .then(() => sent.react('🔀'))
             .then(() => sent.react('↕'))
             .catch(error => console.error('One of the emojis failed to react'));
