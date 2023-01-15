@@ -254,6 +254,40 @@ var bot = {
         })
     },
 
+    getCurrentSong()
+    {
+        return new Promise((resolve, reject) =>
+        {
+            console.log("getting current song")
+
+            // check if a song is playing
+            bot.spotifyApi.getMyCurrentPlaybackState()
+            .then(function (data)
+            {
+                console.log("getting current state")
+                // if a song is playling
+                if (data.body && data.body.is_playing)
+                {
+                    // get current song
+                    return bot.spotifyApi.getMyCurrentPlayingTrack()
+                }
+                else
+                {
+                    return new Promise((resolve, reject) => 
+                    {
+                        console.log("no song playing")
+                        reject(null)
+                    })
+                }
+            })
+            .then(function (data)
+            {
+                //current song uri
+                resolve(data.body.item);
+            })
+        })
+    },
+
     addTheme(themeName)
     {
         bot.themes.push(themeName);

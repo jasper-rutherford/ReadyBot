@@ -4,6 +4,9 @@ module.exports = {
     description: "sets the current song's score to -1 and skips it",
     execute(params, bot)
     {
+        let oldSong
+        let songScore
+
         //get current song uri
         // check if a song is playing
         bot.spotifyApi.getMyCurrentPlaybackState()
@@ -30,6 +33,7 @@ module.exports = {
 
             //current song uri
             let uri = data.body.item.uri;
+            oldSong = data.body.item.name;
 
             //ensure the uri is in the barrel
             return bot.ensureUriIsInBarrel(uri)
@@ -42,16 +46,10 @@ module.exports = {
             let song = bot.getSongByUri(uri, bot.songlist)
 
             //save the score (its a surprise tool that will help us later)
-            let songScore = song.score
+            songScore = song.score
 
             //decrement score
             bot.changeSongScore(song, -(song.score + 1))
-
-            console.log("updating ballot")
-
-            //update the ballot to reflect latest score change
-            bot.updateBallot(`[${song.name}] was slammed from [${songScore}]`)
-
 
             //remove songs with low scores
             console.log(`checking if score is too low [${song.name}](${song.score})`)
@@ -66,15 +64,21 @@ module.exports = {
             }
 
             //skip the song
-            bot.spotifyApi.skipToNext().then(function ()
-            {
-                // console.log('Skip to next');
-            }, function (err)
-            {
-                //if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned
-                console.log('failed to skip');
-            });
+            return bot.spotifyApi.skipToNext()
         })
+
+        //get the current song
+        .then(() => bot.getCurrentSong())
+
+        //update stuff with new song
+        .then((song) => 
+        {
+            //update the ballot to reflect new song
+            bot.updateBallot(`[${oldSong}] was slammed from [${songScore}]\nNow playing [${song.name}]`)
+
+            //update logs
+            console.log(`[${oldSong}] was slammed from [${songScore}]\nNow playing [${song.name}]`)
+        }) 
         .catch((error) =>
         {
             if (error === "No song playing")

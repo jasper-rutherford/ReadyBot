@@ -16,6 +16,9 @@ module.exports = {
             .then(() => sent.react('🔀'))
             .then(() => sent.react('↕'))
             .catch(error => console.error('One of the emojis failed to react'));
+
+
+            //TODO replace with recursive thing that goes through list of emoji
         });
     }
 }  
