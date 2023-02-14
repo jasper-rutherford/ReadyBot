@@ -33,7 +33,8 @@ var bot = {
     }),
     spotifyUserID: '446i69szgjkow87ew9yjbbhnn',             //my user id
 
-    barrelID: "4jCZqEM3AdWj3uSpjuY9IK",  // "5GFPI2Hii5HfpUUnStQN2r", //             //bottom of the barrel
+    // barrelID: "4jCZqEM3AdWj3uSpjuY9IK",              // bottom of the barrel
+    barrelID: "1czJUIain2ghS4PFXe0xFS",                 // Best 
 
     //NEW 12/17 - keep
     barrelList: [],                                         // json friendly list of songs in the barrel 
