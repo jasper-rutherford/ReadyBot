@@ -22,7 +22,7 @@ module.exports = {
                 //give a reaction so that it is clear that stuff is happening
                 message.react('🆗')
                     .catch(error => console.error('One of the emojis failed to react'));
-                bot.createTheme(themeName, message);
+                bot.createThemePart1(themeName, message);
             }
         }
     }

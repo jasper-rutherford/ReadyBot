@@ -10,16 +10,17 @@ module.exports = {
         {
             var fileName = './data/spotify/themes.json';
             var wrapper = JSON.parse(fs.readFileSync(fileName));
-
+            
+            let out = ""
             for (let lcv = 0; lcv < wrapper.themes.length; lcv++)
             {
                 if (wrapper.themes[lcv] === bot.currentTheme)
                 {
-                    message.channel.send("[" + wrapper.themes[lcv] + "]");
+                    out += `[${wrapper.themes[lcv]}]\n`;
                 }
                 else
                 {
-                    message.channel.send(wrapper.themes[lcv]);
+                    out += `${wrapper.themes[lcv]}\n`;
                 }
             }
         }
