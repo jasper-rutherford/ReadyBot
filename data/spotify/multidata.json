@@ -1,0 +1,576 @@
+{
+    "themes": [
+        {
+            "emoji": "🔥",
+            "id": "4KTAxPDZhpZGhP7eYj4gOB"
+        },
+        {
+            "emoji": "🎶",
+            "id": "1tmSaIUA1voYdJWWQvmrib"
+        },
+        {
+            "emoji": "☔",
+            "id": "68BU9IVjLLiRHD6dCHma4x"
+        }
+    ],
+    "songs": [
+        {
+            "name": "Plastic Hearts",
+            "uri": "spotify:track:6qCsKKS7Ol63SJW3LOIX5R",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Woman Like Me (feat. Nicki Minaj)",
+            "uri": "spotify:track:222B3aljXx6fFwKmFjuBED",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Somebody Told Me",
+            "uri": "spotify:track:6PwjJ58I4t7Mae9xfZ9l9v",
+            "scores": [
+                [
+                    "🔥",
+                    3
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "All Around The World (La La La)",
+            "uri": "spotify:track:1D2Aldrksl9yWWCIPOeDzy",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Blown Away",
+            "uri": "spotify:track:0vFMQi8ZnOM2y8cuReZTZ2",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Angels Like You",
+            "uri": "spotify:track:1daDRI9ahBonbWD8YcxOIB",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Team",
+            "uri": "spotify:track:3G6hD9B2ZHOsgf4WfNu7X1",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "When Love Takes Over (feat. Kelly Rowland) - Electro Radio Edit",
+            "uri": "spotify:track:7DEEplBQH91fKPWQH0LsOw",
+            "scores": [
+                [
+                    "🔥",
+                    1
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Undercover",
+            "uri": "spotify:track:3RrJTOClOgMAc9FQ7QDwv7",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Rasputin",
+            "uri": "spotify:track:0b18g3G5spr4ZCkz7Y6Q0Q",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "You're Gonna Go Far, Kid",
+            "uri": "spotify:track:2G8IHtLBcgu2GXTwq0iB4Y",
+            "scores": [
+                [
+                    "🔥",
+                    1
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "A Year Without Rain",
+            "uri": "spotify:track:3E9EC2h4ddtvCBKqUjxmha",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    2
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Woman",
+            "uri": "spotify:track:6Uj1ctrBOjOas8xZXGqKk4",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Wolves",
+            "uri": "spotify:track:0tBbt8CrmxbjRP0pueQkyU",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Waves - Robin Schulz Radio Edit",
+            "uri": "spotify:track:5Sf3GyLEAzJXxZ5mbCPXTu",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Victorious",
+            "uri": "spotify:track:6od5hFv9IT5JHc7NEF9HRv",
+            "scores": [
+                [
+                    "🔥",
+                    1
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Thnks fr th Mmrs",
+            "uri": "spotify:track:3Zwu2K0Qa5sT6teCCHPShP",
+            "scores": [
+                [
+                    "🔥",
+                    1
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "This Is What You Came For",
+            "uri": "spotify:track:0azC730Exh71aQlOt9Zj3y",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "THATS WHAT I WANT",
+            "uri": "spotify:track:3egamOji0THEWgIOnAN2LX",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "A Sweeter Place (feat. Kid Cudi)",
+            "uri": "spotify:track:4bb94wZVF1cX66vQjNeJTX",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Sweet Dreams",
+            "uri": "spotify:track:4uDhts78RdwIDjEqPrYVKp",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Sweater Weather",
+            "uri": "spotify:track:2QjOHCTQ1Jl3zawyYOpxh6",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Super Gremlin",
+            "uri": "spotify:track:1Y5Jvi3eLi4Chwqch9GMem",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Stone",
+            "uri": "spotify:track:76EVeVC8cRdqbAKFuj3jv5",
+            "scores": [
+                [
+                    "🔥",
+                    1
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Separate Ways (Worlds Apart)",
+            "uri": "spotify:track:4ECNtOnqzxutZkXP4TE3n3",
+            "scores": [
+                [
+                    "🔥",
+                    2
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Say Amen (Saturday Night)",
+            "uri": "spotify:track:76vMKwFtdDDCLcM6zXybjB",
+            "scores": [
+                [
+                    "🔥",
+                    1
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Save Your Tears",
+            "uri": "spotify:track:5QO79kh1waicV47BqGRL3g",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "Riot",
+            "uri": "spotify:track:1igr912oduAmZQaoGhiADw",
+            "scores": [
+                [
+                    "🔥",
+                    2
+                ],
+                [
+                    "🎶",
+                    0
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Ride It",
+            "uri": "spotify:track:2tnVG71enUj33Ic2nFN6kZ",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Prisoner (feat. Dua Lipa)",
+            "uri": "spotify:track:2Oycxb8QbPkpHTo8ZrmG0B",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        },
+        {
+            "name": "Pepas",
+            "uri": "spotify:track:5fwSHlTEWpluwOM0Sxnh5k",
+            "scores": [
+                [
+                    "🔥",
+                    0
+                ],
+                [
+                    "🎶",
+                    1
+                ],
+                [
+                    "☔",
+                    0
+                ]
+            ]
+        }
+    ]
+}

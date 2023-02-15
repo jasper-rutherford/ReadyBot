@@ -1,7 +1,7 @@
 module.exports = {
-    name: '⏭',
+    name: '⏮',
     secret: false,
-    description: "skips the current song",
+    description: "goes to the previous song",
     execute(params, bot)
     {
         let oldSong;
@@ -13,7 +13,7 @@ module.exports = {
             oldSong = song.name
 
             //skip the song
-            return bot.spotifyApi.skipToNext()
+            return bot.spotifyApi.skipToPrevious()
         })
 
         //get the current song
@@ -23,10 +23,10 @@ module.exports = {
         .then((song) => 
         {
             //update the ballot to reflect new song
-            bot.updateUtilityMessage(`Skipped [${oldSong}]\nNow playing [${song.name}]`)
-
+            bot.updateUtilityMessage(`No longer playing [${oldSong}]\nNow back to [${song.name}]`)
+            
             //update logs
-            console.log(`Skipped [${oldSong}]\nNow playing [${song.name}]`)
+            console.log(`No longer playing [${oldSong}]\nNow back to [${song.name}]`)
         }), 
         function (err)
         {

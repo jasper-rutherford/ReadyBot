@@ -4,14 +4,14 @@ const client = new Discord.Client();
 const fs = require('fs');
 const express = require('express');
 
-const { tokenDiscord, testTokenDiscord, clientId, clientSecret } = require('./data/config.json');
+const { tokenDiscord, discordToken, clientId, clientSecret } = require('./data/config.json');
 const { resolve } = require('path');
 
 const app = express();
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: true,
+    testbuild: false,
     temp: true,
     tokenDiscord: tokenDiscord,
     prefix: '~',
@@ -33,20 +33,23 @@ var bot = {
     }),
     spotifyUserID: '446i69szgjkow87ew9yjbbhnn',             //my user id
 
-    // barrelID: "4jCZqEM3AdWj3uSpjuY9IK",              // bottom of the barrel
-    barrelID: "1czJUIain2ghS4PFXe0xFS",                 // Best 
-
     //NEW 12/17 - keep
-    barrelList: [],                                         // json friendly list of songs in the barrel 
-    songlist: [],                                           // json friendly list of songs in the theme
-    playlistID: null,                                       // id of the current theme's playlist
-    currentTheme: '',                                       // the current theme
-    themes: [],                                             // a list of all the themes
-    ballotMessage: null,                                    // the message from the bot which the user reacts to 
     commandMessage: null,                                   // the message from the user which requested a command
     spotifyChannel: '904467973434134589',                   // default location to send ballot 
-    defaultSongScore: 2,
     themeToDelete: undefined,                               // used to confirm that a theme should be deleted
+
+    //new as of 2/13 (multi voting update)
+    multiThemes: [],                                        // stores the themes and their info (name, emoji, playlistID)
+    multiSongs: [],                                         // stores the songs and their info (name, uri, scores)
+    multiDefaultSongScore: 0,                               // the default score a song should have for any theme
+    multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
+    multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
+    multiMode: 'UPVOTE',                                    // the current mode selected via the utility message. Can be {UPVOTE, DOWNVOTE, ORDER, SHUFFLE, CREATE, DELETING, DELETE}
+    utilityEmojis:                                          // the emoji who perform actions for the utility message
+        ["⏮", "⬇", "⬆", "⏭", "🔀", "↕", "🆕", "🗑", "❔"],
+    deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
+    deleteMessage: null,                                    // the message warning the user about their potential deletion
+    deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
 
     initialUpdates: function ()
     {
@@ -71,94 +74,25 @@ var bot = {
 
     loadSpot: async function ()
     {
+        //test stuff
         bot.testStuff();
 
-        // read the barrel from spotify
-        bot.readBarrelList()
-        .then(() => 
-        {
-            //read in current theme/available themes
-            let wrapper = JSON.parse(fs.readFileSync("./data/spotify/themes.json"));
-            bot.currentTheme = wrapper.currentTheme
-            bot.themes = wrapper.themes
+        //load themes/songs in from the file
+        bot.readFromFile();
 
-            //if there is no current theme, create a default theme
-            if (bot.themes.length == 0)
-            {
-                //send a message announcing the creation of a default theme
-                bot.client.channels.cache.get(bot.spotifyChannel).send("No themes found! Creating a default theme.")
-
-                //create a theme
-                .then(sent => bot.createTheme("default", sent))        
-                
-                //set the theme to this new default theme
-                .then(() => bot.setTheme("default"))
-            }
-            else
-            {
-                //set theme to most recent theme
-                bot.setTheme(bot.currentTheme);
-            }
-        })
+        //send the ballots
+        bot.helpers('sendballots', bot.client.channels.cache.get(bot.spotifyChannel));
     },
 
-    //reads the songs from the barrel into the barrel list (json friendly)
-    readBarrelList: function ()
+    //gets the list of emojis from the list of themes
+    getThemojis: function()
     {
-        //promise time
-        return new Promise((resolve, reject) =>
+        let emojis = []
+        for (let theme of bot.multiThemes)
         {
-            //update console
-            console.log("Reading barrel");
-
-            // Get the tracks from the barrel
-            this.getTracks(bot.barrelID)
-                .then(function (tracks)
-                {
-                    //convert to json friendly list of songs
-                    tracks.forEach(item =>         
-                    {
-                        //only support non-local songs
-                        if (item.track.uri.indexOf("spotify:local") == -1)
-                        {
-                            //json representation of the song
-                            let song =
-                            {
-                                name: item.track.name,
-                                uri: item.track.uri,
-                                score: -1
-                            }
-                            
-                            //push the song onto the barrel list
-                            bot.barrelList.push(song);
-                        }
-                        else
-                        {
-                            console.log(item.track.uri + " is local and unsupported.");
-                        }
-                    });
-
-                    //send an update to the console
-                    console.log("Barrel has been read");
-
-                    //barrel has been read, so resolve
-                    resolve();
-                })
-                .catch(function (error) 
-                {
-                    if (error.statusCode === 500 || error.statusCode === 502)
-                    {
-                        console.log("Server error while reading the barrel, trying again");
-                        bot.readBarrelList()
-                            .then(() => resolve())
-                    }
-                    else
-                    {
-                        console.log('Something went wrong while reading the barrel! 111');
-                        console.log(error);
-                    }
-                });
-        })
+            emojis.push(theme.emoji)
+        }
+        return emojis
     },
 
     getTracks(playlistID)
@@ -295,87 +229,117 @@ var bot = {
         bot.saveThemes();
     },
 
-    saveThemes()
+    emojiAvailable: function (emoji)
     {
-        //what to save
-        var wrapper =
+        if (emoji === "❔")
         {
-            currentTheme: bot.currentTheme,
-            themes: bot.themes
+            return false
         }
 
-        //where to save to
-        var fileName = './data/spotify/themes.json';
-
-        //saves the thing to the file
-        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
+        for (let theme of bot.multiThemes)
         {
-            if (e) throw e;
-        });
+            if (theme.emoji === emoji)
+            {
+                return false
+            }
+        }
+
+        return true
     },
 
-    saveTheme(themeName = bot.currentTheme, playlistID = bot.playlistID, songList = bot.songlist)
+    //gives each song a default song score for the provided emoji
+    createDefaultScores: function (emoji)
     {
-        console.log(`Saving '${themeName}' to file`)
+        for (let song of bot.multiSongs)
+        {
+            song.scores.set(emoji, bot.multiDefaultSongScore);
+        }
+    },
+
+    // saves the list of themes and list of songs to the file
+    saveToFile: function ()
+    {
+        console.log(`Saving themes and songs to file`)
+
         //what to save
         var wrapper =
         {
-            playlistID: playlistID,
-            songs: songList
+            themes: bot.multiThemes,
+            songs: []
+        }
+
+        //convert songs into the wrapper (discord collections cant be json stringified)
+
+        for (let song of bot.multiSongs)
+        {
+            let scores = []
+
+            for (let emoji of song.scores.keys())
+            {
+                scores.push([emoji, song.scores.get(emoji)])
+            }
+
+            wrapper.songs.push({
+                name: song.name,
+                uri: song.uri,
+                scores: scores
+            })
         }
 
         //where to save to
-        var fileName = './data/spotify/themes/' + themeName + '.json';
+        var fileName = './data/spotify/multidata.json';
 
         //saves the thing to the file
-        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
+        fs.writeFileSync(fileName, JSON.stringify(wrapper, null, 4), e =>
         {
             if (e) throw e;
         });
 
         //log to console
-        console.log(`Saved '${themeName}' to file`)
+        console.log(`Saved themes and songs to file`)
     },
 
-    createTheme: function (themeName, message)
+    readFromFile: function ()
     {
-        return new Promise((resolve, reject) => 
+        console.log("reading themes and songs from file")
+
+        //read in wrapped themes/songs
+        let wrapper = JSON.parse(fs.readFileSync('./data/spotify/multidata.json'));
+
+        bot.multiThemes = wrapper.themes
+
+        bot.multiSongs = []
+
+        //unwrap songs back into discord collections
+        for (let song of wrapper.songs)
         {
-            console.log('Trying to create a theme called "' + themeName + '"');
-
-            //if theme already exists
-            if (bot.themes.indexOf(themeName) != -1)
+            let scores = new Discord.Collection();
+            
+            for (let scorePair of song.scores)
             {
-                console.log("Tried to create a theme that already exists.");
+                scores.set(scorePair[0], scorePair[1])
             }
-            //if theme does not exist
-            else
-            {
-                //add theme to list of themes
-                bot.addTheme(themeName); 
-    
-                //build the new list, each song defaults to a value of bot.defaultSongScore
-                let newList = bot.buildNewList();
-                
-                //create a playlist                             probably messier than it could be :/
-                bot.createPlaylist(themeName)
-                .then ((playlistStuff) =>
-                {
-                    //save the created theme to file
-                    bot.saveTheme(themeName, playlistStuff.playlistID, newList)
 
-                    //add all songs to the playlist
-                    bot.addSongsToPlaylist(playlistStuff.playlistID, newList)
-    
-                    //send link to playlist
-                    .then(() =>
-                    {
-                        message.channel.send("Here's " + themeName + ":\n" + playlistStuff.playlistURL)
-                        resolve()
-                    })
-                });
+            bot.multiSongs.push({
+                name: song.name,
+                uri: song.uri,
+                scores: scores
+            })
+        }
+    },
+
+    //finds the theme with the provided emoji and returns that theme's playlistID (null if emoji not found)
+    themePlaylistIDFromEmoji: function(emoji)
+    {
+        for (let theme of bot.multiThemes)
+        {
+            if (theme.emoji === emoji)
+            {
+                return theme.id
             }
-        })
+        }
+
+        return null
     },
 
     createPlaylist: function (themeName)
@@ -414,36 +378,28 @@ var bot = {
         })
     },
 
-    //creates a fresh list of songs from the barrel, each song with a default score of bot.defaultSongScore
-    buildNewList()
+    updateUtilityMessage: function (message = null)
     {
-        list = [];
-
-        for (var i = 0; i < bot.barrelList.length; i++)
+        let out = ""
+        if (message != null)
         {
-            let barrelSong = bot.barrelList[i];
-
-            listSong = 
-            {
-                name: barrelSong.name,
-                uri: barrelSong.uri,
-                score: bot.defaultSongScore
-            }
-
-            list.push(listSong);
+            out += `${message}\n`
         }
 
-        return list
+        bot.multiUtilityMessage.edit(`${out}[Current Mode: ${bot.multiMode}]`)
+    },
+
+    updateVoteMessage: function (message)
+    {
+        bot.multiVoteMessage.edit(message)
     },
 
     //gets the song which corresponds with the provided uri from the provided list of songs
     //returns null if uri is not found
     getSongByUri(uri, songs)
     {
-        for (let i in songs)
+        for (let song of songs)
         {
-            let song = songs[i]
-
             if (song.uri === uri)
             {
                 return song
@@ -453,80 +409,20 @@ var bot = {
         return null;
     },
 
-    //upon resolve, the provided uri will be in the barrel playlist, the barrel list, and the song list
-    ensureUriIsInBarrel(uri)
+    //takes a list of songs, returns a list of all the songs that have positive scores for the provided emoji
+    positiveScores(emoji, songs)
     {
-        return new Promise((resolve, reject) =>
+        let positiveScores = []
+
+        for (let song of songs)
         {
-
-            // this is hard :(
-            // todo :/
-            if (bot.getSongByUri(uri, bot.barrelList) === null)
+            if (song.scores.get(emoji) > 0)
             {
-                console.log("that song's not in the barrel, thats on the to do list. ignored for now.")
-                reject("Song not in barrel")
-            }
-            resolve(uri)
-
-            // //if song not in barrel
-            // if (bot.getSongByUri(uri, bot.barrelList) === null)
-            // {
-            //     //alert user somehow TODO
-            //     console.log("todo")
-
-            //     // add to barrel playlist
-            //     bot.addUriToPlaylist(uri, bot.barrelID)
-
-            //     //add to theme playlist
-            //     .then(() => bot.addUriToPlaylist(uri, bot.playlistID))
-
-            //     //update bot.barrelList and bot.songList
-            //     .then(() => 
-            //     {
-                    
-            //     })
-
-            //     // add to barrel list
-            //     // add to song list
-            // }
-        })
-    },
-
-    //takes a list of songs, returns a list of all the songs that have non-negative scores
-    nonNegativeScores(songs)
-    {
-        let nonNegativeScores = []
-
-        for (let songIndex in songs)
-        {
-            let song = songs[songIndex]
-
-            if (song.score >= 0)
-            {
-                nonNegativeScores.push(song)
+                positiveScores.push(song)
             }
         }
         
-        return nonNegativeScores
-    },
-
-    addUriToPlaylist(uri, playlistID)
-    {
-        return bot.addSongsToPlaylist(playlistID, [{uri: uri}])
-    },
-
-    removeUriFromPlaylist(uri, playlistID)
-    {
-        let adjustments = []
-        
-        adjustments.push(
-        {
-            adjustment: "clear",
-            id: playlistID,
-            uri: uri
-        })
-
-        bot.adjust(adjustments)
+        return positiveScores
     },
 
     addSongsToPlaylist(playlistID, songs)
@@ -583,139 +479,37 @@ var bot = {
         })
     },
 
-    updateBallot(update)
-    {
-        bot.ballotMessage.edit(`🎶 Current Theme: [${bot.currentTheme}] 🎶\n${update}`)
-    },
-
-    setTheme: function (theme)
-    {
-        //check if theme exists
-        if (this.themes.indexOf(theme) != -1)
-        {
-            //only save the current theme if there is a current theme that has been set properly
-            if (bot.currentTheme.length != 0 && bot.playlistID != null)
-            {
-                //save current theme
-                bot.saveTheme(bot.currentTheme, bot.playlistID, bot.songlist)
-            }
-
-            //read new theme from file
-            let wrapper = JSON.parse(fs.readFileSync(`./data/spotify/themes/${theme}.json`));
-
-            bot.playlistID = wrapper.playlistID
-            bot.songlist = wrapper.songs
-            bot.currentTheme = theme
-
-            console.log(`Wrapper had the following id: ${bot.playlistID} aka ${wrapper.playlistID}`)
-
-            // --- check vs barrel, add new songs
-            
-            //build adjustments
-            let oldUriList = bot.convertSongsToUris(bot.songlist)
-            let newUriList = bot.convertSongsToUris(bot.barrelList)
-            let adjustments = bot.compareUriLists(bot.playlistID, oldUriList, newUriList)
-
-            //adjust song list
-            for (let adjIndex in adjustments) 
-            {
-                let adjustment = adjustments[adjIndex]
-
-                //for each add adjustment
-                if (adjustment.adjustment === "add")
-                {
-                    //add the song that matches the adjustment to the songlist
-                    let song = bot.getSongByUri(adjustment.uri, bot.barrelList)
-                    bot.songlist.push
-                    ({
-                        name: song.name,
-                        uri: adjustment.uri,
-                        score: bot.defaultSongScore
-                    })
-                }
-            }
-
-            //adjust playlist
-            bot.adjust(adjustments)
-
-            .then(() => 
-            {
-                //save the themes
-                bot.saveThemes()
-
-                //send ballot
-                bot.helpers('sendballot', bot.client.channels.cache.get(bot.spotifyChannel));
-
-                //alert the console 
-                console.log("Theme has been set to", theme);
-            })
-        }
-        else
-        {
-            console.log("theme does not exist");
-        }
-    },
-
     convertSongsToUris: function (songs)
     {
         let uris = []
 
-        for (let songIndex in songs)
+        for (let song of songs)
         {
-            let song = songs[songIndex]
             uris.push(song.uri);
         }
 
         return uris
     },
 
-    buildListFromFile: function ()
+    //reacts all emojis from the list of themes onto the provided message
+    reactAll(emojis, message)
     {
-        //clear the old map
-        this.valuesMap.clear();
-
-        //get wrapper from file
-        var fileName = './data/spotify/themes/' + this.currentTheme + '.json';
-
-        var wrapper = JSON.parse(fs.readFileSync(fileName));
-
-        //set the new playlist IDs
-        for (let lcv = 0; lcv < 6; lcv++)
+        if (emojis.length == 0)
         {
-            bot.playlistIDs[lcv] = wrapper.playlistIDs[lcv];
-            bot.playlistMap.set(wrapper.playlistIDs[lcv], lcv);
+            //done
+            return
         }
 
-        //clear the old list
-        bot.valuesHead = null;
-        bot.valuesTail = null;
-
-        //build the node list from the array in the wrapper
-        for (let lcv = 0; lcv < wrapper.songs.length; lcv++)
+        //pop one emoji from the list, create a new list with all remaining emojis
+        let emoji = emojis[0]
+        let remainingEmojis = []
+        for (let i = 1; i < emojis.length; i++)
         {
-            //create the list node for this step
-            // console.log("uri: " + wrapper.songs[lcv].uri);
-            let listNode = new Node(wrapper.songs[lcv].name, wrapper.songs[lcv].uri, wrapper.songs[lcv].value, null, null);
-
-            //add the node to the map
-            bot.valuesMap.set(listNode.uri, listNode);
-
-            //if it is the first node in the loop 
-            if (bot.valuesHead == null)
-            {
-                //set the node to be head and tail
-                bot.valuesHead = listNode;
-                bot.valuesTail = listNode;
-            }
-            //otherwise
-            else
-            {
-                listNode.prev = bot.valuesTail;   //update the new node's previous 
-                bot.valuesTail.next = listNode;   //update the tail's next
-                bot.valuesTail = listNode;        //set the new node to be the tail
-            }
+            remainingEmojis.push(emojis[i])
         }
-        // console.log(bot.valuesHead);
+
+        //react the emoji to the message, then react the rest
+        message.react(emoji).then(() => this.reactAll(remainingEmojis, message))
     },
 
     adjust: function (adjustments)
@@ -941,20 +735,52 @@ var bot = {
 
     //song: the song whose score is to be changed
     //diff: how much to change the score by
-    changeSongScore: function (song, diff)
+    changeSongScore: function (song, emoji, diff)
     {
-        //change the score
-        song.score = song.score + diff
+        //old score
+        let oldScore = song.scores.get(emoji)
+
+        //new score
+        song.scores.set(emoji, oldScore + diff)
 
         //save the updated song list to file
-        bot.saveTheme()
+        bot.saveToFile()
     },
+
+    //check song exists in the list of songs
+    ensureMultiSongExists: function (uri, name)
+    { 
+        // dont support local songs
+        if (uri.indexOf("spotify:local") != -1)
+        {
+            console.log(`${name} is local and unsupported`);
+            bot.updateVoteMessage(`${name} is local and unsupported`)
+        }
+
+        //if song doesnt exist
+        if (bot.getSongByUri(uri, bot.multiSongs) == null)
+        {
+            let scores = new Discord.Collection()
+
+            for (let emoji of bot.getThemojis())
+            {
+                scores.set(emoji, bot.multiDefaultSongScore)
+            }
+
+            //add a song to the list with default scores
+            bot.multiSongs.push({
+                name: name,
+                uri: uri, 
+                scores: scores
+            })
+        }
+    }
 }
 
 //switches the variables to the test bot's stuff
 if (bot.testbuild)
 {
-    bot.tokenDiscord = testTokenDiscord;
+    bot.tokenDiscord = discordToken;
     bot.guildID = '254631721620733952';
     bot.jaspaDM = '755291736871272490';
     bot.botID = '754865264390176839';
@@ -1015,7 +841,7 @@ client.once('ready', () =>
 {
     bot.initialUpdates();
 
-    console.log('Readybot 4: Spotify Edition 2');
+    console.log('Arbiot 1.0');
 
     if (bot.testbuild)
     {
@@ -1074,16 +900,49 @@ client.on('messageReactionAdd', (reaction, user) =>
         reaction.users.remove(user);
     }
 
-    // if there is a ballot and this message is the ballot and the person who reacted is jasper
-    if (bot.ballotMessage != null && reaction.message.id === bot.ballotMessage.id && user.id === bot.jaspaID)
+    // if there is a utility message and this message is the utility message and the person who reacted is jasper
+    if (bot.multiUtilityMessage != null && reaction.message.id === bot.multiUtilityMessage.id && user.id === bot.jaspaID)
     {
         //check that emoji is valid
-        if (["⏬", "⬇", "⏭", "⬆", "🔀", "↕"].includes(reaction.emoji.name))
+        if (bot.utilityEmojis.includes(reaction.emoji.name))
         {
             // call helper for emoji
             bot.helpers(reaction.emoji.name, {reaction: reaction, user: user});
             reaction.users.remove(user);
+            return
         }
+    }
+
+    // if there is a vote message and this message is the vote message and the person who reacted is jasper
+    if (bot.multiVoteMessage != null && reaction.message.id === bot.multiVoteMessage.id && user.id === bot.jaspaID)
+    {
+        //check for custom emojis
+        if (reaction.emoji.createdAt != null)
+        {
+            bot.updateVoteMessage("Custom Emojis are not supported")
+            console.log('Tried to create theme with custom emoji')
+        }
+        else
+        {
+            // call helper for mode
+            bot.helpers(bot.multiMode, {emoji: reaction.emoji.name});
+        }
+
+        reaction.users.remove(user);
+        return
+    }
+
+    // if there is a delete message and this message is the delete message and the person who reacted is jasper
+    if (bot.deleteMessage != null && reaction.message.id === bot.deleteMessage.id && user.id === bot.jaspaID)
+    {
+        //check that emoji is valid
+        if (bot.deleteEmojis.includes(reaction.emoji.name))
+        {
+            // call helper for emoji
+            bot.helpers(reaction.emoji.name, {});
+            reaction.users.remove(user);
+        }
+        return
     }
 });
 
