@@ -4,8 +4,16 @@ module.exports = {
     description: "orders the songs in the current theme's playlist by score, most to least",
     execute(params, bot)
     {
+        //check emoji is valid
+        if (!bot.getThemojis().includes(params.emoji))
+        {
+            console.log(`Tried to order a theme that does not exist (${params.emoji})`);
+            bot.updateUtilityMessage(`${params.emoji} does not exist.`)
+            return
+        }
+
         //update the ballot
-        bot.updateVoteMessage(`Ordering ${params.emoji}`)
+        bot.updateUtilityMessage(`Ordering ${params.emoji}`)
         console.log(`Ordering ${params.emoji}`)
 
         // order songs list
@@ -43,7 +51,7 @@ module.exports = {
         .then(() => bot.addSongsToPlaylist(bot.themePlaylistIDFromEmoji(params.emoji), bot.positiveScores(params.emoji, bot.multiSongs))) 
 
         //update ballot
-        .then(() => bot.updateVoteMessage(`Finished Ordering ${params.emoji}`))
+        .then(() => bot.updateUtilityMessage(`Finished Ordering ${params.emoji}`))
 
         console.log(`Finished Ordering ${params.emoji}`)
     }

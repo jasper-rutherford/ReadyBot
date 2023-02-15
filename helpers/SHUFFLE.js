@@ -4,8 +4,16 @@ module.exports = {
     description: "shuffles the songs in the current theme's playlist",
     execute(params, bot)
     {
+        //check emoji is valid
+        if (!bot.getThemojis().includes(params.emoji))
+        {
+            console.log(`Tried to shuffle a theme that does not exist (${params.emoji})`);
+            bot.updateUtilityMessage(`${params.emoji} does not exist.`)
+            return
+        }
+
         //update the vote message
-        bot.updateVoteMessage(`Shuffling ${params.emoji}`)
+        bot.updateUtilityMessage(`Shuffling ${params.emoji}`)
         console.log(`Shuffling ${params.emoji}`)
         
         //shuffle songs list
@@ -34,7 +42,7 @@ module.exports = {
         .then(() => bot.addSongsToPlaylist(bot.themePlaylistIDFromEmoji(params.emoji), bot.positiveScores(params.emoji, bot.multiSongs))) 
 
         //update ballot
-        .then(() => bot.updateVoteMessage(`Finished Shuffling ${params.emoji}`))
+        .then(() => bot.updateUtilityMessage(`Finished Shuffling ${params.emoji}`))
 
         console.log(`Finished Shuffling ${params.emoji}`)
     }

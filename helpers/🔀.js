@@ -5,6 +5,6 @@ module.exports = {
     execute(params, bot)
     {
         bot.multiMode = "SHUFFLE"
-        bot.updateUtilityMessage("Current Mode: SHUFFLE")
+        bot.updateUtilityMessage()
     }
 }  

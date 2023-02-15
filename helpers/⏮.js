@@ -24,7 +24,7 @@ module.exports = {
         {
             //update the ballot to reflect new song
             bot.updateUtilityMessage(`No longer playing [${oldSong}]\nNow back to [${song.name}]`)
-
+            
             //update logs
             console.log(`No longer playing [${oldSong}]\nNow back to [${song.name}]`)
         }), 

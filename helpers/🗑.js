@@ -1,10 +1,10 @@
 module.exports = {
-    name: '↕',
+    name: '🗑',
     secret: false,
-    description: "switches to order mode",
+    description: "switches to DELETE mode",
     execute(params, bot)
     {
-        bot.multiMode = "ORDER"
+        bot.multiMode = "DELETE"
         bot.updateUtilityMessage()
     }
 }  

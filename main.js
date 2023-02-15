@@ -4,14 +4,14 @@ const client = new Discord.Client();
 const fs = require('fs');
 const express = require('express');
 
-const { tokenDiscord, testTokenDiscord, clientId, clientSecret } = require('./data/config.json');
+const { tokenDiscord, discordToken, clientId, clientSecret } = require('./data/config.json');
 const { resolve } = require('path');
 
 const app = express();
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: true,
+    testbuild: false,
     temp: true,
     tokenDiscord: tokenDiscord,
     prefix: '~',
@@ -41,12 +41,15 @@ var bot = {
     //new as of 2/13 (multi voting update)
     multiThemes: [],                                        // stores the themes and their info (name, emoji, playlistID)
     multiSongs: [],                                         // stores the songs and their info (name, uri, scores)
-    emojiThemeListener: null,                               // used to set a new theme's emoji
-    newThemeName: "",                                       // used while waiting for the user to input an emoji to the emojiThemeListener
     multiDefaultSongScore: 0,                               // the default score a song should have for any theme
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
-    multiMode: 'UPVOTE',                                    // the current mode selected via the utility message. Can be {UPVOTE, DOWNVOTE, ORDER, SHUFFLE}
+    multiMode: 'UPVOTE',                                    // the current mode selected via the utility message. Can be {UPVOTE, DOWNVOTE, ORDER, SHUFFLE, CREATE, DELETING, DELETE}
+    utilityEmojis:                                          // the emoji who perform actions for the utility message
+        ["⏮", "⬇", "⬆", "⏭", "🔀", "↕", "🆕", "🗑", "❔"],
+    deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
+    deleteMessage: null,                                    // the message warning the user about their potential deletion
+    deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
 
     initialUpdates: function ()
     {
@@ -226,69 +229,6 @@ var bot = {
         bot.saveThemes();
     },
 
-    //before receiving emoji
-    createThemePart1: function (themeName, message)
-    {
-        console.log('Attempting to create a theme called "' + themeName + '"');
-
-        //if theme already exists
-        if (bot.themeExists(themeName))
-        {
-            console.log("Tried to create a theme that already exists.");
-            message.channel.send("That theme already exists.")
-            return
-        }
-
-        //send message prompting emoji
-        console.log(`sending message prompting emoji for new theme ${themeName}`)
-
-        //save name of theme, to be used in createThemePart2()
-        bot.newThemeName = themeName
-        message.channel.send('what emoji?')
-        .then(message => bot.emojiThemeListener = message)
-        .catch(console.error);
-    },
-    
-    //checks if the provided theme exists, used when creating themes
-    themeExists: function (themeName)
-    {
-        for (let theme of bot.multiThemes)
-        {
-            if (theme.name === themeName)
-            {
-                return true
-            }
-        }
-
-        return false
-    },
-
-    //after receiving emoji
-    createThemePart2: function (emoji)
-    {
-        //create a playlist                             probably messier than it could be :/
-        bot.createPlaylist(bot.newThemeName)
-        .then ((playlistStuff) =>
-        {
-            //add theme to list of themes
-            bot.multiThemes.push
-            ({
-                name: bot.newThemeName,
-                emoji: emoji,
-                id: playlistStuff.playlistID
-            }); 
-
-            //give the songs a default score for this new theme
-            bot.createDefaultScores(emoji)
-
-            //save the new info to file
-            bot.saveToFile()
-            
-            // send new playlist/theme to user
-            message.channel.send("Here's " + themeName + ":\n" + playlistStuff.playlistURL).then(message => message.react(emoji))
-        });
-    },
-
     emojiAvailable: function (emoji)
     {
         if (emoji === "❔")
@@ -350,7 +290,7 @@ var bot = {
         var fileName = './data/spotify/multidata.json';
 
         //saves the thing to the file
-        fs.writeFileSync(fileName, JSON.stringify(wrapper), e =>
+        fs.writeFileSync(fileName, JSON.stringify(wrapper, null, 4), e =>
         {
             if (e) throw e;
         });
@@ -438,9 +378,15 @@ var bot = {
         })
     },
 
-    updateUtilityMessage: function (message)
+    updateUtilityMessage: function (message = null)
     {
-        bot.multiUtilityMessage.edit(message)
+        let out = ""
+        if (message != null)
+        {
+            out += `${message}\n`
+        }
+
+        bot.multiUtilityMessage.edit(`${out}[Current Mode: ${bot.multiMode}]`)
     },
 
     updateVoteMessage: function (message)
@@ -470,7 +416,7 @@ var bot = {
 
         for (let song of songs)
         {
-            if (song.scores.get(emoji) >= 0)
+            if (song.scores.get(emoji) > 0)
             {
                 positiveScores.push(song)
             }
@@ -543,6 +489,27 @@ var bot = {
         }
 
         return uris
+    },
+
+    //reacts all emojis from the list of themes onto the provided message
+    reactAll(emojis, message)
+    {
+        if (emojis.length == 0)
+        {
+            //done
+            return
+        }
+
+        //pop one emoji from the list, create a new list with all remaining emojis
+        let emoji = emojis[0]
+        let remainingEmojis = []
+        for (let i = 1; i < emojis.length; i++)
+        {
+            remainingEmojis.push(emojis[i])
+        }
+
+        //react the emoji to the message, then react the rest
+        message.react(emoji).then(() => this.reactAll(remainingEmojis, message))
     },
 
     adjust: function (adjustments)
@@ -784,7 +751,7 @@ var bot = {
     ensureMultiSongExists: function (uri, name)
     { 
         // dont support local songs
-        if (item.track.uri.indexOf("spotify:local") != -1)
+        if (uri.indexOf("spotify:local") != -1)
         {
             console.log(`${name} is local and unsupported`);
             bot.updateVoteMessage(`${name} is local and unsupported`)
@@ -813,7 +780,7 @@ var bot = {
 //switches the variables to the test bot's stuff
 if (bot.testbuild)
 {
-    bot.tokenDiscord = testTokenDiscord;
+    bot.tokenDiscord = discordToken;
     bot.guildID = '254631721620733952';
     bot.jaspaDM = '755291736871272490';
     bot.botID = '754865264390176839';
@@ -874,7 +841,7 @@ client.once('ready', () =>
 {
     bot.initialUpdates();
 
-    console.log('Readybot 4: Spotify Edition 3');
+    console.log('Arbiot 1.0');
 
     if (bot.testbuild)
     {
@@ -933,18 +900,11 @@ client.on('messageReactionAdd', (reaction, user) =>
         reaction.users.remove(user);
     }
 
-    //if there is a emojiThemeListener and this message is the emojiThemeListener, send the reacted emoji into createThemePart2 (emoji must be available)
-    if (bot.emojiThemeListener != null && reaction.message.id === bot.emojiThemeListener.id && user.id === bot.jaspaID && bot.emojiAvailable(reaction.emoji.name))
-    {
-        bot.createThemePart2(reaction.emoji.name)
-        return
-    }
-
     // if there is a utility message and this message is the utility message and the person who reacted is jasper
     if (bot.multiUtilityMessage != null && reaction.message.id === bot.multiUtilityMessage.id && user.id === bot.jaspaID)
     {
         //check that emoji is valid
-        if (["⏮", "⬇", "⬇", "⏭", "🔀", "↕", "❔"].includes(reaction.emoji.name))
+        if (bot.utilityEmojis.includes(reaction.emoji.name))
         {
             // call helper for emoji
             bot.helpers(reaction.emoji.name, {reaction: reaction, user: user});
@@ -956,14 +916,33 @@ client.on('messageReactionAdd', (reaction, user) =>
     // if there is a vote message and this message is the vote message and the person who reacted is jasper
     if (bot.multiVoteMessage != null && reaction.message.id === bot.multiVoteMessage.id && user.id === bot.jaspaID)
     {
-        //check that emoji is valid
-        if (bot.getThemojis().includes(reaction.emoji.name))
+        //check for custom emojis
+        if (reaction.emoji.createdAt != null)
+        {
+            bot.updateVoteMessage("Custom Emojis are not supported")
+            console.log('Tried to create theme with custom emoji')
+        }
+        else
         {
             // call helper for mode
             bot.helpers(bot.multiMode, {emoji: reaction.emoji.name});
-            reaction.users.remove(user);
-            return
         }
+
+        reaction.users.remove(user);
+        return
+    }
+
+    // if there is a delete message and this message is the delete message and the person who reacted is jasper
+    if (bot.deleteMessage != null && reaction.message.id === bot.deleteMessage.id && user.id === bot.jaspaID)
+    {
+        //check that emoji is valid
+        if (bot.deleteEmojis.includes(reaction.emoji.name))
+        {
+            // call helper for emoji
+            bot.helpers(reaction.emoji.name, {});
+            reaction.users.remove(user);
+        }
+        return
     }
 });
 

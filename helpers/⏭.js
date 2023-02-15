@@ -23,7 +23,7 @@ module.exports = {
         .then((song) => 
         {
             //update the ballot to reflect new song
-            bot.updateBallot(`Skipped [${oldSong}]\nNow playing [${song.name}]`)
+            bot.updateUtilityMessage(`Skipped [${oldSong}]\nNow playing [${song.name}]`)
 
             //update logs
             console.log(`Skipped [${oldSong}]\nNow playing [${song.name}]`)

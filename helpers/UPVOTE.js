@@ -4,6 +4,14 @@ module.exports = {
     description: "increments the current song's score by 1",
     execute(params, bot)
     {
+        //check emoji is valid
+        if (!bot.getThemojis().includes(params.emoji))
+        {
+            console.log(`Tried to upvote a theme that does not exist (${params.emoji})`);
+            bot.updateUtilityMessage(`${params.emoji} does not exist.`)
+            return
+        }
+
         //get current song uri
         // check if a song is playing
         bot.spotifyApi.getMyCurrentPlaybackState()
@@ -30,7 +38,6 @@ module.exports = {
             let uri = data.body.item.uri;
 
             //ensure that the song exists in the system
-            console.log("this is probably wrong")
             bot.ensureMultiSongExists(uri, data.body.item.name)
 
             //get song by uri
@@ -40,7 +47,8 @@ module.exports = {
             bot.changeSongScore(song, params.emoji, 1)
 
             //update the vote message to reflect latest score change
-            bot.updateBallot(`[${song.name}] has a score of [${song.score}] for ${params.emoji}`)
+            bot.updateVoteMessage(`[${song.name}] has a score of [${song.scores.get(params.emoji)}] for ${params.emoji}`)
+            console.log(`[${song.name}] has a score of [${song.scores.get(params.emoji)}] for ${params.emoji}`)
         })
         .catch((error) =>
         {

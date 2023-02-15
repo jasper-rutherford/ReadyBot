@@ -4,44 +4,32 @@ module.exports = {
     description: "sends the multi voting ballots to the desired channel",
     execute(channel, bot)
     {
+        //message 0: a line separating the above messages from these
+        channel.send("-----------------------------------------------------")
+
         //message 1: the utility message
-        let message1Content = "Utility Message"
+        let message1Content = `[Current Mode: ${bot.multiMode}]`
         channel.send(message1Content).then(sent =>
         {
             bot.multiUtilityMessage = sent
-            sent.react('⏮')
-            .then(() => sent.react('⏭'))
-            .then(() => sent.react('🔀'))
-            .then(() => sent.react('↕'))
-            .then(() => sent.react('❔'))
+            bot.reactAll(bot.utilityEmojis, sent)
         })
 
-        //message 2: the voting message
-        let message2Content = "Vote Message"
+        //message 2: the voting message - initializes to a bunch of dancers :)
+        let dancers = ["💃", "🕺"]
+        let message2Content = ``
+        for (let i = 0; i < 8; i++)
+        {
+            message2Content += `${dancers[this.getRandomInt(2)]}  `
+        }
         channel.send(message2Content).then(sent =>
         {
             bot.multiVoteMessage = sent
-            reactAll(bot.getThemojis(), sent)
+            bot.reactAll(bot.getThemojis(), sent)
         })
     },
-    //reacts all emojis from the list of themes onto the provided message
-    reactAll(emojis, message)
+    getRandomInt(max) 
     {
-        if (emojis.length == 0)
-        {
-            //done
-            return
-        }
-
-        //pop one emoji from the list, create a new list with all remaining emojis
-        let emoji = emojis[0]
-        let remainingEmojis = []
-        for (let i = 1; i < emojis.length; i++)
-        {
-            remainingEmojis.push(emojis[i])
-        }
-
-        //react the emoji to the message, then react the rest
-        message.react(emoji).then(() => this.reactAll(remainingEmojis, message))
+        return Math.floor(Math.random() * max);
     }
 }  

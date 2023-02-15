@@ -5,6 +5,6 @@ module.exports = {
     execute(params, bot)
     {
         bot.multiMode = "DOWNVOTE"
-        bot.updateUtilityMessage("Current Mode: DOWNVOTE")
+        bot.updateUtilityMessage()
     }
 }  
