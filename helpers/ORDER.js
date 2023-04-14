@@ -27,7 +27,7 @@ module.exports = {
             for (let j = 0; j < bot.multiSongs.length; j++)
             {
                 let otherSong = bot.multiSongs[j]
-                if (otherSong.score > bigSong.score)
+                if (otherSong.scores.get(params.emoji) > bigSong.scores.get(params.emoji))
                 {
                     index = j
                     bigSong = otherSong
