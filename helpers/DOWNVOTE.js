@@ -47,7 +47,7 @@ module.exports = {
             bot.changeSongScore(song, params.emoji, -1)
 
             //update the vote message to reflect latest score change
-            bot.updateVoteMessage(`[${song.name}] has a score of [${song.scores.get(params.emoji)}] for ${params.emoji}`)
+            bot.updateVoteMessage(`[${song.name}] has a score of [|| ${song.scores.get(params.emoji)} ||] for ${params.emoji}`)
             console.log(`[${song.name}] has a score of [${song.scores.get(params.emoji)}] for ${params.emoji}`)
         })
         .catch((error) =>
