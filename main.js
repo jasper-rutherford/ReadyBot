@@ -276,7 +276,18 @@ var bot = {
 
             for (let emoji of song.scores.keys())
             {
-                scores.push([emoji, song.scores.get(emoji)])
+                let score = song.scores.get(emoji)
+                // only save non default scores TODO REMOVE THIS
+                if (score != 0)
+                {
+                    scores.push(
+                    {
+                        emoji: emoji,
+                        score: score,
+                        peakScore: score,
+                        date: new Date()
+                    })
+                }
             }
 
             wrapper.songs.push({
