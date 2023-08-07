@@ -21,13 +21,13 @@ module.exports = {
 
         for (let i = bot.multiSongs.length - 1; i >= 0; i--)
         {
-            //find the song with the largest score
+            //find the song with the SMALLEST score
             let index = 0
             let bigSong = bot.multiSongs[0]
             for (let j = 0; j < bot.multiSongs.length; j++)
             {
                 let otherSong = bot.multiSongs[j]
-                if (otherSong.scores.get(params.emoji)?.score > bigSong.scores.get(params.emoji)?.score)
+                if (otherSong.scores.get(params.emoji)?.score < bigSong.scores.get(params.emoji)?.score)
                 {
                     index = j
                     bigSong = otherSong

@@ -44,7 +44,7 @@ module.exports = {
             let song = bot.getSongByUri(uri, bot.multiSongs)
 
             //decrement score
-            bot.changeSongScore(song, params.emoji, -1)
+            bot.changeSongScore(song, params.emoji, -2)
 
             //update the vote message to reflect latest score change
             bot.updateVoteMessage(`[${song.name}] has a score of [|| ${song.scores.get(params.emoji).score} ||] for ${params.emoji}`)
