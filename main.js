@@ -6,6 +6,7 @@ const express = require('express');
 
 const { tokenDiscord, discordToken, clientId, clientSecret } = require('./data/config.json');
 const { resolve } = require('path');
+const open = require('opn');
 
 const app = express();
 
@@ -53,6 +54,9 @@ var bot = {
 
     initialUpdates: function () {
         // this shit runs right after the bot starts up, but not necessarily before or after teh spotify stuff starts happening
+
+        // open the login page
+        open('http://localhost:8888/login')
     },
 
     //i despise this helpers stuff, but removing it is just gonna have to wait.
@@ -904,7 +908,44 @@ app.get('/callback', (req, res) => {
             console.log(
                 `Successfully retrieved access token. Expires in ${expires_in} s.`
             );
-            res.send('Success! You can now close the window.');
+
+            const htmlResponse = `
+                <html>
+                <head>
+                    <title>Redirecting...</title>
+                    <style>
+                        #timer {
+                            font-size: 20px;
+                            text-align: center;
+                            margin-top: 100px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div id="timer">Successfully logged into Spotify! Closing page in <span id="countdown">5</span> seconds...</div>
+                    <script>
+                        const countdownElement = document.getElementById('countdown');
+                        let countdown = 5; // Change this value to adjust the countdown duration
+
+                        function updateCountdown() {
+                            countdown--;
+                            countdownElement.textContent = countdown;
+                            
+                            if (countdown === 0) {
+                                window.close();
+                            } else {
+                                setTimeout(updateCountdown, 1000); // Update countdown every second
+                            }
+                        }
+
+                        // Start the countdown
+                        updateCountdown();
+                    </script>
+                </body>
+                </html>
+            `;
+
+            res.send(htmlResponse);
 
             bot.loadSpot();
 

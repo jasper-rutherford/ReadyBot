@@ -101,14 +101,14 @@
             ]
         },
         {
-            "name": "LUCID",
-            "uri": "spotify:track:7BoVAJ0HuKcBBRmUGlzX6o",
+            "name": "Stars",
+            "uri": "spotify:track:3mC64Smtz0xXvsa52ZM3Q9",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -6,
-                    "peakScore": 0,
-                    "date": "2023-06-24T18:19:44.879Z"
+                    "score": 16,
+                    "peakScore": 17,
+                    "date": "2023-07-20T21:29:48.554Z"
                 },
                 {
                     "emoji": "🏆",
@@ -117,13 +117,51 @@
             ]
         },
         {
-            "name": "LOL",
-            "uri": "spotify:track:4qsrQnTtzIdmTOXFobkkE9",
+            "name": "Padam Padam",
+            "uri": "spotify:track:3k0DJq2HdWJqnqor8NX0ac",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -5,
+                    "score": 13,
+                    "peakScore": 13,
+                    "date": "2023-09-04T03:18:34.812Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 1,
                     "peakScore": 1,
+                    "date": "2023-08-30T22:29:03.613Z"
+                }
+            ]
+        },
+        {
+            "name": "Lovefool (feat. Pia Mia)",
+            "uri": "spotify:track:3tIjJY43mDAhMZxSuDHvjy",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 10,
+                    "peakScore": 14,
+                    "date": "2023-07-29T17:36:16.905Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Animal",
+            "uri": "spotify:track:3WdijbYmphZ8N0MYblXDnF",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 10,
+                    "peakScore": 12,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
@@ -133,13 +171,1063 @@
             ]
         },
         {
-            "name": "Prisoner (feat. Dua Lipa)",
-            "uri": "spotify:track:2Oycxb8QbPkpHTo8ZrmG0B",
+            "name": "Touch",
+            "uri": "spotify:track:0Pebpt5NlciT4arOfAEgvB",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 9,
+                    "peakScore": 9,
+                    "date": "2023-09-04T03:45:04.987Z"
+                }
+            ]
+        },
+        {
+            "name": "Come Into My World (with NERVO)",
+            "uri": "spotify:track:4Bpyapy2YVNAQBUOBp17uu",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 9,
+                    "peakScore": 11,
+                    "date": "2023-07-27T19:04:28.830Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Do It All Again",
+            "uri": "spotify:track:6BwPstqf4RoRMbDidFWNxE",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 7,
+                    "peakScore": 7,
+                    "date": "2023-07-08T16:30:04.795Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "i miss u (with Au/Ra)",
+            "uri": "spotify:track:7CH8J4ulT49UfZwSDSkSZA",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 5,
+                    "peakScore": 7,
+                    "date": "2023-07-14T22:29:55.081Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Drive (feat. Wes Nelson)",
+            "uri": "spotify:track:6eCmK3GQyFuTNWCJHsaF9d",
             "scores": [
                 {
                     "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 7,
+                    "peakScore": 8,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Numb",
+            "uri": "spotify:track:2OfQvGrr83FGpdLA1nAR01",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 7,
+                    "peakScore": 7,
+                    "date": "2023-09-01T02:45:34.415Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 4,
+                    "peakScore": 4,
+                    "date": "2023-08-30T22:29:11.051Z"
+                }
+            ]
+        },
+        {
+            "name": "Used to Know Me",
+            "uri": "spotify:track:5dry5tz8yLcLuOJ3l6ZEQd",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 8,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Kardashian",
+            "uri": "spotify:track:5sJWJ132Ya4i2xR5cW0B6a",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 10,
+                    "date": "2023-07-14T21:16:39.118Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Goodbye",
+            "uri": "spotify:track:7fWOBXSWN29kaE0spQjUW9",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 7,
+                    "peakScore": 8,
+                    "date": "2023-07-08T20:41:40.447Z"
+                },
+                {
+                    "emoji": "🔥",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T18:37:34.301Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Escapism.",
+            "uri": "spotify:track:5mHdCZtVyb4DcJw8799hZp",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 8,
+                    "date": "2023-07-14T22:22:54.498Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Psycho - Joel Corry Remix",
+            "uri": "spotify:track:3XPl3dGn1oWe7VmKoB8nhU",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 8,
+                    "date": "2023-07-20T21:07:44.649Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Baddest",
+            "uri": "spotify:track:65ffWlQCk6XeKX50CDYgib",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 6,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "UNHEALTHY (feat. Shania Twain)",
+            "uri": "spotify:track:2doTn2LWTKN1Z0lZJG2WQw",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 6,
+                    "date": "2023-06-30T17:31:02.197Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "10:35",
+            "uri": "spotify:track:36gcliMRX1vCpgnrZE3dFZ",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 6,
+                    "date": "2023-06-27T00:10:52.258Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Superstar",
+            "uri": "spotify:track:5gnXJhg3zGHWvrgplrVrxH",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 6,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Regardless",
+            "uri": "spotify:track:3DTqHfTGj1c6y2gDXsTez4",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 5,
+                    "peakScore": 17,
+                    "date": "2023-07-20T20:49:28.760Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Going Dumb",
+            "uri": "spotify:track:7arsXR8AtExnOFN3v3HiJI",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 5,
+                    "peakScore": 8,
+                    "date": "2023-07-20T22:04:38.812Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Tears of Gold - Owen Norton Remix",
+            "uri": "spotify:track:7vzoNK8tbNmmKjDCNGTmkp",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 7,
+                    "peakScore": 7,
+                    "date": "2023-09-03T21:51:43.990Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Hallucinate",
+            "uri": "spotify:track:1nYeVF5vIBxMxfPoL0SIWg",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 5,
+                    "peakScore": 5,
+                    "date": "2023-07-14T21:23:35.711Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "1 Day 2 Nights",
+            "uri": "spotify:track:2LAtELE0xGyMKcvNlxiyF3",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 4,
+                    "peakScore": 9,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "If It Ain’t Me",
+            "uri": "spotify:track:1IdDtg7GhWfHYEWDymq3d2",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 4,
+                    "peakScore": 6,
+                    "date": "2023-07-02T05:44:03.326Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Physical",
+            "uri": "spotify:track:3AzjcOeAmA57TIOr9zF1ZW",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 4,
+                    "peakScore": 8,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Lay Low",
+            "uri": "spotify:track:0zKbDrEXKpnExhGQRe9dxt",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 4,
+                    "peakScore": 5,
+                    "date": "2023-07-30T00:45:34.401Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Lay All Your Love On Me",
+            "uri": "spotify:track:3bjM6KcvV1MwkAm7DJQb9O",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 6,
+                    "peakScore": 6,
+                    "date": "2023-09-04T04:24:12.623Z"
+                }
+            ]
+        },
+        {
+            "name": "I Don’t (with DVBBS)",
+            "uri": "spotify:track:1J9ekSUHGCaWKBdmeEWPJZ",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 11,
+                    "date": "2023-07-17T20:23:11.720Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Heart Wants What It Wants",
+            "uri": "spotify:track:5iaa3eXgzedzQckwFNtIrl",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 3,
+                    "peakScore": 9,
+                    "date": "2023-07-10T04:17:23.354Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Poster Girl",
+            "uri": "spotify:track:5B1TY0oq5I1VeTZxEnkGV8",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 7,
+                    "date": "2023-08-03T05:24:30.604Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Big (feat. Gunna)",
+            "uri": "spotify:track:78oZ26xvmtCfarveRXs3dq",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 3,
+                    "peakScore": 7,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Tick Tock (feat. 24kGoldn)",
+            "uri": "spotify:track:27u7t9d7ZQoyjsCROHuZJ3",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 3,
+                    "peakScore": 5,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Words (feat. Zara Larsson)",
+            "uri": "spotify:track:1bgKMxPQU7JIZEhNsM1vFs",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 3,
+                    "peakScore": 5,
+                    "date": "2023-07-26T16:30:00.047Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Your Love (9PM)",
+            "uri": "spotify:track:5YaskwnGDZFDRipaqzbwQx",
+            "scores": [
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 3,
+                    "peakScore": 11,
+                    "date": "2023-07-20T22:00:29.213Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Beggin'",
+            "uri": "spotify:track:2O84FjR4RW4JDBu8FUZwvX",
+            "scores": [
+                {
+                    "emoji": "🦥",
                     "score": 3,
                     "peakScore": 3,
+                    "date": "2023-09-01T03:15:09.887Z"
+                }
+            ]
+        },
+        {
+            "name": "Mi Amor",
+            "uri": "spotify:track:4mjDUywu5NREDKNPTaRdLE",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 2,
+                    "peakScore": 6,
+                    "date": "2023-07-22T17:08:12.296Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "2019",
+            "uri": "spotify:track:0YETkmonJ718JRimG5zJOm",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 6,
+                    "date": "2023-06-27T00:06:50.167Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Die For a Man (feat. Lil Uzi Vert) - Galantis Remix",
+            "uri": "spotify:track:73sE2IPYKcAvcz4Cd0pe1d",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 2,
+                    "peakScore": 5,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Ghost",
+            "uri": "spotify:track:7LbhIjYNfCguxjAw43Mkff",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 2,
+                    "peakScore": 6,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Straight From the Heart (feat. Nørskov)",
+            "uri": "spotify:track:16mxzE8G96JyMSfcq1PQvW",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 2,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Cry Dancing",
+            "uri": "spotify:track:7g2uEIBiSXUNkLmEUCv5nq",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 2,
+                    "peakScore": 4,
+                    "date": "2023-07-27T18:42:32.381Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Fever",
+            "uri": "spotify:track:3F1P0QzdXtBz0MXy7KIO5w",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Lonely Heart",
+            "uri": "spotify:track:4iGjLLvo4Pax82YX3jE3Q1",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 2,
+                    "peakScore": 4,
+                    "date": "2023-07-26T20:35:06.846Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Maybe My Soulmate Died",
+            "uri": "spotify:track:0Q06bNL4pMTlkilvL88nda",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 4,
+                    "peakScore": 4,
+                    "date": "2023-09-03T21:50:33.796Z"
+                }
+            ]
+        },
+        {
+            "name": "She Said",
+            "uri": "spotify:track:1UNWD6R5EOFklUHKZZvww2",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 2,
+                    "peakScore": 2,
+                    "date": "2023-09-01T01:47:32.873Z"
+                }
+            ]
+        },
+        {
+            "name": "Baby Don't Hurt Me",
+            "uri": "spotify:track:3BKD1PwArikchz2Zrlp1qi",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 3,
+                    "peakScore": 3,
+                    "date": "2023-09-04T05:12:38.217Z"
+                }
+            ]
+        },
+        {
+            "name": "The One",
+            "uri": "spotify:track:2xfHakNuD25ma5CSfTXFw2",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 7,
+                    "date": "2023-07-08T21:11:40.839Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Dress",
+            "uri": "spotify:track:2ptbBxMTCbFBefVMXwrdSC",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 7,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Hot In It",
+            "uri": "spotify:track:5pNFibJLq7dvoDVIIcQBkn",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 5,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Mirror",
+            "uri": "spotify:track:46XBrXzTAYXdRMeVxVeA6G",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 9,
+                    "date": "2023-07-07T03:24:47.914Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Take You Dancing",
+            "uri": "spotify:track:59qrUpoplZxbIZxk6X0Bm3",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "SKIN 2 SKIN",
+            "uri": "spotify:track:5RTCbOZLSoVaOwisJhsdfd",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 5,
+                    "date": "2023-07-08T21:08:28.100Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Wake Me Up In Paris",
+            "uri": "spotify:track:4dq7XLDmFHNwc1yqL339qT",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-08-30T02:58:29.039Z"
+                }
+            ]
+        },
+        {
+            "name": "Something Stupid (feat. AWA)",
+            "uri": "spotify:track:2UCu2FoXFZpCT36lYzej4O",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Definition",
+            "uri": "spotify:track:31vrYgT1bq756Yu3Hlzedj",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 6,
+                    "date": "2023-07-26T19:57:51.474Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Melody",
+            "uri": "spotify:track:4ZofmEdvs4mQqZ756GQhSY",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 12,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Good Luck (with Jax Jones & Galantis)",
+            "uri": "spotify:track:2BfJX65Te5q84Pku7osGRH",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 6,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Private Life",
+            "uri": "spotify:track:3FkyJH5uE5XmN3voocBcYK",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 10,
+                    "date": "2023-07-08T00:02:52.981Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Breaking Me",
+            "uri": "spotify:track:3H7ihDc1dqLriiWXwsc2po",
+            "scores": [
+                {
+                    "emoji": "📢",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 3,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "What You Gonna Do (feat. Taet)",
+            "uri": "spotify:track:4m2pZ1y1GmiOA8UYebp3A0",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T19:01:44.918Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Beg for You (feat. Rina Sawayama)",
+            "uri": "spotify:track:11M8c9SHQYpd8DOrmcu25k",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Stuck In My Head [NITE MIX] (feat. AJ Mitchell)",
+            "uri": "spotify:track:5GSjJUbCCFFYv9lTtEFrMO",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Morning - Billen Ted Remix",
+            "uri": "spotify:track:3AOJ294HBNncEDSIAsvwAF",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Runaway With It",
+            "uri": "spotify:track:3PZ5FaH37VoQuTMcX5T3by",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Better off Alone",
+            "uri": "spotify:track:5oT0W6JKJo8or78vqzd5XX",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "OUT OUT (feat. Charli XCX & Saweetie)",
+            "uri": "spotify:track:6Dy1jexKYriXAVG6evyUTJ",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 2,
+                    "peakScore": 2,
                     "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
@@ -149,220 +1237,242 @@
                     "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
-                    "emoji": "🪬",
-                    "score": 2,
+                    "emoji": "🦥",
+                    "score": 0,
                     "peakScore": 2,
                     "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Hands On Your Body",
+            "uri": "spotify:track:29aqCNtLcL5cjsjRRe1Y1s",
+            "scores": [
+                {
                     "emoji": "🦥",
-                    "score": -5,
-                    "peakScore": -1,
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-07-17T20:15:23.106Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Noise Cancellation",
+            "uri": "spotify:track:6rFaGfDRVRXlVdUVgBz0Ho",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-07-21T14:51:40.896Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Lifestyle (feat. Adam Levine)",
+            "uri": "spotify:track:0osvOdeD3YXZiWkT8MKolJ",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 5,
                     "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
-                    "emoji": "🦠",
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Nobody To Love (with Loren Gray)",
+            "uri": "spotify:track:0SSIu4CcGITHdatDmjlA6H",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 5,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "El Diablo",
+            "uri": "spotify:track:0DGduxy7YSuqXm272C2LM6",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Let Them Know",
+            "uri": "spotify:track:3iEwla99ovgF0Rdla6FZm4",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T17:08:51.669Z"
+                },
+                {
+                    "emoji": "🔥",
+                    "score": -1,
+                    "peakScore": 0,
+                    "date": "2023-06-24T17:08:41.412Z"
+                },
+                {
+                    "emoji": "🎶",
+                    "score": 0,
+                    "peakScore": 0,
+                    "date": "2023-06-24T17:10:20.267Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Let Love Go (feat. Lil Tecca)",
+            "uri": "spotify:track:6Dfi1zryJF6c5DoW0JHl7u",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Cupid - Twin Ver.",
+            "uri": "spotify:track:7FbrGaHYVDmfr7KoLIZnQ7",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "You",
+            "uri": "spotify:track:2cc8Sw1OnCuA5bV8nqWqpE",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Baby, I'm Jealous (feat. Doja Cat)",
+            "uri": "spotify:track:5r0cOO77xkM5jjHk67Z2Lt",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 3,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "When You're Out (feat. Mae Muller)",
+            "uri": "spotify:track:4dsm0VbaMmnLHhrOKcDNSI",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "The Motto",
+            "uri": "spotify:track:3j11iDncb7ZeDMw7lFucqM",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-06-25T03:05:40.456Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Harleys In Hawaii",
+            "uri": "spotify:track:3B4etxytImrRKQgV3XHjnR",
+            "scores": [
+                {
+                    "emoji": "🎶",
                     "score": 1,
                     "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Sippin'",
-            "uri": "spotify:track:0YeNOgyKtVULnB8Xu1jhOt",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -5,
-                    "peakScore": -1,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "SHOW OFF",
-            "uri": "spotify:track:5hD8gxnWhg8KFHdV6ipXeQ",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -4,
-                    "peakScore": 0,
-                    "date": "2023-06-25T02:00:02.953Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "STAY (with Justin Bieber)",
-            "uri": "spotify:track:567e29TDzLwZwfDuEpGTwo",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -4,
-                    "peakScore": 1,
-                    "date": "2023-06-30T16:51:30.984Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "SAD B!TCH",
-            "uri": "spotify:track:4nfyxpiejEPrUHLnejED7i",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -4,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Love (Sweet Love)",
-            "uri": "spotify:track:6Y9Sk7mKkNndGQBIwQ52Il",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -4,
-                    "peakScore": 0,
-                    "date": "2023-06-24T18:36:53.181Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Look What You've Done",
-            "uri": "spotify:track:7jDtQkIxKFELTpQa27VWWR",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -4,
-                    "peakScore": 0,
-                    "date": "2023-07-06T03:03:56.018Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "I Just Called",
-            "uri": "spotify:track:0H8Tclo4x4kbZruQtZFNSX",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -4,
-                    "peakScore": 0,
-                    "date": "2023-07-08T20:48:59.045Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "New Boy",
-            "uri": "spotify:track:6XK62LvrHeg8R7G7A0C0kt",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": -1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Better Days - Regard Remix",
-            "uri": "spotify:track:7Edhy8323TjVAwvtoqujQu",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": -3,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Don't Play - Shane Codd Remix",
-            "uri": "spotify:track:5vtpbL92YS66BVXOOcr9e5",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": -1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Get Together",
-            "uri": "spotify:track:46W9QGI2bVjitikXmpHFgv",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": 0,
-                    "date": "2023-07-08T22:51:39.630Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "BED",
-            "uri": "spotify:track:0siYMEsGrzzzlWLXK5zJfS",
-            "scores": [
-                {
-                    "emoji": "🦠",
+                    "emoji": "😈",
                     "score": 1,
                     "peakScore": 1,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
                     "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": 0,
-                    "date": "2023-07-08T22:05:10.011Z"
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
                     "emoji": "🏆",
@@ -371,40 +1481,8 @@
             ]
         },
         {
-            "name": "Electric - Pokemon 25 Version",
-            "uri": "spotify:track:63eV5hreY9feQP2CmYavpj",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": 0,
-                    "date": "2023-07-08T21:27:30.917Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Fine on My Own",
-            "uri": "spotify:track:5bnGB46pcptSasI2Go0MNz",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Confetti",
-            "uri": "spotify:track:5zQ00D9j9MkQbsd9qmenBa",
+            "name": "Maybe You’re The Problem",
+            "uri": "spotify:track:6WDG2ybdV3SBXV0lwBGu4D",
             "scores": [
                 {
                     "emoji": "🎶",
@@ -414,7 +1492,7 @@
                 },
                 {
                     "emoji": "🦥",
-                    "score": -2,
+                    "score": 0,
                     "peakScore": 2,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
@@ -425,12 +1503,12 @@
             ]
         },
         {
-            "name": "Confetti (feat. Saweetie)",
-            "uri": "spotify:track:4oXV7uPMrMNSZfLMYtiqIX",
+            "name": "Crazy What Love Can Do",
+            "uri": "spotify:track:1WCEAGGRD066z2Q89ObXTq",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -2,
+                    "score": 0,
                     "peakScore": 1,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
@@ -441,28 +1519,12 @@
             ]
         },
         {
-            "name": "Love Myself - KREAM Remix",
-            "uri": "spotify:track:0Qydhjycb5IFm02W6zJ2Tn",
+            "name": "Real Groove (feat. Dua Lipa) - Studio 2054 Initial Talk Remix",
+            "uri": "spotify:track:1zFBtgQqy24SnTHlf0ir17",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 0,
-                    "date": "2023-06-25T01:35:52.916Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Good Vibes",
-            "uri": "spotify:track:53kWAAfx7IopXRa31MQHB8",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -2,
+                    "score": 0,
                     "peakScore": 1,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
@@ -473,14 +1535,14 @@
             ]
         },
         {
-            "name": "All Your Love (feat. The Romantic Era)",
-            "uri": "spotify:track:1JyBDrTXXCd16c1n4r3ZZ7",
+            "name": "Sweetest Pie",
+            "uri": "spotify:track:3JXF3LsUjyDIHjuwhXxdjo",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 0,
-                    "date": "2023-06-24T18:01:43.130Z"
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-07-08T20:55:08.269Z"
                 },
                 {
                     "emoji": "🏆",
@@ -489,14 +1551,14 @@
             ]
         },
         {
-            "name": "Wrong",
-            "uri": "spotify:track:1r0HKINDPff9jZQP9AzBr7",
+            "name": "I Love Your Girl",
+            "uri": "spotify:track:4GO8S3iZlSLwdsyf1XEOmA",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 0,
-                    "date": "2023-06-24T18:30:13.749Z"
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-07-05T19:13:17.229Z"
                 },
                 {
                     "emoji": "🏆",
@@ -505,13 +1567,31 @@
             ]
         },
         {
-            "name": "EveryTime I Cry",
-            "uri": "spotify:track:0mV43B6pJWRjcM5TmzNe6d",
+            "name": "I Don't Know Why",
+            "uri": "spotify:track:0ZXdzaT1k688dkpNeEgQiV",
             "scores": [
                 {
+                    "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🫧",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
                     "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": -2,
+                    "score": 0,
+                    "peakScore": 3,
                     "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
@@ -521,13 +1601,95 @@
             ]
         },
         {
-            "name": "Don't Leave Me Lonely",
-            "uri": "spotify:track:4uZKz3TLaSEY4vVb86jyAp",
+            "name": "Team",
+            "uri": "spotify:track:3G6hD9B2ZHOsgf4WfNu7X1",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦊",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-07-07T18:23:45.746Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Black Magic",
+            "uri": "spotify:track:7iDcKU9zpVp20Oa27SerEY",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": -2,
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Disturbia",
+            "uri": "spotify:track:1Q6ySAXCm1QSKnzTZ1rgin",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-07-03T16:02:12.104Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Now Or Never",
+            "uri": "spotify:track:4WQJPsbGOdqe24mUVHa8xb",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-06-30T16:51:57.434Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "ME BECAUSE OF YOU - Indigo Kxd Remix",
+            "uri": "spotify:track:6BQcggOEF7ASntQACEdT2L",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 1,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
@@ -537,38 +1699,20 @@
             ]
         },
         {
-            "name": "My Head & My Heart - Jonas Blue Remix",
-            "uri": "spotify:track:7x74XLYJqptDCmY4y3FaVh",
+            "name": "Starships",
+            "uri": "spotify:track:1oHNvJVbFkexQc0BpQp7Y4",
             "scores": [
                 {
-                    "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 0,
-                    "date": "2023-07-30T18:06:30.876Z"
-                }
-            ]
-        },
-        {
-            "name": "Skin - Quarterhead Remix",
-            "uri": "spotify:track:3DNziCcqRd2v8uQWwec1GW",
-            "scores": [
+                    "emoji": "💿",
+                    "score": 12,
+                    "peakScore": 12,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
                 {
                     "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 0,
-                    "date": "2023-07-30T18:14:47.598Z"
-                }
-            ]
-        },
-        {
-            "name": "One Drink Away",
-            "uri": "spotify:track:7i7DaXk1g3da6G3421Gi3i",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 5,
-                    "date": "2023-07-08T02:49:22.486Z"
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-07-03T01:33:14.953Z"
                 },
                 {
                     "emoji": "🏆",
@@ -577,14 +1721,430 @@
             ]
         },
         {
-            "name": "Cold Heart - PNAU Remix",
-            "uri": "spotify:track:7rglLriMNBPAyuJOMGwi39",
+            "name": "Crying On The Dance Floor",
+            "uri": "spotify:track:2wUV58nT5BrVZz4ahFf1uH",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": -2,
-                    "peakScore": 0,
-                    "date": "2023-08-01T03:05:40.898Z"
+                    "score": 0,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "End Of Time",
+            "uri": "spotify:track:5ttodnEIaCGDuBbvJctUfc",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 3,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Hero",
+            "uri": "spotify:track:557Xkoud7EtdyjdyRkrhRy",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Shakira: Bzrp Music Sessions, Vol. 53",
+            "uri": "spotify:track:4nrPB8O7Y7wsOCJdgXkthe",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 9,
+                    "peakScore": 9,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 13,
+                    "peakScore": 13,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 4,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🧊",
+                    "score": 4,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Gimme What I Want",
+            "uri": "spotify:track:4v8jmsVox8VwU5js3JHOJZ",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-08-01T04:45:06.804Z"
+                }
+            ]
+        },
+        {
+            "name": "Last Summer",
+            "uri": "spotify:track:7K6H44x9AOkrt3PK6ig4w0",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Hold Me Closer",
+            "uri": "spotify:track:3lFwSDBCNo3CcN09UppUnm",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 2,
+                    "date": "2023-06-24T17:54:15.554Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Fuck Up The Friendship",
+            "uri": "spotify:track:7xg41ENLdW3nyy2p5C28ZW",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 5,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Chain My Heart",
+            "uri": "spotify:track:67lbzVADsqJJ6tyVk0XCgn",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 2,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 2,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 3,
+                    "peakScore": 3,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": 0,
+                    "peakScore": 10,
+                    "date": "2023-07-13T18:36:49.127Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "On A Roll - Basic Tape Remix",
+            "uri": "spotify:track:5YtM5WjclCystH2Xzct19Y",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 7,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "RAININ’ FELLAS",
+            "uri": "spotify:track:3VBHBxTFt18h66k2R8jNTt",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 7,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "CHARGER",
+            "uri": "spotify:track:0iBBOvVQ8QCK7F95boCn3C",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 3,
+                    "date": "2023-08-03T00:36:00.545Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Everybody Wants You - Shift K3Y Remix",
+            "uri": "spotify:track:78T1d6RsHPY6gcWlurCK5q",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 3,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Kinda Funny (feat. Audrey Mika)",
+            "uri": "spotify:track:1FxHNKoRql64kL15iccqz1",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 3,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "The Feeling",
+            "uri": "spotify:track:6W9qtw3ddhkYznaOxB50p8",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 3,
+                    "date": "2023-07-08T04:10:23.522Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "All Or Nothing - VIP Mix",
+            "uri": "spotify:track:4coLf2EV9vdf1062GDAA3b",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 1,
+                    "date": "2023-08-03T16:48:13.290Z"
+                }
+            ]
+        },
+        {
+            "name": "You Only Love Me",
+            "uri": "spotify:track:5FHPvs8RxWBQXP2Rq9I2B2",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 3,
+                    "date": "2023-06-25T03:33:56.294Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Don't Go Yet",
+            "uri": "spotify:track:1qCHidBbWAgv3pn6UbZ4Lg",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Prosecco",
+            "uri": "spotify:track:4acfgyVsfx2vVI7LysrBq6",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 1,
+                    "date": "2023-06-29T03:40:21.926Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Love Me Land",
+            "uri": "spotify:track:5knSvwiFenQOkDoriHi2Rg",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 1,
+                    "date": "2023-07-31T22:13:33.819Z"
+                }
+            ]
+        },
+        {
+            "name": "WOW (feat. Sabrina Carpenter) - Remix",
+            "uri": "spotify:track:5WokFKscrfGEGGLPTu3jgO",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Dance The Night (From Barbie The Album)",
+            "uri": "spotify:track:1vYXt7VSjH9JIM5oRRo7vA",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 3,
+                    "date": "2023-07-26T20:37:52.983Z"
+                },
+                {
+                    "emoji": "😈",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-07-05T19:36:23.571Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Cry About It Later (feat. Luísa Sonza & Bruno Martini)",
+            "uri": "spotify:track:43WYPxyEfIxlIjNlxQGYzc",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 5,
+                    "date": "2023-07-08T03:55:08.827Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Feel Right Now (feat. Nonô)",
+            "uri": "spotify:track:1qX6EzEftYFq7MWL0ry3An",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -1,
+                    "peakScore": 1,
+                    "date": "2023-08-05T18:43:17.476Z"
                 }
             ]
         },
@@ -1303,34 +2863,6 @@
             ]
         },
         {
-            "name": "Acapulco",
-            "uri": "spotify:track:3eJH2nAjvNXdmPfBkALiPZ",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": -1,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
             "name": "No",
             "uri": "spotify:track:0ONFGnOEErh2tL0HY39F3V",
             "scores": [
@@ -1379,490 +2911,6 @@
             ]
         },
         {
-            "name": "Cupid - Twin Ver.",
-            "uri": "spotify:track:7FbrGaHYVDmfr7KoLIZnQ7",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "You",
-            "uri": "spotify:track:2cc8Sw1OnCuA5bV8nqWqpE",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Baby, I'm Jealous (feat. Doja Cat)",
-            "uri": "spotify:track:5r0cOO77xkM5jjHk67Z2Lt",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 3,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "When You're Out (feat. Mae Muller)",
-            "uri": "spotify:track:4dsm0VbaMmnLHhrOKcDNSI",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "The Motto",
-            "uri": "spotify:track:3j11iDncb7ZeDMw7lFucqM",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-25T03:05:40.456Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Harleys In Hawaii",
-            "uri": "spotify:track:3B4etxytImrRKQgV3XHjnR",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Maybe You’re The Problem",
-            "uri": "spotify:track:6WDG2ybdV3SBXV0lwBGu4D",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Crazy What Love Can Do",
-            "uri": "spotify:track:1WCEAGGRD066z2Q89ObXTq",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Real Groove (feat. Dua Lipa) - Studio 2054 Initial Talk Remix",
-            "uri": "spotify:track:1zFBtgQqy24SnTHlf0ir17",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Sweetest Pie",
-            "uri": "spotify:track:3JXF3LsUjyDIHjuwhXxdjo",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 2,
-                    "date": "2023-07-08T20:55:08.269Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "I Love Your Girl",
-            "uri": "spotify:track:4GO8S3iZlSLwdsyf1XEOmA",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-07-05T19:13:17.229Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "I Don't Know Why",
-            "uri": "spotify:track:0ZXdzaT1k688dkpNeEgQiV",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🫧",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 3,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Team",
-            "uri": "spotify:track:3G6hD9B2ZHOsgf4WfNu7X1",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🪬",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦊",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-07-07T18:23:45.746Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Black Magic",
-            "uri": "spotify:track:7iDcKU9zpVp20Oa27SerEY",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Disturbia",
-            "uri": "spotify:track:1Q6ySAXCm1QSKnzTZ1rgin",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-07-03T16:02:12.104Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Something Stupid (feat. AWA)",
-            "uri": "spotify:track:2UCu2FoXFZpCT36lYzej4O",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Now Or Never",
-            "uri": "spotify:track:4WQJPsbGOdqe24mUVHa8xb",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-30T16:51:57.434Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "ME BECAUSE OF YOU - Indigo Kxd Remix",
-            "uri": "spotify:track:6BQcggOEF7ASntQACEdT2L",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Starships",
-            "uri": "spotify:track:1oHNvJVbFkexQc0BpQp7Y4",
-            "scores": [
-                {
-                    "emoji": "💿",
-                    "score": 12,
-                    "peakScore": 12,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-07-03T01:33:14.953Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Crying On The Dance Floor",
-            "uri": "spotify:track:2wUV58nT5BrVZz4ahFf1uH",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "End Of Time",
-            "uri": "spotify:track:5ttodnEIaCGDuBbvJctUfc",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 3,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Hero",
-            "uri": "spotify:track:557Xkoud7EtdyjdyRkrhRy",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Shakira: Bzrp Music Sessions, Vol. 53",
-            "uri": "spotify:track:4nrPB8O7Y7wsOCJdgXkthe",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 9,
-                    "peakScore": 9,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 13,
-                    "peakScore": 13,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🪬",
-                    "score": 4,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🧊",
-                    "score": 4,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Feels In My Body",
-            "uri": "spotify:track:6wzwvyZ4kVPoUYDYjgErWJ",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Prosecco",
-            "uri": "spotify:track:4acfgyVsfx2vVI7LysrBq6",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-29T03:40:21.926Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
             "name": "Can't Come To The Phone",
             "uri": "spotify:track:0I5pVidtNjNXeaqHnwhrva",
             "scores": [
@@ -1871,22 +2919,6 @@
                     "score": -1,
                     "peakScore": 1,
                     "date": "2023-07-03T20:44:36.937Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Love Of Your Life",
-            "uri": "spotify:track:5iqfKcEGKhoeWTNqmZPiu3",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": 1,
-                    "date": "2023-07-05T18:55:13.963Z"
                 },
                 {
                     "emoji": "🏆",
@@ -1911,360 +2943,14 @@
             ]
         },
         {
-            "name": "Worst Thing",
-            "uri": "spotify:track:1gfDK5vVyqja5EI6O3MJO9",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": -3,
-                    "peakScore": 1,
-                    "date": "2023-06-25T02:30:47.348Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Love Me Land",
-            "uri": "spotify:track:5knSvwiFenQOkDoriHi2Rg",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-07-31T22:13:33.819Z"
-                }
-            ]
-        },
-        {
-            "name": "Gimme What I Want",
-            "uri": "spotify:track:4v8jmsVox8VwU5js3JHOJZ",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 2,
-                    "date": "2023-08-01T04:45:06.804Z"
-                }
-            ]
-        },
-        {
-            "name": "Fever",
-            "uri": "spotify:track:3F1P0QzdXtBz0MXy7KIO5w",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Last Summer",
-            "uri": "spotify:track:7K6H44x9AOkrt3PK6ig4w0",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Don't Go Yet",
-            "uri": "spotify:track:1qCHidBbWAgv3pn6UbZ4Lg",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Breaking Me",
-            "uri": "spotify:track:3H7ihDc1dqLriiWXwsc2po",
-            "scores": [
-                {
-                    "emoji": "📢",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 3,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "What You Gonna Do (feat. Taet)",
-            "uri": "spotify:track:4m2pZ1y1GmiOA8UYebp3A0",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T19:01:44.918Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Satellite",
-            "uri": "spotify:track:72zJrb5M7iv65yms7x6J7b",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Last Night (feat. HARLEE)",
-            "uri": "spotify:track:62xA7Zhj8CQSecypWIfpZx",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-28T02:49:14.577Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
             "name": "Damn (You’ve Got Me Saying)",
             "uri": "spotify:track:5RVjB86R02f47lCZSPFOzj",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T17:06:50.565Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Beg for You (feat. Rina Sawayama)",
-            "uri": "spotify:track:11M8c9SHQYpd8DOrmcu25k",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Stuck In My Head [NITE MIX] (feat. AJ Mitchell)",
-            "uri": "spotify:track:5GSjJUbCCFFYv9lTtEFrMO",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Hold Me Closer",
-            "uri": "spotify:track:3lFwSDBCNo3CcN09UppUnm",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 2,
-                    "date": "2023-06-24T17:54:15.554Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "My Heart Goes (La Di Da) (feat. Topic)",
-            "uri": "spotify:track:2dWNKXTs5z7Iu1g0kYh4Xe",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Morning - Billen Ted Remix",
-            "uri": "spotify:track:3AOJ294HBNncEDSIAsvwAF",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Runaway With It",
-            "uri": "spotify:track:3PZ5FaH37VoQuTMcX5T3by",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Better off Alone",
-            "uri": "spotify:track:5oT0W6JKJo8or78vqzd5XX",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Good Ones",
-            "uri": "spotify:track:2grSOc6HNTXQQXNoRKt9UM",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "OUT OUT (feat. Charli XCX & Saweetie)",
-            "uri": "spotify:track:6Dy1jexKYriXAVG6evyUTJ",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Hands On Your Body",
-            "uri": "spotify:track:29aqCNtLcL5cjsjRRe1Y1s",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-07-17T20:15:23.106Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "CHARGER",
-            "uri": "spotify:track:0iBBOvVQ8QCK7F95boCn3C",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 3,
+                    "score": -1,
                     "peakScore": 3,
-                    "date": "2023-08-03T00:36:00.545Z"
+                    "date": "2023-08-10T03:26:00.042Z"
                 },
                 {
                     "emoji": "🏆",
@@ -2273,236 +2959,14 @@
             ]
         },
         {
-            "name": "Noise Cancellation",
-            "uri": "spotify:track:6rFaGfDRVRXlVdUVgBz0Ho",
+            "name": "Desire (with Sam Smith)",
+            "uri": "spotify:track:22dUzMFttcR3uU17NcOAIv",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 2,
-                    "date": "2023-07-21T14:51:40.896Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Touch",
-            "uri": "spotify:track:0Pebpt5NlciT4arOfAEgvB",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 4,
-                    "date": "2023-08-03T00:41:06.846Z"
-                }
-            ]
-        },
-        {
-            "name": "Tears of Gold - Owen Norton Remix",
-            "uri": "spotify:track:7vzoNK8tbNmmKjDCNGTmkp",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 5,
-                    "date": "2023-07-20T21:31:58.480Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "WOW (feat. Sabrina Carpenter) - Remix",
-            "uri": "spotify:track:5WokFKscrfGEGGLPTu3jgO",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 1,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "You Only Love Me",
-            "uri": "spotify:track:5FHPvs8RxWBQXP2Rq9I2B2",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 3,
-                    "date": "2023-06-25T03:33:56.294Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Take You Dancing",
-            "uri": "spotify:track:59qrUpoplZxbIZxk6X0Bm3",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
+                    "score": -1,
                     "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Everybody Wants You - Shift K3Y Remix",
-            "uri": "spotify:track:78T1d6RsHPY6gcWlurCK5q",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 3,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Kinda Funny (feat. Audrey Mika)",
-            "uri": "spotify:track:1FxHNKoRql64kL15iccqz1",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 3,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "The Feeling",
-            "uri": "spotify:track:6W9qtw3ddhkYznaOxB50p8",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 3,
-                    "date": "2023-07-08T04:10:23.522Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Dance The Night (From Barbie The Album)",
-            "uri": "spotify:track:1vYXt7VSjH9JIM5oRRo7vA",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 1,
-                    "peakScore": 3,
-                    "date": "2023-07-26T20:37:52.983Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-07-05T19:36:23.571Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Physical",
-            "uri": "spotify:track:3AzjcOeAmA57TIOr9zF1ZW",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 8,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "2019",
-            "uri": "spotify:track:0YETkmonJ718JRimG5zJOm",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 6,
-                    "date": "2023-06-27T00:06:50.167Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Lifestyle (feat. Adam Levine)",
-            "uri": "spotify:track:0osvOdeD3YXZiWkT8MKolJ",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 5,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
+                    "date": "2023-08-03T16:18:55.925Z"
                 }
             ]
         },
@@ -2530,55 +2994,7 @@
                 },
                 {
                     "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 5,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Fuck Up The Friendship",
-            "uri": "spotify:track:7xg41ENLdW3nyy2p5C28ZW",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 0,
-                    "peakScore": 5,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Nobody To Love (with Loren Gray)",
-            "uri": "spotify:track:0SSIu4CcGITHdatDmjlA6H",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 5,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Die For a Man (feat. Lil Uzi Vert) - Galantis Remix",
-            "uri": "spotify:track:73sE2IPYKcAvcz4Cd0pe1d",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
+                    "score": -2,
                     "peakScore": 5,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
@@ -2594,24 +3010,8 @@
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 4,
+                    "score": -2,
                     "peakScore": 5,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Ghost",
-            "uri": "spotify:track:7LbhIjYNfCguxjAw43Mkff",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 6,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
@@ -2626,7 +3026,7 @@
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 4,
+                    "score": -2,
                     "peakScore": 5,
                     "date": "2023-06-24T16:38:31.310Z"
                 },
@@ -2637,13 +3037,13 @@
             ]
         },
         {
-            "name": "Good Luck (with Jax Jones & Galantis)",
-            "uri": "spotify:track:2BfJX65Te5q84Pku7osGRH",
+            "name": "Satellite",
+            "uri": "spotify:track:72zJrb5M7iv65yms7x6J7b",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 6,
+                    "score": -2,
+                    "peakScore": 2,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
@@ -2653,13 +3053,13 @@
             ]
         },
         {
-            "name": "El Diablo",
-            "uri": "spotify:track:0DGduxy7YSuqXm272C2LM6",
+            "name": "Good Ones",
+            "uri": "spotify:track:2grSOc6HNTXQQXNoRKt9UM",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 4,
+                    "score": -2,
+                    "peakScore": 2,
                     "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
@@ -2669,26 +3069,26 @@
             ]
         },
         {
-            "name": "Let Them Know",
-            "uri": "spotify:track:3iEwla99ovgF0Rdla6FZm4",
+            "name": "edamame (feat. Rich Brian)",
+            "uri": "spotify:track:5rW7qTn83sCKtqBoneJs63",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 4,
-                    "date": "2023-06-24T17:08:51.669Z"
-                },
+                    "score": -2,
+                    "peakScore": 2,
+                    "date": "2023-08-30T02:18:36.431Z"
+                }
+            ]
+        },
+        {
+            "name": "Fine on My Own",
+            "uri": "spotify:track:5bnGB46pcptSasI2Go0MNz",
+            "scores": [
                 {
-                    "emoji": "🔥",
-                    "score": -1,
-                    "peakScore": 0,
-                    "date": "2023-06-24T17:08:41.412Z"
-                },
-                {
-                    "emoji": "🎶",
-                    "score": 0,
-                    "peakScore": 0,
-                    "date": "2023-06-24T17:10:20.267Z"
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
                     "emoji": "🏆",
@@ -2697,160 +3097,582 @@
             ]
         },
         {
-            "name": "Let Love Go (feat. Lil Tecca)",
-            "uri": "spotify:track:6Dfi1zryJF6c5DoW0JHl7u",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 2,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Straight From the Heart (feat. Nørskov)",
-            "uri": "spotify:track:16mxzE8G96JyMSfcq1PQvW",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 4,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Cry Dancing",
-            "uri": "spotify:track:7g2uEIBiSXUNkLmEUCv5nq",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 4,
-                    "date": "2023-07-27T18:42:32.381Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Lonely Heart",
-            "uri": "spotify:track:4iGjLLvo4Pax82YX3jE3Q1",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 4,
-                    "date": "2023-07-26T20:35:06.846Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Chain My Heart",
-            "uri": "spotify:track:67lbzVADsqJJ6tyVk0XCgn",
+            "name": "Confetti",
+            "uri": "spotify:track:5zQ00D9j9MkQbsd9qmenBa",
             "scores": [
                 {
                     "emoji": "🎶",
-                    "score": 2,
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": -2,
                     "peakScore": 2,
                     "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Confetti (feat. Saweetie)",
+            "uri": "spotify:track:4oXV7uPMrMNSZfLMYtiqIX",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Love Myself - KREAM Remix",
+            "uri": "spotify:track:0Qydhjycb5IFm02W6zJ2Tn",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-06-25T01:35:52.916Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Good Vibes",
+            "uri": "spotify:track:53kWAAfx7IopXRa31MQHB8",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "All Your Love (feat. The Romantic Era)",
+            "uri": "spotify:track:1JyBDrTXXCd16c1n4r3ZZ7",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-06-24T18:01:43.130Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Wrong",
+            "uri": "spotify:track:1r0HKINDPff9jZQP9AzBr7",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-06-24T18:30:13.749Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "EveryTime I Cry",
+            "uri": "spotify:track:0mV43B6pJWRjcM5TmzNe6d",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": -2,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Don't Leave Me Lonely",
+            "uri": "spotify:track:4uZKz3TLaSEY4vVb86jyAp",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": -2,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "My Head & My Heart - Jonas Blue Remix",
+            "uri": "spotify:track:7x74XLYJqptDCmY4y3FaVh",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-07-30T18:06:30.876Z"
+                }
+            ]
+        },
+        {
+            "name": "Skin - Quarterhead Remix",
+            "uri": "spotify:track:3DNziCcqRd2v8uQWwec1GW",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-07-30T18:14:47.598Z"
+                }
+            ]
+        },
+        {
+            "name": "One Drink Away",
+            "uri": "spotify:track:7i7DaXk1g3da6G3421Gi3i",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 5,
+                    "date": "2023-07-08T02:49:22.486Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Cold Heart - PNAU Remix",
+            "uri": "spotify:track:7rglLriMNBPAyuJOMGwi39",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-08-01T03:05:40.898Z"
+                }
+            ]
+        },
+        {
+            "name": "Last Night (feat. HARLEE)",
+            "uri": "spotify:track:62xA7Zhj8CQSecypWIfpZx",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 2,
+                    "date": "2023-06-28T02:49:14.577Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Leave A Little Love",
+            "uri": "spotify:track:5pmbZWt1lYVMvZ12MSdtqF",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-08-30T03:32:45.970Z"
+                }
+            ]
+        },
+        {
+            "name": "Apologize",
+            "uri": "spotify:track:0l1E291U7ZCyuDa2C3HVTX",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-08-30T03:33:39.503Z"
+                }
+            ]
+        },
+        {
+            "name": "Praising You (feat. Fatboy Slim)",
+            "uri": "spotify:track:0H7fcYl4S35qTaJObe0Iyg",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -2,
+                    "peakScore": 0,
+                    "date": "2023-09-01T14:28:06.155Z"
+                }
+            ]
+        },
+        {
+            "name": "New Boy",
+            "uri": "spotify:track:6XK62LvrHeg8R7G7A0C0kt",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": -1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Better Days - Regard Remix",
+            "uri": "spotify:track:7Edhy8323TjVAwvtoqujQu",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": -3,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Don't Play - Shane Codd Remix",
+            "uri": "spotify:track:5vtpbL92YS66BVXOOcr9e5",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": -1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Get Together",
+            "uri": "spotify:track:46W9QGI2bVjitikXmpHFgv",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": 0,
+                    "date": "2023-07-08T22:51:39.630Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "BED",
+            "uri": "spotify:track:0siYMEsGrzzzlWLXK5zJfS",
+            "scores": [
+                {
+                    "emoji": "🦠",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": 0,
+                    "date": "2023-07-08T22:05:10.011Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Electric - Pokemon 25 Version",
+            "uri": "spotify:track:63eV5hreY9feQP2CmYavpj",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": 0,
+                    "date": "2023-07-08T21:27:30.917Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Acapulco",
+            "uri": "spotify:track:3eJH2nAjvNXdmPfBkALiPZ",
+            "scores": [
+                {
+                    "emoji": "🎶",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
                     "emoji": "😈",
-                    "score": 2,
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": 4,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Feels In My Body",
+            "uri": "spotify:track:6wzwvyZ4kVPoUYDYjgErWJ",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Love Of Your Life",
+            "uri": "spotify:track:5iqfKcEGKhoeWTNqmZPiu3",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": 1,
+                    "date": "2023-07-05T18:55:13.963Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Worst Thing",
+            "uri": "spotify:track:1gfDK5vVyqja5EI6O3MJO9",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -3,
+                    "peakScore": 1,
+                    "date": "2023-06-25T02:30:47.348Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "SHOW OFF",
+            "uri": "spotify:track:5hD8gxnWhg8KFHdV6ipXeQ",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -4,
+                    "peakScore": 0,
+                    "date": "2023-06-25T02:00:02.953Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "STAY (with Justin Bieber)",
+            "uri": "spotify:track:567e29TDzLwZwfDuEpGTwo",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -4,
+                    "peakScore": 1,
+                    "date": "2023-06-30T16:51:30.984Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "SAD B!TCH",
+            "uri": "spotify:track:4nfyxpiejEPrUHLnejED7i",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -4,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Love (Sweet Love)",
+            "uri": "spotify:track:6Y9Sk7mKkNndGQBIwQ52Il",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -4,
+                    "peakScore": 0,
+                    "date": "2023-06-24T18:36:53.181Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Look What You've Done",
+            "uri": "spotify:track:7jDtQkIxKFELTpQa27VWWR",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -4,
+                    "peakScore": 0,
+                    "date": "2023-07-06T03:03:56.018Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "I Just Called",
+            "uri": "spotify:track:0H8Tclo4x4kbZruQtZFNSX",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -4,
+                    "peakScore": 0,
+                    "date": "2023-07-08T20:48:59.045Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "My Heart Goes (La Di Da) (feat. Topic)",
+            "uri": "spotify:track:2dWNKXTs5z7Iu1g0kYh4Xe",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -4,
                     "peakScore": 2,
                     "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
-                    "emoji": "🪬",
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "LOL",
+            "uri": "spotify:track:4qsrQnTtzIdmTOXFobkkE9",
+            "scores": [
+                {
+                    "emoji": "🦥",
+                    "score": -5,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.309Z"
+                },
+                {
+                    "emoji": "🏆",
+                    "date": "1970-01-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "name": "Prisoner (feat. Dua Lipa)",
+            "uri": "spotify:track:2Oycxb8QbPkpHTo8ZrmG0B",
+            "scores": [
+                {
+                    "emoji": "🎶",
                     "score": 3,
                     "peakScore": 3,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 5,
-                    "peakScore": 10,
-                    "date": "2023-07-13T18:36:49.127Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "RAININ’ FELLAS",
-            "uri": "spotify:track:3VBHBxTFt18h66k2R8jNTt",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 5,
-                    "peakScore": 7,
                     "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Tick Tock (feat. 24kGoldn)",
-            "uri": "spotify:track:27u7t9d7ZQoyjsCROHuZJ3",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 5,
-                    "peakScore": 5,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Hot In It",
-            "uri": "spotify:track:5pNFibJLq7dvoDVIIcQBkn",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 5,
-                    "peakScore": 5,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Cry About It Later (feat. Luísa Sonza & Bruno Martini)",
-            "uri": "spotify:track:43WYPxyEfIxlIjNlxQGYzc",
-            "scores": [
-                {
-                    "emoji": "🦥",
+                    "emoji": "😈",
                     "score": 1,
-                    "peakScore": 5,
-                    "date": "2023-07-08T03:55:08.827Z"
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🪬",
+                    "score": 2,
+                    "peakScore": 2,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🦥",
+                    "score": -5,
+                    "peakScore": -1,
+                    "date": "2023-06-24T16:38:31.310Z"
+                },
+                {
+                    "emoji": "🦠",
+                    "score": 1,
+                    "peakScore": 1,
+                    "date": "2023-06-24T16:38:31.310Z"
                 },
                 {
                     "emoji": "🏆",
@@ -2859,14 +3681,14 @@
             ]
         },
         {
-            "name": "SKIN 2 SKIN",
-            "uri": "spotify:track:5RTCbOZLSoVaOwisJhsdfd",
+            "name": "Sippin'",
+            "uri": "spotify:track:0YeNOgyKtVULnB8Xu1jhOt",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 5,
-                    "date": "2023-07-08T21:08:28.100Z"
+                    "score": -5,
+                    "peakScore": -1,
+                    "date": "2023-06-24T16:38:31.309Z"
                 },
                 {
                     "emoji": "🏆",
@@ -2875,14 +3697,14 @@
             ]
         },
         {
-            "name": "Hallucinate",
-            "uri": "spotify:track:1nYeVF5vIBxMxfPoL0SIWg",
+            "name": "LUCID",
+            "uri": "spotify:track:7BoVAJ0HuKcBBRmUGlzX6o",
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 5,
-                    "date": "2023-07-14T21:23:35.711Z"
+                    "score": -6,
+                    "peakScore": 0,
+                    "date": "2023-06-24T18:19:44.879Z"
                 },
                 {
                     "emoji": "🏆",
@@ -2896,651 +3718,9 @@
             "scores": [
                 {
                     "emoji": "🦥",
-                    "score": 3,
+                    "score": -7,
                     "peakScore": 5,
                     "date": "2023-07-21T00:54:05.792Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Words (feat. Zara Larsson)",
-            "uri": "spotify:track:1bgKMxPQU7JIZEhNsM1vFs",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 5,
-                    "peakScore": 5,
-                    "date": "2023-07-26T16:30:00.047Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Lay Low",
-            "uri": "spotify:track:0zKbDrEXKpnExhGQRe9dxt",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 3,
-                    "peakScore": 5,
-                    "date": "2023-07-30T00:45:34.401Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Private Life",
-            "uri": "spotify:track:3FkyJH5uE5XmN3voocBcYK",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 4,
-                    "peakScore": 10,
-                    "date": "2023-07-08T00:02:52.981Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Goodbye",
-            "uri": "spotify:track:7fWOBXSWN29kaE0spQjUW9",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 8,
-                    "date": "2023-07-08T20:41:40.447Z"
-                },
-                {
-                    "emoji": "🔥",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T18:37:34.301Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Going Dumb",
-            "uri": "spotify:track:7arsXR8AtExnOFN3v3HiJI",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 8,
-                    "date": "2023-07-20T22:04:38.812Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Escapism.",
-            "uri": "spotify:track:5mHdCZtVyb4DcJw8799hZp",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 8,
-                    "date": "2023-07-14T22:22:54.498Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Psycho - Joel Corry Remix",
-            "uri": "spotify:track:3XPl3dGn1oWe7VmKoB8nhU",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 8,
-                    "date": "2023-07-20T21:07:44.649Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "1 Day 2 Nights",
-            "uri": "spotify:track:2LAtELE0xGyMKcvNlxiyF3",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 9,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Drive (feat. Wes Nelson)",
-            "uri": "spotify:track:6eCmK3GQyFuTNWCJHsaF9d",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🪬",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 8,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Baddest",
-            "uri": "spotify:track:65ffWlQCk6XeKX50CDYgib",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 6,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Poster Girl",
-            "uri": "spotify:track:5B1TY0oq5I1VeTZxEnkGV8",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 7,
-                    "peakScore": 7,
-                    "date": "2023-08-03T05:24:30.604Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "UNHEALTHY (feat. Shania Twain)",
-            "uri": "spotify:track:2doTn2LWTKN1Z0lZJG2WQw",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 6,
-                    "date": "2023-06-30T17:31:02.197Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "10:35",
-            "uri": "spotify:track:36gcliMRX1vCpgnrZE3dFZ",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 6,
-                    "date": "2023-06-27T00:10:52.258Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Superstar",
-            "uri": "spotify:track:5gnXJhg3zGHWvrgplrVrxH",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 6,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "If It Ain’t Me",
-            "uri": "spotify:track:1IdDtg7GhWfHYEWDymq3d2",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 6,
-                    "date": "2023-07-02T05:44:03.326Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Mi Amor",
-            "uri": "spotify:track:4mjDUywu5NREDKNPTaRdLE",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 6,
-                    "date": "2023-07-22T17:08:12.296Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Definition",
-            "uri": "spotify:track:31vrYgT1bq756Yu3Hlzedj",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 6,
-                    "peakScore": 6,
-                    "date": "2023-07-26T19:57:51.474Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "On A Roll - Basic Tape Remix",
-            "uri": "spotify:track:5YtM5WjclCystH2Xzct19Y",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 7,
-                    "peakScore": 7,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Big (feat. Gunna)",
-            "uri": "spotify:track:78oZ26xvmtCfarveRXs3dq",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 7,
-                    "peakScore": 7,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "The One",
-            "uri": "spotify:track:2xfHakNuD25ma5CSfTXFw2",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 7,
-                    "peakScore": 7,
-                    "date": "2023-07-08T21:11:40.839Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Do It All Again",
-            "uri": "spotify:track:6BwPstqf4RoRMbDidFWNxE",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 7,
-                    "peakScore": 7,
-                    "date": "2023-07-08T16:30:04.795Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Dress",
-            "uri": "spotify:track:2ptbBxMTCbFBefVMXwrdSC",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 7,
-                    "peakScore": 7,
-                    "date": "2023-06-24T16:38:31.310Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "i miss u (with Au/Ra)",
-            "uri": "spotify:track:7CH8J4ulT49UfZwSDSkSZA",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 7,
-                    "peakScore": 7,
-                    "date": "2023-07-14T22:29:55.081Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Kardashian",
-            "uri": "spotify:track:5sJWJ132Ya4i2xR5cW0B6a",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 8,
-                    "peakScore": 10,
-                    "date": "2023-07-14T21:16:39.118Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Used to Know Me",
-            "uri": "spotify:track:5dry5tz8yLcLuOJ3l6ZEQd",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 8,
-                    "peakScore": 8,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Your Love (9PM)",
-            "uri": "spotify:track:5YaskwnGDZFDRipaqzbwQx",
-            "scores": [
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🪬",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 9,
-                    "peakScore": 11,
-                    "date": "2023-07-20T22:00:29.213Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Heart Wants What It Wants",
-            "uri": "spotify:track:5iaa3eXgzedzQckwFNtIrl",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 9,
-                    "peakScore": 9,
-                    "date": "2023-07-10T04:17:23.354Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Mirror",
-            "uri": "spotify:track:46XBrXzTAYXdRMeVxVeA6G",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 9,
-                    "peakScore": 9,
-                    "date": "2023-07-07T03:24:47.914Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Melody",
-            "uri": "spotify:track:4ZofmEdvs4mQqZ756GQhSY",
-            "scores": [
-                {
-                    "emoji": "🎶",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "😈",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🪬",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🦥",
-                    "score": 10,
-                    "peakScore": 12,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Animal",
-            "uri": "spotify:track:3WdijbYmphZ8N0MYblXDnF",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 10,
-                    "peakScore": 12,
-                    "date": "2023-06-24T16:38:31.309Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Come Into My World (with NERVO)",
-            "uri": "spotify:track:4Bpyapy2YVNAQBUOBp17uu",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 10,
-                    "peakScore": 11,
-                    "date": "2023-07-27T19:04:28.830Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "I Don’t (with DVBBS)",
-            "uri": "spotify:track:1J9ekSUHGCaWKBdmeEWPJZ",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 11,
-                    "peakScore": 11,
-                    "date": "2023-07-17T20:23:11.720Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Padam Padam",
-            "uri": "spotify:track:3k0DJq2HdWJqnqor8NX0ac",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 11,
-                    "peakScore": 11,
-                    "date": "2023-07-30T18:26:53.222Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Lovefool (feat. Pia Mia)",
-            "uri": "spotify:track:3tIjJY43mDAhMZxSuDHvjy",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 12,
-                    "peakScore": 14,
-                    "date": "2023-07-29T17:36:16.905Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Stars",
-            "uri": "spotify:track:3mC64Smtz0xXvsa52ZM3Q9",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 13,
-                    "peakScore": 17,
-                    "date": "2023-07-20T21:29:48.554Z"
-                },
-                {
-                    "emoji": "🏆",
-                    "date": "1970-01-01T00:00:00.000Z"
-                }
-            ]
-        },
-        {
-            "name": "Regardless",
-            "uri": "spotify:track:3DTqHfTGj1c6y2gDXsTez4",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 15,
-                    "peakScore": 17,
-                    "date": "2023-07-20T20:49:28.760Z"
                 },
                 {
                     "emoji": "🏆",
@@ -13027,42 +13207,6 @@
                     "score": 1,
                     "peakScore": 1,
                     "date": "2023-07-24T20:07:42.415Z"
-                }
-            ]
-        },
-        {
-            "name": "Desire (with Sam Smith)",
-            "uri": "spotify:track:22dUzMFttcR3uU17NcOAIv",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-08-03T16:18:55.925Z"
-                }
-            ]
-        },
-        {
-            "name": "All Or Nothing - VIP Mix",
-            "uri": "spotify:track:4coLf2EV9vdf1062GDAA3b",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-08-03T16:48:13.290Z"
-                }
-            ]
-        },
-        {
-            "name": "Feel Right Now (feat. Nonô)",
-            "uri": "spotify:track:1qX6EzEftYFq7MWL0ry3An",
-            "scores": [
-                {
-                    "emoji": "🦥",
-                    "score": 1,
-                    "peakScore": 1,
-                    "date": "2023-08-05T18:43:17.476Z"
                 }
             ]
         }

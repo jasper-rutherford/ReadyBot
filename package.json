@@ -12,6 +12,8 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "express": "^4.17.1",
+    "open": "^9.1.0",
+    "opn": "^6.0.0",
     "spotify-web-api-node": "^5.0.2"
   }
 }
