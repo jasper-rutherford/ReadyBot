@@ -4,7 +4,19 @@ module.exports = {
     description: "switches to order mode",
     execute(params, bot)
     {
-        bot.multiMode = "ORDER"
+        if (bot.multiMode === "ORDER")
+        {
+            bot.multiMode = "REVERSE"
+        }
+        else if (bot.multiMode === "REVERSE")
+        {
+            bot.multiMode = "ORDER"
+        }
+        else 
+        {
+            bot.multiMode = "ORDER"
+        }
+        
         bot.updateUtilityMessage()
     }
 }  

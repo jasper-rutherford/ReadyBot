@@ -9,6 +9,9 @@ const { resolve } = require('path');
 const open = require('opn');
 
 const app = express();
+const { Pool } = require('pg');
+const { format } = require('date-fns');
+
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
@@ -53,10 +56,28 @@ var bot = {
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
 
     initialUpdates: function () {
-        // this shit runs right after the bot starts up, but not necessarily before or after teh spotify stuff starts happening
-
         // open the login page
         open('http://localhost:8888/login')
+
+        // const pool = new Pool({
+        //     user: 'postgres',
+        //     host: 'localhost',
+        //     database: 'songs',
+        //     password: 'postgres',
+        //     port: 5430, 
+        // });
+
+        // pool.query('SELECT * FROM scores', (error, results) => {
+        //     if (error) {
+        //         console.error('Error executing query:', error);
+        //     } else {
+        //         console.log('Query results:', results.rows);
+        //     }
+        // });
+
+        // // Release the connection back to the pool
+        // pool.end();
+
     },
 
     //i despise this helpers stuff, but removing it is just gonna have to wait.
@@ -251,7 +272,7 @@ var bot = {
                         peakScore: scoreInfo.peakScore,
                         date: scoreInfo.date
                     })
-            }
+            } // TODO: i should switch over to using a database. each record would be a song, theme, updated score, and timestamp. ordering takes the latest score/timestamp for each song and orders by that.
 
             wrapper.songs.push({
                 name: song.name,
@@ -377,36 +398,30 @@ var bot = {
         return positiveScores
     },
 
-    addSongsToPlaylist(playlistID, songs) {
+    addSongsToPlaylist(playlistID, uris) {
         return new Promise((resolve, reject) => {
-            //convert to list of uris
-            let uris = bot.convertSongsToUris(songs)
-
             console.log("getting adjustments")
 
-            //get adjustments
+            // get adjustments
             let adjustments = this.compareUriLists(playlistID, [], uris);
             console.log("got adjustments")
 
-            //adjust them
+            // adjust them
             this.adjust(adjustments)
 
-                //resolve
+                // resolve
                 .then(() => {
                     console.log("adjusted adjustments")
                     resolve()
                 })
 
-                //error
+                // error
                 .catch((error) => console.log("Errored: ", error))
         })
     },
 
-    removeSongsFromPlaylist(playlistID, songs) {
+    removeSongsFromPlaylist(playlistID, uris) {
         return new Promise((resolve, reject) => {
-            //convert to list of uris
-            let uris = bot.convertSongsToUris(songs)
-
             console.log("getting adjustments")
 
             //get adjustments
@@ -710,6 +725,73 @@ var bot = {
                 scores: scores
             })
         }
+    },
+
+    query: function (queryStatement) {
+        return new Promise((resolve, reject) => {
+            const pool = new Pool({
+                user: 'postgres',
+                host: 'localhost',
+                database: 'songs',
+                password: 'postgres',
+                port: 5430, 
+            });
+
+            pool.query(queryStatement, (error, results) => {
+                if (error) {
+                    console.error('Error executing query:', error);
+                    reject(error)
+                } else {
+                    console.log('successfully queried: ', queryStatement);
+                    resolve(results)
+                }
+            });
+
+
+            pool.end();
+        })
+    },
+
+    logScore: function (uri, name, emoji, score) {
+        let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', '${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}', '${emoji}')`;
+        
+        this.query(queryStatement).then((results) => {
+            console.log("Successfully logged score")
+        })
+        .catch((error) => {
+            console.log("Error logging score")
+        }
+        )
+    },
+
+    orderedUris: function (emoji) {
+                let query = `SELECT DISTINCT spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '${emoji}'
+              AND s2.stamp >= NOW() - INTERVAL '2 weeks'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '${emoji}'
+            AND s1.stamp >= NOW() - INTERVAL '2 weeks'
+            ORDER BY total_score DESC;`
+
+        return new Promise((resolve, reject) => {
+            this.query(query).then((results) => {
+                let uris = []
+
+                for (let result of results.rows) {
+                    uris.push(result.spotify_uri)
+                }
+
+                resolve(uris)
+            })
+            .catch((error) => {
+                console.log("Error getting ordered uris")
+                reject(error)
+            })
+        })
     }
 }
 
@@ -793,7 +875,7 @@ client.on('message', message => {
     }
     else if (message.channel.type === 'text') {
         //if the message starts with \ and is from jasper
-        if (message.content.startsWith(bot.altPrefix) && message.author.id === bot.jaspaID) {
+        if (message.content.startsWith(bot.altPrefix) && (message.author.id === bot.jaspaID || message.author.id === "914641118308757574")) {
             //splits the message into words after the prefix
             const args = message.content.slice(bot.prefix.length).split(/ +/);
 
@@ -817,7 +899,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     }
 
     // if there is a utility message and this message is the utility message and the person who reacted is jasper
-    if (bot.multiUtilityMessage != null && reaction.message.id === bot.multiUtilityMessage.id && user.id === bot.jaspaID) {
+    if (bot.multiUtilityMessage != null && reaction.message.id === bot.multiUtilityMessage.id && (user.id === bot.jaspaID || user.id === "914641118308757574")) {
         //check that emoji is valid
         if (bot.utilityEmojis.includes(reaction.emoji.name)) {
             // call helper for emoji
@@ -828,7 +910,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     }
 
     // if there is a vote message and this message is the vote message and the person who reacted is jasper
-    if (bot.multiVoteMessage != null && reaction.message.id === bot.multiVoteMessage.id && user.id === bot.jaspaID) {
+    if (bot.multiVoteMessage != null && reaction.message.id === bot.multiVoteMessage.id && (user.id === bot.jaspaID || user.id === "914641118308757574")) {
         //check for custom emojis
         if (reaction.emoji.createdAt != null) {
             bot.updateVoteMessage("Custom Emojis are not supported")

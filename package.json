@@ -10,10 +10,12 @@
   "keywords": [],
   "description": "",
   "dependencies": {
+    "date-fns": "^2.30.0",
     "discord.js": "^12.5.3",
     "express": "^4.17.1",
     "open": "^9.1.0",
     "opn": "^6.0.0",
+    "pg": "^8.11.3",
     "spotify-web-api-node": "^5.0.2"
   }
 }

@@ -49,6 +49,9 @@ module.exports = {
             //update the vote message to reflect latest score change
             bot.updateVoteMessage(`[${song.name}] has a score of [|| ${song.scores.get(params.emoji).score} ||] for ${params.emoji}`)
             console.log(`[${song.name}] has a score of [${song.scores.get(params.emoji).score}] for ${params.emoji}`)
+
+            // add a downvote into the database
+            bot.logScore(data.body.item.uri, data.body.item.name, params.emoji, -1)
         })
         .catch((error) =>
         {

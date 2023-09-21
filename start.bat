@@ -1,1 +1,1 @@
-node .
+powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File "./starters/Arbie.ps1"
