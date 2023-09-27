@@ -1,1 +1,0 @@
-pg_ctl -D ./data/postgres stop
