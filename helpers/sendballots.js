@@ -8,7 +8,8 @@ module.exports = {
         channel.send("-----------------------------------------------------")
 
         //message 1: the utility message
-        let message1Content = `[Current Mode: ${bot.multiMode}]`
+        let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past Week"}`
+        let message1Content = `[Current Mode: ${bot.multiMode}${["ORDER", "REVERSE", "SHUFFLE"].includes(bot.multiMode) ? intervalMessage : ""}]`
         channel.send(message1Content).then(sent =>
         {
             bot.multiUtilityMessage = sent

@@ -35,11 +35,31 @@ module.exports = {
         //set the songlist to the shuffled list 
         bot.multiSongs = shuffledList
 
-        //clear playlist
-        bot.removeSongsFromPlaylist(bot.themePlaylistIDFromEmoji(params.emoji), bot.multiSongs)
+        // clear playlist
+        bot.removeSongsFromPlaylist(bot.themePlaylistIDFromEmoji(params.emoji), bot.convertSongsToUris(bot.multiSongs))
+
+        // get the relevant uris
+        .then(() => bot.orderedUris(params.emoji))
         
-        //add all songs to playlist
-        .then(() => bot.addSongsToPlaylist(bot.themePlaylistIDFromEmoji(params.emoji), bot.positiveScores(params.emoji, bot.multiSongs))) 
+        // add all songs to playlist
+        .then((uris) => {
+            let shuffledUris = []
+
+            for (let i = uris.length - 1; i >= 0; i--)
+            {
+                //choose a random song to shuffle
+                let randomIndex = Math.floor(Math.random() * uris.length)
+                let uri = uris[randomIndex]
+
+                //remove the song from the unshuffled list
+                uris.splice(randomIndex, 1)
+
+                //add it to the shuffled list
+                shuffledUris.push(uri)
+            }
+
+            return bot.addSongsToPlaylist(bot.themePlaylistIDFromEmoji(params.emoji), shuffledUris)
+        }) 
 
         //update ballot
         .then(() => bot.updateUtilityMessage(`Finished Shuffling ${params.emoji}`))

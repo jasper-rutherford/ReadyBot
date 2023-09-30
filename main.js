@@ -12,6 +12,7 @@ const app = express();
 const { Pool } = require('pg');
 const { format } = require('date-fns');
 
+const interval = "7 days"; // the range of time to include song votes in the query when not sorting by all time
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
@@ -50,11 +51,14 @@ var bot = {
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
     multiMode: 'UPVOTE',                                    // the current mode selected via the utility message. Can be {UPVOTE, DOWNVOTE, ORDER, SHUFFLE, CREATE, DELETING, DELETE}
     utilityEmojis:                                          // the emoji who perform actions for the utility message
-        ["⏮", "⬇", "⬆", "⏭", "🔀", "↕", "🆕", "🗑", "❔"],
+        ["⏮", "⬇", "⬆", "⏭", "🔀", "↕", "📅", "🆕", "🗑", "❔"],
     deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
     deleteMessage: null,                                    // the message warning the user about their potential deletion
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
 
+    baseInterval: interval,
+    queryInterval: interval,                                // the range of time to include song votes in the query. default to interval
+    
     initialUpdates: function () {
         // open the login page
         open('http://localhost:8888/login')
@@ -366,21 +370,28 @@ var bot = {
             out += `${message}\n`
         }
 
-        bot.multiUtilityMessage.edit(`${out}[Current Mode: ${bot.multiMode}]`)
+        let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past Week"}`
+        let messageContent = `[Current Mode: ${bot.multiMode}${["ORDER", "REVERSE", "SHUFFLE"].includes(bot.multiMode) ? intervalMessage : ""}]`
+        bot.multiUtilityMessage.edit(`${out}${messageContent}`)
     },
 
     updateVoteMessage: function (message) {
+        console.log("updating vote message")
         bot.multiVoteMessage.edit(message)
     },
 
     //gets the song which corresponds with the provided uri from the provided list of songs
     //returns null if uri is not found
     getSongByUri(uri, songs) {
+        console.log("getting song by uri")
         for (let song of songs) {
             if (song.uri === uri) {
+                console.log("song found")
                 return song
             }
         }
+
+        console.log("song not found")
 
         return null;
     },
@@ -753,42 +764,83 @@ var bot = {
     },
 
     logScore: function (uri, name, emoji, score) {
+        return new Promise((resolve, reject) => {
         let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', '${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}', '${emoji}')`;
         
         this.query(queryStatement).then((results) => {
             console.log("Successfully logged score")
+            return bot.getSongScores(uri, name, emoji)
+        })
+        .then((scores) => {
+            resolve(scores)
         })
         .catch((error) => {
             console.log("Error logging score")
         }
-        )
+        )})
     },
 
     orderedUris: function (emoji) {
-                let query = `SELECT DISTINCT spotify_uri, (
+       let orderedUrisHelper = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
+
+        let query = `SELECT DISTINCT song_name, spotify_uri, (
             SELECT SUM(score)
             FROM scores AS s2
             WHERE s2.spotify_uri = s1.spotify_uri
               AND s2.themoji = '${emoji}'
-              AND s2.stamp >= NOW() - INTERVAL '2 weeks'
+               ${orderedUrisHelper}
           ) AS total_score
           FROM scores AS s1
           WHERE s1.themoji = '${emoji}'
-            AND s1.stamp >= NOW() - INTERVAL '2 weeks'
+            ${orderedUrisHelper}
             ORDER BY total_score DESC;`
 
         return new Promise((resolve, reject) => {
             this.query(query).then((results) => {
+
+                console.log(`song name, score (${bot.queryInterval == "" ? "All time" : "Last " + bot.queryInterval}):`)
                 let uris = []
 
                 for (let result of results.rows) {
                     uris.push(result.spotify_uri)
+
+                    console.log(result.song_name, result.total_score)
                 }
 
                 resolve(uris)
             })
             .catch((error) => {
                 console.log("Error getting ordered uris")
+                reject(error)
+            })
+        })
+    },
+
+    getSongScores: function (uri, name, themoji) {
+        let query =`
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '${bot.baseInterval}' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = '${uri}'
+        
+        AND themoji = '${themoji}';`
+        
+        return new Promise((resolve, reject) => {
+            this.query(query).then((results) => {
+                let output = {
+                    name: name,
+                    interval_score: results.rows[0].interval_score,
+                    total_score: results.rows[0].total_score,
+                }
+
+                console.log("retrieved scores for uri/themoji " + uri + "/" + themoji + ":")
+                console.log(output)
+
+                resolve(output)
+            })
+            .catch((error) => {
+                console.log("Error getting score for uri " + uri)
                 reject(error)
             })
         })

@@ -40,18 +40,13 @@ module.exports = {
             //ensure that the song exists in the system
             bot.ensureMultiSongExists(uri, data.body.item.name)
 
-            //get song by uri
-            let song = bot.getSongByUri(uri, bot.multiSongs)
-
-            //decrement score
-            bot.changeSongScore(song, params.emoji, -2)
-
-            //update the vote message to reflect latest score change
-            bot.updateVoteMessage(`[${song.name}] has a score of [|| ${song.scores.get(params.emoji).score} ||] for ${params.emoji}`)
-            console.log(`[${song.name}] has a score of [${song.scores.get(params.emoji).score}] for ${params.emoji}`)
-
             // add a downvote into the database
-            bot.logScore(data.body.item.uri, data.body.item.name, params.emoji, -1)
+            return bot.logScore(data.body.item.uri, data.body.item.name, params.emoji, -1)
+        })
+        .then(function (scores) {
+            // update the vote message to reflect latest score change
+            bot.updateVoteMessage(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.total_score} ||] for ${params.emoji}`)
+            console.log(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.total_score} ||] for ${params.emoji}`)
         })
         .catch((error) =>
         {
