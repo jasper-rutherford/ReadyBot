@@ -17,7 +17,7 @@ module.exports = {
         console.log(`Ordering ${params.emoji}`)
         
         // clear playlist
-        bot.removeSongsFromPlaylist(bot.themePlaylistIDFromEmoji(params.emoji), bot.convertSongsToUris(bot.multiSongs))
+        bot.clearPlaylist(bot.themePlaylistIDFromEmoji(params.emoji))
 
         // get the relevant uris
         .then(() => bot.orderedUris(params.emoji))

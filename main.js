@@ -677,6 +677,23 @@ var bot = {
         return adjustments;
     },
 
+    clearPlaylist(playlistID) {
+        return new Promise((resolve, reject) => {
+            bot.getTracks(playlistID).then((tracks) => {
+                let uris = []
+
+                for (let track of tracks) {
+                    uris.push(track.track.uri)
+                }
+
+                console.log("clearing " + uris.length + " songs from playlist " + playlistID)
+                return bot.removeSongsFromPlaylist(playlistID, uris)
+            })
+            .then(() => resolve())
+            .catch((error) => console.log("error clearing playlist: ", playlistID, "\nerr:", error))
+        })
+    },
+
     //song: the song whose score is to be changed
     //diff: how much to change the score by
     changeSongScore: function (song, emoji, diff) {
@@ -901,7 +918,7 @@ for (const file of files) {
 client.once('ready', () => {
     bot.initialUpdates();
 
-    console.log('Arbiot 1.0');
+    console.log('Arbie 0.1');
 
     if (bot.testbuild) {
         console.log('<test build>');
