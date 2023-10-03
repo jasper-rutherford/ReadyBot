@@ -51,13 +51,14 @@ var bot = {
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
     multiMode: 'UPVOTE',                                    // the current mode selected via the utility message. Can be {UPVOTE, DOWNVOTE, ORDER, SHUFFLE, CREATE, DELETING, DELETE}
     utilityEmojis:                                          // the emoji who perform actions for the utility message
-        ["⏮", "⬇", "⬆", "⏭", "🔀", "↕", "📅", "🆕", "🗑", "❔"],
+        ["⏮", "⬇", "⬆", "⏭", "🔀", "↕", "📅", "🆕", "🗑", "🥫", "❔"],
     deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
     deleteMessage: null,                                    // the message warning the user about their potential deletion
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
 
     baseInterval: interval,
     queryInterval: interval,                                // the range of time to include song votes in the query. default to interval
+    barrelID: '4jCZqEM3AdWj3uSpjuY9IK',   // the playlistID of the barrel playlist
     
     initialUpdates: function () {
         // open the login page
@@ -694,65 +695,39 @@ var bot = {
         })
     },
 
-    //song: the song whose score is to be changed
-    //diff: how much to change the score by
-    changeSongScore: function (song, emoji, diff) {
-        // relevant score info
-        let scoreInfo = song.scores.get(emoji)
-
-        // if the info doesnt exist, create it
-        if (scoreInfo == undefined) {
-            scoreInfo = {
-                score: 0,
-                peakScore: 0,
-                date: new Date()
-            }
-
-            song.scores.set(emoji, scoreInfo)
-        }
-
-        console.log("old info: ")
-
-        // log old info
-        console.log(scoreInfo)
-
-        // update score info
-        scoreInfo.score += diff;
-
-        // if the new score is higher than the peak score, update the peak score/date
-        if (scoreInfo.score > scoreInfo.peakScore) {
-            scoreInfo.peakScore = scoreInfo.score;
-            scoreInfo.date = new Date();
-        }
-
-        console.log("new info: ")
-
-        // log new info
-        console.log(scoreInfo)
-
-        //save the updated song list to file
-        bot.saveToFile()
-    },
 
     //check song exists in the list of songs
-    ensureMultiSongExists: function (uri, name) {
+    ensureSongIsInBarrel: function (uri, name) {
         // dont support local songs
         if (uri.indexOf("spotify:local") != -1) {
             console.log(`${name} is local and unsupported`);
             bot.updateVoteMessage(`${name} is local and unsupported`)
         }
 
-        //if song doesnt exist
-        if (bot.getSongByUri(uri, bot.multiSongs) == null) {
-            let scores = new Discord.Collection()
+        return new Promise((resolve, reject) => {
+            // check if any record of the song exists in the database
+            let queryStatement = `SELECT * FROM scores WHERE spotify_uri = '${uri}'`;
 
-            //add a song to the list with default scores
-            bot.multiSongs.push({
-                name: name,
-                uri: uri,
-                scores: scores
+            bot.query(queryStatement).then((results) => {
+                // if it exists, resolve
+                if (results.rows.length > 0) {
+                    resolve()
+                }
+                // if it doesn't exist, add it to the barrel playlist
+                else {
+                    console.log("song not yet in the barrel, adding it")
+                    return bot.addSongsToPlaylist(bot.barrelID, [uri])
+                }
             })
-        }
+            .then(() => {
+                console.log("ensured song exists")
+                resolve()
+            })
+            .catch((error) => {
+                console.log("Error ensuring song exists")
+                reject(error)
+            })
+        })
     },
 
     query: function (queryStatement) {
@@ -782,19 +757,17 @@ var bot = {
 
     logScore: function (uri, name, emoji, score) {
         return new Promise((resolve, reject) => {
-        let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', '${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}', '${emoji}')`;
-        
-        this.query(queryStatement).then((results) => {
-            console.log("Successfully logged score")
-            return bot.getSongScores(uri, name, emoji)
+            let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', '${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}', '${emoji}')`;
+            bot.ensureSongIsInBarrel(uri, name)
+            .then(()=> this.query(queryStatement))
+            .then((results) => bot.getSongScores(uri, name, emoji))
+            .then((scores) => {
+                resolve(scores)
+            })
+            .catch((error) => {
+                console.log("Error logging score")
+            })
         })
-        .then((scores) => {
-            resolve(scores)
-        })
-        .catch((error) => {
-            console.log("Error logging score")
-        }
-        )})
     },
 
     orderedUris: function (emoji) {

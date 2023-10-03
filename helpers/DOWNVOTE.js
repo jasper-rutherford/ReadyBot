@@ -32,19 +32,10 @@ module.exports = {
                 })
             }
         })
-        .then(function (data)
-        {
-            //current song uri
-            let uri = data.body.item.uri;
-
-            //ensure that the song exists in the system
-            bot.ensureMultiSongExists(uri, data.body.item.name)
-
-            // add a downvote into the database
-            return bot.logScore(data.body.item.uri, data.body.item.name, params.emoji, -1)
-        })
+        // log the downvote
+        .then((data) => bot.logScore(data.body.item.uri, data.body.item.name, params.emoji, -1))
+        // update the vote message to reflect latest score change
         .then(function (scores) {
-            // update the vote message to reflect latest score change
             bot.updateVoteMessage(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.total_score} ||] for ${params.emoji}`)
             console.log(`[${scores.name}] has a score of [ ${scores.interval_score} ] over the last ${bot.baseInterval} and has an all time score of [ ${scores.total_score} ] for ${params.emoji}`)
         })
