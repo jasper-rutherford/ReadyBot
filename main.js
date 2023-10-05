@@ -45,7 +45,6 @@ var bot = {
 
     //new as of 2/13 (multi voting update)
     multiThemes: [],                                        // stores the themes and their info (name, emoji, playlistID)
-    multiSongs: [],                                         // stores the songs and their info (name, uri, scores)
     multiDefaultSongScore: 0,                               // the default score a song should have for any theme
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
@@ -63,26 +62,6 @@ var bot = {
     initialUpdates: function () {
         // open the login page
         open('http://localhost:8888/login')
-
-        // const pool = new Pool({
-        //     user: 'postgres',
-        //     host: 'localhost',
-        //     database: 'songs',
-        //     password: 'postgres',
-        //     port: 5430, 
-        // });
-
-        // pool.query('SELECT * FROM scores', (error, results) => {
-        //     if (error) {
-        //         console.error('Error executing query:', error);
-        //     } else {
-        //         console.log('Query results:', results.rows);
-        //     }
-        // });
-
-        // // Release the connection back to the pool
-        // pool.end();
-
     },
 
     //i despise this helpers stuff, but removing it is just gonna have to wait.
@@ -246,48 +225,17 @@ var bot = {
         return true
     },
 
-    //gives each song a default song score for the provided emoji
-    createDefaultScores: function (emoji) {
-        for (let song of bot.multiSongs) {
-            song.scores.set(emoji, bot.multiDefaultSongScore);
-        }
-    },
+     // saves the mapping of themoji to playlistID to file
+     saveToFile: function () {
+        console.log(`Saving themoji mappings to file`)
 
-    // saves the list of themes and list of songs to the file
-    saveToFile: function () {
-        console.log(`Saving themes and songs to file`)
-
-        //what to save
         var wrapper =
         {
             themes: bot.multiThemes,
-            songs: []
-        }
-
-        //convert songs into the wrapper (discord collections cant be json stringified)
-        for (let song of bot.multiSongs) {
-            let scores = []
-
-            for (let emoji of song.scores.keys()) {
-                let scoreInfo = song.scores.get(emoji)
-                scores.push(
-                    {
-                        emoji: emoji,
-                        score: scoreInfo.score,
-                        peakScore: scoreInfo.peakScore,
-                        date: scoreInfo.date
-                    })
-            } // TODO: i should switch over to using a database. each record would be a song, theme, updated score, and timestamp. ordering takes the latest score/timestamp for each song and orders by that.
-
-            wrapper.songs.push({
-                name: song.name,
-                uri: song.uri,
-                scores: scores
-            })
         }
 
         //where to save to
-        var fileName = './data/spotify/multidata.json';
+        var fileName = './data/spotify/themoji.json';
 
         //saves the thing to the file
         fs.writeFileSync(fileName, JSON.stringify(wrapper, null, 4), e => {
@@ -295,33 +243,16 @@ var bot = {
         });
 
         //log to console
-        console.log(`Saved themes and songs to file`)
+        console.log(`Saved themoji mappings to file`)
     },
 
     readFromFile: function () {
-        console.log("reading themes and songs from file")
+        console.log("reading themoji mappings from file")
 
         //read in wrapped themes/songs
-        let wrapper = JSON.parse(fs.readFileSync('./data/spotify/multidata.json'));
+        let wrapper = JSON.parse(fs.readFileSync('./data/spotify/themoji.json'));
 
         bot.multiThemes = wrapper.themes
-
-        bot.multiSongs = []
-
-        //unwrap songs back into discord collections
-        for (let song of wrapper.songs) {
-            let scores = new Discord.Collection();
-
-            for (let scoreInfo of song.scores) {
-                scores.set(scoreInfo.emoji, { score: scoreInfo.score, peakScore: scoreInfo.peakScore, date: new Date(scoreInfo.date) })
-            }
-
-            bot.multiSongs.push({
-                name: song.name,
-                uri: song.uri,
-                scores: scores
-            })
-        }
     },
 
     //finds the theme with the provided emoji and returns that theme's playlistID (null if emoji not found)

@@ -14,12 +14,6 @@ module.exports = {
             }
         }
 
-        //remove the scores from the songs
-        for (let song of bot.multiSongs)
-        {
-            song.scores.delete(bot.deletingEmoji)
-        }
-
         //remove the emoji from the VoteMessage
         bot.multiVoteMessage.reactions.cache.get(bot.deletingEmoji).remove()
 

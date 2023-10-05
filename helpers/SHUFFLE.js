@@ -16,25 +16,6 @@ module.exports = {
         bot.updateUtilityMessage(`Shuffling ${params.emoji}`)
         console.log(`Shuffling ${params.emoji}`)
         
-        //shuffle songs list
-        let shuffledList = []
-
-        for (let i = bot.multiSongs.length - 1; i >= 0; i--)
-        {
-            //choose a random song to shuffle
-            let randomIndex = Math.floor(Math.random() * bot.multiSongs.length)
-            let song = bot.multiSongs[randomIndex]
-
-            //remove the song from the unshuffled list
-            bot.multiSongs.splice(randomIndex, 1)
-
-            //add it to the shuffled list
-            shuffledList.push(song)
-        }
-
-        //set the songlist to the shuffled list 
-        bot.multiSongs = shuffledList
-
         // clear playlist
         bot.clearPlaylist(bot.themePlaylistIDFromEmoji(params.emoji))
 
