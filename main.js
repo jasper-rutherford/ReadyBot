@@ -822,7 +822,7 @@ for (const file of files) {
 client.once('ready', () => {
     bot.initialUpdates();
 
-    console.log('Arbie 0.1');
+    console.log('Arbie 1.0');
 
     if (bot.testbuild) {
         console.log('<test build>');
