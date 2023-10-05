@@ -253,6 +253,8 @@ var bot = {
         let wrapper = JSON.parse(fs.readFileSync('./data/spotify/themoji.json'));
 
         bot.multiThemes = wrapper.themes
+
+        console.log("read themoji mappings from file")
     },
 
     //finds the theme with the provided emoji and returns that theme's playlistID (null if emoji not found)
@@ -822,7 +824,7 @@ for (const file of files) {
 client.once('ready', () => {
     bot.initialUpdates();
 
-    console.log('Arbie 1.0');
+    console.log('Arbie v1.1');
 
     if (bot.testbuild) {
         console.log('<test build>');
