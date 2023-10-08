@@ -11,6 +11,8 @@ const open = require('opn');
 const app = express();
 const { Pool } = require('pg');
 const { format } = require('date-fns');
+const { prevSong, nextSong, toggleInterval, barrel, help, upvote, upvoter, downvote, downvoter, order, orderer, shuffle, shuffler, reverse, reverser, create, creater, requestDelete, requester, confirmDelete, rejectDelete } = require('./actions');
+const { relayMsgToJaspa, sendBallots } = require('./helpers/helpers');
 
 const interval = "7 days"; // the range of time to include song votes in the query when not sorting by all time
 
@@ -29,6 +31,10 @@ var bot = {
     jaspaDM: '754507044312317962',
     jaspaID: '130880023069589505',
     botID: '754498512359653466',
+    admins: [
+        '130880023069589505',
+        '914641118308757574'
+    ],
 
     // credentials are optional /////this comment is from the template I built off of. Maybe it is true? Maybe not.
     spotifyApi: new SpotifyWebApi({
@@ -48,33 +54,51 @@ var bot = {
     multiDefaultSongScore: 0,                               // the default score a song should have for any theme
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
-    multiMode: 'UPVOTE',                                    // the current mode selected via the utility message. Can be {UPVOTE, DOWNVOTE, ORDER, SHUFFLE, CREATE, DELETING, DELETE}
     utilityEmojis:                                          // the emoji who perform actions for the utility message
-        ["⏮", "⬇", "⬆", "⏭", "🔀", "↕", "📅", "🆕", "🗑", "🥫", "❔"],
+        ["⏮", "⬇", "⬆", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔"],
     deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
     deleteMessage: null,                                    // the message warning the user about their potential deletion
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
 
     baseInterval: interval,
     queryInterval: interval,                                // the range of time to include song votes in the query. default to interval
-    barrelID: '4jCZqEM3AdWj3uSpjuY9IK',   // the playlistID of the barrel playlist
-    
+    barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
+
+    // a map of emoji that can be reacted to the utility message to immediately perform an action
+    actions: new Map([
+        ["⏮", prevSong],
+        ["⬆", upvote],
+        ["⬇", downvote],
+        ["⏭", nextSong],
+        ["🔼", order],
+        ["🔀", shuffle],
+        ["🔽", reverse],
+        ["📅", toggleInterval],
+        ["🆕", create],
+        ["🗑", requestDelete],
+        ["🥫", barrel],
+        ["❔", help],
+        ["✅", confirmDelete],
+        ["❌", rejectDelete]
+    ]),
+
+    currentAction: upvoter,                                      // the set action to be performed when an emoji is reacted to the song message (defaults to upvote)
+
+    modes: new Map([
+        [upvoter, "UPVOTE"],
+        [downvoter, "DOWNVOTE"],
+        [orderer, "ORDER"],
+        [shuffler, "SHUFFLE"],
+        [reverser, "REVERSE"],
+        [creater, "CREATE"],
+        [requester, "DELETE"],
+    ]),
+
+    lastTime: new Date().getMilliseconds(),
+
     initialUpdates: function () {
         // open the login page
         open('http://localhost:8888/login')
-    },
-
-    //i despise this helpers stuff, but removing it is just gonna have to wait.
-    helpers: function (name, params) {
-        //check if the helper exists
-        if (client.things.get('helpers').get(name) != undefined) {
-            //run the helper
-            var out = client.things.get('helpers').get(name).execute(params, this);
-
-            if (out != undefined) {
-                return out;
-            }
-        }
     },
 
     loadSpot: async function () {
@@ -85,7 +109,7 @@ var bot = {
         bot.readFromFile();
 
         //send the ballots
-        bot.helpers('sendballots', bot.client.channels.cache.get(bot.spotifyChannel));
+        sendBallots(bot, bot.client.channels.cache.get(bot.spotifyChannel));
     },
 
     //gets the list of emojis from the list of themes
@@ -225,8 +249,8 @@ var bot = {
         return true
     },
 
-     // saves the mapping of themoji to playlistID to file
-     saveToFile: function () {
+    // saves the mapping of themoji to playlistID to file
+    saveToFile: function () {
         console.log(`Saving themoji mappings to file`)
 
         var wrapper =
@@ -304,8 +328,8 @@ var bot = {
             out += `${message}\n`
         }
 
-        let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past Week"}`
-        let messageContent = `[Current Mode: ${bot.multiMode}${["ORDER", "REVERSE", "SHUFFLE"].includes(bot.multiMode) ? intervalMessage : ""}]`
+        let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past " + bot.queryInterval}`
+        let messageContent = `[Current Mode: ${bot.getCurrentUtilityMode()}${intervalMessage}]`
         bot.multiUtilityMessage.edit(`${out}${messageContent}`)
     },
 
@@ -623,8 +647,8 @@ var bot = {
                 console.log("clearing " + uris.length + " songs from playlist " + playlistID)
                 return bot.removeSongsFromPlaylist(playlistID, uris)
             })
-            .then(() => resolve())
-            .catch((error) => console.log("error clearing playlist: ", playlistID, "\nerr:", error))
+                .then(() => resolve())
+                .catch((error) => console.log("error clearing playlist: ", playlistID, "\nerr:", error))
         })
     },
 
@@ -652,14 +676,14 @@ var bot = {
                     return bot.addSongsToPlaylist(bot.barrelID, [uri])
                 }
             })
-            .then(() => {
-                console.log("ensured song exists")
-                resolve()
-            })
-            .catch((error) => {
-                console.log("Error ensuring song exists")
-                reject(error)
-            })
+                .then(() => {
+                    console.log("ensured song exists")
+                    resolve()
+                })
+                .catch((error) => {
+                    console.log("Error ensuring song exists")
+                    reject(error)
+                })
         })
     },
 
@@ -670,7 +694,7 @@ var bot = {
                 host: 'localhost',
                 database: 'songs',
                 password: 'postgres',
-                port: 5430, 
+                port: 5430,
             });
 
             pool.query(queryStatement, (error, results) => {
@@ -692,19 +716,19 @@ var bot = {
         return new Promise((resolve, reject) => {
             let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', '${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}', '${emoji}')`;
             bot.ensureSongIsInBarrel(uri, name)
-            .then(()=> this.query(queryStatement))
-            .then((results) => bot.getSongScores(uri, name, emoji))
-            .then((scores) => {
-                resolve(scores)
-            })
-            .catch((error) => {
-                console.log("Error logging score")
-            })
+                .then(() => this.query(queryStatement))
+                .then((results) => bot.getSongScores(uri, name, emoji))
+                .then((scores) => {
+                    resolve(scores)
+                })
+                .catch((error) => {
+                    console.log("Error logging score")
+                })
         })
     },
 
     orderedUris: function (emoji) {
-       let orderedUrisHelper = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
+        let orderedUrisHelper = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
 
         let query = `SELECT DISTINCT song_name, spotify_uri, (
             SELECT SUM(score)
@@ -732,15 +756,15 @@ var bot = {
 
                 resolve(uris)
             })
-            .catch((error) => {
-                console.log("Error getting ordered uris")
-                reject(error)
-            })
+                .catch((error) => {
+                    console.log("Error getting ordered uris")
+                    reject(error)
+                })
         })
     },
 
     getSongScores: function (uri, name, themoji) {
-        let query =`
+        let query = `
         SELECT
             SUM(score) AS total_score,
             SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '${bot.baseInterval}' THEN score ELSE 0 END) AS interval_score
@@ -748,7 +772,7 @@ var bot = {
         WHERE spotify_uri = '${uri}'
         
         AND themoji = '${themoji}';`
-        
+
         return new Promise((resolve, reject) => {
             this.query(query).then((results) => {
                 let output = {
@@ -762,12 +786,16 @@ var bot = {
 
                 resolve(output)
             })
-            .catch((error) => {
-                console.log("Error getting score for uri " + uri)
-                reject(error)
-            })
+                .catch((error) => {
+                    console.log("Error getting score for uri " + uri)
+                    reject(error)
+                })
         })
-    }
+    },
+
+    getCurrentUtilityMode() {
+        return bot.modes.get(bot.currentAction)
+    },
 }
 
 //switches the variables to the test bot's stuff
@@ -805,26 +833,10 @@ bot.channelTypes.forEach(channelType => {
     })
 });
 
-//sets up the helper folder
-client.things.set('helpers', new Discord.Collection());
-
-var directory = './helpers/';
-
-const files = fs.readdirSync(directory).filter(file => file.endsWith('.js'));
-for (const file of files) {
-    const command = require(directory + `${file}`);
-
-    client.things.get('helpers').set(command.name, command);
-
-    if (command.alt != undefined) {
-        client.things.get('helpers').set(command.alt, command);
-    }
-}
-
 client.once('ready', () => {
     bot.initialUpdates();
 
-    console.log('Arbie v1.1');
+    console.log('Arbie v1.2');
 
     if (bot.testbuild) {
         console.log('<test build>');
@@ -838,19 +850,20 @@ client.on('message', message => {
     if (message.channel.type === 'dm') {
         var userID = message.author.id;
 
-        //special jaspa treatment
-        if (userID === bot.jaspaID) {
+        //special admin treatment
+        if (bot.admins.includes(userID)) {
             //send to jaspa
             client.things.get('dmspecials').get(userID).execute(message, bot);
         }
         //everybody that's not me
         else {
-            bot.helpers('relayMsgToJaspa', { message: message });
+            relayMsgToJaspa(bot, message)
         }
     }
     else if (message.channel.type === 'text') {
-        //if the message starts with \ and is from jasper
-        if (message.content.startsWith(bot.altPrefix) && (message.author.id === bot.jaspaID || message.author.id === "914641118308757574")) {
+        //if the message starts with \ and is from an admin
+        if (message.content.startsWith(bot.altPrefix) && (bot.admins.includes(message.author.id))) {
+
             //splits the message into words after the prefix
             const args = message.content.slice(bot.prefix.length).split(/ +/);
 
@@ -867,49 +880,26 @@ client.on('message', message => {
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
-    //special case automatically clears ✅, ❌, and ⌚ if they are from the bot and on the songMessage
-    if ((reaction.emoji.name === "✅" || reaction.emoji.name === "❌" || reaction.emoji.name === "⌚")
-        && bot.songMessage != null && bot.songMessage.id === reaction.message.id && user.id === bot.botID) {
-        reaction.users.remove(user);
+    // only handle reactions from admins
+    if (!bot.admins.includes(user.id)) return
+
+    // handle utility actions 
+    if (reaction.message.id === bot.multiUtilityMessage?.id && bot.actions.has(reaction.emoji.name)) {
+        bot.actions.get(reaction.emoji.name)(bot)
     }
 
-    // if there is a utility message and this message is the utility message and the person who reacted is jasper
-    if (bot.multiUtilityMessage != null && reaction.message.id === bot.multiUtilityMessage.id && (user.id === bot.jaspaID || user.id === "914641118308757574")) {
-        //check that emoji is valid
-        if (bot.utilityEmojis.includes(reaction.emoji.name)) {
-            // call helper for emoji
-            bot.helpers(reaction.emoji.name, { reaction: reaction, user: user });
-            reaction.users.remove(user);
-            return
-        }
+    // handle vote actions 
+    if (reaction.message.id === bot.multiVoteMessage?.id) {
+        bot.currentAction(bot, reaction.emoji.name)
     }
 
-    // if there is a vote message and this message is the vote message and the person who reacted is jasper
-    if (bot.multiVoteMessage != null && reaction.message.id === bot.multiVoteMessage.id && (user.id === bot.jaspaID || user.id === "914641118308757574")) {
-        //check for custom emojis
-        if (reaction.emoji.createdAt != null) {
-            bot.updateVoteMessage("Custom Emojis are not supported")
-            console.log('Tried to create theme with custom emoji')
-        }
-        else {
-            // call helper for mode
-            bot.helpers(bot.multiMode, { emoji: reaction.emoji.name });
-        }
-
-        reaction.users.remove(user);
-        return
+    // handle delete message confirmation
+    if (reaction.message.id === bot.deleteMessage?.id && bot.deleteEmojis.includes(reaction.emoji.name)) {
+        bot.actions.get(reaction.emoji.name)(bot)
     }
 
-    // if there is a delete message and this message is the delete message and the person who reacted is jasper
-    if (bot.deleteMessage != null && reaction.message.id === bot.deleteMessage.id && user.id === bot.jaspaID) {
-        //check that emoji is valid
-        if (bot.deleteEmojis.includes(reaction.emoji.name)) {
-            // call helper for emoji
-            bot.helpers(reaction.emoji.name, {});
-            reaction.users.remove(user);
-        }
-        return
-    }
+    reaction.users.remove(user);
+    return
 });
 
 const scopes = [
