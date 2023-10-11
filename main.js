@@ -5,14 +5,14 @@ const fs = require('fs');
 const express = require('express');
 
 const { tokenDiscord, discordToken, clientId, clientSecret } = require('./data/config.json');
-const { resolve } = require('path');
 const open = require('opn');
 
 const app = express();
 const { Pool } = require('pg');
 const { format } = require('date-fns');
 const { prevSong, nextSong, toggleInterval, barrel, help, upvote, upvoter, downvote, downvoter, order, orderer, shuffle, shuffler, reverse, reverser, create, creater, requestDelete, requester, confirmDelete, rejectDelete } = require('./actions');
-const { relayMsgToJaspa, sendBallots } = require('./helpers/helpers');
+const { relayMsgToJaspa } = require('./helpers');
+const { adminCommands, nonAdminCommands, sendBallots } = require('./commands');
 
 const interval = "7 days"; // the range of time to include song votes in the query when not sorting by all time
 
@@ -94,7 +94,7 @@ var bot = {
         [requester, "DELETE"],
     ]),
 
-    lastTime: new Date().getMilliseconds(),
+    lastTime: undefined,
 
     initialUpdates: function () {
         // open the login page
@@ -109,7 +109,7 @@ var bot = {
         bot.readFromFile();
 
         //send the ballots
-        sendBallots(bot, bot.client.channels.cache.get(bot.spotifyChannel));
+        sendBallots(bot);
     },
 
     //gets the list of emojis from the list of themes
@@ -233,20 +233,6 @@ var bot = {
     addTheme(themeName) {
         bot.themes.push(themeName);
         bot.saveThemes();
-    },
-
-    emojiAvailable: function (emoji) {
-        if (emoji === "❔") {
-            return false
-        }
-
-        for (let theme of bot.multiThemes) {
-            if (theme.emoji === emoji) {
-                return false
-            }
-        }
-
-        return true
     },
 
     // saves the mapping of themoji to playlistID to file
@@ -796,9 +782,44 @@ var bot = {
     getCurrentUtilityMode() {
         return bot.modes.get(bot.currentAction)
     },
+
+    handleCommand(message) {
+        // splits the message into words after the prefix
+        const words = message.content.slice(bot.prefix.length).split(/ +/);
+        const command = words.shift().toLowerCase();
+
+        if (message.channel.type != 'dm' && message.channel.type != 'text')
+        {
+            console.log("message sent in unsupported channel type: " + message.channel.type)
+            return
+        }
+
+        // admins have access to a bigger command pool (which includes all non-admin commands)
+        if (bot.admins.includes(message.author.id) && adminCommands.get(message.channel.type).has(command)) {
+            adminCommands.get(message.channel.type).get(command)(bot, message, words)
+        }
+        else if (nonAdminCommands.get(message.channel.type).has(command)) {
+            nonAdminCommands.get(message.channel.type).get(command)(bot, message, words)
+        }
+    }, 
+
+    handleNonCommand(message) {
+        // only dm's are supported
+        if (message.channel.type != 'dm') return
+
+        // non admin messages are forwarded to jasper
+        if (!bot.admins.includes(message.author.id)) {
+            relayMsgToJaspa(bot, message)
+        }
+
+        // admins receive a response
+        if (bot.admins.includes(message.author.id)) {
+            message.channel.send('❤️');
+        }
+    }
 }
 
-//switches the variables to the test bot's stuff
+// switches the variables to the test bot's stuff
 if (bot.testbuild) {
     bot.tokenDiscord = discordToken;
     bot.guildID = '254631721620733952';
@@ -806,37 +827,10 @@ if (bot.testbuild) {
     bot.botID = '754865264390176839';
 }
 
-client.things = new Discord.Collection();
-
-//sets up the text and dm folders
-bot.channelTypes.forEach(channelType => {
-    bot.messageTypes.forEach(messageType => {
-        client.things.set(channelType + messageType, new Discord.Collection());
-
-        var directory = './' + channelType + '/' + messageType + '/';
-
-        const files = fs.readdirSync(directory).filter(file => file.endsWith('.js'));
-        for (const file of files) {
-            const command = require(directory + `${file}`);
-
-            if (channelType + messageType === 'dmspecials' || channelType + messageType === 'textspecials') {
-                client.things.get(channelType + messageType).set(command.id, command);
-            }
-            else {
-                client.things.get(channelType + messageType).set(command.name, command);
-
-                if (command.alt != undefined) {
-                    client.things.get(channelType + messageType).set(command.alt, command);
-                }
-            }
-        }
-    })
-});
-
 client.once('ready', () => {
     bot.initialUpdates();
 
-    console.log('Arbie v1.2');
+    console.log('Arbie v1.3');
 
     if (bot.testbuild) {
         console.log('<test build>');
@@ -844,38 +838,17 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    //ignore messages from itself
+    // ignore messages from itself
     if (message.author.bot) return;
 
-    if (message.channel.type === 'dm') {
-        var userID = message.author.id;
-
-        //special admin treatment
-        if (bot.admins.includes(userID)) {
-            //send to jaspa
-            client.things.get('dmspecials').get(userID).execute(message, bot);
-        }
-        //everybody that's not me
-        else {
-            relayMsgToJaspa(bot, message)
-        }
+    // handle commands
+    if (message.content.startsWith(bot.altPrefix)) {
+        bot.handleCommand(message)
     }
-    else if (message.channel.type === 'text') {
-        //if the message starts with \ and is from an admin
-        if (message.content.startsWith(bot.altPrefix) && (bot.admins.includes(message.author.id))) {
 
-            //splits the message into words after the prefix
-            const args = message.content.slice(bot.prefix.length).split(/ +/);
-
-            //the first word in the message following the prefix
-            const command = args.shift().toLowerCase();
-
-            //check if the command is in the list
-            if (client.things.get('textcommands').get(command) != undefined) {
-                //run the command
-                client.things.get('textcommands').get(command).execute(message, args, bot);
-            }
-        }
+    // handle non-commands
+    else {
+        bot.handleNonCommand(message)
     }
 });
 
