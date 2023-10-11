@@ -1,9 +1,11 @@
+const { getTracks, getCurrentSong, createPlaylist, addSongsToPlaylist, clearPlaylist } = require('./spotify');
+
 // skips to the previous song
 const prevSong = (bot) => {
     let oldSong;
 
     //get current song
-    bot.getCurrentSong().then((song) => {
+    getCurrentSong().then((song) => {
         //save song name
         oldSong = song.name
 
@@ -12,7 +14,7 @@ const prevSong = (bot) => {
     })
 
         //get the current song
-        .then(() => bot.getCurrentSong())
+        .then(() => getCurrentSong())
 
         //update stuff with new song
         .then((song) => {
@@ -33,7 +35,7 @@ const nextSong = (bot) => {
     let oldSong;
 
     //get current song
-    bot.getCurrentSong().then((song) => {
+    getCurrentSong().then((song) => {
         //save song name
         oldSong = song.name
 
@@ -42,7 +44,7 @@ const nextSong = (bot) => {
     })
 
         //get the current song
-        .then(() => bot.getCurrentSong())
+        .then(() => getCurrentSong())
 
         //update stuff with new song
         .then((song) => {
@@ -67,7 +69,7 @@ const toggleInterval = (bot) => {
 // ensures that all songs in the database are in the barrel
 const barrel = (bot) => {
     // read the barrel for tracks
-    bot.getTracks(bot.barrelID)
+    getTracks(bot.barrelID)
         .then((barrelTracks) => {
             // convert to uris
             barrelUris = barrelTracks.map((track) => track.track.uri)
@@ -91,7 +93,7 @@ const barrel = (bot) => {
                 }
             })
 
-            return bot.addSongsToPlaylist(bot.barrelID, missingUris)
+            return addSongsToPlaylist(bot.barrelID, missingUris)
         })
 }
 
@@ -220,13 +222,13 @@ const orderer = (bot, themoji) => {
     console.log(`Ordering ${themoji}`)
 
     // clear playlist
-    bot.clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
+    clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
 
         // get the relevant uris
         .then(() => bot.orderedUris(themoji))
 
         // add all songs to playlist
-        .then((uris) => bot.addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris))
+        .then((uris) => addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris))
 
         // update ballot
         .then(() => {
@@ -265,7 +267,7 @@ const shuffler = (bot, themoji) => {
     console.log(`Shuffling ${themoji}`)
 
     // clear playlist
-    bot.clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
+    clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
 
         // get the relevant uris
         .then(() => bot.orderedUris(themoji))
@@ -287,7 +289,7 @@ const shuffler = (bot, themoji) => {
             }
 
             // add the shuffled songs to the playlist
-            return bot.addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), shuffledUris)
+            return addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), shuffledUris)
         })
 
         // update ballot
@@ -323,13 +325,13 @@ const reverser = (bot, themoji) => {
     console.log(`Reversing ${themoji}`)
 
     // clear playlist
-    bot.clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
+    clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
 
         // get the relevant uris
         .then(() => bot.orderedUris(themoji))
 
         // add all songs to playlist
-        .then((uris) => bot.addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris.reverse()))
+        .then((uris) => addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris.reverse()))
 
         // update ballot
         .then(() => bot.updateUtilityMessage(`Finished Reversing ${themoji}`))
@@ -349,21 +351,15 @@ const creater = (bot, themoji) => {
         return
     }
 
-    //check for custom emojis
-    if (reaction.emoji.createdAt != null) {
-        bot.updateVoteMessage("Custom Emojis are not supported")
-        console.log('Tried to create theme with custom emoji')
-    }
-
     console.log(`Attempting to create a theme ${themoji}`);
 
     //create a playlist
-    bot.createPlaylist(themoji)
+    createPlaylist(themoji)
         .then((playlistStuff) => {
             //add theme to list of themes
             bot.multiThemes.push
                 ({
-                    emoji: params.emoji,
+                    emoji: themoji,
                     id: playlistStuff.playlistID
                 });
 
@@ -371,10 +367,10 @@ const creater = (bot, themoji) => {
             bot.saveToFile()
 
             // send new playlist/theme to user
-            bot.updateUtilityMessage(`${params.emoji}\n${playlistStuff.playlistURL}`)
+            bot.updateUtilityMessage(`${themoji}\n${playlistStuff.playlistURL}`)
 
             //react new emoji to VoteMessage
-            bot.multiVoteMessage.react(params.emoji)
+            bot.multiVoteMessage.react(themoji)
         });
 }
 

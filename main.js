@@ -13,6 +13,7 @@ const { format } = require('date-fns');
 const { prevSong, nextSong, toggleInterval, barrel, help, upvote, upvoter, downvote, downvoter, order, orderer, shuffle, shuffler, reverse, reverser, create, creater, requestDelete, requester, confirmDelete, rejectDelete } = require('./actions');
 const { relayMsgToJaspa } = require('./helpers');
 const { adminCommands, nonAdminCommands, sendBallots } = require('./commands');
+const { setSpotifyBot, addSongsToPlaylist } = require('./spotify');
 
 const interval = "7 days"; // the range of time to include song votes in the query when not sorting by all time
 
@@ -102,6 +103,9 @@ var bot = {
     },
 
     loadSpot: async function () {
+        // set the spotify bot
+        setSpotifyBot(bot)
+
         //test stuff
         bot.testStuff();
 
@@ -119,115 +123,6 @@ var bot = {
             emojis.push(theme.emoji)
         }
         return emojis
-    },
-
-    getTracks(playlistID) {
-        //return a promise
-        return new Promise((resolve, reject) => {
-            //read info from the playlist 
-            bot.spotifyApi.getPlaylist(playlistID)
-
-                //send the length of the playlist into this.reading so that reading knows how much to scan
-                .then((playlistInfo) => this.gettingTracks(playlistInfo.body.tracks.total, playlistID))
-
-                //resolve the tracks back out to the promise
-                .then((tracks) => resolve(tracks))
-
-                //error handling 
-                .catch(function (error) {
-                    if (error.statusCode === 500 || error.statusCode === 502) {
-                        //report server error
-                        console.log("Server error, trying again");
-
-                        //try again
-                        this.getTracks(playlistID)
-
-                            //resolve with results of successful attempt
-                            .then((tracks) => resolve(tracks))
-
-                            //error handling
-                            .catch((error) => console.log("error while retrying this.getTracks\n", error));
-                    }
-                    else {
-                        console.log('Something went wrong in this.getTracks');
-                        console.log(error);
-                    }
-                });
-        });
-    },
-
-    gettingTracks(goal, playlistID, totTracks = [], newTracks = []) {
-        //add the next batch of tracks onto the total list of tracks
-        Array.prototype.push.apply(totTracks, newTracks);
-
-        console.log("reading chunk " + (1 + Math.ceil(totTracks.length / 100)) + "/" + (1 + Math.ceil(goal / 100)));
-
-        //return a promise 
-        return new Promise((resolve, reject) => {
-            //if we have read all tracks, resolve with the tracks
-            if (totTracks.length == goal) {
-                resolve(totTracks);
-            }
-            //otherwise
-            else {
-                //get the next batch of tracks
-                bot.spotifyApi.getPlaylistTracks(playlistID, { offset: totTracks.length })
-
-                    //pass that next batch into the next step of this.reading
-                    .then((tracksInfo) => this.gettingTracks(goal, playlistID, totTracks, tracksInfo.body.items))
-
-                    //the results of that step will be the final results (recursion go brrr)
-                    .then((result) => resolve(result))
-
-                    //error handling (sHouLd NeVeR hApPeN)
-                    .catch(function (error) {
-                        if (error.statusCode === 500 || error.statusCode === 502) {
-                            //report server error
-                            console.log("Server error, trying again");
-
-                            //try again
-                            bot.gettingTracks(goal, playlistID, totTracks, newTracks)
-
-                                //resolve with the result when successful
-                                .then((result) => resolve(result))
-
-                                //error handling
-                                .catch((error) => console.log("error while retrying this.gettingTracks\n", error));
-                        }
-                        else {
-                            console.log('Something went wrong in this.gettingTracks');
-                            console.log(error);
-                        }
-                    });
-            }
-        })
-    },
-
-    getCurrentSong() {
-        return new Promise((resolve, reject) => {
-            console.log("getting current song")
-
-            // check if a song is playing
-            bot.spotifyApi.getMyCurrentPlaybackState()
-                .then(function (data) {
-                    console.log("getting current state")
-                    // if a song is playling
-                    if (data.body && data.body.is_playing) {
-                        // get current song
-                        return bot.spotifyApi.getMyCurrentPlayingTrack()
-                    }
-                    else {
-                        return new Promise((resolve, reject) => {
-                            console.log("no song playing")
-                            reject(null)
-                        })
-                    }
-                })
-                .then(function (data) {
-                    //current song uri
-                    resolve(data.body.item);
-                })
-        })
     },
 
     addTheme(themeName) {
@@ -278,36 +173,6 @@ var bot = {
         return null
     },
 
-    createPlaylist: function (themeName) {
-        return new Promise((resolve, reject) => {
-            //create the playlist
-            bot.spotifyApi.createPlaylist(themeName, { public: true })
-
-                //resolve with the playlistinfo
-                .then((playlistInfo) => {
-                    console.log(`Here's ${themeName}:\n${playlistInfo.body.external_urls.spotify}`)
-                    resolve(
-                        {
-                            playlistID: playlistInfo.body.id,
-                            playlistURL: playlistInfo.body.external_urls.spotify
-                        })
-                })
-
-                //errors :)
-                .catch((error) => {
-                    if (error.statusCode === 500 || error.statusCode === 502) {
-                        console.log("Server error, trying again");
-                        bot.createPlaylist(themeName)
-                            .then((playlistStuff) => resolve(playlistStuff))
-                    }
-                    else {
-                        console.log("failed to create playlist - ")
-                        console.log(error)
-                    }
-                })
-        })
-    },
-
     updateUtilityMessage: function (message = null) {
         let out = ""
         if (message != null) {
@@ -322,89 +187,6 @@ var bot = {
     updateVoteMessage: function (message) {
         console.log("updating vote message")
         bot.multiVoteMessage.edit(message)
-    },
-
-    //gets the song which corresponds with the provided uri from the provided list of songs
-    //returns null if uri is not found
-    getSongByUri(uri, songs) {
-        console.log("getting song by uri")
-        for (let song of songs) {
-            if (song.uri === uri) {
-                console.log("song found")
-                return song
-            }
-        }
-
-        console.log("song not found")
-
-        return null;
-    },
-
-    //takes a list of songs, returns a list of all the songs that have positive scores for the provided emoji
-    positiveScores(emoji, songs) {
-        let positiveScores = []
-
-        for (let song of songs) {
-            if (song.scores.get(emoji)?.score > 0) {
-                positiveScores.push(song)
-            }
-        }
-
-        return positiveScores
-    },
-
-    addSongsToPlaylist(playlistID, uris) {
-        return new Promise((resolve, reject) => {
-            console.log("getting adjustments")
-
-            // get adjustments
-            let adjustments = this.compareUriLists(playlistID, [], uris);
-            console.log("got adjustments")
-
-            // adjust them
-            this.adjust(adjustments)
-
-                // resolve
-                .then(() => {
-                    console.log("adjusted adjustments")
-                    resolve()
-                })
-
-                // error
-                .catch((error) => console.log("Errored: ", error))
-        })
-    },
-
-    removeSongsFromPlaylist(playlistID, uris) {
-        return new Promise((resolve, reject) => {
-            console.log("getting adjustments")
-
-            //get adjustments
-            let adjustments = this.compareUriLists(playlistID, uris, []);
-            console.log("got adjustments")
-
-            //adjust them
-            this.adjust(adjustments)
-
-                //resolve
-                .then(() => {
-                    console.log("adjusted adjustments")
-                    resolve()
-                })
-
-                //error
-                .catch((error) => console.log("Errored: ", error))
-        })
-    },
-
-    convertSongsToUris: function (songs) {
-        let uris = []
-
-        for (let song of songs) {
-            uris.push(song.uri);
-        }
-
-        return uris
     },
 
     //reacts all emojis from the list of themes onto the provided message
@@ -423,145 +205,6 @@ var bot = {
 
         //react the emoji to the message, then react the rest
         message.react(emoji).then(() => this.reactAll(remainingEmojis, message))
-    },
-
-    adjust: function (adjustments) {
-        // console.log("this.adjustments received:\n", adjustments);
-        return new Promise((resolve, reject) => {
-            //only adjust things if there are things to adjust
-            if (adjustments.length > 0) {
-                //get a bunch of uris to send out to the api in one batch
-
-                //a list for all the uris in the batch
-                let uris = [];
-
-                //a list of all adjustments in the batch (used for retrying on server errors)
-                let batchAdjustments = [];
-
-                //grab an adjustment from the list (all adjustments in this batch will be similar to this one)
-                let template = adjustments[0];
-
-                //remove that adjustment from the list
-                adjustments.splice(0, 1);
-
-                //add it to relevant lists
-                uris.push(template.uri);
-                batchAdjustments.push(template);
-
-                //loop through all other adjustments
-                for (let i = 0; i < adjustments.length && uris.length < 100; i++) {
-                    //the adjustment at this step
-                    let temp = adjustments[i];
-
-                    //if the adjustment at this step matches the template
-                    if (temp.adjustment === template.adjustment && temp.id === template.id) {
-                        //remove it from the list of adjustments
-                        adjustments.splice(i, 1);
-                        i--
-
-                        //dont support songs that are local
-                        if (temp.uri.indexOf("spotify:local") == -1) {
-                            //add its uri to the relevant lists
-                            uris.push(temp.uri);
-                            batchAdjustments.push(temp);
-                        }
-                        else {
-                            console.log(temp.uri + " is local and unsupported.");
-                        }
-                    }
-                }
-
-                //adjust the playlist via the batch
-
-                //if the adjustment is a clear
-                if (template.adjustment === "clear") {
-                    //convert the uris to a list of objects (api is stupid)
-                    let objectUris = [];
-
-                    uris.forEach(uri => {
-                        objectUris.push({ uri: uri });
-                    });
-
-                    console.log("removing " + objectUris.length + " songs from playlist " + template.id);
-
-                    //remove the provided uris from the template's playlist
-                    bot.spotifyApi.removeTracksFromPlaylist(template.id, objectUris)
-
-                        //on success, adjust the remaining adjustments
-                        .then(() => this.adjust(adjustments))
-
-                        //after all other adjustments have been adjusted, resolve 
-                        .then((() => resolve()))
-
-                        //error handling
-                        .catch(function (error) {
-                            //if it is a server error we can just retry
-                            if (error.statusCode === 500 || error.statusCode === 502) {
-                                //report server error to console
-                                console.log("Server error, trying again");
-
-                                //add batch adjustments back into the list of adjustments
-                                Array.prototype.push.apply(adjustments, batchAdjustments);
-
-                                //retry
-                                bot.adjust(adjustments)
-
-                                    //resolve
-                                    .then(() => resolve())
-
-                                    //report error (is this dead code?)
-                                    .catch((error) => console.log("error while retrying a clear in this.adjust", error));
-                            }
-                            else {
-                                console.log('error while clearing in this.adjust');
-                                console.log(error);
-                            }
-                        });
-                }
-                //if this adjustment is an addition
-                if (template.adjustment === "add") {
-                    console.log("adding " + uris.length + " songs to playlist " + template.id);
-
-                    //add the provided uris to the template's playlist
-                    bot.spotifyApi.addTracksToPlaylist(template.id, uris)
-
-                        //on success, adjust the remaining adjustments
-                        .then(() => this.adjust(adjustments))
-
-                        //after all other adjustments have been adjusted, resolve 
-                        .then((() => resolve()))
-
-                        //error handling
-                        .catch(function (error) {
-                            //if it is a server error we can just retry
-                            if (error.statusCode === 500 || error.statusCode === 502) {
-                                //report server error to console
-                                console.log("Server error, trying again");
-
-                                //add batch adjustments back into the list of adjustments
-                                Array.prototype.push.apply(adjustments, batchAdjustments);
-
-                                //retry
-                                bot.adjust(adjustments)
-
-                                    //resolve
-                                    .then(() => resolve())
-
-                                    //report error (is this dead code?)
-                                    .catch((error) => console.log("error while retrying an add in this.adjust", error));
-                            }
-                            else {
-                                console.log('error while adding in this.adjust');
-                                console.log(error);
-                            }
-                        });
-                }
-            }
-            else {
-                console.log("All adjustments adjusted.\n")
-                resolve();
-            }
-        });
     },
 
     testStuff: function () {
@@ -621,25 +264,7 @@ var bot = {
         return adjustments;
     },
 
-    clearPlaylist(playlistID) {
-        return new Promise((resolve, reject) => {
-            bot.getTracks(playlistID).then((tracks) => {
-                let uris = []
-
-                for (let track of tracks) {
-                    uris.push(track.track.uri)
-                }
-
-                console.log("clearing " + uris.length + " songs from playlist " + playlistID)
-                return bot.removeSongsFromPlaylist(playlistID, uris)
-            })
-                .then(() => resolve())
-                .catch((error) => console.log("error clearing playlist: ", playlistID, "\nerr:", error))
-        })
-    },
-
-
-    //check song exists in the list of songs
+    // if the song isn't yet in the database, add it to the barrel. TODO: this is a shit idea. check if it's in the barrel, and add it if it's not in there. 
     ensureSongIsInBarrel: function (uri, name) {
         // dont support local songs
         if (uri.indexOf("spotify:local") != -1) {
@@ -659,7 +284,7 @@ var bot = {
                 // if it doesn't exist, add it to the barrel playlist
                 else {
                     console.log("song not yet in the barrel, adding it")
-                    return bot.addSongsToPlaylist(bot.barrelID, [uri])
+                    return addSongsToPlaylist(bot.barrelID, [uri])
                 }
             })
                 .then(() => {
@@ -855,6 +480,13 @@ client.on('message', message => {
 client.on('messageReactionAdd', (reaction, user) => {
     // only handle reactions from admins
     if (!bot.admins.includes(user.id)) return
+
+    // ignore custom reactions
+    if (reaction.emoji.createdAt != null) {
+        bot.updateVoteMessage("Custom Emojis are not supported")
+        console.log('Custom Emojis are not supported')
+        return
+    }
 
     // handle utility actions 
     if (reaction.message.id === bot.multiUtilityMessage?.id && bot.actions.has(reaction.emoji.name)) {

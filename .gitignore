@@ -2,4 +2,4 @@
 config.json
 readyAtList.json
 testReadyAtList.json
-data/postgres/*
+data/postgres/
