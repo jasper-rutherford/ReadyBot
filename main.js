@@ -15,7 +15,7 @@ const { relayMsgToJaspa } = require('./helpers');
 const { adminCommands, nonAdminCommands, sendBallots } = require('./commands');
 const { setSpotifyBot, addSongsToPlaylist } = require('./spotify');
 
-const interval = "7 days"; // the range of time to include song votes in the query when not sorting by all time
+const interval = "14 days"; // the range of time to include song votes in the query when not sorting by all time
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
@@ -364,6 +364,13 @@ var bot = {
           FROM scores AS s1
           WHERE s1.themoji = '${emoji}'
             ${orderedUrisHelper1}
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '${emoji}'
+                   ${orderedUrisHelper2}
+              ) > 0
             ORDER BY total_score DESC;`
 
         return new Promise((resolve, reject) => {
