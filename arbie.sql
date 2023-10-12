@@ -230,6 +230,7 @@ spotify:track:07QCSa14E5bfOOkTXR7oLD	1	Good Times	2023-10-11 15:03:26.428	🦥
 spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-11 15:46:03.697	🦥
 spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-11 15:53:26.483	🦥
 spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-11 16:22:55.362	🦥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-11 22:18:56.314	🦥
 spotify:track:3mC64Smtz0xXvsa52ZM3Q9	1	Stars	2023-09-20 21:40:23.817	🦥
 spotify:track:4Bpyapy2YVNAQBUOBp17uu	1	Come Into My World (with NERVO)	2023-09-20 23:20:49.209	🦥
 spotify:track:089vxHEH64AKLKhokNXEJx	1	Higher	2023-09-21 00:19:57.938	🦥
@@ -458,6 +459,7 @@ spotify:track:5q45fpmnIeg0aen9agRcKN	1	Static Body	2023-10-11 13:01:35.625	🦥
 spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-11 15:09:52.987	🦥
 spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-11 15:51:44.53	🦥
 spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2023-10-11 16:04:18.319	🦥
+spotify:track:43WYPxyEfIxlIjNlxQGYzc	1	Cry About It Later (feat. Luísa Sonza & Bruno Martini)	2023-10-11 22:12:56.703	🦥
 spotify:track:24LS4lQShWyixJ0ZrJXfJ5	1	Sweet Nothing (feat. Florence Welch)	2023-09-20 21:47:27.184	🦥
 spotify:track:2UCu2FoXFZpCT36lYzej4O	1	Something Stupid (feat. AWA)	2023-09-20 23:53:38.387	🦥
 spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-09-21 00:26:30.806	🦥
@@ -1404,6 +1406,7 @@ spotify:track:2bsygdSQc5XZfvRm1BA0H5	1	Lovesick	2023-10-11 14:51:02.607	🦥
 spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-11 15:46:02.863	🦥
 spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-11 15:51:45.516	🦥
 spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-11 16:22:54.08	🦥
+spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-10-11 22:14:05.968	🦥
 \.
 
 

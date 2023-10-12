@@ -66,6 +66,8 @@ var bot = {
     barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
 
     mostRecentOrderTime: undefined,                         // the last time that the 🦥 playlist was ordered
+    autoOrderPeriodically: false,
+    autoOrderInterval: 1000 * 60 * 60 * 24 * 3,                
 
     // a map of emoji that can be reacted to the utility message to immediately perform an action
     actions: new Map([
@@ -117,7 +119,7 @@ var bot = {
         //send the ballots
         sendBallots(bot).then(() => {
             // if it has been more than 24 hours since the last order, order the playlist
-            if (bot.mostRecentOrderTime == undefined || new Date() - bot.mostRecentOrderTime > 1000 * 60 * 60 * 24) {
+            if (bot.autoOrderPeriodically && bot.mostRecentOrderTime == undefined || new Date() - bot.mostRecentOrderTime > bot.autoOrderInterval) {
                 orderer(bot, "🦥")
             }
         });
@@ -349,18 +351,19 @@ var bot = {
     },
 
     orderedUris: function (emoji) {
-        let orderedUrisHelper = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
+        let orderedUrisHelper1 = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
+        let orderedUrisHelper2 = bot.queryInterval == "" ? "" : `AND s2.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
 
         let query = `SELECT DISTINCT song_name, spotify_uri, (
             SELECT SUM(score)
             FROM scores AS s2
             WHERE s2.spotify_uri = s1.spotify_uri
               AND s2.themoji = '${emoji}'
-               ${orderedUrisHelper}
+               ${orderedUrisHelper2}
           ) AS total_score
           FROM scores AS s1
           WHERE s1.themoji = '${emoji}'
-            ${orderedUrisHelper}
+            ${orderedUrisHelper1}
             ORDER BY total_score DESC;`
 
         return new Promise((resolve, reject) => {
