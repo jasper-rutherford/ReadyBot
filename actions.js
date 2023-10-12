@@ -195,11 +195,15 @@ const downvoter = (bot, themoji) => {
 
 // order the playlist with the provided theme (from biggest to smallest score)
 const order = (bot) => {
+    bot.lastTime = new Date()
     bot.currentAction = orderer
     bot.updateUtilityMessage();
 }
 
 const orderer = (bot, themoji) => {
+    bot.mostRecentOrderTime = new Date()
+    bot.saveToFile()
+
     //check emoji is valid
     if (!bot.getThemojis().includes(themoji)) {
         console.log(`Tried to order a theme that does not exist (${themoji})`);
@@ -240,12 +244,13 @@ const orderer = (bot, themoji) => {
 
 // shuffle the playist with the provided theme (according to the bot's current query interval)
 const shuffle = (bot) => {
+    bot.lastTime = new Date()
     bot.currentAction = shuffler
     bot.updateUtilityMessage();
 }
 
 const shuffler = (bot, themoji) => {
-    //check emoji is valid
+    // check emoji is valid
     if (!bot.getThemojis().includes(themoji)) {
         console.log(`Tried to shuffle a theme that does not exist (${themoji})`);
         bot.updateUtilityMessage(`${themoji} does not exist.`)
@@ -298,6 +303,7 @@ const shuffler = (bot, themoji) => {
 
 // order the playlist with the provided theme (from smallest to biggest score)
 const reverse = (bot) => {
+    bot.lastTime = new Date()
     bot.currentAction = reverser
     bot.updateUtilityMessage();
 }

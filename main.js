@@ -65,6 +65,8 @@ var bot = {
     queryInterval: interval,                                // the range of time to include song votes in the query. default to interval
     barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
 
+    mostRecentOrderTime: undefined,                         // the last time that the 🦥 playlist was ordered
+
     // a map of emoji that can be reacted to the utility message to immediately perform an action
     actions: new Map([
         ["⏮", prevSong],
@@ -113,7 +115,12 @@ var bot = {
         bot.readFromFile();
 
         //send the ballots
-        sendBallots(bot);
+        sendBallots(bot).then(() => {
+            // if it has been more than 24 hours since the last order, order the playlist
+            if (bot.mostRecentOrderTime == undefined || new Date() - bot.mostRecentOrderTime > 1000 * 60 * 60 * 24) {
+                orderer(bot, "🦥")
+            }
+        });
     },
 
     //gets the list of emojis from the list of themes
@@ -127,7 +134,7 @@ var bot = {
 
     addTheme(themeName) {
         bot.themes.push(themeName);
-        bot.saveThemes();
+        bot.saveToFile();
     },
 
     // saves the mapping of themoji to playlistID to file
@@ -137,6 +144,7 @@ var bot = {
         var wrapper =
         {
             themes: bot.multiThemes,
+            mostRecentOrderTime: bot.mostRecentOrderTime
         }
 
         //where to save to
@@ -158,6 +166,8 @@ var bot = {
         let wrapper = JSON.parse(fs.readFileSync('./data/spotify/themoji.json'));
 
         bot.multiThemes = wrapper.themes
+
+        bot.mostRecentOrderTime = wrapper.mostRecentOrderTime
 
         console.log("read themoji mappings from file")
     },
@@ -413,8 +423,7 @@ var bot = {
         const words = message.content.slice(bot.prefix.length).split(/ +/);
         const command = words.shift().toLowerCase();
 
-        if (message.channel.type != 'dm' && message.channel.type != 'text')
-        {
+        if (message.channel.type != 'dm' && message.channel.type != 'text') {
             console.log("message sent in unsupported channel type: " + message.channel.type)
             return
         }
@@ -426,7 +435,7 @@ var bot = {
         else if (nonAdminCommands.get(message.channel.type).has(command)) {
             nonAdminCommands.get(message.channel.type).get(command)(bot, message, words)
         }
-    }, 
+    },
 
     handleNonCommand(message) {
         // only dm's are supported

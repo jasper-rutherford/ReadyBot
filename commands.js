@@ -1,29 +1,32 @@
 const { getRandomInt } = require('./helpers')
 
 const sendBallots = (bot, message, words) => {
-    //get the channel
-    let channel = bot.client.channels.cache.get(bot.spotifyChannel)
+    return new Promise((resolve, reject) => {
+        //get the channel
+        let channel = bot.client.channels.cache.get(bot.spotifyChannel)
 
-    //message 0: a line separating the above messages from these
-    channel.send("-----------------------------------------------------")
+        //message 0: a line separating the above messages from these
+        channel.send("-----------------------------------------------------")
 
-    //message 1: the utility message
-    let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past " + bot.queryInterval}`
-    let message1Content = `[Current Mode: ${bot.getCurrentUtilityMode()}${intervalMessage}]`
-    channel.send(message1Content).then(sent => {
-        bot.multiUtilityMessage = sent
-        bot.reactAll(bot.utilityEmojis, sent)
-    })
+        //message 1: the utility message
+        let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past " + bot.queryInterval}`
+        let message1Content = `[Current Mode: ${bot.getCurrentUtilityMode()}${intervalMessage}]`
+        channel.send(message1Content).then(sent => {
+            bot.multiUtilityMessage = sent
+            bot.reactAll(bot.utilityEmojis, sent)
+            resolve()
+        })
 
-    //message 2: the voting message - initializes to a bunch of dancers
-    let dancers = ["💃", "🕺"]
-    let message2Content = ``
-    for (let i = 0; i < 8; i++) {
-        message2Content += `${dancers[getRandomInt(2)]}  `
-    }
-    channel.send(message2Content).then(sent => {
-        bot.multiVoteMessage = sent
-        bot.reactAll(bot.getThemojis(), sent)
+        //message 2: the voting message - initializes to a bunch of dancers
+        let dancers = ["💃", "🕺"]
+        let message2Content = ``
+        for (let i = 0; i < 8; i++) {
+            message2Content += `${dancers[getRandomInt(2)]}  `
+        }
+        channel.send(message2Content).then(sent => {
+            bot.multiVoteMessage = sent
+            bot.reactAll(bot.getThemojis(), sent)
+        })
     })
 }
 
@@ -111,6 +114,6 @@ for (let [key, value] of nonAdminCommands.get('text')) {
 
 module.exports = {
     adminCommands,
-    nonAdminCommands, 
+    nonAdminCommands,
     sendBallots
 }
