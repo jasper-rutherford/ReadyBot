@@ -56,7 +56,7 @@ var bot = {
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
     utilityEmojis:                                          // the emoji who perform actions for the utility message
-        ["⏮", "⬇", "⬆", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔"],
+        ["⏮", "⬆", "⬇", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔"],
     deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
     deleteMessage: null,                                    // the message warning the user about their potential deletion
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
@@ -370,7 +370,7 @@ var bot = {
                 WHERE s2.spotify_uri = s1.spotify_uri
                   AND s2.themoji = '${emoji}'
                    ${orderedUrisHelper2}
-              ) > 0
+              ) > 1
             ORDER BY total_score DESC;`
 
         return new Promise((resolve, reject) => {

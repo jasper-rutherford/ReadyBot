@@ -231,6 +231,35 @@ spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-11 15:46:03.697	🦥
 spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-11 15:53:26.483	🦥
 spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-11 16:22:55.362	🦥
 spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-11 22:18:56.314	🦥
+spotify:track:63rbP24OzfaQCJjsHWZXnY	1	Where Them Girls At (feat. Nicki Minaj & Flo Rida)	2023-10-12 16:49:30.908	🦥
+spotify:track:1sUdq3kWa9dJXHu3eYOUll	1	Spooky, Scary Skeletons - Undead Tombstone Remix	2023-10-12 17:45:35.052	🦥
+spotify:track:6K4t31amVTZDgR3sKmwUJJ	1	The Less I Know The Better	2023-10-13 12:05:28.926	🎶
+spotify:track:2QjOHCTQ1Jl3zawyYOpxh6	1	Sweater Weather	2023-10-13 12:24:36.747	🎶
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-13 13:01:35.057	🦥
+spotify:track:4IyrCFU0VeashNaFySWyQm	1	Can I Get It Back (R3HAB Remix)	2023-10-13 15:58:01.391	🦥
+spotify:track:3k0DJq2HdWJqnqor8NX0ac	1	Padam Padam	2023-10-14 12:27:27.516	🦥
+spotify:track:46XBrXzTAYXdRMeVxVeA6G	1	Mirror	2023-10-14 18:37:10.621	🦥
+spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-14 19:34:49.477	🦥
+spotify:track:4ZofmEdvs4mQqZ756GQhSY	1	Melody	2023-10-14 19:54:13.406	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-10-14 20:06:48.231	🦥
+spotify:track:3FkyJH5uE5XmN3voocBcYK	1	Private Life	2023-10-14 20:30:44.663	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2023-10-15 14:35:25.946	🦥
+spotify:track:4vswbhNPKavZJqpXzJI4wd	1	I Want You Around	2023-10-15 18:45:29.058	🦥
+spotify:track:5NeydBopWtJSquefjGnRAp	1	high	2023-10-16 12:33:18.964	🔥
+spotify:track:4IyrCFU0VeashNaFySWyQm	1	Can I Get It Back (R3HAB Remix)	2023-10-16 14:41:01.079	🦥
+spotify:track:2rfZyAX6wZxQWMQ9GYyLIu	1	Worship You	2023-10-16 14:49:09.05	🦥
+spotify:track:5zEAGm4yKQ8NMemN0m3rW1	1	Nirvana	2023-10-16 18:42:26.1	🦥
+spotify:track:6PUIzlqotEmPuBfjbwYWOB	1	Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix	2023-10-16 22:03:07.803	🦥
+spotify:track:0I5pVidtNjNXeaqHnwhrva	1	Can't Come To The Phone	2023-10-16 22:25:15.073	🦥
+spotify:track:6BwPstqf4RoRMbDidFWNxE	1	Do It All Again	2023-10-17 13:09:26.844	🔥
+spotify:track:67lbzVADsqJJ6tyVk0XCgn	1	Chain My Heart	2023-10-17 13:11:03.266	🔥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-17 13:16:27.772	🦥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-17 13:16:28.159	🔥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2023-10-17 14:38:40.317	🔥
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-17 14:41:08.829	🔥
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-17 14:41:13.843	🦥
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-17 15:04:31.256	🦥
+spotify:track:4fCE1SCDulouoac9Q8XroU	1	West Coast (feat. Quinn XCII)	2023-10-17 15:06:36.747	🦥
 spotify:track:3mC64Smtz0xXvsa52ZM3Q9	1	Stars	2023-09-20 21:40:23.817	🦥
 spotify:track:4Bpyapy2YVNAQBUOBp17uu	1	Come Into My World (with NERVO)	2023-09-20 23:20:49.209	🦥
 spotify:track:089vxHEH64AKLKhokNXEJx	1	Higher	2023-09-21 00:19:57.938	🦥
@@ -284,6 +313,25 @@ spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2023-10-11 15:05:42.581	�
 spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-11 15:50:00.229	🦥
 spotify:track:4Ka0qWis2V9gI5MFdzT1lB	1	Breaking with You	2023-10-11 15:56:29.116	🦥
 spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-10-11 16:47:56.1	🦥
+spotify:track:6zsFddikwwAfBr3USkYSDx	1	Radio	2023-10-12 17:24:26.6	🦥
+spotify:track:1sUdq3kWa9dJXHu3eYOUll	1	Spooky, Scary Skeletons - Undead Tombstone Remix	2023-10-12 17:45:35.865	🦥
+spotify:track:4nK5YrxbMGZstTLbvj6Gxw	1	Supalonely	2023-10-13 12:05:33.161	🎶
+spotify:track:2QjOHCTQ1Jl3zawyYOpxh6	1	Sweater Weather	2023-10-13 12:24:38.267	☔
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-13 15:06:05.273	🦥
+spotify:track:0Pebpt5NlciT4arOfAEgvB	1	Touch	2023-10-13 16:02:36.507	🦥
+spotify:track:0GTuyzPTs2G0wqFD1trSOw	1	Phone	2023-10-14 12:32:59.995	🦥
+spotify:track:3iEwla99ovgF0Rdla6FZm4	1	Let Them Know	2023-10-14 18:39:21.301	🦥
+spotify:track:3k0DJq2HdWJqnqor8NX0ac	1	Padam Padam	2023-10-14 19:37:50.51	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-10-14 19:57:44.515	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-10-14 20:06:49.015	🦥
+spotify:track:3HYZs5IHvtfeGx1EfNtflG	1	Hole Right Where My Heart Is	2023-10-14 22:48:35.784	🦥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-10-15 15:59:53.791	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-15 19:18:27.977	🦥
+spotify:track:5Agunnfj2SyNhhFWNmQ8JE	1	Sweet and Sour	2023-10-16 11:12:21.287	🔥
+spotify:track:4WQJPsbGOdqe24mUVHa8xb	-1	Now Or Never	2023-10-16 12:50:48.471	🦥
+spotify:track:2xfHakNuD25ma5CSfTXFw2	1	The One	2023-10-16 14:42:44.575	🔥
+spotify:track:4IyrCFU0VeashNaFySWyQm	1	Can I Get It Back (R3HAB Remix)	2023-10-16 15:24:45.481	🔥
+spotify:track:22dUzMFttcR3uU17NcOAIv	1	Desire (with Sam Smith)	2023-10-16 18:58:34.581	🦥
 spotify:track:3mC64Smtz0xXvsa52ZM3Q9	1	Stars	2023-09-20 21:40:51.307	🦥
 spotify:track:63y6xWR4gXz7bnUGOk8iI6	1	Into You	2023-09-20 23:28:25.062	🦥
 spotify:track:089vxHEH64AKLKhokNXEJx	1	Higher	2023-09-21 00:19:58.579	🦥
@@ -349,6 +397,14 @@ spotify:track:5NeydBopWtJSquefjGnRAp	1	high	2023-10-11 15:07:34.628	🦥
 spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-11 15:50:00.913	🦥
 spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2023-10-11 16:03:47.075	🦥
 spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-10-11 16:48:00.533	🦥
+spotify:track:24LS4lQShWyixJ0ZrJXfJ5	1	Sweet Nothing (feat. Florence Welch)	2023-10-12 17:25:22.113	🦥
+spotify:track:6btdl1Vl6Ta5lUwUSOFW2H	1	SUN GOES DOWN	2023-10-12 20:03:52.584	☔
+spotify:track:6K4t31amVTZDgR3sKmwUJJ	1	The Less I Know The Better	2023-10-13 12:15:52.821	🦥
+spotify:track:6f5ExP43esnvdKPddwKXJH	1	Better Days (NEIKED x Mae Muller x Polo G)	2023-10-13 12:28:21.986	☔
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-10-13 15:18:20.477	🦥
+spotify:track:7kMfu3KUydmrFVGEAhjtyl	1	Good Girls Go Bad (feat. Leighton Meester)	2023-10-14 13:49:31.348	🦥
+spotify:track:6h5PAsRni4IRlxWr6uDPTP	1	More Than You Know	2023-10-14 18:41:53.253	🦥
+spotify:track:0Pebpt5NlciT4arOfAEgvB	1	Touch	2023-10-14 19:41:50.295	🦥
 spotify:track:3mC64Smtz0xXvsa52ZM3Q9	1	Stars	2023-09-20 21:41:17.792	🦥
 spotify:track:3tIjJY43mDAhMZxSuDHvjy	1	Lovefool (feat. Pia Mia)	2023-09-20 23:42:19.98	🦥
 spotify:track:3DTqHfTGj1c6y2gDXsTez4	1	Regardless	2023-09-21 00:23:04.432	🦥
@@ -407,6 +463,22 @@ spotify:track:5NeydBopWtJSquefjGnRAp	1	high	2023-10-11 15:09:11.057	☔
 spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-11 15:50:02.961	🦥
 spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2023-10-11 16:03:47.94	🦥
 spotify:track:5seWZTjT0U8a7cy3Y5NJQ9	1	Like Gold	2023-10-11 16:50:59.235	🦥
+spotify:track:2QjOHCTQ1Jl3zawyYOpxh6	1	Sweater Weather	2023-10-12 17:32:42.199	🦥
+spotify:track:27ycaQnQAxaPiyeg3nr2aB	1	Midnight Sky	2023-10-12 20:06:02.044	☔
+spotify:track:6K4t31amVTZDgR3sKmwUJJ	1	The Less I Know The Better	2023-10-13 12:15:55.708	🦥
+spotify:track:0COqiPhxzoWICwFCS4eZcp	1	Bring Me To Life	2023-10-13 12:35:58.578	🎶
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-10-13 15:19:26.892	🦥
+spotify:track:11BKm0j4eYoCPPpCONAVwA	1	Bloody Mary	2023-10-14 13:53:06.451	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-14 19:12:21.513	🦥
+spotify:track:4Bpyapy2YVNAQBUOBp17uu	1	Come Into My World (with NERVO)	2023-10-14 19:42:47.977	🦥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2023-10-14 20:01:08.063	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-10-14 20:23:04.737	🦥
+spotify:track:0L5dwOLG1xpw9oD5FcyQak	1	Stars	2023-10-15 18:42:50.28	🦥
+spotify:track:6rFaGfDRVRXlVdUVgBz0Ho	1	Noise Cancellation	2023-10-16 11:13:03.913	🦥
+spotify:track:3RrJTOClOgMAc9FQ7QDwv7	1	Undercover	2023-10-16 12:51:31.384	🦥
+spotify:track:2xfHakNuD25ma5CSfTXFw2	1	The One	2023-10-16 14:42:48.595	🔥
+spotify:track:4IyrCFU0VeashNaFySWyQm	1	Can I Get It Back (R3HAB Remix)	2023-10-16 15:24:45.723	🦥
+spotify:track:3PlpAfyyeuicW1HP0IebLM	1	Somebody I F*cked Once - Lady Bee Remix	2023-10-16 21:06:53.642	🦥
 spotify:track:24LS4lQShWyixJ0ZrJXfJ5	1	Sweet Nothing (feat. Florence Welch)	2023-09-20 21:47:19.083	🦥
 spotify:track:3k0DJq2HdWJqnqor8NX0ac	1	Padam Padam	2023-09-20 23:44:26.616	🦥
 spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-09-21 00:26:28.04	🦥
@@ -460,6 +532,26 @@ spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-11 15:09:52.987	🦥
 spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-11 15:51:44.53	🦥
 spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2023-10-11 16:04:18.319	🦥
 spotify:track:43WYPxyEfIxlIjNlxQGYzc	1	Cry About It Later (feat. Luísa Sonza & Bruno Martini)	2023-10-11 22:12:56.703	🦥
+spotify:track:5FHPvs8RxWBQXP2Rq9I2B2	1	You Only Love Me	2023-10-12 11:57:21.614	🦥
+spotify:track:4SKyal51xIIaySBVNh3fJn	1	Supersonic	2023-10-12 17:35:38.958	🦥
+spotify:track:28cnXtME493VX9NOw9cIUh	1	Hurt	2023-10-13 11:21:15.101	☔
+spotify:track:6K4t31amVTZDgR3sKmwUJJ	1	The Less I Know The Better	2023-10-13 12:15:58.272	☔
+spotify:track:0COqiPhxzoWICwFCS4eZcp	1	Bring Me To Life	2023-10-13 12:36:00	☔
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-10-13 15:22:13.371	🦥
+spotify:track:22dUzMFttcR3uU17NcOAIv	1	Desire (with Sam Smith)	2023-10-14 11:27:00.376	🦥
+spotify:track:4FxDFBpqPumIyXzPagQPp0	1	I Wrote A Song - Topic Remix	2023-10-14 16:07:51.6	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-14 19:12:24.452	🦥
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-14 19:49:03.398	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2023-10-14 20:03:25.286	🦥
+spotify:track:4IyrCFU0VeashNaFySWyQm	1	Can I Get It Back (R3HAB Remix)	2023-10-14 20:26:28.046	🦥
+spotify:track:4dq7XLDmFHNwc1yqL339qT	1	Wake Me Up In Paris	2023-10-15 18:43:48.63	🦥
+spotify:track:6rFaGfDRVRXlVdUVgBz0Ho	1	Noise Cancellation	2023-10-16 11:13:06.678	🔥
+spotify:track:3RrJTOClOgMAc9FQ7QDwv7	1	Undercover	2023-10-16 12:51:34.167	🔥
+spotify:track:2rfZyAX6wZxQWMQ9GYyLIu	1	Worship You	2023-10-16 14:48:54.117	🔥
+spotify:track:2AcKLW30dJ03qXsGU3RehH	1	All Or Nothing	2023-10-16 17:30:59.374	🦥
+spotify:track:0ymH3Qwwzkl802WD3yy0oY	1	Marble	2023-10-16 21:13:40.854	🦥
+spotify:track:76Tuo484SLohJakHLnGI3B	1	Sweet Melody	2023-10-16 22:12:21.169	🦥
+spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2023-10-17 13:21:47.937	🔥
 spotify:track:24LS4lQShWyixJ0ZrJXfJ5	1	Sweet Nothing (feat. Florence Welch)	2023-09-20 21:47:27.184	🦥
 spotify:track:2UCu2FoXFZpCT36lYzej4O	1	Something Stupid (feat. AWA)	2023-09-20 23:53:38.387	🦥
 spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-09-21 00:26:30.806	🦥
@@ -1407,6 +1499,158 @@ spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-11 15:46:02.863	🦥
 spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-11 15:51:45.516	🦥
 spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-11 16:22:54.08	🦥
 spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-10-11 22:14:05.968	🦥
+spotify:track:2rfZyAX6wZxQWMQ9GYyLIu	1	Worship You	2023-10-12 14:44:39.096	🦥
+spotify:track:4SKyal51xIIaySBVNh3fJn	-1	Supersonic	2023-10-12 17:38:10.169	🦥
+spotify:track:4nK5YrxbMGZstTLbvj6Gxw	1	Supalonely	2023-10-13 12:02:46.627	🎶
+spotify:track:2QjOHCTQ1Jl3zawyYOpxh6	1	Sweater Weather	2023-10-13 12:24:04.942	🎶
+spotify:track:0COqiPhxzoWICwFCS4eZcp	-1	Bring Me To Life	2023-10-13 12:36:02.005	🎶
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-10-13 15:22:14.505	🦥
+spotify:track:3HYZs5IHvtfeGx1EfNtflG	1	Hole Right Where My Heart Is	2023-10-14 11:35:40.818	🦥
+spotify:track:5seWZTjT0U8a7cy3Y5NJQ9	1	Like Gold	2023-10-14 16:42:14.133	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-14 19:12:25.674	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-14 19:53:32.081	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-10-14 20:05:41.001	🦥
+spotify:track:3FkyJH5uE5XmN3voocBcYK	1	Private Life	2023-10-14 20:29:23.884	🦥
+spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-10-15 13:34:24.945	🦥
+spotify:track:4fCE1SCDulouoac9Q8XroU	1	West Coast (feat. Quinn XCII)	2023-10-17 15:06:37.312	🔥
+spotify:track:07QCSa14E5bfOOkTXR7oLD	1	Good Times	2023-10-17 15:09:10.118	🔥
+spotify:track:6DploCSZVf5gvIP7WBBU6S	1	Afterbloom (feat. Deza)	2023-10-17 15:16:36.409	🔥
+spotify:track:6LAlZuA1IhylVnInqNWo2j	1	Can't Choose (feat. Kiara Nelson)	2023-10-17 15:35:07	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-17 15:42:21.62	🔥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-17 15:42:22.288	🦥
+spotify:track:4zPqv04ddAFwk2Pgz3jC9U	1	Where You Are (Sávežan)	2023-10-17 15:57:24.484	🦥
+spotify:track:4zPqv04ddAFwk2Pgz3jC9U	1	Where You Are (Sávežan)	2023-10-17 15:57:24.725	🔥
+spotify:track:1YWr18dWRmuvPgAsPBsOow	1	Forget You	2023-10-17 19:35:12.53	🦥
+spotify:track:1YWr18dWRmuvPgAsPBsOow	1	Forget You	2023-10-17 19:37:04.451	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-10-18 11:45:17.583	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-10-18 11:45:18.499	🔥
+spotify:track:2BfJX65Te5q84Pku7osGRH	1	Good Luck (with Jax Jones & Galantis)	2023-10-18 11:55:48.426	🔥
+spotify:track:0L5dwOLG1xpw9oD5FcyQak	1	Stars	2023-10-18 11:56:22.037	🔥
+spotify:track:4dq7XLDmFHNwc1yqL339qT	1	Wake Me Up In Paris	2023-10-18 12:02:26.529	🔥
+spotify:track:7fWOBXSWN29kaE0spQjUW9	1	Goodbye	2023-10-18 12:08:22.272	🔥
+spotify:track:19BoXyNUZB8M9PgAyMHVRg	1	Tell Me	2023-10-18 12:13:20.83	🔥
+spotify:track:4vswbhNPKavZJqpXzJI4wd	1	I Want You Around	2023-10-18 12:18:03.788	🔥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-18 12:25:00.475	🔥
+spotify:track:2xfHakNuD25ma5CSfTXFw2	1	The One	2023-10-18 12:55:39.667	🔥
+spotify:track:1WFy81RbU5QhOeYVgIzVPe	1	Weekend On A Tuesday	2023-10-18 13:10:16.367	🔥
+spotify:track:1UNWD6R5EOFklUHKZZvww2	1	She Said	2023-10-18 15:16:53.931	🔥
+spotify:track:1p0jBDjxORjYNJyAphBRpE	1	MONEY ON THE DASH	2023-10-18 15:27:51.915	🦥
+spotify:track:1p0jBDjxORjYNJyAphBRpE	1	MONEY ON THE DASH	2023-10-18 15:27:52.502	🔥
+spotify:track:5jjZikDrEd0by1o7V3fO4y	1	overwhelmed	2023-10-18 15:29:27.511	☔
+spotify:track:7irq1X57FwkQrGFVOayjsm	1	STOP!	2023-10-18 15:40:00.965	🔥
+spotify:track:7irq1X57FwkQrGFVOayjsm	1	STOP!	2023-10-18 15:40:05.92	🦥
+spotify:track:1STwdocp5GlE0aLPT6CaJ6	1	The Difference	2023-10-18 15:43:19.279	🔥
+spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2023-10-18 16:07:16.593	🦥
+spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2023-10-18 16:07:16.899	🔥
+spotify:track:7vzoNK8tbNmmKjDCNGTmkp	1	Tears of Gold - Owen Norton Remix	2023-10-18 16:11:44.376	🔥
+spotify:track:58HvfVOeJY7lUuCqF0m3ly	1	MIDDLE OF THE NIGHT	2023-10-18 16:33:42.062	🦥
+spotify:track:58HvfVOeJY7lUuCqF0m3ly	1	MIDDLE OF THE NIGHT	2023-10-18 16:33:42.428	🔥
+spotify:track:5FHPvs8RxWBQXP2Rq9I2B2	-1	You Only Love Me	2023-10-18 20:48:01.918	🦥
+spotify:track:5FHPvs8RxWBQXP2Rq9I2B2	1	You Only Love Me	2023-10-18 20:59:30.207	🦥
+spotify:track:5FHPvs8RxWBQXP2Rq9I2B2	1	You Only Love Me	2023-10-18 20:59:31.873	🦥
+spotify:track:5FHPvs8RxWBQXP2Rq9I2B2	1	You Only Love Me	2023-10-18 20:59:32.524	🦥
+spotify:track:4dq7XLDmFHNwc1yqL339qT	1	Wake Me Up In Paris	2023-10-18 20:59:36.477	🦥
+spotify:track:4SKyal51xIIaySBVNh3fJn	1	Supersonic	2023-10-18 21:39:42.853	🦥
+spotify:track:6PUIzlqotEmPuBfjbwYWOB	1	Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix	2023-10-18 21:41:46.392	🦥
+spotify:track:2MMUGOqJXwSWEY9yGYl8D2	1	Slow Drip	2023-10-18 22:00:23.81	🦥
+spotify:track:6zsFddikwwAfBr3USkYSDx	1	Radio	2023-10-18 22:10:19.401	🦥
+spotify:track:3AzjcOeAmA57TIOr9zF1ZW	1	Physical	2023-10-18 22:13:35.208	🦥
+spotify:track:10xV5l9nhLvFpR8mqzs0bL	1	Numb	2023-10-18 22:24:50.177	🦥
+spotify:track:3bfqkspKABT4pPicm6wC9F	1	Ass Back Home (feat. Neon Hitch)	2023-10-18 22:34:42.712	📼
+spotify:track:2NHtAJhXVOnSIN2lZhbpWz	1	Space and Time	2023-10-19 10:28:55.744	🦥
+spotify:track:22dUzMFttcR3uU17NcOAIv	1	Desire (with Sam Smith)	2023-10-19 10:29:08.574	🔥
+spotify:track:5seWZTjT0U8a7cy3Y5NJQ9	1	Like Gold	2023-10-19 10:43:16.232	🦥
+spotify:track:5seWZTjT0U8a7cy3Y5NJQ9	1	Like Gold	2023-10-19 10:43:18.44	🔥
+spotify:track:00E0Z2jrF7reoHps4zcbWQ	1	Car Keys (Ayla)	2023-10-19 10:55:32.59	🔥
+spotify:track:0GTuyzPTs2G0wqFD1trSOw	1	Phone	2023-10-19 11:02:31.065	🔥
+spotify:track:3jksOdXCaDXyGiZ7L4YZbp	1	All Nighter	2023-10-19 14:35:55.683	🦥
+spotify:track:3jksOdXCaDXyGiZ7L4YZbp	1	All Nighter	2023-10-19 14:35:56.78	🔥
+spotify:track:62nhuooamoroYpJyqE0nLd	1	Are You With Me - Radio Edit	2023-10-19 14:44:59.286	🔥
+spotify:track:5vcfy76yr163pFH7NkN6nX	1	I Don't Want You	2023-10-19 14:57:56.632	🦥
+spotify:track:5vcfy76yr163pFH7NkN6nX	1	I Don't Want You	2023-10-19 14:57:57.264	🔥
+spotify:track:5vcfy76yr163pFH7NkN6nX	1	I Don't Want You	2023-10-19 14:58:01.103	🦥
+spotify:track:3GYlQmwfBDo7imFyGPhrl7	1	Say My Name	2023-10-19 15:12:23.254	🦥
+spotify:track:3GYlQmwfBDo7imFyGPhrl7	1	Say My Name	2023-10-19 15:12:24.216	🔥
+spotify:track:3DTqHfTGj1c6y2gDXsTez4	1	Regardless	2023-10-19 15:28:34.312	🔥
+spotify:track:3XPl3dGn1oWe7VmKoB8nhU	1	Psycho - Joel Corry Remix	2023-10-19 15:58:03.326	🔥
+spotify:track:6pHCJmx9FXnMwEqB0LWUEH	1	Azul	2023-10-20 10:26:59.932	🔥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-20 12:56:29.533	🦥
+spotify:track:5zEAGm4yKQ8NMemN0m3rW1	1	Nirvana	2023-10-20 12:58:06.915	🦥
+spotify:track:19BoXyNUZB8M9PgAyMHVRg	1	Tell Me	2023-10-20 13:03:09.189	🦥
+spotify:track:7CH8J4ulT49UfZwSDSkSZA	1	i miss u (with Au/Ra)	2023-10-20 13:08:21.098	🔥
+spotify:track:5902W4uHWzhtOff1UK7the	1	When I’m Gone (with Katy Perry)	2023-10-20 13:22:09.736	🔥
+spotify:track:2Z9TRKOZtqKZNGDxeodNzZ	1	What You Gunna Do - OPTIXX Remix	2023-10-20 13:24:29.051	🔥
+spotify:track:16mxzE8G96JyMSfcq1PQvW	1	Straight From the Heart (feat. Nørskov)	2023-10-20 13:26:23.553	🎶
+spotify:track:6Dy1jexKYriXAVG6evyUTJ	1	OUT OUT (feat. Charli XCX & Saweetie)	2023-10-20 13:32:02.413	🔥
+spotify:track:6Dy1jexKYriXAVG6evyUTJ	1	OUT OUT (feat. Charli XCX & Saweetie)	2023-10-20 13:32:02.942	🦥
+spotify:track:4Ka0qWis2V9gI5MFdzT1lB	1	Breaking with You	2023-10-20 14:14:41.643	🦥
+spotify:track:4Ka0qWis2V9gI5MFdzT1lB	1	Breaking with You	2023-10-20 14:14:41.881	🔥
+spotify:track:1kaJ2dEM1jeXQaH7uDdyoD	1	Run (with Galantis)	2023-10-20 14:17:17.208	🔥
+spotify:track:2tJ4fnUrG5v7OmYVGq7sw8	1	Hopeless Heart	2023-10-20 14:40:07.263	🦥
+spotify:track:5gvEyl4OLhD6kJ3aZ43sd3	1	Heaven	2023-10-20 14:44:50.427	🦥
+spotify:track:2cc8Sw1OnCuA5bV8nqWqpE	1	You	2023-10-20 14:49:27.554	🦥
+spotify:track:2cc8Sw1OnCuA5bV8nqWqpE	1	You	2023-10-20 14:49:27.922	🔥
+spotify:track:0SZPXD0uEl72YjUVY2K3E9	1	The Business, Pt. II	2023-10-20 15:33:27.038	🦥
+spotify:track:0SZPXD0uEl72YjUVY2K3E9	1	The Business, Pt. II	2023-10-20 15:33:27.515	🔥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2023-10-20 15:39:23.755	🦥
+spotify:track:0SZPXD0uEl72YjUVY2K3E9	1	The Business, Pt. II	2023-10-20 15:46:29.279	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-20 15:49:13.77	🦥
+spotify:track:3DTqHfTGj1c6y2gDXsTez4	1	Regardless	2023-10-20 15:52:05.809	🦥
+spotify:track:2dWNKXTs5z7Iu1g0kYh4Xe	1	My Heart Goes (La Di Da) (feat. Topic)	2023-10-20 15:57:00.462	🦥
+spotify:track:04oTyEbJ190RfXWSlTP4b7	1	Good Luck	2023-10-20 15:58:55.18	🦥
+spotify:track:7arsXR8AtExnOFN3v3HiJI	1	Going Dumb	2023-10-20 16:05:27.285	🦥
+spotify:track:1YWr18dWRmuvPgAsPBsOow	1	Forget You	2023-10-21 15:05:16.393	🦥
+spotify:track:4zPqv04ddAFwk2Pgz3jC9U	1	Where You Are (Sávežan)	2023-10-21 15:15:30.915	🦥
+spotify:track:3uUuGVFu1V7jTQL60S1r8z	1	Where Are You Now	2023-10-21 15:23:17.979	🎶
+spotify:track:2bLqfJjuC5syrsgDsZfGmn	1	The Way I Are	2023-10-21 17:12:20.34	🦥
+spotify:track:2bLqfJjuC5syrsgDsZfGmn	1	The Way I Are	2023-10-21 17:12:20.749	🔥
+spotify:track:2NHtAJhXVOnSIN2lZhbpWz	1	Space and Time	2023-10-21 17:40:03.249	🦥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2023-10-22 12:34:42.119	🦥
+spotify:track:6zsFddikwwAfBr3USkYSDx	1	Radio	2023-10-22 12:37:59.647	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-22 12:52:25.021	🦥
+spotify:track:4zPqv04ddAFwk2Pgz3jC9U	1	Where You Are (Sávežan)	2023-10-22 12:57:30.667	🦥
+spotify:track:5seWZTjT0U8a7cy3Y5NJQ9	1	Like Gold	2023-10-22 13:03:38.15	🦥
+spotify:track:0GTuyzPTs2G0wqFD1trSOw	1	Phone	2023-10-22 13:10:14.383	🦥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-22 14:39:31.688	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-22 14:46:15.972	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-22 14:46:16.864	🦥
+spotify:track:2rfZyAX6wZxQWMQ9GYyLIu	1	Worship You	2023-10-22 14:58:00.655	🦥
+spotify:track:4IyrCFU0VeashNaFySWyQm	1	Can I Get It Back (R3HAB Remix)	2023-10-22 15:58:42.757	🦥
+spotify:track:4SKyal51xIIaySBVNh3fJn	1	Supersonic	2023-10-22 16:01:00.038	🦥
+spotify:track:4SKyal51xIIaySBVNh3fJn	1	Supersonic	2023-10-22 16:01:00.887	🦥
+spotify:track:1WFy81RbU5QhOeYVgIzVPe	1	Weekend On A Tuesday	2023-10-22 16:18:54.161	🦥
+spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-10-22 16:29:03.733	🦥
+spotify:track:4dq7XLDmFHNwc1yqL339qT	1	Wake Me Up In Paris	2023-10-22 17:46:26.852	🦥
+spotify:track:0COqiPhxzoWICwFCS4eZcp	1	Bring Me To Life	2023-10-22 18:04:43.799	🔥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-10-22 18:09:01.67	🦥
+spotify:track:22dUzMFttcR3uU17NcOAIv	1	Desire (with Sam Smith)	2023-10-22 18:10:52.92	🦥
+spotify:track:1mvZErZBp7WZT3HfGBykao	1	Cry for You	2023-10-22 18:13:51.173	🦥
+spotify:track:6K4t31amVTZDgR3sKmwUJJ	1	The Less I Know The Better	2023-10-22 18:20:35.206	🔥
+spotify:track:3BKD1PwArikchz2Zrlp1qi	1	Baby Don't Hurt Me	2023-10-23 12:21:22.72	🔥
+spotify:track:5RTCbOZLSoVaOwisJhsdfd	1	SKIN 2 SKIN	2023-10-23 12:23:48.201	🔥
+spotify:track:7CH8J4ulT49UfZwSDSkSZA	1	i miss u (with Au/Ra)	2023-10-23 12:29:40.881	🔥
+spotify:track:7arsXR8AtExnOFN3v3HiJI	1	Going Dumb	2023-10-23 12:34:20.937	🔥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-10-23 12:36:51.067	🦥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-10-23 12:36:51.524	🔥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-10-23 12:36:54.979	🦥
+spotify:track:4ZofmEdvs4mQqZ756GQhSY	1	Melody	2023-10-23 12:42:44.229	🎶
+spotify:track:4ZofmEdvs4mQqZ756GQhSY	1	Melody	2023-10-23 12:42:45.373	🔥
+spotify:track:7jN3Es9lQNwu2q1ELxNzBq	1	High Frequency	2023-10-23 12:45:05.557	🦥
+spotify:track:04oTyEbJ190RfXWSlTP4b7	1	Good Luck	2023-10-23 12:49:46.119	🔥
+spotify:track:1bgKMxPQU7JIZEhNsM1vFs	1	Words (feat. Zara Larsson)	2023-10-23 12:52:57.923	🔥
+spotify:track:0ndg56b510prqHlImqJoxG	1	Ghost Town (Lucas Estrada Remix)	2023-10-23 12:57:58.408	🔥
+spotify:track:318quSv1UJeamoAkEDjAuY	1	WOW (feat. ÁSDÍS)	2023-10-23 13:00:26.042	🦥
+spotify:track:5902W4uHWzhtOff1UK7the	1	When I’m Gone (with Katy Perry)	2023-10-23 13:14:55.247	🎶
+spotify:track:16mxzE8G96JyMSfcq1PQvW	1	Straight From the Heart (feat. Nørskov)	2023-10-23 13:15:35.331	🎶
+spotify:track:4IyrCFU0VeashNaFySWyQm	1	Can I Get It Back (R3HAB Remix)	2023-10-23 13:37:49.982	🔥
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-23 13:44:40.373	🦥
+spotify:track:07QCSa14E5bfOOkTXR7oLD	1	Good Times	2023-10-23 13:53:58.435	🔥
+spotify:track:07QCSa14E5bfOOkTXR7oLD	1	Good Times	2023-10-23 13:54:00.853	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-23 14:48:43.344	🔥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-23 14:48:45.036	🦥
+spotify:track:0I5pVidtNjNXeaqHnwhrva	1	Can't Come To The Phone	2023-10-23 14:51:41.308	🦥
+spotify:track:0I5pVidtNjNXeaqHnwhrva	1	Can't Come To The Phone	2023-10-23 14:51:41.775	🔥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-23 14:57:22.76	🦥
 \.
 
 
