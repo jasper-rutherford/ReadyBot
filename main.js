@@ -313,11 +313,10 @@ var bot = {
     query: function (queryStatement) {
         return new Promise((resolve, reject) => {
             const pool = new Pool({
-                user: 'postgres',
+                user: 'arbie',
                 host: 'localhost',
                 database: 'songs',
-                password: 'postgres',
-                port: 5430,
+                password: 'admin',
             });
 
             pool.query(queryStatement, (error, results) => {
