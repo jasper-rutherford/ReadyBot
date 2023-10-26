@@ -1651,6 +1651,57 @@ spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-23 14:48:45.036	�
 spotify:track:0I5pVidtNjNXeaqHnwhrva	1	Can't Come To The Phone	2023-10-23 14:51:41.308	🦥
 spotify:track:0I5pVidtNjNXeaqHnwhrva	1	Can't Come To The Phone	2023-10-23 14:51:41.775	🔥
 spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-23 14:57:22.76	🦥
+spotify:track:11BKm0j4eYoCPPpCONAVwA	1	Bloody Mary	2023-10-24 10:58:29.255	🔥
+spotify:track:5VxmI3IdgAxWVvUnJoLuY2	1	Speed Drive (From Barbie The Album)	2023-10-24 11:13:02.098	🔥
+spotify:track:5902W4uHWzhtOff1UK7the	1	When I’m Gone (with Katy Perry)	2023-10-24 11:15:31.459	🔥
+spotify:track:5pNFibJLq7dvoDVIIcQBkn	1	Hot In It	2023-10-24 11:20:38.577	🎶
+spotify:track:3BKD1PwArikchz2Zrlp1qi	1	Baby Don't Hurt Me	2023-10-24 11:26:33.68	🦥
+spotify:track:3BKD1PwArikchz2Zrlp1qi	1	Baby Don't Hurt Me	2023-10-24 11:26:34.093	🔥
+spotify:track:4ksheDQWyWfjG5ETO0aokW	1	Heaven On My Mind (with Sigala)	2023-10-24 14:46:22.205	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2023-10-24 14:55:13.288	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2023-10-24 14:55:18.416	🦥
+spotify:track:16mxzE8G96JyMSfcq1PQvW	1	Straight From the Heart (feat. Nørskov)	2023-10-24 14:58:22.867	🔥
+spotify:track:01hCzxgttMvy4v9760kXke	1	Body Language	2023-10-24 15:11:21.247	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2023-10-24 15:13:41.141	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2023-10-24 15:13:42.771	🦥
+spotify:track:4hHvZD1pcvG8rxUkhau6Is	1	Bloom	2023-10-24 15:18:50.881	🦥
+spotify:track:19BoXyNUZB8M9PgAyMHVRg	1	Tell Me	2023-10-24 15:26:39.217	🦥
+spotify:track:6Bj0sk40N436vvBwvQhgHT	1	Love Don't Cost A Thing	2023-10-24 16:16:39.286	🦥
+spotify:track:5feLY0z0xGD7ogoZBRnK2P	1	Dancing With Your Ghost	2023-10-24 16:20:04.001	🦥
+spotify:track:1bgKMxPQU7JIZEhNsM1vFs	1	Words (feat. Zara Larsson)	2023-10-24 16:30:35.493	🔥
+spotify:track:5qiQbOa6AFEO3P111y9Jry	1	Mad Love - Blinkie Remix	2023-10-24 16:33:08.429	🔥
+spotify:track:4H3prpSM3TWw4UJtg6rHwD	1	Leave A Little Love (Mixed)	2023-10-24 17:03:10.821	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2023-10-25 10:51:57.903	🦥
+spotify:track:0SZPXD0uEl72YjUVY2K3E9	1	The Business, Pt. II	2023-10-25 13:23:57.955	🦥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-10-25 13:29:18.051	🦥
+spotify:track:2MMUGOqJXwSWEY9yGYl8D2	1	Slow Drip	2023-10-25 13:32:01.014	🌌
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2023-10-25 13:42:38.151	☔
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2023-10-25 13:42:38.89	🌌
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2023-10-25 13:42:44.183	🦥
+spotify:track:3HYZs5IHvtfeGx1EfNtflG	1	Hole Right Where My Heart Is	2023-10-25 13:45:21.549	🔥
+spotify:track:4zPqv04ddAFwk2Pgz3jC9U	1	Where You Are (Sávežan)	2023-10-25 13:53:07.441	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-10-25 14:00:55.741	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-10-25 14:00:57.423	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-25 14:03:47.541	🦥
+spotify:track:2gSSbcS1TJjD7XZ9y7nTBR	1	Queen	2023-10-25 14:04:52.465	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-10-25 14:09:45.053	🦥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-10-25 14:10:56.234	🦥
+spotify:track:0I5pVidtNjNXeaqHnwhrva	1	Can't Come To The Phone	2023-10-25 14:22:19.396	🦥
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-10-25 14:22:48.642	🦥
+spotify:track:6LAlZuA1IhylVnInqNWo2j	1	Can't Choose (feat. Kiara Nelson)	2023-10-25 14:29:05.381	🦥
+spotify:track:1sUdq3kWa9dJXHu3eYOUll	1	Spooky, Scary Skeletons - Undead Tombstone Remix	2023-10-25 14:57:08.132	🦥
+spotify:track:1sUdq3kWa9dJXHu3eYOUll	1	Spooky, Scary Skeletons - Undead Tombstone Remix	2023-10-25 15:15:58.474	🦀
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2023-10-25 16:52:33.09	🦥
+spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2023-10-25 16:58:30.688	🔥
+spotify:track:7opO9NgcqEhe4RtvIoDRap	-1	Wild Night	2023-10-25 16:58:34.059	🔥
+spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-10-25 18:27:48.716	🦥
+spotify:track:6mA6IU02bbImkK0FhA2F6E	1	Love Runs Deep	2023-10-26 13:50:33.445	🦥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2023-10-26 14:25:47.803	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2023-10-26 14:40:10.093	🦥
+spotify:track:4Ka0qWis2V9gI5MFdzT1lB	1	Breaking with You	2023-10-26 14:48:37.52	🦥
+spotify:track:5NeydBopWtJSquefjGnRAp	1	high	2023-10-26 15:10:18.707	🦥
+spotify:track:1WFy81RbU5QhOeYVgIzVPe	1	Weekend On A Tuesday	2023-10-26 15:42:06.293	🦥
+spotify:track:7mIyTBKrBiNlTqrh4EWOln	1	I Got A Feeling	2023-10-26 16:10:09.522	🦥
 \.
 
 
