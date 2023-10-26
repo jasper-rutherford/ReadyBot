@@ -316,7 +316,7 @@ var bot = {
                 user: 'arbie',
                 host: 'localhost',
                 database: 'songs',
-                password: 'admin',
+                password: 'arbie',
             });
 
             pool.query(queryStatement, (error, results) => {
@@ -506,7 +506,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         return
     }
 
-    // handle utility actions 
+    // handle utility actions
     if (reaction.message.id === bot.multiUtilityMessage?.id && bot.actions.has(reaction.emoji.name)) {
         bot.actions.get(reaction.emoji.name)(bot)
     }
