@@ -14,6 +14,9 @@ const { prevSong, nextSong, toggleInterval, barrel, help, upvote, upvoter, downv
 const { relayMsgToJaspa } = require('./helpers');
 const { adminCommands, nonAdminCommands, sendBallots } = require('./commands');
 const { setSpotifyBot, addSongsToPlaylist } = require('./spotify');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+const execAsync = promisify(exec);
 
 const interval = "14 days"; // the range of time to include song votes in the query when not sorting by all time
 
