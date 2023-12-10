@@ -719,7 +719,7 @@ async function backupAndPushToGit() {
         console.log('Backup file added to git.');
         
         // add the log file to git
-        await execAsync(`git add ./arbie.sql`);
+        await execAsync(`git add ./log.txt`);
         console.log('Log file added to git.');
 
         // Commit the changes
