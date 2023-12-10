@@ -107,6 +107,12 @@ var bot = {
     },
 
     loadSpot: async function () {
+        // backup the database and push it to git
+        backupAndPushToGit();
+
+        // start the backup interval
+        setInterval(backupAndPushToGit, 1000 * 60 * 60 * 24); // 24 hours
+
         // set the spotify bot
         setSpotifyBot(bot)
 
@@ -123,7 +129,7 @@ var bot = {
                 orderer(bot, "🦥")
             }
         });
-        
+
         console.log('Arbie v1.3');
     },
 
@@ -690,5 +696,29 @@ let kickOffTokenRefresh = () => {
         .catch(() => {
             console.log("Error refreshing access token")
         } )
+    }
+}
+
+async function backupAndPushToGit() {
+    try { 
+        // Run pg_dump to backup the database
+        await execAsync(`pg_dump -d your_database -f ./arbie.sql`);
+        console.log('Backed up to ./arbie.sql');
+
+        // Add the backup file to git
+        await execAsync(`git add ./arbie.sql`);
+        console.log('Backup file added to git.');
+
+        // Commit the changes
+        await execAsync('git commit -m "Database backup"');
+        console.log('Backup changes committed.');
+
+        // Push the commit to the remote repository
+        const { stdout } = await execAsync('git push');
+        console.log(stdout);
+
+        console.log('Backup successfully pushed to GitHub.');
+    } catch (error) {
+        console.error(`An error occurred: ${error}`);
     }
 }
