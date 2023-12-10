@@ -3,3 +3,4 @@ config.json
 readyAtList.json
 testReadyAtList.json
 data/postgres/
+spotify_refresh_token.txt

@@ -68,7 +68,7 @@ var bot = {
 
     mostRecentOrderTime: undefined,                         // the last time that the 🦥 playlist was ordered
     autoOrderPeriodically: false,
-    autoOrderInterval: 1000 * 60 * 60 * 24 * 3,                
+    autoOrderInterval: 1000 * 60 * 60 * 24 * 3,
 
     // a map of emoji that can be reacted to the utility message to immediately perform an action
     actions: new Map([
@@ -103,27 +103,28 @@ var bot = {
     lastTime: undefined,
 
     initialUpdates: function () {
-        // open the login page
-        open('http://localhost:8888/login')
+       kickOffTokenRefresh()
     },
 
     loadSpot: async function () {
         // set the spotify bot
         setSpotifyBot(bot)
 
-        //test stuff
+        // test stuff
         bot.testStuff();
 
-        //load themes/songs in from the file
+        // load themes/songs in from the file
         bot.readFromFile();
 
-        //send the ballots
+        // send the ballots
         sendBallots(bot).then(() => {
             // if it has been more than 24 hours since the last order, order the playlist
             if (bot.autoOrderPeriodically && bot.mostRecentOrderTime == undefined || new Date() - bot.mostRecentOrderTime > bot.autoOrderInterval) {
                 orderer(bot, "🦥")
             }
         });
+        
+        console.log('Arbie v1.3');
     },
 
     //gets the list of emojis from the list of themes
@@ -474,7 +475,7 @@ if (bot.testbuild) {
 client.once('ready', () => {
     bot.initialUpdates();
 
-    console.log('Arbie v1.3');
+    
 
     if (bot.testbuild) {
         console.log('<test build>');
@@ -548,14 +549,17 @@ const scopes = [
     'user-follow-modify'
 ];
 
+// the login page is called by the user. it redirects to a spotify login page
 app.get('/login', (req, res) => {
     res.redirect(bot.spotifyApi.createAuthorizeURL(scopes));
 });
 
+// the callback page is called by spotify after you log in. it saves the refresh token to file and then closes after a few seconds
 app.get('/callback', (req, res) => {
+    console.log("successfully logged into spotify")
+
     const error = req.query.error;
     const code = req.query.code;
-    const state = req.query.state;
 
     if (error) {
         console.error('Callback Error:', error);
@@ -566,20 +570,18 @@ app.get('/callback', (req, res) => {
     bot.spotifyApi
         .authorizationCodeGrant(code)
         .then(data => {
-            const access_token = data.body['access_token'];
+            // the refresh_token
             const refresh_token = data.body['refresh_token'];
-            const expires_in = data.body['expires_in'];
+            console.log("Generated refresh token")
 
-            bot.spotifyApi.setAccessToken(access_token);
-            bot.spotifyApi.setRefreshToken(refresh_token);
+            // save refresh token to file
+            fs.writeFileSync('spotify_refresh_token.txt', refresh_token);
+            console.log("refresh token saved to file")
 
-            // console.log('access_token:', access_token);
-            // console.log('refresh_token:', refresh_token);
+            // try to kick off the rest of startup
+            kickOffTokenRefresh()
 
-            console.log(
-                `Successfully retrieved access token. Expires in ${expires_in} s.`
-            );
-
+            // send an html page to the user that closes after a few seconds
             const htmlResponse = `
                 <html>
                 <head>
@@ -615,19 +617,7 @@ app.get('/callback', (req, res) => {
                 </body>
                 </html>
             `;
-
             res.send(htmlResponse);
-
-            bot.loadSpot();
-
-            setInterval(async () => {
-                const data = await bot.spotifyApi.refreshAccessToken();
-                const access_token = data.body['access_token'];
-
-                console.log('The access token has been refreshed!');
-                // console.log('access_token:', access_token);
-                bot.spotifyApi.setAccessToken(access_token);
-            }, expires_in / 2 * 1000);
         })
         .catch(error => {
             console.error('Error getting Tokens:', error);
@@ -637,7 +627,68 @@ app.get('/callback', (req, res) => {
 
 app.listen(8888, () =>
     console.log(
-        'HTTP Server up. Now go to http://localhost:8888/login in your browser.'
+        'HTTP Server up, http://localhost:8888/login is now available.'
     )
 );
 client.login(bot.tokenDiscord);
+
+let refreshTheAccessToken = () => {
+    // return a promise
+    return new Promise((resolve, reject) => {
+        // read the refresh token from file
+        const refreshToken = fs.readFileSync('spotify_refresh_token.txt', 'utf8');
+
+        // if the refresh token is invalid then reject
+        if (refreshToken == "") {
+            console.log("No refresh token found")
+            reject()
+        }
+
+        // set the refresh token
+        bot.spotifyApi.setRefreshToken(refreshToken);
+
+        // refresh the access token
+        bot.spotifyApi.refreshAccessToken().then(
+            function (data) {
+                console.log('The access token has been refreshed');
+
+                // Save the access token so that it's used in future calls
+                bot.spotifyApi.setAccessToken(data.body['access_token']);
+                resolve()
+            },
+            function (err) {
+                console.log('Could not refresh access token', err);
+                reject()
+            }
+        );
+    })
+}
+
+// refreshes the access token and kicks off the rest of startup
+// assumes that the refresh token exists in the refresh token file
+let kickOffTokenRefresh = () => {
+    // if the refresh token file doesn't exist or is empty
+    if (!fs.existsSync('spotify_refresh_token.txt') || fs.readFileSync('spotify_refresh_token.txt', 'utf8') == "") {
+        // log that there is no refresh token
+        console.log("No refresh token found. attempting to open login page.")
+       
+        // open the login page
+        open('http://localhost:8888/login')
+    }
+    // if the refresh token file exists and is not empty
+    else {
+        console.log("refresh token found")
+
+        // use the refresh token to get an access token.
+        refreshTheAccessToken().then(() => {
+            // now that spotify is authenticated we can kick off the rest of startup
+            bot.loadSpot();
+
+            // kick off the interval to refresh the access token. yeah theres a little bit of some 
+            setInterval(refreshTheAccessToken, 1000 * 60 * 60); 
+        })
+        .catch(() => {
+            console.log("Error refreshing access token")
+        } )
+    }
+}
