@@ -22,7 +22,7 @@ const interval = "14 days"; // the range of time to include song votes in the qu
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: false,
+    testbuild: true,
     temp: true,
     tokenDiscord: tokenDiscord,
     prefix: '~',
@@ -130,15 +130,12 @@ var bot = {
         // load themes/songs in from the file
         bot.readFromFile();
 
-        // send the ballots
-        sendBallots(bot).then(() => {
-            // if it has been more than 24 hours since the last order, order the playlist
-            if (bot.autoOrderPeriodically && bot.mostRecentOrderTime == undefined || new Date() - bot.mostRecentOrderTime > bot.autoOrderInterval) {
-                orderer(bot, "🦥")
-            }
-        });
+        // send a message to the spotify channel so that I know the last time the bot was started
+        let channel = bot.client.channels.cache.get(bot.spotifyChannel)
+        channel.send(`Arbie started at ${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}`)
 
-        console.log('Arbie v1.3');
+        // send the ballots
+        sendBallots(bot)
     },
 
     //gets the list of emojis from the list of themes
