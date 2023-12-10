@@ -22,7 +22,7 @@ const interval = "14 days"; // the range of time to include song votes in the qu
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: false,
+    testbuild: true,
     temp: true,
     tokenDiscord: tokenDiscord,
     prefix: '~',
@@ -59,7 +59,7 @@ var bot = {
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
     utilityEmojis:                                          // the emoji who perform actions for the utility message
-        ["⏮", "⬆", "⬇", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔"],
+        ["⏮", "⬆", "⬇", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔", "📜"],
     deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
     deleteMessage: null,                                    // the message warning the user about their potential deletion
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
@@ -88,7 +88,8 @@ var bot = {
         ["🥫", barrel],
         ["❔", help],
         ["✅", confirmDelete],
-        ["❌", rejectDelete]
+        ["❌", rejectDelete],
+        ["📜", sendBallots]
     ]),
 
     currentAction: upvoter,                                      // the set action to be performed when an emoji is reacted to the song message (defaults to upvote)
@@ -110,12 +111,16 @@ var bot = {
     },
 
     loadSpot: async function () {
-        // backup the database and push it to git
-        await backupAndPushToGit();
 
-        // start the backup interval
-        setInterval(backupAndPushToGit, 1000 * 60 * 60 * 24); // 24 hours
+        // dont worry about backing up the db for the test build
+        if (!bot.testbuild) {
+            // backup the database and push it to git
+            await backupAndPushToGit();
 
+            // start the backup interval
+            setInterval(backupAndPushToGit, 1000 * 60 * 60 * 24); // 24 hours
+        }
+        
         // set the spotify bot
         setSpotifyBot(bot)
 
