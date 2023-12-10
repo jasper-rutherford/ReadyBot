@@ -22,7 +22,7 @@ const interval = "14 days"; // the range of time to include song votes in the qu
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: true,
+    testbuild: false,
     temp: true,
     tokenDiscord: tokenDiscord,
     prefix: '~',
@@ -717,6 +717,10 @@ async function backupAndPushToGit() {
         // Add the backup file to git
         await execAsync(`git add ./arbie.sql`);
         console.log('Backup file added to git.');
+        
+        // add the log file to git
+        await execAsync(`git add ./arbie.sql`);
+        console.log('Log file added to git.');
 
         // Commit the changes
         await execAsync('git commit -m "Database backup"');
@@ -727,7 +731,7 @@ async function backupAndPushToGit() {
         console.log(`git push results: [${stdout}]`);
 
         console.log('Backup successfully pushed to GitHub.');
-        console.log("-------done backing up database-------")
+        console.log("-------done backing up database------")
     } catch (error) {
         console.error(`An error occurred: ${error}`);
     }
