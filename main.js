@@ -705,7 +705,7 @@ let kickOffTokenRefresh = () => {
 async function backupAndPushToGit() {
     try { 
         // Run pg_dump to backup the database
-        await execAsync(`pg_dump -d your_database -f ./arbie.sql`);
+        await execAsync(`pg_dump -d songs -f ./arbie.sql`);
         console.log('Backed up to ./arbie.sql');
 
         // Add the backup file to git
