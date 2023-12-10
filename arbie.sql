@@ -3656,6 +3656,7 @@ spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-10 16:20:07.008	🦥
 spotify:track:2NHtAJhXVOnSIN2lZhbpWz	1	Space and Time	2023-12-10 16:26:49.873	🦥
 spotify:track:1STwdocp5GlE0aLPT6CaJ6	1	The Difference	2023-12-10 16:42:20.702	🦥
 spotify:track:1STwdocp5GlE0aLPT6CaJ6	1	The Difference	2023-12-10 17:07:38.64	🦥
+spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6	1	Bad Girl	2023-12-10 17:47:02.009	🦥
 \.
 
 
