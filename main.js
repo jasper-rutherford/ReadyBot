@@ -704,6 +704,7 @@ let kickOffTokenRefresh = () => {
 
 async function backupAndPushToGit() {
     try { 
+        console.log("---------backing up database---------")
         // Run pg_dump to backup the database
         await execAsync(`pg_dump -d songs -f ./arbie.sql`);
         console.log('Backed up to ./arbie.sql');
@@ -718,9 +719,10 @@ async function backupAndPushToGit() {
 
         // Push the commit to the remote repository
         const { stdout } = await execAsync('git push');
-        console.log(stdout);
+        console.log(`git push results: [${stdout}]`);
 
         console.log('Backup successfully pushed to GitHub.');
+        console.log("-------done backing up database-------")
     } catch (error) {
         console.error(`An error occurred: ${error}`);
     }
