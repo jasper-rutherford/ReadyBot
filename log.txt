@@ -20489,3 +20489,168 @@ retrieved scores for uri/themoji spotify:track:1STwdocp5GlE0aLPT6CaJ6/🦥:
 { name: 'The Difference', interval_score: '3', total_score: '5' }
 updating vote message
 [The Difference] has a score of [ 3 ] over the last 14 days and has an all time score of [ 5 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6', '1', 'Bad Girl', '2023-12-10 17:47:02.009', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6/🦥:
+{ name: 'Bad Girl', interval_score: '2', total_score: '2' }
+updating vote message
+[Bad Girl] has a score of [ 2 ] over the last 14 days and has an all time score of [ 2 ] for 🦥
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+An error occurred: ReferenceError: execAsync is not defined
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+An error occurred: Error: Command failed: pg_dump -d your_database -f ./arbie.sql
+pg_dump: error: connection to database "your_database" failed: FATAL:  database "your_database" does not exist
+
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+Backed up to ./arbie.sql
+Backup file added to git.
+Backup changes committed.
+
+Backup successfully pushed to GitHub.
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+Backed up to ./arbie.sql
+Backup file added to git.
+An error occurred: Error: Command failed: git commit -m "Database backup"
+
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:7BZ2xgtqnvle8d5EiR3xcy'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:7BZ2xgtqnvle8d5EiR3xcy', '1', 'My Bed', '2023-12-10 17:59:32.493', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:7BZ2xgtqnvle8d5EiR3xcy'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:7BZ2xgtqnvle8d5EiR3xcy/🦥:
+{ name: 'My Bed', interval_score: '8', total_score: '11' }
+updating vote message
+[My Bed] has a score of [ 8 ] over the last 14 days and has an all time score of [ 11 ] for 🦥
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+Backed up to ./arbie.sql
+Backup file added to git.
+Backup changes committed.
+
+Backup successfully pushed to GitHub.
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+Backed up to ./arbie.sql
+Backup file added to git.
+An error occurred: Error: Command failed: git commit -m "Database backup"
+
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+Backed up to ./arbie.sql
+Backup file added to git.
+An error occurred: Error: Command failed: git commit -m "Database backup"
+
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
+An error occurred: Error: Command failed: git commit -m "Database backup"
+
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3I7i0kt5EcuVdYWfSu2LSm'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3I7i0kt5EcuVdYWfSu2LSm', '1', 'Lights Out', '2023-12-10 18:06:22.957', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3I7i0kt5EcuVdYWfSu2LSm'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3I7i0kt5EcuVdYWfSu2LSm/🦥:
+{ name: 'Lights Out', interval_score: '7', total_score: '19' }
+updating vote message
+[Lights Out] has a score of [ 7 ] over the last 14 days and has an all time score of [ 19 ] for 🦥
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database-------
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+<test build>
+The access token has been refreshed
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
+Log file added to git.
+An error occurred: Error: Command failed: git commit -m "Database backup"
+
+reading themoji mappings from file
+read themoji mappings from file
+Arbie v1.3
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
