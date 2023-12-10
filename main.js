@@ -64,6 +64,7 @@ var bot = {
     baseInterval: interval,
     queryInterval: interval,                                // the range of time to include song votes in the query. default to interval
     barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
+    minScore: 1,
 
     mostRecentOrderTime: undefined,                         // the last time that the 🦥 playlist was ordered
     autoOrderPeriodically: false,
@@ -369,7 +370,7 @@ var bot = {
                 WHERE s2.spotify_uri = s1.spotify_uri
                   AND s2.themoji = '${emoji}'
                    ${orderedUrisHelper2}
-              ) > 1
+              ) > ${bot.minScore}
             ORDER BY total_score DESC;`
 
         return new Promise((resolve, reject) => {
