@@ -111,7 +111,7 @@ var bot = {
 
     loadSpot: async function () {
         // backup the database and push it to git
-        backupAndPushToGit();
+        await backupAndPushToGit();
 
         // start the backup interval
         setInterval(backupAndPushToGit, 1000 * 60 * 60 * 24); // 24 hours
