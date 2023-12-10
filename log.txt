@@ -20668,3 +20668,15 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+<test build>
+The access token has been refreshed
+reading themoji mappings from file
+read themoji mappings from file
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
