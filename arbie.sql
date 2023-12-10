@@ -3658,6 +3658,7 @@ spotify:track:1STwdocp5GlE0aLPT6CaJ6	1	The Difference	2023-12-10 16:42:20.702	�
 spotify:track:1STwdocp5GlE0aLPT6CaJ6	1	The Difference	2023-12-10 17:07:38.64	🦥
 spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6	1	Bad Girl	2023-12-10 17:47:02.009	🦥
 spotify:track:7BZ2xgtqnvle8d5EiR3xcy	1	My Bed	2023-12-10 17:59:32.493	🦥
+spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2023-12-10 18:06:22.957	🦥
 \.
 
 
