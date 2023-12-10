@@ -225,6 +225,8 @@ const orderer = (bot, themoji) => {
     bot.updateUtilityMessage(`Ordering ${themoji}`)
     console.log(`Ordering ${themoji}`)
 
+    let songsAddedToPlaylist = 0
+
     // clear playlist
     clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
 
@@ -232,13 +234,16 @@ const orderer = (bot, themoji) => {
         .then(() => bot.orderedUris(themoji))
 
         // add all songs to playlist
-        .then((uris) => addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris))
+        .then((uris) => {
+            addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris)
+            songsAddedToPlaylist = uris.length
+        })
 
         // update ballot
         .then(() => {
             bot.updateUtilityMessage(`Finished Ordering ${themoji}`)
 
-            console.log(`Finished Ordering ${themoji}`)
+            console.log(`Finished Ordering ${themoji}. Playlist should have ${songsAddedToPlaylist} songs.`)
         })
 }
 
@@ -271,14 +276,18 @@ const shuffler = (bot, themoji) => {
     bot.updateUtilityMessage(`Shuffling ${themoji}`)
     console.log(`Shuffling ${themoji}`)
 
+    let songsAddedToPlaylist = 0
+
     // clear playlist
     clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
 
         // get the relevant uris
         .then(() => bot.orderedUris(themoji))
 
-        // add all songs to playlist
+        // shuffle the songs and add them all to the playlist
         .then((uris) => {
+            songsAddedToPlaylist = uris.length
+
             let shuffledUris = []
 
             for (let i = uris.length - 1; i >= 0; i--) {
@@ -298,7 +307,7 @@ const shuffler = (bot, themoji) => {
         })
 
         // update ballot
-        .then(() => bot.updateUtilityMessage(`Finished Shuffling ${themoji}`))
+        .then(() => bot.updateUtilityMessage(`Finished Shuffling ${themoji}. Playlist should have ${songsAddedToPlaylist} songs.`))
 }
 
 // order the playlist with the provided theme (from smallest to biggest score)
@@ -330,6 +339,8 @@ const reverser = (bot, themoji) => {
     bot.updateUtilityMessage(`Reversing ${themoji}`)
     console.log(`Reversing ${themoji}`)
 
+    let songsAddedToPlaylist = 0
+
     // clear playlist
     clearPlaylist(bot.themePlaylistIDFromEmoji(themoji))
 
@@ -337,10 +348,13 @@ const reverser = (bot, themoji) => {
         .then(() => bot.orderedUris(themoji))
 
         // add all songs to playlist
-        .then((uris) => addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris.reverse()))
+        .then((uris) => {
+            songsAddedToPlaylist = uris.length
+            addSongsToPlaylist(bot.themePlaylistIDFromEmoji(themoji), uris.reverse())
+        })
 
         // update ballot
-        .then(() => bot.updateUtilityMessage(`Finished Reversing ${themoji}`))
+        .then(() => bot.updateUtilityMessage(`Finished Reversing ${themoji}. Playlist should have ${songsAddedToPlaylist} songs.`))
 }
 
 // create a new theme with the provided themoji
