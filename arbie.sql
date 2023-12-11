@@ -3659,6 +3659,36 @@ spotify:track:1STwdocp5GlE0aLPT6CaJ6	1	The Difference	2023-12-10 17:07:38.64	�
 spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6	1	Bad Girl	2023-12-10 17:47:02.009	🦥
 spotify:track:7BZ2xgtqnvle8d5EiR3xcy	1	My Bed	2023-12-10 17:59:32.493	🦥
 spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2023-12-10 18:06:22.957	🦥
+spotify:track:6DploCSZVf5gvIP7WBBU6S	1	Afterbloom (feat. Deza)	2023-12-10 19:36:54.047	🦥
+spotify:track:4FWbsd91QSvgr1dSWwW51e	1	TRUSTFALL	2023-12-10 20:53:52.451	🦥
+spotify:track:3duI7TT4kzLtoqf4PeUR3Z	1	Heart over Mind	2023-12-10 23:11:05.32	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-12-11 11:46:33.905	🦥
+spotify:track:2x5nPvRLL92jXFvpfkIBLh	1	God On The Weekend	2023-12-11 11:58:46.696	🦥
+spotify:track:3c9IKwzgIPcCweCl9so748	1	Underwater	2023-12-11 12:55:05.852	🦥
+spotify:track:1YWr18dWRmuvPgAsPBsOow	1	Forget You	2023-12-11 12:59:05.861	🦥
+spotify:track:7CH8J4ulT49UfZwSDSkSZA	1	i miss u (with Au/Ra)	2023-12-11 13:02:56.733	🦥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-12-11 13:06:46.458	🦥
+spotify:track:66W1rVTnEv86dIkFhoiElg	1	Secrets	2023-12-11 13:11:05.683	🦥
+spotify:track:5YdnOm5990Kfq1Jodws98B	1	Call It Love	2023-12-11 14:21:38.89	🦥
+spotify:track:0siYMEsGrzzzlWLXK5zJfS	1	BED	2023-12-11 14:22:27.199	🦥
+spotify:track:5ofHoV0ywhsZUOArK1Oa1h	1	Say It Right - ILURO Remix	2023-12-11 14:24:58.728	🦥
+spotify:track:3J5Wcm5gvOl15F79FUy6Zy	1	Sideways	2023-12-11 15:56:11.607	🦥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2023-12-11 16:11:12.975	🦥
+spotify:track:2522T0x7yLWMwA5Uw0s2A7	1	Everybody Cries	2023-12-11 16:18:24.073	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-11 16:22:44.895	🦥
+spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2023-12-11 16:24:25.398	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-11 16:26:26.012	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-11 16:26:27.41	🦥
+spotify:track:4ZofmEdvs4mQqZ756GQhSY	1	Melody	2023-12-11 16:32:31.684	🦥
+spotify:track:47TOnN2ffRwsEvWsTZ6IaI	1	Shake That	2023-12-11 16:48:55.185	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-11 17:27:17.148	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-11 17:27:18.648	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-11 17:40:29.483	🦥
+spotify:track:5dodg5WPm1MZ7d1O3YuvVQ	-1	Ghost Town (Lucas Estrada Uptempo Remix)	2023-12-11 17:41:37.518	🦥
+spotify:track:5dodg5WPm1MZ7d1O3YuvVQ	1	Ghost Town (Lucas Estrada Uptempo Remix)	2023-12-11 17:41:37.986	🦥
+spotify:track:2522T0x7yLWMwA5Uw0s2A7	1	Everybody Cries	2023-12-11 18:38:10.491	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-11 18:41:40.667	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-11 18:41:51.732	🦥
 \.
 
 
