@@ -3689,6 +3689,49 @@ spotify:track:5dodg5WPm1MZ7d1O3YuvVQ	1	Ghost Town (Lucas Estrada Uptempo Remix)	
 spotify:track:2522T0x7yLWMwA5Uw0s2A7	1	Everybody Cries	2023-12-11 18:38:10.491	🦥
 spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-11 18:41:40.667	🦥
 spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-11 18:41:51.732	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-11 18:46:53.391	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-11 18:46:54.766	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-11 18:46:56.18	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-11 19:51:11.011	🦥
+spotify:track:2pXpURmn6zC5ZYDMms6fwa	1	It's Beginning to Look a Lot Like Christmas (with Mitchell Ayres & His Orchestra)	2023-12-12 11:13:00.741	🧑‍🎄
+spotify:track:2pXpURmn6zC5ZYDMms6fwa	1	It's Beginning to Look a Lot Like Christmas (with Mitchell Ayres & His Orchestra)	2023-12-12 11:13:33.248	🧑‍🎄
+spotify:track:2pXpURmn6zC5ZYDMms6fwa	1	It's Beginning to Look a Lot Like Christmas (with Mitchell Ayres & His Orchestra)	2023-12-12 11:15:19.131	🧑‍🎄
+spotify:track:2GapxG7BxK55ihQRAlR39e	1	(There's No Place Like) Home for the Holidays - 1959 Version	2023-12-12 11:51:00.195	🧑‍🎄
+spotify:track:2GapxG7BxK55ihQRAlR39e	1	(There's No Place Like) Home for the Holidays - 1959 Version	2023-12-12 11:51:01.511	🧑‍🎄
+spotify:track:2FRnf9qhLbvw8fu4IBXx78	1	Last Christmas	2023-12-12 12:01:37.07	🧑‍🎄
+spotify:track:2EjXfH91m7f8HiJN1yQg97	1	Rockin' Around The Christmas Tree	2023-12-12 12:01:43.978	🧑‍🎄
+spotify:track:5a1iz510sv2W9Dt1MvFd5R	1	It's Beginning to Look a Lot like Christmas	2023-12-12 12:47:39.224	🧑‍🎄
+spotify:track:5hslUAKq9I9CG2bAulFkHN	1	It's the Most Wonderful Time of the Year	2023-12-12 13:00:02.269	🧑‍🎄
+spotify:track:4kKdvXD0ez7jp1296JmAts	1	Let It Snow! Let It Snow! Let It Snow! (with The B. Swanson Quartet)	2023-12-12 13:30:06.587	🧑‍🎄
+spotify:track:47ohYW8e7dxCYn9qbUMBCI	1	Christmas (Baby Please Come Home)	2023-12-12 13:33:48.695	🧑‍🎄
+spotify:track:7uoFMmxln0GPXQ0AcCBXRq	1	Snowman	2023-12-12 13:34:03.97	🧑‍🎄
+spotify:track:7xapw9Oy21WpfEcib2ErSA	1	Mistletoe	2023-12-12 13:39:04.697	🧑‍🎄
+spotify:track:18uSfZqFBxQFi8CsXOIbhy	1	DJ Play A Christmas Song	2023-12-12 13:45:56.598	🧑‍🎄
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-12 13:50:49.956	🧑‍🎄
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-12 13:50:54.192	🧑‍🎄
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-12 13:50:54.929	🧑‍🎄
+spotify:track:2TE4xW3ImvpltVU0cPcKUn	1	Merry Christmas Everyone	2023-12-12 14:02:46.086	🧑‍🎄
+spotify:track:4tHqQMWSqmL6YjXwsqthDI	1	Carol of the Bells	2023-12-12 16:58:26.108	🧑‍🎄
+spotify:track:7uoFMmxln0GPXQ0AcCBXRq	1	Snowman	2023-12-12 16:59:32.186	🧑‍🎄
+spotify:track:3Z3QhZAZpqwZa1phsbQ3JZ	1	Driving Home for Christmas	2023-12-12 17:01:58.354	🧑‍🎄
+spotify:track:4tHqQMWSqmL6YjXwsqthDI	1	Carol of the Bells	2023-12-12 17:06:15.405	🧑‍🎄
+spotify:track:2EjXfH91m7f8HiJN1yQg97	1	Rockin' Around The Christmas Tree	2023-12-12 17:07:39.639	🧑‍🎄
+spotify:track:7vQbuQcyTflfCIOu3Uzzya	1	Jingle Bell Rock	2023-12-12 17:13:14.491	🧑‍🎄
+spotify:track:7fUYUcWy853HS8YJn0b3Sr	1	Sleigh Ride	2023-12-12 17:15:12.403	🧑‍🎄
+spotify:track:6tjituizSxwSmBB5vtgHZE	1	Holly Jolly Christmas	2023-12-12 17:18:43.402	🧑‍🎄
+spotify:track:3WMj8moIAXJhHsyLaqIIHI	1	Something in the Orange	2023-12-12 17:20:23.795	🦥
+spotify:track:5xlS0QkVrSH7ssEbBgBzbM	1	Little Saint Nick - 1991 Remix	2023-12-12 17:24:07.693	🧑‍🎄
+spotify:track:5xlS0QkVrSH7ssEbBgBzbM	1	Little Saint Nick - 1991 Remix	2023-12-12 17:24:08.632	🧑‍🎄
+spotify:track:5xlS0QkVrSH7ssEbBgBzbM	1	Little Saint Nick - 1991 Remix	2023-12-12 17:24:09.166	🧑‍🎄
+spotify:track:4so0Wek9Ig1p6CRCHuINwW	1	White Christmas - 1947 Version	2023-12-12 17:36:14.9	🧑‍🎄
+spotify:track:2uFaJJtFpPDc5Pa95XzTvg	1	Let It Snow! Let It Snow! Let It Snow!	2023-12-12 17:38:56.541	🧑‍🎄
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-12 17:40:35.261	🧑‍🎄
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-12 17:40:42.95	🧑‍🎄
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-12 17:40:43.701	🧑‍🎄
+spotify:track:46pF1zFimM582ss1PrMy68	1	Christmas (Baby Please Come Home)	2023-12-12 17:43:44.887	🧑‍🎄
+spotify:track:46pF1zFimM582ss1PrMy68	1	Christmas (Baby Please Come Home)	2023-12-12 17:43:49.318	🧑‍🎄
+spotify:track:5hslUAKq9I9CG2bAulFkHN	1	It's the Most Wonderful Time of the Year	2023-12-12 17:47:12.855	🧑‍🎄
+spotify:track:5hslUAKq9I9CG2bAulFkHN	1	It's the Most Wonderful Time of the Year	2023-12-12 17:47:13.918	🧑‍🎄
 \.
 
 
