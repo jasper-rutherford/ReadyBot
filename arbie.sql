@@ -3732,6 +3732,23 @@ spotify:track:46pF1zFimM582ss1PrMy68	1	Christmas (Baby Please Come Home)	2023-12
 spotify:track:46pF1zFimM582ss1PrMy68	1	Christmas (Baby Please Come Home)	2023-12-12 17:43:49.318	🧑‍🎄
 spotify:track:5hslUAKq9I9CG2bAulFkHN	1	It's the Most Wonderful Time of the Year	2023-12-12 17:47:12.855	🧑‍🎄
 spotify:track:5hslUAKq9I9CG2bAulFkHN	1	It's the Most Wonderful Time of the Year	2023-12-12 17:47:13.918	🧑‍🎄
+spotify:track:25leEEaz1gIpp7o21Fqyjo	1	Here Comes Santa Claus (Right Down Santa Claus Lane) - 1947 Version	2023-12-12 20:32:28.68	🧑‍🎄
+spotify:track:04vLj9QUXoKdRlsp3gkURo	1	Mele Kalikimaka (Merry Christmas)	2023-12-12 20:37:11.52	🧑‍🎄
+spotify:track:38xhBO2AKrJnjdjVnhJES6	1	This Christmas	2023-12-12 20:59:19.446	🧑‍🎄
+spotify:track:3duI7TT4kzLtoqf4PeUR3Z	1	Heart over Mind	2023-12-13 00:27:38.256	🦥
+spotify:track:0247StOpd3AkeBQzANX4Zf	1	Do They Know It's Christmas? - 1984 Version	2023-12-13 11:28:36.97	🧑‍🎄
+spotify:track:0247StOpd3AkeBQzANX4Zf	1	Do They Know It's Christmas? - 1984 Version	2023-12-13 11:30:22.719	🧑‍🎄
+spotify:track:0bYg9bo50gSsH3LtXe2SQn	1	All I Want for Christmas Is You	2023-12-13 11:36:45.722	🧑‍🎄
+spotify:track:10edu09bQbiKQuWg2OM5fi	1	God Rest Ye Merry Gentlemen	2023-12-13 11:45:26.703	🧑‍🎄
+spotify:track:04vLj9QUXoKdRlsp3gkURo	1	Mele Kalikimaka (Merry Christmas)	2023-12-13 11:52:41.064	🧑‍🎄
+spotify:track:1GjQLnGAfpv3rWW1K9Ll8p	1	Winter Wonderland	2023-12-13 11:59:19.952	🧑‍🎄
+spotify:track:2pnPe4pJtq7689i5ydzvJJ	1	Run Rudolph Run	2023-12-13 14:07:35.841	🧑‍🎄
+spotify:track:6sGiMZisNpN8kJbFyBC5x7	1	crossed the line	2023-12-13 18:23:43.57	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-13 18:25:59.299	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-13 18:26:19.673	🦥
+spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2023-12-13 18:32:40.7	🦥
+spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2023-12-13 18:35:01.214	🦥
+spotify:track:3duI7TT4kzLtoqf4PeUR3Z	1	Heart over Mind	2023-12-13 18:44:53.871	🦥
 \.
 
 
