@@ -3749,6 +3749,18 @@ spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-13 18:26:19.673	🦥
 spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2023-12-13 18:32:40.7	🦥
 spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2023-12-13 18:35:01.214	🦥
 spotify:track:3duI7TT4kzLtoqf4PeUR3Z	1	Heart over Mind	2023-12-13 18:44:53.871	🦥
+spotify:track:7BZ2xgtqnvle8d5EiR3xcy	1	My Bed	2023-12-13 19:03:45.992	🦥
+spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2023-12-13 19:26:00.633	🦥
+spotify:track:749rod7GCmj0OVdumGfzVq	1	STRUT	2023-12-13 19:35:07.478	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-14 00:12:30.078	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-14 01:10:05.091	🦥
+spotify:track:3k0DJq2HdWJqnqor8NX0ac	1	Padam Padam	2023-12-14 14:22:08.461	🦥
+spotify:track:3tIjJY43mDAhMZxSuDHvjy	1	Lovefool (feat. Pia Mia)	2023-12-14 14:26:41.699	🦥
+spotify:track:0Pebpt5NlciT4arOfAEgvB	1	Touch	2023-12-14 14:28:05.598	🦥
+spotify:track:4Bpyapy2YVNAQBUOBp17uu	1	Come Into My World (with NERVO)	2023-12-14 15:36:37.892	🦥
+spotify:track:5dry5tz8yLcLuOJ3l6ZEQd	1	Used to Know Me	2023-12-14 15:57:23.29	🦥
+spotify:track:2ljUUoqlnRUGGa7bmpvevC	1	DJ Play A Christmas Song	2023-12-14 18:05:23.35	🧑‍🎄
+spotify:track:1qXFfxYo6lyVk8Cgeuyuu2	1	Can Can (Hardstyle Mix)	2023-12-14 18:08:36.553	🧑‍🎄
 \.
 
 
