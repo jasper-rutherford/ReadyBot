@@ -23256,3 +23256,400 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🧑‍🎄
+reading chunk 1/2
+reading chunk 2/2
+clearing 15 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+getting adjustments
+identified 15 songs to be cleared from playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+removing 15 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🧑‍🎄'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🧑‍🎄'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🧑‍🎄'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 1
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+A Holly Jolly Christmas 6
+God Rest Ye Merry Gentlemen 5
+Little Saint Nick - 1991 Remix 4
+Mele Kalikimaka (Merry Christmas) 4
+Carol of the Bells 3
+It's Beginning to Look a Lot Like Christmas (with Mitchell Ayres & His Orchestra) 3
+It's the Most Wonderful Time of the Year 3
+Christmas (Baby Please Come Home) 2
+Do They Know It's Christmas? - 1984 Version 2
+Happy Xmas (War Is Over) - Remastered 2010 2
+Last Christmas 2
+Rockin' Around The Christmas Tree 2
+Snowman 2
+(There's No Place Like) Home for the Holidays - 1959 Version 2
+White Christmas - 1947 Version 2
+getting adjustments
+identified 15 songs to be added to playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+adding 15 songs to playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+1
+Shuffling 🧑‍🎄
+reading chunk 1/2
+reading chunk 2/2
+clearing 15 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+getting adjustments
+identified 15 songs to be cleared from playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+removing 15 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🧑‍🎄'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🧑‍🎄'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🧑‍🎄'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+A Holly Jolly Christmas 6
+God Rest Ye Merry Gentlemen 5
+Little Saint Nick - 1991 Remix 4
+Mele Kalikimaka (Merry Christmas) 4
+Carol of the Bells 3
+It's Beginning to Look a Lot Like Christmas (with Mitchell Ayres & His Orchestra) 3
+It's the Most Wonderful Time of the Year 3
+Christmas (Baby Please Come Home) 2
+Do They Know It's Christmas? - 1984 Version 2
+Happy Xmas (War Is Over) - Remastered 2010 2
+Last Christmas 2
+Rockin' Around The Christmas Tree 2
+Snowman 2
+(There's No Place Like) Home for the Holidays - 1959 Version 2
+White Christmas - 1947 Version 2
+All I Want for Christmas Is You 1
+Can Can (Hardstyle Mix) 1
+Christmas (Baby Please Come Home) 1
+Christmas Canon 1
+DJ Play A Christmas Song 1
+DJ Play A Christmas Song 1
+Driving Home for Christmas 1
+Have Yourself A Merry Little Christmas - Remastered 1999 1
+Here Comes Santa Claus (Right Down Santa Claus Lane) - 1947 Version 1
+Holly Jolly Christmas 1
+It's Beginning to Look a Lot like Christmas 1
+Jingle Bell Rock 1
+Let It Snow! Let It Snow! Let It Snow! 1
+Let It Snow! Let It Snow! Let It Snow! (with The B. Swanson Quartet) 1
+Merry Christmas Everyone 1
+Mistletoe 1
+Rudolph The Red-Nosed Reindeer 1
+Run Rudolph Run 1
+Sleigh Ride 1
+This Christmas 1
+Winter Wonderland 1
+getting adjustments
+identified 36 songs to be added to playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+adding 36 songs to playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:2mlGPkAx4kwF8Df0GlScsC'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:2mlGPkAx4kwF8Df0GlScsC', '1', 'Buttercup', '2023-12-15 12:16:09.467', '🦀')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:2mlGPkAx4kwF8Df0GlScsC'
+        
+        AND themoji = '🦀';
+retrieved scores for uri/themoji spotify:track:2mlGPkAx4kwF8Df0GlScsC/🦀:
+{ name: 'Buttercup', interval_score: '1', total_score: '1' }
+updating vote message
+[Buttercup] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦀
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:2mlGPkAx4kwF8Df0GlScsC'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:2mlGPkAx4kwF8Df0GlScsC', '1', 'Buttercup', '2023-12-15 12:17:53.677', '🌌')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:2mlGPkAx4kwF8Df0GlScsC'
+        
+        AND themoji = '🌌';
+retrieved scores for uri/themoji spotify:track:2mlGPkAx4kwF8Df0GlScsC/🌌:
+{ name: 'Buttercup', interval_score: '1', total_score: '1' }
+updating vote message
+[Buttercup] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🌌
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4z8sz6E4YyFuEkv5o7IJni'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4z8sz6E4YyFuEkv5o7IJni', '1', 'Mary, Did You Know?', '2023-12-15 12:30:13.761', '🧑‍🎄')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4z8sz6E4YyFuEkv5o7IJni'
+        
+        AND themoji = '🧑‍🎄';
+retrieved scores for uri/themoji spotify:track:4z8sz6E4YyFuEkv5o7IJni/🧑‍🎄:
+{ name: 'Mary, Did You Know?', interval_score: '1', total_score: '1' }
+updating vote message
+[Mary, Did You Know?] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🧑‍🎄
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 26 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 26 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 26 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+Shuffling 🧑‍🎄
+reading chunk 1/2
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+Insomnia 8
+Drink And Shout 6
+Heart over Mind 5
+Lights Out 5
+My Bed 5
+STRUT 5
+Fake 4
+Ocean Of Tears 4
+crossed the line 3
+Other Boys 3
+Super Over 3
+The Difference 3
+Afterbloom (feat. Deza) 2
+Crying At The Discotheque 2
+Dirty Thoughts 2
+Everybody Cries 2
+Houdini 2
+Lovefool (feat. Pia Mia) 2
+Memories (feat. Kid Cudi) 2
+Rock My Body 2
+Sideways 2
+Static Body 2
+Tom's Diner 2
+Bad Girl 1
+BED 1
+Call It Love 1
+Can I Get It Back (R3HAB Remix) 1
+CHARGER 1
+Come Into My World (with NERVO) 1
+Do It All Again 1
+Forget You 1
+God On The Weekend 1
+Hallucination 1
+Hush Hush (Don't Be Shy) 1
+i miss u (with Au/Ra) 1
+Lay All Your Love On Me 1
+Like Gold 1
+Little Girl Gone 1
+Makeba - Ian Asher Remix 1
+Melody 1
+MIDDLE OF THE NIGHT 1
+MONEY ON THE DASH 1
+Numb 1
+ORAL HEX (spell on you) 1
+Padam Padam 1
+Private Life 1
+Psycho - Joel Corry Remix 1
+Say It Right - ILURO Remix 1
+Say My Name 1
+Secrets 1
+Shake That 1
+She Said 1
+Something in the Orange 1
+Space and Time 1
+Supersonic 1
+The Way I Are 1
+Touch 1
+Touch 1
+TRUSTFALL 1
+Underwater 1
+Used to Know Me 1
+Weekend On A Tuesday 1
+Wild Night 1
+You Light Me Up 1
+getting adjustments
+identified 64 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 64 songs to playlist 2kEsJeC59em5JNePPitquD
+reading chunk 2/2
+clearing 36 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+getting adjustments
+identified 36 songs to be cleared from playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+removing 36 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🧑‍🎄'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🧑‍🎄'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🧑‍🎄'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+A Holly Jolly Christmas 6
+God Rest Ye Merry Gentlemen 5
+Little Saint Nick - 1991 Remix 4
+Mele Kalikimaka (Merry Christmas) 4
+Carol of the Bells 3
+It's Beginning to Look a Lot Like Christmas (with Mitchell Ayres & His Orchestra) 3
+It's the Most Wonderful Time of the Year 3
+Christmas (Baby Please Come Home) 2
+Do They Know It's Christmas? - 1984 Version 2
+Happy Xmas (War Is Over) - Remastered 2010 2
+Last Christmas 2
+Rockin' Around The Christmas Tree 2
+Snowman 2
+(There's No Place Like) Home for the Holidays - 1959 Version 2
+White Christmas - 1947 Version 2
+All I Want for Christmas Is You 1
+Can Can (Hardstyle Mix) 1
+Christmas (Baby Please Come Home) 1
+Christmas Canon 1
+DJ Play A Christmas Song 1
+DJ Play A Christmas Song 1
+Driving Home for Christmas 1
+Have Yourself A Merry Little Christmas - Remastered 1999 1
+Here Comes Santa Claus (Right Down Santa Claus Lane) - 1947 Version 1
+Holly Jolly Christmas 1
+It's Beginning to Look a Lot like Christmas 1
+Jingle Bell Rock 1
+Let It Snow! Let It Snow! Let It Snow! 1
+Let It Snow! Let It Snow! Let It Snow! (with The B. Swanson Quartet) 1
+Mary, Did You Know? 1
+Merry Christmas Everyone 1
+Mistletoe 1
+Rudolph The Red-Nosed Reindeer 1
+Run Rudolph Run 1
+Sleigh Ride 1
+This Christmas 1
+Winter Wonderland 1
+getting adjustments
+identified 37 songs to be added to playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+adding 37 songs to playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
