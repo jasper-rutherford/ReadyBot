@@ -3764,6 +3764,45 @@ spotify:track:1qXFfxYo6lyVk8Cgeuyuu2	1	Can Can (Hardstyle Mix)	2023-12-14 18:08:
 spotify:track:2mlGPkAx4kwF8Df0GlScsC	1	Buttercup	2023-12-15 12:16:09.467	🦀
 spotify:track:2mlGPkAx4kwF8Df0GlScsC	1	Buttercup	2023-12-15 12:17:53.677	🌌
 spotify:track:4z8sz6E4YyFuEkv5o7IJni	1	Mary, Did You Know?	2023-12-15 12:30:13.761	🧑‍🎄
+spotify:track:3wrWJ4cpGWSL2JZieVXhdR	1	lay all your love on me	2023-12-17 22:32:20.391	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-17 23:07:17.643	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-17 23:07:51.242	🦥
+spotify:track:2NHtAJhXVOnSIN2lZhbpWz	1	Space and Time	2023-12-17 23:51:05.138	🦥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2023-12-17 23:53:40.023	🦥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2023-12-17 23:53:41.405	🦥
+spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6	1	Bad Girl	2023-12-17 23:59:32.189	🦥
+spotify:track:17nNJNrJ8mrVA2xs5NkVsR	1	You Light Me Up	2023-12-18 00:20:59.238	🦥
+spotify:track:17nNJNrJ8mrVA2xs5NkVsR	1	You Light Me Up	2023-12-18 00:21:00.321	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-18 00:40:50.862	🦥
+spotify:track:47TOnN2ffRwsEvWsTZ6IaI	1	Shake That	2023-12-18 00:42:26.666	🦥
+spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2023-12-18 00:52:20.855	🦥
+spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2023-12-18 00:52:22.202	🦥
+spotify:track:4SKyal51xIIaySBVNh3fJn	1	Supersonic	2023-12-18 00:56:28.672	🦥
+spotify:track:4SKyal51xIIaySBVNh3fJn	1	Supersonic	2023-12-18 00:56:29.6	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-18 01:18:59.816	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-18 01:19:00.683	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-18 01:19:01.796	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-18 01:20:03.852	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-18 01:20:05.325	🦥
+spotify:track:10edu09bQbiKQuWg2OM5fi	1	God Rest Ye Merry Gentlemen	2023-12-18 12:48:54.921	🦥
+spotify:track:5aDoUmxBsbdpS16alksb5Z	1	Do You Hear What I Hear? - Remastered 2006	2023-12-18 12:51:22.95	🦥
+spotify:track:1qXFfxYo6lyVk8Cgeuyuu2	-1	Can Can (Hardstyle Mix)	2023-12-18 13:02:21.736	🧑‍🎄
+spotify:track:3P3i2ratUjex3HJEF8aAVi	-1	Hurricane	2023-12-18 13:25:59.639	🦥
+spotify:track:3P3i2ratUjex3HJEF8aAVi	1	Hurricane	2023-12-18 13:26:01.635	🦥
+spotify:track:3P3i2ratUjex3HJEF8aAVi	1	Hurricane	2023-12-18 13:26:03.929	🦥
+spotify:track:0lQ2obtzmAsJu9xk3D6FqH	1	Friendships (Lost My Love)	2023-12-18 13:26:32.531	🦥
+spotify:track:7fZBQnc0zXwVybgCIrQQil	1	Belly Dancer	2023-12-18 13:29:43.485	🦥
+spotify:track:1M8U7UHu9rhwumTu8IrqeD	1	Praising You (feat. Fatboy Slim)	2023-12-18 13:34:57.297	🦥
+spotify:track:3lFwSDBCNo3CcN09UppUnm	1	Hold Me Closer	2023-12-18 13:39:02.284	🦥
+spotify:track:3JhgPs7rbmzLBWRvHlel8U	1	Bad Memories	2023-12-18 14:03:11.439	🦥
+spotify:track:3JhgPs7rbmzLBWRvHlel8U	1	Bad Memories	2023-12-18 14:03:12.994	🦥
+spotify:track:2RRpaU7jFVcwo23pthdnBv	1	Head Shoulders Knees & Toes (feat. Norma Jean Martine)	2023-12-18 14:14:16.764	🦊
+spotify:track:2RRpaU7jFVcwo23pthdnBv	-1	Head Shoulders Knees & Toes (feat. Norma Jean Martine)	2023-12-18 14:14:20.778	🦊
+spotify:track:2RRpaU7jFVcwo23pthdnBv	1	Head Shoulders Knees & Toes (feat. Norma Jean Martine)	2023-12-18 14:14:22.361	🦥
+spotify:track:6zSpb8dQRaw0M1dK8PBwQz	1	Cold Heart - PNAU Remix	2023-12-18 14:16:12.641	🦥
+spotify:track:3kcKlOkQQEPVwxwljbGJ5p	1	Kernkraft 400 (A Better Day)	2023-12-18 14:20:42.94	🦥
+spotify:track:51Of5p3lKZeOg6itfs4og4	1	Lovefool	2023-12-18 14:22:49.096	🦥
+spotify:track:1sOfNRe7zyQkJj0cY6z2k8	1	Tell It To My Heart	2023-12-18 14:25:36.784	🦥
 \.
 
 
