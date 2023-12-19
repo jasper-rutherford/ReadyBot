@@ -3803,6 +3803,23 @@ spotify:track:6zSpb8dQRaw0M1dK8PBwQz	1	Cold Heart - PNAU Remix	2023-12-18 14:16:
 spotify:track:3kcKlOkQQEPVwxwljbGJ5p	1	Kernkraft 400 (A Better Day)	2023-12-18 14:20:42.94	🦥
 spotify:track:51Of5p3lKZeOg6itfs4og4	1	Lovefool	2023-12-18 14:22:49.096	🦥
 spotify:track:1sOfNRe7zyQkJj0cY6z2k8	1	Tell It To My Heart	2023-12-18 14:25:36.784	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2023-12-18 21:29:25.637	🦥
+spotify:track:7BZ2xgtqnvle8d5EiR3xcy	1	My Bed	2023-12-18 21:32:59.337	🦥
+spotify:track:4FWbsd91QSvgr1dSWwW51e	1	TRUSTFALL	2023-12-18 21:43:17.387	🦥
+spotify:track:45JYEmfoWSpCA3Paut7YXE	1	MIDDLE OF THE NIGHT	2023-12-18 22:40:25.412	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-18 22:40:47.907	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-18 22:40:48.588	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-18 22:40:49.511	🦥
+spotify:track:4OMJGnvZfDvsePyCwRGO7X	1	Houdini	2023-12-18 22:57:55.118	🦥
+spotify:track:2NHtAJhXVOnSIN2lZhbpWz	1	Space and Time	2023-12-18 23:01:25.689	🦥
+spotify:track:3c9IKwzgIPcCweCl9so748	1	Underwater	2023-12-18 23:18:45.918	🦥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2023-12-18 23:34:51.646	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-19 13:49:43.679	🦥
+spotify:track:47TOnN2ffRwsEvWsTZ6IaI	1	Shake That	2023-12-19 13:51:12.039	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-19 13:54:53.107	🦥
+spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2023-12-19 13:59:38.593	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-19 14:36:04.31	🦥
+spotify:track:6SpUnFjNfyFgyLRm65b2G6	1	ORAL HEX (spell on you)	2023-12-19 14:38:27.942	🦥
 \.
 
 
