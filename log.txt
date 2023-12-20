@@ -24899,3 +24899,504 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+The access token has been refreshed
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:6V5LMAIGNd7qMjco5JjUSa'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:6V5LMAIGNd7qMjco5JjUSa', '1', 'Drink And Shout', '2023-12-19 19:11:33.433', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:6V5LMAIGNd7qMjco5JjUSa'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:6V5LMAIGNd7qMjco5JjUSa/🦥:
+{ name: 'Drink And Shout', interval_score: '13', total_score: '14' }
+updating vote message
+[Drink And Shout] has a score of [ 13 ] over the last 14 days and has an all time score of [ 14 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Saving themoji mappings to file
+Saved themoji mappings to file
+Ordering 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 62 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 62 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 62 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (All time):
+Stars 42
+Hallucination 41
+Numb 39
+From Paris to Berlin (Chrit Leaf Remix) 38
+Regardless 38
+Padam Padam 37
+Lovefool (feat. Pia Mia) 36
+Touch 36
+Come Into My World (with NERVO) 33
+5 feet away 32
+Lay All Your Love On Me 32
+Memories (feat. Kid Cudi) 32
+Your Love (9PM) 32
+Can I Get It Back (R3HAB Remix) 29
+Melody 29
+Rock My Body 29
+Hush Hush (Don't Be Shy) 28
+Animal 26
+Private Life 26
+Under Control (feat. Hurts) 25
+Crying At The Discotheque 23
+Do It All Again 23
+Chain My Heart 22
+I Don’t (with DVBBS) 22
+Kardashian 22
+Mirror 22
+Lights Out 21
+Physical 20
+Psycho - Joel Corry Remix 20
+The Way I Are 20
+Used to Know Me 19
+1 Day 2 Nights 18
+Beggin' 18
+Cry About It Later (feat. Luísa Sonza & Bruno Martini) 18
+Going Dumb 18
+Goodbye 18
+Heart Wants What It Wants 18
+Other Boys 18
+Static Body 18
+Tears of Gold - Owen Norton Remix 18
+The One 18
+Dress 17
+i miss u (with Au/Ra) 17
+10:35 16
+Afterbloom (feat. Deza) 16
+Big (feat. Gunna) 16
+Drive (feat. Wes Nelson) 16
+Escapism. 16
+Hallucinate 16
+Hole Right Where My Heart Is 16
+If It Ain’t Me 16
+Belly Dancer 15
+Desire (with Sam Smith) 15
+Higher 15
+Insomnia 15
+Queen 15
+Where You Are (Sávežan) 15
+Back To You 14
+Baddest 14
+Can't Choose (feat. Kiara Nelson) 14
+Drink And Shout 14
+I Don't Want You 14
+Lay Low 14
+On A Roll - Basic Tape Remix 14
+Poster Girl 14
+RAININ’ FELLAS 14
+Wild Night 14
+You Only Love Me 14
+2019 13
+My Bed 13
+Say It Right - ILURO Remix 13
+She Said 13
+Supersonic 13
+Superstar 13
+Definition 12
+Ghost 12
+Good Luck (with Jax Jones & Galantis) 12
+Lonely Heart 12
+Maybe My Soulmate Died 12
+Mi Amor 12
+Something Stupid (feat. AWA) 12
+Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix 12
+Sweet Melody 12
+Sweet Nothing (feat. Florence Welch) 12
+TRUSTFALL 12
+UNHEALTHY (feat. Shania Twain) 12
+Wake Me Up In Paris 12
+You Don't Know Me (feat. RAYE) 12
+Baby Don't Hurt Me 11
+Breaking with You 11
+Die For a Man (feat. Lil Uzi Vert) - Galantis Remix 11
+Forget You 11
+High Frequency 11
+Let Them Know 11
+Numb 11
+Phone 11
+Prada 11
+Bang Bang 10
+Fuck Up The Friendship 10
+Hot In It 10
+Lifestyle (feat. Adam Levine) 10
+Like Gold 10
+Mad Love - Blinkie Remix 10
+Nobody To Love (with Loren Gray) 10
+One Day 10
+One Drink Away 10
+Sideways 10
+SKIN 2 SKIN 10
+Straight From the Heart (feat. Nørskov) 10
+Super Over 10
+Tell Me 10
+Tick Tock (feat. 24kGoldn) 10
+Undercover 10
+Words (feat. Zara Larsson) 10
+WOW (feat. ÁSDÍS) 10
+crossed the line 9
+Cry for You 9
+Fake 9
+Fast Lane 9
+Fever 9
+Acapulco 8
+Breaking Me 8
+Bring Me To Life 8
+Cry Dancing 8
+Damn (You’ve Got Me Saying) 8
+Don't Go Yet 8
+El Diablo 8
+Good Times 8
+Harleys In Hawaii 8
+Hero 8
+high 8
+Houdini 8
+Jalebi Baby (Tesher x Jason Derulo) 8
+Kiss My (Uh Oh) 8
+Last Summer 8
+Let Love Go (feat. Lil Tecca) 8
+Me & U 8
+Nirvana 8
+Rhythm Is A Dancer 8
+Shakira: Bzrp Music Sessions, Vol. 53 8
+Space and Time 8
+Take You Dancing 8
+The Feeling 8
+Touch 8
+Worship You 8
+WOW (feat. Sabrina Carpenter) - Remix 8
+CHARGER 7
+Ghost Town (Lucas Estrada Remix) 7
+MONEY ON THE DASH 7
+More Than You Know 7
+Radio 7
+Tom's Diner 7
+Weekend On A Tuesday 7
+You 7
+10 Things I Hate About You 6
+Baby, I'm Jealous (feat. Doja Cat) 6
+BOTH 6
+Can't Come To The Phone 6
+Comin' To Getcha 6
+Dance The Night (From Barbie The Album) 6
+End Of Time 6
+Everybody Wants You - Shift K3Y Remix 6
+Hate Me 6
+Heart over Mind 6
+I Don't Know Why 6
+If I Had You 6
+Into You 6
+Kinda Funny (feat. Audrey Mika) 6
+Lovestruck 6
+Lush Life - Retro Version 6
+My Heart Goes (La Di Da) (feat. Topic) 6
+No 6
+Noise Cancellation 6
+OUT OUT (feat. Charli XCX & Saweetie) 6
+Sacrifice 6
+Spooky, Scary Skeletons - Undead Tombstone Remix 6
+STOP! 6
+Sweet and Sour 6
+Where Them Girls At (feat. Nicki Minaj & Flo Rida) 6
+You Light Me Up 6
+All Nighter 5
+Bad Memories - Felix Jaehn Remix 5
+Hold Me Closer 5
+I Want You Around 5
+Ocean Of Tears 5
+ORAL HEX (spell on you) 5
+Say My Name 5
+Speed Drive (From Barbie The Album) 5
+Stars 5
+STRUT 5
+The Difference 5
+Where Are You Now 5
+All Or Nothing 4
+Anti-Hero 4
+Around the World (La La La La La) - Radio Version 4
+Beg for You (feat. Rina Sawayama) 4
+Better off Alone 4
+Black Magic 4
+Bloody Mary 4
+Bounce (feat. Kelis) - Radio Edit 4
+Call It Love 4
+Confetti 4
+Cupid - Twin Ver. 4
+Dance Again 4
+edamame (feat. Rich Brian) 4
+Gimme What I Want 4
+Good Ones 4
+Hands On Your Body 4
+Hopeless Heart 4
+It's Not Right But It's Okay 4
+Last Night (feat. HARLEE) 4
+Lay Low 4
+Lovesick 4
+Makeba - Ian Asher Remix 4
+Maybe You’re The Problem 4
+Morning - Billen Ted Remix 4
+One in a Million 4
+Party Songs 4
+Psycho (feat. Rubi Rose) 4
+Runaway With It 4
+Satellite 4
+#SELFIE 4
+Skin - Quarterhead Remix 4
+Slow Drip 4
+Somebody That I Used To Know 4
+Stuck In My Head [NITE MIX] (feat. AJ Mitchell) 4
+Sweater Weather 4
+Sweetest Pie 4
+The Business, Pt. II 4
+The Less I Know The Better 4
+Too Many Nights (with JC Stewart) 4
+What You Gonna Do (feat. Taet) 4
+When I’m Gone (with Katy Perry) 4
+YOU (feat. Dotter) 4
+You for Me 4
+Bad Girl 3
+Car Keys (Ayla) 3
+DO IT TO IT (feat. Dsnt Matter) 3
+Friendships (Lost My Love) 3
+F U Anthem 3
+Heaven 3
+I Wrote A Song - Topic Remix 3
+MIDDLE OF THE NIGHT 3
+Shake That 3
+Single Soon 3
+Something in the Orange 3
+Stayin' Alive VS 50 C Tik Tok - Remix 3
+The Way I Are 3
+Underwater 3
+Unholy (feat. Kim Petras) 3
+All Around The World (La La La) 2
+All Or Nothing - VIP Mix 2
+Are You With Me - Radio Edit 2
+At Least I Had Fun 2
+Bad Memories 2
+Be Okay - CLMD Remix 2
+Be the One (feat. MORGAN, Digga D & TIKE) 2
+Blackout 2
+Breathe 2
+Bubblegum Bitch 2
+Bumpy Ride 2
+Call My Name 2
+Cannibal 2
+Can't Tame Her 2
+Coming Your Way (with Anne-Marie & Becky G) 2
+Confetti (feat. Saweetie) 2
+Crazy What Love Can Do 2
+Cross My Heart I Hope U Die 2
+Crying On The Dance Floor 2
+Dirty Thoughts 2
+Disturbia 2
+Don't Touch My Clogs 2
+Evacuate The Dancefloor - Radio Edit 2
+Everybody Cries 2
+Feel Right Now (feat. Nonô) 2
+Feels In My Body 2
+Fine on My Own 2
+Freaks - Radio Edit 2
+Ghost Town 2
+Gimme! Gimme! Gimme! (A Man After Midnight) 2
+God On The Weekend 2
+Good Girls Go Bad (feat. Leighton Meester) 2
+Good Luck 2
+Good Vibes 2
+Head & Heart (feat. MNEK) 2
+Heads Will Roll 2
+I LIKE CARS 2
+iloveyou 2
+I Love Your Girl 2
+I'm Good (Blue) 2
+i miss u - VIZE Remix 2
+I Will Never Let You Down 2
+I Wish (feat. Mabel) 2
+Last Night 2
+lay all your love on me 2
+Leave A Little Love 2
+Leave (Get Out) 2
+Little Girl Gone 2
+LOL 2
+L.O.V.(e). 2
+Love Me Land 2
+Love Of Your Life 2
+Marble 2
+ME BECAUSE OF YOU - Indigo Kxd Remix 2
+Met Him Last Night - Dave Audé Remix 2
+Met Him Last Night (feat. Ariana Grande) 2
+MIDDLE OF THE NIGHT 2
+Never Really Over 2
+Night Ends 2
+No Regrets 2
+Obsessed 2
+Ocean Drive 2
+On My Mind 2
+Poker Face 2
+Prosecco 2
+Pump It 2
+Purple Hat 2
+Pyromania 2
+Real Groove (feat. Dua Lipa) - Studio 2054 Initial Talk Remix 2
+Remember (with David Guetta) 2
+SAD B!TCH 2
+Set Fire to the Rain 2
+Smile 2
+Smooth Criminal - 2012 Remaster 2
+Somebody I F*cked Once - Lady Bee Remix 2
+Starships 2
+STAY (with Justin Bieber) 2
+Strut 2
+Sucker for Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors) 2
+Team 2
+that way - Jonasu Remix 2
+The Business 2
+THE END 2
+The Motto 2
+Thriller - Single Version 2
+Tonight (I'm Fuckin' You) 2
+Wait 2
+We're Good 2
+West Coast (feat. Quinn XCII) 2
+When Love Takes Over (feat. Kelly Rowland) 2
+When You're Out (feat. Mae Muller) 2
+Where Did You Go? (feat. MNEK) 2
+Where Have You Been 2
+W.I.T.C.H. 2
+Worst Thing 2
+Yesterday 2
+10 Things I Hate About You 1
+Bad Idea 1
+Bananza (Belly Dancer) - DJ Shaan Remix 1
+BED 1
+Blinding Lights 1
+Bling Bling 1
+Call It Love 1
+Christmas (Baby Please Come Home) 1
+Cold Heart - PNAU Remix 1
+Don't You Hold Me Down 1
+Do You Hear What I Hear? - Remastered 2006 1
+Feliz Navidad 1
+GIRL LIKE ME - twocolors remix 1
+girls girls girls 1
+God Is A Dancer (with Mabel) 1
+God Rest Ye Merry Gentlemen 1
+Gotta Get Thru This 1
+greedy - Alok remix 1
+Hall of Fame (feat. will.i.am) 1
+Head Shoulders Knees & Toes (feat. Norma Jean Martine) 1
+Homewrecker 1
+Hurricane 1
+i drive me mad 1
+Kernkraft 400 (A Better Day) 1
+Little Saint Nick 1
+Lovefool 1
+midnight love 1
+Moth To A Flame (with The Weeknd) 1
+Nightshade 1
+Overdose - Sait Esmeray Remix 1
+Please Come Home for Christmas - 2013 Remaster 1
+Praising You (feat. Fatboy Slim) 1
+Real Love 1
+Rockstar 1
+Run Rudolph Run 1
+Secrets 1
+Stay 1
+Summer 1
+Sweet Child O' Mine 1
+Sweet Dreams 1
+Tell It To My Heart 1
+Too Much (feat. Usher) 1
+Troubles 1
+What It Feels Like 1
+getting adjustments
+identified 390 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 100 songs to playlist 2kEsJeC59em5JNePPitquD
+Finished Ordering 🦥. Playlist should have 390 songs.
+adding 100 songs to playlist 2kEsJeC59em5JNePPitquD
+adding 100 songs to playlist 2kEsJeC59em5JNePPitquD
+adding 90 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3bjM6KcvV1MwkAm7DJQb9O'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3bjM6KcvV1MwkAm7DJQb9O', '1', 'Lay All Your Love On Me', '2023-12-20 00:19:38.340', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3bjM6KcvV1MwkAm7DJQb9O'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3bjM6KcvV1MwkAm7DJQb9O/🦥:
+{
+  name: 'Lay All Your Love On Me',
+  interval_score: '1',
+  total_score: '33'
+}
+updating vote message
+[Lay All Your Love On Me] has a score of [ 1 ] over the last 14 days and has an all time score of [ 33 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
