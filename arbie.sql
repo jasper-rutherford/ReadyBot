@@ -3822,6 +3822,17 @@ spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-19 14:36:04.31	�
 spotify:track:6SpUnFjNfyFgyLRm65b2G6	1	ORAL HEX (spell on you)	2023-12-19 14:38:27.942	🦥
 spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-19 19:11:33.433	🦥
 spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-12-20 00:19:38.34	🦥
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-21 12:23:37.685	🧑‍🎄
+spotify:track:1Kcy7qSbf6un30zIkxGVew	1	Here We Come a-Caroling / We Wish You a Merry Christmas	2023-12-21 13:15:47.951	🧑‍🎄
+spotify:track:33EcmYsTQVIGRGnGPOfTwu	1	Linus And Lucy	2023-12-21 13:26:59.768	🧑‍🎄
+spotify:track:0H1zX27yxoDrsrQA1hk5Uq	1	O Come All Ye Faithful	2023-12-21 13:41:05.371	🧑‍🎄
+spotify:track:3QiAAp20rPC3dcAtKtMaqQ	1	Blue Christmas	2023-12-21 13:45:22.518	🧑‍🎄
+spotify:track:5hslUAKq9I9CG2bAulFkHN	1	It's the Most Wonderful Time of the Year	2023-12-21 13:47:16.281	🧑‍🎄
+spotify:track:75dfH68JDisE8dDaD4KlVY	1	Little Saint Nick	2023-12-21 13:53:44.293	🧑‍🎄
+spotify:track:7vQbuQcyTflfCIOu3Uzzya	1	Jingle Bell Rock	2023-12-21 13:59:13.844	🧑‍🎄
+spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-21 15:06:00.956	🧑‍🎄
+spotify:track:2pnPe4pJtq7689i5ydzvJJ	1	Run Rudolph Run	2023-12-21 15:11:27.134	🧑‍🎄
+spotify:track:46pF1zFimM582ss1PrMy68	1	Christmas (Baby Please Come Home)	2023-12-21 17:09:29.614	🧑‍🎄
 \.
 
 
