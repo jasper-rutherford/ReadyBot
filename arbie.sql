@@ -3833,6 +3833,12 @@ spotify:track:7vQbuQcyTflfCIOu3Uzzya	1	Jingle Bell Rock	2023-12-21 13:59:13.844	
 spotify:track:77khP2fIVhSW23NwxrRluh	1	A Holly Jolly Christmas	2023-12-21 15:06:00.956	🧑‍🎄
 spotify:track:2pnPe4pJtq7689i5ydzvJJ	1	Run Rudolph Run	2023-12-21 15:11:27.134	🧑‍🎄
 spotify:track:46pF1zFimM582ss1PrMy68	1	Christmas (Baby Please Come Home)	2023-12-21 17:09:29.614	🧑‍🎄
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-12-21 19:26:52.38	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-12-21 19:33:02.045	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-12-21 19:46:04.31	🦥
+spotify:track:6DploCSZVf5gvIP7WBBU6S	1	Afterbloom (feat. Deza)	2023-12-21 20:03:04.298	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2023-12-21 20:25:44.66	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2023-12-21 20:32:41.918	🦥
 \.
 
 

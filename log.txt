@@ -25822,3 +25822,443 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+The access token has been refreshed
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4J7CKHCF3mdL4diUsmW8lq'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4J7CKHCF3mdL4diUsmW8lq', '1', 'Under Control (feat. Hurts)', '2023-12-21 19:26:52.380', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4J7CKHCF3mdL4diUsmW8lq'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4J7CKHCF3mdL4diUsmW8lq/🦥:
+{
+  name: 'Under Control (feat. Hurts)',
+  interval_score: '1',
+  total_score: '26'
+}
+updating vote message
+[Under Control (feat. Hurts)] has a score of [ 1 ] over the last 14 days and has an all time score of [ 26 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4dTaAiV9xFFCxnPur9c9yL'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4dTaAiV9xFFCxnPur9c9yL', '1', 'Memories (feat. Kid Cudi)', '2023-12-21 19:33:02.045', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4dTaAiV9xFFCxnPur9c9yL'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4dTaAiV9xFFCxnPur9c9yL/🦥:
+{
+  name: 'Memories (feat. Kid Cudi)',
+  interval_score: '3',
+  total_score: '33'
+}
+updating vote message
+[Memories (feat. Kid Cudi)] has a score of [ 3 ] over the last 14 days and has an all time score of [ 33 ] for 🦥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3bjM6KcvV1MwkAm7DJQb9O'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3bjM6KcvV1MwkAm7DJQb9O', '1', 'Lay All Your Love On Me', '2023-12-21 19:46:04.310', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3bjM6KcvV1MwkAm7DJQb9O'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3bjM6KcvV1MwkAm7DJQb9O/🦥:
+{
+  name: 'Lay All Your Love On Me',
+  interval_score: '2',
+  total_score: '34'
+}
+updating vote message
+[Lay All Your Love On Me] has a score of [ 2 ] over the last 14 days and has an all time score of [ 34 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:6DploCSZVf5gvIP7WBBU6S'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:6DploCSZVf5gvIP7WBBU6S', '1', 'Afterbloom (feat. Deza)', '2023-12-21 20:03:04.298', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:6DploCSZVf5gvIP7WBBU6S'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:6DploCSZVf5gvIP7WBBU6S/🦥:
+{
+  name: 'Afterbloom (feat. Deza)',
+  interval_score: '3',
+  total_score: '17'
+}
+updating vote message
+[Afterbloom (feat. Deza)] has a score of [ 3 ] over the last 14 days and has an all time score of [ 17 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:5WZlorRUxgryaweu7kqeHd'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:5WZlorRUxgryaweu7kqeHd', '1', 'Other Boys', '2023-12-21 20:25:44.660', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:5WZlorRUxgryaweu7kqeHd'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:5WZlorRUxgryaweu7kqeHd/🦥:
+{ name: 'Other Boys', interval_score: '4', total_score: '19' }
+updating vote message
+[Other Boys] has a score of [ 4 ] over the last 14 days and has an all time score of [ 19 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:39MuEaENKIWaayDVYSVpjX'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:39MuEaENKIWaayDVYSVpjX', '1', 'Fake', '2023-12-21 20:32:41.918', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:39MuEaENKIWaayDVYSVpjX'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:39MuEaENKIWaayDVYSVpjX/🦥:
+{ name: 'Fake', interval_score: '2', total_score: '10' }
+updating vote message
+[Fake] has a score of [ 2 ] over the last 14 days and has an all time score of [ 10 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🦥
+reading chunk 1/5
+reading chunk 2/5
+reading chunk 3/5
+reading chunk 4/5
+reading chunk 5/5
+clearing 390 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 390 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 100 songs from playlist 2kEsJeC59em5JNePPitquD
+removing 100 songs from playlist 2kEsJeC59em5JNePPitquD
+removing 100 songs from playlist 2kEsJeC59em5JNePPitquD
+removing 90 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+Drink And Shout 13
+Insomnia 7
+Ocean Of Tears 5
+Super Over 5
+Lights Out 4
+My Bed 4
+Other Boys 4
+STRUT 4
+Tom's Diner 4
+Afterbloom (feat. Deza) 3
+Heart over Mind 3
+Memories (feat. Kid Cudi) 3
+Shake That 3
+Space and Time 3
+The Way I Are 3
+Touch 3
+Bad Girl 2
+Bad Memories 2
+Everybody Cries 2
+Fake 2
+Lay All Your Love On Me 2
+Lovefool (feat. Pia Mia) 2
+Rock My Body 2
+Supersonic 2
+The Difference 2
+TRUSTFALL 2
+Underwater 2
+You Light Me Up 2
+BED 1
+Belly Dancer 1
+Call It Love 1
+CHARGER 1
+Cold Heart - PNAU Remix 1
+Come Into My World (with NERVO) 1
+crossed the line 1
+Dirty Thoughts 1
+Do It All Again 1
+Do You Hear What I Hear? - Remastered 2006 1
+Forget You 1
+Friendships (Lost My Love) 1
+God On The Weekend 1
+God Rest Ye Merry Gentlemen 1
+Head Shoulders Knees & Toes (feat. Norma Jean Martine) 1
+Hold Me Closer 1
+Houdini 1
+Hurricane 1
+Hush Hush (Don't Be Shy) 1
+i miss u (with Au/Ra) 1
+Kernkraft 400 (A Better Day) 1
+lay all your love on me 1
+Like Gold 1
+Little Girl Gone 1
+Lovefool 1
+Melody 1
+MIDDLE OF THE NIGHT 1
+Numb 1
+ORAL HEX (spell on you) 1
+Padam Padam 1
+Praising You (feat. Fatboy Slim) 1
+Say It Right - ILURO Remix 1
+Secrets 1
+She Said 1
+Sideways 1
+Something in the Orange 1
+Static Body 1
+Tell It To My Heart 1
+Touch 1
+Under Control (feat. Hurts) 1
+Used to Know Me 1
+getting adjustments
+identified 69 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 69 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 69 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 69 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 69 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+Drink And Shout 13
+Insomnia 7
+Ocean Of Tears 5
+Super Over 5
+Lights Out 4
+My Bed 4
+Other Boys 4
+STRUT 4
+Tom's Diner 4
+Afterbloom (feat. Deza) 3
+Heart over Mind 3
+Memories (feat. Kid Cudi) 3
+Shake That 3
+Space and Time 3
+The Way I Are 3
+Touch 3
+Bad Girl 2
+Bad Memories 2
+Everybody Cries 2
+Fake 2
+Lay All Your Love On Me 2
+Lovefool (feat. Pia Mia) 2
+Rock My Body 2
+Supersonic 2
+The Difference 2
+TRUSTFALL 2
+Underwater 2
+You Light Me Up 2
+BED 1
+Belly Dancer 1
+Call It Love 1
+CHARGER 1
+Cold Heart - PNAU Remix 1
+Come Into My World (with NERVO) 1
+crossed the line 1
+Dirty Thoughts 1
+Do It All Again 1
+Do You Hear What I Hear? - Remastered 2006 1
+Forget You 1
+Friendships (Lost My Love) 1
+God On The Weekend 1
+God Rest Ye Merry Gentlemen 1
+Head Shoulders Knees & Toes (feat. Norma Jean Martine) 1
+Hold Me Closer 1
+Houdini 1
+Hurricane 1
+Hush Hush (Don't Be Shy) 1
+i miss u (with Au/Ra) 1
+Kernkraft 400 (A Better Day) 1
+lay all your love on me 1
+Like Gold 1
+Little Girl Gone 1
+Lovefool 1
+Melody 1
+MIDDLE OF THE NIGHT 1
+Numb 1
+ORAL HEX (spell on you) 1
+Padam Padam 1
+Praising You (feat. Fatboy Slim) 1
+Say It Right - ILURO Remix 1
+Secrets 1
+She Said 1
+Sideways 1
+Something in the Orange 1
+Static Body 1
+Tell It To My Heart 1
+Touch 1
+Under Control (feat. Hurts) 1
+Used to Know Me 1
+getting adjustments
+identified 69 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 69 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🧑‍🎄
+reading chunk 1/2
+reading chunk 2/2
+clearing 41 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+getting adjustments
+identified 41 songs to be cleared from playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+removing 41 songs from playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🧑‍🎄'
+               
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🧑‍🎄'
+            
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🧑‍🎄'
+                   
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (All time):
+A Holly Jolly Christmas 8
+God Rest Ye Merry Gentlemen 5
+It's the Most Wonderful Time of the Year 4
+Little Saint Nick - 1991 Remix 4
+Mele Kalikimaka (Merry Christmas) 4
+Carol of the Bells 3
+Christmas (Baby Please Come Home) 3
+It's Beginning to Look a Lot Like Christmas (with Mitchell Ayres & His Orchestra) 3
+Do They Know It's Christmas? - 1984 Version 2
+Happy Xmas (War Is Over) - Remastered 2010 2
+Jingle Bell Rock 2
+Last Christmas 2
+Rockin' Around The Christmas Tree 2
+Run Rudolph Run 2
+Snowman 2
+(There's No Place Like) Home for the Holidays - 1959 Version 2
+White Christmas - 1947 Version 2
+All I Want for Christmas Is You 1
+Blue Christmas 1
+Christmas (Baby Please Come Home) 1
+Christmas Canon 1
+DJ Play A Christmas Song 1
+DJ Play A Christmas Song 1
+Driving Home for Christmas 1
+Have Yourself A Merry Little Christmas - Remastered 1999 1
+Here Comes Santa Claus (Right Down Santa Claus Lane) - 1947 Version 1
+Here We Come a-Caroling / We Wish You a Merry Christmas 1
+Holly Jolly Christmas 1
+It's Beginning to Look a Lot like Christmas 1
+Let It Snow! Let It Snow! Let It Snow! 1
+Let It Snow! Let It Snow! Let It Snow! (with The B. Swanson Quartet) 1
+Linus And Lucy 1
+Little Saint Nick 1
+Mary, Did You Know? 1
+Merry Christmas Everyone 1
+Mistletoe 1
+O Come All Ye Faithful 1
+Rudolph The Red-Nosed Reindeer 1
+Sleigh Ride 1
+This Christmas 1
+Winter Wonderland 1
+getting adjustments
+identified 41 songs to be added to playlist [5H6H5HV9j7x1MQ1AI5gTB7]
+got adjustments
+adding 41 songs to playlist 5H6H5HV9j7x1MQ1AI5gTB7
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
