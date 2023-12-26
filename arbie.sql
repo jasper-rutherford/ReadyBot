@@ -3839,6 +3839,40 @@ spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-12-21 19:46:
 spotify:track:6DploCSZVf5gvIP7WBBU6S	1	Afterbloom (feat. Deza)	2023-12-21 20:03:04.298	🦥
 spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2023-12-21 20:25:44.66	🦥
 spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2023-12-21 20:32:41.918	🦥
+spotify:track:6SpUnFjNfyFgyLRm65b2G6	1	ORAL HEX (spell on you)	2023-12-25 21:36:29.979	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-25 21:40:34.736	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-25 21:42:10.12	🦥
+spotify:track:3JhgPs7rbmzLBWRvHlel8U	1	Bad Memories	2023-12-25 21:46:22.409	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-25 21:54:21.704	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-25 21:54:22.437	🦥
+spotify:track:1sOfNRe7zyQkJj0cY6z2k8	1	Tell It To My Heart	2023-12-25 22:02:42.654	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-12-25 22:09:55.722	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-25 22:14:22.303	🦥
+spotify:track:0Pebpt5NlciT4arOfAEgvB	1	Touch	2023-12-25 22:22:21.721	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-25 22:26:52.691	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-25 22:26:53.728	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-25 22:26:54.785	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2023-12-25 22:29:13.185	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2023-12-25 22:29:14.133	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2023-12-25 22:29:15.262	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2023-12-25 22:32:09.142	🦥
+spotify:track:7BZ2xgtqnvle8d5EiR3xcy	1	My Bed	2023-12-25 22:42:40.631	🦥
+spotify:track:7BZ2xgtqnvle8d5EiR3xcy	1	My Bed	2023-12-25 22:42:42.12	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2023-12-25 22:48:17.246	🦥
+spotify:track:3k0DJq2HdWJqnqor8NX0ac	1	Padam Padam	2023-12-25 22:54:58.806	🦥
+spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2023-12-25 22:59:33.053	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2023-12-25 23:03:56.184	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2023-12-25 23:03:57.259	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2023-12-25 23:03:58.617	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2023-12-25 23:03:59.675	🦥
+spotify:track:3P3i2ratUjex3HJEF8aAVi	1	Hurricane	2023-12-25 23:14:03.902	😈
+spotify:track:3P3i2ratUjex3HJEF8aAVi	1	Hurricane	2023-12-25 23:14:05.136	🦥
+spotify:track:2NHtAJhXVOnSIN2lZhbpWz	1	Space and Time	2023-12-25 23:20:58.722	🦥
+spotify:track:4OMJGnvZfDvsePyCwRGO7X	1	Houdini	2023-12-25 23:31:51.206	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-26 00:17:19.105	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-26 01:03:58.82	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-26 01:19:03.453	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-12-26 01:27:30.39	🦥
 \.
 
 
