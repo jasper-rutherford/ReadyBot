@@ -3873,6 +3873,17 @@ spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2023-12-26 00:17:19.105	�
 spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2023-12-26 01:03:58.82	🦥
 spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2023-12-26 01:19:03.453	🦥
 spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2023-12-26 01:27:30.39	🦥
+spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2023-12-28 19:17:52.245	🦥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2023-12-28 19:25:49.976	🦥
+spotify:track:7C7yqFTM0ncyJ04GIKrxdV	1	Anything Could Happen	2023-12-28 23:56:35.386	🦥
+spotify:track:0bYg9bo50gSsH3LtXe2SQn	-1	All I Want for Christmas Is You	2023-12-29 12:26:40.573	🧑‍🎄
+spotify:track:0O4vuJynWVVdyvoHvZtnk3	-1	Christmas Canon	2023-12-29 12:28:20.579	🧑‍🎄
+spotify:track:2FPfeYlrbSBR8PwCU0zaqq	1	Have Yourself A Merry Little Christmas - Remastered 1999	2023-12-29 12:30:33.773	🧑‍🎄
+spotify:track:24LS4lQShWyixJ0ZrJXfJ5	1	Sweet Nothing (feat. Florence Welch)	2023-12-29 18:05:16.242	🦥
+spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-12-29 18:14:02.36	🦥
+spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-12-29 18:14:02.788	🦥
+spotify:track:0ieEZjHQO5eq9Uad7opItK	1	I Was Made	2023-12-29 18:26:27.816	🦥
+spotify:track:1YWr18dWRmuvPgAsPBsOow	1	Forget You	2023-12-29 18:33:17.037	🦥
 \.
 
 

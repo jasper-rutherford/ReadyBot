@@ -27236,3 +27236,255 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:59NraMJsLaMCVtwXTSia8i'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:59NraMJsLaMCVtwXTSia8i', '1', 'Prada', '2023-12-28 19:17:52.245', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:59NraMJsLaMCVtwXTSia8i'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:59NraMJsLaMCVtwXTSia8i/🦥:
+{ name: 'Prada', interval_score: '1', total_score: '12' }
+updating vote message
+[Prada] has a score of [ 1 ] over the last 14 days and has an all time score of [ 12 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:2nCIE2AVFQ1adRVkocdGOp'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:2nCIE2AVFQ1adRVkocdGOp', '1', 'Touch', '2023-12-28 19:25:49.976', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:2nCIE2AVFQ1adRVkocdGOp'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:2nCIE2AVFQ1adRVkocdGOp/🦥:
+{ name: 'Touch', interval_score: '3', total_score: '9' }
+updating vote message
+[Touch] has a score of [ 3 ] over the last 14 days and has an all time score of [ 9 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:7C7yqFTM0ncyJ04GIKrxdV'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:7C7yqFTM0ncyJ04GIKrxdV', '1', 'Anything Could Happen', '2023-12-28 23:56:35.386', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:7C7yqFTM0ncyJ04GIKrxdV'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:7C7yqFTM0ncyJ04GIKrxdV/🦥:
+{
+  name: 'Anything Could Happen',
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[Anything Could Happen] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0bYg9bo50gSsH3LtXe2SQn'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0bYg9bo50gSsH3LtXe2SQn', '-1', 'All I Want for Christmas Is You', '2023-12-29 12:26:40.573', '🧑‍🎄')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0bYg9bo50gSsH3LtXe2SQn'
+        
+        AND themoji = '🧑‍🎄';
+retrieved scores for uri/themoji spotify:track:0bYg9bo50gSsH3LtXe2SQn/🧑‍🎄:
+{
+  name: 'All I Want for Christmas Is You',
+  interval_score: '-1',
+  total_score: '0'
+}
+updating vote message
+[All I Want for Christmas Is You] has a score of [ -1 ] over the last 14 days and has an all time score of [ 0 ] for 🧑‍🎄
+getting current song
+getting current state
+getting current song
+getting current state
+Skipped [All I Want for Christmas Is You]
+Now playing [Carol of the Bells]
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0O4vuJynWVVdyvoHvZtnk3'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0O4vuJynWVVdyvoHvZtnk3', '-1', 'Christmas Canon', '2023-12-29 12:28:20.579', '🧑‍🎄')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0O4vuJynWVVdyvoHvZtnk3'
+        
+        AND themoji = '🧑‍🎄';
+retrieved scores for uri/themoji spotify:track:0O4vuJynWVVdyvoHvZtnk3/🧑‍🎄:
+{ name: 'Christmas Canon', interval_score: '-1', total_score: '0' }
+updating vote message
+[Christmas Canon] has a score of [ -1 ] over the last 14 days and has an all time score of [ 0 ] for 🧑‍🎄
+getting current song
+getting current state
+getting current song
+getting current state
+Skipped [Christmas Canon]
+Now playing [Have Yourself A Merry Little Christmas - Remastered 1999]
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:2FPfeYlrbSBR8PwCU0zaqq'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:2FPfeYlrbSBR8PwCU0zaqq', '1', 'Have Yourself A Merry Little Christmas - Remastered 1999', '2023-12-29 12:30:33.773', '🧑‍🎄')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:2FPfeYlrbSBR8PwCU0zaqq'
+        
+        AND themoji = '🧑‍🎄';
+retrieved scores for uri/themoji spotify:track:2FPfeYlrbSBR8PwCU0zaqq/🧑‍🎄:
+{
+  name: 'Have Yourself A Merry Little Christmas - Remastered 1999',
+  interval_score: '1',
+  total_score: '2'
+}
+updating vote message
+[Have Yourself A Merry Little Christmas - Remastered 1999] has a score of [ 1 ] over the last 14 days and has an all time score of [ 2 ] for 🧑‍🎄
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:24LS4lQShWyixJ0ZrJXfJ5'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:24LS4lQShWyixJ0ZrJXfJ5', '1', 'Sweet Nothing (feat. Florence Welch)', '2023-12-29 18:05:16.242', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:24LS4lQShWyixJ0ZrJXfJ5'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:24LS4lQShWyixJ0ZrJXfJ5/🦥:
+{
+  name: 'Sweet Nothing (feat. Florence Welch)',
+  interval_score: '1',
+  total_score: '13'
+}
+updating vote message
+[Sweet Nothing (feat. Florence Welch)] has a score of [ 1 ] over the last 14 days and has an all time score of [ 13 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4yDWvUA2Y9PWGov1948c9M'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4yDWvUA2Y9PWGov1948c9M', '1', 'Crying At The Discotheque', '2023-12-29 18:14:02.360', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4yDWvUA2Y9PWGov1948c9M'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4yDWvUA2Y9PWGov1948c9M/🦥:
+{
+  name: 'Crying At The Discotheque',
+  interval_score: '1',
+  total_score: '24'
+}
+updating vote message
+[Crying At The Discotheque] has a score of [ 1 ] over the last 14 days and has an all time score of [ 24 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4yDWvUA2Y9PWGov1948c9M'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4yDWvUA2Y9PWGov1948c9M', '1', 'Crying At The Discotheque', '2023-12-29 18:14:02.788', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4yDWvUA2Y9PWGov1948c9M'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4yDWvUA2Y9PWGov1948c9M/🦥:
+{
+  name: 'Crying At The Discotheque',
+  interval_score: '2',
+  total_score: '25'
+}
+updating vote message
+[Crying At The Discotheque] has a score of [ 2 ] over the last 14 days and has an all time score of [ 25 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0ieEZjHQO5eq9Uad7opItK'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0ieEZjHQO5eq9Uad7opItK', '1', 'I Was Made', '2023-12-29 18:26:27.816', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0ieEZjHQO5eq9Uad7opItK'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0ieEZjHQO5eq9Uad7opItK/🦥:
+{ name: 'I Was Made', interval_score: '1', total_score: '1' }
+updating vote message
+[I Was Made] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1YWr18dWRmuvPgAsPBsOow'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1YWr18dWRmuvPgAsPBsOow', '1', 'Forget You', '2023-12-29 18:33:17.037', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1YWr18dWRmuvPgAsPBsOow'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1YWr18dWRmuvPgAsPBsOow/🦥:
+{ name: 'Forget You', interval_score: '1', total_score: '12' }
+updating vote message
+[Forget You] has a score of [ 1 ] over the last 14 days and has an all time score of [ 12 ] for 🦥
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
