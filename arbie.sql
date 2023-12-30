@@ -3884,6 +3884,39 @@ spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-12-29 18:1
 spotify:track:4yDWvUA2Y9PWGov1948c9M	1	Crying At The Discotheque	2023-12-29 18:14:02.788	🦥
 spotify:track:0ieEZjHQO5eq9Uad7opItK	1	I Was Made	2023-12-29 18:26:27.816	🦥
 spotify:track:1YWr18dWRmuvPgAsPBsOow	1	Forget You	2023-12-29 18:33:17.037	🦥
+spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2023-12-29 18:56:43.166	🦥
+spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2023-12-30 13:44:02.073	🦥
+spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2023-12-30 13:44:05.394	🦥
+spotify:track:6od5hFv9IT5JHc7NEF9HRv	1	Victorious	2023-12-30 13:50:03.624	🦥
+spotify:track:1wcr8DjnN59Awev8nnKpQ4	1	Drunk-Dazed	2023-12-30 13:52:54.022	🦥
+spotify:track:7jwDuO7UZvWs77KNj9HbvF	1	The Phoenix	2023-12-30 13:56:39.202	🦥
+spotify:track:16Azhyv8164hYxI8Ax3F5k	1	Blur	2023-12-30 14:01:34.51	🦥
+spotify:track:0thLhIqWsqqycEqFONOyhu	1	Lone Digger	2023-12-30 14:01:59.559	🦥
+spotify:track:2n3CaPGPLYnYAvTEwKCX8t	1	Mmm Yeah (feat. Pitbull)	2023-12-30 14:12:26.316	🦥
+spotify:track:3p94RpSxQdZocUfrzpemmm	1	El Dorado	2023-12-30 14:20:00.706	🦥
+spotify:track:7h9NYfZQR2NqGC2syIkaXj	1	We No Speak Americano	2023-12-30 14:22:16.186	🦥
+spotify:track:7h9NYfZQR2NqGC2syIkaXj	-1	We No Speak Americano	2023-12-30 14:27:06.255	🦥
+spotify:track:7s0lDK7y3XLmI7tcsRAbW0	1	My Songs Know What You Did In The Dark (Light Em Up)	2023-12-30 14:27:51.264	🦥
+spotify:track:7ewT0nLFkMD8ONbRibePr9	1	I Don't Care - Single Version	2023-12-30 14:31:25.104	🦥
+spotify:track:76EVeVC8cRdqbAKFuj3jv5	1	Stone	2023-12-30 14:36:42.355	🦥
+spotify:track:4E73mIgGehdEHxMuxEd7I9	1	Because the Night	2023-12-30 14:40:11.816	🦥
+spotify:track:6qCsKKS7Ol63SJW3LOIX5R	1	Plastic Hearts	2023-12-30 14:44:53.334	🦥
+spotify:track:1D2Aldrksl9yWWCIPOeDzy	1	All Around The World (La La La)	2023-12-30 14:51:49.242	🦥
+spotify:track:5MNCTvYYhy6cJQgDChp7J0	1	Anti Gravity	2023-12-30 15:05:43.588	🦥
+spotify:track:6tVrmsbI5HVDgOlFSTrQjB	1	Lucky Strike	2023-12-30 15:09:28.165	🦥
+spotify:track:0WCiI0ddWiu5F2kSHgfw5S	1	Take It Off	2023-12-30 15:12:37.913	🦥
+spotify:track:3Te8uLyit6X3ncNW8Fp3K2	1	Immortals	2023-12-30 16:25:56.408	🦥
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2023-12-30 17:25:44.434	🦥
+spotify:track:51TFSMFRYcuNORJ7PIIJCQ	1	All I Ever Wanted	2023-12-30 17:27:35.473	🦥
+spotify:track:6azVi5ToFHo6KfKs6SstAC	1	Bad Idea	2023-12-30 17:31:39.937	🦥
+spotify:track:2rhSduBNjteGhpqGA55PV1	1	Hanging Tree - Alex Great Remix	2023-12-30 17:39:44.211	🦥
+spotify:track:2rhSduBNjteGhpqGA55PV1	1	Hanging Tree - Alex Great Remix	2023-12-30 17:39:45.743	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2023-12-30 17:45:02.327	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2023-12-30 17:48:05.959	🦥
+spotify:track:1nwlLOkSNpb5NMldTT6C1t	1	Can't Get You Out Of My Head	2023-12-30 17:58:24.92	🦥
+spotify:track:2bLqfJjuC5syrsgDsZfGmn	1	The Way I Are	2023-12-30 18:34:44.997	🦥
+spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-12-30 18:37:29.891	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-30 18:39:25.289	🦥
 \.
 
 
