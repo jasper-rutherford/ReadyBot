@@ -3917,6 +3917,19 @@ spotify:track:1nwlLOkSNpb5NMldTT6C1t	1	Can't Get You Out Of My Head	2023-12-30 1
 spotify:track:2bLqfJjuC5syrsgDsZfGmn	1	The Way I Are	2023-12-30 18:34:44.997	🦥
 spotify:track:5fJKruTP0DiAFBDesEBR3C	1	From Paris to Berlin (Chrit Leaf Remix)	2023-12-30 18:37:29.891	🦥
 spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2023-12-30 18:39:25.289	🦥
+spotify:track:3J5Wcm5gvOl15F79FUy6Zy	1	Sideways	2023-12-30 18:49:02.597	🦥
+spotify:track:6GDJDe3I7yHq4rPDTfuJMj	1	Rhythm Is A Dancer	2023-12-30 18:56:15.192	🦥
+spotify:track:4ZWyj5whGZ3nNLwOtOLrMt	1	I Want More	2023-12-30 19:32:28.815	🦥
+spotify:track:5pNFibJLq7dvoDVIIcQBkn	1	Hot In It (feat. Charli XCX)	2023-12-30 19:40:12.661	🦥
+spotify:track:00E0Z2jrF7reoHps4zcbWQ	1	Car Keys (Ayla)	2023-12-30 19:59:46.945	🦥
+spotify:track:6q88roV9Jpt65m9ZIWsKQU	1	The Feeling	2023-12-30 20:27:45.992	🦥
+spotify:track:0wI0S42Cg41DVGqIIVimTM	1	Blinding Lights	2023-12-30 20:28:08.787	🦥
+spotify:track:0y8bSLlOciVW9ejfEmExA9	1	Diamonds	2023-12-30 20:34:28.784	🦥
+spotify:track:0y8bSLlOciVW9ejfEmExA9	-1	Diamonds	2023-12-30 20:34:48.817	🦥
+spotify:track:3jksOdXCaDXyGiZ7L4YZbp	1	All Nighter	2023-12-30 21:46:41.05	🦥
+spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2023-12-30 22:20:38.147	🦥
+spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2023-12-31 18:18:27.393	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2023-12-31 18:21:27.178	🦥
 \.
 
 
