@@ -3947,6 +3947,33 @@ spotify:track:0Pebpt5NlciT4arOfAEgvB	1	Touch	2024-01-02 16:05:30.709	🦥
 spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2024-01-02 16:22:15.919	🦥
 spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2024-01-02 16:30:25.034	🦥
 spotify:track:6SpUnFjNfyFgyLRm65b2G6	1	ORAL HEX (spell on you)	2024-01-02 16:44:32.27	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2024-01-03 11:55:20.112	🦥
+spotify:track:7jLoUQCN6HeC4MNQxr0wcD	1	Body Talk	2024-01-03 11:58:55.835	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2024-01-03 12:15:44.547	🦥
+spotify:track:3c9IKwzgIPcCweCl9so748	1	Underwater	2024-01-03 12:18:08.069	🦥
+spotify:track:7opO9NgcqEhe4RtvIoDRap	1	Wild Night	2024-01-03 12:19:28.092	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2024-01-03 12:23:13.642	🦥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2024-01-03 12:25:05.602	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-01-03 12:40:10.001	🦥
+spotify:track:4ZWyj5whGZ3nNLwOtOLrMt	1	I Want More	2024-01-03 12:45:03.514	🦥
+spotify:track:6pb5DtlAeG95dNQLHiArRU	1	Rock My Body	2024-01-03 13:16:36.692	🦥
+spotify:track:0rG5jvbdBRAg7paORdTWSe	1	Drunk in Love	2024-01-03 15:32:15.927	🦥
+spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-01-03 15:38:38.234	🦥
+spotify:track:5k1uIPpsHmnbWFr4nbpdYb	1	Up All Night (feat. Afrojack)	2024-01-03 15:40:18.893	🦥
+spotify:track:3VtgKy06wkxOLoxxe0lqXa	1	Destination Calabria	2024-01-03 15:49:25.936	🦥
+spotify:track:12aCF5xMof5sLunrEy8SA7	1	I'm Good (Blue) - Oliver Heldens Remix	2024-01-03 16:25:27.632	🦥
+spotify:track:46lyJh9GYmWsHez3EsvmAx	1	Rise Up (feat. Vamero)	2024-01-03 16:26:27.288	🦥
+spotify:track:4ntwMws17qmbQUI1NemGqd	1	Seven Nation Army	2024-01-03 16:32:32.547	🦥
+spotify:track:4ntwMws17qmbQUI1NemGqd	-1	Seven Nation Army	2024-01-03 16:35:35.326	🦥
+spotify:track:47BBI51FKFwOMlIiX6m8ya	1	I Want It That Way	2024-01-03 16:41:41.475	🦀
+spotify:track:47BBI51FKFwOMlIiX6m8ya	1	I Want It That Way	2024-01-03 16:42:33.45	🦥
+spotify:track:2tJ4fnUrG5v7OmYVGq7sw8	1	Hopeless Heart	2024-01-03 16:48:42.978	🦥
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-01-03 16:52:41.06	🦥
+spotify:track:05b9yCli4rmPzIrEv9w5aY	1	Milkshake	2024-01-03 16:54:07.816	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-01-03 16:59:05.138	🦥
+spotify:track:318quSv1UJeamoAkEDjAuY	1	WOW (feat. ÁSDÍS)	2024-01-03 17:09:15.932	🦥
+spotify:track:0ymH3Qwwzkl802WD3yy0oY	1	Marble	2024-01-03 17:29:23.839	🦥
+spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-01-03 17:40:47.948	🦥
 \.
 
 
