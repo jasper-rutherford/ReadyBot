@@ -3974,6 +3974,14 @@ spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-01-03 16:59:05.138	🦥
 spotify:track:318quSv1UJeamoAkEDjAuY	1	WOW (feat. ÁSDÍS)	2024-01-03 17:09:15.932	🦥
 spotify:track:0ymH3Qwwzkl802WD3yy0oY	1	Marble	2024-01-03 17:29:23.839	🦥
 spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-01-03 17:40:47.948	🦥
+spotify:track:1sOfNRe7zyQkJj0cY6z2k8	1	Tell It To My Heart	2024-01-04 14:47:14.571	🦥
+spotify:track:2RRpaU7jFVcwo23pthdnBv	1	Head Shoulders Knees & Toes (feat. Norma Jean Martine)	2024-01-04 14:49:42.966	🦥
+spotify:track:0b18g3G5spr4ZCkz7Y6Q0Q	1	Rasputin	2024-01-04 14:57:58.896	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2024-01-04 15:39:30.823	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2024-01-04 15:41:50.829	🦥
+spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2024-01-04 15:44:42.153	🦥
+spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-01-04 15:49:59.122	🦥
+spotify:track:2kfZCiSWhAYKdxD7o7WLoa	1	Halo	2024-01-04 16:05:02.63	🦥
 \.
 
 
