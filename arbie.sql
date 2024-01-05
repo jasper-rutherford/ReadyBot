@@ -3982,6 +3982,44 @@ spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2024-01-04 15:41:50.829	�
 spotify:track:3bjM6KcvV1MwkAm7DJQb9O	1	Lay All Your Love On Me	2024-01-04 15:44:42.153	🦥
 spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-01-04 15:49:59.122	🦥
 spotify:track:2kfZCiSWhAYKdxD7o7WLoa	1	Halo	2024-01-04 16:05:02.63	🦥
+spotify:track:0i8JFpqe9cKwnrcvoNgl1L	1	Feel Invincible	2024-01-05 12:36:23.038	🦥
+spotify:track:1jq28NGw6wdtFKx8MBPy6C	1	Burn It to the Ground	2024-01-05 12:37:11.141	🦥
+spotify:track:7s0lDK7y3XLmI7tcsRAbW0	1	My Songs Know What You Did In The Dark (Light Em Up)	2024-01-05 12:43:41.795	🦥
+spotify:track:3Che0Dm9dlytqujcprVAwE	1	Heat Waves	2024-01-05 12:44:18.091	🦥
+spotify:track:3Che0Dm9dlytqujcprVAwE	-1	Heat Waves	2024-01-05 12:45:44.923	🦥
+spotify:track:02MWAaffLxlfxAUY7c5dvx	1	Heat Waves	2024-01-05 12:48:38.945	🦥
+spotify:track:6SpLc7EXZIPpy0sVko0aoU	1	Misery Business	2024-01-05 12:52:13.995	🦥
+spotify:track:3JvrhDOgAt6p7K8mDyZwRd	1	Riptide	2024-01-05 12:57:09.377	🦥
+spotify:track:23eLvOQ3JxtdhRi9YyxRKQ	1	Boyfriend	2024-01-05 12:58:27.083	🦥
+spotify:track:23oxJmDc1V9uLUSmN2LIvx	1	Ocean Avenue	2024-01-05 13:02:09.104	🦥
+spotify:track:0gmbgwZ8iqyMPmXefof8Yf	1	How You Remind Me	2024-01-05 13:05:19.009	🦥
+spotify:track:7ewT0nLFkMD8ONbRibePr9	1	I Don't Care - Single Version	2024-01-05 13:08:16.704	🦥
+spotify:track:3ZOEytgrvLwQaqXreDs2Jx	1	Can't Stop	2024-01-05 13:14:26.649	🦥
+spotify:track:2QjOHCTQ1Jl3zawyYOpxh6	1	Sweater Weather	2024-01-05 13:22:14.946	🦥
+spotify:track:5GorCbAP4aL0EJ16frG2hd	1	Boulevard of Broken Dreams	2024-01-05 13:27:48.051	🦥
+spotify:track:7vguMCv8uVuZLiQJ156u3Z	1	Play with Fire (feat. Yacht Money)	2024-01-05 13:29:54.509	🦥
+spotify:track:3IyCL4Em1GOpNGDf451Hg1	1	Could Have Been Me	2024-01-05 13:31:12.972	🦥
+spotify:track:7i9763l5SSfOnqZ35VOcfy	1	Heavydirtysoul	2024-01-05 13:37:01.619	🦥
+spotify:track:7jwDuO7UZvWs77KNj9HbvF	1	The Phoenix	2024-01-05 13:39:51.797	🦥
+spotify:track:1yKu2MhpwzDXXH2tzG6xoa	1	Beverly Hills	2024-01-05 13:42:39.254	🦥
+spotify:track:2sEk5R8ErGIFxbZ7rX6S2S	1	How to Be a Heartbreaker	2024-01-05 13:48:20.752	🦥
+spotify:track:0fYVliAYKHuPmECRs1pbRf	1	Renegades	2024-01-05 13:48:57.389	🦥
+spotify:track:4x3qqSA4cP49oZQXPLnDBe	1	Runnin'	2024-01-05 13:57:03.022	🦥
+spotify:track:0w5Bdu51Ka25Pf3hojsKHh	1	Hard Times	2024-01-05 13:58:03.497	🦥
+spotify:track:3CRDbSIZ4r5MsZ0YwxuEkn	1	Stressed Out	2024-01-05 15:24:02.57	🦥
+spotify:track:28IEbk5a7twNTbUEvWslUb	1	Paralyzer	2024-01-05 15:33:05.213	🦥
+spotify:track:11BKm0j4eYoCPPpCONAVwA	1	Bloody Mary	2024-01-05 15:50:37.743	🦥
+spotify:track:0COqiPhxzoWICwFCS4eZcp	1	Bring Me To Life	2024-01-05 15:54:53.343	🦥
+spotify:track:3gbBpTdY8lnQwqxNCcf795	1	Pompeii	2024-01-05 16:02:18.752	🦥
+spotify:track:7ueP5u2qkdZbIPN2YA6LR0	1	Sail	2024-01-05 16:05:55.465	🦥
+spotify:track:3MAFVGKEVV9EgO1lQnPqcc	1	One For the Money	2024-01-05 16:11:01.128	🦥
+spotify:track:6nTiIhLmQ3FWhvrGafw2zj	1	American Idiot	2024-01-05 16:13:44.967	🦥
+spotify:track:7a86XRg84qjasly9f6bPSD	1	We Are Young (feat. Janelle Monáe)	2024-01-05 16:16:36.78	🦥
+spotify:track:2DgdHcjWmO3qd50RzuBLgZ	1	House of Memories	2024-01-05 16:20:47.48	🦥
+spotify:track:2DgdHcjWmO3qd50RzuBLgZ	1	House of Memories	2024-01-05 16:20:50.265	🦥
+spotify:track:2m1hi0nfMR9vdGC8UcrnwU	1	All The Small Things	2024-01-05 16:40:15.413	🦥
+spotify:track:6QewNVIDKdSl8Y3ycuHIei	1	Even Flow	2024-01-05 16:54:20.195	🦥
+spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2024-01-05 16:58:40.039	🦥
 \.
 
 
