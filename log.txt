@@ -31689,3 +31689,9 @@ Backup successfully pushed to GitHub.
 The access token has been refreshed
 The access token has been refreshed
 The access token has been refreshed
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
