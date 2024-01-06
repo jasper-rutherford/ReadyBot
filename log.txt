@@ -31764,3 +31764,51 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+reading themoji mappings from file
+read themoji mappings from file
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 85 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 85 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 85 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '3 days'AND s2.stamp <= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '3 days'AND s1.stamp <= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '3 days'AND s2.stamp <= NOW() - INTERVAL '14 days'
+              ) > 1
+            ORDER BY total_score DESC;
+song name, score (Last 3 days):
+getting adjustments
+got adjustments
+All adjustments adjusted.
+
+adjusted adjustments
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
