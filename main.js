@@ -18,7 +18,7 @@ const { exec } = require('child_process');
 const { promisify } = require('util');
 const execAsync = promisify(exec);
 
-const interval = "3 days"; // the range of time to include song votes in the query when not sorting by all time
+const interval = "14 days"; // the range of time to include song votes in the query when not sorting by all time
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
@@ -65,8 +65,7 @@ var bot = {
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
 
     baseInterval: interval,
-    queryInterval: interval,                                // song stamps must be before this date
-    queryIntervalFarther: "14 days",                        // song stamps must be after this date
+    queryInterval: interval,                                // the range of time to include song votes in the query. default to interval
     barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
     minScore: 1,
 
@@ -364,8 +363,8 @@ var bot = {
     },
 
     orderedUris: function (emoji) {
-        let orderedUrisHelper1 = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'` + `AND s1.stamp <= NOW() - INTERVAL '${bot.queryIntervalFarther}'`
-        let orderedUrisHelper2 = bot.queryInterval == "" ? "" : `AND s2.stamp >= NOW() - INTERVAL '${bot.queryInterval}'` + `AND s2.stamp <= NOW() - INTERVAL '${bot.queryIntervalFarther}'`
+        let orderedUrisHelper1 = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
+        let orderedUrisHelper2 = bot.queryInterval == "" ? "" : `AND s2.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
 
         let query = `SELECT DISTINCT song_name, spotify_uri, (
             SELECT SUM(score)
