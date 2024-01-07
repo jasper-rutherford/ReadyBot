@@ -4020,6 +4020,12 @@ spotify:track:2DgdHcjWmO3qd50RzuBLgZ	1	House of Memories	2024-01-05 16:20:50.265
 spotify:track:2m1hi0nfMR9vdGC8UcrnwU	1	All The Small Things	2024-01-05 16:40:15.413	🦥
 spotify:track:6QewNVIDKdSl8Y3ycuHIei	1	Even Flow	2024-01-05 16:54:20.195	🦥
 spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2024-01-05 16:58:40.039	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-01-05 22:43:57.867	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-01-05 22:44:50.081	🦥
+spotify:track:3p94RpSxQdZocUfrzpemmm	1	El Dorado	2024-01-05 22:46:37.687	🔥
+spotify:track:318quSv1UJeamoAkEDjAuY	1	WOW (feat. ÁSDÍS)	2024-01-05 22:48:49.33	🦥
+spotify:track:4ECNtOnqzxutZkXP4TE3n3	1	Separate Ways (Worlds Apart)	2024-01-06 01:15:11.782	🔥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2024-01-06 02:27:09.141	🦥
 \.
 
 
