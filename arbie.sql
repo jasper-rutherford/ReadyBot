@@ -4026,6 +4026,7 @@ spotify:track:3p94RpSxQdZocUfrzpemmm	1	El Dorado	2024-01-05 22:46:37.687	🔥
 spotify:track:318quSv1UJeamoAkEDjAuY	1	WOW (feat. ÁSDÍS)	2024-01-05 22:48:49.33	🦥
 spotify:track:4ECNtOnqzxutZkXP4TE3n3	1	Separate Ways (Worlds Apart)	2024-01-06 01:15:11.782	🔥
 spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2024-01-06 02:27:09.141	🦥
+spotify:track:1nwlLOkSNpb5NMldTT6C1t	1	Can't Get You Out Of My Head	2024-01-07 17:05:23.691	🦥
 \.
 
 
