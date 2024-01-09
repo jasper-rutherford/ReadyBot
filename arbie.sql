@@ -4027,6 +4027,9 @@ spotify:track:318quSv1UJeamoAkEDjAuY	1	WOW (feat. ÁSDÍS)	2024-01-05 22:48:49.3
 spotify:track:4ECNtOnqzxutZkXP4TE3n3	1	Separate Ways (Worlds Apart)	2024-01-06 01:15:11.782	🔥
 spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2024-01-06 02:27:09.141	🦥
 spotify:track:1nwlLOkSNpb5NMldTT6C1t	1	Can't Get You Out Of My Head	2024-01-07 17:05:23.691	🦥
+spotify:track:0iBBOvVQ8QCK7F95boCn3C	1	CHARGER	2024-01-07 22:09:40.394	🦥
+spotify:track:34gCuhDGsG4bRPIf9bb02f	1	Thinking out Loud	2024-01-08 11:10:55.593	🎶
+spotify:track:7BqHUALzNBTanL6OvsqmC1	1	Happier	2024-01-08 11:33:22.141	🎶
 \.
 
 

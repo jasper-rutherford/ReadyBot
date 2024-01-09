@@ -32539,3 +32539,99 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0iBBOvVQ8QCK7F95boCn3C'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0iBBOvVQ8QCK7F95boCn3C', '1', 'CHARGER', '2024-01-07 22:09:40.394', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0iBBOvVQ8QCK7F95boCn3C'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0iBBOvVQ8QCK7F95boCn3C/🦥:
+{ name: 'CHARGER', interval_score: '1', total_score: '8' }
+updating vote message
+[CHARGER] has a score of [ 1 ] over the last 14 days and has an all time score of [ 8 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:34gCuhDGsG4bRPIf9bb02f'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:34gCuhDGsG4bRPIf9bb02f', '1', 'Thinking out Loud', '2024-01-08 11:10:55.593', '🎶')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:34gCuhDGsG4bRPIf9bb02f'
+        
+        AND themoji = '🎶';
+retrieved scores for uri/themoji spotify:track:34gCuhDGsG4bRPIf9bb02f/🎶:
+{ name: 'Thinking out Loud', interval_score: '1', total_score: '1' }
+updating vote message
+[Thinking out Loud] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🎶
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:7BqHUALzNBTanL6OvsqmC1'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:7BqHUALzNBTanL6OvsqmC1', '1', 'Happier', '2024-01-08 11:33:22.141', '🎶')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:7BqHUALzNBTanL6OvsqmC1'
+        
+        AND themoji = '🎶';
+retrieved scores for uri/themoji spotify:track:7BqHUALzNBTanL6OvsqmC1/🎶:
+{ name: 'Happier', interval_score: '1', total_score: '1' }
+updating vote message
+[Happier] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🎶
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
