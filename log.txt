@@ -33356,3 +33356,30 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+Could not refresh access token Error: connect ETIMEDOUT 35.186.224.25:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1278:16) {
+  errno: -110,
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '35.186.224.25',
+  port: 443,
+  response: undefined
+}
+node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
