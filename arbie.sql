@@ -4030,6 +4030,30 @@ spotify:track:1nwlLOkSNpb5NMldTT6C1t	1	Can't Get You Out Of My Head	2024-01-07 1
 spotify:track:0iBBOvVQ8QCK7F95boCn3C	1	CHARGER	2024-01-07 22:09:40.394	🦥
 spotify:track:34gCuhDGsG4bRPIf9bb02f	1	Thinking out Loud	2024-01-08 11:10:55.593	🎶
 spotify:track:7BqHUALzNBTanL6OvsqmC1	1	Happier	2024-01-08 11:33:22.141	🎶
+spotify:track:0fYVliAYKHuPmECRs1pbRf	1	Renegades	2024-01-09 11:36:44.881	🔥
+spotify:track:2tJ4fnUrG5v7OmYVGq7sw8	1	Hopeless Heart	2024-01-09 11:46:45.151	🦥
+spotify:track:2tJ4fnUrG5v7OmYVGq7sw8	1	Hopeless Heart	2024-01-09 11:48:16.622	🦥
+spotify:track:05b9yCli4rmPzIrEv9w5aY	1	Milkshake	2024-01-09 11:50:20.879	🦥
+spotify:track:0w5Bdu51Ka25Pf3hojsKHh	1	Hard Times	2024-01-09 11:53:42.636	🦥
+spotify:track:23oxJmDc1V9uLUSmN2LIvx	1	Ocean Avenue	2024-01-09 12:00:49.004	🔥
+spotify:track:6QewNVIDKdSl8Y3ycuHIei	1	Even Flow	2024-01-09 12:00:54.648	🔥
+spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2024-01-09 12:01:03.169	🔥
+spotify:track:1nwlLOkSNpb5NMldTT6C1t	1	Can't Get You Out Of My Head	2024-01-09 12:01:14.331	🦥
+spotify:track:6SpLc7EXZIPpy0sVko0aoU	1	Misery Business	2024-01-09 12:04:12.296	🔥
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-01-09 12:04:21.848	🦥
+spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2024-01-09 12:12:33.423	🔥
+spotify:track:3IyCL4Em1GOpNGDf451Hg1	1	Could Have Been Me	2024-01-09 12:15:39.653	🔥
+spotify:track:3IyCL4Em1GOpNGDf451Hg1	1	Could Have Been Me	2024-01-09 12:16:11.368	🔥
+spotify:track:4f3NHOxgC8Bg21IJBg4cZ3	1	Freaks - Radio Edit	2024-01-09 12:18:39.898	🔥
+spotify:track:24LS4lQShWyixJ0ZrJXfJ5	1	Sweet Nothing (feat. Florence Welch)	2024-01-09 12:22:23.224	🔥
+spotify:track:3U5JVgI2x4rDyHGObzJfNf	1	Unwritten	2024-01-09 15:32:19.518	🎶
+spotify:track:3U5JVgI2x4rDyHGObzJfNf	1	Unwritten	2024-01-09 15:32:44.513	📼
+spotify:track:63rbP24OzfaQCJjsHWZXnY	1	Where Them Girls At (feat. Nicki Minaj & Flo Rida)	2024-01-09 16:21:14.033	💿
+spotify:track:215JYyyUnrJ98NK3KEwu6d	1	Soak Up The Sun	2024-01-09 17:04:05.774	📼
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-01-09 17:13:59.483	🦥
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-01-09 17:14:30.888	🦥
+spotify:track:6GG73Jik4jUlQCkKg9JuGO	1	The Middle	2024-01-09 17:16:56.825	🔥
+spotify:track:6GG73Jik4jUlQCkKg9JuGO	1	The Middle	2024-01-09 17:17:07.048	📼
 \.
 
 
