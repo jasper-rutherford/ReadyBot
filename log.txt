@@ -33383,3 +33383,135 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+reading themoji mappings from file
+read themoji mappings from file
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:6GqqGv8frU7kqzXkm2rewI'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:6GqqGv8frU7kqzXkm2rewI', '1', 'A Little Bit Off', '2024-01-10 11:38:52.814', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:6GqqGv8frU7kqzXkm2rewI'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:6GqqGv8frU7kqzXkm2rewI/🔥:
+{ name: 'A Little Bit Off', interval_score: '1', total_score: '1' }
+updating vote message
+[A Little Bit Off] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:6GqqGv8frU7kqzXkm2rewI'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:6GqqGv8frU7kqzXkm2rewI', '1', 'A Little Bit Off', '2024-01-10 11:38:55.059', '☔')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:6GqqGv8frU7kqzXkm2rewI'
+        
+        AND themoji = '☔';
+retrieved scores for uri/themoji spotify:track:6GqqGv8frU7kqzXkm2rewI/☔:
+{ name: 'A Little Bit Off', interval_score: '1', total_score: '5' }
+updating vote message
+[A Little Bit Off] has a score of [ 1 ] over the last 14 days and has an all time score of [ 5 ] for ☔
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:6GqqGv8frU7kqzXkm2rewI'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:6GqqGv8frU7kqzXkm2rewI', '1', 'A Little Bit Off', '2024-01-10 11:38:56.738', '⛰️')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:6GqqGv8frU7kqzXkm2rewI'
+        
+        AND themoji = '⛰️';
+retrieved scores for uri/themoji spotify:track:6GqqGv8frU7kqzXkm2rewI/⛰️:
+{ name: 'A Little Bit Off', interval_score: '1', total_score: '1' }
+updating vote message
+[A Little Bit Off] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for ⛰️
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:5ofoB8PFmocBXFBEWVb6Vz'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:5ofoB8PFmocBXFBEWVb6Vz', '1', 'Animals', '2024-01-10 11:49:41.612', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:5ofoB8PFmocBXFBEWVb6Vz'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:5ofoB8PFmocBXFBEWVb6Vz/🔥:
+{ name: 'Animals', interval_score: '1', total_score: '1' }
+updating vote message
+[Animals] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:5ofoB8PFmocBXFBEWVb6Vz'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:5ofoB8PFmocBXFBEWVb6Vz', '1', 'Animals', '2024-01-10 11:49:42.928', '⛰️')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:5ofoB8PFmocBXFBEWVb6Vz'
+        
+        AND themoji = '⛰️';
+retrieved scores for uri/themoji spotify:track:5ofoB8PFmocBXFBEWVb6Vz/⛰️:
+{ name: 'Animals', interval_score: '1', total_score: '1' }
+updating vote message
+[Animals] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for ⛰️
+The access token has been refreshed
+Saving themoji mappings to file
+Saved themoji mappings to file
+deleting message
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:154
+      throw new DiscordAPIError(request.path, data, request.method, res.status);
+            ^
+
+DiscordAPIError: Unknown Message
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:154:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14) {
+  method: 'delete',
+  path: '/channels/904467973434134589/messages/1194697014965973024/reactions/%E2%9C%85/914641118308757574',
+  code: 10008,
+  httpStatus: 404
+}
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
