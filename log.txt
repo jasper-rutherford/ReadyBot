@@ -33515,3 +33515,66 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+reading themoji mappings from file
+read themoji mappings from file
+Attempting to create a theme ⚠️
+Here's ⚠️:
+https://open.spotify.com/playlist/4CAEw7zmr2TlP8VRwV7S0a
+Saving themoji mappings to file
+Saved themoji mappings to file
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:59NraMJsLaMCVtwXTSia8i'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:59NraMJsLaMCVtwXTSia8i', '1', 'Prada', '2024-01-10 12:40:03.826', '⚠️')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:59NraMJsLaMCVtwXTSia8i'
+        
+        AND themoji = '⚠️';
+retrieved scores for uri/themoji spotify:track:59NraMJsLaMCVtwXTSia8i/⚠️:
+{ name: 'Prada', interval_score: '1', total_score: '1' }
+updating vote message
+[Prada] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for ⚠️
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Could not refresh access token Error: connect ETIMEDOUT 35.186.224.25:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1278:16) {
+  errno: -110,
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '35.186.224.25',
+  port: 443,
+  response: undefined
+}
+node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
