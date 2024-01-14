@@ -4076,6 +4076,14 @@ spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-01-11 23:04:56.465	�
 spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-01-11 23:59:50.352	🦥
 spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-01-12 00:04:20.234	🦥
 spotify:track:2YVlDlk2zRceefo6XlC6DX	1	Ain’t That Some	2024-01-12 22:24:43.732	🦥
+spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2024-01-13 12:40:03.076	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-01-13 20:02:56.887	🦥
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-01-13 21:26:54.806	🦥
+spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-01-13 21:39:21.539	🦥
+spotify:track:05b9yCli4rmPzIrEv9w5aY	1	Milkshake	2024-01-13 21:55:45.058	🦥
+spotify:track:7j31rVgGX9Q2blT92VBEA0	1	Teenagers	2024-01-13 22:26:34.639	🔥
+spotify:track:1yjY7rpaAQvKwpdUliHx0d	1	Still into You	2024-01-13 22:32:25.882	🔥
+spotify:track:256sdJU0D1k9sLHmZ6FtI4	1	Wellerman - Sea Shanty / 220 KID x Billen Ted Remix	2024-01-13 22:45:20.63	🦥
 \.
 
 

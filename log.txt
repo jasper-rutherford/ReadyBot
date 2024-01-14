@@ -34047,3 +34047,241 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:59NraMJsLaMCVtwXTSia8i'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:59NraMJsLaMCVtwXTSia8i', '1', 'Prada', '2024-01-13 12:40:03.076', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:59NraMJsLaMCVtwXTSia8i'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:59NraMJsLaMCVtwXTSia8i/🦥:
+{ name: 'Prada', interval_score: '1', total_score: '13' }
+updating vote message
+[Prada] has a score of [ 1 ] over the last 14 days and has an all time score of [ 13 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0qOvlEzD7xU35GLFT8DF1t'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0qOvlEzD7xU35GLFT8DF1t', '1', 'We Run The Night - Teddy Cream Remix', '2024-01-13 20:02:56.887', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0qOvlEzD7xU35GLFT8DF1t'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0qOvlEzD7xU35GLFT8DF1t/🦥:
+{
+  name: 'We Run The Night - Teddy Cream Remix',
+  interval_score: '3',
+  total_score: '5'
+}
+updating vote message
+[We Run The Night - Teddy Cream Remix] has a score of [ 3 ] over the last 14 days and has an all time score of [ 5 ] for 🦥
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 26 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 26 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 26 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 1
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+Drowning In You 6
+Drink And Shout 4
+Lay All Your Love On Me 4
+Wellerman - Sea Shanty / 220 KID x Billen Ted Remix 4
+Hopeless Heart 3
+Just Dance 3
+Touch 3
+We Run The Night - Teddy Cream Remix 3
+Can't Get You Out Of My Head 2
+Hard Times 2
+House of Memories 2
+Milkshake 2
+Ocean Of Tears 2
+Somebody Told Me 2
+The Way I Are 2
+Wild Night 2
+WOW (feat. ÁSDÍS) 2
+getting adjustments
+identified 17 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 17 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4nBG4RjDuiAa6Q7akigZI9'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4nBG4RjDuiAa6Q7akigZI9', '1', 'Drowning In You', '2024-01-13 21:26:54.806', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4nBG4RjDuiAa6Q7akigZI9'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4nBG4RjDuiAa6Q7akigZI9/🦥:
+{ name: 'Drowning In You', interval_score: '7', total_score: '7' }
+updating vote message
+[Drowning In You] has a score of [ 7 ] over the last 14 days and has an all time score of [ 7 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1T1P4aZxStasNK76EfyZcF'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1T1P4aZxStasNK76EfyZcF', '1', 'Just Dance', '2024-01-13 21:39:21.539', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1T1P4aZxStasNK76EfyZcF'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1T1P4aZxStasNK76EfyZcF/🦥:
+{ name: 'Just Dance', interval_score: '4', total_score: '4' }
+updating vote message
+[Just Dance] has a score of [ 4 ] over the last 14 days and has an all time score of [ 4 ] for 🦥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:05b9yCli4rmPzIrEv9w5aY'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:05b9yCli4rmPzIrEv9w5aY', '1', 'Milkshake', '2024-01-13 21:55:45.058', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:05b9yCli4rmPzIrEv9w5aY'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:05b9yCli4rmPzIrEv9w5aY/🦥:
+{ name: 'Milkshake', interval_score: '3', total_score: '3' }
+updating vote message
+[Milkshake] has a score of [ 3 ] over the last 14 days and has an all time score of [ 3 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:7j31rVgGX9Q2blT92VBEA0'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:7j31rVgGX9Q2blT92VBEA0', '1', 'Teenagers', '2024-01-13 22:26:34.639', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:7j31rVgGX9Q2blT92VBEA0'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:7j31rVgGX9Q2blT92VBEA0/🔥:
+{ name: 'Teenagers', interval_score: '1', total_score: '1' }
+updating vote message
+[Teenagers] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1yjY7rpaAQvKwpdUliHx0d'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1yjY7rpaAQvKwpdUliHx0d', '1', 'Still into You', '2024-01-13 22:32:25.882', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1yjY7rpaAQvKwpdUliHx0d'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:1yjY7rpaAQvKwpdUliHx0d/🔥:
+{ name: 'Still into You', interval_score: '1', total_score: '1' }
+updating vote message
+[Still into You] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:256sdJU0D1k9sLHmZ6FtI4'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:256sdJU0D1k9sLHmZ6FtI4', '1', 'Wellerman - Sea Shanty / 220 KID x Billen Ted Remix', '2024-01-13 22:45:20.630', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:256sdJU0D1k9sLHmZ6FtI4'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:256sdJU0D1k9sLHmZ6FtI4/🦥:
+{
+  name: 'Wellerman - Sea Shanty / 220 KID x Billen Ted Remix',
+  interval_score: '5',
+  total_score: '5'
+}
+updating vote message
+[Wellerman - Sea Shanty / 220 KID x Billen Ted Remix] has a score of [ 5 ] over the last 14 days and has an all time score of [ 5 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
