@@ -4084,6 +4084,13 @@ spotify:track:05b9yCli4rmPzIrEv9w5aY	1	Milkshake	2024-01-13 21:55:45.058	🦥
 spotify:track:7j31rVgGX9Q2blT92VBEA0	1	Teenagers	2024-01-13 22:26:34.639	🔥
 spotify:track:1yjY7rpaAQvKwpdUliHx0d	1	Still into You	2024-01-13 22:32:25.882	🔥
 spotify:track:256sdJU0D1k9sLHmZ6FtI4	1	Wellerman - Sea Shanty / 220 KID x Billen Ted Remix	2024-01-13 22:45:20.63	🦥
+spotify:track:7J8D1BVioYBaKFUnDAHTak	1	Another Way Out	2024-01-16 17:02:37.982	🔥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-16 17:15:04.689	🦥
+spotify:track:5ofoB8PFmocBXFBEWVb6Vz	1	Animals	2024-01-16 17:19:23.646	⛰️
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-01-16 21:36:01.099	🦥
+spotify:track:7ewT0nLFkMD8ONbRibePr9	1	I Don't Care - Single Version	2024-01-16 21:42:37.371	🔥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2024-01-16 21:51:24.363	🦥
+spotify:track:7s0lDK7y3XLmI7tcsRAbW0	1	My Songs Know What You Did In The Dark (Light Em Up)	2024-01-16 22:05:29.388	🔥
 \.
 
 
