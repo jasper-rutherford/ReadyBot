@@ -34734,3 +34734,128 @@ The access token has been refreshed
 The access token has been refreshed
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🔥
+reading chunk 1/2
+reading chunk 2/2
+clearing 23 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+getting adjustments
+identified 23 songs to be cleared from playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+removing 23 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🔥'
+               AND s2.stamp >= NOW() - INTERVAL '3 weeks'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🔥'
+            AND s1.stamp >= NOW() - INTERVAL '3 weeks'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🔥'
+                   AND s2.stamp >= NOW() - INTERVAL '3 weeks'
+              ) > 1
+            ORDER BY total_score DESC;
+song name, score (Last 3 weeks):
+Could Have Been Me 2
+Somebody Told Me 2
+getting adjustments
+identified 2 songs to be added to playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+adding 2 songs to playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+Shuffling 🔥
+reading chunk 1/2
+reading chunk 2/2
+clearing 2 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+getting adjustments
+identified 2 songs to be cleared from playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+removing 2 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🔥'
+               AND s2.stamp >= NOW() - INTERVAL '3 weeks'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🔥'
+            AND s1.stamp >= NOW() - INTERVAL '3 weeks'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🔥'
+                   AND s2.stamp >= NOW() - INTERVAL '3 weeks'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 3 weeks):
+Could Have Been Me 2
+Somebody Told Me 2
+A Little Bit Off 1
+Animals 1
+Another Way Out 1
+El Dorado 1
+Even Flow 1
+Freaks - Radio Edit 1
+I Don't Care - Single Version 1
+Misery Business 1
+My Songs Know What You Did In The Dark (Light Em Up) 1
+Ocean Avenue 1
+Renegades 1
+Separate Ways (Worlds Apart) 1
+Still into You 1
+Sweet Nothing (feat. Florence Welch) 1
+Teenagers 1
+The Middle 1
+getting adjustments
+identified 18 songs to be added to playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+adding 18 songs to playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
