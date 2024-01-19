@@ -4091,6 +4091,9 @@ spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-01-16 21:36:01.099	🦥
 spotify:track:7ewT0nLFkMD8ONbRibePr9	1	I Don't Care - Single Version	2024-01-16 21:42:37.371	🔥
 spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2024-01-16 21:51:24.363	🦥
 spotify:track:7s0lDK7y3XLmI7tcsRAbW0	1	My Songs Know What You Did In The Dark (Light Em Up)	2024-01-16 22:05:29.388	🔥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 16:44:22.421	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 20:37:47.291	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 20:38:27.419	🦥
 \.
 
 
