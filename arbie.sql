@@ -4094,6 +4094,8 @@ spotify:track:7s0lDK7y3XLmI7tcsRAbW0	1	My Songs Know What You Did In The Dark (L
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 16:44:22.421	🦥
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 20:37:47.291	🦥
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 20:38:27.419	🦥
+spotify:track:70p3HYq9iHZisJqpDmWd1U	1	Guren no Yumiya	2024-01-19 11:48:37.251	🦀
+spotify:track:0O12SkQHX2Julh9utIosga	1	Sweet Child O' Mine	2024-01-19 13:31:57.316	🦥
 \.
 
 

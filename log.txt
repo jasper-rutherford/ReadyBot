@@ -34951,3 +34951,76 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+The access token has been refreshed
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:70p3HYq9iHZisJqpDmWd1U'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:70p3HYq9iHZisJqpDmWd1U', '1', 'Guren no Yumiya', '2024-01-19 11:48:37.251', '🦀')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:70p3HYq9iHZisJqpDmWd1U'
+        
+        AND themoji = '🦀';
+retrieved scores for uri/themoji spotify:track:70p3HYq9iHZisJqpDmWd1U/🦀:
+{ name: 'Guren no Yumiya', interval_score: '1', total_score: '1' }
+updating vote message
+[Guren no Yumiya] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦀
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0O12SkQHX2Julh9utIosga'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0O12SkQHX2Julh9utIosga', '1', 'Sweet Child O'' Mine', '2024-01-19 13:31:57.316', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0O12SkQHX2Julh9utIosga'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0O12SkQHX2Julh9utIosga/🦥:
+{ name: "Sweet Child O' Mine", interval_score: '1', total_score: '2' }
+updating vote message
+[Sweet Child O' Mine] has a score of [ 1 ] over the last 14 days and has an all time score of [ 2 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+The access token has been refreshed
+Backup file added to git.
