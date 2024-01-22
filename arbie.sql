@@ -4096,6 +4096,9 @@ spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-18 20:38:27.419	🦥
 spotify:track:70p3HYq9iHZisJqpDmWd1U	1	Guren no Yumiya	2024-01-19 11:48:37.251	🦀
 spotify:track:0O12SkQHX2Julh9utIosga	1	Sweet Child O' Mine	2024-01-19 13:31:57.316	🦥
+spotify:track:7C7yqFTM0ncyJ04GIKrxdV	1	Anything Could Happen	2024-01-21 15:52:27.17	💿
+spotify:track:7fPyCCiXVwbzPQ1MtoUChl	1	Hide Away	2024-01-21 16:36:56.355	📢
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-21 19:42:47.704	🦥
 \.
 
 

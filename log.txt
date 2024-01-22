@@ -35055,3 +35055,224 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+The access token has been refreshed
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:7C7yqFTM0ncyJ04GIKrxdV'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:7C7yqFTM0ncyJ04GIKrxdV', '1', 'Anything Could Happen', '2024-01-21 15:52:27.170', '💿')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:7C7yqFTM0ncyJ04GIKrxdV'
+        
+        AND themoji = '💿';
+retrieved scores for uri/themoji spotify:track:7C7yqFTM0ncyJ04GIKrxdV/💿:
+{
+  name: 'Anything Could Happen',
+  interval_score: '1',
+  total_score: '5'
+}
+updating vote message
+[Anything Could Happen] has a score of [ 1 ] over the last 14 days and has an all time score of [ 5 ] for 💿
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:7fPyCCiXVwbzPQ1MtoUChl'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:7fPyCCiXVwbzPQ1MtoUChl', '1', 'Hide Away', '2024-01-21 16:36:56.355', '📢')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:7fPyCCiXVwbzPQ1MtoUChl'
+        
+        AND themoji = '📢';
+retrieved scores for uri/themoji spotify:track:7fPyCCiXVwbzPQ1MtoUChl/📢:
+{ name: 'Hide Away', interval_score: '1', total_score: '1' }
+updating vote message
+[Hide Away] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 📢
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 27 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 27 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 27 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '3 weeks'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '3 weeks'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '3 weeks'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 3 weeks):
+Drowning In You 7
+Wellerman - Sea Shanty / 220 KID x Billen Ted Remix 5
+Drink And Shout 4
+Just Dance 4
+Lay All Your Love On Me 4
+STARSTRUKK (feat. Katy Perry) 4
+Hopeless Heart 3
+Milkshake 3
+Touch 3
+We Run The Night - Teddy Cream Remix 3
+Can't Get You Out Of My Head 2
+Hard Times 2
+House of Memories 2
+MDMA 2
+Ocean Of Tears 2
+Somebody Told Me 2
+The Way I Are 2
+Tom's Diner 2
+WOW (feat. ÁSDÍS) 2
+Ain’t That Some 1
+All The Small Things 1
+American Idiot 1
+Astronaut In The Ocean - Alok Remix 1
+Bad Memories 1
+Beverly Hills 1
+Bloody Mary 1
+Body Talk 1
+Boulevard of Broken Dreams 1
+Boyfriend 1
+Bring Me To Life 1
+Burn It to the Ground 1
+Can't Stop 1
+CHARGER 1
+Could Have Been Me 1
+Destination Calabria 1
+Drunk in Love 1
+Even Flow 1
+Feel Invincible 1
+Halo 1
+Hanging Tree - Alex Great Remix 1
+Head Shoulders Knees & Toes (feat. Norma Jean Martine) 1
+Heat Waves 1
+Heavydirtysoul 1
+Here Comes the Rain Again - Remastered Version 1
+Hide Away 1
+Houdini 1
+How to Be a Heartbreaker 1
+How You Remind Me 1
+I Don't Care - Single Version 1
+I'm Good (Blue) - Oliver Heldens Remix 1
+Insomnia 1
+I Want It That Way 1
+I Want More 1
+Last Melody 1
+Lights Out 1
+Marble 1
+Marble 1
+MIDDLE OF THE NIGHT 1
+Misery Business 1
+My Bed 1
+My Songs Know What You Did In The Dark (Light Em Up) 1
+Ocean Avenue 1
+One For the Money 1
+ORAL HEX (spell on you) 1
+Padam Padam 1
+Paralyzer 1
+Play with Fire (feat. Yacht Money) 1
+Pompeii 1
+Prada 1
+Rasputin 1
+Renegades 1
+Riptide 1
+Rise Up (feat. Vamero) 1
+Rock My Body 1
+Runnin' 1
+Sail 1
+Stressed Out 1
+Super Over 1
+Sweater Weather 1
+Sweet Child O' Mine 1
+Tell It To My Heart 1
+The Phoenix 1
+Touch 1
+Underwater 1
+Up All Night (feat. Afrojack) 1
+Wasted Love (feat. Lagique) 1
+We Are Young (feat. Janelle Monáe) 1
+Wild Night 1
+getting adjustments
+identified 88 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 88 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1hBM2D1ULT3aeKuddSwPsK'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1hBM2D1ULT3aeKuddSwPsK', '1', 'STARSTRUKK (feat. Katy Perry)', '2024-01-21 19:42:47.704', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1hBM2D1ULT3aeKuddSwPsK'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1hBM2D1ULT3aeKuddSwPsK/🦥:
+{
+  name: 'STARSTRUKK (feat. Katy Perry)',
+  interval_score: '5',
+  total_score: '5'
+}
+updating vote message
+[STARSTRUKK (feat. Katy Perry)] has a score of [ 5 ] over the last 14 days and has an all time score of [ 5 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
