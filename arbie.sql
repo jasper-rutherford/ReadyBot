@@ -4099,6 +4099,11 @@ spotify:track:0O12SkQHX2Julh9utIosga	1	Sweet Child O' Mine	2024-01-19 13:31:57.3
 spotify:track:7C7yqFTM0ncyJ04GIKrxdV	1	Anything Could Happen	2024-01-21 15:52:27.17	💿
 spotify:track:7fPyCCiXVwbzPQ1MtoUChl	1	Hide Away	2024-01-21 16:36:56.355	📢
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-21 19:42:47.704	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-22 17:57:39.84	🦥
+spotify:track:6SpLc7EXZIPpy0sVko0aoU	1	Misery Business	2024-01-22 18:39:32.232	🔥
+spotify:track:1yX6sh2TkrT5hsXodo7aS6	1	Astronaut In The Ocean - Alok Remix	2024-01-22 18:45:18.067	🦥
+spotify:track:3MAFVGKEVV9EgO1lQnPqcc	1	One For the Money	2024-01-22 18:59:08.732	🔥
+spotify:track:0i8JFpqe9cKwnrcvoNgl1L	1	Feel Invincible	2024-01-22 19:03:56.408	🔥
 \.
 
 
