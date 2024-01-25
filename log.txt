@@ -35452,3 +35452,163 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+The access token has been refreshed
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0GTPmh5G40joBg93vcSQNq'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0GTPmh5G40joBg93vcSQNq', '1', 'Don''t Say Goodbye (feat. Tove Lo)', '2024-01-24 14:25:59.401', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0GTPmh5G40joBg93vcSQNq'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0GTPmh5G40joBg93vcSQNq/🦥:
+{
+  name: "Don't Say Goodbye (feat. Tove Lo)",
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[Don't Say Goodbye (feat. Tove Lo)] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3GISUP1tcg7h9MqfCtWml7'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3GISUP1tcg7h9MqfCtWml7', '1', 'Dopamine (feat. Eyelar)', '2024-01-24 14:29:57.224', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3GISUP1tcg7h9MqfCtWml7'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3GISUP1tcg7h9MqfCtWml7/🦥:
+{
+  name: 'Dopamine (feat. Eyelar)',
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[Dopamine (feat. Eyelar)] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3ws23U0w7sR6NCdh1jBP9i'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3ws23U0w7sR6NCdh1jBP9i', '1', 'Gimme Gimme - Club Mix', '2024-01-24 14:53:24.404', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3ws23U0w7sR6NCdh1jBP9i'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3ws23U0w7sR6NCdh1jBP9i/🦥:
+{
+  name: 'Gimme Gimme - Club Mix',
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[Gimme Gimme - Club Mix] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3ws23U0w7sR6NCdh1jBP9i'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3ws23U0w7sR6NCdh1jBP9i', '1', 'Gimme Gimme - Club Mix', '2024-01-24 14:53:53.866', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3ws23U0w7sR6NCdh1jBP9i'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3ws23U0w7sR6NCdh1jBP9i/🦥:
+{
+  name: 'Gimme Gimme - Club Mix',
+  interval_score: '2',
+  total_score: '2'
+}
+updating vote message
+[Gimme Gimme - Club Mix] has a score of [ 2 ] over the last 14 days and has an all time score of [ 2 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:6ju5Ntn5pYksvkKxVkjEPK'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:6ju5Ntn5pYksvkKxVkjEPK', '1', 'Never Going Home', '2024-01-24 14:58:57.396', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:6ju5Ntn5pYksvkKxVkjEPK'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:6ju5Ntn5pYksvkKxVkjEPK/🦥:
+{ name: 'Never Going Home', interval_score: '1', total_score: '1' }
+updating vote message
+[Never Going Home] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
