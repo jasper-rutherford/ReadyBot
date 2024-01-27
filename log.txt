@@ -35644,3 +35644,657 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:2bLqfJjuC5syrsgDsZfGmn'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:2bLqfJjuC5syrsgDsZfGmn', '1', 'The Way I Are', '2024-01-26 13:00:57.085', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:2bLqfJjuC5syrsgDsZfGmn'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:2bLqfJjuC5syrsgDsZfGmn/🦥:
+{ name: 'The Way I Are', interval_score: '1', total_score: '22' }
+updating vote message
+[The Way I Are] has a score of [ 1 ] over the last 14 days and has an all time score of [ 22 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3bK1zVFBKIzYjmptmI4NsJ'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3bK1zVFBKIzYjmptmI4NsJ', '1', 'Overdrive (feat. Norma Jean Martine)', '2024-01-26 13:23:14.871', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3bK1zVFBKIzYjmptmI4NsJ'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3bK1zVFBKIzYjmptmI4NsJ/🦥:
+{
+  name: 'Overdrive (feat. Norma Jean Martine)',
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[Overdrive (feat. Norma Jean Martine)] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1yX6sh2TkrT5hsXodo7aS6'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1yX6sh2TkrT5hsXodo7aS6', '1', 'Astronaut In The Ocean - Alok Remix', '2024-01-26 13:31:16.984', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1yX6sh2TkrT5hsXodo7aS6'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1yX6sh2TkrT5hsXodo7aS6/🦥:
+{
+  name: 'Astronaut In The Ocean - Alok Remix',
+  interval_score: '2',
+  total_score: '3'
+}
+updating vote message
+[Astronaut In The Ocean - Alok Remix] has a score of [ 2 ] over the last 14 days and has an all time score of [ 3 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3Dzso9Q2WwupEclqgxBZht'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3Dzso9Q2WwupEclqgxBZht', '1', 'Pumped Up Kicks', '2024-01-26 13:35:18.145', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3Dzso9Q2WwupEclqgxBZht'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3Dzso9Q2WwupEclqgxBZht/🦥:
+{ name: 'Pumped Up Kicks', interval_score: '1', total_score: '1' }
+updating vote message
+[Pumped Up Kicks] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 88 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 88 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 88 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '14 days'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '14 days'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '14 days'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 14 days):
+STARSTRUKK (feat. Katy Perry) 6
+Astronaut In The Ocean - Alok Remix 2
+Gimme Gimme - Club Mix 2
+Ain’t That Some 1
+Don't Say Goodbye (feat. Tove Lo) 1
+Dopamine (feat. Eyelar) 1
+Drowning In You 1
+Just Dance 1
+MDMA 1
+Milkshake 1
+Never Going Home 1
+Overdrive (feat. Norma Jean Martine) 1
+Prada 1
+Pumped Up Kicks 1
+Sweet Child O' Mine 1
+The Way I Are 1
+Thumbs 1
+Tom's Diner 1
+Wellerman - Sea Shanty / 220 KID x Billen Ted Remix 1
+We Run The Night - Teddy Cream Remix 1
+getting adjustments
+identified 20 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 20 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1hBM2D1ULT3aeKuddSwPsK'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1hBM2D1ULT3aeKuddSwPsK', '1', 'STARSTRUKK (feat. Katy Perry)', '2024-01-26 21:37:34.993', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1hBM2D1ULT3aeKuddSwPsK'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1hBM2D1ULT3aeKuddSwPsK/🦥:
+{
+  name: 'STARSTRUKK (feat. Katy Perry)',
+  interval_score: '7',
+  total_score: '7'
+}
+updating vote message
+[STARSTRUKK (feat. Katy Perry)] has a score of [ 7 ] over the last 14 days and has an all time score of [ 7 ] for 🦥
+The access token has been refreshed
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 20 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 20 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 20 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   
+              ) > 5
+            ORDER BY total_score DESC;
+song name, score (All time):
+Stars 42
+Hallucination 41
+From Paris to Berlin (Chrit Leaf Remix) 39
+Lay All Your Love On Me 39
+Numb 39
+Padam Padam 39
+Regardless 38
+Touch 38
+Lovefool (feat. Pia Mia) 36
+Memories (feat. Kid Cudi) 35
+Come Into My World (with NERVO) 33
+5 feet away 32
+Your Love (9PM) 32
+Rock My Body 30
+Can I Get It Back (R3HAB Remix) 29
+Melody 29
+Hush Hush (Don't Be Shy) 28
+Under Control (feat. Hurts) 27
+Animal 26
+Private Life 26
+Crying At The Discotheque 25
+Do It All Again 23
+Chain My Heart 22
+I Don’t (with DVBBS) 22
+Kardashian 22
+Lights Out 22
+Mirror 22
+Other Boys 22
+The Way I Are 22
+Drink And Shout 21
+Physical 20
+Psycho - Joel Corry Remix 20
+Used to Know Me 19
+1 Day 2 Nights 18
+Beggin' 18
+Cry About It Later (feat. Luísa Sonza & Bruno Martini) 18
+Going Dumb 18
+Goodbye 18
+Heart Wants What It Wants 18
+Static Body 18
+Tears of Gold - Owen Norton Remix 18
+The One 18
+Afterbloom (feat. Deza) 17
+Dress 17
+i miss u (with Au/Ra) 17
+Insomnia 17
+10:35 16
+Big (feat. Gunna) 16
+Drive (feat. Wes Nelson) 16
+Escapism. 16
+Hallucinate 16
+Hole Right Where My Heart Is 16
+If It Ain’t Me 16
+My Bed 16
+Wild Night 16
+Belly Dancer 15
+Desire (with Sam Smith) 15
+Higher 15
+Queen 15
+Where You Are (Sávežan) 15
+Back To You 14
+Baddest 14
+Can't Choose (feat. Kiara Nelson) 14
+Fake 14
+I Don't Want You 14
+Lay Low 14
+On A Roll - Basic Tape Remix 14
+Poster Girl 14
+RAININ’ FELLAS 14
+You Only Love Me 14
+2019 13
+Prada 13
+Say It Right - ILURO Remix 13
+She Said 13
+Supersonic 13
+Superstar 13
+Sweet Nothing (feat. Florence Welch) 13
+Definition 12
+Forget You 12
+Ghost 12
+Good Luck (with Jax Jones & Galantis) 12
+Lonely Heart 12
+Maybe My Soulmate Died 12
+Mi Amor 12
+Something Stupid (feat. AWA) 12
+Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix 12
+Super Over 12
+Sweet Melody 12
+Tom's Diner 12
+Touch 12
+TRUSTFALL 12
+UNHEALTHY (feat. Shania Twain) 12
+Wake Me Up In Paris 12
+WOW (feat. ÁSDÍS) 12
+You Don't Know Me (feat. RAYE) 12
+Baby Don't Hurt Me 11
+Breaking with You 11
+Die For a Man (feat. Lil Uzi Vert) - Galantis Remix 11
+High Frequency 11
+Hot In It 11
+Hot In It (feat. Charli XCX) 11
+Let Them Know 11
+Numb 11
+Phone 11
+Sideways 11
+Bang Bang 10
+Fuck Up The Friendship 10
+Houdini 10
+Lifestyle (feat. Adam Levine) 10
+Like Gold 10
+Mad Love - Blinkie Remix 10
+Nobody To Love (with Loren Gray) 10
+One Day 10
+One Drink Away 10
+SKIN 2 SKIN 10
+Straight From the Heart (feat. Nørskov) 10
+Tell Me 10
+Tick Tock (feat. 24kGoldn) 10
+Undercover 10
+Words (feat. Zara Larsson) 10
+Bring Me To Life 9
+crossed the line 9
+Cry for You 9
+Fast Lane 9
+Fever 9
+Ocean Of Tears 9
+Rhythm Is A Dancer 9
+Space and Time 9
+The Way I Are 9
+Acapulco 8
+Breaking Me 8
+CHARGER 8
+Cry Dancing 8
+Damn (You’ve Got Me Saying) 8
+Don't Go Yet 8
+El Diablo 8
+Good Times 8
+Harleys In Hawaii 8
+Hero 8
+high 8
+Jalebi Baby (Tesher x Jason Derulo) 8
+Kiss My (Uh Oh) 8
+Last Summer 8
+Let Love Go (feat. Lil Tecca) 8
+Me & U 8
+Nirvana 8
+Shakira: Bzrp Music Sessions, Vol. 53 8
+Take You Dancing 8
+The Feeling 8
+Worship You 8
+WOW (feat. Sabrina Carpenter) - Remix 8
+Drowning In You 7
+Ghost Town (Lucas Estrada Remix) 7
+Hopeless Heart 7
+MONEY ON THE DASH 7
+More Than You Know 7
+ORAL HEX (spell on you) 7
+Radio 7
+STARSTRUKK (feat. Katy Perry) 7
+Weekend On A Tuesday 7
+You 7
+10 Things I Hate About You 6
+All Nighter 6
+Baby, I'm Jealous (feat. Doja Cat) 6
+BOTH 6
+Can't Come To The Phone 6
+Comin' To Getcha 6
+Dance The Night (From Barbie The Album) 6
+End Of Time 6
+Everybody Wants You - Shift K3Y Remix 6
+Hate Me 6
+Heart over Mind 6
+I Don't Know Why 6
+If I Had You 6
+Into You 6
+Kinda Funny (feat. Audrey Mika) 6
+Lovestruck 6
+Lush Life - Retro Version 6
+My Heart Goes (La Di Da) (feat. Topic) 6
+No 6
+Noise Cancellation 6
+OUT OUT (feat. Charli XCX & Saweetie) 6
+Sacrifice 6
+Spooky, Scary Skeletons - Undead Tombstone Remix 6
+STOP! 6
+Sweet and Sour 6
+Where Them Girls At (feat. Nicki Minaj & Flo Rida) 6
+You Light Me Up 6
+getting adjustments
+identified 188 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 100 songs to playlist 2kEsJeC59em5JNePPitquD
+adding 88 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+Saving themoji mappings to file
+Saved themoji mappings to file
+Ordering 🦥
+reading chunk 1/3
+reading chunk 2/3
+reading chunk 3/3
+clearing 188 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 188 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 100 songs from playlist 2kEsJeC59em5JNePPitquD
+removing 88 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   
+              ) > 5
+            ORDER BY total_score DESC;
+song name, score (All time):
+Stars 42
+Hallucination 41
+From Paris to Berlin (Chrit Leaf Remix) 39
+Lay All Your Love On Me 39
+Numb 39
+Padam Padam 39
+Regardless 38
+Touch 38
+Lovefool (feat. Pia Mia) 36
+Memories (feat. Kid Cudi) 35
+Come Into My World (with NERVO) 33
+5 feet away 32
+Your Love (9PM) 32
+Rock My Body 30
+Can I Get It Back (R3HAB Remix) 29
+Melody 29
+Hush Hush (Don't Be Shy) 28
+Under Control (feat. Hurts) 27
+Animal 26
+Private Life 26
+Crying At The Discotheque 25
+Do It All Again 23
+Chain My Heart 22
+I Don’t (with DVBBS) 22
+Kardashian 22
+Lights Out 22
+Mirror 22
+Other Boys 22
+The Way I Are 22
+Drink And Shout 21
+Physical 20
+Psycho - Joel Corry Remix 20
+Used to Know Me 19
+1 Day 2 Nights 18
+Beggin' 18
+Cry About It Later (feat. Luísa Sonza & Bruno Martini) 18
+Going Dumb 18
+Goodbye 18
+Heart Wants What It Wants 18
+Static Body 18
+Tears of Gold - Owen Norton Remix 18
+The One 18
+Afterbloom (feat. Deza) 17
+Dress 17
+i miss u (with Au/Ra) 17
+Insomnia 17
+10:35 16
+Big (feat. Gunna) 16
+Drive (feat. Wes Nelson) 16
+Escapism. 16
+Hallucinate 16
+Hole Right Where My Heart Is 16
+If It Ain’t Me 16
+My Bed 16
+Wild Night 16
+Belly Dancer 15
+Desire (with Sam Smith) 15
+Higher 15
+Queen 15
+Where You Are (Sávežan) 15
+Back To You 14
+Baddest 14
+Can't Choose (feat. Kiara Nelson) 14
+Fake 14
+I Don't Want You 14
+Lay Low 14
+On A Roll - Basic Tape Remix 14
+Poster Girl 14
+RAININ’ FELLAS 14
+You Only Love Me 14
+2019 13
+Prada 13
+Say It Right - ILURO Remix 13
+She Said 13
+Supersonic 13
+Superstar 13
+Sweet Nothing (feat. Florence Welch) 13
+Definition 12
+Forget You 12
+Ghost 12
+Good Luck (with Jax Jones & Galantis) 12
+Lonely Heart 12
+Maybe My Soulmate Died 12
+Mi Amor 12
+Something Stupid (feat. AWA) 12
+Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix 12
+Super Over 12
+Sweet Melody 12
+Tom's Diner 12
+Touch 12
+TRUSTFALL 12
+UNHEALTHY (feat. Shania Twain) 12
+Wake Me Up In Paris 12
+WOW (feat. ÁSDÍS) 12
+You Don't Know Me (feat. RAYE) 12
+Baby Don't Hurt Me 11
+Breaking with You 11
+Die For a Man (feat. Lil Uzi Vert) - Galantis Remix 11
+High Frequency 11
+Hot In It 11
+Hot In It (feat. Charli XCX) 11
+Let Them Know 11
+Numb 11
+Phone 11
+Sideways 11
+Bang Bang 10
+Fuck Up The Friendship 10
+Houdini 10
+Lifestyle (feat. Adam Levine) 10
+Like Gold 10
+Mad Love - Blinkie Remix 10
+Nobody To Love (with Loren Gray) 10
+One Day 10
+One Drink Away 10
+SKIN 2 SKIN 10
+Straight From the Heart (feat. Nørskov) 10
+Tell Me 10
+Tick Tock (feat. 24kGoldn) 10
+Undercover 10
+Words (feat. Zara Larsson) 10
+Bring Me To Life 9
+crossed the line 9
+Cry for You 9
+Fast Lane 9
+Fever 9
+Ocean Of Tears 9
+Rhythm Is A Dancer 9
+Space and Time 9
+The Way I Are 9
+Acapulco 8
+Breaking Me 8
+CHARGER 8
+Cry Dancing 8
+Damn (You’ve Got Me Saying) 8
+Don't Go Yet 8
+El Diablo 8
+Good Times 8
+Harleys In Hawaii 8
+Hero 8
+high 8
+Jalebi Baby (Tesher x Jason Derulo) 8
+Kiss My (Uh Oh) 8
+Last Summer 8
+Let Love Go (feat. Lil Tecca) 8
+Me & U 8
+Nirvana 8
+Shakira: Bzrp Music Sessions, Vol. 53 8
+Take You Dancing 8
+The Feeling 8
+Worship You 8
+WOW (feat. Sabrina Carpenter) - Remix 8
+Drowning In You 7
+Ghost Town (Lucas Estrada Remix) 7
+Hopeless Heart 7
+MONEY ON THE DASH 7
+More Than You Know 7
+ORAL HEX (spell on you) 7
+Radio 7
+STARSTRUKK (feat. Katy Perry) 7
+Weekend On A Tuesday 7
+You 7
+10 Things I Hate About You 6
+All Nighter 6
+Baby, I'm Jealous (feat. Doja Cat) 6
+BOTH 6
+Can't Come To The Phone 6
+Comin' To Getcha 6
+Dance The Night (From Barbie The Album) 6
+End Of Time 6
+Everybody Wants You - Shift K3Y Remix 6
+Hate Me 6
+Heart over Mind 6
+I Don't Know Why 6
+If I Had You 6
+Into You 6
+Kinda Funny (feat. Audrey Mika) 6
+Lovestruck 6
+Lush Life - Retro Version 6
+My Heart Goes (La Di Da) (feat. Topic) 6
+No 6
+Noise Cancellation 6
+OUT OUT (feat. Charli XCX & Saweetie) 6
+Sacrifice 6
+Spooky, Scary Skeletons - Undead Tombstone Remix 6
+STOP! 6
+Sweet and Sour 6
+Where Them Girls At (feat. Nicki Minaj & Flo Rida) 6
+You Light Me Up 6
+getting adjustments
+identified 188 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 100 songs to playlist 2kEsJeC59em5JNePPitquD
+Finished Ordering 🦥. Playlist should have 188 songs.
+adding 88 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
