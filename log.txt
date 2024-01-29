@@ -36298,3 +36298,93 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Could not refresh access token WebapiError: [object Object]
+    at _toError (/home/arbie/Desktop/ReadyBot/node_modules/spotify-web-api-node/src/http-manager.js:47:10)
+    at /home/arbie/Desktop/ReadyBot/node_modules/spotify-web-api-node/src/http-manager.js:71:25
+    at Request.callback (/home/arbie/Desktop/ReadyBot/node_modules/superagent/lib/node/index.js:905:3)
+    at IncomingMessage.<anonymous> (/home/arbie/Desktop/ReadyBot/node_modules/superagent/lib/node/index.js:1127:20)
+    at Stream.emit (node:events:513:28)
+    at Unzip.<anonymous> (/home/arbie/Desktop/ReadyBot/node_modules/superagent/lib/node/unzip.js:53:12)
+    at Unzip.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  body: {},
+  headers: {
+    'x-envoy-overloaded': 'true',
+    'content-type': 'text/plain',
+    date: 'Sat, 27 Jan 2024 22:41:54 GMT',
+    server: 'envoy',
+    'strict-transport-security': 'max-age=31536000',
+    'x-content-type-options': 'nosniff',
+    'content-encoding': 'gzip',
+    vary: 'Accept-Encoding',
+    via: 'HTTP/2 edgeproxy, 1.1 google',
+    'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+    connection: 'close',
+    'transfer-encoding': 'chunked'
+  },
+  statusCode: 503
+}
+node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+Could not refresh access token WebapiError: [object Object]
+    at _toError (/home/arbie/Desktop/ReadyBot/node_modules/spotify-web-api-node/src/http-manager.js:47:10)
+    at /home/arbie/Desktop/ReadyBot/node_modules/spotify-web-api-node/src/http-manager.js:71:25
+    at Request.callback (/home/arbie/Desktop/ReadyBot/node_modules/superagent/lib/node/index.js:905:3)
+    at IncomingMessage.<anonymous> (/home/arbie/Desktop/ReadyBot/node_modules/superagent/lib/node/index.js:1127:20)
+    at Stream.emit (node:events:513:28)
+    at Unzip.<anonymous> (/home/arbie/Desktop/ReadyBot/node_modules/superagent/lib/node/unzip.js:53:12)
+    at Unzip.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  body: {},
+  headers: {
+    'x-envoy-overloaded': 'true',
+    'content-type': 'text/plain',
+    date: 'Sat, 27 Jan 2024 22:42:06 GMT',
+    server: 'envoy',
+    'strict-transport-security': 'max-age=31536000',
+    'x-content-type-options': 'nosniff',
+    'content-encoding': 'gzip',
+    vary: 'Accept-Encoding',
+    via: 'HTTP/2 edgeproxy, 1.1 google',
+    'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+    connection: 'close',
+    'transfer-encoding': 'chunked'
+  },
+  statusCode: 503
+}
+Error refreshing access token
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
