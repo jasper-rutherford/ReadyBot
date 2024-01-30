@@ -4129,6 +4129,17 @@ spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2024-01-28 20:27:39.833	🦥
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-01-28 20:58:03.512	🦥
 spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-01-28 21:19:29.706	🦥
 spotify:track:0wI0S42Cg41DVGqIIVimTM	1	Blinding Lights	2024-01-28 21:56:11.719	🦥
+spotify:track:318quSv1UJeamoAkEDjAuY	1	WOW (feat. ÁSDÍS)	2024-01-29 12:02:36.183	🦥
+spotify:track:6yotiCxcSIm4HyZdA6wcYH	1	Hush Hush (Don't Be Shy)	2024-01-29 12:02:45.324	🦥
+spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-01-29 12:12:34.649	🦥
+spotify:track:3FcseYxP7eeE7ihwgz2U2c	1	MONTERO (Call Me By Your Name)	2024-01-29 12:16:25.114	🦥
+spotify:track:7MIhUdNJtaOnDmC5nBC1fb	1	Deep Down (feat. Never Dull)	2024-01-29 13:37:36.854	🦥
+spotify:track:3TVxzS4m8nvrnZIguQ03Kd	1	Where Do We Go	2024-01-29 14:02:41.893	🦥
+spotify:track:5YihgP3KuNSZc6qrrxecfu	1	Baker Street	2024-01-29 15:24:12.91	🦥
+spotify:track:0mQNFiamtlZF5i6DGYckTv	1	Be My Lover	2024-01-29 15:47:24.462	🦥
+spotify:track:6rrzv6g69ckf0VRNS1kkuR	1	Sweet Child O' Mine	2024-01-29 15:51:54.65	🦥
+spotify:track:5eF4cNJ30kdTXnlmUfN8dw	1	Who Let The Dogs Out (feat. EVALINA)	2024-01-29 15:54:17.85	🦥
+spotify:track:5eF4cNJ30kdTXnlmUfN8dw	1	Who Let The Dogs Out (feat. EVALINA)	2024-01-29 15:54:22.151	🦀
 \.
 
 
