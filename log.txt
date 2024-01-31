@@ -37515,3 +37515,1655 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:55n9yjI6qqXh5F2mYvUc2y'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:55n9yjI6qqXh5F2mYvUc2y', '1', 'I Don’t Wanna Live Forever (Fifty Shades Darker)', '2024-01-30 13:00:49.927', '💿')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:55n9yjI6qqXh5F2mYvUc2y'
+        
+        AND themoji = '💿';
+retrieved scores for uri/themoji spotify:track:55n9yjI6qqXh5F2mYvUc2y/💿:
+{
+  name: 'I Don’t Wanna Live Forever (Fifty Shades Darker)',
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[I Don’t Wanna Live Forever (Fifty Shades Darker)] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 💿
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1T1P4aZxStasNK76EfyZcF'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1T1P4aZxStasNK76EfyZcF', '1', 'Just Dance', '2024-01-30 14:47:02.158', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1T1P4aZxStasNK76EfyZcF'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1T1P4aZxStasNK76EfyZcF/🦥:
+{ name: 'Just Dance', interval_score: '1', total_score: '5' }
+updating vote message
+[Just Dance] has a score of [ 1 ] over the last 14 days and has an all time score of [ 5 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1yX6sh2TkrT5hsXodo7aS6'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1yX6sh2TkrT5hsXodo7aS6', '1', 'Astronaut In The Ocean - Alok Remix', '2024-01-30 14:48:39.422', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1yX6sh2TkrT5hsXodo7aS6'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1yX6sh2TkrT5hsXodo7aS6/🦥:
+{
+  name: 'Astronaut In The Ocean - Alok Remix',
+  interval_score: '3',
+  total_score: '4'
+}
+updating vote message
+[Astronaut In The Ocean - Alok Remix] has a score of [ 3 ] over the last 14 days and has an all time score of [ 4 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:1UNWD6R5EOFklUHKZZvww2'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:1UNWD6R5EOFklUHKZZvww2', '1', 'She Said', '2024-01-30 14:52:06.028', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:1UNWD6R5EOFklUHKZZvww2'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:1UNWD6R5EOFklUHKZZvww2/🦥:
+{ name: 'She Said', interval_score: '1', total_score: '14' }
+updating vote message
+[She Said] has a score of [ 1 ] over the last 14 days and has an all time score of [ 14 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:47TOnN2ffRwsEvWsTZ6IaI'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:47TOnN2ffRwsEvWsTZ6IaI', '1', 'Shake That', '2024-01-30 14:54:18.532', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:47TOnN2ffRwsEvWsTZ6IaI'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:47TOnN2ffRwsEvWsTZ6IaI/🦥:
+{ name: 'Shake That', interval_score: '1', total_score: '4' }
+updating vote message
+[Shake That] has a score of [ 1 ] over the last 14 days and has an all time score of [ 4 ] for 🦥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4nBG4RjDuiAa6Q7akigZI9'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4nBG4RjDuiAa6Q7akigZI9', '1', 'Drowning In You', '2024-01-30 15:05:43.646', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4nBG4RjDuiAa6Q7akigZI9'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4nBG4RjDuiAa6Q7akigZI9/🦥:
+{ name: 'Drowning In You', interval_score: '2', total_score: '9' }
+updating vote message
+[Drowning In You] has a score of [ 2 ] over the last 14 days and has an all time score of [ 9 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4bAzLbJOkwkZEakSiKd3sZ'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4bAzLbJOkwkZEakSiKd3sZ', '1', 'Low', '2024-01-30 15:16:15.638', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4bAzLbJOkwkZEakSiKd3sZ'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4bAzLbJOkwkZEakSiKd3sZ/🦥:
+{ name: 'Low', interval_score: '1', total_score: '1' }
+updating vote message
+[Low] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:2kfZCiSWhAYKdxD7o7WLoa'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:2kfZCiSWhAYKdxD7o7WLoa', '1', 'Halo', '2024-01-30 15:28:09.952', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:2kfZCiSWhAYKdxD7o7WLoa'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:2kfZCiSWhAYKdxD7o7WLoa/🦥:
+{ name: 'Halo', interval_score: '1', total_score: '2' }
+updating vote message
+[Halo] has a score of [ 1 ] over the last 14 days and has an all time score of [ 2 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3yrqP8f56uJ4OJeGbkIQTB'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3yrqP8f56uJ4OJeGbkIQTB', '1', 'Marble', '2024-01-30 15:45:21.516', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3yrqP8f56uJ4OJeGbkIQTB'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3yrqP8f56uJ4OJeGbkIQTB/🦥:
+{ name: 'Marble', interval_score: '1', total_score: '2' }
+updating vote message
+[Marble] has a score of [ 1 ] over the last 14 days and has an all time score of [ 2 ] for 🦥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:04R4oiYD4NU6ZkdwlaJSep'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:04R4oiYD4NU6ZkdwlaJSep', '1', 'Bad Memories - Felix Jaehn Remix', '2024-01-30 16:10:58.375', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:04R4oiYD4NU6ZkdwlaJSep'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:04R4oiYD4NU6ZkdwlaJSep/🦥:
+{
+  name: 'Bad Memories - Felix Jaehn Remix',
+  interval_score: '1',
+  total_score: '6'
+}
+updating vote message
+[Bad Memories - Felix Jaehn Remix] has a score of [ 1 ] over the last 14 days and has an all time score of [ 6 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0HGpMpt4OrGUtdHq8dVuPN'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0HGpMpt4OrGUtdHq8dVuPN', '1', 'On Repeat', '2024-01-30 16:12:58.677', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0HGpMpt4OrGUtdHq8dVuPN'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0HGpMpt4OrGUtdHq8dVuPN/🦥:
+{ name: 'On Repeat', interval_score: '1', total_score: '1' }
+updating vote message
+[On Repeat] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4c1TXKNAh4yb5cb0zE3x1X'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4c1TXKNAh4yb5cb0zE3x1X', '1', 'MDMA', '2024-01-30 16:57:19.559', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4c1TXKNAh4yb5cb0zE3x1X'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4c1TXKNAh4yb5cb0zE3x1X/🦥:
+{ name: 'MDMA', interval_score: '3', total_score: '5' }
+updating vote message
+[MDMA] has a score of [ 3 ] over the last 14 days and has an all time score of [ 5 ] for 🦥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3oVVFLLZPuRepSkcwgQ294'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3oVVFLLZPuRepSkcwgQ294', '1', 'Mr. Saxobeat', '2024-01-30 16:59:51.780', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3oVVFLLZPuRepSkcwgQ294'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3oVVFLLZPuRepSkcwgQ294/🦥:
+{ name: 'Mr. Saxobeat', interval_score: '1', total_score: '1' }
+updating vote message
+[Mr. Saxobeat] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0u5Agy2RLORlgsxZ3INSJ5'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0u5Agy2RLORlgsxZ3INSJ5', '1', 'Stayin'' Alive VS 50 C Tik Tok - Remix', '2024-01-30 17:59:19.491', '🦀')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0u5Agy2RLORlgsxZ3INSJ5'
+        
+        AND themoji = '🦀';
+retrieved scores for uri/themoji spotify:track:0u5Agy2RLORlgsxZ3INSJ5/🦀:
+{
+  name: "Stayin' Alive VS 50 C Tik Tok - Remix",
+  interval_score: '1',
+  total_score: '3'
+}
+updating vote message
+[Stayin' Alive VS 50 C Tik Tok - Remix] has a score of [ 1 ] over the last 14 days and has an all time score of [ 3 ] for 🦀
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:0u5Agy2RLORlgsxZ3INSJ5'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:0u5Agy2RLORlgsxZ3INSJ5', '1', 'Stayin'' Alive VS 50 C Tik Tok - Remix', '2024-01-30 17:59:20.095', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:0u5Agy2RLORlgsxZ3INSJ5'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:0u5Agy2RLORlgsxZ3INSJ5/🦥:
+{
+  name: "Stayin' Alive VS 50 C Tik Tok - Remix",
+  interval_score: '1',
+  total_score: '4'
+}
+updating vote message
+[Stayin' Alive VS 50 C Tik Tok - Remix] has a score of [ 1 ] over the last 14 days and has an all time score of [ 4 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Could not refresh access token Error: getaddrinfo EAI_AGAIN accounts.spotify.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26) {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'accounts.spotify.com',
+  response: undefined
+}
+node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [AbortError]: The user aborted a request.
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [AbortError]: The user aborted a request.
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo EAI_AGAIN discord.com
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93
+        throw new HTTPError(error.message, error.constructor.name, error.status, request.method, request.path);
+              ^
+
+HTTPError [FetchError]: request to https://discord.com/api/v7/gateway/bot failed, reason: connect ENETUNREACH 162.159.138.232:443
+    at RequestHandler.execute (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:93:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async RequestHandler.push (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/rest/RequestHandler.js:39:14)
+    at async WebSocketManager.connect (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:138:9)
+    at async Client.login (/home/arbie/Desktop/ReadyBot/node_modules/discord.js/src/client/Client.js:223:7) {
+  code: 500,
+  method: 'get',
+  path: '/gateway/bot'
+}
+HTTP Server up, http://localhost:8888/login is now available.
+refresh token found
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
