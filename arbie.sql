@@ -4193,6 +4193,28 @@ spotify:track:5KhNIFP5RBwRhMOMDSW5IV	1	Limousine	2024-02-02 15:54:21.769	🦥
 spotify:track:4z8ssgZfs5TzKiO8HaGWXO	1	E.T.	2024-02-02 15:57:02.748	🦥
 spotify:track:6DC0wG7y6tGBjWARnzlZXh	1	Samurai	2024-02-02 16:08:44.374	🦥
 spotify:track:6DC0wG7y6tGBjWARnzlZXh	1	Samurai	2024-02-02 16:09:52.394	🦥
+spotify:track:3Dzso9Q2WwupEclqgxBZht	1	Pumped Up Kicks	2024-02-03 11:53:16.224	🦥
+spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-02-03 11:56:04.948	🦥
+spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-02-03 11:59:53.909	🦥
+spotify:track:1nwlLOkSNpb5NMldTT6C1t	1	Can't Get You Out Of My Head	2024-02-03 12:10:11.447	🦥
+spotify:track:3yrqP8f56uJ4OJeGbkIQTB	1	Marble	2024-02-03 12:11:39.329	🦥
+spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-02-03 12:14:13.368	🦥
+spotify:track:0Cnb8XdGDMHAmIRBUJMkIS	1	Where The Lights Are Low	2024-02-03 12:16:21.265	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2024-02-03 12:17:59.357	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	-1	Tom's Diner	2024-02-03 12:18:13.704	🦥
+spotify:track:0LTlncvWpV4emObXXJiN7J	1	Tom's Diner	2024-02-03 12:19:09.914	🦥
+spotify:track:5KhNIFP5RBwRhMOMDSW5IV	1	Limousine	2024-02-03 12:36:52.38	🦥
+spotify:track:3qnDirWYInwzIJC76AQdV4	1	I Swear	2024-02-03 12:53:25.798	🦥
+spotify:track:4Ef3ODp0REOFXMgDL4S5fM	1	Stereo Love	2024-02-03 12:58:02.882	🦥
+spotify:track:4ixpcIQTt7EE1EAqotGZGb	1	Right Now (Remix)	2024-02-03 13:03:03.524	🦥
+spotify:track:4jy2oAJR2w61b9OMhx5pow	1	Rave In My Garage	2024-02-03 13:05:33.329	🦥
+spotify:track:4obMuJXFa9APNiFtlQHFBh	1	Tokyo	2024-02-03 13:12:41.867	🦥
+spotify:track:6DC0wG7y6tGBjWARnzlZXh	1	Samurai	2024-02-03 13:43:53.72	🦥
+spotify:track:2q2sg6US99C8Wnhga43xnl	1	On My Mind	2024-02-03 13:59:14.143	🦥
+spotify:track:0rG5jvbdBRAg7paORdTWSe	1	Drunk in Love	2024-02-03 14:07:27.625	🦥
+spotify:track:6Hht0SIzJwQYBkDD07Dnoj	1	Thunder	2024-02-03 16:27:03.077	🦥
+spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-02-03 16:29:27.266	🦥
+spotify:track:0mQNFiamtlZF5i6DGYckTv	1	Be My Lover	2024-02-03 19:42:47.17	🦥
 \.
 
 
