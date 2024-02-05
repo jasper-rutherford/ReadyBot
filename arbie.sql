@@ -4215,6 +4215,8 @@ spotify:track:0rG5jvbdBRAg7paORdTWSe	1	Drunk in Love	2024-02-03 14:07:27.625	�
 spotify:track:6Hht0SIzJwQYBkDD07Dnoj	1	Thunder	2024-02-03 16:27:03.077	🦥
 spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-02-03 16:29:27.266	🦥
 spotify:track:0mQNFiamtlZF5i6DGYckTv	1	Be My Lover	2024-02-03 19:42:47.17	🦥
+spotify:track:6KJ4rwX0hT3bWO953YEmpY	1	JAPAN	2024-02-04 17:22:49.549	🦥
+spotify:track:2kfZCiSWhAYKdxD7o7WLoa	1	Halo	2024-02-04 20:28:52.264	🦥
 \.
 
 
