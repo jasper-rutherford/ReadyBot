@@ -4217,6 +4217,19 @@ spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-02-03 16:29:27
 spotify:track:0mQNFiamtlZF5i6DGYckTv	1	Be My Lover	2024-02-03 19:42:47.17	🦥
 spotify:track:6KJ4rwX0hT3bWO953YEmpY	1	JAPAN	2024-02-04 17:22:49.549	🦥
 spotify:track:2kfZCiSWhAYKdxD7o7WLoa	1	Halo	2024-02-04 20:28:52.264	🦥
+spotify:track:752n2yiIZZdxNAMTXmrObn	1	EveryTime I Cry - R3HAB Remix	2024-02-05 11:05:15.437	🦥
+spotify:track:2q2sg6US99C8Wnhga43xnl	1	On My Mind	2024-02-05 11:46:16.723	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-02-05 11:48:24.475	🦥
+spotify:track:4rlxs68jKAqkD0fHi9Kesm	1	All the Things She Said - Cristian Marchi & Luis Rodriguez Mix	2024-02-05 11:52:47.271	🦥
+spotify:track:79OUttYM7WQUzEtsugTwEX	1	Polkka	2024-02-05 12:08:36.89	🦥
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-02-05 12:10:42.059	🦥
+spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-02-05 12:12:54.969	🦥
+spotify:track:7EXennxBRtugSuQX13uLSu	1	Blow It Up	2024-02-05 12:23:37.554	🦥
+spotify:track:6H6M3RdPVYAURu9oCimO2z	1	what it means to be a girl	2024-02-05 12:40:23.035	🦥
+spotify:track:1H1aXt2S07OeZ0wDJo3KMz	1	Super Over	2024-02-05 12:43:13.656	🦥
+spotify:track:7CQGybO25VSUNwY2hS7n6J	1	Shit Show	2024-02-05 12:54:58.066	🦥
+spotify:track:256sdJU0D1k9sLHmZ6FtI4	1	Wellerman - Sea Shanty / 220 KID x Billen Ted Remix	2024-02-05 13:02:32.751	🦥
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-02-05 13:03:06.126	🦥
 \.
 
 
