@@ -41535,3 +41535,80 @@ The access token has been refreshed
 The access token has been refreshed
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+No song is currently playing.
+getting current state
+No song is currently playing.
+getting current state
+No song is currently playing.
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4XpDj477gvnsYNT21ap9Y8'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4XpDj477gvnsYNT21ap9Y8', '1', 'Last Melody', '2024-02-07 18:34:35.048', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4XpDj477gvnsYNT21ap9Y8'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4XpDj477gvnsYNT21ap9Y8/🦥:
+{ name: 'Last Melody', interval_score: '5', total_score: '7' }
+updating vote message
+[Last Melody] has a score of [ 5 ] over the last 14 days and has an all time score of [ 7 ] for 🦥
+getting current song
+getting current state
+getting current song
+getting current state
+No longer playing [Last Melody]
+Now back to [Last Melody]
+getting current song
+getting current state
+getting current song
+getting current state
+No longer playing [WOW (feat. ÁSDÍS)]
+Now back to [Heart over Mind]
+getting current song
+getting current state
+getting current song
+getting current state
+Skipped [Heart over Mind]
+Now playing [WOW (feat. ÁSDÍS)]
+getting current song
+getting current state
+getting current song
+getting current state
+Skipped [WOW (feat. ÁSDÍS)]
+Now playing [Last Melody]
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
