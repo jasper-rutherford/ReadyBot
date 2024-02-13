@@ -42492,3 +42492,107 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+The access token has been refreshed
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:5Z8EDau8uNcP1E8JvmfkZe'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:5Z8EDau8uNcP1E8JvmfkZe', '1', 'School''s Out', '2024-02-12 22:28:35.974', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:5Z8EDau8uNcP1E8JvmfkZe'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:5Z8EDau8uNcP1E8JvmfkZe/🔥:
+{ name: "School's Out", interval_score: '1', total_score: '1' }
+updating vote message
+[School's Out] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:22ML0MuFKfw16WejbxsLOy'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:22ML0MuFKfw16WejbxsLOy', '1', 'Heartbreaker', '2024-02-12 22:32:23.507', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:22ML0MuFKfw16WejbxsLOy'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:22ML0MuFKfw16WejbxsLOy/🔥:
+{ name: 'Heartbreaker', interval_score: '1', total_score: '1' }
+updating vote message
+[Heartbreaker] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:5EOoMWIB9iK4ZpcSex9Ec7'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:5EOoMWIB9iK4ZpcSex9Ec7', '1', 'Old Time Rock & Roll', '2024-02-12 22:44:42.712', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:5EOoMWIB9iK4ZpcSex9Ec7'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:5EOoMWIB9iK4ZpcSex9Ec7/🔥:
+{ name: 'Old Time Rock & Roll', interval_score: '1', total_score: '1' }
+updating vote message
+[Old Time Rock & Roll] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.

@@ -4251,6 +4251,9 @@ spotify:track:0xbSjXWyD0M1ucTtKHPd2N	1	Ekko inni meg	2024-02-11 12:56:46.129	�
 spotify:track:6DC0wG7y6tGBjWARnzlZXh	1	Samurai	2024-02-11 13:32:02.919	🦥
 spotify:track:6DC0wG7y6tGBjWARnzlZXh	1	Samurai	2024-02-11 13:32:07.305	🦥
 spotify:track:6DC0wG7y6tGBjWARnzlZXh	1	Samurai	2024-02-11 13:32:07.481	🦥
+spotify:track:5Z8EDau8uNcP1E8JvmfkZe	1	School's Out	2024-02-12 22:28:35.974	🔥
+spotify:track:22ML0MuFKfw16WejbxsLOy	1	Heartbreaker	2024-02-12 22:32:23.507	🔥
+spotify:track:5EOoMWIB9iK4ZpcSex9Ec7	1	Old Time Rock & Roll	2024-02-12 22:44:42.712	🔥
 \.
 
 
