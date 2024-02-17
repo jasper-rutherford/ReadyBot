@@ -42716,3 +42716,353 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:4v8tyFARGc8p6z3Ri0xPLB'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:4v8tyFARGc8p6z3Ri0xPLB', '1', 'Don''t Touch My Clogs', '2024-02-16 13:11:14.322', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:4v8tyFARGc8p6z3Ri0xPLB'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:4v8tyFARGc8p6z3Ri0xPLB/🦥:
+{ name: "Don't Touch My Clogs", interval_score: '1', total_score: '4' }
+updating vote message
+[Don't Touch My Clogs] has a score of [ 1 ] over the last 14 days and has an all time score of [ 4 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:3y8AEUef1AVfr0npU5UOa9'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:3y8AEUef1AVfr0npU5UOa9', '1', 'Dangerous (feat. Joywave)', '2024-02-16 18:05:07.369', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:3y8AEUef1AVfr0npU5UOa9'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:3y8AEUef1AVfr0npU5UOa9/🦥:
+{
+  name: 'Dangerous (feat. Joywave)',
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[Dangerous (feat. Joywave)] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 26 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 26 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 26 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '2 weeks'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '2 weeks'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '2 weeks'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 2 weeks):
+Ekko inni meg 5
+Samurai 4
+Last Melody 3
+I Swear 2
+On My Mind 2
+Rave In My Garage 2
+All the Things She Said - Cristian Marchi & Luis Rodriguez Mix 1
+All The Things She Said - Radio Edit 1
+Before You Go 1
+Be My Lover 1
+Blow It Up 1
+Boots 1
+Can't Get You Out Of My Head 1
+Dance With Your Devil 1
+Dangerous (feat. Joywave) 1
+Don't Touch My Clogs 1
+Drowning In You 1
+Drunk in Love 1
+EveryTime I Cry - R3HAB Remix 1
+Follow You 1
+Get Up Off The Floor 1
+Halo 1
+JAPAN 1
+Just Dance 1
+Let's Go MIA 1
+Limousine 1
+Loca Loca 1
+Marble 1
+MDMA 1
+Polkka 1
+Pumped Up Kicks 1
+Right Now (Remix) 1
+River 1
+Shit Show 1
+STARSTRUKK (feat. Katy Perry) 1
+Stereo Love 1
+Stumblin' In 1
+Super Over 1
+Thunder 1
+Tokyo 1
+Tom's Diner 1
+Wellerman - Sea Shanty / 220 KID x Billen Ted Remix 1
+what it means to be a girl 1
+Where The Lights Are Low 1
+getting adjustments
+identified 44 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 44 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+Are you sure you want to shuffle 🔥?
+(it has been 2555.79 seconds since the mode was set to shuffle)
+Shuffling 🔥
+reading chunk 1/2
+reading chunk 2/2
+clearing 18 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+getting adjustments
+identified 18 songs to be cleared from playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+removing 18 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🔥'
+               AND s2.stamp >= NOW() - INTERVAL '2 weeks'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🔥'
+            AND s1.stamp >= NOW() - INTERVAL '2 weeks'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🔥'
+                   AND s2.stamp >= NOW() - INTERVAL '2 weeks'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 2 weeks):
+Heartbreaker 1
+Old Time Rock & Roll 1
+Runaway 1
+School's Out 1
+getting adjustments
+identified 4 songs to be added to playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+adding 4 songs to playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+Shuffling 🔥
+reading chunk 1/2
+reading chunk 2/2
+clearing 4 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+getting adjustments
+identified 4 songs to be cleared from playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+removing 4 songs from playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🔥'
+               AND s2.stamp >= NOW() - INTERVAL '6 weeks'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🔥'
+            AND s1.stamp >= NOW() - INTERVAL '6 weeks'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🔥'
+                   AND s2.stamp >= NOW() - INTERVAL '6 weeks'
+              ) > 0
+            ORDER BY total_score DESC;
+song name, score (Last 6 weeks):
+Could Have Been Me 2
+Misery Business 2
+Somebody Told Me 2
+A Little Bit Off 1
+Animals 1
+Another Way Out 1
+Even Flow 1
+Feel Invincible 1
+Freaks - Radio Edit 1
+Heartbreaker 1
+I Don't Care - Single Version 1
+My Songs Know What You Did In The Dark (Light Em Up) 1
+Ocean Avenue 1
+Old Time Rock & Roll 1
+One For the Money 1
+Renegades 1
+Runaway 1
+School's Out 1
+Separate Ways (Worlds Apart) 1
+Still into You 1
+Sweet Nothing (feat. Florence Welch) 1
+Teenagers 1
+The Middle 1
+getting adjustments
+identified 23 songs to be added to playlist [4KTAxPDZhpZGhP7eYj4gOB]
+got adjustments
+adding 23 songs to playlist 4KTAxPDZhpZGhP7eYj4gOB
+All adjustments adjusted.
+
+adjusted adjustments
+Shuffling 🦥
+reading chunk 1/2
+reading chunk 2/2
+clearing 44 songs from playlist 2kEsJeC59em5JNePPitquD
+getting adjustments
+identified 44 songs to be cleared from playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+removing 44 songs from playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦥'
+               AND s2.stamp >= NOW() - INTERVAL '4 months'
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦥'
+            AND s1.stamp >= NOW() - INTERVAL '4 months'
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦥'
+                   AND s2.stamp >= NOW() - INTERVAL '4 months'
+              ) > 5
+            ORDER BY total_score DESC;
+song name, score (Last 4 months):
+Other Boys 23
+Lights Out 22
+Drink And Shout 21
+Insomnia 17
+My Bed 16
+Fake 15
+Hallucination 13
+Prada 13
+Super Over 13
+Tom's Diner 13
+WOW (feat. ÁSDÍS) 13
+Rock My Body 12
+Touch 12
+From Paris to Berlin (Chrit Leaf Remix) 11
+High Frequency 11
+Hush Hush (Don't Be Shy) 11
+Sideways 11
+Supersonic 11
+Drowning In You 10
+Forget You 10
+Houdini 10
+crossed the line 9
+Lay All Your Love On Me 9
+Ocean Of Tears 9
+Space and Time 9
+STARSTRUKK (feat. Katy Perry) 9
+The Way I Are 9
+Wellerman - Sea Shanty / 220 KID x Billen Ted Remix 9
+Where You Are (Sávežan) 9
+Hopeless Heart 7
+Last Melody 7
+MDMA 7
+Memories (feat. Kid Cudi) 7
+MONEY ON THE DASH 7
+All Nighter 6
+Bad Memories - Felix Jaehn Remix 6
+BOTH 6
+Heart over Mind 6
+Just Dance 6
+Like Gold 6
+Makeba - Ian Asher Remix 6
+Samurai 6
+The Way I Are 6
+We Run The Night - Teddy Cream Remix 6
+You Light Me Up 6
+getting adjustments
+identified 45 songs to be added to playlist [2kEsJeC59em5JNePPitquD]
+got adjustments
+adding 45 songs to playlist 2kEsJeC59em5JNePPitquD
+All adjustments adjusted.
+
+adjusted adjustments
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:5WZlorRUxgryaweu7kqeHd'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:5WZlorRUxgryaweu7kqeHd', '1', 'Other Boys', '2024-02-16 23:44:21.381', '🦥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:5WZlorRUxgryaweu7kqeHd'
+        
+        AND themoji = '🦥';
+retrieved scores for uri/themoji spotify:track:5WZlorRUxgryaweu7kqeHd/🦥:
+{ name: 'Other Boys', interval_score: '1', total_score: '24' }
+updating vote message
+[Other Boys] has a score of [ 1 ] over the last 14 days and has an all time score of [ 24 ] for 🦥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
