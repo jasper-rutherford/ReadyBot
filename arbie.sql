@@ -4258,6 +4258,23 @@ spotify:track:0X1sqQ652p1sceKM2nJlIJ	1	Runaway	2024-02-13 18:18:35.278	🔥
 spotify:track:4v8tyFARGc8p6z3Ri0xPLB	1	Don't Touch My Clogs	2024-02-16 13:11:14.322	🦥
 spotify:track:3y8AEUef1AVfr0npU5UOa9	1	Dangerous (feat. Joywave)	2024-02-16 18:05:07.369	🦥
 spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-02-16 23:44:21.381	🦥
+spotify:track:0kDI42WWRwsrKAmE7wmQbt	1	Creep	2024-02-19 13:05:46.787	🦥
+spotify:track:1CcLA0eaauck34YEIrvAAq	1	When We Were Young (The Logical Song)	2024-02-19 13:19:06.455	🦥
+spotify:track:6h5y2LCqCQudsCarn61CNE	1	Believe (feat. Goodboys)	2024-02-19 13:21:42.829	🦥
+spotify:track:5hQRNdaLnqlFYhBiVFMptc	1	Do Or Die	2024-02-19 13:24:36.21	🦥
+spotify:track:5oJa785dEiK3F16gBeWeqf	1	Ladida (My Heart Goes Boom)	2024-02-19 13:29:00.344	🦥
+spotify:track:0xut5aUOaVuzQemZGehTDD	1	Night in Paris	2024-02-19 13:40:31.699	🦥
+spotify:track:0d2yUkzvqA85zHqiKA9IuE	1	Tell Me How	2024-02-19 13:42:54.374	🦥
+spotify:track:14OuguybiShYioJqwjWbD2	1	Where Are You Now	2024-02-19 13:48:50.233	🦥
+spotify:track:2cMH4ENPzIeKqXS0PbKLoY	1	Havana	2024-02-19 13:49:38.669	🦥
+spotify:track:22sKunNSPMCy2lvSLOY5yX	1	Rule The World	2024-02-19 13:52:12.185	🦥
+spotify:track:5bdIYjZy0ea7UtdDA2t4U7	1	Save Tonight	2024-02-19 13:55:22.988	🦥
+spotify:track:0mivIbo4LkpblsGoRzEJNa	1	Gimme! Gimme! Gimme!	2024-02-19 13:58:11.677	🦥
+spotify:track:5hQRNdaLnqlFYhBiVFMptc	1	Do Or Die	2024-02-19 14:18:10.755	🦥
+spotify:track:00tgmr08wm5QLyjOnet4YD	1	Damage	2024-02-19 14:21:37.101	🦥
+spotify:track:1RF02Cf80mTaeNXG2P2boR	1	21 Reasons (feat. Ella Henderson)	2024-02-19 14:24:23.242	🦥
+spotify:track:3lltvGcEYmn3E86kICgi5U	1	Replay	2024-02-19 14:27:33.37	🦥
+spotify:track:2Cwv4gxNcQ17knrB5BHkTg	1	Everything	2024-02-19 14:49:28.184	🦥
 \.
 
 
