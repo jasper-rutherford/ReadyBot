@@ -4291,6 +4291,8 @@ spotify:track:66yBW9R8aTlLSeboI0HZFj	1	7 Days a Week	2024-02-22 13:26:49.959	�
 spotify:track:4JUFBTJy1vQSGyXEV0PLbz	1	Bloody Mary	2024-02-22 14:01:30.803	🦥
 spotify:track:16HrOASfb75oNM5AcQV9Fh	1	Again	2024-02-22 14:08:45.61	🦥
 spotify:track:3jj5ZZ87UphCM0FmZzarpn	1	Gimme! Gimme! Gimme! (A Man After Midnight)	2024-02-22 14:10:36.097	🦥
+spotify:track:6gQUbFwwdYXlKdmqRoWKJe	1	Dude (Looks Like A Lady)	2024-02-26 13:52:00.461	🔥
+spotify:track:4qjscZh4jfhkpcQG4ZQfi2	1	Animal	2024-02-26 13:56:40.72	🔥
 \.
 
 
