@@ -4293,6 +4293,20 @@ spotify:track:16HrOASfb75oNM5AcQV9Fh	1	Again	2024-02-22 14:08:45.61	🦥
 spotify:track:3jj5ZZ87UphCM0FmZzarpn	1	Gimme! Gimme! Gimme! (A Man After Midnight)	2024-02-22 14:10:36.097	🦥
 spotify:track:6gQUbFwwdYXlKdmqRoWKJe	1	Dude (Looks Like A Lady)	2024-02-26 13:52:00.461	🔥
 spotify:track:4qjscZh4jfhkpcQG4ZQfi2	1	Animal	2024-02-26 13:56:40.72	🔥
+spotify:track:0xbSjXWyD0M1ucTtKHPd2N	1	Ekko inni meg	2024-02-27 19:33:16.388	🦥
+spotify:track:5zdbSrKdmK9qDTkqzidcN7	1	You Spin Me Round (Like A Record) - Radio Edit	2024-02-27 19:39:28.222	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-02-27 19:42:08.264	🦥
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-02-27 19:59:41.934	🦥
+spotify:track:1okz0plcLFh3AqBoOKmui4	1	Rabbit Hole	2024-02-27 20:13:05.597	🦥
+spotify:track:0SGunE3qppk4PajqOvR6uu	1	Feels Like This (feat. Indiiana)	2024-02-27 20:15:40.439	🦥
+spotify:track:4rlxs68jKAqkD0fHi9Kesm	1	All the Things She Said - Cristian Marchi & Luis Rodriguez Mix	2024-02-27 20:19:16.449	🦥
+spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-02-27 20:35:48.817	🦥
+spotify:track:01a7nB3AywapMgbLi3LGbZ	1	Starlight	2024-02-27 22:37:56.525	🦥
+spotify:track:5j5tLZu7qaGhAEHlkyqCAf	1	Somebody to Love	2024-02-27 22:53:15.334	🦥
+spotify:track:6h5y2LCqCQudsCarn61CNE	1	Believe (feat. Goodboys)	2024-02-27 22:53:26.841	🦥
+spotify:track:5hQRNdaLnqlFYhBiVFMptc	1	Do Or Die	2024-02-27 22:53:35.526	🦥
+spotify:track:5j5tLZu7qaGhAEHlkyqCAf	1	Somebody to Love	2024-02-27 22:53:57.412	🦥
+spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-02-27 22:56:23.915	🦥
 \.
 
 
