@@ -44600,3 +44600,79 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:6PwjJ58I4t7Mae9xfZ9l9v'
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:6PwjJ58I4t7Mae9xfZ9l9v', '1', 'Somebody Told Me', '2024-02-29 11:51:34.051', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:6PwjJ58I4t7Mae9xfZ9l9v'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:6PwjJ58I4t7Mae9xfZ9l9v/🔥:
+{ name: 'Somebody Told Me', interval_score: '1', total_score: '21' }
+updating vote message
+[Somebody Told Me] has a score of [ 1 ] over the last 14 days and has an all time score of [ 21 ] for 🔥
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:663Karu2rvKLdnY0eo1n3M'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:663Karu2rvKLdnY0eo1n3M', '1', 'Call Me When You''re Sober', '2024-02-29 12:48:30.345', '🔥')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:663Karu2rvKLdnY0eo1n3M'
+        
+        AND themoji = '🔥';
+retrieved scores for uri/themoji spotify:track:663Karu2rvKLdnY0eo1n3M/🔥:
+{
+  name: "Call Me When You're Sober",
+  interval_score: '1',
+  total_score: '1'
+}
+updating vote message
+[Call Me When You're Sober] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🔥
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.

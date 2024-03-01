@@ -4307,6 +4307,8 @@ spotify:track:6h5y2LCqCQudsCarn61CNE	1	Believe (feat. Goodboys)	2024-02-27 22:53
 spotify:track:5hQRNdaLnqlFYhBiVFMptc	1	Do Or Die	2024-02-27 22:53:35.526	🦥
 spotify:track:5j5tLZu7qaGhAEHlkyqCAf	1	Somebody to Love	2024-02-27 22:53:57.412	🦥
 spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-02-27 22:56:23.915	🦥
+spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2024-02-29 11:51:34.051	🔥
+spotify:track:663Karu2rvKLdnY0eo1n3M	1	Call Me When You're Sober	2024-02-29 12:48:30.345	🔥
 \.
 
 
