@@ -4309,6 +4309,14 @@ spotify:track:5j5tLZu7qaGhAEHlkyqCAf	1	Somebody to Love	2024-02-27 22:53:57.412	
 spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-02-27 22:56:23.915	🦥
 spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2024-02-29 11:51:34.051	🔥
 spotify:track:663Karu2rvKLdnY0eo1n3M	1	Call Me When You're Sober	2024-02-29 12:48:30.345	🔥
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-03-01 12:38:24.773	🦥
+spotify:track:0mtPNQl5vePVwiI9Vykp7L	1	We Run The Night	2024-03-01 12:43:16.265	💿
+spotify:track:0sftzYE0YgPHXrvJyUyGjB	1	Deep In Your Love	2024-03-01 12:47:18.038	🦥
+spotify:track:3C0nOe05EIt1390bVABLyN	1	On The Floor	2024-03-01 13:20:13.918	💿
+spotify:track:1gUwi1o1S9W9P0FQgJdY8s	1	TRUSTFALL	2024-03-01 13:25:16.832	🦥
+spotify:track:6HZ9VeI5IRFCNQLXhpF4bq	1	I Love It (feat. Charli XCX)	2024-03-01 13:34:53.038	💿
+spotify:track:7Feaw9WAEREY0DUOSXJLOM	1	Summer Days (feat. Macklemore & Patrick Stump of Fall Out Boy)	2024-03-01 14:17:30	🔥
+spotify:track:5hlPrSCx9BvnQ3rCTkblMZ	1	High	2024-03-01 19:18:15.741	🦥
 \.
 
 
