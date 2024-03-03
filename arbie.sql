@@ -4317,6 +4317,8 @@ spotify:track:1gUwi1o1S9W9P0FQgJdY8s	1	TRUSTFALL	2024-03-01 13:25:16.832	🦥
 spotify:track:6HZ9VeI5IRFCNQLXhpF4bq	1	I Love It (feat. Charli XCX)	2024-03-01 13:34:53.038	💿
 spotify:track:7Feaw9WAEREY0DUOSXJLOM	1	Summer Days (feat. Macklemore & Patrick Stump of Fall Out Boy)	2024-03-01 14:17:30	🔥
 spotify:track:5hlPrSCx9BvnQ3rCTkblMZ	1	High	2024-03-01 19:18:15.741	🦥
+spotify:track:2KklXplRtxMsBYo474Es0w	1	Be Mine	2024-03-02 21:44:10.035	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-03-02 21:56:16.888	🦥
 \.
 
 
