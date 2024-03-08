@@ -4319,6 +4319,25 @@ spotify:track:7Feaw9WAEREY0DUOSXJLOM	1	Summer Days (feat. Macklemore & Patrick S
 spotify:track:5hlPrSCx9BvnQ3rCTkblMZ	1	High	2024-03-01 19:18:15.741	🦥
 spotify:track:2KklXplRtxMsBYo474Es0w	1	Be Mine	2024-03-02 21:44:10.035	🦥
 spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-03-02 21:56:16.888	🦥
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-03-07 10:47:31.253	🦥
+spotify:track:3FcseYxP7eeE7ihwgz2U2c	1	MONTERO (Call Me By Your Name)	2024-03-07 10:49:52.412	🦥
+spotify:track:56ZD9IVl8khgd6GVDN0ic4	1	OMG	2024-03-07 10:52:49.356	🦥
+spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-03-07 10:57:55.121	🦥
+spotify:track:01a7nB3AywapMgbLi3LGbZ	1	Starlight	2024-03-07 11:04:45.331	🦥
+spotify:track:66yBW9R8aTlLSeboI0HZFj	1	7 Days a Week	2024-03-07 11:07:44.785	🦥
+spotify:track:3Dzso9Q2WwupEclqgxBZht	1	Pumped Up Kicks	2024-03-07 11:11:12.657	🦥
+spotify:track:4JUFBTJy1vQSGyXEV0PLbz	1	Bloody Mary	2024-03-07 11:13:30.328	🦥
+spotify:track:3jj5ZZ87UphCM0FmZzarpn	1	Gimme! Gimme! Gimme! (A Man After Midnight)	2024-03-07 11:15:36.93	🦥
+spotify:track:5Q9gjAuEynlSlYIL2pzUwl	1	Torn	2024-03-07 11:27:18.681	🦥
+spotify:track:350sHZ13CS0PWmpFTbMCm9	1	All That She Wants	2024-03-07 11:32:45.959	🦥
+spotify:track:2baHEhQsSyEkkCrCtyhs76	1	Tie me down	2024-03-07 11:35:38.315	🦥
+spotify:track:67VyF9sJP507D3sVOJUtTu	1	Love The Way You Lie	2024-03-07 11:37:50.808	🦥
+spotify:track:5YihgP3KuNSZc6qrrxecfu	1	Baker Street	2024-03-07 12:33:08.863	🦥
+spotify:track:2q2sg6US99C8Wnhga43xnl	1	On My Mind	2024-03-07 12:39:24.373	🦥
+spotify:track:6BIsEBK4B1LimKiwtr56FU	1	All The Things She Said - Radio Edit	2024-03-07 12:55:47.998	🦥
+spotify:track:56ZD9IVl8khgd6GVDN0ic4	1	OMG	2024-03-07 13:03:25.837	🦥
+spotify:track:1ktSui7aiz9XceMdTDeCUF	1	Talk Talk Talk	2024-03-07 13:14:15.052	🦥
+spotify:track:0oz5Meupgpje87RXjYXyCH	1	Frozen	2024-03-07 17:19:52.383	🦥
 \.
 
 
