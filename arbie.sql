@@ -4339,6 +4339,16 @@ spotify:track:56ZD9IVl8khgd6GVDN0ic4	1	OMG	2024-03-07 13:03:25.837	🦥
 spotify:track:1ktSui7aiz9XceMdTDeCUF	1	Talk Talk Talk	2024-03-07 13:14:15.052	🦥
 spotify:track:0oz5Meupgpje87RXjYXyCH	1	Frozen	2024-03-07 17:19:52.383	🦥
 spotify:track:3jj5ZZ87UphCM0FmZzarpn	1	Gimme! Gimme! Gimme! (A Man After Midnight)	2024-03-10 20:34:25.163	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2024-03-11 16:56:23.706	🦥
+spotify:track:6DploCSZVf5gvIP7WBBU6S	1	Afterbloom (feat. Deza)	2024-03-11 17:17:35.44	🦥
+spotify:track:3VtgKy06wkxOLoxxe0lqXa	1	Destination Calabria	2024-03-11 19:28:11.784	🦥
+spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-03-11 20:13:06.401	🦥
+spotify:track:5hQRNdaLnqlFYhBiVFMptc	1	Do Or Die	2024-03-11 22:25:47.056	⛰️
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-03-11 22:47:57.81	⛰️
+spotify:track:6MDTpYxPFL0wtFd0pjfKws	1	Rhythm Of Love	2024-03-11 23:44:29.856	📼
+spotify:track:1EAgPzRbK9YmdOESSMUm6P	1	Home	2024-03-12 00:03:18.06	⛰️
+spotify:track:1EAgPzRbK9YmdOESSMUm6P	1	Home	2024-03-12 00:03:22.263	☔
+spotify:track:1EAgPzRbK9YmdOESSMUm6P	1	Home	2024-03-12 00:04:03.148	📼
 \.
 
 
