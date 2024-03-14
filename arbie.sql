@@ -4349,6 +4349,9 @@ spotify:track:6MDTpYxPFL0wtFd0pjfKws	1	Rhythm Of Love	2024-03-11 23:44:29.856	�
 spotify:track:1EAgPzRbK9YmdOESSMUm6P	1	Home	2024-03-12 00:03:18.06	⛰️
 spotify:track:1EAgPzRbK9YmdOESSMUm6P	1	Home	2024-03-12 00:03:22.263	☔
 spotify:track:1EAgPzRbK9YmdOESSMUm6P	1	Home	2024-03-12 00:04:03.148	📼
+spotify:track:1s6R4qE3zcAI7bfexrWikQ	1	Fake (feat. Paradigm)	2024-03-13 15:47:25.933	🦥
+spotify:track:0xut5aUOaVuzQemZGehTDD	1	Night in Paris	2024-03-13 15:56:16.053	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-03-13 16:45:11.918	☔
 \.
 
 
