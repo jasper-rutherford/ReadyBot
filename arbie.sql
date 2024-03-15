@@ -4352,6 +4352,18 @@ spotify:track:1EAgPzRbK9YmdOESSMUm6P	1	Home	2024-03-12 00:04:03.148	📼
 spotify:track:1s6R4qE3zcAI7bfexrWikQ	1	Fake (feat. Paradigm)	2024-03-13 15:47:25.933	🦥
 spotify:track:0xut5aUOaVuzQemZGehTDD	1	Night in Paris	2024-03-13 15:56:16.053	🦥
 spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-03-13 16:45:11.918	☔
+spotify:track:7a86XRg84qjasly9f6bPSD	1	We Are Young (feat. Janelle Monáe)	2024-03-14 14:15:01.075	🍂
+spotify:track:0mUyMawtxj1CJ76kn9gIZK	1	Bad Day	2024-03-14 14:15:05.383	🍂
+spotify:track:4HlFJV71xXKIGcU3kRyttv	1	Hey, Soul Sister	2024-03-14 14:15:10.092	🍂
+spotify:track:215JYyyUnrJ98NK3KEwu6d	1	Soak Up The Sun	2024-03-14 14:16:45.663	🍂
+spotify:track:6XcfKZvJio9Z0fQy11GnNX	1	broken	2024-03-14 14:21:04.033	🍂
+spotify:track:6t6oULCRS6hnI7rm0h5gwl	1	Some Nights	2024-03-14 14:32:36.786	🍂
+spotify:track:6BtmXhTJMM9sBTHeYYASGz	1	It's Time	2024-03-14 14:36:10.719	🍂
+spotify:track:1A5V1sxyCLpKJezp75tUXn	1	Closing Time	2024-03-14 14:53:32.586	🍂
+spotify:track:2TfSHkHiFO4gRztVIkggkE	1	Sugar, We're Goin Down	2024-03-14 15:28:36.477	🍂
+spotify:track:4RCWB3V8V0dignt99LZ8vH	1	Hey There Delilah	2024-03-14 15:33:30.855	🍂
+spotify:track:0xut5aUOaVuzQemZGehTDD	1	Night in Paris	2024-03-14 16:11:24.223	🦥
+spotify:track:09EhgVA4blwhSic4hF2TFZ	1	Waterfall	2024-03-14 17:24:51.275	🦥
 \.
 
 
