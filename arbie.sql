@@ -4364,6 +4364,8 @@ spotify:track:2TfSHkHiFO4gRztVIkggkE	1	Sugar, We're Goin Down	2024-03-14 15:28:3
 spotify:track:4RCWB3V8V0dignt99LZ8vH	1	Hey There Delilah	2024-03-14 15:33:30.855	🍂
 spotify:track:0xut5aUOaVuzQemZGehTDD	1	Night in Paris	2024-03-14 16:11:24.223	🦥
 spotify:track:09EhgVA4blwhSic4hF2TFZ	1	Waterfall	2024-03-14 17:24:51.275	🦥
+spotify:track:1fJFuvU2ldmeAm5nFIHcPP	1	First Date	2024-03-15 18:43:38.027	🍂
+spotify:track:2baHEhQsSyEkkCrCtyhs76	1	Tie me down	2024-03-15 20:28:00.696	🦥
 \.
 
 
