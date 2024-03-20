@@ -47137,3 +47137,172 @@ The access token has been refreshed
 ---------backing up database---------
 Backed up to ./arbie.sql
 Backup file added to git.
+Log file added to git.
+Backup changes committed.
+git push results: []
+Backup successfully pushed to GitHub.
+-------done backing up database------
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+getting current state
+successfully queried:  SELECT * FROM scores WHERE spotify_uri = 'spotify:track:7zZjH4jpPFVxvsn9U3LpbY'
+song not yet in the barrel, adding it
+getting adjustments
+identified 1 songs to be added to playlist [4jCZqEM3AdWj3uSpjuY9IK]
+got adjustments
+adding 1 songs to playlist 4jCZqEM3AdWj3uSpjuY9IK
+All adjustments adjusted.
+
+adjusted adjustments
+ensured song exists
+successfully queried:  INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('spotify:track:7zZjH4jpPFVxvsn9U3LpbY', '1', 'Yogi Bear', '2024-03-19 18:57:12.903', '🦀')
+successfully queried:  
+        SELECT
+            SUM(score) AS total_score,
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '14 days' THEN score ELSE 0 END) AS interval_score
+        FROM scores
+        WHERE spotify_uri = 'spotify:track:7zZjH4jpPFVxvsn9U3LpbY'
+        
+        AND themoji = '🦀';
+retrieved scores for uri/themoji spotify:track:7zZjH4jpPFVxvsn9U3LpbY/🦀:
+{ name: 'Yogi Bear', interval_score: '1', total_score: '1' }
+updating vote message
+[Yogi Bear] has a score of [ 1 ] over the last 14 days and has an all time score of [ 1 ] for 🦀
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+Shuffling 🦀
+reading chunk 1/2
+reading chunk 2/2
+clearing 74 songs from playlist 4LKx2XEzuGEiKXPjwDUpcL
+getting adjustments
+identified 74 songs to be cleared from playlist [4LKx2XEzuGEiKXPjwDUpcL]
+got adjustments
+removing 74 songs from playlist 4LKx2XEzuGEiKXPjwDUpcL
+All adjustments adjusted.
+
+adjusted adjustments
+successfully queried:  SELECT DISTINCT song_name, spotify_uri, (
+            SELECT SUM(score)
+            FROM scores AS s2
+            WHERE s2.spotify_uri = s1.spotify_uri
+              AND s2.themoji = '🦀'
+               
+          ) AS total_score
+          FROM scores AS s1
+          WHERE s1.themoji = '🦀'
+            
+            and (
+                SELECT SUM(score)
+                FROM scores AS s2
+                WHERE s2.spotify_uri = s1.spotify_uri
+                  AND s2.themoji = '🦀'
+                   
+              ) > 1
+            ORDER BY total_score DESC;
+song name, score (All time):
+Moby Duck 6
+Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio 4
+My OCD 4
+Photoshop Your Memories 4
+Rockstar Sea Shanty 4
+RUNNING IN THE 90'S 4
+Sail 4
+Don't Touch My Clogs 3
+Stayin' Alive VS 50 C Tik Tok - Remix 3
+7 Element 2
+Africa 2
+Astronomia 2
+Axel F 2
+Believe 2
+Betty (Get Money) 2
+Big Chungus 2
+Big Chungus 2
+Big Time Rush 2
+Bitch Lasagna 2
+Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom 2
+Cara Mia Addio 2
+Chug Jug With You (Number One Victory Royale) 2
+Cotton Eye Joe 2
+Crab Rave 2
+Discord 2
+Eye of the Tiger 2
+Facebook Song 2
+Gangnam Style (강남스타일) 2
+Girl Next Door 2
+Gravity Falls Main Title Theme (from "Gravity Falls") 2
+Guardians Inferno - From "Guardians of the Galaxy Vol. 2" 2
+Guren no Yumiya 2
+(Have You Heard The News) Dewey Cox Died 2
+I Like To Move It 2
+I Like to Move It - Instrumental 2
+I'm on Vacation 2
+Imposter Imperceptible (Among Us) 2
+It's My Belly Button 2
+I Will Always Love You 2
+Jack Sparrow 2
+Life is a Highway 2
+Macarena 2
+Man's Not Hot 2
+MoonQuest 2
+Nfl Main Theme 2
+Ocean Man 2
+Oh Yeah - Remastered 2005 2
+Only Time 2
+Orinoco Flow 2
+Phatdippin' 2
+Piano Man 2
+Pink Soldiers 2
+Pokemon Theme 2
+PPAP (Pen-Pineapple-Apple-Pen) - Long Version 2
+Purple Hat 2
+Rasputin 2
+Rasputin - Single Version 2
+Release the Kraken 2
+Rockefeller Street 2
+Rub Some Bacon on It 2
+Sax Man 2
+Scatman (ski-ba-bop-ba-dop-bop) 2
+Space Junk 2
+Still Alive 2
+Sweet Caroline 2
+Sweet Victory (As Heard on "SpongeBob SquarePants") 2
+Take on Me 2
+The Final Countdown 2
+The Gambler 2
+The Home Depot Beat 2
+The Perfect Bathroom Trip 2
+The Safety Dance 2
+The Sound of Silence 2
+Tokyo Drift (Fast & Furious) - From "The Fast And The Furious: Tokyo Drift" Soundtrack 2
+Walk Hard 2
+Want You Gone 2
+getting adjustments
+identified 76 songs to be added to playlist [4LKx2XEzuGEiKXPjwDUpcL]
+got adjustments
+adding 76 songs to playlist 4LKx2XEzuGEiKXPjwDUpcL
+All adjustments adjusted.
+
+adjusted adjustments
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+The access token has been refreshed
+---------backing up database---------
+Backed up to ./arbie.sql
+Backup file added to git.
