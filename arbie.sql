@@ -4367,6 +4367,7 @@ spotify:track:09EhgVA4blwhSic4hF2TFZ	1	Waterfall	2024-03-14 17:24:51.275	🦥
 spotify:track:1fJFuvU2ldmeAm5nFIHcPP	1	First Date	2024-03-15 18:43:38.027	🍂
 spotify:track:2baHEhQsSyEkkCrCtyhs76	1	Tie me down	2024-03-15 20:28:00.696	🦥
 spotify:track:7zZjH4jpPFVxvsn9U3LpbY	1	Yogi Bear	2024-03-19 18:57:12.903	🦀
+spotify:track:66yBW9R8aTlLSeboI0HZFj	1	7 Days a Week	2024-03-21 18:39:36.549	🍂
 \.
 
 
