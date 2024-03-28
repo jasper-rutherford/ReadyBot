@@ -4370,6 +4370,18 @@ spotify:track:7zZjH4jpPFVxvsn9U3LpbY	1	Yogi Bear	2024-03-19 18:57:12.903	🦀
 spotify:track:66yBW9R8aTlLSeboI0HZFj	1	7 Days a Week	2024-03-21 18:39:36.549	🍂
 spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-03-22 19:14:56.689	🦥
 spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-03-23 00:55:23.291	🦥
+spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2024-03-27 18:58:24.875	🦥
+spotify:track:6TrNRd98WksT9Kkmx9uj6R	1	Let It Rock	2024-03-27 18:59:37.218	🦥
+spotify:track:4f9wNNZET9wH7eMBgONd3d	1	Doctor (Work It Out) [feat. Miley Cyrus]	2024-03-27 19:37:25.262	🦥
+spotify:track:6ORqU0bHbVCRjXm9AjyHyZ	1	Good Riddance (Time of Your Life)	2024-03-27 21:14:48.731	🍂
+spotify:track:2iUmqdfGZcHIhS3b9E9EWq	1	Everybody Talks	2024-03-27 21:18:54.734	🍂
+spotify:track:1NhPKVLsHhFUHIOZ32QnS2	1	Secrets	2024-03-27 21:19:48.156	🍂
+spotify:track:7mnGQesk1TzQLzQ9bYWZPR	1	She's so High	2024-03-27 21:27:33.811	🍂
+spotify:track:285hMzLhJwHVLe9QT9qilk	1	Breakeven	2024-03-27 21:37:47.983	🍂
+spotify:track:3ZffCQKLFLUvYM59XKLbVm	1	Wake Me up When September Ends	2024-03-27 21:46:18.282	🍂
+spotify:track:5xEM5hIgJ1jjgcEBfpkt2F	1	Complicated	2024-03-27 22:00:46.197	📼
+spotify:track:5xEM5hIgJ1jjgcEBfpkt2F	1	Complicated	2024-03-27 22:00:50.513	🍂
+spotify:track:6OtCIsQZ64Vs1EbzztvAv4	1	Good Life	2024-03-27 22:12:12.381	🍂
 \.
 
 
