@@ -4382,6 +4382,44 @@ spotify:track:3ZffCQKLFLUvYM59XKLbVm	1	Wake Me up When September Ends	2024-03-27
 spotify:track:5xEM5hIgJ1jjgcEBfpkt2F	1	Complicated	2024-03-27 22:00:46.197	📼
 spotify:track:5xEM5hIgJ1jjgcEBfpkt2F	1	Complicated	2024-03-27 22:00:50.513	🍂
 spotify:track:6OtCIsQZ64Vs1EbzztvAv4	1	Good Life	2024-03-27 22:12:12.381	🍂
+spotify:track:6ZOBP3NvffbU4SZcrnt1k6	1	Kryptonite	2024-03-29 20:51:11.267	🔥
+spotify:track:6ZOBP3NvffbU4SZcrnt1k6	1	Kryptonite	2024-03-29 20:51:18.094	🦊
+spotify:track:6ZOBP3NvffbU4SZcrnt1k6	1	Kryptonite	2024-03-29 20:51:29.194	🍂
+spotify:track:6ZOBP3NvffbU4SZcrnt1k6	-1	Kryptonite	2024-03-29 20:51:32.912	🦊
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-03-31 20:02:44.264	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-03-31 20:02:45.824	☔
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-03-31 20:02:49.635	⛰️
+spotify:track:2uqYupMHANxnwgeiXTZXzd	1	Austin	2024-04-04 15:31:52.328	🤠
+spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-04-06 13:37:58.035	🦥
+spotify:track:7CH8J4ulT49UfZwSDSkSZA	1	i miss u (with Au/Ra)	2024-04-06 13:49:48.753	🦥
+spotify:track:5WOnsi0Bug74LmhxcPfKvR	1	In Your Arms (For An Angel)	2024-04-06 13:56:52.408	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-04-06 13:58:43.233	🦥
+spotify:track:6BwPstqf4RoRMbDidFWNxE	1	Do It All Again	2024-04-06 14:06:40.103	🦥
+spotify:track:6JIC3hbC28JZKZ8AlAqX8h	1	Cold Heart - PNAU Remix	2024-04-06 14:34:50.993	🦥
+spotify:track:6Q9ls4l10fcTNeHdEq3kB1	1	No Diggity	2024-04-06 15:29:40.984	🦥
+spotify:track:7bFmXanwZQm6BMV9Nka6Hk	1	Our Last Summer - From 'Mamma Mia!' Original Motion Picture Soundtrack	2024-04-06 16:12:03.352	🦥
+spotify:track:7bFmXanwZQm6BMV9Nka6Hk	1	Our Last Summer - From 'Mamma Mia!' Original Motion Picture Soundtrack	2024-04-06 16:12:36.011	🦥
+spotify:track:6OtCIsQZ64Vs1EbzztvAv4	1	Good Life	2024-04-06 16:15:33.31	🦥
+spotify:track:6OtCIsQZ64Vs1EbzztvAv4	1	Good Life	2024-04-06 16:18:34.058	🦥
+spotify:track:1IIV8jglA0klVZy17q665k	1	Never Really Over	2024-04-06 16:25:40.041	🦥
+spotify:track:5A5bLKdL5I3k3FTEQlAUw7	1	Following the Sun	2024-04-06 16:30:00.68	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-04-06 17:05:53.96	🦥
+spotify:track:6KJ4rwX0hT3bWO953YEmpY	1	JAPAN	2024-04-06 17:30:03.796	🦥
+spotify:track:4nBG4RjDuiAa6Q7akigZI9	1	Drowning In You	2024-04-06 17:30:24.673	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-04-06 17:35:38.25	🦥
+spotify:track:6V5LMAIGNd7qMjco5JjUSa	1	Drink And Shout	2024-04-06 17:39:10.432	🦥
+spotify:track:0kDI42WWRwsrKAmE7wmQbt	1	Creep	2024-04-06 17:42:04.115	🦥
+spotify:track:5w40ZYhbBMAlHYNDaVJIUu	1	Chemical	2024-04-06 18:05:10.059	🦥
+spotify:track:6MDTpYxPFL0wtFd0pjfKws	1	Rhythm Of Love	2024-04-06 18:09:35.997	🍂
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-04-07 00:05:52.75	🦥
+spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-04-09 20:31:42.496	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-04-10 19:31:29.288	🦥
+spotify:track:6Q9ls4l10fcTNeHdEq3kB1	1	No Diggity	2024-04-10 19:48:37.734	🦥
+spotify:track:1okz0plcLFh3AqBoOKmui4	1	Rabbit Hole	2024-04-10 19:51:42.784	🦥
+spotify:track:4dskGPAW5tyuWhWWfmmCh7	1	Another Love	2024-04-10 19:57:16.398	🦥
+spotify:track:5bdIYjZy0ea7UtdDA2t4U7	1	Save Tonight	2024-04-10 19:59:26.285	🦥
+spotify:track:0QR4vZ9iuNjrkWYNLoVAnM	1	Live And Die (feat. Sophie Simmons)	2024-04-10 20:03:13.418	🦥
+spotify:track:6VlxEmdgQWA8LifowgVSky	1	Drive By	2024-04-10 20:12:08.399	🦥
 \.
 
 
