@@ -4420,6 +4420,19 @@ spotify:track:4dskGPAW5tyuWhWWfmmCh7	1	Another Love	2024-04-10 19:57:16.398	🦥
 spotify:track:5bdIYjZy0ea7UtdDA2t4U7	1	Save Tonight	2024-04-10 19:59:26.285	🦥
 spotify:track:0QR4vZ9iuNjrkWYNLoVAnM	1	Live And Die (feat. Sophie Simmons)	2024-04-10 20:03:13.418	🦥
 spotify:track:6VlxEmdgQWA8LifowgVSky	1	Drive By	2024-04-10 20:12:08.399	🦥
+spotify:track:6Q9ls4l10fcTNeHdEq3kB1	1	No Diggity	2024-04-13 13:07:10.372	🦥
+spotify:track:1okz0plcLFh3AqBoOKmui4	1	Rabbit Hole	2024-04-13 13:09:57.603	🦥
+spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-04-13 13:12:26.741	🦥
+spotify:track:5bdIYjZy0ea7UtdDA2t4U7	1	Save Tonight	2024-04-13 13:18:16.549	🦥
+spotify:track:3W3v72EKmAfAiuJm9BDi9b	1	Summer Jams	2024-04-13 13:29:21.02	🦥
+spotify:track:0HGpMpt4OrGUtdHq8dVuPN	1	On Repeat	2024-04-13 13:33:21.145	🦥
+spotify:track:0HGpMpt4OrGUtdHq8dVuPN	1	On Repeat	2024-04-13 13:34:04.393	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-04-13 14:00:43.176	🦥
+spotify:track:0y8bSLlOciVW9ejfEmExA9	1	Diamonds	2024-04-13 14:05:39.145	🦥
+spotify:track:0mBmEZlBoEU7ofwOSYVPcj	1	Raindrops (feat. Jessica Chertock)	2024-04-13 14:09:22.148	🦥
+spotify:track:7bFmXanwZQm6BMV9Nka6Hk	1	Our Last Summer - From 'Mamma Mia!' Original Motion Picture Soundtrack	2024-04-13 15:45:08.822	🦥
+spotify:track:3gMsf1A4ewNI3NWDGVlmHb	1	Bad Boys (Theme from Cops)	2024-04-13 21:16:20.807	🦀
+spotify:track:6Q9ls4l10fcTNeHdEq3kB1	1	No Diggity	2024-04-13 22:51:17.828	🦥
 \.
 
 
