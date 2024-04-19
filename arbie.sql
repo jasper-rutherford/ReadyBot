@@ -4434,6 +4434,17 @@ spotify:track:7bFmXanwZQm6BMV9Nka6Hk	1	Our Last Summer - From 'Mamma Mia!' Origi
 spotify:track:3gMsf1A4ewNI3NWDGVlmHb	1	Bad Boys (Theme from Cops)	2024-04-13 21:16:20.807	🦀
 spotify:track:6Q9ls4l10fcTNeHdEq3kB1	1	No Diggity	2024-04-13 22:51:17.828	🦥
 spotify:track:7Mm5GLCX3Euywif7hcYkB4	1	We Are Number One (From "Lazy Town")	2024-04-14 23:24:41.235	🦀
+spotify:track:3Dzso9Q2WwupEclqgxBZht	1	Pumped Up Kicks	2024-04-18 19:41:13.58	🦥
+spotify:track:0i9adAf1xiL0EbOcog6rEo	1	Boots	2024-04-18 19:43:41.51	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-04-18 19:48:36.193	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-04-18 19:49:22.145	🦥
+spotify:track:6Q9ls4l10fcTNeHdEq3kB1	1	No Diggity	2024-04-18 19:52:17.348	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-04-18 19:55:01.528	🦥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2024-04-18 20:03:43.57	🦥
+spotify:track:7bFmXanwZQm6BMV9Nka6Hk	1	Our Last Summer - From 'Mamma Mia!' Original Motion Picture Soundtrack	2024-04-18 21:39:51.815	🦥
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-04-18 21:44:19.188	🦥
+spotify:track:256sdJU0D1k9sLHmZ6FtI4	1	Wellerman - Sea Shanty / 220 KID x Billen Ted Remix	2024-04-18 21:54:32.145	🦥
+spotify:track:5ofHoV0ywhsZUOArK1Oa1h	1	Say It Right - ILURO Remix	2024-04-18 21:59:18.144	🦥
 \.
 
 
