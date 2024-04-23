@@ -4455,6 +4455,10 @@ spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-04-21 02:
 spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-04-21 02:49:40.847	🦥
 spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-04-21 02:49:41.653	🦥
 spotify:track:6RSVgjjYRtKg4FDyx2Lj1u	1	The Best	2024-04-21 16:22:57.297	🦥
+spotify:track:2uqYupMHANxnwgeiXTZXzd	1	Austin	2024-04-22 22:25:51.377	🦥
+spotify:track:4IadxL6BUymXlh8RCJJu7T	1	Too Sweet	2024-04-22 22:25:56.52	🦥
+spotify:track:61i3HxSlZI6EQnVdYeofyo	1	Hide Away	2024-04-22 22:44:23.931	🦊
+spotify:track:61i3HxSlZI6EQnVdYeofyo	1	Hide Away	2024-04-22 22:44:25.091	🐺
 \.
 
 
