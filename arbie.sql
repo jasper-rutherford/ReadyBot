@@ -4459,6 +4459,8 @@ spotify:track:2uqYupMHANxnwgeiXTZXzd	1	Austin	2024-04-22 22:25:51.377	🦥
 spotify:track:4IadxL6BUymXlh8RCJJu7T	1	Too Sweet	2024-04-22 22:25:56.52	🦥
 spotify:track:61i3HxSlZI6EQnVdYeofyo	1	Hide Away	2024-04-22 22:44:23.931	🦊
 spotify:track:61i3HxSlZI6EQnVdYeofyo	1	Hide Away	2024-04-22 22:44:25.091	🐺
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-04-23 16:24:27.9	🦥
+spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2024-04-23 20:06:16.064	🦥
 \.
 
 
