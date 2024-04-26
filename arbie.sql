@@ -4461,6 +4461,8 @@ spotify:track:61i3HxSlZI6EQnVdYeofyo	1	Hide Away	2024-04-22 22:44:23.931	🦊
 spotify:track:61i3HxSlZI6EQnVdYeofyo	1	Hide Away	2024-04-22 22:44:25.091	🐺
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-04-23 16:24:27.9	🦥
 spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2024-04-23 20:06:16.064	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2024-04-24 21:48:13.98	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2024-04-24 21:55:12.114	🦥
 \.
 
 
