@@ -4463,6 +4463,8 @@ spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-04-23 
 spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2024-04-23 20:06:16.064	🦥
 spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2024-04-24 21:48:13.98	🦥
 spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2024-04-24 21:55:12.114	🦥
+spotify:track:7mJPU3dM2dlEbNXjQa73D2	1	What You Say (feat. Indiiana)	2024-04-25 20:49:43.905	🦥
+spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-04-25 21:17:01.377	🦥
 \.
 
 
