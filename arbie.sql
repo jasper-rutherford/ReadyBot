@@ -4465,6 +4465,8 @@ spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2024-04-24 21:48:13.98	🦥
 spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2024-04-24 21:55:12.114	🦥
 spotify:track:7mJPU3dM2dlEbNXjQa73D2	1	What You Say (feat. Indiiana)	2024-04-25 20:49:43.905	🦥
 spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-04-25 21:17:01.377	🦥
+spotify:track:0Q06bNL4pMTlkilvL88nda	1	Maybe My Soulmate Died	2024-04-26 22:59:31.181	☔
+spotify:track:3WMj8moIAXJhHsyLaqIIHI	1	Something in the Orange	2024-04-26 23:00:00.066	☔
 \.
 
 
