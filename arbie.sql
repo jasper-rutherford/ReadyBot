@@ -4468,6 +4468,12 @@ spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-04-25 21:17:01.377	🦥
 spotify:track:0Q06bNL4pMTlkilvL88nda	1	Maybe My Soulmate Died	2024-04-26 22:59:31.181	☔
 spotify:track:3WMj8moIAXJhHsyLaqIIHI	1	Something in the Orange	2024-04-26 23:00:00.066	☔
 spotify:track:4rlxs68jKAqkD0fHi9Kesm	1	All the Things She Said - Cristian Marchi & Luis Rodriguez Mix	2024-04-29 15:35:44.637	🦥
+spotify:track:0PDUDa38GO8lMxLCRc4lL1	1	PILLOWTALK	2024-04-30 13:12:53.45	📢
+spotify:track:0PDUDa38GO8lMxLCRc4lL1	1	PILLOWTALK	2024-04-30 13:12:54.401	🐺
+spotify:track:6gj08XDlv9Duc2fPOxUmVD	1	Lips Are Movin	2024-04-30 13:26:49.506	🦊
+spotify:track:2s1sdSqGcKxpPr5lCl7jAV	1	Chandelier	2024-04-30 13:33:54.672	📢
+spotify:track:33RJ3P6wc0B0FIyDalhNTv	1	Here We Go Again	2024-04-30 15:57:36.623	📼
+spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-05-01 00:39:19.162	🦥
 \.
 
 
