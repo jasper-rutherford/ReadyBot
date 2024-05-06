@@ -4476,6 +4476,8 @@ spotify:track:33RJ3P6wc0B0FIyDalhNTv	1	Here We Go Again	2024-04-30 15:57:36.623	
 spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-05-01 00:39:19.162	🦥
 spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-05-03 13:23:16.931	🦥
 spotify:track:50DMJJpAeQv4fIpxZvQz2e	1	Monsters (feat. Demi Lovato and blackbear)	2024-05-04 17:11:17.478	🦥
+spotify:track:2Nt3VdNRFMkDfloEzXywGn	1	Empty Promises	2024-05-06 01:00:20.651	🦥
+spotify:track:59xD5osEFsaNt5PXfIKUnX	1	Illusion	2024-05-06 18:22:08.411	🦥
 \.
 
 
