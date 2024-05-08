@@ -4481,6 +4481,15 @@ spotify:track:59xD5osEFsaNt5PXfIKUnX	1	Illusion	2024-05-06 18:22:08.411	🦥
 spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-05-06 22:53:50.524	🦥
 spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-05-06 22:58:26.447	🦥
 spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-05-06 23:16:48.263	🦥
+spotify:track:3J5Wcm5gvOl15F79FUy6Zy	1	Sideways	2024-05-07 16:20:02.674	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2024-05-07 16:56:52.552	🦥
+spotify:track:7rji3pwPqPCUVX2flQw8Zj	1	E.T.	2024-05-07 17:00:22.586	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-05-07 17:11:56.631	🦥
+spotify:track:4ixpcIQTt7EE1EAqotGZGb	1	Right Now (Remix)	2024-05-07 19:58:59.162	🦥
+spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-05-07 20:03:41.081	🦥
+spotify:track:0knsBJ21cqAbgjdr2i0R9b	1	The Bad Touch 2k20	2024-05-07 20:40:17.41	🦥
+spotify:track:4Ef3ODp0REOFXMgDL4S5fM	1	Stereo Love	2024-05-07 20:51:26.418	🦥
+spotify:track:2cMH4ENPzIeKqXS0PbKLoY	1	Havana	2024-05-08 01:07:13.959	🦥
 \.
 
 
