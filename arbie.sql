@@ -4490,6 +4490,20 @@ spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-05-07 20:03:41.081	🦥
 spotify:track:0knsBJ21cqAbgjdr2i0R9b	1	The Bad Touch 2k20	2024-05-07 20:40:17.41	🦥
 spotify:track:4Ef3ODp0REOFXMgDL4S5fM	1	Stereo Love	2024-05-07 20:51:26.418	🦥
 spotify:track:2cMH4ENPzIeKqXS0PbKLoY	1	Havana	2024-05-08 01:07:13.959	🦥
+spotify:track:4dskGPAW5tyuWhWWfmmCh7	1	Another Love	2024-05-08 11:29:31.729	🦥
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-05-08 11:32:32.222	🦥
+spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-05-08 11:34:53.778	🦥
+spotify:track:2cMH4ENPzIeKqXS0PbKLoY	1	Havana	2024-05-08 11:35:29.548	🦥
+spotify:track:4ixpcIQTt7EE1EAqotGZGb	1	Right Now (Remix)	2024-05-08 12:06:06.591	🍂
+spotify:track:4ixpcIQTt7EE1EAqotGZGb	1	Right Now (Remix)	2024-05-08 12:06:08.134	🦥
+spotify:track:4ixpcIQTt7EE1EAqotGZGb	-1	Right Now (Remix)	2024-05-08 12:06:10.657	🍂
+spotify:track:0HGpMpt4OrGUtdHq8dVuPN	1	On Repeat	2024-05-08 12:07:16.56	🦥
+spotify:track:4dskGPAW5tyuWhWWfmmCh7	1	Another Love	2024-05-08 12:12:13.515	🦥
+spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-05-08 20:13:52.025	🦥
+spotify:track:17nNJNrJ8mrVA2xs5NkVsR	1	You Light Me Up	2024-05-08 20:18:06.613	🦥
+spotify:track:3yrqP8f56uJ4OJeGbkIQTB	1	Marble	2024-05-08 20:23:07.178	🦥
+spotify:track:5YihgP3KuNSZc6qrrxecfu	1	Baker Street	2024-05-08 20:24:20.365	🦥
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-05-08 22:29:26.002	🦥
 \.
 
 
