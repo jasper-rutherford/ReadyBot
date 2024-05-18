@@ -4534,6 +4534,9 @@ spotify:track:08lo8MO2RVzNRGO6da99RQ	1	Wonderful Life	2024-05-12 15:37:45.592	�
 spotify:track:2PeKCn8NSGQXAHONaCh3wB	1	Dangerous	2024-05-15 19:41:08.944	🦥
 spotify:track:6RSVgjjYRtKg4FDyx2Lj1u	1	The Best	2024-05-16 14:44:20.53	🦥
 spotify:track:5fIZ683j2xPeLAXfHeWKEG	1	Dernière danse - Techno Mix	2024-05-16 18:26:50.474	🦥
+spotify:track:0kDI42WWRwsrKAmE7wmQbt	1	Creep	2024-05-17 00:43:11.441	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05-17 19:24:46.953	🦥
+spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-05-17 19:31:16.787	🦥
 \.
 
 
