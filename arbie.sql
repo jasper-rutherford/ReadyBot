@@ -4545,6 +4545,7 @@ spotify:track:17mYJ0a4KeROL4NFGi1MYS	1	The Genre Police	2024-05-18 11:39:42.267	
 spotify:track:17mYJ0a4KeROL4NFGi1MYS	1	The Genre Police	2024-05-18 11:39:42.938	🦥
 spotify:track:50DMJJpAeQv4fIpxZvQz2e	1	Monsters (feat. Demi Lovato and blackbear)	2024-05-19 14:23:34.619	🦥
 spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-05-19 14:28:37.553	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05-21 18:48:55.415	🦥
 \.
 
 
