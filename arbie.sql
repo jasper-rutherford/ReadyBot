@@ -4546,6 +4546,13 @@ spotify:track:17mYJ0a4KeROL4NFGi1MYS	1	The Genre Police	2024-05-18 11:39:42.938	
 spotify:track:50DMJJpAeQv4fIpxZvQz2e	1	Monsters (feat. Demi Lovato and blackbear)	2024-05-19 14:23:34.619	🦥
 spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-05-19 14:28:37.553	🦥
 spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05-21 18:48:55.415	🦥
+spotify:track:0knsBJ21cqAbgjdr2i0R9b	1	The Bad Touch 2k20	2024-05-23 17:24:50.497	🦥
+spotify:track:0knsBJ21cqAbgjdr2i0R9b	1	The Bad Touch 2k20	2024-05-23 17:25:35.233	🦥
+spotify:track:1T1P4aZxStasNK76EfyZcF	1	Just Dance	2024-05-23 17:36:20.497	🦥
+spotify:track:3bK1zVFBKIzYjmptmI4NsJ	1	Overdrive (feat. Norma Jean Martine)	2024-05-23 17:40:10.209	🦥
+spotify:track:6JOlNkT0QdHeZB0wPbI9IR	1	Turn Me On (feat. Nicki Minaj)	2024-05-23 17:42:37.05	🦥
+spotify:track:3MOECVkNshqHYTPt5DZcdN	1	Five More Hours	2024-05-23 17:54:17.233	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-05-23 20:47:18.54	🦥
 \.
 
 
