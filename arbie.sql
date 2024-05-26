@@ -4557,6 +4557,14 @@ spotify:track:1uigwk5hNV84zRd5YQQRTk	1	Pocketful of Sunshine	2024-05-24 16:11:04
 spotify:track:2uqYupMHANxnwgeiXTZXzd	1	Austin	2024-05-24 16:19:47.537	🦥
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-05-24 16:22:00.688	🦥
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-05-24 16:24:56.106	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05-25 01:14:23.596	🦥
+spotify:track:2JOTbHmj0jwBM9bHgcVEOq	1	Pink Soldiers	2024-05-25 01:37:57.512	🪬
+spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-05-25 01:41:17.938	🪬
+spotify:track:7CH8J4ulT49UfZwSDSkSZA	1	i miss u (with Au/Ra)	2024-05-25 01:50:13.678	🦥
+spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-05-25 01:52:02.636	🦥
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-05-25 01:54:01.798	🦥
+spotify:track:7mJPU3dM2dlEbNXjQa73D2	1	What You Say (feat. Indiiana)	2024-05-25 01:56:45.212	🦥
+spotify:track:08lo8MO2RVzNRGO6da99RQ	1	Wonderful Life	2024-05-25 01:57:46.036	🦥
 \.
 
 
