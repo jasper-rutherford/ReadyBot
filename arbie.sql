@@ -4566,6 +4566,11 @@ spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-05-25 01:54:01.798	🦥
 spotify:track:7mJPU3dM2dlEbNXjQa73D2	1	What You Say (feat. Indiiana)	2024-05-25 01:56:45.212	🦥
 spotify:track:08lo8MO2RVzNRGO6da99RQ	1	Wonderful Life	2024-05-25 01:57:46.036	🦥
 spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-05-26 02:48:32.074	🦥
+spotify:track:5fBBhQfbpkYpGc0Qcax4FN	1	Where Do We Go	2024-05-27 20:07:33.16	🦥
+spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-05-27 20:12:04.902	🦥
+spotify:track:3JlHRjPt2TNB9h7VFf0im2	1	Weekends	2024-05-27 20:18:49.276	🦥
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-05-27 20:22:47.912	🦥
+spotify:track:33iRpf5dMMpGlPKfRKJkdR	1	Burn Slowly	2024-05-27 20:37:55.533	🦥
 \.
 
 
