@@ -4571,6 +4571,11 @@ spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-05-27 20:12:04.902	🦥
 spotify:track:3JlHRjPt2TNB9h7VFf0im2	1	Weekends	2024-05-27 20:18:49.276	🦥
 spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-05-27 20:22:47.912	🦥
 spotify:track:33iRpf5dMMpGlPKfRKJkdR	1	Burn Slowly	2024-05-27 20:37:55.533	🦥
+spotify:track:0ieEZjHQO5eq9Uad7opItK	1	I Was Made	2024-05-28 18:19:33.668	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05-28 18:31:50.549	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05-28 18:39:07.522	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2024-05-28 18:39:11.101	🦥
+spotify:track:1cYyZ1N98GyRS3cMcccFHd	1	Wasted Love (feat. Lagique)	2024-05-28 21:08:18.517	🦥
 \.
 
 
