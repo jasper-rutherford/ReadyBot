@@ -4576,6 +4576,8 @@ spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05
 spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-05-28 18:39:07.522	🦥
 spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2024-05-28 18:39:11.101	🦥
 spotify:track:1cYyZ1N98GyRS3cMcccFHd	1	Wasted Love (feat. Lagique)	2024-05-28 21:08:18.517	🦥
+spotify:track:2JUwLeTzOR5eSbnizg4QWi	1	Uncover	2024-05-29 23:53:29.705	🦥
+spotify:track:4dskGPAW5tyuWhWWfmmCh7	1	Another Love	2024-05-29 23:58:16.676	🦥
 \.
 
 
