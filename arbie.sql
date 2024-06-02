@@ -4579,6 +4579,8 @@ spotify:track:1cYyZ1N98GyRS3cMcccFHd	1	Wasted Love (feat. Lagique)	2024-05-28 21
 spotify:track:2JUwLeTzOR5eSbnizg4QWi	1	Uncover	2024-05-29 23:53:29.705	🦥
 spotify:track:4dskGPAW5tyuWhWWfmmCh7	1	Another Love	2024-05-29 23:58:16.676	🦥
 spotify:track:5fIZ683j2xPeLAXfHeWKEG	1	Dernière danse - Techno Mix	2024-05-30 23:01:43.912	🦥
+spotify:track:0rFOs9paloAvEtzwDX1Kmc	1	Bubbly	2024-06-01 17:52:42.765	📼
+spotify:track:0bRNszTbTFLNlunAeh7eom	1	Sharp Dressed Man (2008 Remaster)	2024-06-01 21:29:52.603	🔥
 \.
 
 
