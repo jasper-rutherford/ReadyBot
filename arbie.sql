@@ -4584,6 +4584,21 @@ spotify:track:0bRNszTbTFLNlunAeh7eom	1	Sharp Dressed Man (2008 Remaster)	2024-06
 spotify:track:7J9mBHG4J2eIfDAv5BehKA	1	7 Element	2024-06-04 01:25:40.83	🦥
 spotify:track:7H0ya83CMmgFcOhw0UB6ow	1	Space Song	2024-06-05 00:55:25.899	🌌
 spotify:track:5fp6m6Zo4LetiWaMMrPjy5	1	Dreamscape	2024-06-05 01:06:22.717	🌌
+spotify:track:6rdga62e70bV9Mll0X8UJ5	1	Drinking with Cupid	2024-06-05 23:37:19.527	🦥
+spotify:track:27L8sESb3KR79asDUBu8nW	1	Stacy's Mom	2024-06-05 23:48:58.421	🦥
+spotify:track:4fkFsB17kyzq27QhOVt19V	1	Love Is Gone	2024-06-06 18:29:39.334	🦥
+spotify:track:1okz0plcLFh3AqBoOKmui4	1	Rabbit Hole	2024-06-06 18:30:47.157	🦥
+spotify:track:3F7JkvI31gWw0ifIA553X5	1	I Like	2024-06-06 18:56:39.282	🦥
+spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-06-06 18:59:44.508	🦥
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-06-06 19:01:44.206	🦥
+spotify:track:47TOnN2ffRwsEvWsTZ6IaI	1	Shake That	2024-06-06 19:13:09.508	🦥
+spotify:track:27yUNsQo2CPPokNw69M23X	1	Shot a friend	2024-06-06 19:38:01.872	🦥
+spotify:track:3jksOdXCaDXyGiZ7L4YZbp	1	All Nighter	2024-06-06 20:03:20.472	🦥
+spotify:track:4fkFsB17kyzq27QhOVt19V	1	Love Is Gone	2024-06-06 20:37:41.744	🦥
+spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-06-06 20:39:33.761	🦥
+spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2024-06-06 20:47:12.418	🦥
+spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-06-06 20:53:01.043	🦥
+spotify:track:4uDhts78RdwIDjEqPrYVKp	1	Sweet Dreams	2024-06-06 21:20:54.364	🦥
 \.
 
 
