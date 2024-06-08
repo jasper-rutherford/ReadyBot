@@ -4599,6 +4599,8 @@ spotify:track:4XpDj477gvnsYNT21ap9Y8	1	Last Melody	2024-06-06 20:39:33.761	🦥
 spotify:track:7voJOTOqLto0HyQltECuzh	1	The Way I Are	2024-06-06 20:47:12.418	🦥
 spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-06-06 20:53:01.043	🦥
 spotify:track:4uDhts78RdwIDjEqPrYVKp	1	Sweet Dreams	2024-06-06 21:20:54.364	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-06-06 23:02:18.768	🦥
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-06-07 01:01:37.76	🦥
 \.
 
 
