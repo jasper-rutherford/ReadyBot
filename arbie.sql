@@ -4601,6 +4601,14 @@ spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-06-06 20:53:01.043	🦥
 spotify:track:4uDhts78RdwIDjEqPrYVKp	1	Sweet Dreams	2024-06-06 21:20:54.364	🦥
 spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-06-06 23:02:18.768	🦥
 spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-06-07 01:01:37.76	🦥
+spotify:track:0mQNFiamtlZF5i6DGYckTv	1	Be My Lover	2024-06-07 23:18:26.6	🦥
+spotify:track:5YdnOm5990Kfq1Jodws98B	1	Call It Love	2024-06-07 23:37:29.616	🦥
+spotify:track:50DMJJpAeQv4fIpxZvQz2e	1	Monsters (feat. Demi Lovato and blackbear)	2024-06-08 00:33:23.291	🦥
+spotify:track:7MeP128gHh4GyTMoGUiZlt	1	u turn me on (but u give me depression)	2024-06-08 14:13:19.598	🦥
+spotify:track:4ewmHD3aRBmLyTsbGreNLw	1	what would you do?	2024-06-08 14:19:54.658	🦥
+spotify:track:3ikuDKc66w7CH9hRgc2KfX	1	All My Exes' Moms	2024-06-08 15:30:06.621	🦥
+spotify:track:5s7m2xNZWgz5FqVSIvJcGA	1	Save a Horse (Ride a Cowboy)	2024-06-08 19:09:24.086	🦥
+spotify:track:698ItKASDavgwZ3WjaWjtz	1	Faded	2024-06-08 19:18:20.527	🦥
 \.
 
 
