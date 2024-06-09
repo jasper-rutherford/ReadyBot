@@ -4609,6 +4609,22 @@ spotify:track:4ewmHD3aRBmLyTsbGreNLw	1	what would you do?	2024-06-08 14:19:54.65
 spotify:track:3ikuDKc66w7CH9hRgc2KfX	1	All My Exes' Moms	2024-06-08 15:30:06.621	🦥
 spotify:track:5s7m2xNZWgz5FqVSIvJcGA	1	Save a Horse (Ride a Cowboy)	2024-06-08 19:09:24.086	🦥
 spotify:track:698ItKASDavgwZ3WjaWjtz	1	Faded	2024-06-08 19:18:20.527	🦥
+spotify:track:7y3c1oJMY1CwwtOZ84Qovu	1	Hallucination	2024-06-09 14:09:54.886	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-06-09 14:18:39.733	🦥
+spotify:track:256sdJU0D1k9sLHmZ6FtI4	1	Wellerman - Sea Shanty / 220 KID x Billen Ted Remix	2024-06-09 14:21:46.3	🦥
+spotify:track:0E7U13bmvEccq4CtC3q0Pw	1	Me & U	2024-06-09 14:23:44.357	🦥
+spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-06-09 14:50:15.582	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-06-09 14:52:30.154	🦥
+spotify:track:6RSVgjjYRtKg4FDyx2Lj1u	1	The Best	2024-06-09 14:54:16.306	🦥
+spotify:track:5s7m2xNZWgz5FqVSIvJcGA	1	Save a Horse (Ride a Cowboy)	2024-06-09 15:06:05.977	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-06-09 15:25:24.124	🦥
+spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-06-09 15:41:18.917	🦥
+spotify:track:3jksOdXCaDXyGiZ7L4YZbp	1	All Nighter	2024-06-09 15:43:28.261	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-06-09 16:02:03.455	🦥
+spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-06-09 16:31:11.215	🦥
+spotify:track:6JOlNkT0QdHeZB0wPbI9IR	1	Turn Me On (feat. Nicki Minaj)	2024-06-09 18:50:04.912	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-06-09 18:58:58.512	🦥
+spotify:track:7kftK4n15rl1wbpfjSq2Tk	1	Wherever I Go	2024-06-09 19:05:25.737	📢
 \.
 
 
