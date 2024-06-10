@@ -4625,6 +4625,9 @@ spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-06-09 16:31:11.215	🦥
 spotify:track:6JOlNkT0QdHeZB0wPbI9IR	1	Turn Me On (feat. Nicki Minaj)	2024-06-09 18:50:04.912	🦥
 spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-06-09 18:58:58.512	🦥
 spotify:track:7kftK4n15rl1wbpfjSq2Tk	1	Wherever I Go	2024-06-09 19:05:25.737	📢
+spotify:track:0VO8gYVDSwM1Qdd2GsMoYK	1	Moth To A Flame (with The Weeknd)	2024-06-10 15:37:50.619	🦥
+spotify:track:7gUpO6td4OOnu0Lf9vhcIV	1	Lights - Single Version	2024-06-10 16:00:42.642	🦥
+spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2024-06-10 18:37:17.896	🦥
 \.
 
 
