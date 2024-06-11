@@ -4628,6 +4628,10 @@ spotify:track:7kftK4n15rl1wbpfjSq2Tk	1	Wherever I Go	2024-06-09 19:05:25.737	�
 spotify:track:0VO8gYVDSwM1Qdd2GsMoYK	1	Moth To A Flame (with The Weeknd)	2024-06-10 15:37:50.619	🦥
 spotify:track:7gUpO6td4OOnu0Lf9vhcIV	1	Lights - Single Version	2024-06-10 16:00:42.642	🦥
 spotify:track:4dTaAiV9xFFCxnPur9c9yL	1	Memories (feat. Kid Cudi)	2024-06-10 18:37:17.896	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-06-10 20:58:38.311	🦥
+spotify:track:5ofHoV0ywhsZUOArK1Oa1h	1	Say It Right - ILURO Remix	2024-06-10 21:25:51.998	🦥
+spotify:track:6pfhyFIP10boLwr4mcSE0g	1	Shake It	2024-06-10 21:53:51.432	🦥
+spotify:track:0tyR7Bu9P086aWBFZ4QJoo	1	Monsters (feat. blackbear)	2024-06-10 23:04:00.766	🦥
 \.
 
 
