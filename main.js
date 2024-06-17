@@ -18,7 +18,7 @@ const { exec } = require('child_process');
 const { promisify } = require('util');
 const execAsync = promisify(exec);
 
-const interval = "14 days"; // the range of time to include song votes in the query when not sorting by all time
+const interval = "2 months"; // the range of time to include song votes in the query when not sorting by all time
 
 //object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
@@ -67,7 +67,7 @@ var bot = {
     baseInterval: interval,
     queryInterval: interval,                                // the range of time to include song votes in the query. default to interval
     barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
-    minScore: 1,
+    minScore: 0,
 
     mostRecentOrderTime: undefined,                         // the last time that the 🦥 playlist was ordered
     autoOrderPeriodically: false,
