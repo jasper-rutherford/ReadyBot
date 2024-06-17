@@ -4633,6 +4633,8 @@ spotify:track:5ofHoV0ywhsZUOArK1Oa1h	1	Say It Right - ILURO Remix	2024-06-10 21:
 spotify:track:6pfhyFIP10boLwr4mcSE0g	1	Shake It	2024-06-10 21:53:51.432	🦥
 spotify:track:0tyR7Bu9P086aWBFZ4QJoo	1	Monsters (feat. blackbear)	2024-06-10 23:04:00.766	🦥
 spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-06-11 20:55:10.057	🦥
+spotify:track:5fIZ683j2xPeLAXfHeWKEG	1	Dernière danse - Techno Mix	2024-06-16 23:00:05.839	🦥
+spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-06-16 23:09:17.981	🦥
 \.
 
 
