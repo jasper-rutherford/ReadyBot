@@ -4635,6 +4635,9 @@ spotify:track:0tyR7Bu9P086aWBFZ4QJoo	1	Monsters (feat. blackbear)	2024-06-10 23:
 spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-06-11 20:55:10.057	🦥
 spotify:track:5fIZ683j2xPeLAXfHeWKEG	1	Dernière danse - Techno Mix	2024-06-16 23:00:05.839	🦥
 spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-06-16 23:09:17.981	🦥
+spotify:track:21LTZZP3cRDzVFKmvDEtZt	1	Rooftop	2024-06-17 19:58:46.972	🦥
+spotify:track:3nMb7ToWIxYvmaIG20z6ux	1	Tonight (I'm Fuckin' You)	2024-06-17 20:19:26.825	🦥
+spotify:track:21LTZZP3cRDzVFKmvDEtZt	1	Rooftop	2024-06-17 21:49:36.068	🦥
 \.
 
 
