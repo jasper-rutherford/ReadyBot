@@ -4640,6 +4640,20 @@ spotify:track:3nMb7ToWIxYvmaIG20z6ux	1	Tonight (I'm Fuckin' You)	2024-06-17 20:1
 spotify:track:21LTZZP3cRDzVFKmvDEtZt	1	Rooftop	2024-06-17 21:49:36.068	🦥
 spotify:track:3trdEhvJEmaBEHKcr6RiWH	1	This Is Gonna Hurt	2024-06-21 18:39:36.069	🦥
 spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-06-26 23:14:39.977	🦥
+spotify:track:4ixpcIQTt7EE1EAqotGZGb	1	Right Now (Remix)	2024-06-26 23:42:49.239	🦥
+spotify:track:22sKunNSPMCy2lvSLOY5yX	1	Rule The World	2024-06-27 00:00:41.281	🦥
+spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2024-06-27 00:14:30.704	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-06-27 00:15:41.82	🦥
+spotify:track:2F2p7b5Xq20mRyEeWYaeUF	1	Substitution (feat. Julian Perretta)	2024-06-27 00:37:28.4	🦥
+spotify:track:2iRQKePYqxqXLW01HCVZzG	1	Believe	2024-06-27 00:54:01.681	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-06-27 00:54:08.448	🦥
+spotify:track:6oJIAZpChGNIEMAecud9SZ	1	Ocean Of Tears	2024-06-27 21:54:18.96	🦥
+spotify:track:0W98yebOu4MC2ULhurYbAZ	1	Time After Time	2024-06-27 22:07:03.299	🦥
+spotify:track:698ItKASDavgwZ3WjaWjtz	1	Faded	2024-06-27 22:10:29.921	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2024-06-27 22:15:58.843	🦥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2024-06-27 22:32:26.941	🦥
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-06-27 22:38:13.905	🦥
+spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-06-27 22:51:18.656	🦥
 \.
 
 
