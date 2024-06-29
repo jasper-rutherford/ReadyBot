@@ -4654,6 +4654,10 @@ spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2024-06-27 22:15:58.843	🦥
 spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2024-06-27 22:32:26.941	🦥
 spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-06-27 22:38:13.905	🦥
 spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-06-27 22:51:18.656	🦥
+spotify:track:3qCCQas6tIP15Yjgu3gl9S	1	All My Life	2024-06-28 00:33:18.097	🦥
+spotify:track:1p0jBDjxORjYNJyAphBRpE	1	MONEY ON THE DASH	2024-06-28 00:38:22.69	🦥
+spotify:track:1kwHrBWAlucOE57lWugotk	1	Do It Better (feat. Zoe Wees)	2024-06-28 00:41:36.621	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-06-28 01:09:53.643	🦥
 \.
 
 
