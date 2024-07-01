@@ -4659,6 +4659,11 @@ spotify:track:1p0jBDjxORjYNJyAphBRpE	1	MONEY ON THE DASH	2024-06-28 00:38:22.69	
 spotify:track:1kwHrBWAlucOE57lWugotk	1	Do It Better (feat. Zoe Wees)	2024-06-28 00:41:36.621	🦥
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-06-28 01:09:53.643	🦥
 spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-06-29 14:14:00.941	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-06-30 12:50:57.421	🦥
+spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-06-30 18:12:48.661	🦥
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-06-30 22:09:00.841	🦥
+spotify:track:0WljI3sSnC1Kb23U11fLRs	1	Gold On My Skin	2024-06-30 22:28:05.089	🦥
+spotify:track:1RF02Cf80mTaeNXG2P2boR	1	21 Reasons (feat. Ella Henderson)	2024-06-30 22:45:03.593	🦥
 \.
 
 
