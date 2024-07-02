@@ -4664,6 +4664,8 @@ spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-06-30 18:12:48
 spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-06-30 22:09:00.841	🦥
 spotify:track:0WljI3sSnC1Kb23U11fLRs	1	Gold On My Skin	2024-06-30 22:28:05.089	🦥
 spotify:track:1RF02Cf80mTaeNXG2P2boR	1	21 Reasons (feat. Ella Henderson)	2024-06-30 22:45:03.593	🦥
+spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-07-01 00:31:43.163	🦥
+spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2024-07-01 10:54:03.853	🦥
 \.
 
 
