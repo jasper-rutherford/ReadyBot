@@ -4667,6 +4667,9 @@ spotify:track:1RF02Cf80mTaeNXG2P2boR	1	21 Reasons (feat. Ella Henderson)	2024-06
 spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-07-01 00:31:43.163	🦥
 spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2024-07-01 10:54:03.853	🦥
 spotify:track:2ovjS1yyTSXy3F0KHlTVTx	1	Be Okay - CLMD Remix	2024-07-03 13:32:52.843	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-07-04 00:10:24.177	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-07-04 00:36:50.093	🦥
+spotify:track:2hSGBHKZgOjWaPckW4mVf9	1	My Lovin'	2024-07-04 11:48:03.57	🦥
 \.
 
 
