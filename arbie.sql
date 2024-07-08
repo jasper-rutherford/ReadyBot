@@ -4671,6 +4671,8 @@ spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-07-04 00:10:24.177	🦥
 spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-07-04 00:36:50.093	🦥
 spotify:track:2hSGBHKZgOjWaPckW4mVf9	1	My Lovin'	2024-07-04 11:48:03.57	🦥
 spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-07-06 21:59:39.828	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-07-07 00:52:44.875	🦥
+spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-07-07 01:44:08.395	🦥
 \.
 
 
