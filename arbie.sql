@@ -4674,6 +4674,17 @@ spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024
 spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-07-07 00:52:44.875	🦥
 spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-07-07 01:44:08.395	🦥
 spotify:track:21LTZZP3cRDzVFKmvDEtZt	1	Rooftop	2024-07-08 23:17:05.23	🦥
+spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-07-08 23:52:06.096	🦥
+spotify:track:3ikuDKc66w7CH9hRgc2KfX	1	All My Exes' Moms	2024-07-09 00:07:22.393	🦥
+spotify:track:2ovjS1yyTSXy3F0KHlTVTx	1	Be Okay - CLMD Remix	2024-07-09 00:22:24.642	🦥
+spotify:track:6rdga62e70bV9Mll0X8UJ5	1	Drinking with Cupid	2024-07-09 00:50:23.393	🦥
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-07-09 01:12:54.894	🦥
+spotify:track:3I7i0kt5EcuVdYWfSu2LSm	1	Lights Out	2024-07-09 01:20:00.764	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-07-09 01:20:07.609	🦥
+spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2024-07-09 02:21:49.559	🦥
+spotify:track:5k1uIPpsHmnbWFr4nbpdYb	1	Up All Night (feat. Afrojack)	2024-07-09 02:31:19.055	🦥
+spotify:track:12aCF5xMof5sLunrEy8SA7	1	I'm Good (Blue) - Oliver Heldens Remix	2024-07-09 02:36:03.861	🦥
+spotify:track:46lyJh9GYmWsHez3EsvmAx	1	Rise Up (feat. Vamero)	2024-07-09 02:39:22.972	🦥
 \.
 
 
