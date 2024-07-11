@@ -4685,6 +4685,8 @@ spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2024-07-09 02
 spotify:track:5k1uIPpsHmnbWFr4nbpdYb	1	Up All Night (feat. Afrojack)	2024-07-09 02:31:19.055	🦥
 spotify:track:12aCF5xMof5sLunrEy8SA7	1	I'm Good (Blue) - Oliver Heldens Remix	2024-07-09 02:36:03.861	🦥
 spotify:track:46lyJh9GYmWsHez3EsvmAx	1	Rise Up (feat. Vamero)	2024-07-09 02:39:22.972	🦥
+spotify:track:0i8JFpqe9cKwnrcvoNgl1L	1	Feel Invincible	2024-07-10 17:09:10.2	🦥
+spotify:track:1jq28NGw6wdtFKx8MBPy6C	1	Burn It to the Ground	2024-07-10 17:12:18.322	🦥
 \.
 
 
