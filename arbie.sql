@@ -4688,6 +4688,7 @@ spotify:track:46lyJh9GYmWsHez3EsvmAx	1	Rise Up (feat. Vamero)	2024-07-09 02:39:2
 spotify:track:0i8JFpqe9cKwnrcvoNgl1L	1	Feel Invincible	2024-07-10 17:09:10.2	🦥
 spotify:track:1jq28NGw6wdtFKx8MBPy6C	1	Burn It to the Ground	2024-07-10 17:12:18.322	🦥
 spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-07-11 19:05:51.401	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-07-12 18:39:55.728	🦥
 \.
 
 
