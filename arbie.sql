@@ -4689,6 +4689,10 @@ spotify:track:0i8JFpqe9cKwnrcvoNgl1L	1	Feel Invincible	2024-07-10 17:09:10.2	�
 spotify:track:1jq28NGw6wdtFKx8MBPy6C	1	Burn It to the Ground	2024-07-10 17:12:18.322	🦥
 spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-07-11 19:05:51.401	🦥
 spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-07-12 18:39:55.728	🦥
+spotify:track:6WC5fhc9XMaCrUNKNjm9xE	1	Thumbs	2024-07-13 15:43:49.653	🦥
+spotify:track:5lNuqFVMca4vPupY10cH0J	1	No Promises (feat. Demi Lovato)	2024-07-13 20:10:18.592	🐺
+spotify:track:0mQNFiamtlZF5i6DGYckTv	1	Be My Lover	2024-07-13 23:13:53.696	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-07-13 23:21:20.379	🦥
 \.
 
 
