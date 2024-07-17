@@ -4706,6 +4706,9 @@ spotify:track:7zJx5Wk8iSkhnm3zyb6xOQ	1	She's So High	2024-07-16 01:30:15.438	�
 spotify:track:6Q2Lb0R6siWVAF6DFvLXRF	1	Beggin' - Remix	2024-07-16 01:30:19.574	🦥
 spotify:track:5YLJYRcfP9mR7olbOVUMcm	1	If I Die Young	2024-07-16 01:30:22.144	🦥
 spotify:track:0n5jqofn0uTFr7oYzW7D5D	1	SURVIVOR	2024-07-16 01:53:02.435	🦥
+spotify:track:12aCF5xMof5sLunrEy8SA7	1	I'm Good (Blue) - Oliver Heldens Remix	2024-07-16 14:14:32.753	🦥
+spotify:track:63e4QdvlOL4GYwyJe0VYjS	1	I Was Made for Lovin' You	2024-07-16 21:22:32.067	🦥
+spotify:track:3MPMlVLLHgPPJJBDrX424v	1	Irish Man	2024-07-16 23:57:49.819	🦥
 \.
 
 
