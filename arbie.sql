@@ -4720,6 +4720,12 @@ spotify:track:3eNJzSIHaAkMvyzZ0wy6g5	1	In the End	2024-07-18 13:22:38.891	🦥
 spotify:track:2ibx46fwgGe3u2pirSgjj7	1	It's A Hard Knock Life - Prezioso Remix	2024-07-18 13:30:01.315	🦥
 spotify:track:47bZhVeNH1sC0ZykPi5V3T	1	Bad Decision	2024-07-18 13:48:48.562	🦥
 spotify:track:5ij0EuOJmqzwBqVIzBAXbb	1	Dumb	2024-07-18 13:56:49.679	🦥
+spotify:track:5BIihGHK73goXTxDg5atLd	1	Another Love	2024-07-18 21:41:32.022	🦥
+spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2024-07-18 23:41:24.21	🦥
+spotify:track:6WC5fhc9XMaCrUNKNjm9xE	1	Thumbs	2024-07-18 23:52:26.526	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-07-19 00:42:20.324	🦥
+spotify:track:76A1RRDEyHKtmV3Vh6PeVN	1	Savage	2024-07-19 10:54:50.821	🦥
+spotify:track:6X937hyh1Kp098vSUObdBP	1	We're Beautiful	2024-07-19 11:25:20.716	🦥
 \.
 
 
