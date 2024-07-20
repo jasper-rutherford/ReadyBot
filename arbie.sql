@@ -4726,6 +4726,8 @@ spotify:track:6WC5fhc9XMaCrUNKNjm9xE	1	Thumbs	2024-07-18 23:52:26.526	🦥
 spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-07-19 00:42:20.324	🦥
 spotify:track:76A1RRDEyHKtmV3Vh6PeVN	1	Savage	2024-07-19 10:54:50.821	🦥
 spotify:track:6X937hyh1Kp098vSUObdBP	1	We're Beautiful	2024-07-19 11:25:20.716	🦥
+spotify:track:3trdEhvJEmaBEHKcr6RiWH	1	This Is Gonna Hurt	2024-07-20 02:40:37.498	🦥
+spotify:track:6IY3cC281mz9q0bViUEldz	1	It's A Trip!	2024-07-20 02:45:06.98	🦥
 \.
 
 
