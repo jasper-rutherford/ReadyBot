@@ -4728,6 +4728,23 @@ spotify:track:76A1RRDEyHKtmV3Vh6PeVN	1	Savage	2024-07-19 10:54:50.821	🦥
 spotify:track:6X937hyh1Kp098vSUObdBP	1	We're Beautiful	2024-07-19 11:25:20.716	🦥
 spotify:track:3trdEhvJEmaBEHKcr6RiWH	1	This Is Gonna Hurt	2024-07-20 02:40:37.498	🦥
 spotify:track:6IY3cC281mz9q0bViUEldz	1	It's A Trip!	2024-07-20 02:45:06.98	🦥
+spotify:track:0d2yUkzvqA85zHqiKA9IuE	1	Tell Me How	2024-07-20 12:46:24.042	🦥
+spotify:track:5Owz0Wkb3XgaADAm6dEr2O	1	We Ride (feat. Teddy Bee)	2024-07-20 15:09:05.149	🦥
+spotify:track:5VEkFlaS12TsOdeofJGPVP	1	Lie For Me	2024-07-20 16:09:52.779	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2024-07-20 20:27:38.167	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2024-07-20 20:40:06.592	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2024-07-20 20:40:07.813	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2024-07-20 20:40:09.396	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-07-20 23:28:05.132	🦥
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-07-21 00:36:17.56	🦥
+spotify:track:698ItKASDavgwZ3WjaWjtz	1	Faded	2024-07-21 00:43:31.829	🪬
+spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-07-21 01:28:09.224	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2024-07-21 01:30:05.39	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-07-21 01:34:10.55	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-07-21 01:35:26.964	🦥
+spotify:track:6rdga62e70bV9Mll0X8UJ5	1	Drinking with Cupid	2024-07-21 01:46:31.96	🦥
+spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2024-07-21 01:55:32.238	🦥
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-07-21 02:25:26.724	🦥
 \.
 
 
