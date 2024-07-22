@@ -4745,6 +4745,36 @@ spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-07-21 
 spotify:track:6rdga62e70bV9Mll0X8UJ5	1	Drinking with Cupid	2024-07-21 01:46:31.96	🦥
 spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2024-07-21 01:55:32.238	🦥
 spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-07-21 02:25:26.724	🦥
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-07-21 10:36:58.252	🍂
+spotify:track:2AAMkITmFcCL9MtTKFui2k	-1	Just In Case	2024-07-21 10:37:03.198	🍂
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-07-21 10:37:04.686	🦥
+spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-07-21 10:39:06.327	🦥
+spotify:track:5fBBhQfbpkYpGc0Qcax4FN	1	Where Do We Go	2024-07-21 10:44:31.363	🦥
+spotify:track:76A1RRDEyHKtmV3Vh6PeVN	1	Savage	2024-07-21 11:13:06.284	🦥
+spotify:track:2AAMkITmFcCL9MtTKFui2k	1	Just In Case	2024-07-21 11:37:41.223	🦥
+spotify:track:2kqMZ9mWxK52aAk1wZFwCn	1	Beating Broken Heart	2024-07-21 11:48:24.056	🦥
+spotify:track:4Lo3KebQUz8pDq4B0FphDJ	1	You Got Me - Radio-Edit	2024-07-21 12:00:12.072	🦥
+spotify:track:2ovjS1yyTSXy3F0KHlTVTx	1	Be Okay - CLMD Remix	2024-07-21 12:02:13.825	🍂
+spotify:track:2ovjS1yyTSXy3F0KHlTVTx	-1	Be Okay - CLMD Remix	2024-07-21 12:02:16.121	🍂
+spotify:track:2ovjS1yyTSXy3F0KHlTVTx	1	Be Okay - CLMD Remix	2024-07-21 12:02:17.533	🦥
+spotify:track:2jSVBVxFFQY15Ce0V8HUH9	1	Another Level (ft. Lovespeake)	2024-07-21 12:09:24.925	🦥
+spotify:track:3c9IKwzgIPcCweCl9so748	1	Underwater	2024-07-21 12:09:29.067	🦥
+spotify:track:6WVHfpzYW3HooQaCC80opC	1	Halo (feat. PIA MARIA)	2024-07-21 12:12:53.878	🦥
+spotify:track:0WljI3sSnC1Kb23U11fLRs	1	Gold On My Skin	2024-07-21 12:18:04.636	🦥
+spotify:track:4LZZw5N1UziWws0hEPZwyu	1	For Those About To Rave	2024-07-21 12:21:10.031	🦥
+spotify:track:5WcPCjbZalLkmJduC6kIvO	1	Vivaldi	2024-07-21 12:34:08.851	🦥
+spotify:track:07VcTAooOBP8hIluuUS5xr	1	Heavy Metal Love	2024-07-21 12:52:14.178	🦥
+spotify:track:2FxJX5c1FkfLpladsgoLAD	1	Don't You Want Me	2024-07-21 13:16:54.653	🦥
+spotify:track:2DRJ8zX1cHBr2DyVJNcQhu	1	Spectrum (Say My Name)	2024-07-21 13:24:35.383	🦥
+spotify:track:4WRtXqu9TmvvwZ3bzdcCVQ	1	Thousand Lullabies	2024-07-21 13:46:25.494	🦥
+spotify:track:21hxN3cxOJoDmQwg2tXUpN	1	Blow Ya Mind	2024-07-21 13:55:40.451	🦥
+spotify:track:0SGunE3qppk4PajqOvR6uu	1	Feels Like This (feat. Indiiana)	2024-07-21 14:03:24.384	🦥
+spotify:track:7LnkcJhUZ0qs0HoyRm61xr	1	JUMPSTART	2024-07-21 14:27:18.647	🦥
+spotify:track:1dt220OBbkTsYz1NLVKIaw	1	Call Me (with R3HAB & Timmy Trumpet)	2024-07-21 14:34:41.688	🦥
+spotify:track:7EXennxBRtugSuQX13uLSu	1	Blow It Up	2024-07-21 14:44:31.935	🦥
+spotify:track:09rcsC6M15EZPbCVmrqUYK	1	Good Life	2024-07-21 15:03:42.781	🦥
+spotify:track:7kpviYjVYmD4VW7vsZTQCU	1	Annie Are You Ok - LUM!X Remix	2024-07-21 15:10:08.365	🦥
+spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-07-21 15:25:15.266	🦥
 \.
 
 
