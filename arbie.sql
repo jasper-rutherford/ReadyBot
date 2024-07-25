@@ -4785,6 +4785,11 @@ spotify:track:2iRQKePYqxqXLW01HCVZzG	1	Believe	2024-07-23 22:27:13.292	🦥
 spotify:track:0SGunE3qppk4PajqOvR6uu	1	Feels Like This (feat. Indiiana)	2024-07-23 23:00:27.818	🦥
 spotify:track:3fWKUqt1i6CsEBLuB8IWJ1	1	Dance With Your Devil	2024-07-23 23:29:21.072	🦥
 spotify:track:3MPMlVLLHgPPJJBDrX424v	1	Irish Man	2024-07-23 23:41:04.399	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-07-24 22:26:06.458	🦥
+spotify:track:2nCIE2AVFQ1adRVkocdGOp	1	Touch	2024-07-25 00:43:03.916	🦥
+spotify:track:5fBBhQfbpkYpGc0Qcax4FN	1	Where Do We Go	2024-07-25 01:08:31.071	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-07-25 01:17:13.877	🦥
+spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-07-25 01:25:11.373	🦥
 \.
 
 
