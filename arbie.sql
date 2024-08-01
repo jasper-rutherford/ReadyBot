@@ -4792,6 +4792,37 @@ spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2024-07-25 01:17:13.877	🦥
 spotify:track:4bAzLbJOkwkZEakSiKd3sZ	1	Low	2024-07-25 01:25:11.373	🦥
 spotify:track:3MPMlVLLHgPPJJBDrX424v	1	Irish Man	2024-07-26 16:23:35.079	🦥
 spotify:track:2USlegnFJLrVLpoVfPimKB	1	Thunder	2024-07-28 21:42:47.776	🦥
+spotify:track:4MSj19TwYBLgDFj3ddEeco	1	Black Friday (pretty like the sun)	2024-07-31 12:47:22.819	🦥
+spotify:track:2x4JC9TxW2LACuuxbsncfG	1	Mockingbird	2024-07-31 12:59:15.156	👷
+spotify:track:2GE3k8I0Sbh0puCjI15KGy	1	Barcelona	2024-07-31 13:13:26.291	👷
+spotify:track:3iUDHA6FGAKfHX2jmgF0vO	1	i always kinda knew you’d be the death of me	2024-07-31 13:18:47.274	👷
+spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-07-31 13:22:35.796	👷
+spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-07-31 13:27:42.834	👷
+spotify:track:7MYLHLCf0YWR4TVs3owDny	1	Fire - Official UEFA EURO 2024 Song	2024-07-31 13:31:03.275	👷
+spotify:track:0AjmK0Eai4zGrLaJwPvrDp	1	Too Sweet	2024-07-31 13:47:43.239	👷
+spotify:track:2Z8RcNkYqStbwUdS7qyx6s	1	Sink or Swim	2024-07-31 13:59:19.479	👷
+spotify:track:36gcliMRX1vCpgnrZE3dFZ	1	10:35	2024-07-31 14:05:13.781	👷
+spotify:track:09CnYHiZ5jGT1wr1TXJ9Zt	1	Thank You (Not So Bad)	2024-07-31 15:39:09.301	🦥
+spotify:track:09CnYHiZ5jGT1wr1TXJ9Zt	1	Thank You (Not So Bad)	2024-07-31 15:39:09.979	👷
+spotify:track:3jwQt00cvkN57H6ZR75W2K	1	RUNRUNRUN	2024-07-31 15:46:00.159	🦥
+spotify:track:7MmG8p0F9N3C4AXdK6o6Eb	1	Outside (feat. Ellie Goulding)	2024-07-31 15:57:34.86	👷
+spotify:track:2mobr1UlKjhxDTOVqng3jw	1	Home	2024-07-31 16:29:43.417	☔
+spotify:track:2mobr1UlKjhxDTOVqng3jw	1	Home	2024-07-31 16:29:44.407	🍂
+spotify:track:2mobr1UlKjhxDTOVqng3jw	1	Home	2024-07-31 16:29:54.542	📼
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2024-07-31 17:27:30.788	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2024-07-31 17:27:32.158	👷
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-07-31 17:52:14.414	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-07-31 18:15:22.574	👷
+spotify:track:7kpviYjVYmD4VW7vsZTQCU	1	Annie Are You Ok - LUM!X Remix	2024-07-31 18:20:36.205	👷
+spotify:track:3UxXEGw1UDAL4KBooq2VxY	1	Therapy	2024-08-01 12:19:22.873	👷
+spotify:track:35rozLoS6QLE8HX8qswM3k	1	Rescue Me	2024-08-01 12:21:44.057	👷
+spotify:track:6ZOBP3NvffbU4SZcrnt1k6	1	Kryptonite	2024-08-01 12:27:10.656	👷
+spotify:track:18lR4BzEs7e3qzc0KVkTpU	1	What I've Done	2024-08-01 12:30:52.798	👷
+spotify:track:18lR4BzEs7e3qzc0KVkTpU	1	What I've Done	2024-08-01 12:31:54.63	💿
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:45:57.483	💿
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:46:00.476	👷
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:46:01.674	🔥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:46:02.03	🦥
 \.
 
 
