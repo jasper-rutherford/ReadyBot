@@ -4823,6 +4823,9 @@ spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:45:57.483	💿
 spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:46:00.476	👷
 spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:46:01.674	🔥
 spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-01 12:46:02.03	🦥
+spotify:track:0n5jqofn0uTFr7oYzW7D5D	1	SURVIVOR	2024-08-02 20:26:35.284	🦥
+spotify:track:7EXennxBRtugSuQX13uLSu	1	Blow It Up	2024-08-02 23:42:07.203	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2024-08-03 00:02:31.966	🦥
 \.
 
 
