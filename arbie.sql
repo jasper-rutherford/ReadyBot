@@ -4830,6 +4830,8 @@ spotify:track:0nrRP2bk19rLc0orkWPQk2	1	Wake Me Up	2024-08-05 11:42:48.359	☔
 spotify:track:0SuLAslEMFZAXf0SwY7syi	1	All Time Low	2024-08-05 11:43:11.793	☔
 spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-08-05 11:47:37.902	☔
 spotify:track:0JiVRyTJcJnmlwCZ854K4p	1	Alone	2024-08-05 11:50:30.415	☔
+spotify:track:2L52NkXrarZ4kxCCQ5B3r4	1	Nightshade	2024-08-05 15:31:11.857	🌌
+spotify:track:6Qyc6fS4DsZjB2mRW9DsQs	1	Iris	2024-08-05 16:13:37.797	📼
 \.
 
 
