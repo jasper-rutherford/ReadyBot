@@ -4832,6 +4832,25 @@ spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-08-05 11:47:37.902	☔
 spotify:track:0JiVRyTJcJnmlwCZ854K4p	1	Alone	2024-08-05 11:50:30.415	☔
 spotify:track:2L52NkXrarZ4kxCCQ5B3r4	1	Nightshade	2024-08-05 15:31:11.857	🌌
 spotify:track:6Qyc6fS4DsZjB2mRW9DsQs	1	Iris	2024-08-05 16:13:37.797	📼
+spotify:track:0AjmK0Eai4zGrLaJwPvrDp	1	Too Sweet	2024-08-10 15:02:09.763	🦥
+spotify:track:5s7m2xNZWgz5FqVSIvJcGA	1	Save a Horse (Ride a Cowboy)	2024-08-10 15:03:01.036	📼
+spotify:track:5s7m2xNZWgz5FqVSIvJcGA	1	Save a Horse (Ride a Cowboy)	2024-08-10 15:03:36.14	📼
+spotify:track:0AjmK0Eai4zGrLaJwPvrDp	1	Too Sweet	2024-08-10 20:25:47.386	🦥
+spotify:track:0AjmK0Eai4zGrLaJwPvrDp	1	Too Sweet	2024-08-10 20:56:27.559	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2024-08-10 20:56:40.559	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2024-08-10 20:56:44.694	🦥
+spotify:track:5fIZ683j2xPeLAXfHeWKEG	1	Dernière danse - Techno Mix	2024-08-10 20:57:21.135	🦥
+spotify:track:4MSj19TwYBLgDFj3ddEeco	1	Black Friday (pretty like the sun)	2024-08-10 20:57:52.477	🦥
+spotify:track:51ZQ1vr10ffzbwIjDCwqm4	1	we can't be friends (wait for your love)	2024-08-10 20:58:09.516	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2024-08-10 20:58:16.357	🦥
+spotify:track:2GxrNKugF82CnoRFbQfzPf	1	i like the way you kiss me	2024-08-10 20:58:29.626	🦥
+spotify:track:6rdga62e70bV9Mll0X8UJ5	1	Drinking with Cupid	2024-08-10 20:59:20.168	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-10 20:59:52.41	🦥
+spotify:track:2ovjS1yyTSXy3F0KHlTVTx	1	Be Okay - CLMD Remix	2024-08-10 21:01:46.71	🦥
+spotify:track:0tyR7Bu9P086aWBFZ4QJoo	1	Monsters (feat. blackbear)	2024-08-10 21:03:26.794	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-08-10 23:25:41.143	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-11 01:18:38.014	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-11 01:18:50.183	🔥
 \.
 
 
