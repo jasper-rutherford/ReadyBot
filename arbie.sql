@@ -4860,6 +4860,10 @@ spotify:track:1hBM2D1ULT3aeKuddSwPsK	-1	STARSTRUKK (feat. Katy Perry)	2024-08-12
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	-1	STARSTRUKK (feat. Katy Perry)	2024-08-12 23:17:44.786	📼
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	-1	STARSTRUKK (feat. Katy Perry)	2024-08-12 23:17:45.94	📼
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	-1	STARSTRUKK (feat. Katy Perry)	2024-08-12 23:17:46.835	📼
+spotify:track:3o9kpgkIcffx0iSwxhuNI2	1	Numb Little Bug	2024-08-13 12:15:30.795	🦥
+spotify:track:3ikuDKc66w7CH9hRgc2KfX	1	All My Exes' Moms	2024-08-13 12:18:14.899	🦥
+spotify:track:2bFGGsScXp2Tu10jKMCKO6	1	Figure You Out	2024-08-13 12:20:55.519	🦥
+spotify:track:1QeJggfGBH9xHFGY2PH9Gm	1	Walls	2024-08-13 12:22:39.06	🦥
 \.
 
 
