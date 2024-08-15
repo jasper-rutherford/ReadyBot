@@ -4864,6 +4864,23 @@ spotify:track:3o9kpgkIcffx0iSwxhuNI2	1	Numb Little Bug	2024-08-13 12:15:30.795	�
 spotify:track:3ikuDKc66w7CH9hRgc2KfX	1	All My Exes' Moms	2024-08-13 12:18:14.899	🦥
 spotify:track:2bFGGsScXp2Tu10jKMCKO6	1	Figure You Out	2024-08-13 12:20:55.519	🦥
 spotify:track:1QeJggfGBH9xHFGY2PH9Gm	1	Walls	2024-08-13 12:22:39.06	🦥
+spotify:track:5fIZ683j2xPeLAXfHeWKEG	1	Dernière danse - Techno Mix	2024-08-14 11:52:45.142	⚔️
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2024-08-14 11:54:36.759	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-08-14 12:02:09.704	🦥
+spotify:track:09CnYHiZ5jGT1wr1TXJ9Zt	1	Thank You (Not So Bad)	2024-08-14 12:05:00.251	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-14 12:53:40.784	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-14 12:53:42.068	🦥
+spotify:track:18lR4BzEs7e3qzc0KVkTpU	1	What I've Done	2024-08-14 13:08:56.412	🦥
+spotify:track:6ZOBP3NvffbU4SZcrnt1k6	1	Kryptonite	2024-08-14 13:24:42.093	🦥
+spotify:track:2ovjS1yyTSXy3F0KHlTVTx	1	Be Okay - CLMD Remix	2024-08-14 13:42:11.013	🦥
+spotify:track:3o9kpgkIcffx0iSwxhuNI2	1	Numb Little Bug	2024-08-14 13:50:16.552	🦥
+spotify:track:18lR4BzEs7e3qzc0KVkTpU	1	What I've Done	2024-08-14 15:45:43.647	👷
+spotify:track:0knsBJ21cqAbgjdr2i0R9b	1	The Bad Touch 2k20	2024-08-14 16:00:31.085	🦥
+spotify:track:2Z8RcNkYqStbwUdS7qyx6s	1	Sink or Swim	2024-08-14 16:08:43.122	🦥
+spotify:track:2Z8RcNkYqStbwUdS7qyx6s	1	Sink or Swim	2024-08-14 16:08:47.645	👷
+spotify:track:7kpviYjVYmD4VW7vsZTQCU	1	Annie Are You Ok - LUM!X Remix	2024-08-14 16:23:10.36	👷
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-08-14 16:31:33.78	👷
+spotify:track:3iUDHA6FGAKfHX2jmgF0vO	1	i always kinda knew you’d be the death of me	2024-08-14 16:34:24.161	👷
 \.
 
 
