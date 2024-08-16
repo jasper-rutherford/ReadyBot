@@ -4881,6 +4881,10 @@ spotify:track:2Z8RcNkYqStbwUdS7qyx6s	1	Sink or Swim	2024-08-14 16:08:47.645	👷
 spotify:track:7kpviYjVYmD4VW7vsZTQCU	1	Annie Are You Ok - LUM!X Remix	2024-08-14 16:23:10.36	👷
 spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-08-14 16:31:33.78	👷
 spotify:track:3iUDHA6FGAKfHX2jmgF0vO	1	i always kinda knew you’d be the death of me	2024-08-14 16:34:24.161	👷
+spotify:track:1Vj7ZZgVpNIKqkC2bA9mpx	1	He's A Pirate (Save Me)	2024-08-15 18:32:20.204	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2024-08-15 22:17:48.022	🦥
+spotify:track:09rcsC6M15EZPbCVmrqUYK	1	Good Life	2024-08-16 12:02:59.52	🦥
+spotify:track:0jPHJDzPCT5tGkqnb0aeDo	1	Crusade - Club Edit	2024-08-16 14:26:13.212	🦥
 \.
 
 
