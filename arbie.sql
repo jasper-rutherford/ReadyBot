@@ -4887,6 +4887,7 @@ spotify:track:09rcsC6M15EZPbCVmrqUYK	1	Good Life	2024-08-16 12:02:59.52	🦥
 spotify:track:0jPHJDzPCT5tGkqnb0aeDo	1	Crusade - Club Edit	2024-08-16 14:26:13.212	🦥
 spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2024-08-21 21:39:39.714	🦥
 spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-21 22:14:47.545	🦥
+spotify:track:1KixkQVDUHggZMU9dUobgm	1	My Head & My Heart	2024-08-24 17:51:32.897	⚔️
 \.
 
 
