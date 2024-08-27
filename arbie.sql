@@ -4890,6 +4890,9 @@ spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-08-21 22:14:47.545	🦥
 spotify:track:1KixkQVDUHggZMU9dUobgm	1	My Head & My Heart	2024-08-24 17:51:32.897	⚔️
 spotify:track:4FWbsd91QSvgr1dSWwW51e	1	TRUSTFALL	2024-08-25 01:16:25.474	🦥
 spotify:track:0jPHJDzPCT5tGkqnb0aeDo	1	Crusade - Club Edit	2024-08-25 02:23:15.861	🦥
+spotify:track:5LWmVBXWFwspwJ77mecPVN	1	ALL WE GOT	2024-08-25 23:09:16.366	🦥
+spotify:track:2Z8RcNkYqStbwUdS7qyx6s	1	Sink or Swim	2024-08-25 23:22:23.857	🦥
+spotify:track:6GG73Jik4jUlQCkKg9JuGO	1	The Middle	2024-08-26 16:39:36.97	🦥
 \.
 
 
