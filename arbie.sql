@@ -4902,6 +4902,7 @@ spotify:track:3L7RtEcu1Hw3OXrpnthngx	1	Don't You Want Me	2024-09-03 18:21:05.02	
 spotify:track:7HKxTNVlkHsfMLhigmhC0I	1	Call Me	2024-09-03 18:31:47.814	🦥
 spotify:track:0yp3TvJNlG50Q4tAHWNCRm	1	Enjoy the Silence	2024-09-03 19:22:28.318	🦥
 spotify:track:2IO7yf562c1zLzpanal1DT	1	Gasoline	2024-09-04 19:35:28.495	🦥
+spotify:track:1Vj7ZZgVpNIKqkC2bA9mpx	1	He's A Pirate (Save Me)	2024-09-04 22:17:57.61	🦥
 \.
 
 
