@@ -363,27 +363,37 @@ var bot = {
     },
 
     orderedUris: function (emoji) {
-        let orderedUrisHelper1 = bot.queryInterval == "" ? "" : `AND s1.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
-        let orderedUrisHelper2 = bot.queryInterval == "" ? "" : `AND s2.stamp >= NOW() - INTERVAL '${bot.queryInterval}'`
-
-        let query = `SELECT DISTINCT song_name, spotify_uri, (
-            SELECT SUM(score)
-            FROM scores AS s2
-            WHERE s2.spotify_uri = s1.spotify_uri
-              AND s2.themoji = '${emoji}'
-               ${orderedUrisHelper2}
-          ) AS total_score
-          FROM scores AS s1
-          WHERE s1.themoji = '${emoji}'
-            ${orderedUrisHelper1}
-            and (
-                SELECT SUM(score)
-                FROM scores AS s2
-                WHERE s2.spotify_uri = s1.spotify_uri
-                  AND s2.themoji = '${emoji}'
-                   ${orderedUrisHelper2}
-              ) > ${bot.minScore}
-            ORDER BY total_score DESC;`
+        let query = ` 
+        WITH FilteredScores AS (
+        -- Step 1: Filter records by the specified emoji and time interval
+        SELECT
+            spotify_uri,
+            song_name,
+            score,
+            stamp
+        FROM scores
+        WHERE themoji = '${emoji}'
+            AND stamp >= NOW() - INTERVAL '${queryInterval}'
+        ),
+        AggregatedData AS (
+        -- Step 2: Aggregate to get total score and median timestamp for each unique URI
+        SELECT
+            spotify_uri,
+            song_name,
+            SUM(score) AS total_score,
+            PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY stamp DESC) AS median_timestamp
+        FROM FilteredScores
+        GROUP BY spotify_uri, song_name
+        )
+        -- Step 3: Sort by total score (descending), and median timestamp (descending) in case of ties
+        SELECT
+        spotify_uri,
+        song_name,
+        total_score,
+        median_timestamp
+        FROM AggregatedData
+        ORDER BY total_score DESC, median_timestamp DESC;
+        `
 
         return new Promise((resolve, reject) => {
             this.query(query).then((results) => {

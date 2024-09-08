@@ -204,7 +204,7 @@ const orderer = (bot, themoji) => {
     bot.mostRecentOrderTime = new Date()
     bot.saveToFile()
 
-    //check emoji is valid
+    // check emoji is valid
     if (!bot.getThemojis().includes(themoji)) {
         console.log(`Tried to order a theme that does not exist (${themoji})`);
         bot.updateUtilityMessage(`${themoji} does not exist.`)
@@ -221,7 +221,7 @@ const orderer = (bot, themoji) => {
         return
     }
 
-    //update the ballot
+    // update the ballot
     bot.updateUtilityMessage(`Ordering ${themoji}`)
     console.log(`Ordering ${themoji}`)
 
