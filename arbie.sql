@@ -4903,6 +4903,511 @@ spotify:track:7HKxTNVlkHsfMLhigmhC0I	1	Call Me	2024-09-03 18:31:47.814	🦥
 spotify:track:0yp3TvJNlG50Q4tAHWNCRm	1	Enjoy the Silence	2024-09-03 19:22:28.318	🦥
 spotify:track:2IO7yf562c1zLzpanal1DT	1	Gasoline	2024-09-04 19:35:28.495	🦥
 spotify:track:1Vj7ZZgVpNIKqkC2bA9mpx	1	He's A Pirate (Save Me)	2024-09-04 22:17:57.61	🦥
+spotify:track:2FIa0Zmilui8GpApF3vF1a	1	Poppin Bottles	2024-09-08 18:41:20.393	🦥
+spotify:track:2IO7yf562c1zLzpanal1DT	1	Gasoline	2024-09-08 19:21:01.102	🦥
+spotify:track:1Vj7ZZgVpNIKqkC2bA9mpx	1	He's A Pirate (Save Me)	2024-09-09 13:17:07.223	🦥
+spotify:track:7HKxTNVlkHsfMLhigmhC0I	1	Call Me	2024-09-09 13:20:03.632	🦥
+spotify:track:2bFGGsScXp2Tu10jKMCKO6	-1	Figure You Out	2024-09-09 13:35:37.739	🦥
+spotify:track:6h1s7cKnUtsbRpE5bwnUTf	1	dying on the inside	2024-09-09 13:38:39.634	🦥
+spotify:track:41qoLqCcn0X07B6XW9b28v	1	Cravin'	2024-09-09 18:51:47.27	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-09-09 19:06:57.2	🦥
+spotify:track:2KReCz1L5XkGIBhDncQ5VZ	1	BABY SAID	2024-09-09 19:11:32.662	🦥
+spotify:track:1Tob6YkutQ6jjWKzLO4gkr	1	Careful What You Wish For (the doctor said to)	2024-09-09 19:13:55.559	🦥
+spotify:track:0e00DiF2T9znEdmWakYSC3	1	labour	2024-09-10 16:10:31.118	🦥
+spotify:track:6xlOnm5MITIKtixzJW8R0j	1	DARKSIDE	2024-09-10 16:15:38.669	🦥
+spotify:track:6xlOnm5MITIKtixzJW8R0j	1	DARKSIDE	2024-09-10 16:17:17.457	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-09-11 15:13:25.92	🦥
+spotify:track:1wl8JCQv7KjxO74adZItrJ	1	Watermelon Sugar - BB Team Edit	2024-09-11 15:27:45.826	🦥
+spotify:track:6h1s7cKnUtsbRpE5bwnUTf	1	dying on the inside	2024-09-11 15:35:56.033	🦥
+spotify:track:7uUahoeqGNRMbpdeiLj1rS	1	Panic Room	2024-09-11 15:51:00.602	🦥
+spotify:track:0jPHJDzPCT5tGkqnb0aeDo	1	Crusade - Club Edit	2024-09-12 15:57:48.135	🦥
+spotify:track:2x4JC9TxW2LACuuxbsncfG	1	Mockingbird	2024-09-12 16:03:14.945	🦥
+spotify:track:3iaELj7fOCqIPTl7UpcXX2	1	Bright Lights	2024-09-12 20:51:33.052	🦥
+spotify:track:1Ey05kmbuUkZBvTfqDwxx8	1	Break My Stride	2024-09-12 20:58:38.747	🦥
+spotify:track:0cnFCOB8DxHmRLPjmgtptA	1	It Don’t Matter	2024-09-12 22:27:29.861	🦥
+spotify:track:1wl8JCQv7KjxO74adZItrJ	1	Watermelon Sugar - BB Team Edit	2024-09-12 23:16:51.642	🦥
+spotify:track:3L7RtEcu1Hw3OXrpnthngx	-1	Don't You Want Me	2024-09-12 23:18:02.687	🦥
+spotify:track:7HKxTNVlkHsfMLhigmhC0I	-1	Call Me	2024-09-12 23:18:20.244	🦥
+spotify:track:7HKxTNVlkHsfMLhigmhC0I	1	Call Me	2024-09-12 23:18:48.29	🦥
+spotify:track:1dt220OBbkTsYz1NLVKIaw	1	Call Me (with R3HAB & Timmy Trumpet)	2024-09-12 23:19:38.55	🦥
+spotify:track:1dt220OBbkTsYz1NLVKIaw	-1	Call Me (with R3HAB & Timmy Trumpet)	2024-09-12 23:19:56.222	🦥
+spotify:track:2IO7yf562c1zLzpanal1DT	1	Gasoline	2024-09-16 14:48:24.576	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-09-16 14:54:11.192	🦥
+spotify:track:2x4JC9TxW2LACuuxbsncfG	1	Mockingbird	2024-09-16 14:58:01.132	🦥
+spotify:track:6h1s7cKnUtsbRpE5bwnUTf	1	dying on the inside	2024-09-16 15:00:03.341	🦥
+spotify:track:0jPHJDzPCT5tGkqnb0aeDo	1	Crusade - Club Edit	2024-09-16 15:03:33.143	🦥
+spotify:track:1Tob6YkutQ6jjWKzLO4gkr	1	Careful What You Wish For (the doctor said to)	2024-09-16 15:12:08.646	🦥
+spotify:track:0e00DiF2T9znEdmWakYSC3	1	labour	2024-09-16 15:18:39.436	🦥
+spotify:track:1wl8JCQv7KjxO74adZItrJ	1	Watermelon Sugar - BB Team Edit	2024-09-16 15:24:47.018	🦥
+spotify:track:5LWmVBXWFwspwJ77mecPVN	1	ALL WE GOT	2024-09-16 15:32:08.138	🦥
+spotify:track:2Z8RcNkYqStbwUdS7qyx6s	1	Sink or Swim	2024-09-16 15:34:50.402	🦥
+spotify:track:0cnFCOB8DxHmRLPjmgtptA	1	It Don’t Matter	2024-09-16 15:41:58.445	🦥
+spotify:track:3iaELj7fOCqIPTl7UpcXX2	1	Bright Lights	2024-09-16 15:58:58.628	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2024-09-16 16:57:13.467	🦥
+spotify:track:04hfEd7kPgF1huPIOPNAdL	1	How Low	2024-09-20 16:18:12.039	🦥
+spotify:track:3zjjzKg16tczCMwckGKGuH	1	Happy Pills	2024-09-22 15:17:38.025	🦥
+spotify:track:7HDbbKd5qv67iwVWouTl9p	1	I Like to Party	2024-09-22 15:28:54.084	🦥
+spotify:track:0SGunE3qppk4PajqOvR6uu	1	Feels Like This (feat. Indiiana)	2024-09-23 13:37:48.265	🦥
+spotify:track:5Owz0Wkb3XgaADAm6dEr2O	1	We Ride (feat. Teddy Bee)	2024-09-23 13:46:55.663	🦥
+spotify:track:7EXennxBRtugSuQX13uLSu	1	Blow It Up	2024-09-23 14:00:39.611	🦥
+spotify:track:5ofHoV0ywhsZUOArK1Oa1h	1	Say It Right - ILURO Remix	2024-09-23 14:34:05.721	🦥
+spotify:track:6RSVgjjYRtKg4FDyx2Lj1u	1	The Best	2024-09-23 23:03:19.936	🦥
+spotify:track:0n5jqofn0uTFr7oYzW7D5D	1	SURVIVOR	2024-09-23 23:11:21.689	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-09-24 15:02:45.979	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2024-09-24 23:15:02.757	🦥
+spotify:track:0jeGTzkvrNRBC8Dt8bsDRN	1	Don't Go Back To Paris	2024-09-25 12:19:25.838	🌌
+spotify:track:0jeGTzkvrNRBC8Dt8bsDRN	1	Don't Go Back To Paris	2024-09-25 12:19:31.047	👷
+spotify:track:2p1EDUqcrCjrIf3oTgGW85	1	I'm All Fucked Up	2024-09-25 12:33:00.801	👷
+spotify:track:2Dazu1HgFj1geJOfKKFOpf	1	15 MINUTES	2024-09-25 20:04:52.462	🦥
+spotify:track:5fZJQrFKWQLb7FpJXZ1g7K	1	A Bar Song (Tipsy)	2024-09-25 20:09:34.224	🦥
+spotify:track:2PnlsTsOTLE5jnBnNe2K0A	1	The Emptiness Machine	2024-09-25 20:57:23.656	🦥
+spotify:track:1qwno7xb5mJe71xtMS6jl2	1	High Enough	2024-09-25 21:09:50.05	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2024-09-27 12:39:06.559	🦥
+spotify:track:7LbhIjYNfCguxjAw43Mkff	1	Ghost	2024-09-27 12:41:55.979	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2024-09-27 12:45:03.559	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2024-09-27 12:45:32.008	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2024-09-27 12:47:43.447	🦥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2024-09-27 13:17:24.126	🦥
+spotify:track:3V1AyoxguXfpUSlFMYsxap	1	Mucho Mambo (Sway)	2024-09-27 13:31:20.859	🦥
+spotify:track:6dnWU3ZywAIalucAAqjKlk	1	Voices	2024-09-27 13:40:41.29	🦥
+spotify:track:1Vj7ZZgVpNIKqkC2bA9mpx	1	He's A Pirate (Save Me)	2024-09-27 16:28:29.083	🦥
+spotify:track:6h1s7cKnUtsbRpE5bwnUTf	1	dying on the inside	2024-09-29 21:07:25.135	🦥
+spotify:track:6dnWU3ZywAIalucAAqjKlk	1	Voices	2024-09-29 21:19:28.649	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-09-29 21:29:13.524	🦥
+spotify:track:0e00DiF2T9znEdmWakYSC3	1	labour	2024-09-29 21:34:38.049	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2024-10-01 09:30:39.06	👷
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2024-10-01 09:30:37.27	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	-1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2024-10-01 09:30:53.036	🦥
+spotify:track:4pBuhoBxgwBpkkOhfT6p6N	1	Tarantella	2024-10-01 09:41:13.901	👷
+spotify:track:4pBuhoBxgwBpkkOhfT6p6N	1	Tarantella	2024-10-01 09:41:20.192	🦥
+spotify:track:0l6fM0B3KDdGRj7R8vo4hK	1	Satisfaction - Hardwell & Maddix Remix	2024-10-01 09:56:28.844	👷
+spotify:track:67aNGns9ZH1jm6nruyzBGU	1	Lullaby	2024-10-01 10:07:47.354	🦥
+spotify:track:67aNGns9ZH1jm6nruyzBGU	1	Lullaby	2024-10-01 10:07:51.995	👷
+spotify:track:46Tjel8UJ2nR0uFgXkT9Y7	1	Like A G6 (with Naeleck)	2024-10-01 10:23:02.645	👷
+spotify:track:0QlOkt8nkZ8zqu8xb2SHU8	1	Not Fair	2024-10-01 10:38:18.636	🦥
+spotify:track:4hSm8pkwQCrIVgUET79zwy	1	EURODANCER 2020	2024-10-01 16:20:28.168	👷
+spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2024-10-01 16:26:13.721	👷
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-10-01 17:18:11.107	👷
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-10-01 17:18:12.038	🦥
+spotify:track:3GXgrEjBjonrQrPEEi13yU	1	Synchronize	2024-10-01 17:34:43.738	👷
+spotify:track:5lN1EH25gdiqT1SFALMAq1	1	Gold on the Ceiling	2024-10-01 17:47:26.131	👷
+spotify:track:35iR1qzexmbcUSgA01S4gI	1	Colorado	2024-10-01 17:50:00.369	👷
+spotify:track:0LtkAAEpEp1lkLX1ZvjHZb	1	Follow You	2024-10-01 17:57:06.044	👷
+spotify:track:7EXennxBRtugSuQX13uLSu	1	Blow It Up	2024-10-02 11:15:50.953	👷
+spotify:track:35iR1qzexmbcUSgA01S4gI	1	Colorado	2024-10-02 11:25:22.197	👷
+spotify:track:59NraMJsLaMCVtwXTSia8i	1	Prada	2024-10-02 11:30:03.919	👷
+spotify:track:1PtQJZVZIdWIYdARpZRDFO	1	Running Up That Hill (A Deal With God)	2024-10-02 11:37:36.001	👷
+spotify:track:2FxJX5c1FkfLpladsgoLAD	1	Don't You Want Me	2024-10-02 11:44:16.925	👷
+spotify:track:67aNGns9ZH1jm6nruyzBGU	1	Lullaby	2024-10-02 12:40:22.156	🦥
+spotify:track:3trdEhvJEmaBEHKcr6RiWH	1	This Is Gonna Hurt	2024-10-02 12:43:26.163	👷
+spotify:track:5zr5aYz9hJJJ25wotnbVzH	1	BLIND	2024-10-02 13:18:04.703	👷
+spotify:track:4c1TXKNAh4yb5cb0zE3x1X	1	MDMA	2024-10-02 13:19:53.556	👷
+spotify:track:46lyJh9GYmWsHez3EsvmAx	1	Rise Up (feat. Vamero)	2024-10-02 13:44:24.204	🦥
+spotify:track:04hfEd7kPgF1huPIOPNAdL	1	How Low	2024-10-02 16:38:30.441	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2024-10-02 16:44:22.398	👷
+spotify:track:5FhnPzf4sZ68ZZJ1n5oek1	1	Up & Down	2024-10-02 16:45:16.927	🦥
+spotify:track:6dnWU3ZywAIalucAAqjKlk	1	Voices	2024-10-02 17:03:27.591	🦥
+spotify:track:0GTPmh5G40joBg93vcSQNq	1	Don't Say Goodbye (feat. Tove Lo)	2024-10-02 17:31:23.904	🦥
+spotify:track:0ge3ZUDEvyPZvd13VoVd0H	1	Gone Tomorrow	2024-10-03 13:57:14.211	🦥
+spotify:track:6WVHfpzYW3HooQaCC80opC	1	Halo (feat. PIA MARIA)	2024-10-03 14:00:48.914	🦥
+spotify:track:05Ke9LELmOiA5i3L0ybFUy	1	Fade Away	2024-10-04 01:30:17.52	🦥
+spotify:track:0mivIbo4LkpblsGoRzEJNa	1	Gimme! Gimme! Gimme!	2024-10-06 19:09:58.04	🦥
+spotify:track:5sK3o66yupTNIK6gWgzGjf	1	Dance Again	2024-10-06 19:15:57.13	🦥
+spotify:track:7y9iMe8SOB6z3NoHE2OfXl	1	Bad At Love	2024-10-06 19:41:57.213	🐺
+spotify:track:0QlOkt8nkZ8zqu8xb2SHU8	1	Not Fair	2024-10-07 15:25:21.707	🦥
+spotify:track:48kwdkeHEJEuMzcKklPv5b	1	Sorry For Party Rocking	2024-10-08 12:26:37.795	🎉
+spotify:track:0tr0D36L1RwPdUTFfyNq37	1	Tonight Is the Night	2024-10-08 12:48:03.241	🎉
+spotify:track:7tNTW9aoi0qVC1z2qPJmQG	1	Macarena	2024-10-08 13:31:30.723	🎉
+spotify:track:1nYeVF5vIBxMxfPoL0SIWg	1	Hallucinate	2024-10-08 13:32:48.364	🎉
+spotify:track:78T1d6RsHPY6gcWlurCK5q	1	Everybody Wants You - Shift K3Y Remix	2024-10-08 13:50:56.638	🎉
+spotify:track:3DNziCcqRd2v8uQWwec1GW	1	Skin - Quarterhead Remix	2024-10-08 13:59:56.336	🎉
+spotify:track:4DvhkX2ic4zWkQeWMwQ2qf	1	Like A G6	2024-10-08 14:32:46.531	🎉
+spotify:track:1IaYWv32nFFMdljBIjMY5T	1	Telephone	2024-10-08 15:00:33.185	🎉
+spotify:track:2FIa0Zmilui8GpApF3vF1a	1	Poppin Bottles	2024-10-08 15:04:29.399	🦥
+spotify:track:2FIa0Zmilui8GpApF3vF1a	1	Poppin Bottles	2024-10-08 15:04:31.388	🎉
+spotify:track:45Egmo7icyopuzJN0oMEdk	1	Love Lies (with Normani)	2024-10-08 18:17:01.823	🐺
+spotify:track:3cfOd4CMv2snFaKAnMdnvK	1	All Star	2024-10-08 18:19:53.139	📼
+spotify:track:0v2boHmWtxMTD2REGN8MbK	1	Levitating (feat. DaBaby)	2024-10-08 18:28:59.359	🦠
+spotify:track:2tnVG71enUj33Ic2nFN6kZ	1	Ride It	2024-10-08 18:36:30.119	🦠
+spotify:track:4WRtXqu9TmvvwZ3bzdcCVQ	1	Thousand Lullabies	2024-10-08 18:46:50.538	🎉
+spotify:track:4WRtXqu9TmvvwZ3bzdcCVQ	1	Thousand Lullabies	2024-10-08 18:46:51.539	🦥
+spotify:track:0aLG42zaidNkblhiQgJknP	1	WANT	2024-10-08 18:50:53.251	🐺
+spotify:track:0aLG42zaidNkblhiQgJknP	1	WANT	2024-10-08 18:51:59.781	🎉
+spotify:track:5p7ujcrUXASCNwRaWNHR1C	1	Without Me	2024-10-08 19:01:28.404	🐺
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2024-10-08 22:51:27.724	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2024-10-12 23:41:12.138	🎉
+spotify:track:1M31zIMamohkItOjLaBbtx	1	V.A.N	2024-10-13 11:33:45.366	🦥
+spotify:track:6Q7yqVXMisjFVcFord4W2R	1	Buzzcut Season	2024-10-14 11:13:00.488	🪬
+spotify:track:70eDxAyAraNTiD6lx2ZEnH	1	Ex's & Oh's	2024-10-18 16:03:18.562	🐺
+spotify:track:63rbP24OzfaQCJjsHWZXnY	1	Where Them Girls At (feat. Nicki Minaj & Flo Rida)	2024-10-18 16:22:38.251	🎉
+spotify:track:4WRtXqu9TmvvwZ3bzdcCVQ	1	Thousand Lullabies	2024-10-18 16:52:32.41	🦥
+spotify:track:0mivIbo4LkpblsGoRzEJNa	1	Gimme! Gimme! Gimme!	2024-10-18 17:33:00.886	🦥
+spotify:track:2ejhK0OtBe4CdfD67uqzGB	1	KIZAO	2024-10-21 15:04:19.835	🦥
+spotify:track:0QlOkt8nkZ8zqu8xb2SHU8	1	Not Fair	2024-10-23 11:08:53.509	🦥
+spotify:track:0mivIbo4LkpblsGoRzEJNa	1	Gimme! Gimme! Gimme!	2024-10-23 11:13:09.536	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-10-23 11:25:57.009	🦥
+spotify:track:5fZJQrFKWQLb7FpJXZ1g7K	1	A Bar Song (Tipsy)	2024-10-23 11:29:59.704	🦥
+spotify:track:5Owz0Wkb3XgaADAm6dEr2O	1	We Ride (feat. Teddy Bee)	2024-10-23 11:35:25.925	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2024-10-23 12:53:25.177	🦥
+spotify:track:0oz5Meupgpje87RXjYXyCH	1	Frozen	2024-10-23 13:47:48.77	🦥
+spotify:track:0GTPmh5G40joBg93vcSQNq	1	Don't Say Goodbye (feat. Tove Lo)	2024-10-23 13:59:04.798	🦥
+spotify:track:0ou367q5bmco9pZNxq80iD	1	Day 'N' Nite - Martin Jensen Edit	2024-10-23 14:19:40.479	🦥
+spotify:track:0d1ujEcFwTqA4kWliTSJim	1	Don't You Hold Me Down	2024-10-23 14:51:02.183	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2024-10-23 15:23:09.121	🦥
+spotify:track:4WRtXqu9TmvvwZ3bzdcCVQ	1	Thousand Lullabies	2024-10-23 18:49:10.514	🦥
+spotify:track:1q3qh7hEJrPmPH7uOteYSr	-1	No Fun	2024-10-24 12:23:06.88	🦥
+spotify:track:4J7CKHCF3mdL4diUsmW8lq	1	Under Control (feat. Hurts)	2024-10-24 12:43:00.619	🦥
+spotify:track:67aNGns9ZH1jm6nruyzBGU	1	Lullaby	2024-10-24 12:46:06.064	🦥
+spotify:track:67aNGns9ZH1jm6nruyzBGU	1	Lullaby	2024-10-24 12:48:54.579	🦥
+spotify:track:4fLnoXqsxHZFvGKppc7kCr	1	Cynical	2024-10-24 12:59:28.054	🦥
+spotify:track:6vQEOP9KgXITsVpFnKSbZ3	1	Paradise	2024-10-24 13:21:37.13	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2024-10-24 13:58:07.282	🦥
+spotify:track:2HJBsWX5LQK8Y95JzPJ4zp	1	Tattoo - Topic Remix	2024-10-24 15:31:04.807	🦥
+spotify:track:75c2zaSdDBSX0A8Jyvm4fO	1	older	2025-01-14 15:53:06.53	🦥
+spotify:track:2PnlsTsOTLE5jnBnNe2K0A	1	The Emptiness Machine	2024-10-25 18:11:29.471	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	1	Living On Video (feat. DTale)	2024-10-25 18:15:24.386	🦥
+spotify:track:0W6MlHGvHAcSsoRt34pZIt	-1	Living On Video (feat. DTale)	2024-10-25 18:15:30.175	🦥
+spotify:track:5Owz0Wkb3XgaADAm6dEr2O	1	We Ride (feat. Teddy Bee)	2024-10-25 18:15:34.375	🦥
+spotify:track:0cnFCOB8DxHmRLPjmgtptA	1	It Don’t Matter	2024-10-28 18:32:19.866	🦥
+spotify:track:6vQEOP9KgXITsVpFnKSbZ3	1	Paradise	2024-10-28 23:52:58.649	🦥
+spotify:track:2ejhK0OtBe4CdfD67uqzGB	1	KIZAO	2024-10-28 23:59:42.886	🦥
+spotify:track:0cnFCOB8DxHmRLPjmgtptA	1	It Don’t Matter	2024-10-29 00:03:06.055	🦥
+spotify:track:2PnlsTsOTLE5jnBnNe2K0A	1	The Emptiness Machine	2024-10-30 22:52:15.493	🦥
+spotify:track:6vQEOP9KgXITsVpFnKSbZ3	1	Paradise	2024-10-31 19:39:52.323	🦥
+spotify:track:1M2NNUv8UV5smjMVGyTrmz	1	Where Do We Go	2024-11-01 11:34:24.278	🦥
+spotify:track:5Nwh8kghoqebxmco5ZWbDt	1	Born To Love Ya	2024-11-01 13:22:54.51	🦥
+spotify:track:0QlOkt8nkZ8zqu8xb2SHU8	1	Not Fair	2024-11-01 15:15:09.073	🦥
+spotify:track:4WRtXqu9TmvvwZ3bzdcCVQ	1	Thousand Lullabies	2024-11-03 17:07:13.591	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2024-11-03 17:09:36.179	🦥
+spotify:track:2ejhK0OtBe4CdfD67uqzGB	1	KIZAO	2024-11-03 21:34:39.763	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2024-11-04 08:09:38.758	🦥
+spotify:track:1svpo8ORIHy4BdgicdyUjx	1	Spot a Fake	2024-11-05 11:13:54.568	🦥
+spotify:track:4ZnkygoWLzcGbQYCm3lkae	1	Rush	2024-11-05 11:54:22.243	🦥
+spotify:track:63y6xWR4gXz7bnUGOk8iI6	1	Into You	2024-11-05 15:17:27.017	🦥
+spotify:track:4qP9K48aEcG50hSgmIQVi3	1	Cold As Ice	2024-11-07 11:02:14.095	🦥
+spotify:track:2T8TNC8RihVRCivLo1ryfA	1	Dead To Me	2024-11-07 11:06:45.267	🦥
+spotify:track:01RJQlTi0aR0syDcSFLzTv	1	Lego Blocks	2024-11-07 12:10:54.17	🦥
+spotify:track:6azVi5ToFHo6KfKs6SstAC	1	Bad Idea	2024-11-07 12:32:12.407	🦥
+spotify:track:6SpVp6ttad3XJOsjKBZwaq	1	Torn	2024-11-07 13:58:31.7	🦥
+spotify:track:7jr3iPu4O4bTCVwLMbdU2i	1	Kiss and Make Up	2024-11-07 14:01:17.745	🦥
+spotify:track:20McUFi8KCIVdNDLrkTDuZ	1	Goosebumps	2024-11-07 14:10:12.747	🦥
+spotify:track:1CcLA0eaauck34YEIrvAAq	1	When We Were Young (The Logical Song)	2024-11-08 12:34:35.767	🦥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2024-11-08 14:10:22.159	🦥
+spotify:track:6ic8OlLUNEATToEFU3xmaH	1	Gimme More	2024-11-08 16:51:59.715	🦥
+spotify:track:2QjOHCTQ1Jl3zawyYOpxh6	1	Sweater Weather	2024-11-11 10:44:49.24	🦥
+spotify:track:2bLqfJjuC5syrsgDsZfGmn	1	The Way I Are	2024-11-11 10:49:48.464	🦥
+spotify:track:3JG1uFc40wfyrqaWC7iv0e	1	i like the way you kiss me	2024-11-11 11:26:52.783	🦥
+spotify:track:2ubQc1V6ctD8YpRjP5H940	1	killer queen	2024-11-11 12:05:17.389	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-11-11 12:23:44.276	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2024-11-11 13:57:43.704	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2024-11-11 15:38:03.364	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2024-11-11 15:42:39.768	🦥
+spotify:track:0tFUl3tPqBzUM2aV0gitdq	1	Dolls	2024-11-11 16:00:02.733	🦥
+spotify:track:6xLrQE0nqfpMfZoCQikxSL	1	Super Villain	2024-11-11 16:45:59.304	🦥
+spotify:track:6xLrQE0nqfpMfZoCQikxSL	-1	Super Villain	2024-11-11 16:46:08.104	🦥
+spotify:track:5Vwkt7zvEcj5riL46ZbM5K	1	touchin’ me	2024-11-11 16:46:32.471	🦥
+spotify:track:6ic8OlLUNEATToEFU3xmaH	1	Gimme More	2024-11-11 17:19:21.877	🦥
+spotify:track:7Ey8DZuMBbeiqMk8s8XpHA	1	RUSH	2024-11-11 17:52:28.568	🦥
+spotify:track:3UxXEGw1UDAL4KBooq2VxY	1	Therapy	2024-11-12 12:36:55.73	🦥
+spotify:track:7iKP734eHLU7k0VeKOvoNC	1	Seasons	2024-11-13 16:26:20.947	🦥
+spotify:track:2ubQc1V6ctD8YpRjP5H940	1	killer queen	2024-11-13 16:37:45.579	🦥
+spotify:track:6rdga62e70bV9Mll0X8UJ5	1	Drinking with Cupid	2024-11-13 16:40:58.495	🦥
+spotify:track:4pAiyuix7y51LMiuOSld33	1	Take Me To Hell	2024-11-13 16:43:52.027	🦥
+spotify:track:2SOhUiyKpnlshR3SFh733w	1	tired of california	2024-11-13 17:05:42.775	🦥
+spotify:track:6azVi5ToFHo6KfKs6SstAC	1	Bad Idea	2024-11-13 17:07:55.85	🦥
+spotify:track:6BGtSuLFU0X35Igkftxqfr	1	FU In My Head	2024-11-13 17:12:19.422	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-11-13 17:17:04.169	🦥
+spotify:track:2Z8RcNkYqStbwUdS7qyx6s	1	Sink or Swim	2024-11-13 17:19:56.387	🦥
+spotify:track:1Tob6YkutQ6jjWKzLO4gkr	1	Careful What You Wish For (the doctor said to)	2024-11-13 17:46:52.065	🦥
+spotify:track:7bdpStmJdlw9GKBPTOkDwT	1	AVA	2024-11-14 09:02:00.596	🦥
+spotify:track:6GUiIbJ834FcHewby3PwV0	1	Breakfast	2024-11-14 10:21:15.883	🦥
+spotify:track:7xg41ENLdW3nyy2p5C28ZW	1	Fuck Up The Friendship	2024-11-14 10:30:24.199	🦥
+spotify:track:6JU4seYQ2nAMCsgktdau0Q	1	Wish You the Worst	2024-11-14 10:41:01.945	🦥
+spotify:track:59tskctgqUmjCWAwhzYAFm	1	Looking at Me	2024-11-14 12:42:40.216	🦥
+spotify:track:59tskctgqUmjCWAwhzYAFm	1	Looking at Me	2024-11-14 12:43:43.558	🦥
+spotify:track:0qWAWDWi3Fv7kw2hshL9Fw	1	You Problem	2024-11-14 12:50:20.483	🦥
+spotify:track:1xWMqWlcfGrdnQWim2PJVb	1	Maybe My Soulmate Died	2024-11-14 12:54:58.951	🦥
+spotify:track:2ubQc1V6ctD8YpRjP5H940	1	killer queen	2024-11-14 13:09:54.721	🦥
+spotify:track:6WC5fhc9XMaCrUNKNjm9xE	1	Thumbs	2024-11-14 13:28:57.513	🦥
+spotify:track:0qWAWDWi3Fv7kw2hshL9Fw	1	You Problem	2024-11-15 12:47:32.131	🦥
+spotify:track:7zZDRq9CLl37OAywR39KVy	1	Dirty Thoughts	2024-11-15 12:49:24.958	🦥
+spotify:track:5Ds1FRxEq20yhhtVY3JukM	1	Love Like Mine	2024-11-15 12:51:29.579	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-11-15 12:54:12.217	🔥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-11-15 12:54:12.776	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	-1	PASSENGER PRINCESS	2024-11-15 12:54:15.874	🔥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-11-15 12:57:34.862	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-11-15 12:58:25.293	🦥
+spotify:track:6kOdk29M8h6ZfHz4byVG0t	1	PRETTY PLEASE	2024-11-15 13:49:06.767	🦥
+spotify:track:3RLshk3cDQOqWhSIRCVaXL	1	la di die (feat. Jaden Hossler)	2024-11-15 16:57:10.193	🦥
+spotify:track:6vQEOP9KgXITsVpFnKSbZ3	1	Paradise	2024-11-15 19:29:29.116	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-11-15 20:56:30.297	🦥
+spotify:track:63y6xWR4gXz7bnUGOk8iI6	1	Into You	2024-11-17 12:33:27.538	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2024-11-17 13:00:09.711	🦥
+spotify:track:0oWN1xuaWUrx8QGiYqxAs9	1	Monster	2024-11-18 20:39:18.395	🦥
+spotify:track:7hzlzoOwCZ4D3Ow5YZK4kj	1	Insomnia	2024-11-20 10:56:59.188	🦥
+spotify:track:3JG1uFc40wfyrqaWC7iv0e	1	i like the way you kiss me	2024-11-20 13:42:07.191	🦥
+spotify:track:6FxRH7N7Q86i6aixaSYYzx	1	All the Things She Said	2024-11-20 14:49:49.47	🦥
+spotify:track:7K1BLb6MpvKuGEPpHw35mO	1	Never Going Home Tonight (feat. Madison Love)	2024-11-20 15:08:51.904	🦥
+spotify:track:19tO5sNxHHJcX7CUPMVykl	1	GIRL LIKE ME - twocolors remix	2024-11-22 10:53:21.315	🦥
+spotify:track:2KklXplRtxMsBYo474Es0w	1	Be Mine	2024-11-22 13:19:26.251	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-11-26 10:24:48.92	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2024-11-26 10:26:31.05	🦥
+spotify:track:3JG1uFc40wfyrqaWC7iv0e	1	i like the way you kiss me	2024-11-26 10:30:41.732	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2024-11-26 10:33:23.841	🦥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2024-11-26 10:35:48.719	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2024-11-26 10:44:01.672	🦥
+spotify:track:6ic8OlLUNEATToEFU3xmaH	1	Gimme More	2024-11-26 10:47:56.417	🦥
+spotify:track:1qAFyf50bDGt1PNyVBBgC4	1	Bad Feeling (Oompa Loompa)	2024-11-27 13:26:31.401	🦥
+spotify:track:5aszL9hl6SBzFNsOvw8u8w	1	Bezos I	2024-11-30 17:22:01.938	🦥
+spotify:track:0yNiaePZow0ycdrmLV0J7y	1	1985	2024-11-30 17:25:54.699	🦥
+spotify:track:0aB0v4027ukVziUGwVGYpG	1	tv off (feat. lefty gunplay)	2024-12-01 20:17:32.387	🦥
+spotify:track:3qpsSAfHgTdTwkaraJLe0V	1	Mamma Mia (feat. Mentissa) - Techno Mix	2024-12-01 23:10:03.622	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2024-12-03 12:30:06.692	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2024-12-03 12:30:07.798	🦥
+spotify:track:2PnlsTsOTLE5jnBnNe2K0A	1	The Emptiness Machine	2024-12-03 12:58:19.514	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2024-12-03 13:02:25.163	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-12-03 13:15:33.763	🦥
+spotify:track:5YaskwnGDZFDRipaqzbwQx	1	Your Love (9PM)	2024-12-03 13:25:33.92	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2024-12-03 13:57:46.323	🦥
+spotify:track:6dnWU3ZywAIalucAAqjKlk	1	Voices	2024-12-03 15:19:44.323	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2024-12-03 15:49:48.984	🦥
+spotify:track:0jeGTzkvrNRBC8Dt8bsDRN	1	Don't Go Back To Paris	2024-12-03 15:54:18.9	🦥
+spotify:track:3jwQt00cvkN57H6ZR75W2K	1	RUNRUNRUN	2024-12-03 16:03:30.6	🦥
+spotify:track:0dHjeOAPtaSLhSyj5QN1KK	1	Trapped in a Dream	2024-12-03 16:08:19.225	🦥
+spotify:track:6scmAbilUvgIdPTGkFjyyd	1	SEX LOVE DRUGS	2024-12-03 16:30:05.698	🦥
+spotify:track:6scmAbilUvgIdPTGkFjyyd	1	SEX LOVE DRUGS	2024-12-03 16:45:28.802	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2024-12-03 16:50:45.279	🦥
+spotify:track:03nVbs87Wv4nvL3YZrdy3n	1	LSD	2024-12-03 18:31:08.917	🦥
+spotify:track:3pVRmuiT7OruUDgiBVkJsn	1	You Spin Me Round (Like A Record)	2024-12-03 19:23:01.493	🦥
+spotify:track:5RCl6c5jPOklm5Nk2qVsqf	1	Slowly Going Crazy (feat. EKE)	2024-12-03 20:00:09.391	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2024-12-04 10:16:11.24	🦥
+spotify:track:40wmXUgVB0N5eLK8CuOhm3	1	Feed the Machine	2024-12-04 12:54:10.107	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2024-12-04 13:05:29.745	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2024-12-04 13:06:30.583	🦥
+spotify:track:1wcAM8PcshrRaK0HNZW5QH	1	Ghost	2024-12-04 13:55:20.622	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2024-12-04 13:58:11.896	🦥
+spotify:track:6Qg3WajLpGxTNjVERcXc03	1	Seven Nation Army	2024-12-04 14:52:59.31	🦥
+spotify:track:5tf1VVWniHgryyumXyJM7w	1	Sugar (feat. Francesco Yates)	2024-12-04 15:47:54.688	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2024-12-04 19:36:30.685	🦥
+spotify:track:3Z3QhZAZpqwZa1phsbQ3JZ	1	Driving Home for Christmas	2024-12-05 12:26:53.831	🦥
+spotify:track:0vf2eBw2inhl8y61cYQMv2	1	Devil Town	2024-12-05 19:20:58.275	🦥
+spotify:track:2XNOe0ywrt9xocoVIbFCHv	1	AVA	2024-12-09 16:14:18.841	🦥
+spotify:track:3Md1Rphgz24viHtEVSWWi9	1	PASSENGER PRINCESS	2024-12-09 18:30:37.614	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2024-12-09 18:55:03.529	🦥
+spotify:track:5Nakyq7fHFlhxkMfNqG4Fv	1	Daredevil	2024-12-10 16:09:59.105	🦥
+spotify:track:3RLshk3cDQOqWhSIRCVaXL	1	la di die (feat. Jaden Hossler)	2024-12-11 13:36:56.305	🦥
+spotify:track:1ChulFMnwxoD74Me8eX2TU	1	You Spin Me Round (Like a Record)	2024-12-12 11:51:39.642	🦥
+spotify:track:33WTgxRdPBQQpVCMXpNxhO	1	Cure For Me	2024-12-12 12:58:27.343	🦥
+spotify:track:0vFMQi8ZnOM2y8cuReZTZ2	1	Blown Away	2024-12-13 15:23:00.769	🦥
+spotify:track:3pVRmuiT7OruUDgiBVkJsn	1	You Spin Me Round (Like A Record)	2024-12-13 15:35:29.104	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2024-12-14 22:32:14.097	🦥
+spotify:track:0lizgQ7Qw35od7CYaoMBZb	1	Santa Tell Me	2024-12-15 12:58:41.701	🧑‍🎄
+spotify:track:5TIyFlLF0EfYOUZH1TYxBq	1	More Than a Friend	2024-12-16 18:23:01.043	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2024-12-16 18:31:56.729	🦥
+spotify:track:4xTgbiXPiMy4u4veI4j9tk	1	Shadow	2024-12-16 18:44:29.984	🦥
+spotify:track:1ChulFMnwxoD74Me8eX2TU	1	You Spin Me Round (Like a Record)	2024-12-16 19:27:24.668	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2024-12-16 19:37:11.58	🦥
+spotify:track:1qXFfxYo6lyVk8Cgeuyuu2	-1	Can Can (Hardstyle Mix)	2024-12-18 10:34:18.969	🧑‍🎄
+spotify:track:2bPQuniBB9x0fRtxDly0kr	1	Stop The Cavalry	2024-12-18 10:42:20.108	🧑‍🎄
+spotify:track:3VTNVsTTu05dmTsVFrmGpK	1	Fairytale of New York (feat. Kirsty MacColl)	2024-12-18 11:00:36.006	🦥
+spotify:track:3VTNVsTTu05dmTsVFrmGpK	1	Fairytale of New York (feat. Kirsty MacColl)	2024-12-18 11:00:37.832	🧑‍🎄
+spotify:track:3VTNVsTTu05dmTsVFrmGpK	-1	Fairytale of New York (feat. Kirsty MacColl)	2024-12-18 11:00:39.807	🦥
+spotify:track:2FRnf9qhLbvw8fu4IBXx78	1	Last Christmas	2024-12-18 12:33:49.476	🧑‍🎄
+spotify:track:4Yg2w0P29BBBMixyeNjDtj	1	Do They Know It's Christmas? - 1984 Version	2024-12-20 14:42:00.903	🧑‍🎄
+spotify:track:3yxCxPA3z8349Yizn8xFd7	1	Explosive	2024-12-22 10:58:22.895	🦥
+spotify:track:59dLtGBS26x7kc0rHbaPrq	1	Nothin' on You (feat. Bruno Mars)	2024-12-23 00:55:42.877	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2024-12-24 12:09:21.432	🦥
+spotify:track:3VTNVsTTu05dmTsVFrmGpK	-1	Fairytale of New York (feat. Kirsty MacColl)	2024-12-24 12:21:07.169	🦥
+spotify:track:3VTNVsTTu05dmTsVFrmGpK	1	Fairytale of New York (feat. Kirsty MacColl)	2024-12-24 12:21:09.233	🧑‍🎄
+spotify:track:2ISSQPb9LHHiV6ng2NXosL	1	Beautiful Now	2024-12-27 23:03:55.5	🦥
+spotify:track:1TnUURhehaoMWKAqQtirm6	1	Colors	2024-12-29 16:17:54.058	🦥
+spotify:track:3qpsSAfHgTdTwkaraJLe0V	1	Mamma Mia (feat. Mentissa) - Techno Mix	2024-12-31 14:10:59.793	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2024-12-31 14:54:57.48	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2025-01-01 13:36:47.939	🦥
+spotify:track:6xLrQE0nqfpMfZoCQikxSL	1	Super Villain	2025-01-01 13:38:12.268	🦥
+spotify:track:6DC0wG7y6tGBjWARnzlZXh	1	Samurai	2025-01-02 13:40:00.96	🦥
+spotify:track:0qOvlEzD7xU35GLFT8DF1t	1	We Run The Night - Teddy Cream Remix	2025-01-02 13:43:24.697	🦥
+spotify:track:6scmAbilUvgIdPTGkFjyyd	1	SEX LOVE DRUGS	2025-01-03 16:46:51.019	🦥
+spotify:track:0O12SkQHX2Julh9utIosga	1	Sweet Child O' Mine	2025-01-03 17:12:51.986	🦥
+spotify:track:1TnUURhehaoMWKAqQtirm6	1	Colors	2025-01-06 12:59:18.53	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-01-06 15:54:49.475	🦥
+spotify:track:6scmAbilUvgIdPTGkFjyyd	1	SEX LOVE DRUGS	2025-01-06 16:18:26.469	🦥
+spotify:track:6vQEOP9KgXITsVpFnKSbZ3	1	Paradise	2025-01-06 22:00:41.57	🦥
+spotify:track:0hSU77xrJln8H28BKrSx4R	1	All of the Lights	2025-01-08 14:35:28.712	🦥
+spotify:track:52qLVSx8MpTlYFzDnJmWy3	1	Pardon My French	2025-01-08 15:02:26.03	🦥
+spotify:track:1WVW1Csh2mXbnmA1C6ARCH	1	dot dot dot	2025-01-08 15:04:30.886	🦥
+spotify:track:4vT73UNPez6GgTwq97hsMB	1	Badder Than The Bad Boys	2025-01-08 21:26:09.049	🦥
+spotify:track:7MXVkk9YMctZqd1Srtv4MB	1	Starboy	2025-01-09 00:50:16.61	🐺
+spotify:track:22VdIZQfgXJea34mQxlt81	1	Can't Feel My Face	2025-01-09 00:52:29.537	🦥
+spotify:track:1O5UqpLWNMgYhV69gi9pEM	1	sweat	2025-01-09 12:14:21.212	🦥
+spotify:track:6scmAbilUvgIdPTGkFjyyd	1	SEX LOVE DRUGS	2025-01-09 12:55:11.372	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-09 13:01:18.73	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-09 13:21:33.021	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-09 16:15:16.974	🦥
+spotify:track:0vf2eBw2inhl8y61cYQMv2	1	Devil Town	2025-01-10 15:38:05.375	🦥
+spotify:track:4f0pJ7NNHAsrWbQBwiHMRJ	1	Hooked	2025-01-10 16:10:43.183	🦥
+spotify:track:6RSVgjjYRtKg4FDyx2Lj1u	1	The Best	2025-01-10 16:32:10.865	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2025-01-10 16:43:56.004	🦥
+spotify:track:18oWEPapjNt32E6sCM6VLb	1	Heads Will Roll	2025-01-10 17:03:02.761	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2025-01-10 19:40:37.401	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-01-10 19:48:04.089	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-01-10 19:48:33.718	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-01-10 19:48:44.312	🦥
+spotify:track:20McUFi8KCIVdNDLrkTDuZ	1	Goosebumps	2025-01-10 19:58:41.277	🦥
+spotify:track:2ejhK0OtBe4CdfD67uqzGB	1	KIZAO	2025-01-10 20:01:54.918	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-10 20:04:41.789	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-10 20:14:57.006	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-10 20:19:19.717	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-01-10 20:33:55.158	🦥
+spotify:track:7J5GcAbZ2rsWk2BzZDVog1	1	fancy	2025-01-11 17:52:25.736	🦥
+spotify:track:5oItzo1j9q9aDRBUsiGmj9	1	The Watchers	2025-01-11 21:54:46.711	🦥
+spotify:track:6e2YNCn1sP5eqnUe17vtxv	1	INFERNO	2025-01-13 13:49:08.358	🦥
+spotify:track:2BCECbXfftaxyBRLnIpeZT	1	Happy Face	2025-01-13 13:54:02.53	🦥
+spotify:track:2BCECbXfftaxyBRLnIpeZT	-1	Happy Face	2025-01-13 13:55:58.539	🦥
+spotify:track:2Lumsra3kuU61wXkEKzKaK	1	Disco	2025-01-13 14:22:43.82	🦥
+spotify:track:5E30LdtzQTGqRvNd7l6kG5	1	Daddy Issues	2025-01-13 14:30:55.781	🦥
+spotify:track:5E30LdtzQTGqRvNd7l6kG5	1	Daddy Issues	2025-01-13 14:32:48.48	🦥
+spotify:track:5f6JnxY2aqNdF3qFIPozUd	1	GRRRLS	2025-01-13 14:35:07.744	🦥
+spotify:track:2mEMKgLqH3VZaSYO7iYCzp	1	Daylight	2025-01-13 15:57:32.84	🦥
+spotify:track:5oItzo1j9q9aDRBUsiGmj9	1	The Watchers	2025-01-13 16:05:21.638	🦥
+spotify:track:7sA2SKTo1QbTSSYn5YvJC4	1	Sharks	2025-01-13 16:07:24.338	🦥
+spotify:track:31rLeplcJIGfbvUBpPa9f7	1	MUSTANG BABY (FT. ARTEMAS)	2025-01-13 16:57:11.994	🦥
+spotify:track:7132EFlbWFNX4mLDY23OR5	-1	hell of a good time	2025-01-13 17:02:44.984	🦥
+spotify:track:1oyUbXfp7bEGVjqcsTKttC	1	Jail	2025-01-13 18:00:05.378	🦥
+spotify:track:0gc3meo5sZtNnv19oI0vRM	1	Pretty Boy	2025-01-13 18:42:44.671	🦥
+spotify:track:0gc3meo5sZtNnv19oI0vRM	1	Pretty Boy	2025-01-13 18:43:43.428	🦥
+spotify:track:7moZuS84OI5AWGc81GVujX	1	Dangerous	2025-01-13 22:55:37.874	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-13 23:07:46.928	🦥
+spotify:track:2xOxPjmkNNyoQ0MFZF2BG0	1	Taken By The Storm	2025-01-14 10:06:59.824	🦥
+spotify:track:4ICqFn2E5X7wINlmXNrVGj	1	Soul Is A Star	2025-01-14 10:49:54.847	🦥
+spotify:track:35R4uqcw0MscGaw05HcUWp	1	Free Now	2025-01-14 10:54:49.981	🦥
+spotify:track:2mEMKgLqH3VZaSYO7iYCzp	1	Daylight	2025-01-14 10:58:04.576	🦥
+spotify:track:1XP6izZrqT8FsMaLKDAnUP	1	Too Late To Love You	2025-01-14 11:00:25.897	🦥
+spotify:track:3QJsSWa0Xo8MfaRn1gr4Be	1	favorite	2025-01-14 14:38:18.072	🦥
+spotify:track:3a8b6uo4vnQSJroGhaNhgG	1	When You Say My Name	2025-01-14 15:28:46.476	🦥
+spotify:track:37vVp2sWHuuIBOSl1NswP6	1	i'm yours	2025-01-14 15:31:11.502	🦥
+spotify:track:131SfRMv57LKf8xtaSt39k	1	Who Do You Want	2025-01-14 15:38:23.206	🦥
+spotify:track:68SmyiqELVaDMCvoFgrJ8b	1	abuse me	2025-01-14 15:49:14.573	🦥
+spotify:track:4yGTNAnhlbSxrVdTC7fYIS	1	PRETTY WHEN U CRY	2025-01-14 15:57:26.337	🦥
+spotify:track:39xEQ4GBaQFyj8xbNLJdSo	1	Tell On You	2025-01-15 10:55:50.429	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2025-01-15 11:12:41.117	🦥
+spotify:track:10AZj11FnvND9GW98ceiSp	1	MONSTER	2025-01-15 11:15:47.393	🦥
+spotify:track:4TFXmB2WOm1G5CnVcejVQb	1	Witch Hunt	2025-01-15 11:47:38.907	🦥
+spotify:track:2dgdMELimerBE6WDpyNIEK	1	dopamine	2025-01-15 14:58:41.346	🦥
+spotify:track:5srKMwXoeyrRnyTnNbpgIW	-1	People I Don't Like	2025-01-15 15:14:46.493	🦥
+spotify:track:2V5l77xUr1wyBkILj2qF8K	1	Coincidence	2025-01-15 16:13:55.56	🦥
+spotify:track:2vvMmPGdcZPOXZycjGEqja	1	Dark Side	2025-01-15 16:31:34.792	🦥
+spotify:track:2SRHNn97rMNVYdtmH1gmd5	1	SIREN	2025-01-15 16:36:13.762	🦥
+spotify:track:5oItzo1j9q9aDRBUsiGmj9	1	The Watchers	2025-01-16 10:36:14.235	🦥
+spotify:track:0Q0U4Z2zjSOGoI5aeZz6n6	1	Bad Girl	2025-01-16 11:52:11.504	🦥
+spotify:track:6mNoRKg94GII7wGh7Zzsjk	1	Taste of Metal	2025-01-16 11:53:56.644	🦥
+spotify:track:2T0kB6ogvjJAC1CGFbEDRP	1	Doomed	2025-01-16 11:58:55.365	🦥
+spotify:track:30hvHBsvvl0uPXyRoULKiQ	1	SAiLOR MOON	2025-01-16 12:00:20.249	🦥
+spotify:track:1ap5NcWZLaRjlCZcuxo9jA	1	HEAD OVER HEELS	2025-01-16 12:13:04.26	🦥
+spotify:track:0Qly7RzK4kb9Y0ZfWfKeTr	1	skinned knees	2025-01-16 12:17:55.517	🦥
+spotify:track:0dscoCNZ04K2z0p5zw3shV	1	Da Da Dum	2025-01-16 12:19:05.903	🦥
+spotify:track:3ahCbuxsu4bH7a0dL9xYrF	1	Bonnie and Clyde	2025-01-16 12:27:26.328	🦥
+spotify:track:302AZQ7ISLWGgGxAln39Km	1	Shy Guy	2025-01-16 13:06:42.194	🦥
+spotify:track:0QIwoAemWa2xlBIhTBAVns	1	Arms of Gold	2025-01-16 13:19:03.806	🦥
+spotify:track:1FkXVtAp8pkRwJC5dDluGS	1	Downtown	2025-01-16 13:39:25.277	🦥
+spotify:track:5uBlr2RNpuu3n7ROgiQa7w	1	dramatic	2025-01-16 14:00:28.405	🦥
+spotify:track:0xijNH95NSYJAnHkjTp8t9	1	d e a d	2025-01-16 20:46:12.677	🦥
+spotify:track:2bkgIGPHdyQN03nAmSViSi	1	Body Language	2025-01-16 20:58:11.474	🦥
+spotify:track:5mA31PQHLnzFkDR8Nnyj5O	1	boys beware	2025-01-16 21:45:39.515	🦥
+spotify:track:2SRHNn97rMNVYdtmH1gmd5	1	SIREN	2025-01-16 22:02:54.864	🦥
+spotify:track:4f0pJ7NNHAsrWbQBwiHMRJ	1	Hooked	2025-01-16 23:41:26.925	🦥
+spotify:track:4hD4Q2BNH50ryovUWNzXKe	1	Dopamine (Split Brain Version)	2025-01-16 23:46:30.407	🦥
+spotify:track:2KklXplRtxMsBYo474Es0w	1	Be Mine	2025-01-17 11:42:49.305	🦥
+spotify:track:1dt220OBbkTsYz1NLVKIaw	1	Call Me (with R3HAB & Timmy Trumpet)	2025-01-17 11:46:40.176	🦥
+spotify:track:63SevszngYpZOwf63o61K4	1	Nevermind	2025-01-17 11:53:00.248	🦥
+spotify:track:2NF8A7C6tICScdRaZ0BrEe	1	Katchi - Ofenbach vs. Nick Waterhouse	2025-01-17 12:53:21.137	🦥
+spotify:track:3fYXJrNuLAGKZvcIMGG484	1	Waiting for the Summer	2025-01-17 12:56:13.738	🦥
+spotify:track:09EhgVA4blwhSic4hF2TFZ	1	Waterfall	2025-01-17 14:36:53.222	🦥
+spotify:track:14LdhxElpZS0rKVV4nxtdA	1	Queen of Kings	2025-01-17 14:52:35.428	🦥
+spotify:track:4beKzTMCCMDizozv4Y3Shj	1	Never Be Lonely	2025-01-17 15:15:59.838	🦥
+spotify:track:4IwjJFCfvvfGegtGbaZmnO	1	Ekko inni meg	2025-01-17 15:26:48.314	🦥
+spotify:track:1DmW5Ep6ywYwxc2HMT5BG6	1	Tattoo	2025-01-17 15:31:35.682	🦥
+spotify:track:29bhnde7Gvnp7rvY9zsq5S	1	SHUM	2025-01-17 15:51:51.14	🦥
+spotify:track:6Ntz1uQoMF8L2E4w518BFp	1	Lone Digger	2025-01-17 16:31:22.333	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-17 16:56:00.229	🦥
+spotify:track:6NG6o14RcsmSDOBNChuVZZ	1	Krip	2025-01-17 16:58:32.003	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-17 18:37:09.774	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-17 18:52:56.797	🦥
+spotify:track:5uBlr2RNpuu3n7ROgiQa7w	1	dramatic	2025-01-17 19:02:40.229	🦥
+spotify:track:75c2zaSdDBSX0A8Jyvm4fO	1	older	2025-01-17 19:21:23.537	🦥
+spotify:track:75c2zaSdDBSX0A8Jyvm4fO	1	older	2025-01-17 19:21:25.667	🦥
+spotify:track:4IwjJFCfvvfGegtGbaZmnO	1	Ekko inni meg	2025-01-17 19:24:30.823	🦥
+spotify:track:3fYXJrNuLAGKZvcIMGG484	1	Waiting for the Summer	2025-01-18 09:55:03.622	🦥
+spotify:track:1oyUbXfp7bEGVjqcsTKttC	1	Jail	2025-01-18 09:59:53.49	🦥
+spotify:track:14LdhxElpZS0rKVV4nxtdA	1	Queen of Kings	2025-01-18 10:12:33.452	🦥
+spotify:track:4ICqFn2E5X7wINlmXNrVGj	1	Soul Is A Star	2025-01-18 10:26:44.328	🦥
+spotify:track:2V5l77xUr1wyBkILj2qF8K	1	Coincidence	2025-01-18 11:03:20.47	🦥
+spotify:track:0Qly7RzK4kb9Y0ZfWfKeTr	1	skinned knees	2025-01-18 11:06:51.528	🦥
+spotify:track:302AZQ7ISLWGgGxAln39Km	1	Shy Guy	2025-01-18 11:21:04.73	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-18 11:34:11.065	🦥
+spotify:track:4IwjJFCfvvfGegtGbaZmnO	1	Ekko inni meg	2025-01-18 11:40:21.85	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-18 11:47:06.942	🦥
+spotify:track:2xOxPjmkNNyoQ0MFZF2BG0	1	Taken By The Storm	2025-01-18 11:57:44.602	🦥
+spotify:track:2Rczayj2tsm1Uga5uQ58Kz	1	Midnight (The Hanging Tree)	2025-01-18 13:46:25.137	🦥
+spotify:track:7xKAzbzfqCl5P8fZGgnHQL	1	Sonate Pacifique - Radio Edit	2025-01-18 20:24:58.797	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-18 22:32:10.567	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-18 23:50:02.14	🦥
+spotify:track:5uBlr2RNpuu3n7ROgiQa7w	1	dramatic	2025-01-19 00:00:51.842	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-19 00:03:40.778	🦥
+spotify:track:2SRHNn97rMNVYdtmH1gmd5	1	SIREN	2025-01-20 21:33:32.416	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-20 21:35:24.816	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-20 21:40:07.125	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-20 21:44:04.927	🦥
+spotify:track:7J5GcAbZ2rsWk2BzZDVog1	1	fancy	2025-01-20 21:46:10.732	🦥
+spotify:track:0vf2eBw2inhl8y61cYQMv2	1	Devil Town	2025-01-20 22:04:09.957	🦥
+spotify:track:131SfRMv57LKf8xtaSt39k	1	Who Do You Want	2025-01-21 13:58:10.097	🦥
+spotify:track:30hvHBsvvl0uPXyRoULKiQ	1	SAiLOR MOON	2025-01-21 13:59:49.221	🦥
+spotify:track:30hvHBsvvl0uPXyRoULKiQ	1	SAiLOR MOON	2025-01-21 15:25:57.615	🦥
+spotify:track:68SmyiqELVaDMCvoFgrJ8b	1	abuse me	2025-01-21 15:26:16.832	🦥
+spotify:track:2iYiLdsKRdSTHXQxIgZWF4	1	SHUT UP	2025-01-21 15:55:57.817	🦥
+spotify:track:6vx2TVeITKDGsNjDUQCjmD	1	Serotonin Killer	2025-01-21 16:08:47.168	🦥
+spotify:track:4UifCxJtbmRcpsqNcumOiO	1	On Fire	2025-01-21 16:16:34.471	🦥
+spotify:track:75c2zaSdDBSX0A8Jyvm4fO	1	older	2025-01-21 17:28:50.765	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-21 17:51:58.232	🦥
+spotify:track:29bhnde7Gvnp7rvY9zsq5S	1	SHUM	2025-01-21 18:12:46.313	🦥
+spotify:track:29bhnde7Gvnp7rvY9zsq5S	1	SHUM	2025-01-21 18:22:13.296	🦥
+spotify:track:2V5l77xUr1wyBkILj2qF8K	1	Coincidence	2025-01-21 18:23:36.368	🦥
+spotify:track:2SRHNn97rMNVYdtmH1gmd5	1	SIREN	2025-01-21 20:13:50.501	🦥
+spotify:track:0gc3meo5sZtNnv19oI0vRM	1	Pretty Boy	2025-01-21 20:22:53.035	🦥
+spotify:track:2SRHNn97rMNVYdtmH1gmd5	1	SIREN	2025-01-22 11:43:40.777	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-22 11:50:01.499	🦥
+spotify:track:5TIyFlLF0EfYOUZH1TYxBq	1	More Than a Friend	2025-01-22 11:54:18.196	🦥
+spotify:track:7fZtgiJSNJ2QarKKKSssBp	1	Hot Honey	2025-01-22 12:01:29.896	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2025-01-22 12:01:35.852	🦥
+spotify:track:1WVW1Csh2mXbnmA1C6ARCH	1	dot dot dot	2025-01-22 12:01:44.05	🦥
+spotify:track:48vIfHaK7by6x0T6ucpODL	1	Make You Mine	2025-01-22 12:01:57.547	🦥
+spotify:track:1FkXVtAp8pkRwJC5dDluGS	1	Downtown	2025-01-22 12:07:16.69	🦥
+spotify:track:6vQEOP9KgXITsVpFnKSbZ3	1	Paradise	2025-01-22 12:10:27.376	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-22 13:15:45.132	🦥
+spotify:track:33lQztwpMhDovy3A0zzAdU	1	Bleed	2025-01-22 13:18:38.719	🦥
+spotify:track:2mEMKgLqH3VZaSYO7iYCzp	1	Daylight	2025-01-22 18:02:21.883	🦥
+spotify:track:3RLshk3cDQOqWhSIRCVaXL	1	la di die (feat. Jaden Hossler)	2025-01-22 18:06:17.066	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-22 18:12:48.687	🦥
+spotify:track:7J5GcAbZ2rsWk2BzZDVog1	1	fancy	2025-01-22 23:39:31.522	🦥
+spotify:track:2T0kB6ogvjJAC1CGFbEDRP	1	Doomed	2025-01-22 23:43:12.658	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2025-01-23 10:02:36.142	🦥
+spotify:track:2xOxPjmkNNyoQ0MFZF2BG0	1	Taken By The Storm	2025-01-23 10:07:59.745	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2025-01-23 10:08:03.251	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2025-01-23 10:08:06.76	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2025-01-23 10:16:04.575	🦥
+spotify:track:30hvHBsvvl0uPXyRoULKiQ	1	SAiLOR MOON	2025-01-23 10:19:47.018	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-23 10:23:58.497	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-01-23 11:19:30.502	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-01-23 11:27:04.927	🦥
+spotify:track:2vb2iUVBp3LFLAb3zl2Tmc	1	I Don't Wanna Talk	2025-01-23 11:35:38.096	🦥
+spotify:track:2dgdMELimerBE6WDpyNIEK	1	dopamine	2025-01-23 12:24:54.58	🦥
+spotify:track:4hD4Q2BNH50ryovUWNzXKe	-1	Dopamine (Split Brain Version)	2025-01-23 12:25:04.203	🦥
+spotify:track:6319BpXP42QAaXeELaPLmU	1	Watch Me	2025-01-23 13:03:11.786	🦥
+spotify:track:1ap5NcWZLaRjlCZcuxo9jA	1	HEAD OVER HEELS	2025-01-23 13:35:49.317	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-23 13:40:41.48	🦥
+spotify:track:6mNoRKg94GII7wGh7Zzsjk	1	Taste of Metal	2025-01-23 17:01:38.498	🦥
+spotify:track:0Qly7RzK4kb9Y0ZfWfKeTr	1	skinned knees	2025-01-23 17:06:21.918	🦥
+spotify:track:74DtPMPZm8NEDXwOY8B92I	1	like that	2025-01-23 17:47:49.888	🦥
 \.
 
 
