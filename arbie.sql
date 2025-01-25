@@ -5408,6 +5408,24 @@ spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-0
 spotify:track:6mNoRKg94GII7wGh7Zzsjk	1	Taste of Metal	2025-01-23 17:01:38.498	🦥
 spotify:track:0Qly7RzK4kb9Y0ZfWfKeTr	1	skinned knees	2025-01-23 17:06:21.918	🦥
 spotify:track:74DtPMPZm8NEDXwOY8B92I	1	like that	2025-01-23 17:47:49.888	🦥
+spotify:track:5goIWfQRCgsxRpFUDY4jmk	1	Not Scared Of Growing Old	2025-01-23 23:35:09.04	🦥
+spotify:track:0IrKiuLgqn0OKgpc946yWG	1	MF Diamond	2025-01-24 00:03:25.431	🦥
+spotify:track:2V5l77xUr1wyBkILj2qF8K	1	Coincidence	2025-01-24 00:08:02.117	🦥
+spotify:track:2mlNgAeIBnL78ZriXgrRHz	1	Glimpse of Us	2025-01-24 09:54:33.527	🦥
+spotify:track:3JG1uFc40wfyrqaWC7iv0e	1	i like the way you kiss me	2025-01-24 09:57:27.421	🦥
+spotify:track:3QJsSWa0Xo8MfaRn1gr4Be	1	favorite	2025-01-24 10:08:09.115	🦥
+spotify:track:7MlDNspYwfqnHxORufupwq	1	Sex, Drugs, Etc.	2025-01-24 10:13:59.547	🦥
+spotify:track:4xljS7HXhM9LCuzdVEaAa9	1	xstasy	2025-01-24 10:20:08.392	🦥
+spotify:track:2SOhUiyKpnlshR3SFh733w	1	tired of california	2025-01-24 10:21:49.786	🦥
+spotify:track:0gc3meo5sZtNnv19oI0vRM	1	Pretty Boy	2025-01-24 10:24:57.754	🦥
+spotify:track:6nStBZGqGgTR87MrBpNza0	1	HEARTBEAT	2025-01-24 11:45:54.542	🦥
+spotify:track:2AwHfYNiI0aDqs51eA3KUr	1	Iconique	2025-01-24 12:54:24.704	🦥
+spotify:track:2K7vmv62BpMRIySly2w4nO	1	No Heroes	2025-01-24 13:13:05.198	🦥
+spotify:track:40deyylbGw0N2GskoKmvpJ	1	Oblivion	2025-01-24 13:15:38.683	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-24 13:27:54.17	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-24 13:39:32.224	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-24 13:40:39.004	🦥
+spotify:track:0vbLjUo57fw0YFJB43TjBX	1	Who You Were	2025-01-24 13:51:34.328	🦥
 \.
 
 
