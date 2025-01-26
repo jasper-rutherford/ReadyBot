@@ -5426,6 +5426,9 @@ spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-2
 spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-24 13:39:32.224	🦥
 spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-01-24 13:40:39.004	🦥
 spotify:track:0vbLjUo57fw0YFJB43TjBX	1	Who You Were	2025-01-24 13:51:34.328	🦥
+spotify:track:0GqWXMhLivLWNWdCl1nbDo	1	99 boys	2025-01-25 17:45:03.721	🦥
+spotify:track:7J5GcAbZ2rsWk2BzZDVog1	1	fancy	2025-01-25 17:57:12.026	🦥
+spotify:track:0yNiaePZow0ycdrmLV0J7y	1	1985	2025-01-25 17:59:23.774	🦥
 \.
 
 
