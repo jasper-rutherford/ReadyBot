@@ -5440,6 +5440,8 @@ spotify:track:6NndAdLoSF1fcFtbRlGMLt	1	Chemical X	2025-01-27 13:25:08.614	🦥
 spotify:track:4y0NzIgyQJgNjZGDnmO7KD	1	IDONTWANNASTAY	2025-01-27 13:35:24.204	🦥
 spotify:track:3dh0ehwGAONsJu64cFfYxq	1	Vicious	2025-01-27 13:45:50.448	🦥
 spotify:track:2ABMlnKTpg5HlDrwHAD9xN	1	Death Of Me	2025-01-27 15:21:36.257	🦥
+spotify:track:302AZQ7ISLWGgGxAln39Km	1	Shy Guy	2025-01-28 16:35:47.503	🦥
+spotify:track:14AyWf6y7KlWWLfAjdKMKI	1	Ophelia	2025-01-28 17:02:59.788	🦥
 \.
 
 
