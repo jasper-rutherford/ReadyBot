@@ -5442,6 +5442,8 @@ spotify:track:3dh0ehwGAONsJu64cFfYxq	1	Vicious	2025-01-27 13:45:50.448	🦥
 spotify:track:2ABMlnKTpg5HlDrwHAD9xN	1	Death Of Me	2025-01-27 15:21:36.257	🦥
 spotify:track:302AZQ7ISLWGgGxAln39Km	1	Shy Guy	2025-01-28 16:35:47.503	🦥
 spotify:track:14AyWf6y7KlWWLfAjdKMKI	1	Ophelia	2025-01-28 17:02:59.788	🦥
+spotify:track:0evOmsnfWAqsGJlSTICgz7	1	Rockstar Everyday	2025-01-29 14:34:21.865	🦥
+spotify:track:0UdHGXy6Om0yUIdqYaLpnl	1	BLACKBLUEYELLOW	2025-01-29 14:40:22.132	🦥
 \.
 
 
