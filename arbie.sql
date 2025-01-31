@@ -5444,6 +5444,18 @@ spotify:track:302AZQ7ISLWGgGxAln39Km	1	Shy Guy	2025-01-28 16:35:47.503	🦥
 spotify:track:14AyWf6y7KlWWLfAjdKMKI	1	Ophelia	2025-01-28 17:02:59.788	🦥
 spotify:track:0evOmsnfWAqsGJlSTICgz7	1	Rockstar Everyday	2025-01-29 14:34:21.865	🦥
 spotify:track:0UdHGXy6Om0yUIdqYaLpnl	1	BLACKBLUEYELLOW	2025-01-29 14:40:22.132	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-30 11:02:53.836	🦥
+spotify:track:3NNJjEPFTUcAMUyMXsDw5c	1	Reckless	2025-01-30 11:07:40.756	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-01-30 12:43:59.58	🦥
+spotify:track:3uEYOp1rDL1CJViIruQtb7	1	Houndin	2025-01-30 12:49:46.211	🦥
+spotify:track:1b7DozY0xHWXU1T84Lck1z	1	Ghost Town	2025-01-30 12:56:16.532	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-01-30 13:29:09.702	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-30 13:36:45.008	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-30 13:39:16.377	🦥
+spotify:track:0ZSDdEEeZdSnvMzRdPqWkj	1	Doctor Doctor	2025-01-30 13:42:13.566	🦥
+spotify:track:7vWFaMq63AwkFDhS2OAg5u	1	The Time (Dirty Bit)	2025-01-30 15:00:18.944	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-01-30 18:44:38.063	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-30 18:49:32.542	🦥
 \.
 
 
