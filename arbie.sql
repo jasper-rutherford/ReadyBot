@@ -5456,6 +5456,19 @@ spotify:track:0ZSDdEEeZdSnvMzRdPqWkj	1	Doctor Doctor	2025-01-30 13:42:13.566	�
 spotify:track:7vWFaMq63AwkFDhS2OAg5u	1	The Time (Dirty Bit)	2025-01-30 15:00:18.944	🦥
 spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-01-30 18:44:38.063	🦥
 spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-01-30 18:49:32.542	🦥
+spotify:track:0ZSDdEEeZdSnvMzRdPqWkj	1	Doctor Doctor	2025-01-30 20:46:18.466	🦥
+spotify:track:4hD4Q2BNH50ryovUWNzXKe	1	Dopamine (Split Brain Version)	2025-01-30 20:52:37.94	🦥
+spotify:track:4hD4Q2BNH50ryovUWNzXKe	-1	Dopamine (Split Brain Version)	2025-01-30 20:52:42.503	🦥
+spotify:track:4hD4Q2BNH50ryovUWNzXKe	-1	Dopamine (Split Brain Version)	2025-01-30 20:52:44.592	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-31 10:29:47.964	🦥
+spotify:track:6tbptT4hnDQT1yQMLWJiLR	1	Discoteque	2025-01-31 12:17:44.974	🦥
+spotify:track:1xrx0GpR1sUrUApFzBI6Ld	1	Kiss N' Gun	2025-01-31 12:35:09.274	🦥
+spotify:track:1xrx0GpR1sUrUApFzBI6Ld	-1	Kiss N' Gun	2025-01-31 12:36:03.386	🦥
+spotify:track:7FuSsCvjWRpSs5GHWewS9f	1	UNBREAKABLE	2025-01-31 15:40:40.212	🦥
+spotify:track:6DploCSZVf5gvIP7WBBU6S	1	Afterbloom (feat. Deza)	2025-01-31 15:56:26.316	🦥
+spotify:track:3MPMlVLLHgPPJJBDrX424v	1	Irish Man	2025-01-31 16:03:15.14	🦥
+spotify:track:3MPMlVLLHgPPJJBDrX424v	-1	Irish Man	2025-01-31 16:03:22.016	🦥
+spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2025-01-31 16:07:48.718	🦥
 \.
 
 
