@@ -5469,6 +5469,11 @@ spotify:track:6DploCSZVf5gvIP7WBBU6S	1	Afterbloom (feat. Deza)	2025-01-31 15:56:
 spotify:track:3MPMlVLLHgPPJJBDrX424v	1	Irish Man	2025-01-31 16:03:15.14	🦥
 spotify:track:3MPMlVLLHgPPJJBDrX424v	-1	Irish Man	2025-01-31 16:03:22.016	🦥
 spotify:track:4q05KbxYZ5JdkmrletgPjF	1	Whistle (feat. Calum Scott)	2025-01-31 16:07:48.718	🦥
+spotify:track:5E30LdtzQTGqRvNd7l6kG5	1	Daddy Issues	2025-02-02 22:03:55.973	🦥
+spotify:track:5uBlr2RNpuu3n7ROgiQa7w	1	dramatic	2025-02-02 22:37:55.06	🦥
+spotify:track:2q0egzIxE6opLoQsOwL0Gs	1	FAKE	2025-02-03 12:19:26.907	🦥
+spotify:track:0sPs2Nm4rPaM79v3IiG2iY	1	Dance With Me	2025-02-03 16:40:43.731	🦥
+spotify:track:1Dfs5bwPOxPYiG3jgWalCu	1	LOVE AND WAR	2025-02-03 17:42:48.898	🦥
 \.
 
 
