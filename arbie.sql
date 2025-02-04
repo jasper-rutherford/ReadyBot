@@ -5474,6 +5474,8 @@ spotify:track:5uBlr2RNpuu3n7ROgiQa7w	1	dramatic	2025-02-02 22:37:55.06	🦥
 spotify:track:2q0egzIxE6opLoQsOwL0Gs	1	FAKE	2025-02-03 12:19:26.907	🦥
 spotify:track:0sPs2Nm4rPaM79v3IiG2iY	1	Dance With Me	2025-02-03 16:40:43.731	🦥
 spotify:track:1Dfs5bwPOxPYiG3jgWalCu	1	LOVE AND WAR	2025-02-03 17:42:48.898	🦥
+spotify:track:2q0egzIxE6opLoQsOwL0Gs	1	FAKE	2025-02-03 20:00:51.911	🦥
+spotify:track:0evOmsnfWAqsGJlSTICgz7	1	Rockstar Everyday	2025-02-03 20:04:55.866	🦥
 \.
 
 
