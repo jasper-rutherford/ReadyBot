@@ -373,7 +373,7 @@ var bot = {
             stamp
         FROM scores
         WHERE themoji = '${emoji}'
-            AND stamp >= NOW() - INTERVAL '${queryInterval}'
+            AND stamp >= NOW() - INTERVAL '${bot.queryInterval}'
         ),
         AggregatedData AS (
         -- Step 2: Aggregate to get total score and median timestamp for each unique URI
@@ -381,7 +381,10 @@ var bot = {
             spotify_uri,
             song_name,
             SUM(score) AS total_score,
-            PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY stamp DESC) AS median_timestamp
+TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stamp) DESC)) AS median_timestamp
+    
+
+
         FROM FilteredScores
         GROUP BY spotify_uri, song_name
         )
