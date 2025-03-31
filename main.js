@@ -113,7 +113,7 @@ var bot = {
     loadSpot: async function () {
 
         // dont worry about backing up the db for the test build
-        if (!bot.testbuild) {
+        if (bot.testbuild) {
             // backup the database and push it to git
             await backupAndPushToGit();
 
