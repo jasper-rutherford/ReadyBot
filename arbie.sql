@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.11 (Raspbian 13.11-0+deb11u1)
--- Dumped by pg_dump version 13.11 (Raspbian 13.11-0+deb11u1)
+-- Dumped from database version 13.20 (Raspbian 13.20-0+deb11u1)
+-- Dumped by pg_dump version 13.20 (Raspbian 13.20-0+deb11u1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -5775,6 +5775,10 @@ spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2025-04-02 23:46:47.197	🦥
 spotify:track:4qP9K48aEcG50hSgmIQVi3	1	Cold As Ice	2025-04-03 16:03:17.433	🦥
 spotify:track:2w2lfwoTELQyN940qM7Nfd	1	Dangerous (feat. Sam Martin)	2025-04-03 20:43:09.382	🦥
 spotify:track:5VEkFlaS12TsOdeofJGPVP	1	Lie For Me	2025-04-03 22:19:10.141	🦥
+spotify:track:4ixpcIQTt7EE1EAqotGZGb	1	Right Now (Remix)	2025-04-05 11:35:08.137	🦥
+spotify:track:3ilFtzVTwXQ7n1EpKiZBLr	1	Don't Talk to Me	2025-04-05 11:35:15.714	🦥
+spotify:track:7CH8J4ulT49UfZwSDSkSZA	1	i miss u (with Au/Ra)	2025-04-05 20:22:46.328	🦥
+spotify:track:4kkeuVl6gF3RMqE4Nn5W3E	1	E.T.	2025-04-05 21:03:30.41	🦥
 \.
 
 
