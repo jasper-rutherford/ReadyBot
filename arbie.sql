@@ -5779,6 +5779,14 @@ spotify:track:4ixpcIQTt7EE1EAqotGZGb	1	Right Now (Remix)	2025-04-05 11:35:08.137
 spotify:track:3ilFtzVTwXQ7n1EpKiZBLr	1	Don't Talk to Me	2025-04-05 11:35:15.714	🦥
 spotify:track:7CH8J4ulT49UfZwSDSkSZA	1	i miss u (with Au/Ra)	2025-04-05 20:22:46.328	🦥
 spotify:track:4kkeuVl6gF3RMqE4Nn5W3E	1	E.T.	2025-04-05 21:03:30.41	🦥
+spotify:track:3iaELj7fOCqIPTl7UpcXX2	1	Bright Lights	2025-04-05 22:24:11.093	🦥
+spotify:track:2VOomzT6VavJOGBeySqaMc	1	Disturbia	2025-04-05 22:32:01.043	🦥
+spotify:track:4XNrMwGx1SqP01sqkGTDmo	1	One More Night	2025-04-05 22:39:59.072	🦥
+spotify:track:2LHNTC9QZxsL3nWpt8iaSR	1	Abracadabra	2025-04-05 23:36:02.064	🦥
+spotify:track:0LVdV9NG0y0ROxbYLpjbKc	1	Scatterbrain	2025-04-06 14:21:21.086	🦥
+spotify:track:5UebR77vjap8LVd6eqITiY	1	That Girl	2025-04-06 14:39:01.943	🦥
+spotify:track:52X12F5DESfemhJtbpjGfo	1	Finders Keepers	2025-04-06 14:43:41.01	🦥
+spotify:track:5J8FkaBZb8gWpzPWjD33GP	1	Monica - Demo	2025-04-06 22:15:12.087	🦥
 \.
 
 
