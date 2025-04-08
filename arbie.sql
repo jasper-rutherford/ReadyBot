@@ -5787,6 +5787,14 @@ spotify:track:0LVdV9NG0y0ROxbYLpjbKc	1	Scatterbrain	2025-04-06 14:21:21.086	🦥
 spotify:track:5UebR77vjap8LVd6eqITiY	1	That Girl	2025-04-06 14:39:01.943	🦥
 spotify:track:52X12F5DESfemhJtbpjGfo	1	Finders Keepers	2025-04-06 14:43:41.01	🦥
 spotify:track:5J8FkaBZb8gWpzPWjD33GP	1	Monica - Demo	2025-04-06 22:15:12.087	🦥
+spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-04-06 22:29:51.499	🦥
+spotify:track:5Hp4xFihdOE2dmDzxWcBFb	1	All By Myself	2025-04-07 13:07:20.471	🦥
+spotify:track:3lhmj5XfT5poIR5ozhiDmH	1	Emily	2025-04-07 13:25:01.144	🧑‍🎄
+spotify:track:3lhmj5XfT5poIR5ozhiDmH	1	Emily	2025-04-07 13:25:02.811	🦥
+spotify:track:3lhmj5XfT5poIR5ozhiDmH	1	Emily	2025-04-07 13:25:04.555	🧑‍🎄
+spotify:track:3lhmj5XfT5poIR5ozhiDmH	-1	Emily	2025-04-07 13:25:07.802	🧑‍🎄
+spotify:track:3lhmj5XfT5poIR5ozhiDmH	-1	Emily	2025-04-07 13:25:09.636	🧑‍🎄
+spotify:track:5b2aMqcSeAMlDptX6EjE7m	1	Lucky Strike	2025-04-07 13:40:52.215	🦥
 \.
 
 
