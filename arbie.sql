@@ -5795,6 +5795,13 @@ spotify:track:3lhmj5XfT5poIR5ozhiDmH	1	Emily	2025-04-07 13:25:04.555	🧑‍🎄
 spotify:track:3lhmj5XfT5poIR5ozhiDmH	-1	Emily	2025-04-07 13:25:07.802	🧑‍🎄
 spotify:track:3lhmj5XfT5poIR5ozhiDmH	-1	Emily	2025-04-07 13:25:09.636	🧑‍🎄
 spotify:track:5b2aMqcSeAMlDptX6EjE7m	1	Lucky Strike	2025-04-07 13:40:52.215	🦥
+spotify:track:6kOdk29M8h6ZfHz4byVG0t	1	PRETTY PLEASE	2025-04-08 12:28:54.632	🦥
+spotify:track:5fZlbHpe7bOU0MG2DHM0tB	1	99% ANGEL	2025-04-08 12:53:30.364	🦥
+spotify:track:4f0pJ7NNHAsrWbQBwiHMRJ	1	Hooked	2025-04-08 12:56:19.9	🦥
+spotify:track:0IrKiuLgqn0OKgpc946yWG	1	MF Diamond	2025-04-08 12:57:11.262	🦥
+spotify:track:14LdhxElpZS0rKVV4nxtdA	1	Queen of Kings	2025-04-08 14:08:07.957	🦥
+spotify:track:6RksBSj5fFtPkUnL2EE0oe	1	Darkness Settles In	2025-04-08 20:50:45.671	🦥
+spotify:track:5fZlbHpe7bOU0MG2DHM0tB	1	99% ANGEL	2025-04-08 21:05:23.601	🦥
 \.
 
 
