@@ -120,7 +120,7 @@ var bot = {
             // start the backup interval
             setInterval(backupAndPushToGit, 1000 * 60 * 60 * 24); // 24 hours
         }
-        
+ 
         // set the spotify bot
         setSpotifyBot(bot)
 
@@ -132,10 +132,13 @@ var bot = {
 
         // send a message to the spotify channel so that I know the last time the bot was started
         let channel = bot.client.channels.cache.get(bot.spotifyChannel)
-        channel.send(`Arbie started at ${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}`)
+console.log("3")
 
+        channel.send(`Arbie started at ${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}`)
+console.log("4")
         // send the ballots
         sendBallots(bot)
+console.log("5")
     },
 
     //gets the list of emojis from the list of themes
@@ -179,9 +182,9 @@ var bot = {
 
         //read in wrapped themes/songs
         let wrapper = JSON.parse(fs.readFileSync('./data/spotify/themoji.json'));
-
+console.log("1")
         bot.multiThemes = wrapper.themes
-
+console.log("2")
         bot.mostRecentOrderTime = wrapper.mostRecentOrderTime
 
         console.log("read themoji mappings from file")
@@ -395,6 +398,7 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
         total_score,
         median_timestamp
         FROM AggregatedData
+	WHERE total_score > '${bot.minScore}' 
         ORDER BY total_score DESC, median_timestamp DESC;
         `
 
