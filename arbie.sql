@@ -5802,6 +5802,18 @@ spotify:track:0IrKiuLgqn0OKgpc946yWG	1	MF Diamond	2025-04-08 12:57:11.262	🦥
 spotify:track:14LdhxElpZS0rKVV4nxtdA	1	Queen of Kings	2025-04-08 14:08:07.957	🦥
 spotify:track:6RksBSj5fFtPkUnL2EE0oe	1	Darkness Settles In	2025-04-08 20:50:45.671	🦥
 spotify:track:5fZlbHpe7bOU0MG2DHM0tB	1	99% ANGEL	2025-04-08 21:05:23.601	🦥
+spotify:track:1xlPeQm5LICSUONSh6atX0	1	Half Horse Half Man	2025-04-09 13:13:07.756	🦥
+spotify:track:3So693gGay7XYvU3oTaoVm	1	GLOW	2025-04-09 13:16:00.33	🦥
+spotify:track:5HpBS56LLsqrDRxOyTOSfk	1	Go F*ck Myself (GFM)	2025-04-09 15:53:13.679	🦥
+spotify:track:4VY6SsgA05tDXC3jAkAE1h	1	SICK PRETTY MIND (SIDE B)	2025-04-09 15:55:18.204	🦥
+spotify:track:3qK48XK8WSH562jvp4vabM	1	Deserve Each Other	2025-04-09 15:57:39.317	🔥
+spotify:track:3qK48XK8WSH562jvp4vabM	1	Deserve Each Other	2025-04-09 15:57:39.966	🦥
+spotify:track:3qK48XK8WSH562jvp4vabM	-1	Deserve Each Other	2025-04-09 15:57:45.046	🔥
+spotify:track:78RIER8V6EhrqVPOBi2GYa	1	Here Comes the Rain Again - Remastered Version	2025-04-09 16:08:25.578	🦥
+spotify:track:7mdZVXoHtXlf329VPo2s0l	1	Dance 'Til You Stop	2025-04-09 16:21:16.544	🔥
+spotify:track:7mdZVXoHtXlf329VPo2s0l	1	Dance 'Til You Stop	2025-04-09 16:21:16.711	🦥
+spotify:track:7mdZVXoHtXlf329VPo2s0l	-1	Dance 'Til You Stop	2025-04-09 16:21:20.195	🔥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2025-04-09 20:34:04.898	🦥
 \.
 
 
