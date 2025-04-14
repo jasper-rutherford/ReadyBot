@@ -5819,6 +5819,13 @@ spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-04-11 21:03:26.315	�
 spotify:track:4AGbGF8JPcaH43eCMuANXG	1	She Keeps Me Up	2025-04-13 14:28:42.305	🦥
 spotify:track:6PwjJ58I4t7Mae9xfZ9l9v	1	Somebody Told Me	2025-04-13 14:37:13.354	🦥
 spotify:track:6s3GEN8wK0OMzzzZbXj0fu	1	Hymn for the Weekend - Seeb Remix	2025-04-13 15:12:11.015	🦥
+spotify:track:6nek1Nin9q48AVZcWs9e9D	1	Paradise	2025-04-13 17:38:21.057	🦥
+spotify:track:7Feaw9WAEREY0DUOSXJLOM	1	Summer Days (feat. Macklemore & Patrick Stump of Fall Out Boy)	2025-04-13 18:33:39.862	🦥
+spotify:track:6E0dc82Da4W5QWXR8ktoGT	1	Call On Me - Radio Edit	2025-04-13 23:16:08.525	🦥
+spotify:track:6lKSOnC9iLGDonypMgvGrm	1	Too Much	2025-04-14 00:03:06.42	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-04-14 00:17:33.359	🦥
+spotify:track:7qhPd5HqLrCVpCWvpy8Hrh	1	Gravity	2025-04-14 11:33:07.088	🦥
+spotify:track:4FGkZslqmsI0JQuvpkJ8I5	1	5 feet away	2025-04-14 14:42:58.582	🦥
 \.
 
 
