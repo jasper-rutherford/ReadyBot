@@ -5839,6 +5839,12 @@ spotify:track:1ti7FlOjQV7ZmgMjN1M4Oc	1	Walk Hard	2025-04-16 14:39:50.918	🦥
 spotify:track:2HSmyk2qMN8WQjuGhaQgCk	1	Champagne Poetry	2025-04-16 14:46:35.392	🦥
 spotify:track:2HSmyk2qMN8WQjuGhaQgCk	1	Champagne Poetry	2025-04-16 14:48:47.475	🦥
 spotify:track:2dLv6YwZtcmoHKbeBHyAYH	1	iloveyou	2025-04-16 14:55:21.007	🦥
+spotify:track:0ECuf4vH9v4rPohsCKfW3y	1	Light It Up	2025-04-17 14:36:48.642	🦥
+spotify:track:6Qigf5GYjqg2LjrCxEeuLH	1	FMLYLM	2025-04-17 14:39:37.341	🦥
+spotify:track:0vf2eBw2inhl8y61cYQMv2	1	Devil Town	2025-04-17 18:09:40.703	🔥
+spotify:track:0vf2eBw2inhl8y61cYQMv2	1	Devil Town	2025-04-17 18:09:40.95	🦥
+spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-04-17 20:48:35.519	🦥
+spotify:track:5cF0dROlMOK5uNZtivgu50	1	Attention	2025-04-17 21:10:32.288	🐺
 \.
 
 
