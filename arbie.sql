@@ -5845,6 +5845,11 @@ spotify:track:0vf2eBw2inhl8y61cYQMv2	1	Devil Town	2025-04-17 18:09:40.703	🔥
 spotify:track:0vf2eBw2inhl8y61cYQMv2	1	Devil Town	2025-04-17 18:09:40.95	🦥
 spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-04-17 20:48:35.519	🦥
 spotify:track:5cF0dROlMOK5uNZtivgu50	1	Attention	2025-04-17 21:10:32.288	🐺
+spotify:track:0mBP9X2gPCuapvpZ7TGDk3	1	Left and Right (Feat. Jung Kook of BTS)	2025-04-18 14:30:08.369	🦥
+spotify:track:1ti7FlOjQV7ZmgMjN1M4Oc	1	Walk Hard	2025-04-18 14:33:55.184	🦥
+spotify:track:73ljrkSg4A0q3ByU0Cu7mw	1	We Like To Party! (The Vengabus)	2025-04-18 23:30:14.259	🦥
+spotify:track:73ljrkSg4A0q3ByU0Cu7mw	1	We Like To Party! (The Vengabus)	2025-04-18 23:30:15.115	🦀
+spotify:track:6qyS9qBy0mEk3qYaH8mPss	1	Murder In My Mind	2025-04-18 23:37:56.044	🦥
 \.
 
 
