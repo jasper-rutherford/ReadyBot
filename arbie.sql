@@ -5857,6 +5857,9 @@ spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2025-04-19 15:58:57.234	🦥
 spotify:track:7usVlcXSkQu4MBKI02oIJR	1	Nfl Main Theme	2025-04-19 18:25:21.165	🦥
 spotify:track:5J8FkaBZb8gWpzPWjD33GP	1	Monica - Demo	2025-04-19 18:41:35.842	🦥
 spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-04-19 20:01:32.199	🦥
+spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-04-22 20:04:23.12	🦥
+spotify:track:3lhmj5XfT5poIR5ozhiDmH	1	Emily	2025-04-22 20:16:13.028	🦥
+spotify:track:03nVbs87Wv4nvL3YZrdy3n	1	LSD	2025-04-23 09:21:10.699	🦥
 \.
 
 
