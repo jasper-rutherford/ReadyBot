@@ -5860,6 +5860,19 @@ spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-04-19 20:01:32.199	🦥
 spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-04-22 20:04:23.12	🦥
 spotify:track:3lhmj5XfT5poIR5ozhiDmH	1	Emily	2025-04-22 20:16:13.028	🦥
 spotify:track:03nVbs87Wv4nvL3YZrdy3n	1	LSD	2025-04-23 09:21:10.699	🦥
+spotify:track:0MVflYwPIchxoyb2WCaRyF	1	FUCK UP MY MAKE UP	2025-04-23 14:35:55.523	🦥
+spotify:track:5fZlbHpe7bOU0MG2DHM0tB	1	99% ANGEL	2025-04-23 15:00:26.592	🦥
+spotify:track:2oGdeSXf0cnSPXG8kZiDtB	1	Freak Like Me	2025-04-23 15:03:13.761	🦥
+spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-04-23 21:49:42.341	🦥
+spotify:track:5J8FkaBZb8gWpzPWjD33GP	1	Monica - Demo	2025-04-23 21:55:12.284	🦥
+spotify:track:0ECuf4vH9v4rPohsCKfW3y	1	Light It Up	2025-04-23 22:18:56.082	🦥
+spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-04-23 23:07:06.114	🦥
+spotify:track:6nStBZGqGgTR87MrBpNza0	1	HEARTBEAT	2025-04-24 00:29:12.445	🦥
+spotify:track:5Vwkt7zvEcj5riL46ZbM5K	1	touchin’ me	2025-04-24 00:31:46.742	🦥
+spotify:track:34pjQ4XCtI9gX83heBGuw6	1	Watch Me	2025-04-24 00:35:23.739	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2025-04-24 00:37:39.437	🦥
+spotify:track:37P5Jrv2aoKAiLC9oRcnC1	1	PowerTrip	2025-04-24 01:14:42.991	🦥
+spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-04-24 13:11:03.781	🦥
 \.
 
 
