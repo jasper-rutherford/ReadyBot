@@ -5873,6 +5873,8 @@ spotify:track:34pjQ4XCtI9gX83heBGuw6	1	Watch Me	2025-04-24 00:35:23.739	🦥
 spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2025-04-24 00:37:39.437	🦥
 spotify:track:37P5Jrv2aoKAiLC9oRcnC1	1	PowerTrip	2025-04-24 01:14:42.991	🦥
 spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-04-24 13:11:03.781	🦥
+spotify:track:5ZLUm9eab8y3tqQ1OhQSHI	1	Abracadabra	2025-04-24 22:39:42.311	🦥
+spotify:track:0ECuf4vH9v4rPohsCKfW3y	1	Light It Up	2025-04-24 22:53:08.679	🦥
 \.
 
 
