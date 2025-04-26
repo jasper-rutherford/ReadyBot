@@ -5875,6 +5875,13 @@ spotify:track:37P5Jrv2aoKAiLC9oRcnC1	1	PowerTrip	2025-04-24 01:14:42.991	🦥
 spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-04-24 13:11:03.781	🦥
 spotify:track:5ZLUm9eab8y3tqQ1OhQSHI	1	Abracadabra	2025-04-24 22:39:42.311	🦥
 spotify:track:0ECuf4vH9v4rPohsCKfW3y	1	Light It Up	2025-04-24 22:53:08.679	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-04-25 15:15:08.743	🦥
+spotify:track:7LB8g3PbCR3BKDKMtsugA9	1	Maestro	2025-04-25 15:33:25.3	🦥
+spotify:track:2SHUqzcvpL80CeGz3K3iNd	1	Break The Chains	2025-04-25 15:50:42.922	🦥
+spotify:track:6LAlZuA1IhylVnInqNWo2j	1	Can't Choose (feat. Kiara Nelson)	2025-04-25 22:30:24.8	🦥
+spotify:track:27yUNsQo2CPPokNw69M23X	1	Shot a friend	2025-04-25 23:11:26.626	🦥
+spotify:track:2T0kB6ogvjJAC1CGFbEDRP	1	Doomed	2025-04-26 12:14:41.595	🦥
+spotify:track:7LB8g3PbCR3BKDKMtsugA9	1	Maestro	2025-04-26 12:55:16.192	🦥
 \.
 
 
