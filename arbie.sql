@@ -5882,6 +5882,7 @@ spotify:track:6LAlZuA1IhylVnInqNWo2j	1	Can't Choose (feat. Kiara Nelson)	2025-04
 spotify:track:27yUNsQo2CPPokNw69M23X	1	Shot a friend	2025-04-25 23:11:26.626	🦥
 spotify:track:2T0kB6ogvjJAC1CGFbEDRP	1	Doomed	2025-04-26 12:14:41.595	🦥
 spotify:track:7LB8g3PbCR3BKDKMtsugA9	1	Maestro	2025-04-26 12:55:16.192	🦥
+spotify:track:0JWSMYurMhPmlD5H8VRoTn	1	If You Had My Love	2025-04-26 19:23:15.06	🦥
 \.
 
 
