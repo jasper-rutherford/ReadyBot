@@ -5883,6 +5883,13 @@ spotify:track:27yUNsQo2CPPokNw69M23X	1	Shot a friend	2025-04-25 23:11:26.626	�
 spotify:track:2T0kB6ogvjJAC1CGFbEDRP	1	Doomed	2025-04-26 12:14:41.595	🦥
 spotify:track:7LB8g3PbCR3BKDKMtsugA9	1	Maestro	2025-04-26 12:55:16.192	🦥
 spotify:track:0JWSMYurMhPmlD5H8VRoTn	1	If You Had My Love	2025-04-26 19:23:15.06	🦥
+spotify:track:27cUgjbAjNyI4YuIK01MC3	1	Far Away	2025-04-29 18:52:29.69	🦥
+spotify:track:5RLklKzb9QNXdpybSw2bbP	1	You and I	2025-04-29 19:32:25.394	🦥
+spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-04-29 21:12:28.336	🦥
+spotify:track:6ITGgQABtRjbBq3AEBXc4o	1	Victim	2025-04-29 21:48:04.149	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-04-29 21:50:03.334	🦥
+spotify:track:1Cj2vqUwlJVG27gJrun92y	1	The Sound of Silence	2025-04-30 10:30:45.227	🦥
+spotify:track:2ISSQPb9LHHiV6ng2NXosL	1	Beautiful Now	2025-04-30 11:02:46.314	🦥
 \.
 
 
