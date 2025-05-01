@@ -5890,6 +5890,8 @@ spotify:track:6ITGgQABtRjbBq3AEBXc4o	1	Victim	2025-04-29 21:48:04.149	🦥
 spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-04-29 21:50:03.334	🦥
 spotify:track:1Cj2vqUwlJVG27gJrun92y	1	The Sound of Silence	2025-04-30 10:30:45.227	🦥
 spotify:track:2ISSQPb9LHHiV6ng2NXosL	1	Beautiful Now	2025-04-30 11:02:46.314	🦥
+spotify:track:27O55IM5RuVpCPUZDU6UAX	1	That Man He's a Monster	2025-04-30 17:37:10.019	🦥
+spotify:track:2qSkIjg1o9h3YT9RAgYN75	1	Espresso	2025-05-01 10:20:13.37	🦥
 \.
 
 
