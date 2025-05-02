@@ -5892,6 +5892,14 @@ spotify:track:1Cj2vqUwlJVG27gJrun92y	1	The Sound of Silence	2025-04-30 10:30:45.
 spotify:track:2ISSQPb9LHHiV6ng2NXosL	1	Beautiful Now	2025-04-30 11:02:46.314	🦥
 spotify:track:27O55IM5RuVpCPUZDU6UAX	1	That Man He's a Monster	2025-04-30 17:37:10.019	🦥
 spotify:track:2qSkIjg1o9h3YT9RAgYN75	1	Espresso	2025-05-01 10:20:13.37	🦥
+spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-05-02 00:26:54.111	🦥
+spotify:track:37P5Jrv2aoKAiLC9oRcnC1	1	PowerTrip	2025-05-02 01:36:48.758	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-05-02 01:40:33.434	🦥
+spotify:track:4WRtXqu9TmvvwZ3bzdcCVQ	1	Thousand Lullabies	2025-05-02 10:53:22.867	🦥
+spotify:track:5RLklKzb9QNXdpybSw2bbP	1	You and I	2025-05-02 10:54:01.397	🦥
+spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-05-02 11:19:18.41	🦥
+spotify:track:0ECuf4vH9v4rPohsCKfW3y	1	Light It Up	2025-05-02 11:26:33.992	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2025-05-02 12:57:59.141	🦥
 \.
 
 
