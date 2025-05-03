@@ -5900,6 +5900,17 @@ spotify:track:5RLklKzb9QNXdpybSw2bbP	1	You and I	2025-05-02 10:54:01.397	🦥
 spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-05-02 11:19:18.41	🦥
 spotify:track:0ECuf4vH9v4rPohsCKfW3y	1	Light It Up	2025-05-02 11:26:33.992	🦥
 spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2025-05-02 12:57:59.141	🦥
+spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-05-02 15:04:34.48	🦥
+spotify:track:2ISSQPb9LHHiV6ng2NXosL	1	Beautiful Now	2025-05-02 15:08:16.509	🦥
+spotify:track:6ITGgQABtRjbBq3AEBXc4o	1	Victim	2025-05-02 15:38:35.476	🦥
+spotify:track:37P5Jrv2aoKAiLC9oRcnC1	1	PowerTrip	2025-05-02 15:58:20.041	🦥
+spotify:track:77KHZgfInRZq2FJcDOBkKx	1	Not The One	2025-05-02 16:09:40.541	🦥
+spotify:track:7LB8g3PbCR3BKDKMtsugA9	1	Maestro	2025-05-02 16:14:06.044	🦥
+spotify:track:6qyS9qBy0mEk3qYaH8mPss	1	Murder In My Mind	2025-05-02 16:46:09.761	🦥
+spotify:track:39MuEaENKIWaayDVYSVpjX	1	Fake	2025-05-02 19:17:34.912	🦥
+spotify:track:1pxQYcle6tZVsFk0gqh5Zp	1	pray t0 god	2025-05-02 22:38:42.424	🦥
+spotify:track:0Njbfdqov90zIfAXZl7hIf	1	HUSH	2025-05-02 23:45:18.385	🦥
+spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-02 23:56:51.665	🦥
 \.
 
 
