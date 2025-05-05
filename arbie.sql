@@ -5912,6 +5912,16 @@ spotify:track:1pxQYcle6tZVsFk0gqh5Zp	1	pray t0 god	2025-05-02 22:38:42.424	🦥
 spotify:track:0Njbfdqov90zIfAXZl7hIf	1	HUSH	2025-05-02 23:45:18.385	🦥
 spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-02 23:56:51.665	🦥
 spotify:track:1oharO6dFvRmHKI2o65GBe	1	Tears on the Dance Floor	2025-05-03 19:25:42.214	🦥
+spotify:track:4yGTNAnhlbSxrVdTC7fYIS	1	PRETTY WHEN U CRY	2025-05-04 15:10:55.989	🦥
+spotify:track:31rLeplcJIGfbvUBpPa9f7	1	MUSTANG BABY (FT. ARTEMAS)	2025-05-04 15:42:21.49	🦥
+spotify:track:0YlKym9x7HYSmPIWJIWHbz	1	Behind The Scenes	2025-05-04 17:51:31.962	🦥
+spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-05-04 18:52:31.408	🦥
+spotify:track:6ITGgQABtRjbBq3AEBXc4o	1	Victim	2025-05-04 19:24:52.066	🦥
+spotify:track:7Feaw9WAEREY0DUOSXJLOM	1	Summer Days (feat. Macklemore & Patrick Stump of Fall Out Boy)	2025-05-04 19:31:04.051	🦥
+spotify:track:4WHGwyIMlHJeJggdfKb6XF	1	The Things I Do For Love	2025-05-04 19:48:15.391	🦥
+spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-05-05 11:50:01.345	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-05 12:42:27.455	🦥
+spotify:track:1CqCRJWVc0cODGMvlXDRgt	1	Going Rogue	2025-05-05 14:06:15.522	🦥
 \.
 
 
