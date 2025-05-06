@@ -5922,6 +5922,15 @@ spotify:track:4WHGwyIMlHJeJggdfKb6XF	1	The Things I Do For Love	2025-05-04 19:48
 spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-05-05 11:50:01.345	🦥
 spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-05 12:42:27.455	🦥
 spotify:track:1CqCRJWVc0cODGMvlXDRgt	1	Going Rogue	2025-05-05 14:06:15.522	🦥
+spotify:track:6qyS9qBy0mEk3qYaH8mPss	1	Murder In My Mind	2025-05-05 15:07:01.296	🦥
+spotify:track:5ZkLd4MeukzNB1atzN1ViW	1	DOCTOR	2025-05-05 15:16:47.993	🦥
+spotify:track:6nek1Nin9q48AVZcWs9e9D	1	Paradise	2025-05-05 16:32:19.625	🦥
+spotify:track:4lSYy0lrCVeP5xLdKSzVTn	1	Fairy Bites	2025-05-05 17:17:56.77	🦥
+spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-05-05 17:26:19.36	🦥
+spotify:track:5ZLUm9eab8y3tqQ1OhQSHI	1	Abracadabra	2025-05-05 17:39:16.264	🦥
+spotify:track:5kbpMhCWUdvGTsRS5vKtJa	1	favorite sin	2025-05-05 18:15:32.868	🦥
+spotify:track:4VY6SsgA05tDXC3jAkAE1h	1	SICK PRETTY MIND (SIDE B)	2025-05-05 19:17:52.969	🦥
+spotify:track:1baqAtYnkpNzHAYwqibv0x	1	SIREN	2025-05-05 20:00:30.986	🦥
 \.
 
 
