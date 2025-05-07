@@ -5931,6 +5931,21 @@ spotify:track:5ZLUm9eab8y3tqQ1OhQSHI	1	Abracadabra	2025-05-05 17:39:16.264	🦥
 spotify:track:5kbpMhCWUdvGTsRS5vKtJa	1	favorite sin	2025-05-05 18:15:32.868	🦥
 spotify:track:4VY6SsgA05tDXC3jAkAE1h	1	SICK PRETTY MIND (SIDE B)	2025-05-05 19:17:52.969	🦥
 spotify:track:1baqAtYnkpNzHAYwqibv0x	1	SIREN	2025-05-05 20:00:30.986	🦥
+spotify:track:5kbpMhCWUdvGTsRS5vKtJa	1	favorite sin	2025-05-07 01:08:16.084	🦥
+spotify:track:4yGTNAnhlbSxrVdTC7fYIS	1	PRETTY WHEN U CRY	2025-05-07 01:09:42.098	🦥
+spotify:track:0MVflYwPIchxoyb2WCaRyF	1	FUCK UP MY MAKE UP	2025-05-07 01:18:30.645	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-05-07 01:21:41.416	🦥
+spotify:track:2SRHNn97rMNVYdtmH1gmd5	1	SIREN	2025-05-07 01:32:35.432	🦥
+spotify:track:5u9IdOmx9QdooGe8wO27zr	1	Better Kind Of Best Friend	2025-05-07 01:37:29.312	🦥
+spotify:track:26KHB75CMVWUh1q7v9KLPt	1	EAT ME (alive)	2025-05-07 01:39:50.248	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2025-05-07 01:43:01.026	🦥
+spotify:track:5ff77CZZUpY8Gvu5GuA6vb	1	HAUNTED	2025-05-07 01:43:17.824	🦥
+spotify:track:2xOxPjmkNNyoQ0MFZF2BG0	1	Taken By The Storm	2025-05-07 01:43:39.98	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-05-07 01:43:46.652	🦥
+spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-05-07 01:43:57.838	🦥
+spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2025-05-07 01:45:05.903	🦥
+spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2025-05-07 01:45:16.671	🦥
+spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2025-05-07 01:46:00.761	🦥
 \.
 
 
