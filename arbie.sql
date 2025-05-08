@@ -5946,6 +5946,13 @@ spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-05-07 01:43:57.838	🦥
 spotify:track:63bWXWGcWnRQvdS8bJWdkB	1	Love Again (feat. Alida)	2025-05-07 01:45:05.903	🦥
 spotify:track:7kfOEMJBJwdCYqyJeEnNhr	1	Moth To A Flame (with The Weeknd)	2025-05-07 01:45:16.671	🦥
 spotify:track:7jQkiAaa4XYYsPH3rcfcWo	1	Praise The Lord (Da Shine) (feat. Skepta) - Durdenhauer Edit	2025-05-07 01:46:00.761	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-05-07 15:06:39.773	🦥
+spotify:track:37P5Jrv2aoKAiLC9oRcnC1	1	PowerTrip	2025-05-07 15:15:59.26	🦥
+spotify:track:2ISSQPb9LHHiV6ng2NXosL	1	Beautiful Now	2025-05-07 15:27:59.241	🦥
+spotify:track:6nStBZGqGgTR87MrBpNza0	1	HEARTBEAT	2025-05-07 15:41:17.63	🦥
+spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-05-07 16:02:51.491	🦥
+spotify:track:4wAQSi076CxYXc0y37IRRH	1	Smalltown Boy	2025-05-07 16:13:43.309	🦥
+spotify:track:4VY6SsgA05tDXC3jAkAE1h	1	SICK PRETTY MIND (SIDE B)	2025-05-07 16:47:50.244	🦥
 \.
 
 
