@@ -5961,6 +5961,7 @@ spotify:track:7r2cCbhAbGUE4Izor1ZnlZ	1	K.O.	2025-05-08 21:45:13.956	🦥
 spotify:track:2rdQg8QDTrW5p147vUwSDx	1	My Soul Is Your Soul	2025-05-08 22:22:59.56	🦥
 spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-05-09 10:41:33.17	🦥
 spotify:track:6sg7Jm1go2WyhzwwvasQzm	1	Ghosts & Monsters	2025-05-09 17:25:28.605	🦥
+spotify:track:2EZbh6qrqdrsF41mbryyfQ	1	PULL UP	2025-05-10 20:39:41.875	🦥
 \.
 
 
