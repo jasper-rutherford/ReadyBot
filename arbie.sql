@@ -5962,6 +5962,12 @@ spotify:track:2rdQg8QDTrW5p147vUwSDx	1	My Soul Is Your Soul	2025-05-08 22:22:59.
 spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-05-09 10:41:33.17	🦥
 spotify:track:6sg7Jm1go2WyhzwwvasQzm	1	Ghosts & Monsters	2025-05-09 17:25:28.605	🦥
 spotify:track:2EZbh6qrqdrsF41mbryyfQ	1	PULL UP	2025-05-10 20:39:41.875	🦥
+spotify:track:7jN3Es9lQNwu2q1ELxNzBq	1	High Frequency	2025-05-11 13:32:55.297	🦥
+spotify:track:0oWN1xuaWUrx8QGiYqxAs9	1	Monster	2025-05-11 13:47:37.553	🦥
+spotify:track:1GL7vwDnPqCnJ2xGNxNLwG	1	These Nights	2025-05-11 14:13:06.608	🦥
+spotify:track:3deRcubbfOBaLsjLqYsmLw	1	Saturday Night (Feel The Groove)	2025-05-11 14:34:50.956	🦥
+spotify:track:0b788D4vIizpW6zWGN3vhU	1	365	2025-05-11 14:50:09.094	🦥
+spotify:track:7vzoNK8tbNmmKjDCNGTmkp	1	Tears of Gold - Owen Norton Remix	2025-05-11 15:21:49.545	🦥
 \.
 
 
