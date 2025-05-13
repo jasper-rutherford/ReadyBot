@@ -5968,6 +5968,8 @@ spotify:track:1GL7vwDnPqCnJ2xGNxNLwG	1	These Nights	2025-05-11 14:13:06.608	🦥
 spotify:track:3deRcubbfOBaLsjLqYsmLw	1	Saturday Night (Feel The Groove)	2025-05-11 14:34:50.956	🦥
 spotify:track:0b788D4vIizpW6zWGN3vhU	1	365	2025-05-11 14:50:09.094	🦥
 spotify:track:7vzoNK8tbNmmKjDCNGTmkp	1	Tears of Gold - Owen Norton Remix	2025-05-11 15:21:49.545	🦥
+spotify:track:7rsshaWm3DzHAkVoTbycMf	1	LOVE AT FiRST BiTE	2025-05-12 15:55:52.42	🦥
+spotify:track:2twVV6vVNyZg5VzJsT1TRs	1	Parasite	2025-05-12 16:37:56.31	🦥
 \.
 
 
