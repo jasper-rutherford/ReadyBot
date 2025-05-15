@@ -5972,6 +5972,27 @@ spotify:track:7rsshaWm3DzHAkVoTbycMf	1	LOVE AT FiRST BiTE	2025-05-12 15:55:52.42
 spotify:track:2twVV6vVNyZg5VzJsT1TRs	1	Parasite	2025-05-12 16:37:56.31	🦥
 spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-05-13 03:26:11.033	🦥
 spotify:track:65ocdKTGjti9ea5nNqaq4v	1	Crazy Woman	2025-05-13 16:48:49.98	🦥
+spotify:track:6oUDBxYv8765dlSi4oHznt	1	marionette	2025-05-14 09:06:44.348	🦥
+spotify:track:1QFKUbR7dxmTzOo47wYBqz	1	Blood Enemy	2025-05-14 12:20:27.913	🦥
+spotify:track:5COLdhTO5dH3CD0CZS0Fap	1	Good Guy	2025-05-14 12:24:48.907	🦥
+spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-14 12:36:43.333	🦥
+spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-14 12:41:45.896	🦥
+spotify:track:07eL4YdwV8u2NcY5ADrV5r	1	Nervous	2025-05-14 13:00:15.479	🦥
+spotify:track:4LjhbayfowLomcgOoX7oMe	1	Don't Save Me	2025-05-14 13:32:41.374	🦥
+spotify:track:4qP9K48aEcG50hSgmIQVi3	1	Cold As Ice	2025-05-14 13:42:18.093	🦥
+spotify:track:5Ev5bb32kDL4Bdb2deG0G6	1	Gorgeous Gorgeous Girls	2025-05-14 14:08:40.357	🦥
+spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-14 14:11:48.228	🦥
+spotify:track:7JQMw0ElNa32RFE55dlkMr	1	Wonderland	2025-05-14 14:14:43.079	🦥
+spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-14 14:16:23.817	🦥
+spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-14 14:17:06.597	🦥
+spotify:track:30YEJPZ7jPPzKIT7hxHcFO	1	Boo Hoo	2025-05-14 19:00:15.525	🦥
+spotify:track:2rdQg8QDTrW5p147vUwSDx	1	My Soul Is Your Soul	2025-05-14 19:11:12.561	🦥
+spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-05-14 19:30:16.146	🦥
+spotify:track:5COLdhTO5dH3CD0CZS0Fap	1	Good Guy	2025-05-14 19:46:08.37	🦥
+spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-14 19:48:18.375	🦥
+spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-14 19:51:54.319	🦥
+spotify:track:4LjhbayfowLomcgOoX7oMe	1	Don't Save Me	2025-05-14 19:59:14.322	🦥
+spotify:track:5Ev5bb32kDL4Bdb2deG0G6	1	Gorgeous Gorgeous Girls	2025-05-14 20:07:06.212	🦥
 \.
 
 
