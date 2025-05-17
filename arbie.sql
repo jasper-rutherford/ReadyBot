@@ -5994,6 +5994,16 @@ spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-14 19:51:54.319	�
 spotify:track:4LjhbayfowLomcgOoX7oMe	1	Don't Save Me	2025-05-14 19:59:14.322	🦥
 spotify:track:5Ev5bb32kDL4Bdb2deG0G6	1	Gorgeous Gorgeous Girls	2025-05-14 20:07:06.212	🦥
 spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-15 10:51:45.211	🦥
+spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-05-16 12:20:29.582	🦥
+spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-05-16 13:22:32.638	🦥
+spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-05-16 14:55:15.159	🦥
+spotify:track:1BtWLbAxVg1xAIgIPM86k7	1	Parasite	2025-05-16 15:40:21.312	🦥
+spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-16 21:21:53.724	🦥
+spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-16 21:25:27.695	🦥
+spotify:track:55BUd2feeBMNek0NwXEYT7	1	Fall Away	2025-05-16 22:25:31.541	🦥
+spotify:track:5COLdhTO5dH3CD0CZS0Fap	1	Good Guy	2025-05-16 23:16:32.662	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2025-05-16 23:32:22.156	🦥
+spotify:track:5J8FkaBZb8gWpzPWjD33GP	1	Monica - Demo	2025-05-16 23:38:03.079	🦥
 \.
 
 
