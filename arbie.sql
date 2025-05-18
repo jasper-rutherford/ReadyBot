@@ -6004,6 +6004,16 @@ spotify:track:55BUd2feeBMNek0NwXEYT7	1	Fall Away	2025-05-16 22:25:31.541	🦥
 spotify:track:5COLdhTO5dH3CD0CZS0Fap	1	Good Guy	2025-05-16 23:16:32.662	🦥
 spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2025-05-16 23:32:22.156	🦥
 spotify:track:5J8FkaBZb8gWpzPWjD33GP	1	Monica - Demo	2025-05-16 23:38:03.079	🦥
+spotify:track:3YjH3TIf5SOpFlnqlRdNAE	1	Savages	2025-05-16 23:48:28.433	🦥
+spotify:track:6nek1Nin9q48AVZcWs9e9D	1	Paradise	2025-05-17 00:05:37.897	🦥
+spotify:track:1QFKUbR7dxmTzOo47wYBqz	1	Blood Enemy	2025-05-17 00:07:48.64	🦥
+spotify:track:3qK48XK8WSH562jvp4vabM	1	Deserve Each Other	2025-05-17 01:56:15.951	🦥
+spotify:track:2Z2HCTkpjlD0h42bXmXrCb	1	close enough	2025-05-17 01:59:35.804	🦥
+spotify:track:3mfER4ORePHvN35cbZ3dkV	1	Where Are You Now	2025-05-17 15:53:42.383	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2025-05-17 17:54:46.815	🦥
+spotify:track:5Ev5bb32kDL4Bdb2deG0G6	1	Gorgeous Gorgeous Girls	2025-05-17 18:09:26.867	🦥
+spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-17 21:33:56.514	🦥
+spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-17 21:58:10.956	🦥
 \.
 
 
