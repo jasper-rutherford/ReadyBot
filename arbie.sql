@@ -6014,6 +6014,10 @@ spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2025-05-17 17:54:46.815	🦥
 spotify:track:5Ev5bb32kDL4Bdb2deG0G6	1	Gorgeous Gorgeous Girls	2025-05-17 18:09:26.867	🦥
 spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-17 21:33:56.514	🦥
 spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-17 21:58:10.956	🦥
+spotify:track:2oGdeSXf0cnSPXG8kZiDtB	1	Freak Like Me	2025-05-17 23:57:41.861	🦥
+spotify:track:59B5qfgrWEmJxj1xHUql2B	1	Expensive	2025-05-18 11:58:16.103	🦥
+spotify:track:6v9tjIDuN0anXNoPMytvbQ	1	MURDER IN MY MIND	2025-05-18 14:07:19.49	🦥
+spotify:track:02b35qI48b1RWhsFNKCb1Y	1	check	2025-05-18 14:09:42.43	🦥
 \.
 
 
