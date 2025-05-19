@@ -6018,6 +6018,10 @@ spotify:track:2oGdeSXf0cnSPXG8kZiDtB	1	Freak Like Me	2025-05-17 23:57:41.861	�
 spotify:track:59B5qfgrWEmJxj1xHUql2B	1	Expensive	2025-05-18 11:58:16.103	🦥
 spotify:track:6v9tjIDuN0anXNoPMytvbQ	1	MURDER IN MY MIND	2025-05-18 14:07:19.49	🦥
 spotify:track:02b35qI48b1RWhsFNKCb1Y	1	check	2025-05-18 14:09:42.43	🦥
+spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-05-18 18:08:31.762	🦥
+spotify:track:2ydQBWq2QlIcHyCD2HZGzy	1	Anxiety Is My Boyfriend	2025-05-18 19:47:15.288	🦥
+spotify:track:6G5QpkJFR6LNruk3iQHM9u	1	Looney Toons	2025-05-18 20:56:56.658	🦥
+spotify:track:5Y2n6pW4Vqr4Mzkd9V4Uk8	1	Ray Of Solar	2025-05-19 14:13:52.723	🦥
 \.
 
 
