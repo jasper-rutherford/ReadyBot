@@ -6022,6 +6022,17 @@ spotify:track:4HX1f113qsJDmwwGL6QeV7	1	pretty girl I’ll make you famous	2025-0
 spotify:track:2ydQBWq2QlIcHyCD2HZGzy	1	Anxiety Is My Boyfriend	2025-05-18 19:47:15.288	🦥
 spotify:track:6G5QpkJFR6LNruk3iQHM9u	1	Looney Toons	2025-05-18 20:56:56.658	🦥
 spotify:track:5Y2n6pW4Vqr4Mzkd9V4Uk8	1	Ray Of Solar	2025-05-19 14:13:52.723	🦥
+spotify:track:3SemJVQCsUo0K3QGN7pIXu	1	Used to the Darkness	2025-05-19 16:23:34.131	🦥
+spotify:track:7FyqTJJ8bdFVpNMoMNQbXA	1	Call Your Name	2025-05-19 17:14:52.16	🦥
+spotify:track:6mTnH6xSYwKohtsO9RFzcc	1	We Are Mirage	2025-05-19 17:17:24.282	🦥
+spotify:track:6B0ryXd4wz5PeX6lZzEbv7	1	Better Off (Alone, Pt. III)	2025-05-19 17:23:23.197	🦥
+spotify:track:3gCOHPzD8BICRM5xR1XBQS	1	Lost My Mind (Wake Up)	2025-05-19 17:29:13.646	🦥
+spotify:track:1WumDA51R5dHvmRVhmoP6t	1	Sinner	2025-05-19 18:03:45.785	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2025-05-19 20:52:26.196	🦥
+spotify:track:1QFKUbR7dxmTzOo47wYBqz	1	Blood Enemy	2025-05-19 22:53:40.474	🦥
+spotify:track:7FyqTJJ8bdFVpNMoMNQbXA	1	Call Your Name	2025-05-20 13:31:16.467	🦥
+spotify:track:6oUDBxYv8765dlSi4oHznt	1	marionette	2025-05-20 14:04:56.398	🦥
+spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-20 14:14:03.954	🦥
 \.
 
 
