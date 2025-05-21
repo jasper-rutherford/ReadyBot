@@ -6033,6 +6033,15 @@ spotify:track:1QFKUbR7dxmTzOo47wYBqz	1	Blood Enemy	2025-05-19 22:53:40.474	🦥
 spotify:track:7FyqTJJ8bdFVpNMoMNQbXA	1	Call Your Name	2025-05-20 13:31:16.467	🦥
 spotify:track:6oUDBxYv8765dlSi4oHznt	1	marionette	2025-05-20 14:04:56.398	🦥
 spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-20 14:14:03.954	🦥
+spotify:track:59B5qfgrWEmJxj1xHUql2B	1	Expensive	2025-05-20 14:24:51.788	🦥
+spotify:track:0MVflYwPIchxoyb2WCaRyF	1	FUCK UP MY MAKE UP	2025-05-20 14:30:56.469	🦥
+spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-05-20 22:32:22.74	🦥
+spotify:track:7IY3K7h7hyd3N7BQJ5iolb	1	X-RAY	2025-05-21 00:11:27.11	🦥
+spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-05-21 00:45:34.21	🦥
+spotify:track:4ssqA7CeDI5XmEh4Yez5H5	1	Sirens (feat. Sophie Powers)	2025-05-21 01:45:24.086	🦥
+spotify:track:62hLiF5VQ4ijErnEbxQBpU	1	girl and the machine	2025-05-21 02:10:47.927	🦥
+spotify:track:62hLiF5VQ4ijErnEbxQBpU	1	girl and the machine	2025-05-21 02:10:56.147	🦥
+spotify:track:62hLiF5VQ4ijErnEbxQBpU	1	girl and the machine	2025-05-21 02:11:06.243	🦥
 \.
 
 
