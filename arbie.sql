@@ -6042,6 +6042,13 @@ spotify:track:4ssqA7CeDI5XmEh4Yez5H5	1	Sirens (feat. Sophie Powers)	2025-05-21 0
 spotify:track:62hLiF5VQ4ijErnEbxQBpU	1	girl and the machine	2025-05-21 02:10:47.927	🦥
 spotify:track:62hLiF5VQ4ijErnEbxQBpU	1	girl and the machine	2025-05-21 02:10:56.147	🦥
 spotify:track:62hLiF5VQ4ijErnEbxQBpU	1	girl and the machine	2025-05-21 02:11:06.243	🦥
+spotify:track:2Z2HCTkpjlD0h42bXmXrCb	1	close enough	2025-05-21 17:27:29.389	🦥
+spotify:track:5kbpMhCWUdvGTsRS5vKtJa	1	favorite sin	2025-05-21 17:43:27.59	🦥
+spotify:track:7IY3K7h7hyd3N7BQJ5iolb	1	X-RAY	2025-05-21 18:23:21.791	🦥
+spotify:track:0dscoCNZ04K2z0p5zw3shV	1	Da Da Dum	2025-05-21 18:29:19.224	🦥
+spotify:track:4sQzliwhbjG17hZMXkg7aL	1	Deserve Each Other	2025-05-22 13:31:15.207	🦥
+spotify:track:7wRCK1xMZU2g22hav5IgwI	1	Blood Orange Wine	2025-05-22 13:34:09.543	🦥
+spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-05-22 13:36:21.92	🦥
 \.
 
 
