@@ -6049,6 +6049,32 @@ spotify:track:0dscoCNZ04K2z0p5zw3shV	1	Da Da Dum	2025-05-21 18:29:19.224	🦥
 spotify:track:4sQzliwhbjG17hZMXkg7aL	1	Deserve Each Other	2025-05-22 13:31:15.207	🦥
 spotify:track:7wRCK1xMZU2g22hav5IgwI	1	Blood Orange Wine	2025-05-22 13:34:09.543	🦥
 spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-05-22 13:36:21.92	🦥
+spotify:track:302AZQ7ISLWGgGxAln39Km	1	Shy Guy	2025-05-22 14:19:53.15	🦥
+spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-05-22 14:31:00.812	🦥
+spotify:track:5TIyFlLF0EfYOUZH1TYxBq	1	More Than a Friend	2025-05-22 14:39:02.764	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-22 15:07:25.989	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-22 15:07:26.878	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-22 15:09:44.623	🦥
+spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-22 16:05:25.227	🦥
+spotify:track:2euhvMXCewoqMnKmaMHA9C	1	NAM NAM NIAM	2025-05-22 16:08:35.061	🦥
+spotify:track:0YSBvy193vMh8LE0kJp5gL	1	Nocturnal Lament	2025-05-22 16:15:50.516	🦥
+spotify:track:0sd2xBT2NQVfNDojhUuLhM	1	I Ran (So Far Away)	2025-05-22 16:21:17.94	🦥
+spotify:track:3TsWElLukFGT0VnzbYYC4a	1	Dark Side	2025-05-22 16:30:19.777	🦥
+spotify:track:3SemJVQCsUo0K3QGN7pIXu	1	Used to the Darkness	2025-05-22 20:03:04.288	🦥
+spotify:track:1WumDA51R5dHvmRVhmoP6t	1	Sinner	2025-05-22 20:49:42.055	🦥
+spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-22 21:52:04.94	🦥
+spotify:track:7FyqTJJ8bdFVpNMoMNQbXA	1	Call Your Name	2025-05-22 22:29:03.394	🦥
+spotify:track:1bKqgVP6x9VrwUKwaTvMXo	1	Unsubstantial	2025-05-22 22:32:54.476	🦥
+spotify:track:5COLdhTO5dH3CD0CZS0Fap	1	Good Guy	2025-05-22 22:38:20.773	🦥
+spotify:track:2aQpISWUBToaF84DDiTeRV	1	Be My Lover (feat. La Bouche) - 2023 Mix	2025-05-22 22:43:37.818	🦥
+spotify:track:6mTnH6xSYwKohtsO9RFzcc	1	We Are Mirage	2025-05-22 22:59:17.13	🦥
+spotify:track:6ilBrv1QTmCTIMQHAuLG6m	1	Dance With My Demons	2025-05-22 23:15:47.047	🦥
+spotify:track:2Z2HCTkpjlD0h42bXmXrCb	1	close enough	2025-05-22 23:21:48.846	🦥
+spotify:track:3deRcubbfOBaLsjLqYsmLw	1	Saturday Night (Feel The Groove)	2025-05-23 12:05:26.673	🦥
+spotify:track:02b35qI48b1RWhsFNKCb1Y	1	check	2025-05-23 12:08:57.756	🦥
+spotify:track:7fGAhyEwT2RPPJeRHNeiC1	1	BRAIN (feat. Artemas)	2025-05-23 12:18:56.251	🦥
+spotify:track:4jiwz2tQZo21Z4NQwz4zUt	1	southbound	2025-05-23 12:21:23.757	🦥
+spotify:track:1O5UqpLWNMgYhV69gi9pEM	1	sweat	2025-05-23 12:23:00.465	🦥
 \.
 
 
