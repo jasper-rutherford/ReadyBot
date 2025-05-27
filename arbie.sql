@@ -6081,6 +6081,25 @@ spotify:track:4LjhbayfowLomcgOoX7oMe	1	Don't Save Me	2025-05-24 03:30:06.379	�
 spotify:track:2t3C1vHyAGRtW5gwJDKCTb	1	Poltergeist	2025-05-24 14:53:28.603	🦥
 spotify:track:3deRcubbfOBaLsjLqYsmLw	1	Saturday Night (Feel The Groove)	2025-05-24 15:15:37.363	🦥
 spotify:track:7fGAhyEwT2RPPJeRHNeiC1	1	BRAIN (feat. Artemas)	2025-05-24 15:19:19.532	🦥
+spotify:track:5kbpMhCWUdvGTsRS5vKtJa	1	favorite sin	2025-05-26 15:03:57.367	🦥
+spotify:track:7ByDxFf6Xy7xPFAYafsLxI	1	engravings	2025-05-26 15:12:41.066	🦥
+spotify:track:6oUDBxYv8765dlSi4oHznt	1	marionette	2025-05-26 15:13:34.444	🦥
+spotify:track:0sd2xBT2NQVfNDojhUuLhM	1	I Ran (So Far Away)	2025-05-26 16:04:57.949	🦥
+spotify:track:0CQctRjgAceCvmtQ1CCY22	1	Hide Away	2025-05-26 16:08:13.273	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-26 16:09:59.125	🦥
+spotify:track:65ocdKTGjti9ea5nNqaq4v	1	Crazy Woman	2025-05-26 16:15:48.45	🦥
+spotify:track:65ocdKTGjti9ea5nNqaq4v	1	Crazy Woman	2025-05-26 16:16:57.563	🦥
+spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-05-26 16:22:08.636	🦥
+spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-05-26 18:11:39.445	🦥
+spotify:track:0oWN1xuaWUrx8QGiYqxAs9	1	Monster	2025-05-26 18:14:13.271	🦥
+spotify:track:6ilBrv1QTmCTIMQHAuLG6m	1	Dance With My Demons	2025-05-26 18:35:11.756	🦥
+spotify:track:1WumDA51R5dHvmRVhmoP6t	1	Sinner	2025-05-26 18:49:57.142	🦥
+spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-05-26 18:55:56.284	🦥
+spotify:track:2ydQBWq2QlIcHyCD2HZGzy	1	Anxiety Is My Boyfriend	2025-05-26 18:59:04.491	🦥
+spotify:track:4uUG5RXrOk84mYEfFvj3cK	1	I'm Good (Blue)	2025-05-26 19:02:32.431	🦥
+spotify:track:1bKqgVP6x9VrwUKwaTvMXo	1	Unsubstantial	2025-05-26 19:04:21.333	🦥
+spotify:track:0YSBvy193vMh8LE0kJp5gL	-1	Nocturnal Lament	2025-05-26 19:13:41.886	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-26 19:14:56.106	🦥
 \.
 
 
