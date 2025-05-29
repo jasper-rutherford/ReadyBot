@@ -6100,6 +6100,10 @@ spotify:track:4uUG5RXrOk84mYEfFvj3cK	1	I'm Good (Blue)	2025-05-26 19:02:32.431	�
 spotify:track:1bKqgVP6x9VrwUKwaTvMXo	1	Unsubstantial	2025-05-26 19:04:21.333	🦥
 spotify:track:0YSBvy193vMh8LE0kJp5gL	-1	Nocturnal Lament	2025-05-26 19:13:41.886	🦥
 spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-05-26 19:14:56.106	🦥
+spotify:track:3JG1uFc40wfyrqaWC7iv0e	1	i like the way you kiss me	2025-05-28 16:59:29.899	🦥
+spotify:track:698ItKASDavgwZ3WjaWjtz	1	Faded	2025-05-28 16:59:32.869	🦥
+spotify:track:09CnYHiZ5jGT1wr1TXJ9Zt	1	Thank You (Not So Bad)	2025-05-28 16:59:35.642	🦥
+spotify:track:1y93z6l0s65Wrvp6cZWhq4	1	Woman of the Hour	2025-05-28 16:59:41.023	🦥
 \.
 
 
