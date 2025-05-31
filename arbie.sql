@@ -6116,6 +6116,11 @@ spotify:track:5y0nHln9ipHqpqoYa3jiQK	1	PTSD	2025-05-29 18:34:58.815	🦥
 spotify:track:3Ao9Dz4riEnk19OLSzpjjb	1	TECHNO SEXUAL	2025-05-29 18:37:25.218	🦥
 spotify:track:4RLVkuXOMxVctucLC2FJ5R	1	Figure You Out	2025-05-29 21:43:51.026	🦥
 spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-05-29 21:44:41.099	🦥
+spotify:track:0oWN1xuaWUrx8QGiYqxAs9	1	Monster	2025-05-31 00:33:09.319	🦥
+spotify:track:0VpGUhtOUgbTGdJ5S6cTPk	1	feelings don't lie - extended mix	2025-05-31 01:22:44.976	🦥
+spotify:track:3bbWO3cKwC5yggROA89fxv	1	BADDER	2025-05-31 13:15:59.781	🦥
+spotify:track:1isVrkXme1s5XbPYGfawzV	1	Put Your Money Where Your Mouth Is	2025-05-31 13:24:03.281	🦥
+spotify:track:7y2oK30NMiSSYTDAXJLMvh	1	Roses	2025-05-31 14:00:53.497	🦥
 \.
 
 
