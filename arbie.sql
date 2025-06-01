@@ -6121,6 +6121,13 @@ spotify:track:0VpGUhtOUgbTGdJ5S6cTPk	1	feelings don't lie - extended mix	2025-05
 spotify:track:3bbWO3cKwC5yggROA89fxv	1	BADDER	2025-05-31 13:15:59.781	🦥
 spotify:track:1isVrkXme1s5XbPYGfawzV	1	Put Your Money Where Your Mouth Is	2025-05-31 13:24:03.281	🦥
 spotify:track:7y2oK30NMiSSYTDAXJLMvh	1	Roses	2025-05-31 14:00:53.497	🦥
+spotify:track:7H4sy0H6eMkZGneAXKsngo	1	Bad Idea feat. That Mexican OT - Bodybuilding Mode	2025-06-01 11:22:20.81	🦥
+spotify:track:69GHGPPXgnWz9fMAFewvBA	1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-01 11:42:03.633	🦥
+spotify:track:1UKDcxiR4VNad3toIHpJZ6	1	Supernatural	2025-06-01 12:31:19.949	🦥
+spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-01 12:41:23.907	🦥
+spotify:track:3AjyOYxBv8bByfBtG5o9dP	1	See You Again	2025-06-01 13:16:48.791	🦥
+spotify:track:2buPg3KvHsc4TzMEHkeVYn	1	Boots	2025-06-01 13:35:00.302	🦥
+spotify:track:7MmG8p0F9N3C4AXdK6o6Eb	1	Outside (feat. Ellie Goulding)	2025-06-01 14:14:04.708	🦥
 \.
 
 
