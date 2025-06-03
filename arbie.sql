@@ -6128,6 +6128,29 @@ spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-01 12:41:23.907	🦥
 spotify:track:3AjyOYxBv8bByfBtG5o9dP	1	See You Again	2025-06-01 13:16:48.791	🦥
 spotify:track:2buPg3KvHsc4TzMEHkeVYn	1	Boots	2025-06-01 13:35:00.302	🦥
 spotify:track:7MmG8p0F9N3C4AXdK6o6Eb	1	Outside (feat. Ellie Goulding)	2025-06-01 14:14:04.708	🦥
+spotify:track:5RLklKzb9QNXdpybSw2bbP	1	You and I	2025-06-02 16:10:23.504	🦥
+spotify:track:3J5Wcm5gvOl15F79FUy6Zy	1	Sideways	2025-06-02 16:23:34.674	🦥
+spotify:track:3JhgPs7rbmzLBWRvHlel8U	1	Bad Memories	2025-06-02 16:28:08.024	🦥
+spotify:track:0rxEsBxxil046ZqipaCXle	1	Left & Right	2025-06-02 16:31:24.222	🦥
+spotify:track:3deRcubbfOBaLsjLqYsmLw	1	Saturday Night (Feel The Groove)	2025-06-02 18:31:42.571	🦥
+spotify:track:2dgDzYUUMAXnX2knGp9mpc	1	Déjà Vu	2025-06-02 19:28:17.029	🦥
+spotify:track:4FezkkbT6BE8WW2D5xg1rR	1	Keep It To Myself	2025-06-02 19:35:36.451	🦥
+spotify:track:4FezkkbT6BE8WW2D5xg1rR	1	Keep It To Myself	2025-06-02 19:36:42.437	🦥
+spotify:track:4l7NBJ4iqUZM5gz1c7gtNH	1	you problem	2025-06-02 19:40:59.496	🦥
+spotify:track:1F5EX18FztnE78ZHO4RwZV	1	LIQUORLIPS	2025-06-02 19:45:33.113	🦥
+spotify:track:5CGFCCgW9mOXxWiNNIPBeG	1	Biblical	2025-06-02 19:50:36.493	🦥
+spotify:track:4ssqA7CeDI5XmEh4Yez5H5	1	Sirens (feat. Sophie Powers)	2025-06-02 19:53:24.837	🦥
+spotify:track:105HYrCY6jMIsqOspGeCJI	1	Flashing Lights	2025-06-02 19:59:44.62	🦥
+spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-06-02 20:02:07.082	🦥
+spotify:track:4vjqNrPZZrS3EYFYhGXYig	1	Kiss of Death	2025-06-02 20:16:17.658	🦥
+spotify:track:06B93ufTCpb6VWEiqgcVne	1	DANCE	2025-06-02 20:17:23.651	🦥
+spotify:track:7bVyJVC1pFN13Pmcvcva7B	1	Good Life	2025-06-02 20:46:24.522	🦥
+spotify:track:0CZyUC8152Mc40d8On1ryQ	1	DiGiTAL HEARTBEAT	2025-06-02 20:47:40.422	🦥
+spotify:track:56XbcLHPO6x9dcuHZX7CAt	1	BE A GOOD BOY	2025-06-02 20:52:58.382	🦥
+spotify:track:56XbcLHPO6x9dcuHZX7CAt	1	BE A GOOD BOY	2025-06-02 20:55:17.159	🦥
+spotify:track:4TDcVE5LKoKjzJu4T3T4fa	1	Sweat	2025-06-02 20:57:56.652	🦥
+spotify:track:3wrWJ4cpGWSL2JZieVXhdR	1	lay all your love on me	2025-06-02 21:40:40.69	🦥
+spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-06-03 02:19:41.657	🦥
 \.
 
 
