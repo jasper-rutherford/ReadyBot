@@ -6151,6 +6151,13 @@ spotify:track:56XbcLHPO6x9dcuHZX7CAt	1	BE A GOOD BOY	2025-06-02 20:55:17.159	�
 spotify:track:4TDcVE5LKoKjzJu4T3T4fa	1	Sweat	2025-06-02 20:57:56.652	🦥
 spotify:track:3wrWJ4cpGWSL2JZieVXhdR	1	lay all your love on me	2025-06-02 21:40:40.69	🦥
 spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-06-03 02:19:41.657	🦥
+spotify:track:2yWlGEgEfPot0lv3OAjuG3	1	Just Keep Watching (From F1® The Movie)	2025-06-03 18:53:57.31	🦥
+spotify:track:4TDcVE5LKoKjzJu4T3T4fa	1	Sweat	2025-06-03 18:57:45.909	🦥
+spotify:track:2yWlGEgEfPot0lv3OAjuG3	1	Just Keep Watching (From F1® The Movie)	2025-06-03 19:02:01.179	🦥
+spotify:track:7wOQHp3yFvxyCPa3lnD7WZ	1	Girl's Girl	2025-06-03 19:12:14.267	🦥
+spotify:track:1SdQjKRW52cHg2SEesQLvH	1	Physical (feat. Troye Sivan)	2025-06-03 22:12:25.723	🦥
+spotify:track:6A2b6zMhxAT3RG7fpom7KT	1	KiSS BACK	2025-06-03 23:12:05.595	🦥
+spotify:track:5y0nHln9ipHqpqoYa3jiQK	1	PTSD	2025-06-03 23:58:13.776	🦥
 \.
 
 
