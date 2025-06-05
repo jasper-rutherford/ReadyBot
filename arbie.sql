@@ -6158,6 +6158,15 @@ spotify:track:7wOQHp3yFvxyCPa3lnD7WZ	1	Girl's Girl	2025-06-03 19:12:14.267	🦥
 spotify:track:1SdQjKRW52cHg2SEesQLvH	1	Physical (feat. Troye Sivan)	2025-06-03 22:12:25.723	🦥
 spotify:track:6A2b6zMhxAT3RG7fpom7KT	1	KiSS BACK	2025-06-03 23:12:05.595	🦥
 spotify:track:5y0nHln9ipHqpqoYa3jiQK	1	PTSD	2025-06-03 23:58:13.776	🦥
+spotify:track:2Z2HCTkpjlD0h42bXmXrCb	1	close enough	2025-06-04 18:54:45.465	🦥
+spotify:track:4WdThF14sHbMWyW80vlTFH	1	Breaking Through the Night	2025-06-04 19:25:09.649	🦥
+spotify:track:3qK48XK8WSH562jvp4vabM	1	Deserve Each Other	2025-06-04 19:28:54.944	🦥
+spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-06-04 19:34:20.063	🦥
+spotify:track:2dgDzYUUMAXnX2knGp9mpc	1	Déjà Vu	2025-06-04 19:39:32.536	🦥
+spotify:track:4FezkkbT6BE8WW2D5xg1rR	1	Keep It To Myself	2025-06-04 19:45:44.095	🦥
+spotify:track:5COLdhTO5dH3CD0CZS0Fap	1	Good Guy	2025-06-04 20:04:24.394	🦥
+spotify:track:4LjhbayfowLomcgOoX7oMe	1	Don't Save Me	2025-06-04 20:08:39.111	🦥
+spotify:track:0VpGUhtOUgbTGdJ5S6cTPk	1	feelings don't lie - extended mix	2025-06-04 20:55:24.088	🦥
 \.
 
 
