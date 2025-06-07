@@ -6180,6 +6180,10 @@ spotify:track:6A2b6zMhxAT3RG7fpom7KT	1	KiSS BACK	2025-06-06 13:09:02.291	🦥
 spotify:track:212qRRJMxvpN3FNkW6g3rH	1	BLAH	2025-06-06 13:15:23.768	🦥
 spotify:track:5COLdhTO5dH3CD0CZS0Fap	1	Good Guy	2025-06-06 13:46:51.345	🦥
 spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-06-06 13:52:54.989	🦥
+spotify:track:7H4sy0H6eMkZGneAXKsngo	1	Bad Idea feat. That Mexican OT - Bodybuilding Mode	2025-06-07 14:49:27.402	🦥
+spotify:track:5Y2n6pW4Vqr4Mzkd9V4Uk8	1	Ray Of Solar	2025-06-07 14:59:20.644	🦥
+spotify:track:6mTnH6xSYwKohtsO9RFzcc	1	We Are Mirage	2025-06-07 15:03:57.927	🦥
+spotify:track:7kDUspsoYfLkWnZR7qwHZl	1	my ex's best friend (with blackbear)	2025-06-07 15:33:40.281	🦥
 \.
 
 
