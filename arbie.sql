@@ -6121,6 +6121,7 @@ spotify:track:0VpGUhtOUgbTGdJ5S6cTPk	1	feelings don't lie - extended mix	2025-05
 spotify:track:3bbWO3cKwC5yggROA89fxv	1	BADDER	2025-05-31 13:15:59.781	🦥
 spotify:track:1isVrkXme1s5XbPYGfawzV	1	Put Your Money Where Your Mouth Is	2025-05-31 13:24:03.281	🦥
 spotify:track:7y2oK30NMiSSYTDAXJLMvh	1	Roses	2025-05-31 14:00:53.497	🦥
+spotify:track:0Njbfdqov90zIfAXZl7hIf	1	HUSH	2025-06-08 13:10:12.597	🦥
 spotify:track:7H4sy0H6eMkZGneAXKsngo	1	Bad Idea feat. That Mexican OT - Bodybuilding Mode	2025-06-01 11:22:20.81	🦥
 spotify:track:69GHGPPXgnWz9fMAFewvBA	1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-01 11:42:03.633	🦥
 spotify:track:1UKDcxiR4VNad3toIHpJZ6	1	Supernatural	2025-06-01 12:31:19.949	🦥
@@ -6185,6 +6186,18 @@ spotify:track:5Y2n6pW4Vqr4Mzkd9V4Uk8	1	Ray Of Solar	2025-06-07 14:59:20.644	🦥
 spotify:track:6mTnH6xSYwKohtsO9RFzcc	1	We Are Mirage	2025-06-07 15:03:57.927	🦥
 spotify:track:7kDUspsoYfLkWnZR7qwHZl	1	my ex's best friend (with blackbear)	2025-06-07 15:33:40.281	🦥
 spotify:track:493JwOBVJAGB4safZK0Q4E	1	Saddy Daddy-O	2025-06-07 15:38:39.055	🦥
+spotify:track:0BuHt4GZ9uqDtPxUsYfEsy	1	Mother Teresa	2025-06-07 15:43:04.691	🦥
+spotify:track:2OfQvGrr83FGpdLA1nAR01	1	Numb	2025-06-07 15:45:00.566	🦥
+spotify:track:0sd2xBT2NQVfNDojhUuLhM	1	I Ran (So Far Away)	2025-06-07 16:22:18.057	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2025-06-07 16:24:17.069	🦥
+spotify:track:30YEJPZ7jPPzKIT7hxHcFO	1	Boo Hoo	2025-06-07 16:41:18.05	🦥
+spotify:track:30YEJPZ7jPPzKIT7hxHcFO	1	Boo Hoo	2025-06-07 16:41:38.245	🦥
+spotify:track:1v2EmuslskqaQS0iNfhwMb	1	Call My Name	2025-06-07 16:53:06.703	🦥
+spotify:track:5uHA52m0cZ2l8JeUwVx8wI	1	HONKY TONK BADONKADONK	2025-06-08 01:16:08.451	🦥
+spotify:track:6A2b6zMhxAT3RG7fpom7KT	1	KiSS BACK	2025-06-08 12:30:13.229	🦥
+spotify:track:2AwHfYNiI0aDqs51eA3KUr	1	Iconique	2025-06-08 12:45:20.814	🦥
+spotify:track:78bsKMPNBvsM9bLYi5zvuQ	1	SECOND MINUTE HOUR	2025-06-08 12:55:32.779	🦥
+spotify:track:4F5kOAG106Avx0NcnBD9hf	1	COFFIN	2025-06-08 15:01:25.478	🦥
 \.
 
 
