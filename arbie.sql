@@ -6203,6 +6203,8 @@ spotify:track:7LO8X20v1ecmGGOtn3KPLX	1	Slow Nights	2025-06-08 17:46:19.806	🦥
 spotify:track:6E7wqplViIGfBHyoVDj4yW	1	I Like You Best	2025-06-08 18:00:59.535	🦥
 spotify:track:3z3Ya9EOqmqV1fBX2zvsq8	1	endless summer	2025-06-08 18:03:55.076	🦥
 spotify:track:5GLjjwjiMBoDIn0Dx0uDos	1	Plastic Therapy	2025-06-09 11:49:27.809	🦥
+spotify:track:6zfHBysknBGSTZRUU6Y2st	1	GABBA GABBA	2025-06-09 19:57:42.767	🦥
+spotify:track:7mKy65CyVCmawYMw3JJGPQ	1	Me, Myself and The Night	2025-06-09 22:03:49.281	🦥
 \.
 
 
