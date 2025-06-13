@@ -6205,6 +6205,15 @@ spotify:track:3z3Ya9EOqmqV1fBX2zvsq8	1	endless summer	2025-06-08 18:03:55.076	�
 spotify:track:5GLjjwjiMBoDIn0Dx0uDos	1	Plastic Therapy	2025-06-09 11:49:27.809	🦥
 spotify:track:6zfHBysknBGSTZRUU6Y2st	1	GABBA GABBA	2025-06-09 19:57:42.767	🦥
 spotify:track:7mKy65CyVCmawYMw3JJGPQ	1	Me, Myself and The Night	2025-06-09 22:03:49.281	🦥
+spotify:track:4FezkkbT6BE8WW2D5xg1rR	1	Keep It To Myself	2025-06-11 15:47:30.035	🦥
+spotify:track:5uHA52m0cZ2l8JeUwVx8wI	1	HONKY TONK BADONKADONK	2025-06-11 15:50:26.86	🦥
+spotify:track:6J89QL6f71Lj6MOlNxtKbd	1	fallin	2025-06-11 22:01:30.055	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-06-11 22:23:40.249	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-06-12 00:41:29.987	🔥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	1	BEFORE I MET YOU	2025-06-12 00:41:30.369	🦥
+spotify:track:7l5JdO4AL88SQUgkF67DG7	-1	BEFORE I MET YOU	2025-06-12 00:41:32.37	🔥
+spotify:track:77lnYnJALkzobQlsYwOp9i	1	before they were famous (NEPO BABY)	2025-06-12 01:03:08.185	🦥
+spotify:track:50fSMJZuhlRBTWBfrP5Ok2	1	I Will Eat Your God	2025-06-12 01:11:14.294	🦥
 \.
 
 
