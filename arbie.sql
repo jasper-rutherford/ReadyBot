@@ -6221,6 +6221,9 @@ spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-12 23:14:03.039	🦥
 spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-12 23:39:10.283	🦥
 spotify:track:465WMnAsGX9twpLm90QgWO	1	puppy	2025-06-13 16:39:25.513	🦥
 spotify:track:5b5cPscqVEMChvDqscVw26	1	Training Season	2025-06-16 18:18:12.126	🦥
+spotify:track:4E63weMCaNZuGPEFMnuEi8	1	exes	2025-06-16 21:01:20.868	🦥
+spotify:track:48JW5Abx5pe40PPmF7CigB	1	crawl	2025-06-16 21:35:26.388	🦥
+spotify:track:0GLeeaF8VlLy8j3aiUYMxm	1	ETERNAL NOW (LSZEE flip)	2025-06-17 10:01:45.205	🦥
 \.
 
 
