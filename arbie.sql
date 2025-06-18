@@ -6224,6 +6224,10 @@ spotify:track:5b5cPscqVEMChvDqscVw26	1	Training Season	2025-06-16 18:18:12.126	�
 spotify:track:4E63weMCaNZuGPEFMnuEi8	1	exes	2025-06-16 21:01:20.868	🦥
 spotify:track:48JW5Abx5pe40PPmF7CigB	1	crawl	2025-06-16 21:35:26.388	🦥
 spotify:track:0GLeeaF8VlLy8j3aiUYMxm	1	ETERNAL NOW (LSZEE flip)	2025-06-17 10:01:45.205	🦥
+spotify:track:0ShCfTzqb8TfcMgTBA4KgZ	1	Dim Sum Paradise	2025-06-17 14:06:33.338	🦥
+spotify:track:13DNuiQyuTDcAw6Y8thZFM	1	BRAND NEW BITCH	2025-06-17 14:24:11.315	🦥
+spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2025-06-17 14:30:04.001	🦥
+spotify:track:3tcv4j4DQYDBaNoHTLYKV8	1	Turn Off The Lights	2025-06-17 14:33:34.627	🦥
 \.
 
 
