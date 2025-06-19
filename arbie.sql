@@ -6228,6 +6228,14 @@ spotify:track:0ShCfTzqb8TfcMgTBA4KgZ	1	Dim Sum Paradise	2025-06-17 14:06:33.338	
 spotify:track:13DNuiQyuTDcAw6Y8thZFM	1	BRAND NEW BITCH	2025-06-17 14:24:11.315	🦥
 spotify:track:1hBM2D1ULT3aeKuddSwPsK	1	STARSTRUKK (feat. Katy Perry)	2025-06-17 14:30:04.001	🦥
 spotify:track:3tcv4j4DQYDBaNoHTLYKV8	1	Turn Off The Lights	2025-06-17 14:33:34.627	🦥
+spotify:track:5WZlorRUxgryaweu7kqeHd	1	Other Boys	2025-06-18 17:57:01.052	🦥
+spotify:track:4FezkkbT6BE8WW2D5xg1rR	1	Keep It To Myself	2025-06-18 19:44:14.085	🦥
+spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-18 19:57:29.676	🦥
+spotify:track:77lnYnJALkzobQlsYwOp9i	1	before they were famous (NEPO BABY)	2025-06-18 21:24:27.989	🦥
+spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-06-18 21:36:03.39	🦥
+spotify:track:69GHGPPXgnWz9fMAFewvBA	1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-18 21:55:48.223	🦥
+spotify:track:48JW5Abx5pe40PPmF7CigB	1	crawl	2025-06-18 23:25:47.799	🦥
+spotify:track:30YEJPZ7jPPzKIT7hxHcFO	1	Boo Hoo	2025-06-18 23:45:36.545	🦥
 \.
 
 
