@@ -6236,6 +6236,21 @@ spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-06-18 21:36:03.39	🦥
 spotify:track:69GHGPPXgnWz9fMAFewvBA	1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-18 21:55:48.223	🦥
 spotify:track:48JW5Abx5pe40PPmF7CigB	1	crawl	2025-06-18 23:25:47.799	🦥
 spotify:track:30YEJPZ7jPPzKIT7hxHcFO	1	Boo Hoo	2025-06-18 23:45:36.545	🦥
+spotify:track:56XbcLHPO6x9dcuHZX7CAt	1	BE A GOOD BOY	2025-06-20 02:13:59.262	🦥
+spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-06-20 02:16:53.546	🦥
+spotify:track:3wrWJ4cpGWSL2JZieVXhdR	1	lay all your love on me	2025-06-20 02:19:06.614	🦥
+spotify:track:6mTnH6xSYwKohtsO9RFzcc	1	We Are Mirage	2025-06-20 02:26:08.766	🦥
+spotify:track:50fSMJZuhlRBTWBfrP5Ok2	1	I Will Eat Your God	2025-06-20 02:37:16.346	🦥
+spotify:track:69GHGPPXgnWz9fMAFewvBA	1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-20 02:50:01.631	🦥
+spotify:track:55M1PYMy03OCcRI39FrXmh	1	Vitamin D	2025-06-20 03:20:59.277	🦥
+spotify:track:1bKqgVP6x9VrwUKwaTvMXo	1	Unsubstantial	2025-06-20 03:27:45.477	🦥
+spotify:track:48JW5Abx5pe40PPmF7CigB	1	crawl	2025-06-20 03:29:32.69	🦥
+spotify:track:6A2b6zMhxAT3RG7fpom7KT	1	KiSS BACK	2025-06-20 04:08:21.737	🦥
+spotify:track:0sd2xBT2NQVfNDojhUuLhM	1	I Ran (So Far Away)	2025-06-20 04:15:43.814	🦥
+spotify:track:5wJh12xuEJojhQLUo22gN8	1	SENSITIVE	2025-06-20 04:22:24.273	🦥
+spotify:track:6zfHBysknBGSTZRUU6Y2st	1	GABBA GABBA	2025-06-20 04:30:22.264	🦥
+spotify:track:6zfHBysknBGSTZRUU6Y2st	1	GABBA GABBA	2025-06-20 04:31:06.172	🦥
+spotify:track:4lZy04COQZzUWwN4ZKXuVC	1	Limits	2025-06-20 04:41:15.269	🦥
 \.
 
 
