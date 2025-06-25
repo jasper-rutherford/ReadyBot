@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "JasperRutherford",
   "license": "ISC",
@@ -17,5 +18,8 @@
     "opn": "^6.0.0",
     "pg": "^8.11.3",
     "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
