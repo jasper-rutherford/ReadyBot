@@ -6276,6 +6276,17 @@ spotify:track:4joYxRhYy1p4w4OQbDaMpj	1	Rhapsody In Pink	2025-06-24 13:27:55.222	
 spotify:track:5Vwkt7zvEcj5riL46ZbM5K	1	touchin’ me	2025-06-24 13:30:54.192	🦥
 spotify:track:0ECuf4vH9v4rPohsCKfW3y	1	Light It Up	2025-06-24 13:40:47.702	🦥
 spotify:track:1wq1MkR6iF73NhP18poccC	1	Eat It Up	2025-06-24 14:09:22.149	🦥
+spotify:track:1wq1MkR6iF73NhP18poccC	1	Eat It Up	2025-06-24 17:14:49.18	🦥
+spotify:track:2q5ByXv4sljfsPL3XvglUm	1	Another High	2025-06-24 17:18:33.016	🦥
+spotify:track:4X3aDRAUFsY8RPtJbPQeKt	1	forgot to forget me	2025-06-25 13:20:13.949	🦥
+spotify:track:6pBonWDFC7p32oq4AJJugx	1	MOVIE STAR	2025-06-25 13:22:55.83	🦥
+spotify:track:72wqKATrwPrmONGWER5tfD	1	OUT OF MY SYSTEM	2025-06-25 13:41:15.836	🦥
+spotify:track:2oGdeSXf0cnSPXG8kZiDtB	1	Freak Like Me	2025-06-25 13:43:26.642	🦥
+spotify:track:0L5XzaKc4J86e4iI9BvtIu	1	Oxytocin	2025-06-25 13:54:36.036	🦥
+spotify:track:644xDn9AYxUGuCiehfQ8pl	1	TALK	2025-06-25 13:57:12.738	🦥
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-25 14:07:59.778	🦥
+spotify:track:5174aBUvlBHClVp9cr7JoG	1	MEZCAL MINT GUM N COCAINE	2025-06-25 14:21:58.144	🦥
+spotify:track:41QRhGJmP6DPhzD35sV8tZ	1	FML (LOL OH WELL)	2025-06-25 14:37:57.128	🦥
 \.
 
 
