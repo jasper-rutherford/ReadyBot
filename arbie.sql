@@ -6287,6 +6287,13 @@ spotify:track:644xDn9AYxUGuCiehfQ8pl	1	TALK	2025-06-25 13:57:12.738	🦥
 spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-25 14:07:59.778	🦥
 spotify:track:5174aBUvlBHClVp9cr7JoG	1	MEZCAL MINT GUM N COCAINE	2025-06-25 14:21:58.144	🦥
 spotify:track:41QRhGJmP6DPhzD35sV8tZ	1	FML (LOL OH WELL)	2025-06-25 14:37:57.128	🦥
+spotify:track:2buPg3KvHsc4TzMEHkeVYn	1	Boots	2025-06-25 17:22:05.145	🦥
+spotify:track:3JZzYGz6NKRmUrpkSw6uNA	1	earthgirl	2025-06-25 18:20:07.587	🦥
+spotify:track:3MPpUEN41PGNjV3b1NAoiT	1	Mirage	2025-06-25 18:40:00.308	🦥
+spotify:track:6mzmqyHOJuGgI3Yek8Ruzx	1	Homewrecking Era	2025-06-25 18:48:01.371	🦥
+spotify:track:5ZkLd4MeukzNB1atzN1ViW	1	DOCTOR	2025-06-25 19:03:16.806	🦥
+spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-06-25 19:39:07.543	🦥
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-26 09:33:48.766	🦥
 \.
 
 
