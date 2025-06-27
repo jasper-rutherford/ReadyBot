@@ -6294,6 +6294,12 @@ spotify:track:6mzmqyHOJuGgI3Yek8Ruzx	1	Homewrecking Era	2025-06-25 18:48:01.371	
 spotify:track:5ZkLd4MeukzNB1atzN1ViW	1	DOCTOR	2025-06-25 19:03:16.806	🦥
 spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-06-25 19:39:07.543	🦥
 spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-26 09:33:48.766	🦥
+spotify:track:4ZofmEdvs4mQqZ756GQhSY	1	Melody	2025-06-26 15:50:12.683	🦥
+spotify:track:0OJN2A3Qyvd7pwSF0AIteC	1	Keep You Mine	2025-06-26 15:51:01.067	🦥
+spotify:track:4MhxagNeAqtTdy9ht8tQo5	1	greedy - cassö remix	2025-06-26 16:51:03.954	🦥
+spotify:track:3fXy7UkU64qm5ezMBf0CTh	1	Lucid Dream	2025-06-26 17:03:30.451	🦥
+spotify:track:0QR4vZ9iuNjrkWYNLoVAnM	1	Live And Die (feat. Sophie Simmons)	2025-06-26 17:11:01.321	🦥
+spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2025-06-27 09:25:38.271	🦥
 \.
 
 
