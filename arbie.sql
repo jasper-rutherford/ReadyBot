@@ -6300,6 +6300,15 @@ spotify:track:4MhxagNeAqtTdy9ht8tQo5	1	greedy - cassö remix	2025-06-26 16:51:03
 spotify:track:3fXy7UkU64qm5ezMBf0CTh	1	Lucid Dream	2025-06-26 17:03:30.451	🦥
 spotify:track:0QR4vZ9iuNjrkWYNLoVAnM	1	Live And Die (feat. Sophie Simmons)	2025-06-26 17:11:01.321	🦥
 spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2025-06-27 09:25:38.271	🦥
+spotify:track:7Feaw9WAEREY0DUOSXJLOM	1	Summer Days (feat. Macklemore & Patrick Stump of Fall Out Boy)	2025-06-27 19:03:23.095	🦥
+spotify:track:27cUgjbAjNyI4YuIK01MC3	1	Far Away	2025-06-27 19:09:47.547	🦥
+spotify:track:5174aBUvlBHClVp9cr7JoG	1	MEZCAL MINT GUM N COCAINE	2025-06-27 20:22:01.023	🦥
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-27 20:29:47.781	🦥
+spotify:track:59C8ZrER11yeFZMLui18YU	1	Innocent	2025-06-28 03:20:08.632	🦥
+spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-06-28 03:27:33.602	🦥
+spotify:track:3gCOHPzD8BICRM5xR1XBQS	1	Lost My Mind (Wake Up)	2025-06-28 12:55:16.016	🦥
+spotify:track:1WumDA51R5dHvmRVhmoP6t	1	Sinner	2025-06-28 13:03:16.663	🦥
+spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-28 14:09:27.462	🦥
 \.
 
 
