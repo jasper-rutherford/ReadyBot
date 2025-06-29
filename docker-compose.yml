@@ -2,8 +2,24 @@ services:
   api:
     build:
       context: ./api
+    restart: always
     env_file:
       - ./api/.env
       - .env
     ports:
       - "${API_PORT}:${API_PORT}"
+  postgres:
+    build:
+      context: ./db
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: readybase # the name of the database to create
+    volumes:
+      - pgdata:/var/lib/postgresql/data # this is where the database data will be stored
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+
+volumes:
+  pgdata:

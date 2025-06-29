@@ -37,4 +37,15 @@ npm install express
 
 - do that once with the root .env, and also for each service (currently just api has one)
 
+- do npm install in the root folder (ew) and in the api folder. TODO(jruth): make a setup make target.
+
 - more to come
+
+install dbmate on linux:
+```
+curl -fsSL https://github.com/amacneil/dbmate/releases/download/v1.16.0/dbmate-linux-amd64 -o dbmate
+chmod +x dbmate
+sudo mv dbmate /usr/local/bin/
+```
+
+TODO: possibly do dev purely in docker? could be cool and good exercise
