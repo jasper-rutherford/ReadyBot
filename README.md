@@ -37,4 +37,6 @@ npm install express
 
 - do that once with the root .env, and also for each service (currently just api has one)
 
+- do npm install in the root folder (ew) and in the api folder. TODO(jruth): make a setup make target.
+
 - more to come
