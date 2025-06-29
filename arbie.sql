@@ -6309,6 +6309,12 @@ spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-06-28 03:27:33.602	�
 spotify:track:3gCOHPzD8BICRM5xR1XBQS	1	Lost My Mind (Wake Up)	2025-06-28 12:55:16.016	🦥
 spotify:track:1WumDA51R5dHvmRVhmoP6t	1	Sinner	2025-06-28 13:03:16.663	🦥
 spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-28 14:09:27.462	🦥
+spotify:track:0ZqveF2rEFlz2oqF2xrriP	1	The Riddle	2025-06-29 11:58:23.883	🦥
+spotify:track:0GO8y8jQk1PkHzS31d699N	1	Tongue Tied	2025-06-29 12:05:21.326	🦥
+spotify:track:1ypwNj8eK2qAMDEs4EiIIX	1	Miss You - Bonus Track	2025-06-29 12:13:04.557	🦥
+spotify:track:3kcKlOkQQEPVwxwljbGJ5p	1	Kernkraft 400 (A Better Day)	2025-06-29 13:28:52.067	🦥
+spotify:track:5ZduaRci3iNUiDfJbBfAaf	1	Give It To Me - Full Vocal Mix	2025-06-29 14:19:36.087	🦥
+spotify:track:6ju5Ntn5pYksvkKxVkjEPK	1	Never Going Home	2025-06-29 14:26:51.117	🦥
 \.
 
 
