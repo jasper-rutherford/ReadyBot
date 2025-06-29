@@ -4,6 +4,18 @@ services:
       context: ./api
     env_file:
       - ./api/.env
-      - .env
     ports:
       - "${API_PORT}:${API_PORT}"
+  postgres:
+    image: postgres:15
+    restart: always
+    env_file:
+      - ./db/.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data # this is where the database data will be stored
+      - ./db/init:/docker-entrypoint-initdb.d # this is where the initialization scripts will be stored
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+
+volumes:
+  pgdata:
