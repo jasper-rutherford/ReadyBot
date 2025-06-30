@@ -6315,6 +6315,10 @@ spotify:track:1ypwNj8eK2qAMDEs4EiIIX	1	Miss You - Bonus Track	2025-06-29 12:13:0
 spotify:track:3kcKlOkQQEPVwxwljbGJ5p	1	Kernkraft 400 (A Better Day)	2025-06-29 13:28:52.067	🦥
 spotify:track:5ZduaRci3iNUiDfJbBfAaf	1	Give It To Me - Full Vocal Mix	2025-06-29 14:19:36.087	🦥
 spotify:track:6ju5Ntn5pYksvkKxVkjEPK	1	Never Going Home	2025-06-29 14:26:51.117	🦥
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-30 14:54:32.97	🦥
+spotify:track:7zce3JYJfyVYF8UmLYvQsq	1	Imposter Syndrome	2025-06-30 15:22:23.729	🦥
+spotify:track:3ucCcLrJC7NQaMoQF7GmQw	1	Take The Money	2025-06-30 15:25:26.825	🦥
+spotify:track:2P616qpC9myp9XRCGVFuce	1	Damage	2025-06-30 15:27:53.942	🦥
 \.
 
 
