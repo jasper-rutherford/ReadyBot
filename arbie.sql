@@ -6334,6 +6334,10 @@ spotify:track:5174aBUvlBHClVp9cr7JoG	1	MEZCAL MINT GUM N COCAINE	2025-07-01 02:3
 spotify:track:5kjnJkE4UiXn0W0qGPVM6l	1	Rebel	2025-07-01 11:37:01.915	🦥
 spotify:track:7d3UINr3Bl6eG27mnLajMp	1	It's a Mad World	2025-07-01 11:39:02.328	🦥
 spotify:track:4B2ZFUncmZK3HjL0gDmUms	1	WET DREAM	2025-07-01 12:59:19.217	🦥
+spotify:track:6ZmZYirBGRw0iNBp1w0ZTi	1	Only In My Mind	2025-07-01 16:31:34.672	🦥
+spotify:track:1Rz3Xw2qOsRncTVajZR3cY	1	Electricity	2025-07-01 16:35:04.396	🦥
+spotify:track:6ilBrv1QTmCTIMQHAuLG6m	1	Dance With My Demons	2025-07-01 18:55:02.538	🦥
+spotify:track:6ilBrv1QTmCTIMQHAuLG6m	1	Dance With My Demons	2025-07-02 01:33:53.419	🦥
 \.
 
 
