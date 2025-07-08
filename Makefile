@@ -11,9 +11,24 @@ arbie:
 # run the docker containers
 # --build rebuilds the containers
 # -d runs them in detached mode (in the background)
-docker:
+start:
+	@test -f db-backups/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
 	docker compose up --build -d
-	
+
+# this will stop and wipe everything
+# -v will remove the volumes, which means the database will be wiped
+nuke:
+	@echo "⚠️  This will completely destroy your Postgres data."
+	@read -p "Are you sure you want to continue? Type 'yes' to confirm: " confirm && \
+	if [ "$$confirm" = "yes" ]; then \
+		docker compose down -v; \
+	else \
+		echo "Aborted."; \
+	fi
+
+# nuke and then start the containers
+start-with-nuke: nuke start
+
 # Run linter in the api directory using its own config
 lint-api:
 	cd api && npx eslint . --fix
@@ -27,11 +42,11 @@ clean-api: lint-api format-api
 
 # connect to postgres in the docker container as admin
 postgres:
-	docker exec -it readybot-postgres-1 psql --username "$(POSTGRES_USER)" --dbname "readybase"
+	docker exec -it readybot-postgres-1 psql --username "$(POSTGRES_USER)" --dbname "$(POSTGRES_DB)"
 
 # connect to postgres in the docker container as the bot user
 postgres-readybot:
-	docker exec -it readybot-postgres-1 psql --username "$(BOT_POSTGRES_USER)" --dbname "readybase"
+	docker exec -it readybot-postgres-1 psql --username "$(BOT_POSTGRES_USER)" --dbname "$(POSTGRES_DB)"
 
 # create a new migration
 # this will prompt you for a name
