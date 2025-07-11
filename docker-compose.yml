@@ -14,12 +14,22 @@ services:
     restart: always
     env_file:
       - .env
-    environment:
-      POSTGRES_DB: readybase # the name of the database to create
     volumes:
       - pgdata:/var/lib/postgresql/data # this is where the database data will be stored
     ports:
       - "${DB_PORT}:${DB_PORT}"
+  db-backups:
+    build:
+      context: ./db-backups
+    volumes:
+      - ./db-backups/backups:/backups # this is where the backups will be stored locally
+      - ./db-backups/rclone.conf:/root/.config/rclone/rclone.conf # rclone config file for Google Drive
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    restart: always
+    entrypoint: ["sh", "-c", "while true; do /backup.sh --prod; sleep 86400; done"]
 
 volumes:
   pgdata:
