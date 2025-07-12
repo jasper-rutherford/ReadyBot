@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.20 (Raspbian 13.20-0+deb11u1)
--- Dumped by pg_dump version 13.20 (Raspbian 13.20-0+deb11u1)
+-- Dumped from database version 13.21 (Raspbian 13.21-0+deb11u1)
+-- Dumped by pg_dump version 13.21 (Raspbian 13.21-0+deb11u1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -6300,6 +6300,95 @@ spotify:track:4MhxagNeAqtTdy9ht8tQo5	1	greedy - cassö remix	2025-06-26 16:51:03
 spotify:track:3fXy7UkU64qm5ezMBf0CTh	1	Lucid Dream	2025-06-26 17:03:30.451	🦥
 spotify:track:0QR4vZ9iuNjrkWYNLoVAnM	1	Live And Die (feat. Sophie Simmons)	2025-06-26 17:11:01.321	🦥
 spotify:track:7oVEtyuv9NBmnytsCIsY5I	1	BURN IT DOWN	2025-06-27 09:25:38.271	🦥
+spotify:track:7Feaw9WAEREY0DUOSXJLOM	1	Summer Days (feat. Macklemore & Patrick Stump of Fall Out Boy)	2025-06-27 19:03:23.095	🦥
+spotify:track:27cUgjbAjNyI4YuIK01MC3	1	Far Away	2025-06-27 19:09:47.547	🦥
+spotify:track:5174aBUvlBHClVp9cr7JoG	1	MEZCAL MINT GUM N COCAINE	2025-06-27 20:22:01.023	🦥
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-27 20:29:47.781	🦥
+spotify:track:59C8ZrER11yeFZMLui18YU	1	Innocent	2025-06-28 03:20:08.632	🦥
+spotify:track:41ltW0Hdn3S0PehBaTz7Rw	1	Taste for Blood	2025-06-28 03:27:33.602	🦥
+spotify:track:3gCOHPzD8BICRM5xR1XBQS	1	Lost My Mind (Wake Up)	2025-06-28 12:55:16.016	🦥
+spotify:track:1WumDA51R5dHvmRVhmoP6t	1	Sinner	2025-06-28 13:03:16.663	🦥
+spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-28 14:09:27.462	🦥
+spotify:track:0ZqveF2rEFlz2oqF2xrriP	1	The Riddle	2025-06-29 11:58:23.883	🦥
+spotify:track:0GO8y8jQk1PkHzS31d699N	1	Tongue Tied	2025-06-29 12:05:21.326	🦥
+spotify:track:1ypwNj8eK2qAMDEs4EiIIX	1	Miss You - Bonus Track	2025-06-29 12:13:04.557	🦥
+spotify:track:3kcKlOkQQEPVwxwljbGJ5p	1	Kernkraft 400 (A Better Day)	2025-06-29 13:28:52.067	🦥
+spotify:track:5ZduaRci3iNUiDfJbBfAaf	1	Give It To Me - Full Vocal Mix	2025-06-29 14:19:36.087	🦥
+spotify:track:6ju5Ntn5pYksvkKxVkjEPK	1	Never Going Home	2025-06-29 14:26:51.117	🦥
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-06-30 14:54:32.97	🦥
+spotify:track:7zce3JYJfyVYF8UmLYvQsq	1	Imposter Syndrome	2025-06-30 15:22:23.729	🦥
+spotify:track:3ucCcLrJC7NQaMoQF7GmQw	1	Take The Money	2025-06-30 15:25:26.825	🦥
+spotify:track:2P616qpC9myp9XRCGVFuce	1	Damage	2025-06-30 15:27:53.942	🦥
+spotify:track:55M1PYMy03OCcRI39FrXmh	1	Vitamin D	2025-06-30 19:46:13.429	🦥
+spotify:track:69GHGPPXgnWz9fMAFewvBA	-1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-30 19:48:41.597	🦥
+spotify:track:69GHGPPXgnWz9fMAFewvBA	-1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-30 19:48:43.389	🦥
+spotify:track:69GHGPPXgnWz9fMAFewvBA	-1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-30 19:48:44.405	🦥
+spotify:track:69GHGPPXgnWz9fMAFewvBA	-1	BOY CRAZY. - ONLY FIRE SMASH REMIX.	2025-06-30 19:48:46.432	🦥
+spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-06-30 19:49:27.81	🦥
+spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-06-30 19:49:28.808	🦥
+spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-06-30 19:53:40.411	🦥
+spotify:track:6A2b6zMhxAT3RG7fpom7KT	1	KiSS BACK	2025-06-30 19:59:42.891	🦥
+spotify:track:25vG6krgfp2FQGNXzP4ZFV	1	Take A Step Back	2025-06-30 20:07:04.591	🦥
+spotify:track:6ilBrv1QTmCTIMQHAuLG6m	1	Dance With My Demons	2025-06-30 21:30:08.28	🦥
+spotify:track:5174aBUvlBHClVp9cr7JoG	1	MEZCAL MINT GUM N COCAINE	2025-07-01 02:30:55.731	🦥
+spotify:track:5kjnJkE4UiXn0W0qGPVM6l	1	Rebel	2025-07-01 11:37:01.915	🦥
+spotify:track:7d3UINr3Bl6eG27mnLajMp	1	It's a Mad World	2025-07-01 11:39:02.328	🦥
+spotify:track:4B2ZFUncmZK3HjL0gDmUms	1	WET DREAM	2025-07-01 12:59:19.217	🦥
+spotify:track:6ZmZYirBGRw0iNBp1w0ZTi	1	Only In My Mind	2025-07-01 16:31:34.672	🦥
+spotify:track:1Rz3Xw2qOsRncTVajZR3cY	1	Electricity	2025-07-01 16:35:04.396	🦥
+spotify:track:6ilBrv1QTmCTIMQHAuLG6m	1	Dance With My Demons	2025-07-01 18:55:02.538	🦥
+spotify:track:6ilBrv1QTmCTIMQHAuLG6m	1	Dance With My Demons	2025-07-02 01:33:53.419	🦥
+spotify:track:0N9G3kXdyVzI6E1ONbxopa	1	Think Too Much	2025-07-02 16:35:22.021	🦥
+spotify:track:3Uxp6uik4XcT6LGIv8mKNe	1	Out Of Touch - 71 Digits Edit	2025-07-03 10:37:38.165	🦥
+spotify:track:4kte3OcW800TPvOVgrLLj8	1	Let Me Love You (Until You Learn To Love Yourself)	2025-07-03 10:46:24.787	💿
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-07-03 16:37:14.146	🦥
+spotify:track:1wq1MkR6iF73NhP18poccC	1	Eat It Up	2025-07-03 16:41:58.443	🦥
+spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-07-03 17:20:21.409	🦥
+spotify:track:6ZmZYirBGRw0iNBp1w0ZTi	1	Only In My Mind	2025-07-03 17:53:21.764	🦥
+spotify:track:4FezkkbT6BE8WW2D5xg1rR	1	Keep It To Myself	2025-07-05 18:07:49.258	🦥
+spotify:track:6zfHBysknBGSTZRUU6Y2st	1	GABBA GABBA	2025-07-05 18:09:03.369	🦥
+spotify:track:6Qigf5GYjqg2LjrCxEeuLH	1	FMLYLM	2025-07-07 16:37:55.728	🦥
+spotify:track:7B3BwNecBhKvNwSMOOl7Gk	1	Fame is a Gun	2025-07-07 21:18:46	🦥
+spotify:track:6A2f2zK7E808HMHbygl9gD	1	Dark Room	2025-07-08 13:53:57.965	🦥
+spotify:track:6A2f2zK7E808HMHbygl9gD	1	Dark Room	2025-07-08 13:56:15.772	🦥
+spotify:track:3sgGShwUAyoAlLEeAOzKI0	1	Ruby with the Sharpest Lies	2025-07-08 15:18:54.661	🦥
+spotify:track:0iCxluZpaWzhZuLeDDfOz8	1	The Fever	2025-07-08 15:32:29.565	🦥
+spotify:track:2iLxXSM7AOzB4RCNzk4bjd	1	Destruction	2025-07-08 15:44:44.645	🦥
+spotify:track:69PxR7QYOpwZU1KqfpzJUI	1	Coming Apart	2025-07-08 16:09:58.251	🦥
+spotify:track:69PxR7QYOpwZU1KqfpzJUI	1	Coming Apart	2025-07-08 16:11:48.229	🦥
+spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-07-08 16:29:26.813	🦥
+spotify:track:3Ihlrpj4BkhVIEkQKECy1F	1	I Like You Best - Cloud 9 Version	2025-07-08 16:33:22.731	🦥
+spotify:track:1isVrkXme1s5XbPYGfawzV	1	Put Your Money Where Your Mouth Is	2025-07-08 16:52:30.054	🦥
+spotify:track:36ssd0tzR0Bs8OOLO2nMPQ	1	Freak Like Me	2025-07-08 16:54:28.535	🦥
+spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-07-08 18:11:00.09	🦥
+spotify:track:3qkKAfqOn7laGPeVicY1bX	1	Masterpiece	2025-07-08 18:13:46.319	🦥
+spotify:track:7Gyh5oAKk4oTCNDAAXWnhu	1	HARD TO LOVE	2025-07-08 18:23:59.182	🦥
+spotify:track:6ojVbFWIO3aBt5hagto4Jc	1	DIRTY LITTLE FANTASY	2025-07-08 18:39:56.942	🦥
+spotify:track:3ucCcLrJC7NQaMoQF7GmQw	1	Take The Money	2025-07-08 18:43:58.206	🦥
+spotify:track:4VY6SsgA05tDXC3jAkAE1h	1	SICK PRETTY MIND (SIDE B)	2025-07-08 19:20:20.439	🦥
+spotify:track:2w2lfwoTELQyN940qM7Nfd	1	Dangerous (feat. Sam Martin)	2025-07-09 16:11:14.157	🦥
+spotify:track:2w2lfwoTELQyN940qM7Nfd	1	Dangerous (feat. Sam Martin)	2025-07-09 16:12:01.899	🦥
+spotify:track:2bLqfJjuC5syrsgDsZfGmn	1	The Way I Are	2025-07-09 16:15:49.977	🦥
+spotify:track:0WCiI0ddWiu5F2kSHgfw5S	1	Take It Off	2025-07-09 16:22:07.74	🦥
+spotify:track:5lgS45xqkTk2HVm7Jph9ya	1	Love Don't Let Me Go	2025-07-09 17:57:23.758	🦥
+spotify:track:0rxEsBxxil046ZqipaCXle	1	Left & Right	2025-07-09 21:00:23.259	🦥
+spotify:track:6zfHBysknBGSTZRUU6Y2st	1	GABBA GABBA	2025-07-09 21:34:59.724	🦥
+spotify:track:2vICdcAEc10WfqMeRxOF1I	1	Dark Side	2025-07-10 12:53:00.33	🦥
+spotify:track:29bhnde7Gvnp7rvY9zsq5S	1	SHUM	2025-07-10 13:02:54.021	🦥
+spotify:track:1QmDEbAJ1jTCYDbXrTIYor	1	All Rise	2025-07-10 14:45:46.496	🦥
+spotify:track:0sd2xBT2NQVfNDojhUuLhM	1	I Ran (So Far Away)	2025-07-11 13:03:39.734	🦥
+spotify:track:2JOTbHmj0jwBM9bHgcVEOq	1	Pink Soldiers	2025-07-11 13:06:41.337	🦥
+spotify:track:1v2EmuslskqaQS0iNfhwMb	1	Call My Name	2025-07-11 13:15:30.132	🦥
+spotify:track:6SAid2dPlfIabcTpQNUX6R	1	Kingdom	2025-07-11 13:36:18.139	🦥
+spotify:track:1GJ72huYp93hhZlz4O34Jd	1	Gotta Feeling	2025-07-11 14:13:48.762	🦥
+spotify:track:6PmqIqLeMIHpjrV99NrxaX	1	Dunes	2025-07-11 14:16:44.879	🦥
+spotify:track:3BVcS9z6PS0Lto61diM1O6	1	Sweat	2025-07-11 15:01:17.2	🦥
+spotify:track:4Q46a3KDEXbyT7rcqxTmPa	1	LOSIN’ MY MIND	2025-07-11 15:12:45.203	🦥
+spotify:track:7wOQHp3yFvxyCPa3lnD7WZ	1	Girl's Girl	2025-07-11 15:43:26.299	🦥
+spotify:track:65ocdKTGjti9ea5nNqaq4v	1	Crazy Woman	2025-07-11 17:03:45.393	🦥
+spotify:track:1QmDEbAJ1jTCYDbXrTIYor	1	All Rise	2025-07-11 17:07:16.608	🦥
+spotify:track:5kjnJkE4UiXn0W0qGPVM6l	1	Rebel	2025-07-11 21:09:28.421	🦥
+spotify:track:7fGAhyEwT2RPPJeRHNeiC1	1	BRAIN (feat. Artemas)	2025-07-11 21:31:36.145	🦥
 \.
 
 
