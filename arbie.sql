@@ -6389,6 +6389,7 @@ spotify:track:65ocdKTGjti9ea5nNqaq4v	1	Crazy Woman	2025-07-11 17:03:45.393	🦥
 spotify:track:1QmDEbAJ1jTCYDbXrTIYor	1	All Rise	2025-07-11 17:07:16.608	🦥
 spotify:track:5kjnJkE4UiXn0W0qGPVM6l	1	Rebel	2025-07-11 21:09:28.421	🦥
 spotify:track:7fGAhyEwT2RPPJeRHNeiC1	1	BRAIN (feat. Artemas)	2025-07-11 21:31:36.145	🦥
+spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-07-13 15:04:02.743	🦥
 \.
 
 
