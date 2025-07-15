@@ -6394,6 +6394,17 @@ spotify:track:5CiPDLxXmUG7Fk5yjlNy9n	1	BOY CRAZY.	2025-07-13 18:27:41.687	🦥
 spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-07-13 18:33:21.891	🦥
 spotify:track:7fGAhyEwT2RPPJeRHNeiC1	1	BRAIN (feat. Artemas)	2025-07-13 19:57:20.624	🦥
 spotify:track:0nsDVNd3eHI8WkBusIyvA0	1	Round & Round	2025-07-14 10:22:22.629	🦥
+spotify:track:7Irq3diEoAatji9snaUuwq	1	JOYRIDE.	2025-07-15 12:46:43.259	🦥
+spotify:track:3BY2VHVn5cwN2YtHALstp0	1	Anyone But Him	2025-07-15 12:52:39.911	🦥
+spotify:track:7GqKsFVvsP3SVNQmrmGZSG	1	Get Outta My Heart	2025-07-15 13:58:31.721	🦥
+spotify:track:5aR8Jyc1w7Ue707CIy66cz	1	The Joke Is On Me	2025-07-15 14:00:56.834	🦥
+spotify:track:56XbcLHPO6x9dcuHZX7CAt	1	BE A GOOD BOY	2025-07-15 14:03:42.324	🦥
+spotify:track:1xgPxcd6hjfQg6kgLGP1ku	1	Irish Goodbye	2025-07-15 14:36:42.138	🦥
+spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	1	END OF THE WORLD	2025-07-15 14:40:56.465	🔥
+spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	1	END OF THE WORLD	2025-07-15 14:40:57.463	🔥
+spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	1	END OF THE WORLD	2025-07-15 14:40:58.269	🦥
+spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	-1	END OF THE WORLD	2025-07-15 14:40:59.993	🔥
+spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	-1	END OF THE WORLD	2025-07-15 14:41:01.636	🔥
 \.
 
 
