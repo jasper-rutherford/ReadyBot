@@ -23,13 +23,25 @@ services:
       context: ./db-backups
     volumes:
       - ./db-backups/backups:/backups # this is where the backups will be stored locally
-      - ./db-backups/rclone.conf:/root/.config/rclone/rclone.conf # rclone config file for Google Drive
+      - ./db-backups/rclone:/root/.config/rclone # rclone config file for Google Drive
     env_file:
       - .env
     depends_on:
       - postgres
     restart: always
     entrypoint: ["sh", "-c", "while true; do /backup.sh --prod; sleep 86400; done"]
+  migrations:
+    build: ./migrations
+    profiles:
+      - manual # this service is only run when you need to run migrations
+    volumes:
+      - ./migrations/migrations:/migrations # this is where the migrations are stored
+    environment:
+      - DB_HOST=${DB_HOST}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DB_HOST}:5432/${POSTGRES_DB}?sslmode=disable
+    depends_on:
+      - postgres
 
 volumes:
   pgdata:
