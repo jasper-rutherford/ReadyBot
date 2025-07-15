@@ -139,7 +139,7 @@ curl https://rclone.org/install.sh | sudo bash
 rclone config
 
 # move the config so the db-backups service can use it
-cp ~/.config/rclone/rclone.conf ./db-backups/rclone.conf
+cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
 
 TODO: think about test vs dev vs prod. when i run this on my laptop i see:
@@ -178,3 +178,19 @@ next steps: start porting logic out of shitbot and into docker api
 - shit postgres ❌
     - need to have docker api connect to shit postgres (outside docker)
         - feels backwards
+
+
+        
+
+BACKUPS
+- a make target that does a backup ✅
+- a make target that restores a backup ✅
+    - prompts you that this will overwrite the existing db. ✅
+    - list all available short term and long term backups in gdrive for this db ✅
+    - use arrow keys to select one ❌
+    - use number to select one ✅
+    - wipe the existing db
+    - restore chosen backup ✅
+    - winner
+
+    notably right now when you restore, the backup is downloaded to the machine where youre restoring to. idk if i care. but jsyk

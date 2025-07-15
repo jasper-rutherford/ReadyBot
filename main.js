@@ -332,7 +332,7 @@ console.log("2")
         return new Promise((resolve, reject) => {
             const pool = new Pool({
                 user: process.env.SHITBOT_POSTGRES_USER,
-                host: process.env.DB_HOST,
+                host: "localhost",
                 database: process.env.POSTGRES_DB,
                 password: process.env.SHITBOT_POSTGRES_PASSWORD,
             });
@@ -725,29 +725,30 @@ let kickOffTokenRefresh = () => {
 
 async function backupAndPushToGit() {
     try { 
-        console.log("---------backing up database---------")
-        // Run pg_dump to backup the database
-        await execAsync(`pg_dump -d songs -f ./arbie.sql`);
-        console.log('Backed up to ./arbie.sql');
+        console.log("skipping database backup and git push...")
+        // console.log("---------backing up database---------")
+        // // Run pg_dump to backup the database
+        // await execAsync(`pg_dump -d songs -f ./arbie.sql`);
+        // console.log('Backed up to ./arbie.sql');
 
-        // Add the backup file to git
-        await execAsync(`git add ./arbie.sql`);
-        console.log('Backup file added to git.');
+        // // Add the backup file to git
+        // await execAsync(`git add ./arbie.sql`);
+        // console.log('Backup file added to git.');
         
-        // add the log file to git
-        await execAsync(`git add ./log.txt`);
-        console.log('Log file added to git.');
+        // // add the log file to git
+        // await execAsync(`git add ./log.txt`);
+        // console.log('Log file added to git.');
 
-        // Commit the changes
-        await execAsync('git commit -m "Database backup"');
-        console.log('Backup changes committed.');
+        // // Commit the changes
+        // await execAsync('git commit -m "Database backup"');
+        // console.log('Backup changes committed.');
 
-        // Push the commit to the remote repository
-        const { stdout } = await execAsync('git push');
-        console.log(`git push results: [${stdout}]`);
+        // // Push the commit to the remote repository
+        // const { stdout } = await execAsync('git push');
+        // console.log(`git push results: [${stdout}]`);
 
-        console.log('Backup successfully pushed to GitHub.');
-        console.log("-------done backing up database------")
+        // console.log('Backup successfully pushed to GitHub.');
+        // console.log("-------done backing up database------")
     } catch (error) {
         console.error(`An error occurred: ${error}`);
     }
