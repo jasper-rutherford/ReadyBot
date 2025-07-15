@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const Discord = require('discord.js');
 const SpotifyWebApi = require('spotify-web-api-node');
 const client = new Discord.Client();
@@ -24,7 +26,7 @@ const interval = "2 months"; // the range of time to include song votes in the q
 var bot = {
     testbuild: true, // true is correct for arbie. false will awaken ReadyBot from his slumber. dont do that.
     temp: true,
-    tokenDiscord: tokenDiscord,
+    tokenDiscord: process.env.DISCORD_BOT_TOKEN, // moving away from config.json to .env
     prefix: '~',
     altPrefix: '\\',
     client: client,
@@ -329,10 +331,10 @@ console.log("2")
     query: function (queryStatement) {
         return new Promise((resolve, reject) => {
             const pool = new Pool({
-                user: 'arbie',
-                host: 'localhost',
-                database: 'songs',
-                password: 'arbie',
+                user: process.env.SHITBOT_POSTGRES_USER,
+                host: process.env.DB_HOST,
+                database: process.env.POSTGRES_DB,
+                password: process.env.SHITBOT_POSTGRES_PASSWORD,
             });
 
             pool.query(queryStatement, (error, results) => {
@@ -494,7 +496,7 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
 
 // switches the variables to the test bot's stuff
 if (bot.testbuild) {
-    bot.tokenDiscord = discordToken;
+    bot.tokenDiscord = process.env.DISCORD_BOT_TOKEN;
     bot.guildID = '254631721620733952';
     bot.jaspaDM = '755291736871272490';
     bot.botID = '754865264390176839';

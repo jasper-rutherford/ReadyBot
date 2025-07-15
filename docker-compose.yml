@@ -30,6 +30,18 @@ services:
       - postgres
     restart: always
     entrypoint: ["sh", "-c", "while true; do /backup.sh --prod; sleep 86400; done"]
+  migrations:
+    build: ./migrations
+    profiles:
+      - manual # this service is only run when you need to run migrations
+    volumes:
+      - ./migrations/migrations:/migrations # this is where the migrations are stored
+    environment:
+      - DB_HOST=${DB_HOST}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DB_HOST}:5432/${POSTGRES_DB}?sslmode=disable
+    depends_on:
+      - postgres
 
 volumes:
   pgdata:

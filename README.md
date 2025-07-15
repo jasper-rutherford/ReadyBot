@@ -16,6 +16,8 @@ its on discord only for like, a hyper lazy cross platform interface.
 
 ## 3. i'd also really like to get postgres shoved into a service rather than. whatever it is right now. possibly with migrations or something idk. 
 
+- migrations exist. they go through dbmate. jasper write more stuff here
+
 ## 4. make nice readme
 
 ## 5. backups
@@ -44,6 +46,10 @@ its on discord only for like, a hyper lazy cross platform interface.
 
 so. step one. get the api service running in a docker container. 
 
+
+- move shitbot into a service
+- connect shitbot into docker postgres
+- restore a backup into postgres, look at schema, put in migration files
 
 # how do i set things up?
 
@@ -155,3 +161,20 @@ TODO(jruth): make a setup make target.
 - postgres: the db. holds the data. 
 
 - db-backups: maintains backups of the db in gdrive
+
+
+
+
+
+
+
+
+next steps: start porting logic out of shitbot and into docker api
+- problem: shitbot and docker api should use the same postgres db
+- can either have shitbot and api use docker postgres, or have both use shit postgres. 
+- Docker Postgres ✅
+    - need to migrate old data to new db
+    - need to reroute shitbot to use docker postgres
+- shit postgres ❌
+    - need to have docker api connect to shit postgres (outside docker)
+        - feels backwards

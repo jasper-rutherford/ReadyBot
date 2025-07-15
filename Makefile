@@ -8,12 +8,14 @@ export
 arbie:
 	while true; do node . 2>&1 | tee -a log.txt || (echo "Bot crashed oopsie" 2>&1 | tee -a log.txt); done
 
-# run the docker containers
-# --build rebuilds the containers
-# -d runs them in detached mode (in the background)
+# 1. check that the rclone config exists
+# 2. run the docker containers
+# 3. run migrations
 start:
 	@test -f db-backups/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
 	docker compose up --build -d
+	$(MAKE) run-migrations
+	$(MAKE) arbie
 
 # this will stop and wipe everything
 # -v will remove the volumes, which means the database will be wiped
@@ -52,10 +54,9 @@ postgres-readybot:
 # this will prompt you for a name
 new-migration:
 	@read -p "Migration name: " name; \
-	dbmate --migrations-dir=api/migrations new $$name
+	dbmate --migrations-dir=migrations/migrations new $$name
 
 # run database migrations
 run-migrations:
-	docker compose run --rm \
-		-e DATABASE_URL="postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(POSTGRES_DB)?sslmode=disable" \
-		api dbmate --migrations-dir=migrations up
+	docker compose build migrations
+	docker compose run --rm migrations
