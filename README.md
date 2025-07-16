@@ -16,6 +16,8 @@ its on discord only for like, a hyper lazy cross platform interface.
 
 ## 3. i'd also really like to get postgres shoved into a service rather than. whatever it is right now. possibly with migrations or something idk. 
 
+- migrations exist. they go through dbmate. jasper write more stuff here
+
 ## 4. make nice readme
 
 ## 5. backups
@@ -44,6 +46,10 @@ its on discord only for like, a hyper lazy cross platform interface.
 
 so. step one. get the api service running in a docker container. 
 
+
+- move shitbot into a service
+- connect shitbot into docker postgres
+- restore a backup into postgres, look at schema, put in migration files
 
 # how do i set things up?
 
@@ -133,7 +139,7 @@ curl https://rclone.org/install.sh | sudo bash
 rclone config
 
 # move the config so the db-backups service can use it
-cp ~/.config/rclone/rclone.conf ./db-backups/rclone.conf
+cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
 
 TODO: think about test vs dev vs prod. when i run this on my laptop i see:
@@ -155,3 +161,36 @@ TODO(jruth): make a setup make target.
 - postgres: the db. holds the data. 
 
 - db-backups: maintains backups of the db in gdrive
+
+
+
+
+
+
+
+
+next steps: start porting logic out of shitbot and into docker api
+- problem: shitbot and docker api should use the same postgres db
+- can either have shitbot and api use docker postgres, or have both use shit postgres. 
+- Docker Postgres ✅
+    - need to migrate old data to new db
+    - need to reroute shitbot to use docker postgres
+- shit postgres ❌
+    - need to have docker api connect to shit postgres (outside docker)
+        - feels backwards
+
+
+        
+
+BACKUPS
+- a make target that does a backup ✅
+- a make target that restores a backup ✅
+    - prompts you that this will overwrite the existing db. ✅
+    - list all available short term and long term backups in gdrive for this db ✅
+    - use arrow keys to select one ❌
+    - use number to select one ✅
+    - wipe the existing db
+    - restore chosen backup ✅
+    - winner
+
+    notably right now when you restore, the backup is downloaded to the machine where youre restoring to. idk if i care. but jsyk
