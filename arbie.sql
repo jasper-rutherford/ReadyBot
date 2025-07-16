@@ -6405,6 +6405,13 @@ spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	1	END OF THE WORLD	2025-07-15 14:40:57.463	
 spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	1	END OF THE WORLD	2025-07-15 14:40:58.269	🦥
 spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	-1	END OF THE WORLD	2025-07-15 14:40:59.993	🔥
 spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	-1	END OF THE WORLD	2025-07-15 14:41:01.636	🔥
+spotify:track:5Nakyq7fHFlhxkMfNqG4Fv	1	Daredevil	2025-07-15 15:59:23.137	🦥
+spotify:track:0BpRdpbGMQ18OLpU0r0kPb	1	LOST IT	2025-07-15 16:01:29.128	🦥
+spotify:track:6VRlKUGc0VuS62Q0uvsSwL	1	Bury Me Alive	2025-07-15 16:15:11.994	🦥
+spotify:track:3737FdZ5Mg5CL1D1ZzrSlL	1	No Problems	2025-07-15 16:32:09.06	🦥
+spotify:track:0RvQLK3wSHhRuC55sjxeSQ	1	Mistakes	2025-07-15 16:56:26.964	🦥
+spotify:track:7FHfqaeqLvkKRxACMVsGwA	1	MIDNIGHT OIL	2025-07-15 17:25:56.446	🦥
+spotify:track:0HGpMpt4OrGUtdHq8dVuPN	1	On Repeat	2025-07-15 22:03:27.205	🦥
 \.
 
 
