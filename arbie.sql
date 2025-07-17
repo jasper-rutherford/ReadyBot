@@ -6412,6 +6412,9 @@ spotify:track:3737FdZ5Mg5CL1D1ZzrSlL	1	No Problems	2025-07-15 16:32:09.06	🦥
 spotify:track:0RvQLK3wSHhRuC55sjxeSQ	1	Mistakes	2025-07-15 16:56:26.964	🦥
 spotify:track:7FHfqaeqLvkKRxACMVsGwA	1	MIDNIGHT OIL	2025-07-15 17:25:56.446	🦥
 spotify:track:0HGpMpt4OrGUtdHq8dVuPN	1	On Repeat	2025-07-15 22:03:27.205	🦥
+spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-07-16 17:15:02.392	🦥
+spotify:track:36ssd0tzR0Bs8OOLO2nMPQ	1	Freak Like Me	2025-07-17 14:02:00.807	🦥
+spotify:track:4Oe3TbpajzSjPwpQ6Cc1u1	1	Almost Touch Me	2025-07-17 14:11:30.488	🦥
 \.
 
 
