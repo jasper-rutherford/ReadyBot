@@ -6415,6 +6415,8 @@ spotify:track:0HGpMpt4OrGUtdHq8dVuPN	1	On Repeat	2025-07-15 22:03:27.205	🦥
 spotify:track:1RW1i68byVlsbKt7jcpHQ6	1	HOW TO RUIN EVERYTHING	2025-07-16 17:15:02.392	🦥
 spotify:track:36ssd0tzR0Bs8OOLO2nMPQ	1	Freak Like Me	2025-07-17 14:02:00.807	🦥
 spotify:track:4Oe3TbpajzSjPwpQ6Cc1u1	1	Almost Touch Me	2025-07-17 14:11:30.488	🦥
+spotify:track:7Irq3diEoAatji9snaUuwq	1	JOYRIDE.	2025-07-17 16:28:31.383	🦥
+spotify:track:50einjgl3ERzlcGJPT5mWM	1	Predator	2025-07-17 22:06:53.368	🦥
 \.
 
 
