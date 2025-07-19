@@ -6417,6 +6417,13 @@ spotify:track:36ssd0tzR0Bs8OOLO2nMPQ	1	Freak Like Me	2025-07-17 14:02:00.807	�
 spotify:track:4Oe3TbpajzSjPwpQ6Cc1u1	1	Almost Touch Me	2025-07-17 14:11:30.488	🦥
 spotify:track:7Irq3diEoAatji9snaUuwq	1	JOYRIDE.	2025-07-17 16:28:31.383	🦥
 spotify:track:50einjgl3ERzlcGJPT5mWM	1	Predator	2025-07-17 22:06:53.368	🦥
+spotify:track:4FezkkbT6BE8WW2D5xg1rR	1	Keep It To Myself	2025-07-18 20:25:30.856	🦥
+spotify:track:36ssd0tzR0Bs8OOLO2nMPQ	1	Freak Like Me	2025-07-19 10:53:38.849	🦥
+spotify:track:6JDNT4jCx90o5lh2HxpOP5	1	FREAKEE	2025-07-19 10:59:51.382	🦥
+spotify:track:0nsDVNd3eHI8WkBusIyvA0	1	Round & Round	2025-07-19 11:01:49.925	🦥
+spotify:track:6zfHBysknBGSTZRUU6Y2st	1	GABBA GABBA	2025-07-19 13:10:26.7	🦥
+spotify:track:1QmDEbAJ1jTCYDbXrTIYor	1	All Rise	2025-07-19 13:23:09.186	🦥
+spotify:track:0nsDVNd3eHI8WkBusIyvA0	1	Round & Round	2025-07-19 13:52:04.339	🦥
 \.
 
 
