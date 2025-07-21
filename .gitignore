@@ -9,3 +9,5 @@ spotify_refresh_token.txt
 
 .env
 node_modules/
+
+log.txt
