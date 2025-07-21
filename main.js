@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const Discord = require('discord.js');
 const SpotifyWebApi = require('spotify-web-api-node');
 const client = new Discord.Client();
@@ -24,7 +26,7 @@ const interval = "2 months"; // the range of time to include song votes in the q
 var bot = {
     testbuild: true, // true is correct for arbie. false will awaken ReadyBot from his slumber. dont do that.
     temp: true,
-    tokenDiscord: tokenDiscord,
+    tokenDiscord: process.env.DISCORD_BOT_TOKEN, // moving away from config.json to .env
     prefix: '~',
     altPrefix: '\\',
     client: client,
@@ -329,10 +331,10 @@ console.log("2")
     query: function (queryStatement) {
         return new Promise((resolve, reject) => {
             const pool = new Pool({
-                user: 'arbie',
-                host: 'localhost',
-                database: 'songs',
-                password: 'arbie',
+                user: process.env.SHITBOT_POSTGRES_USER,
+                host: "localhost",
+                database: process.env.POSTGRES_DB,
+                password: process.env.SHITBOT_POSTGRES_PASSWORD,
             });
 
             pool.query(queryStatement, (error, results) => {
@@ -494,7 +496,7 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
 
 // switches the variables to the test bot's stuff
 if (bot.testbuild) {
-    bot.tokenDiscord = discordToken;
+    bot.tokenDiscord = process.env.DISCORD_BOT_TOKEN;
     bot.guildID = '254631721620733952';
     bot.jaspaDM = '755291736871272490';
     bot.botID = '754865264390176839';
@@ -723,29 +725,30 @@ let kickOffTokenRefresh = () => {
 
 async function backupAndPushToGit() {
     try { 
-        console.log("---------backing up database---------")
-        // Run pg_dump to backup the database
-        await execAsync(`pg_dump -d songs -f ./arbie.sql`);
-        console.log('Backed up to ./arbie.sql');
+        console.log("skipping database backup and git push...")
+        // console.log("---------backing up database---------")
+        // // Run pg_dump to backup the database
+        // await execAsync(`pg_dump -d songs -f ./arbie.sql`);
+        // console.log('Backed up to ./arbie.sql');
 
-        // Add the backup file to git
-        await execAsync(`git add ./arbie.sql`);
-        console.log('Backup file added to git.');
+        // // Add the backup file to git
+        // await execAsync(`git add ./arbie.sql`);
+        // console.log('Backup file added to git.');
         
-        // add the log file to git
-        await execAsync(`git add ./log.txt`);
-        console.log('Log file added to git.');
+        // // add the log file to git
+        // await execAsync(`git add ./log.txt`);
+        // console.log('Log file added to git.');
 
-        // Commit the changes
-        await execAsync('git commit -m "Database backup"');
-        console.log('Backup changes committed.');
+        // // Commit the changes
+        // await execAsync('git commit -m "Database backup"');
+        // console.log('Backup changes committed.');
 
-        // Push the commit to the remote repository
-        const { stdout } = await execAsync('git push');
-        console.log(`git push results: [${stdout}]`);
+        // // Push the commit to the remote repository
+        // const { stdout } = await execAsync('git push');
+        // console.log(`git push results: [${stdout}]`);
 
-        console.log('Backup successfully pushed to GitHub.');
-        console.log("-------done backing up database------")
+        // console.log('Backup successfully pushed to GitHub.');
+        // console.log("-------done backing up database------")
     } catch (error) {
         console.error(`An error occurred: ${error}`);
     }
