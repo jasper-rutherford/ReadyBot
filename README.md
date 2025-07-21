@@ -202,7 +202,7 @@ BACKUPS
     - dbmate fucking hates running on the raspi. seems like no binaries work? and so its gotta be downloaded and compiled, which is insane. 
     - janky state: 
         - migrations ran, once, and then i ingested the data from shitgres into docker postgres
-        - back up was ran, i then wiped things, commented out the migrations line in `start`, ran the stack, deployed the backup, data seems to be there. i then 
+        - back up was ran, i then wiped things, commented out the migrations line in `start`, ran the stack, deployed the backup, data seems to be there.
 
 
     notably right now when you restore, the backup is downloaded to the machine where youre restoring to. idk if i care. but jsyk
