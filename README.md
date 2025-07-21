@@ -120,20 +120,7 @@ npm install
 ( cd api && npm install )
 ```
 
-### 4. install dbmate on linux:
-
-```
-# get it
-curl -fsSL https://github.com/amacneil/dbmate/releases/download/v1.16.0/dbmate-linux-amd64 -o dbmate
-
-# make it executable
-chmod +x dbmate
-
-# move that shit
-sudo mv dbmate /usr/local/bin/
-```
-
-### 5. setup rclone
+### 4. setup rclone
 ```
 # install it
 curl https://rclone.org/install.sh | sudo bash
@@ -154,6 +141,8 @@ rclone config
 # move the config so the db-backups service can use it
 cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
+
+### end of setup 
 
 TODO: think about test vs dev vs prod. when i run this on my laptop i see:
 
@@ -209,6 +198,15 @@ BACKUPS
     - restore chosen backup ✅
     - winner
 
+    # notes from trying to deploy:
+    - dbmate fucking hates running on the raspi. seems like no binaries work? and so its gotta be downloaded and compiled, which is insane. 
+    - janky state: 
+        - migrations ran, once, and then i ingested the data from shitgres into docker postgres
+        - back up was ran, i then wiped things, commented out the migrations line in `start`, ran the stack, deployed the backup, data seems to be there.
+
+
     notably right now when you restore, the backup is downloaded to the machine where youre restoring to. idk if i care. but jsyk
 
     # jasper hey plz add log.txt to the gitignore at the next possible time!
+
+    TODO: move everything in the `data` folder into postgres

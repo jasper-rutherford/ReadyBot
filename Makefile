@@ -15,7 +15,7 @@ arbie:
 start:
 	@test -f db-backups/rclone/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
 	docker compose up --build -d
-	$(MAKE) run-migrations
+#	$(MAKE) run-migrations
 	$(MAKE) arbie
 
 # this will stop and wipe everything
