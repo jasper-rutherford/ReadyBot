@@ -6427,6 +6427,15 @@ spotify:track:0nsDVNd3eHI8WkBusIyvA0	1	Round & Round	2025-07-19 13:52:04.339	�
 spotify:track:3737FdZ5Mg5CL1D1ZzrSlL	1	No Problems	2025-07-19 15:21:56.269	🦥
 spotify:track:3C5dGrWVAv9RcFPWGh7Ljj	1	END OF THE WORLD	2025-07-20 02:44:59.956	🦥
 spotify:track:3737FdZ5Mg5CL1D1ZzrSlL	1	No Problems	2025-07-20 02:45:19.315	🦥
+spotify:track:4g5zK0UZq4xLs2565Dk9Zy	1	FREAK SHOW	2025-07-20 16:46:49.184	🦥
+spotify:track:18xDrcxULlbSHZgUDndZU7	1	Fingers	2025-07-20 17:09:23.97	🦥
+spotify:track:47CkkBlp2mBiLhLl31BQAI	1	I Don’t Like Myself	2025-07-20 18:06:42.216	🦥
+spotify:track:4ECwgK9jtGJ9VMfMCrxeOx	1	Say Less	2025-07-21 14:09:29.315	🦥
+spotify:track:0yzgLse32BbsVOlFOVIryg	1	HURT (i don't think i'm pretty)	2025-07-21 14:15:10.388	🦥
+spotify:track:3LW6Jspv9YSUAkbhvmdujl	1	Pretty Boy	2025-07-21 14:17:31.126	🦥
+spotify:track:2Z2HCTkpjlD0h42bXmXrCb	1	close enough	2025-07-21 14:26:12.121	🦥
+spotify:track:5WuOmaObv1lyGG4ihPHacP	1	wasted on you - midnight version	2025-07-21 14:34:17.246	🦥
+spotify:track:0YlKym9x7HYSmPIWJIWHbz	1	Behind The Scenes	2025-07-21 14:40:37.336	🦥
 \.
 
 
