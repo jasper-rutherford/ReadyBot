@@ -15,7 +15,7 @@ arbie:
 start:
 	@test -f db-backups/rclone/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
 	docker compose up --build -d
-#	$(MAKE) run-migrations
+	$(MAKE) run-migrations
 	$(MAKE) arbie
 
 # this will stop and wipe everything
@@ -31,6 +31,14 @@ nuke:
 
 # nuke and then start the containers
 start-with-nuke: nuke start
+
+# this is just here so I can press tab and auto-complete most of the target
+redeploy-service-:
+	echo "Redeploy a service by name, e.g. 'redeploy-service-api'"
+
+# Redeploy a specific service by name
+redeploy-service-%:
+	docker compose up --build -d $*
 
 # Run linter in the api directory using its own config
 lint-api:
@@ -64,7 +72,7 @@ run-migrations:
 
 # run the backup script in the db-backups container
 backup:
-	docker exec readybot-db-backups-1 /backup.sh --prod
+	docker exec readybot-db-backups-1 /backup.sh
 
 # Wipe and restore the database using the restore script
 restore-backup:
@@ -81,3 +89,9 @@ restore-backup:
 	else \
 		echo "❌ Aborted."; \
 	fi
+
+# test that the backup script works
+test-backup: # this is kinda jank. come back to unit tests... sooner the better
+	sudo mkdir -p /root/.config/rclone
+	sudo cp ~/.config/rclone/rclone.conf /root/.config/rclone/rclone.conf
+	sudo --preserve-env bash db-backups/test_backups.sh
