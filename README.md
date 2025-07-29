@@ -1,4 +1,4 @@
-# the idea:
+# there was an idea:
 
 ok so the idea is you can be listening to a song and go "oh hey i like this song. this is a good song." and then you can do a "like" and record like, the mood you were in when you liked the song. and then those moody likes get recorded to a database, and then you can like. filter a playlist based on all the songs that fit a particular vibe, within a certain timeframe. 
 
@@ -6,65 +6,109 @@ its on discord only for like, a hyper lazy cross platform interface.
 
 # Objectives:
 
-## 1. separate the backend/api from the bot. have two separate things running. microservices?
+## 1. Microservices
 
-- so like. one service is the backend, which hosts an api.
-- and then the second service hosts the discord bot, and the discord bot calls the api as needed. 
-- notably, the database should be hidden behind the api. 
+### Shitbot
+- currently the old shitbot runs outside docker. 
+- it connects directly to the postgres service 
+- we want to shove this existing bot code into a service, and then slowly disassemble it into other services
 
-## 2. make the website display information from the database. popular songs, filters, sliders, charts. and i want song album thumbnails or whatever. getting those is big. 
+### Backend/API
+- this exists, but is empty.
+- Will act as middleware between postgres and things that want access to postgres data
+- Will slowly port functionality over from the shitbot into this so that like, the discord bot does 90% on its own, and 10% via api, moving towards 0% shitbot and 100% api or whatever.
+- api: backend api. endpoints. touches the db. 
 
-## 3. i'd also really like to get postgres shoved into a service rather than. whatever it is right now. possibly with migrations or something idk. 
+### The proper discord bot
+- this doesnt exist yet at all
+- linted, prettiered, etc
+- this discord bot calls the api as needed.
+- will slowly port functionality out of shitbot into this one.
+- i guess this means for a while we will run the shitbot and this in parallel? so i can do things slowly and surely. 
+- This is farther into the future, and thoughts will change. wip.
 
-### quick migrations blurb
- - they exist!
+### Postgres
+- this exists
+- Want to hide this behind the api.
+- currently accessed directly via shitbot.
+- users:
+    - admin user for config/setup/management
+    - Readybot user, intended to be used by api to access postgres db
+    - shitbot user, used by shitbot to directly access db. 
+        - planning to delete this later once shitbot has been fully melted down
+- this runs postgres
+
+### Migrations
+ - this service exists
  - they go through dbmate. 
- - to create a new migration do `make new-migration`. there should be a new file. edit it.
+ - to create a new migration do `make new-migration`. input a name for your migration. there should be a new file. edit it.
  - run migrations by doing `make run-migrations` WHILE THE DOCKER SERVICES ARE RUNNING. it should just work. even with backups. 
- - i put migrations in a whole separate service because putting them anywhere else felt like it made things a little too grey. and a whole service just for migrations isn't too much of a lift anyway. its a manual service, so it only runs when explicitly ran (with `make run-migrations`)
+ - i put migrations in a whole separate service because putting them anywhere else felt like it made things a little too grey. and a whole service just for migrations isn't too much of a lift anyway. its a manual service, so it only runs when explicitly ran (which you can do with `make run-migrations`)
 
-## 4. make nice readme
+#### migrations dont work on raspi (or... do, but are bad):
+- dbmate fucking hates running on the raspi. seems like no binaries work? and so the dbmate source code has to be downloaded and compiled on the raspi, which takes like 7 minutes and happens on startup. 
+- migrations ran, once, and then i ingested the data from shitgres into docker postgres
+- back up was ran, i then wiped things, commented out the migrations line in `start`, ran the stack deployed the backup, data seems to be there.
+- so we need to fix this binary thing. 
 
-## 5. backups
-
-- in sortinator there shall be better backups to gdrive instead of git. the backup code will not be in the bot. the most recent 14 backups will be kept. any older ones will be discarded. except maybe keep like a good backup every six months. or something. 
-
-### Backups exist now!
-
- - theres a backup service, which takes a daily backup
+### Backups
+ - theres a backup service, which takes a daily backup of the postgres db
  - backups are stored in gdrive, facilitated with rclone
  - theres short term backups and long term backups
      - short term backups: the (up to) 14 most recent backups
      - long term backups: whenever theres more than 14 short term backups, the old ones are either deleted or promoted to long term. they get promoted iff the time between the most recent long term backup and the oldest short term backup is more than ~5 months.
 
-#### alert: the existing postgres backup thing is flaky and bad. data loss is bad.
+- to make a backup do `make backup`
+- to restore a backup do `make restore-backup`
+    - this should hold your hand along the process quite nicely
 
-- improve backups for new stuff. send that shit to gdrive instead of git. and then leave old postgres backups as is (to git). when we swap over to new stuff, we'll start tearing out the git backups (and all the old functionality)
-- working towards a future where we migrate the shit postgres data into the docker postgres, and then we point the shitbot into docker postgres. we're.... close? theres a section at the bottom with ramblings of a plan
+notably right now when you restore, the backup is downloaded to the machine where youre restoring to, and I dont think it ever gets deleted. probably should like. handle that? delete it automatically or something?
 
-## 6. profit
+## 2. make the website display information from the database. popular songs, filters, sliders, charts. and i want song album thumbnails or whatever. getting those is big. 
 
-## 7. have a nice easy setup instructions!
+## 3. make nice readme
+- This is an ongoing goal. I think we're moving towards something shapely here. keep at it.
 
-## 8. pretty the readme
+## 4. have a nice easy setup instructions!
+- some exist. theyre down below. think about improving them
+- TODO(jruth): make a setup make target.
+considerations:
+- different operating systems?
+- or explain like, the system i'm devving on and prodding on
+    - maybe that just goes in the readme somewhere
 
-## 9. unit tests are cool. 
+## 5. unit tests are cool. 
 
 - currently there's db-backups/test-backups.sh which seems to confirm backups work. but the test is never ran automatically. sooooooo
 
-## 10. where are my logs going? somewhere other than the void perhaps.
+## 6. where are my logs going? somewhere other than the void perhaps.
 
 - the shitbot logs to log.txt
 - which is terrible lmao
 - do an immediate follow up to add the gitignore
 
-# ok so doing number 1 - 
+## 7. CI/CD?
+- github actions is free or has a free something or other
+- could do some sort of self hosted runner thing perchance
 
-- i think the way to do this is to leave the bot functioning. and to create in parallel a separate api service running in docker. then, slowly port functionality over so that like, the discord bot does 90% on its own, and 10% via api. etc. 
+## 8. profit
 
-so. step one. get the api service running in a docker container. 
+## 9. area for random thoughts/ideas:
 
-# how do i set things up?
+### think about test vs dev vs prod. when i run this on my laptop i see:
+
+```
+db-backups-1  | ⚠️  Running in PROD mode with DB=readybase_dev
+```
+
+which is silly.
+
+### possibly do dev purely in docker? could be cool and good exercise
+
+### move everything in the `data` folder into postgres
+- this folder is full of bad practice. shift things around.
+
+# Setup instructions:
 
 ### 0. brush yo teeth
 
@@ -142,71 +186,11 @@ rclone config
 cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
 
-### end of setup 
-
-TODO: think about test vs dev vs prod. when i run this on my laptop i see:
-
-```
-db-backups-1  | ⚠️  Running in PROD mode with DB=readybase_dev
-```
-
-which is silly.
-
-TODO: possibly do dev purely in docker? could be cool and good exercise
-
-TODO(jruth): make a setup make target.
-
-# The services!
-
-- api: backend api. endpoints. touches the db. 
-
-- postgres: the db. holds the data. 
-
-- db-backups: maintains backups of the db in gdrive
-
-
-
-
-# shitbot -> docker bot migration ramblings
-
-- move shitbot into a service
-- connect shitbot into docker postgres
-- restore a backup into postgres, look at schema, put in migration files
-
-
-next steps: start porting logic out of shitbot and into docker api
-- problem: shitbot and docker api should use the same postgres db
-- can either have shitbot and api use docker postgres, or have both use shit postgres. 
-- Docker Postgres ✅
-    - need to migrate old data to new db
-    - need to reroute shitbot to use docker postgres
-- shit postgres ❌
-    - need to have docker api connect to shit postgres (outside docker)
-        - feels backwards
-
-
-        
-
-BACKUPS
-- a make target that does a backup ✅
-- a make target that restores a backup ✅
-    - prompts you that this will overwrite the existing db. ✅
-    - list all available short term and long term backups in gdrive for this db ✅
-    - use arrow keys to select one ❌
-    - use number to select one ✅
-    - wipe the existing db
-    - restore chosen backup ✅
-    - winner
-
-    # notes from trying to deploy:
-    - dbmate fucking hates running on the raspi. seems like no binaries work? and so its gotta be downloaded and compiled, which is insane. 
-    - janky state: 
-        - migrations ran, once, and then i ingested the data from shitgres into docker postgres
-        - back up was ran, i then wiped things, commented out the migrations line in `start`, ran the stack, deployed the backup, data seems to be there.
-
-
-    notably right now when you restore, the backup is downloaded to the machine where youre restoring to. idk if i care. but jsyk
-
-    # jasper hey plz add log.txt to the gitignore at the next possible time!
-
-    TODO: move everything in the `data` folder into postgres
+# Section for planning and next steps:
+- handle the "when you restore a backup the backup is downloaded and left on the machine" thing
+- fix migrations binary thing
+- From a higher level, I think next steps are to:
+    - put shitbot into a service
+    - pull shitbot logic out into api, have shitbot call api
+    - look at what remains of shitbot, start thinking about rebirthing shitbot into properbot
+    - further steps are too far into the future to think about
