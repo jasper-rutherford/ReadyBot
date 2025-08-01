@@ -6,7 +6,6 @@ const client = new Discord.Client();
 const fs = require('fs');
 const express = require('express');
 
-const { tokenDiscord, discordToken, clientId, clientSecret } = require('./data/config.json');
 const open = require('opn');
 
 const app = express();
@@ -16,9 +15,6 @@ const { prevSong, nextSong, toggleInterval, barrel, help, upvote, upvoter, downv
 const { relayMsgToJaspa } = require('./helpers');
 const { adminCommands, nonAdminCommands, sendBallots } = require('./commands');
 const { setSpotifyBot, addSongsToPlaylist } = require('./spotify');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
 
 const interval = "2 months"; // the range of time to include song votes in the query when not sorting by all time
 
@@ -44,18 +40,18 @@ var bot = {
 
     // credentials are optional /////this comment is from the template I built off of. Maybe it is true? Maybe not.
     spotifyApi: new SpotifyWebApi({
-        clientId: clientId,
-        clientSecret: clientSecret,
+        clientId: process.env.SPOTIFY_CLIENT_ID,
+        clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
         redirectUri: 'http://localhost:8888/callback'
     }),
-    spotifyUserID: '446i69szgjkow87ew9yjbbhnn',             //my user id
+    spotifyUserID: process.env.SPOTIFY_USER_ID,             //my user id
 
-    //NEW 12/17 - keep
+    // NEW 12/17 - keep
     commandMessage: null,                                   // the message from the user which requested a command
-    spotifyChannel: '904467973434134589',                   // default location to send ballot 
+    spotifyChannel: process.env.DISCORD_CONTROL_CHANNEL_ID, // default location to send ballot 
     themeToDelete: undefined,                               // used to confirm that a theme should be deleted
 
-    //new as of 2/13 (multi voting update)
+    // new as of 2/13 (multi voting update)
     multiThemes: [],                                        // stores the themes and their info (name, emoji, playlistID)
     multiDefaultSongScore: 0,                               // the default score a song should have for any theme
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
@@ -113,34 +109,18 @@ var bot = {
     },
 
     loadSpot: async function () {
-
-        // dont worry about backing up the db for the test build
-        if (bot.testbuild) {
-            // backup the database and push it to git
-            await backupAndPushToGit();
-
-            // start the backup interval
-            setInterval(backupAndPushToGit, 1000 * 60 * 60 * 24); // 24 hours
-        }
- 
         // set the spotify bot
         setSpotifyBot(bot)
-
-        // test stuff
-        bot.testStuff();
 
         // load themes/songs in from the file
         bot.readFromFile();
 
         // send a message to the spotify channel so that I know the last time the bot was started
         let channel = bot.client.channels.cache.get(bot.spotifyChannel)
-console.log("3")
-
         channel.send(`Arbie started at ${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}`)
-console.log("4")
+     
         // send the ballots
         sendBallots(bot)
-console.log("5")
     },
 
     //gets the list of emojis from the list of themes
@@ -235,10 +215,6 @@ console.log("2")
 
         //react the emoji to the message, then react the rest
         message.react(emoji).then(() => this.reactAll(remainingEmojis, message))
-    },
-
-    testStuff: function () {
-        // use this method for testing shit
     },
 
     //gets a list of all the adjustments that need to be made to the old list to make it match the new list
@@ -720,36 +696,5 @@ let kickOffTokenRefresh = () => {
         .catch(() => {
             console.log("Error refreshing access token")
         } )
-    }
-}
-
-async function backupAndPushToGit() {
-    try { 
-        console.log("skipping database backup and git push...")
-        // console.log("---------backing up database---------")
-        // // Run pg_dump to backup the database
-        // await execAsync(`pg_dump -d songs -f ./arbie.sql`);
-        // console.log('Backed up to ./arbie.sql');
-
-        // // Add the backup file to git
-        // await execAsync(`git add ./arbie.sql`);
-        // console.log('Backup file added to git.');
-        
-        // // add the log file to git
-        // await execAsync(`git add ./log.txt`);
-        // console.log('Log file added to git.');
-
-        // // Commit the changes
-        // await execAsync('git commit -m "Database backup"');
-        // console.log('Backup changes committed.');
-
-        // // Push the commit to the remote repository
-        // const { stdout } = await execAsync('git push');
-        // console.log(`git push results: [${stdout}]`);
-
-        // console.log('Backup successfully pushed to GitHub.');
-        // console.log("-------done backing up database------")
-    } catch (error) {
-        console.error(`An error occurred: ${error}`);
     }
 }

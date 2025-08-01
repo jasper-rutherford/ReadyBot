@@ -1,13 +1,35 @@
 #!/bin/bash
 set -e
 
-# you have to REALLY REALLY want to run this in prod
-if [[ "$1" == "--prod" ]]; then
-  DB_NAME="${POSTGRES_DB:?Must set POSTGRES_DB for production}"
-  echo "⚠️  Running in PROD mode with DB=$DB_NAME"
+# Usage: ./backup.sh [--test DB_NAME]
+#
+# Backs up a Postgres database to Google Drive.
+# 
+# There are two types of backups:
+#   - Short-term: the 14 most recent backups
+#   - Long-term: backups spaced ~5 months apart
+#
+# If there are more than 14 short-term backups:
+#   - The oldest one is promoted to long-term **if** the most recent long-term backup is ~5+ months old.
+#   - Otherwise, it's deleted.
+#
+# Options:
+#   --test DB_NAME   Create a dummy backup using the provided DB_NAME instead of POSTGRES_DB.
+#                    Skips the real database dump.
+#
+# Without --test, a real backup is created using the POSTGRES_DB env variable.
+
+if [[ "$1" == "--test" ]]; then
+  DB_NAME="$2"
+  echo "Running in test mode - DB_NAME: $DB_NAME"
+
+  # exit early if DB_NAME is not set
+  if [[ -z "$DB_NAME" ]]; then
+    echo "Error: Must provide DB_NAME when using --test"
+    exit 1
+  fi
 else
-  DB_NAME="testdb"
-  echo "✅ Running in TEST mode with DB=$DB_NAME"
+  DB_NAME="${POSTGRES_DB:?Must set POSTGRES_DB}"
 fi
 
 # === CONFIG ===
@@ -22,7 +44,7 @@ MAX_SHORT_TERM_BACKUPS=14
 MIN_LONG_TERM_SPACING_SECONDS=$((5 * 30 * 24 * 60 * 60))  # 5 months, roughly
 
 # === Wait for Postgres to be running... ===
-if [[ "$1" == "--prod" ]]; then
+if [[ "$1" != "--test" ]]; then # skip this for test mode
   until pg_isready -h "$DB_HOST" -p "$DB_PORT" -U "$POSTGRES_USER"; do
     echo "Waiting for postgres..."
     sleep 2
@@ -32,11 +54,11 @@ fi
 # === Make backup ===
 echo "Creating backup for $DB_NAME at $HUMAN_TS"
 mkdir -p "$LOCAL_BACKUPS_DIR" # ensure the local backup directory exists
-if [[ "$1" == "--prod" ]]; then # for prod we actually make the backup
+if [[ "$1" == "--test" ]]; then # for test, we just create a dummy file
+  echo "This is a test dummy backup for $DB_NAME at $HUMAN_TS" > "$LOCAL_BACKUPS_DIR/$BACKUP_NAME"
+else # otherwise we actually make the backup
   export PGPASSWORD="$POSTGRES_PASSWORD"
   pg_dump -h "$DB_HOST" -U "$POSTGRES_USER" "$DB_NAME" | gzip > "$LOCAL_BACKUPS_DIR/$BACKUP_NAME"
-else # for test, we just create a dummy file
-  echo "This is a test backup for $DB_NAME at $HUMAN_TS" > "$LOCAL_BACKUPS_DIR/$BACKUP_NAME"
 fi
 echo "Backup created at $LOCAL_BACKUPS_DIR/$BACKUP_NAME"
 
@@ -53,6 +75,9 @@ echo "Found $NUM_BACKUPS short-term backups in $SHORT_TERM_FOLDER"
 # === If not too many, we're done ===
 if (( NUM_BACKUPS <= MAX_SHORT_TERM_BACKUPS )); then
   echo "Short-term backups are within limit ($NUM_BACKUPS <= $MAX_SHORT_TERM_BACKUPS). No pruning/promotion needed."
+
+  # Note: this means we skip cleaning up local backups until we reach MAX_SHORT_TERM_BACKUPS + 1 backups.
+  # I think this is fine. 
   exit 0
 fi  
 

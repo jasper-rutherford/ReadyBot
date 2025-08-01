@@ -41,7 +41,7 @@ done
 # === Run pruning/promoting logic ===
 
 echo "Running backup logic in test mode..."
-bash "$(dirname "$0")/backup.sh"
+bash "$(dirname "$0")/backup.sh" --test "$TEST_DB"
 
 # === Validate outcomes ===
 

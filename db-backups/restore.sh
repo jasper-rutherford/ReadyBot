@@ -2,7 +2,10 @@
 
 set -e
 
-BASE_FOLDER="gdrive:readybot_backups/${POSTGRES_DB}"
+
+DB_NAME="${POSTGRES_DB:?Must set POSTGRES_DB}"
+
+BASE_FOLDER="gdrive:readybot_backups/${DB_NAME}"
 SHORT_TERM_FOLDER="$BASE_FOLDER/short_term"
 LONG_TERM_FOLDER="$BASE_FOLDER/long_term"
 
@@ -50,10 +53,10 @@ SELECTED=$(sed -n "${SELECTED_INDEX}p" /tmp/numbered_combined.txt)
 
 # Download from GDrive
 echo "⬇️  Downloading '$BASE_FOLDER/$SELECTED'..."
-rclone copy "$BASE_FOLDER/$SELECTED" /backups
+rclone copy "$BASE_FOLDER/$SELECTED" "/backups/$DB_NAME"
 
 BASENAME=$(basename "$SELECTED")
-LOCAL_PATH="/backups/$BASENAME"
+LOCAL_PATH="/backups/$DB_NAME/$BASENAME"
 
 # Decompress if needed
 if echo "$BASENAME" | grep -qE '\.gz$$'; then

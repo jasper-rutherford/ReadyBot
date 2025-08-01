@@ -103,6 +103,8 @@ db-backups-1  | ⚠️  Running in PROD mode with DB=readybase_dev
 
 which is silly.
 
+- would love a separate channel in discord for prod/dev
+
 ### possibly do dev purely in docker? could be cool and good exercise
 
 ### move everything in the `data` folder into postgres
@@ -187,8 +189,6 @@ cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
 
 # Section for planning and next steps:
-- handle the "when you restore a backup the backup is downloaded and left on the machine" thing
-- fix migrations binary thing
 - From a higher level, I think next steps are to:
     - put shitbot into a service
     - pull shitbot logic out into api, have shitbot call api

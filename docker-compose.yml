@@ -29,7 +29,7 @@ services:
     depends_on:
       - postgres
     restart: always
-    entrypoint: ["sh", "-c", "while true; do /backup.sh --prod; sleep 86400; done"]
+    entrypoint: ["sh", "-c", "while true; do /backup.sh; sleep 86400; done"]
   migrations:
     build: ./migrations
     profiles:
