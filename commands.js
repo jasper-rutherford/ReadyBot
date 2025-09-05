@@ -1,33 +1,36 @@
 const { getRandomInt } = require('./helpers')
 
-const sendBallots = (bot, message, words) => {
-    return new Promise((resolve, reject) => {
-        //get the channel
-        let channel = bot.client.channels.cache.get(bot.spotifyChannel)
+const sendBallots = async (bot, message, words) => {
+    // get the channel
+    let channel = bot.client.channels.cache.get(bot.spotifyChannel)
 
-        //message 0: a line separating the above messages from these
-        channel.send("-----------------------------------------------------")
+    // message 0: a line separating the above messages from these
+    channel.send("-----------------------------------------------------")
 
-        //message 1: the utility message
-        let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past " + bot.queryInterval}`
-        let message1Content = `[Current Mode: ${bot.getCurrentUtilityMode()}${intervalMessage}]`
-        channel.send(message1Content).then(sent => {
-            bot.multiUtilityMessage = sent
-            bot.reactAll(bot.utilityEmojis, sent)
-            resolve()
-        })
+    // message 1: the utility message
+    let intervalMessage = ` | ${bot.queryInterval == "" ? "All Time" : "Past " + bot.queryInterval}`
+    let message1Content = `[Current Mode: ${bot.getCurrentUtilityMode()}${intervalMessage}]`
 
-        //message 2: the voting message - initializes to a bunch of dancers
-        let dancers = ["💃", "🕺"]
-        let message2Content = ``
-        for (let i = 0; i < 8; i++) {
-            message2Content += `${dancers[getRandomInt(2)]}  `
-        }
-        channel.send(message2Content).then(sent => {
-            bot.multiVoteMessage = sent
-            bot.reactAll(bot.getThemojis(), sent)
-        })
-    })
+    // we're doing await stuff guys. for real maybe
+    try {
+        bot.multiUtilityMessage = await channel.send(message1Content)
+        bot.reactAll(bot.utilityEmojis, bot.multiUtilityMessage)
+    } catch (err) {
+        throw new Error(`Utility message flow failed: ${err.message}`);
+    }
+    
+    // message 2: the voting message - initializes to a bunch of dancers
+    let dancers = ["💃", "🕺"]
+    let message2Content = ``
+    for (let i = 0; i < 8; i++) {
+        message2Content += `${dancers[getRandomInt(2)]}  `
+    }
+    try {
+        bot.multiVoteMessage = await channel.send(message2Content)
+        bot.reactAll(bot.getThemojis(), bot.multiVoteMessage)
+    } catch (err) {
+        throw new Error(`Vote message flow failed: ${err.message}`);
+    }
 }
 
 const christmas = (bot, message, words) => {

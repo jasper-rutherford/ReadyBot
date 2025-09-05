@@ -18,7 +18,7 @@ const { setSpotifyBot, addSongsToPlaylist } = require('./spotify');
 
 const interval = "2 months"; // the range of time to include song votes in the query when not sorting by all time
 
-//object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
+// object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
     testbuild: true, // true is correct for arbie. false will awaken ReadyBot from his slumber. dont do that.
     temp: true,
@@ -67,7 +67,6 @@ var bot = {
     barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
     minScore: 0,
 
-    mostRecentOrderTime: undefined,                         // the last time that the 🦥 playlist was ordered
     autoOrderPeriodically: false,
     autoOrderInterval: 1000 * 60 * 60 * 24 * 3,
 
@@ -102,7 +101,7 @@ var bot = {
         [requester, "DELETE"],
     ]),
 
-    lastTime: undefined,
+    lastTime: undefined, // this appears to be the last time a playlist was shuffled/ordered
 
     initialUpdates: function () {
        kickOffTokenRefresh()
@@ -112,8 +111,8 @@ var bot = {
         // set the spotify bot
         setSpotifyBot(bot)
 
-        // load themes/songs in from the file
-        bot.readFromFile();
+        // load themes/songs in from the db
+        await bot.readFromDB();
 
         // send a message to the spotify channel so that I know the last time the bot was started
         let channel = bot.client.channels.cache.get(bot.spotifyChannel)
@@ -123,7 +122,7 @@ var bot = {
         sendBallots(bot)
     },
 
-    //gets the list of emojis from the list of themes
+    // gets the list of emojis from the list of themes
     getThemojis: function () {
         let emojis = []
         for (let theme of bot.multiThemes) {
@@ -134,45 +133,54 @@ var bot = {
 
     addTheme(themeName) {
         bot.themes.push(themeName);
-        bot.saveToFile();
+        bot.saveToDB();
     },
 
-    // saves the mapping of themoji to playlistID to file
-    saveToFile: function () {
-        console.log(`Saving themoji mappings to file`)
+    // saves the mapping of themoji to playlistID to db
+    saveToDB: async function () {
+        console.log(`Saving themoji mappings to db`)
 
-        var wrapper =
-        {
-            themes: bot.multiThemes,
-            mostRecentOrderTime: bot.mostRecentOrderTime
+        let queryMsg = "INSERT INTO playlist_emojis (emoji, spotify_playlist_id) VALUES "
+
+        for (let i = 0; i < bot.multiThemes.length; i++) {
+            queryMsg += `('${bot.multiThemes[i].emoji}', '${bot.multiThemes[i].id}')`
+            if (i < bot.multiThemes.length - 1) {
+                queryMsg += ", "
+            }
         }
 
-        //where to save to
-        var fileName = './data/spotify/themoji.json';
+        queryMsg += `ON CONFLICT (emoji) DO UPDATE SET spotify_playlist_id = EXCLUDED.spotify_playlist_id;`
 
-        //saves the thing to the file
-        fs.writeFileSync(fileName, JSON.stringify(wrapper, null, 4), e => {
-            if (e) throw e;
-        });
-
-        //log to console
-        console.log(`Saved themoji mappings to file`)
+        try {
+            await this.query(queryMsg)
+            console.log(`Saved themoji mappings to file`)
+        } catch (err) {
+            console.log("Error saving themoji mappings to db:")
+            console.log(err)
+        }
     },
 
-    readFromFile: function () {
-        console.log("reading themoji mappings from file")
+    // read the mapping of themoji to playlist ID in from the db
+    readFromDB: async function () {
+        console.log("reading themoji mappings from db")
 
-        //read in wrapped themes/songs
-        let wrapper = JSON.parse(fs.readFileSync('./data/spotify/themoji.json'));
-console.log("1")
-        bot.multiThemes = wrapper.themes
-console.log("2")
-        bot.mostRecentOrderTime = wrapper.mostRecentOrderTime
-
-        console.log("read themoji mappings from file")
+        try {
+            let results = await this.query("SELECT * FROM playlist_emojis;")
+            for (row of results.rows) {
+                bot.multiThemes.push({
+                    emoji: row.emoji,
+                    id: row.spotify_playlist_id
+                })
+            }
+            console.log("read themoji mappings from file")
+        } catch (err) {
+            console.log("errored when reading from db:")
+            console.log(err)
+        }
     },
 
-    //finds the theme with the provided emoji and returns that theme's playlistID (null if emoji not found)
+    // finds the theme with the provided emoji and returns that theme's playlistID
+    // (null if emoji not found)
     themePlaylistIDFromEmoji: function (emoji) {
         for (let theme of bot.multiThemes) {
             if (theme.emoji === emoji) {
@@ -304,6 +312,7 @@ console.log("2")
         })
     },
 
+    // yeah so this runs a query
     query: function (queryStatement) {
         return new Promise((resolve, reject) => {
             const pool = new Pool({
@@ -322,7 +331,6 @@ console.log("2")
                     resolve(results)
                 }
             });
-
 
             pool.end();
         })
@@ -470,22 +478,8 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
     }
 }
 
-// switches the variables to the test bot's stuff
-if (bot.testbuild) {
-    bot.tokenDiscord = process.env.DISCORD_BOT_TOKEN;
-    bot.guildID = '254631721620733952';
-    bot.jaspaDM = '755291736871272490';
-    bot.botID = '754865264390176839';
-}
-
 client.once('ready', () => {
     bot.initialUpdates();
-
-    
-
-    if (bot.testbuild) {
-        console.log('<test build>');
-    }
 });
 
 client.on('message', message => {
