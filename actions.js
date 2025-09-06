@@ -110,14 +110,14 @@ const upvote = (bot) => {
 }
 
 const upvoter = (bot, themoji) => {
-    //check emoji is valid
+    // check emoji is valid
     if (!bot.getThemojis().includes(themoji)) {
         console.log(`Tried to upvote a theme that does not exist (${themoji})`);
         bot.updateUtilityMessage(`${themoji} does not exist.`)
         return
     }
 
-    //get current song uri
+    // get current song uri
     // check if a song is playing
     bot.spotifyApi.getMyCurrentPlaybackState()
         .then(function (data) {
@@ -201,9 +201,6 @@ const order = (bot) => {
 }
 
 const orderer = (bot, themoji) => {
-    bot.mostRecentOrderTime = new Date()
-    bot.saveToFile()
-
     // check emoji is valid
     if (!bot.getThemojis().includes(themoji)) {
         console.log(`Tried to order a theme that does not exist (${themoji})`);
@@ -384,7 +381,7 @@ const creater = (bot, themoji) => {
                 });
 
             //save the new info to file
-            bot.saveToFile()
+            bot.saveToDB()
 
             // send new playlist/theme to user
             bot.updateUtilityMessage(`${themoji}\n${playlistStuff.playlistURL}`)
@@ -418,6 +415,8 @@ const requester = (bot, themoji) => {
 }
 
 // confirm the deletion of a theme
+// so like when you click the delete button its like "are you sure"
+// and this fires after you say yes on that.
 const confirmDelete = (bot) => {
     //removes the theme from the list of themes, 
     for (let themeIndex in bot.multiThemes) {
@@ -430,13 +429,13 @@ const confirmDelete = (bot) => {
     //remove the emoji from the VoteMessage
     bot.multiVoteMessage.reactions.cache.get(bot.deletingEmoji).remove()
 
-    //update VoteMessage to reflect deletion
+    // update VoteMessage to reflect deletion
     bot.updateUtilityMessage(`Deleted ${bot.deletingEmoji}`)
 
-    //save changes
-    bot.saveToFile()
+    // save changes
+    bot.saveToDB()
 
-    //delete warning message
+    // delete warning message
     console.log("deleting message")
     bot.deleteMessage.delete()
     bot.deleteMessage = null
