@@ -45,11 +45,8 @@ its on discord only for like, a hyper lazy cross platform interface.
  - run migrations by doing `make run-migrations` WHILE THE DOCKER SERVICES ARE RUNNING. it should just work. even with backups. 
  - i put migrations in a whole separate service because putting them anywhere else felt like it made things a little too grey. and a whole service just for migrations isn't too much of a lift anyway. its a manual service, so it only runs when explicitly ran (which you can do with `make run-migrations`)
 
-#### migrations dont work on raspi (or... do, but are bad):
-- dbmate fucking hates running on the raspi. seems like no binaries work? and so the dbmate source code has to be downloaded and compiled on the raspi, which takes like 7 minutes and happens on startup. 
-- migrations ran, once, and then i ingested the data from shitgres into docker postgres
-- back up was ran, i then wiped things, commented out the migrations line in `start`, ran the stack deployed the backup, data seems to be there.
-- so we need to fix this binary thing. 
+#### migrations are a bit silly:
+- I couldn't find a binary for `dbmate` that my raspi could run. So instead of downloading and running a binary, we download the source and compile it locally. on the raspi this takes like 7 minutes. But, docker does clever caching things, meaning that dbmate is only compiled when the dbmate repo is updated (which seems to happen once or twice every month or so), and that's good enough for me.    
 
 ### Backups
  - theres a backup service, which takes a daily backup of the postgres db
@@ -61,8 +58,6 @@ its on discord only for like, a hyper lazy cross platform interface.
 - to make a backup do `make backup`
 - to restore a backup do `make restore-backup`
     - this should hold your hand along the process quite nicely
-
-notably right now when you restore, the backup is downloaded to the machine where youre restoring to, and I dont think it ever gets deleted. probably should like. handle that? delete it automatically or something?
 
 ## 2. make the website display information from the database. popular songs, filters, sliders, charts. and i want song album thumbnails or whatever. getting those is big. 
 

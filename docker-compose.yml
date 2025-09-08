@@ -42,6 +42,19 @@ services:
       - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${DB_HOST}:5432/${POSTGRES_DB}?sslmode=disable
     depends_on:
       - postgres
+  shitbot:
+    build:
+      context: ./shitbot
+    depends_on:
+      - postgres
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8888:8888" # for spotify web login (http://localhost:8888/login)
+    volumes:
+      - shitbotdata:/data # persist the spotify refresh token file (and nothing else)
 
 volumes:
+  shitbotdata:
   pgdata:
