@@ -663,27 +663,36 @@ let refreshTheAccessToken = () => {
 }
 
 // refreshes the access token and kicks off the rest of startup
-// assumes that the refresh token exists in the refresh token file
 let kickOffTokenRefresh = () => {
-    // if the refresh token file doesn't exist or is empty
-    if (!fs.existsSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION) || fs.readFileSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION, 'utf8') == "") {
-        // prompt the user to log in at the login page
-        console.log("No refresh token found. Login at http://localhost:8888/login.")
-    }
-    // if the refresh token file exists and is not empty
+
+    // best case - a token from a prior refresh exists.
+    if (fs.existsSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION) && fs.readFileSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION, 'utf8') != "") {
+        console.log("preexisting refresh token found. kicking off refresh...")
+    } 
+    
+    // second best case - only a bootstrap token is available.
+    else if (process.env.SPOTIFY_REFRESH_TOKEN_BOOTSTRAP != null && process.env.SPOTIFY_REFRESH_TOKEN_BOOTSTRAP != "") {
+        console.log("No preexisting refresh token found, but bootstrap token is set. Using that to kick off...")
+
+        // save the bootstrap token to the refresh token file
+        fs.writeFileSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION, process.env.SPOTIFY_REFRESH_TOKEN_BOOTSTRAP);   
+    }   
+
+    // worst case - no tokens available. Login needed.
     else {
-        console.log("refresh token found")
-
-        // use the refresh token to get an access token.
-        refreshTheAccessToken().then(() => {
-            // now that spotify is authenticated we can kick off the rest of startup
-            bot.loadSpot();
-
-            // kick off the interval to refresh the access token. yeah theres a little bit of some 
-            setInterval(refreshTheAccessToken, 1000 * 60 * 60); 
-        })
-        .catch(() => {
-            console.log("Error refreshing access token")
-        } )
+        console.log("No refresh token found. Go to https://localhost:8888/login to login")
+        return
     }
+
+    // use the refresh token to get an access token.
+    refreshTheAccessToken().then(() => {
+        // now that spotify is authenticated we can kick off the rest of startup
+        bot.loadSpot();
+
+        // kick off the interval to refresh the access token. yeah theres a little bit of some 
+        setInterval(refreshTheAccessToken, 1000 * 60 * 60); 
+    })
+    .catch(() => {
+        console.log("Error refreshing access token")
+    } )
 }
