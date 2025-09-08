@@ -4,19 +4,15 @@ export
 
 .PHONY: arbie docker lint-api format-api clean-api postgres postgres-readybot run-migrations new-migration
 
-# the dream is that we kill this make target
-arbie:
-	while true; do node . 2>&1 | tee -a log.txt || (echo "Bot crashed oopsie" 2>&1 | tee -a log.txt); done
-
 # 1. check that the rclone config exists
-# 2. run the docker containers
+# 2. run all the docker containers except the shitbot
 # 3. run migrations
-# 4. run the shitbot (for now- this is what we're hoping to obliterate in time)
+# 4. run the shitbot container
 start:
 	@test -f db-backups/rclone/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
-	docker compose up --build -d
+	docker compose up --build -d api postgres db-backups migrations
 	$(MAKE) run-migrations
-	$(MAKE) arbie
+	docker compose up --build -d shitbot
 
 # this will stop and wipe everything
 # -v will remove the volumes, which means the database will be wiped

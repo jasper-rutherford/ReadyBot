@@ -6,8 +6,6 @@ const client = new Discord.Client();
 const fs = require('fs');
 const express = require('express');
 
-const open = require('opn');
-
 const app = express();
 const { Pool } = require('pg');
 const { format } = require('date-fns');
@@ -317,7 +315,7 @@ var bot = {
         return new Promise((resolve, reject) => {
             const pool = new Pool({
                 user: process.env.SHITBOT_POSTGRES_USER,
-                host: "localhost",
+                host: process.env.DB_HOST,
                 database: process.env.POSTGRES_DB,
                 password: process.env.SHITBOT_POSTGRES_PASSWORD,
             });
@@ -575,7 +573,7 @@ app.get('/callback', (req, res) => {
             console.log("Generated refresh token")
 
             // save refresh token to file
-            fs.writeFileSync('spotify_refresh_token.txt', refresh_token);
+            fs.writeFileSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION, refresh_token);
             console.log("refresh token saved to file")
 
             // try to kick off the rest of startup
@@ -636,7 +634,7 @@ let refreshTheAccessToken = () => {
     // return a promise
     return new Promise((resolve, reject) => {
         // read the refresh token from file
-        const refreshToken = fs.readFileSync('spotify_refresh_token.txt', 'utf8');
+        const refreshToken = fs.readFileSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION, 'utf8');
 
         // if the refresh token is invalid then reject
         if (refreshToken == "") {
@@ -668,12 +666,9 @@ let refreshTheAccessToken = () => {
 // assumes that the refresh token exists in the refresh token file
 let kickOffTokenRefresh = () => {
     // if the refresh token file doesn't exist or is empty
-    if (!fs.existsSync('spotify_refresh_token.txt') || fs.readFileSync('spotify_refresh_token.txt', 'utf8') == "") {
-        // log that there is no refresh token
-        console.log("No refresh token found. attempting to open login page.")
-       
-        // open the login page
-        open('http://localhost:8888/login')
+    if (!fs.existsSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION) || fs.readFileSync(process.env.SPOTIFY_REFRESH_TOKEN_LOCATION, 'utf8') == "") {
+        // prompt the user to log in at the login page
+        console.log("No refresh token found. Login at http://localhost:8888/login.")
     }
     // if the refresh token file exists and is not empty
     else {

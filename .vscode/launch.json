@@ -1,15 +1,18 @@
 {
     "version": "0.2.0",
     "configurations": [
-    
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "shitbot",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/main.js"
+            "program": "${workspaceFolder}/shitbot/main.js",
+            "env": {
+                "DB_HOST": "localhost",
+                "SPOTIFY_REFRESH_TOKEN_LOCATION": "${workspaceFolder}/shitbot/debug/spotify_refresh_token.txt",
+            }
         }
     ]
 }
