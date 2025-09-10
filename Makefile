@@ -13,6 +13,7 @@ start:
 	docker compose up --build -d api postgres db-backups migrations
 	$(MAKE) run-migrations
 	docker compose up --build -d shitbot
+	@echo "If you aren't seeing the ballot messages, consider going to http://localhost:8888/login to authenticate spotify."
 
 # this will stop and wipe everything
 # -v will remove the volumes, which means the database will be wiped

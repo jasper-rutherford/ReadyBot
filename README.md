@@ -9,9 +9,8 @@ its on discord only for like, a hyper lazy cross platform interface.
 ## 1. Microservices
 
 ### Shitbot
-- currently the old shitbot runs outside docker. 
 - it connects directly to the postgres service 
-- we want to shove this existing bot code into a service, and then slowly disassemble it into other services
+- we want to slowly disassemble this into other services
 
 ### Backend/API
 - this exists, but is empty.
@@ -77,10 +76,8 @@ considerations:
 - currently there's db-backups/test-backups.sh which seems to confirm backups work. but the test is never ran automatically. sooooooo
 
 ## 6. where are my logs going? somewhere other than the void perhaps.
-
-- the shitbot logs to log.txt
-- which is terrible lmao
-- do an immediate follow up to add the gitignore
+- currently you can see them with `docker compose logs <service>`
+- idk how viable something like datadog would be. but. that would be cool.
 
 ## 7. CI/CD?
 - github actions is free or has a free something or other
@@ -185,7 +182,6 @@ cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 
 # Section for planning and next steps:
 - From a higher level, I think next steps are to:
-    - put shitbot into a service
     - pull shitbot logic out into api, have shitbot call api
     - look at what remains of shitbot, start thinking about rebirthing shitbot into properbot
     - further steps are too far into the future to think about
