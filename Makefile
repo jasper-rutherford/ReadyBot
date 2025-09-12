@@ -46,7 +46,7 @@ format-api:
 	cd api && npx prettier --write "**/*.ts"
 
 # lint and format the api
-clean-api: lint-api format-api
+clean-api: format-api lint-api 
 
 # connect to postgres in the docker container as admin
 postgres:

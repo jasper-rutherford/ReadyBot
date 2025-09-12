@@ -1,0 +1,15 @@
+meta {
+  name: hello world
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:{{API_PORT}}/hello
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
