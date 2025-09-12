@@ -1,5 +1,5 @@
 # Use a slim Node base image
-FROM node:18-slim
+FROM node:22-slim
 
 # Set working dir
 WORKDIR /app
@@ -18,10 +18,9 @@ COPY . .
 # compile TypeScript to JavaScript
 RUN npm run build
 
-# Expose the port the app runs on
-EXPOSE 3000
+ENTRYPOINT ["/bin/sh"]
 
 # Command to run the app
-CMD ["node", "dist/index.js"]
+CMD ["./docker-entrypoint.sh"]
 
 

@@ -13,6 +13,20 @@
                 "DB_HOST": "localhost",
                 "SPOTIFY_REFRESH_TOKEN_LOCATION": "${workspaceFolder}/shitbot/debug/spotify_refresh_token.txt",
             }
+        },
+        {
+            "name": "Attach to API (Docker)",
+            "type": "node",
+            "request": "attach",
+            "address": "localhost",
+            "port": 9229,
+            "restart": true,
+            "localRoot": "${workspaceFolder}/api",
+            "remoteRoot": "/app",
+            "skipFiles": [
+                "<node_internals>/**",
+                "node_modules/**"
+            ]
         }
     ]
 }
