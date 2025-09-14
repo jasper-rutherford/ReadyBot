@@ -1,0 +1,8 @@
+lets do one endpoint, ✅
+and tests for the endpoint.
+do ci/cd. stick the ci/cd and tests into my workflow such that they'll run before i merge prs
+make the server defined somewhere,
+and start it elsewhere.
+then tests can import the server and do requests at it in code.
+and run a postgres db in the ci/cd too. something small, for tests.
+and then i guess maybe have all the tests stuff in its own docker compose or something?
