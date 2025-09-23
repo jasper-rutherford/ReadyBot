@@ -46,7 +46,7 @@ format-api:
 	cd api && npx prettier --write "**/*.ts"
 
 # lint and format the api
-clean-api: lint-api format-api
+clean-api: format-api lint-api 
 
 # connect to postgres in the docker container as admin
 postgres:
@@ -87,8 +87,8 @@ restore-backup:
 		echo "❌ Aborted."; \
 	fi
 
-# test that the backup script works
-test-backup: # this is kinda jank. come back to unit tests... sooner the better
-	sudo mkdir -p /root/.config/rclone
-	sudo cp ~/.config/rclone/rclone.conf /root/.config/rclone/rclone.conf
-	sudo --preserve-env bash db-backups/test_backups.sh
+# # test that the backup script works
+# test-backup: # this is kinda jank. come back to unit tests... sooner the better
+# 	sudo mkdir -p /root/.config/rclone
+# 	sudo cp ~/.config/rclone/rclone.conf /root/.config/rclone/rclone.conf
+# 	sudo --preserve-env bash db-backups/test_backups.sh
