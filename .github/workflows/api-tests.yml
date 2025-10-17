@@ -1,0 +1,61 @@
+name: API Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    # setup a postgres db as a service
+    services:
+      db:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: test_db
+        ports:
+          - 5432:5432
+        options: >- # setup health checks to ensure the db is ready before running migrations and tests TODO(jruth): add this logic to docker too? healthchecks pretty cool
+          --health-cmd="pg_isready -U user"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    env:
+      DB_HOST: localhost
+      DB_PORT: 5432
+      API_POSTGRES_USER: user
+      API_POSTGRES_PASSWORD: password
+      POSTGRES_DB: test_db
+      DATABASE_URL: postgres://user:password@localhost:5432/test_db?sslmode=disable
+
+
+    steps:
+      - uses: actions/checkout@v4 # checkout the code
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4 # setup node
+        with:
+          node-version: 22
+
+      - name: Install npm dependencies
+        run: npm ci
+        working-directory: ./api
+
+      - name: Install dbmate
+        run: |
+          curl -fsSL https://github.com/amacneil/dbmate/releases/latest/download/dbmate-linux-amd64 -o /usr/local/bin/dbmate
+          chmod +x /usr/local/bin/dbmate
+          dbmate --version
+
+      - name: Migrate DB
+        run: dbmate --migrations-dir=./migrations/migrations up
+
+      - name: run tests against db
+        run: npm test
+        working-directory: ./api

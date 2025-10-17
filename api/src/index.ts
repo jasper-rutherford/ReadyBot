@@ -1,13 +1,7 @@
-// index.js
-import express from 'express';
+import { server } from './server.js';
 
-const app = express();
-
-app.get('/hello', (req, res) => {
-  res.send('Hello world from inside a Docker container!');
-});
-
+// TODO(jruth): port MUST be set
 const PORT = process.env.API_PORT || 3000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`API server listening on port ${PORT}`);
 });

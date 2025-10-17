@@ -8,12 +8,16 @@ services:
       - .env
     ports:
       - "${API_PORT}:${API_PORT}"
+      - "${DEBUG_PORT}:${DEBUG_PORT}"
   postgres:
     build:
       context: ./db
     restart: always
     env_file:
       - .env
+    environment:
+      POSTGRES_LOG_STATEMENT: all
+      POSTGRES_LOGGING_COLLECTOR: on
     volumes:
       - pgdata:/var/lib/postgresql/data # this is where the database data will be stored
     ports:

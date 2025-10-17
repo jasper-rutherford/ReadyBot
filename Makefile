@@ -2,7 +2,7 @@
 include .env
 export
 
-.PHONY: arbie docker lint-api format-api clean-api postgres postgres-readybot run-migrations new-migration
+.PHONY: arbie docker lint-api pretty-api clean-api postgres postgres-readybot run-migrations new-migration
 
 # 1. check that the rclone config exists
 # 2. run all the docker containers except the shitbot
@@ -37,16 +37,16 @@ redeploy-service-:
 redeploy-service-%:
 	docker compose up --build -d $*
 
+# do prettier to the typescript in the api
+pretty-api:
+	cd api && npx prettier --write "**/*.ts"
+
 # Run linter in the api directory using its own config
 lint-api:
 	cd api && npx eslint . --fix
 
-# do prettier to the typescript in the api
-format-api:
-	cd api && npx prettier --write "**/*.ts"
-
 # lint and format the api
-clean-api: lint-api format-api
+clean-api: pretty-api lint-api 
 
 # connect to postgres in the docker container as admin
 postgres:
@@ -54,7 +54,7 @@ postgres:
 
 # connect to postgres in the docker container as the bot user
 postgres-readybot:
-	docker exec -it readybot-postgres-1 psql --username "$(BOT_POSTGRES_USER)" --dbname "$(POSTGRES_DB)"
+	docker exec -it readybot-postgres-1 psql --username "$(API_POSTGRES_USER)" --dbname "$(POSTGRES_DB)"
 
 # create a new migration
 # this will prompt you for a name
@@ -87,8 +87,14 @@ restore-backup:
 		echo "❌ Aborted."; \
 	fi
 
-# test that the backup script works
-test-backup: # this is kinda jank. come back to unit tests... sooner the better
-	sudo mkdir -p /root/.config/rclone
-	sudo cp ~/.config/rclone/rclone.conf /root/.config/rclone/rclone.conf
-	sudo --preserve-env bash db-backups/test_backups.sh
+# # test that the backup script works
+# test-backup: # this is kinda jank. come back to unit tests... sooner the better
+# 	sudo mkdir -p /root/.config/rclone
+# 	sudo cp ~/.config/rclone/rclone.conf /root/.config/rclone/rclone.conf
+# 	sudo --preserve-env bash db-backups/test_backups.sh
+
+# DB_HOST must be set to localhost because the api tests run outside of docker
+test-api:
+	docker compose down
+	docker compose up --build -d postgres
+	cd api && DB_HOST=localhost && npm test
