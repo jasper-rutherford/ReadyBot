@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { server } from './server';
+import { createServer } from './server';
 // import { Pool } from 'pg';
 
 // this is the postgres client
@@ -13,8 +13,12 @@ import { server } from './server';
 
 describe('GET /hello', () => {
   it('returns 200 OK', async () => {
+    const { server, close } = createServer();
+
     const res = await request(server).get('/hello');
     expect(res.status).toBe(200);
+
+    await close();
   });
 });
 
@@ -22,13 +26,16 @@ describe('GET /hello', () => {
 describe('GET /scores', () => {
   // try to get a score from the db when theres no pair
   it('returns 0 when there is no pair', async () => {
-    // /scores?uri=spotify:track:4BtHPH3fckIsTFdJz057f4&themoji=🦥&interval=30 seconds
+    const { server, close } = createServer();
+
     const res = await request(server).get('/scores/?uri=testuri&themoji=🧪');
     expect(res.status).toBe(200);
     expect(res.body).toEqual({
       totalScore: 0,
       intervalScore: 0,
     });
+
+    await close();
   });
 
   // // make a themoji pair
