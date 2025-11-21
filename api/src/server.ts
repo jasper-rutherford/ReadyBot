@@ -1,8 +1,7 @@
 // index.ts
 import express, { Request, Response } from 'express';
 import { Pool } from 'pg';
-
-// TODO(jruth): token auth or something?
+import { GetScoreRequestParams, GetScoreResponse } from './models/models';
 
 // doing an express server
 const server = express();
@@ -17,35 +16,22 @@ const pool = new Pool({
   database: process.env.POSTGRES_DB,
 });
 
-// TODO(jruth): make linter require types?
-// TODO(jruth): check if .husky in the root folder is used/needed
 server.get('/hello', (req, res) => {
   res.send('Hello world from inside a Docker container!');
 });
 
-// TODO(jruth): log a score
-
-// TODO(jruth): get score for a song
-
 /*
-  OK so this is a GET request with three query parameters:
-  uri
-  themoji
-  interval
+  GET /scores has three query parameters (defined in GetScoreRequestParams):
+    uri:      Spotify song URI
+    themoji:  Emoji representation
+    interval: Gonna add up all scores in this interval
+
+  Response is of type GetScoreResponse:
+    {
+      totalScore: number;
+      intervalScore: number;
+    }
 */
-
-interface GetScoreRequestParams {
-  //TODO(jruth): put these in a separate file?
-  uri: string;
-  themoji: string;
-  interval: string;
-}
-
-interface getScoreResponse {
-  totalScore: number;
-  intervalScore: number;
-}
-
 server.get(
   '/scores',
   async (
@@ -64,14 +50,6 @@ server.get(
       interval = '618 years';
     }
 
-    // validate interval format (simple check)
-    // const intervalRegex =
-    //   /^\d+\s+(seconds|minutes|hours|days|weeks|months|years)$/;
-    // if (!intervalRegex.test(req.query.interval)) {
-    //   res.status(400).json({ error: 'Invalid interval format' });
-    //   return;
-    // }
-
     // the query to get the scores
     const query = `SELECT
     SUM(score) AS total_score,
@@ -79,13 +57,6 @@ server.get(
     FROM scores
     WHERE spotify_uri = $2
     AND themoji = $3;`;
-
-    console.log('Test:\n', 'Test');
-    console.log('Running query:\n', query);
-
-    console.log('With parameters:\n', req.query);
-
-    console.log('With interval:\n', interval);
 
     let result;
     try {
@@ -101,8 +72,6 @@ server.get(
       return;
     }
 
-    console.log('Query result:\n', result.rows);
-
     // if no rows, return 404
     if (result.rows.length === 0) {
       res.status(404).json({ error: 'Not found' });
@@ -110,7 +79,7 @@ server.get(
     }
 
     // otherwise, construct response
-    const response: getScoreResponse = {
+    const response: GetScoreResponse = {
       totalScore: result.rows[0].total_score || 0,
       intervalScore: result.rows[0].interval_score || 0,
     };
@@ -119,7 +88,5 @@ server.get(
     res.json(response);
   }
 );
-
-// TODO(jruth): ordered uris
 
 export { server };

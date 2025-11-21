@@ -225,8 +225,7 @@ which is silly.
 - fix or delete `make test-backup`
 - api token auth
 - api server pg pool.close (jest says "Jest did not exit one second after the test run has completed." - i think this is why)
-- api endpoint structs should be stored somewhere other than in the server
-- api: tidy what exists in the server + in the tests
+- api: tidy what exists in the server tests
 - api: rest of endpoints
 - api: finish tests for GET /scores
 - api debug port is not passed around everywhere. make it so.
@@ -236,3 +235,6 @@ which is silly.
 - explore webhooks 
 - make sure integration tests vs unit tests are explained in readme properly
 - local api tests postgres doesnt do migrations. its empty. need to change that. 
+- from server.ts:
+// TODO(jruth): make linter require types?
+// TODO(jruth): check if .husky in the root folder is used/needed
