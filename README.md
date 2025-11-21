@@ -233,7 +233,7 @@ which is silly.
 - api endpoint docs swagger (?)
 - explore webhooks 
 - make sure integration tests vs unit tests are explained in readme properly
-<!-- - local api tests postgres doesnt do migrations. its empty. need to change that.  -->
+- local api tests postgres doesnt do migrations. its empty. need to change that. 
 - from server.ts:
 // TODO(jruth): make linter require types?
 // TODO(jruth): check if .husky in the root folder is used/needed
