@@ -224,7 +224,6 @@ which is silly.
 - postgres health check in regular docker like in ci/cd ?
 - fix or delete `make test-backup`
 - api token auth
-- api server pg pool.close (jest says "Jest did not exit one second after the test run has completed." - i think this is why)
 - api: tidy what exists in the server tests
 - api: rest of endpoints
 - api: finish tests for GET /scores
