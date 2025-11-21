@@ -93,8 +93,14 @@ restore-backup:
 # 	sudo cp ~/.config/rclone/rclone.conf /root/.config/rclone/rclone.conf
 # 	sudo --preserve-env bash db-backups/test_backups.sh
 
-# DB_HOST must be set to localhost because the api tests run outside of docker
-test-api:
+# This gets things ready for running api tests
+# this is called by the test-api target, and also by the vscode debugger when debugging tests
+prep-api: 
 	docker compose down
 	docker compose up --build -d postgres
+	$(MAKE) run-migrations
+
+# DB_HOST must be set to localhost because the api tests run outside of docker
+test-api:
+	$(MAKE) prep-api
 	cd api && DB_HOST=localhost && npm test
