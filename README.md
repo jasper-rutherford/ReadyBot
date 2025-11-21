@@ -237,3 +237,19 @@ which is silly.
 - from server.ts:
 // TODO(jruth): make linter require types?
 // TODO(jruth): check if .husky in the root folder is used/needed
+
+
+# Pull Request Merge Process
+
+- squash all the commits
+    - :.,$s/pick/s
+- one nice explanation of what is happening in the squashed commit
+- format the width of the message to 80
+    - todo: put the vim command here
+- when you merge the pr, leave the name and body of the "merge" commit as default 
+    - idea is the commit history will go 
+        - "squashed commit with explanation of stuff"
+        - "merged pr #n"
+        - "squashed commit"
+        - "merged pr #n+1"
+        - etc
