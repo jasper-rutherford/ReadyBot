@@ -224,19 +224,18 @@ which is silly.
 - postgres health check in regular docker like in ci/cd ?
 - fix or delete `make test-backup`
 - api token auth
-- api: tidy what exists in the server tests
 - api: rest of endpoints
-- api: finish tests for GET /scores
 - api debug port is not passed around everywhere. make it so.
 - api index "port must be set"
 - api test code coverage trackers?
 - api endpoint docs swagger (?)
 - explore webhooks 
 - make sure integration tests vs unit tests are explained in readme properly
-- local api tests postgres doesnt do migrations. its empty. need to change that. 
 - from server.ts:
-// TODO(jruth): make linter require types?
-// TODO(jruth): check if .husky in the root folder is used/needed
+    - TODO(jruth): make linter require types?
+    - TODO(jruth): check if .husky in the root folder is used/needed
+- would be nice to add a pre commit to prevent committing to main branch
+- add types to the return values of createServer
 
 
 # Pull Request Merge Process
