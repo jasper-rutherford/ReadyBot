@@ -27,6 +27,22 @@
                 "<node_internals>/**",
                 "node_modules/**"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Jest Tests",
+            "preLaunchTask": "prep-api-for-tests",
+            "cwd": "${workspaceFolder}/api",
+            "program": "${workspaceFolder}/api/node_modules/jest/bin/jest.js",
+            "args": ["--runInBand"],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "DB_HOST": "localhost"
+            },
+            "runtimeArgs": ["--enable-source-maps"]
         }
     ]
 }

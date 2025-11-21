@@ -1,8 +1,8 @@
-// index.ts
 import express, { Request, Response } from 'express';
 import { Pool } from 'pg';
 import { GetScoreRequestParams, GetScoreResponse } from './models/models';
 
+// TODO(jruth): add types to the returned stuff
 export function createServer() {
   const server = express();
 
