@@ -1,0 +1,10 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "prep-unit-tests-api",
+      "type": "shell",
+      "command": "make prep-unit-tests-api"
+    }
+  ]
+}

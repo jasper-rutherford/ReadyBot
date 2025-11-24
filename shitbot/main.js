@@ -336,7 +336,7 @@ var bot = {
 
     logScore: function (uri, name, emoji, score) {
         return new Promise((resolve, reject) => {
-            let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', '${format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS")}', '${emoji}')`;
+            let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', NOW(), '${emoji}')`;
             bot.ensureSongIsInBarrel(uri, name)
                 .then(() => this.query(queryStatement))
                 .then((results) => bot.getSongScores(uri, name, emoji))

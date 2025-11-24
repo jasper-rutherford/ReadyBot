@@ -1,8 +1,8 @@
-// index.ts
 import express, { Request, Response } from 'express';
 import { Pool } from 'pg';
 import { GetScoreRequestParams, GetScoreResponse } from './models/models';
 
+// TODO(jruth): add types to the returned stuff
 export function createServer() {
   const server = express();
 
@@ -27,10 +27,16 @@ export function createServer() {
       interval: Gonna add up all scores in this interval
 
     Response is of type GetScoreResponse:
-      {
-        totalScore: number;
-        intervalScore: number;
-      }
+    {
+      totalScore: number;
+      intervalScore: number;
+    }
+
+    Expected Behavior:
+      - If there are no scores for the given uri/themoji pair, return 0 for both scores.
+      - If interval is not provided, default to a very large interval (618 years) to include all scores.
+      - Return 400 Bad Request if required query parameters are missing.
+      - Return 500 Internal Server Error for any database errors.
   */
   server.get(
     '/scores',
@@ -40,7 +46,9 @@ export function createServer() {
     ) => {
       // validate query params
       if (!req.query.uri || !req.query.themoji) {
-        res.status(400).json({ error: 'Missing query parameters' });
+        res.status(400).json({
+          error: `Missing query parameters - uri: ${req.query.uri}, themoji: ${req.query.themoji}`,
+        });
         return;
       }
 
@@ -72,16 +80,10 @@ export function createServer() {
         return;
       }
 
-      // if no rows, return 404
-      if (result.rows.length === 0) {
-        res.status(404).json({ error: 'Not found' });
-        return;
-      }
-
       // otherwise, construct response
       const response: GetScoreResponse = {
-        totalScore: result.rows[0].total_score || 0,
-        intervalScore: result.rows[0].interval_score || 0,
+        totalScore: Number(result.rows[0].total_score),
+        intervalScore: Number(result.rows[0].interval_score),
       };
 
       // send response

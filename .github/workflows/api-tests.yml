@@ -29,8 +29,10 @@ jobs:
     env:
       DB_HOST: localhost
       DB_PORT: 5432
-      API_POSTGRES_USER: user
-      API_POSTGRES_PASSWORD: password
+      POSTGRES_USER: user         # used by tests directly on db
+      POSTGRES_PASSWORD: password # used by tests directly on db
+      API_POSTGRES_USER: user         # used by the api
+      API_POSTGRES_PASSWORD: password # used by the api
       POSTGRES_DB: test_db
       DATABASE_URL: postgres://user:password@localhost:5432/test_db?sslmode=disable
 
