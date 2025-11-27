@@ -337,11 +337,11 @@ var bot = {
     logScore: function (uri, name, emoji, score) {
         return new Promise((resolve, reject) => {
             let queryStatement = `INSERT INTO scores (spotify_uri, score, song_name, stamp, themoji) VALUES ('${uri}', '${score}', '${name.replace(/'/g, "''")}', NOW(), '${emoji}')`;
-            bot.ensureSongIsInBarrel(uri, name)
-                .then(() => this.query(queryStatement))
-                .then((results) => bot.getSongScores(uri, name, emoji))
+            bot.ensureSongIsInBarrel(uri, name) // make sure the song exists in the barrel
+                .then(() => this.query(queryStatement)) // log the score
+                .then((results) => bot.getSongScores(uri, name, emoji)) // get updated scores
                 .then((scores) => {
-                    resolve(scores)
+                    resolve(scores) // resolve with updated scores
                 })
                 .catch((error) => {
                     console.log("Error logging score")
@@ -407,6 +407,7 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
         })
     },
 
+    // TODO(jruth) replace with api call
     getSongScores: function (uri, name, themoji) {
         let query = `
         SELECT

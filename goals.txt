@@ -1,1 +1,7 @@
+create `POST scores` endpoint
+
+test it
+
+have shitbot call it
+
 update the readme (this goal should be in every goals.txt...) 
