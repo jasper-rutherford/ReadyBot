@@ -5,6 +5,7 @@ import {
   GetScoresResponse,
   PostScoresRequestBody,
 } from './models/models';
+import { getScores } from './logic/logic';
 
 // TODO(jruth): add types to the returned stuff
 export function createServer() {
@@ -70,22 +71,15 @@ export function createServer() {
         interval = '618 years';
       }
 
-      // the query to get the scores
-      const query = `SELECT
-      SUM(score) AS total_score,
-      SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - ($1::interval) THEN score ELSE 0 END) AS interval_score
-      FROM scores
-      WHERE spotify_uri = $2
-      AND themoji = $3;`;
-
       let result;
       try {
         // query the db
-        result = await pool.query(query, [
-          interval,
+        result = await getScores(
+          pool,
           req.query.uri,
           req.query.themoji,
-        ]);
+          interval
+        );
       } catch (e) {
         console.error('Database query error:', e);
         res.status(500).json({ error: 'Internal server error' });
@@ -94,8 +88,9 @@ export function createServer() {
 
       // otherwise, construct response
       const response: GetScoresResponse = {
-        totalScore: Number(result.rows[0].total_score),
-        intervalScore: Number(result.rows[0].interval_score),
+        // TODO(jruth) this should return song_name too...
+        totalScore: Number(result.totalScore),
+        intervalScore: Number(result.intervalScore),
       };
 
       // send response

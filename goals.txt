@@ -5,3 +5,9 @@ test it
 have shitbot call it
 
 update the readme (this goal should be in every goals.txt...) 
+
+
+ugh
+
+so, the only time we call logscore it then immediately calls get score for that song/theme
+so, i think we should pull the logic out of GET scores, and call it for GET scores and also as a response for POST scores. 
