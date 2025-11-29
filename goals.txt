@@ -11,3 +11,6 @@ ugh
 
 so, the only time we call logscore it then immediately calls get score for that song/theme
 so, i think we should pull the logic out of GET scores, and call it for GET scores and also as a response for POST scores. 
+
+shitbot debugger dont work? why not? is it stupid?
+shitbot aint hitting the api right. i suspect its not accessing api port correctly, or that localhost:3001 is wrong entirely.
