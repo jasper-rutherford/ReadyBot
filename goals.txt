@@ -1,3 +1,5 @@
+update readme fool
+
 create `POST scores` endpoint
 
 test it
