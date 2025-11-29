@@ -1,0 +1,21 @@
+meta {
+  name: GET scores
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:{{API_PORT}}/scores?uri=bruno_uri&themoji=🐶&interval=30 seconds
+  body: none
+  auth: inherit
+}
+
+params:query {
+  uri: bruno_uri
+  themoji: 🐶
+  interval: 30 seconds
+}
+
+settings {
+  encodeUrl: true
+}

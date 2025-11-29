@@ -134,11 +134,25 @@ const upvoter = (bot, themoji) => {
             }
         })
         // log the upvote
-        .then((data) => bot.logScore(data.body.item.uri, data.body.item.name, themoji, 1))
+        .then(async (data) => {
+            console.log("logging score")
+            resolve(await fetch(`localhost:${process.env.API_PORT}/scores`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: {
+                    spotify_uri: data.body.item.uri,
+                    score: 1,
+                    song_name: data.body.item.name,
+                    themoji: themoji
+                }
+            }))
+        })
+        //  bot.logScore(data.body.item.uri, data.body.item.name, themoji, 1)
         .then(function (scores) {
+            console.log("upvote logged")
             // update the vote message to reflect latest score change
-            bot.updateVoteMessage(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.total_score} ||] for ${themoji}`)
-            console.log(`[${scores.name}] has a score of [ ${scores.interval_score} ] over the last ${bot.baseInterval} and has an all time score of [ ${scores.total_score} ] for ${themoji}`)
+            bot.updateVoteMessage(`[${scores.songName}] has a score of [|| ${scores.intervalScore} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.totalScore} ||] for ${themoji}`)
+            console.log(`[${scores.songName}] has a score of [ ${scores.intervalScore} ] over the last ${bot.baseInterval} and has an all time score of [ ${scores.totalScore} ] for ${themoji}`)
         })
         .catch((error) => {
             if (error === "No song playing") {
