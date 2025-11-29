@@ -5,6 +5,7 @@ export interface GetScoresRequestQueryParams {
 }
 
 export interface GetScoresResponse {
+  songName: string; // Name of the song
   totalScore: number; // Total score for the given URI and themoji across all time
   intervalScore: number; // Total score for the given URI and themoji within the specified interval
 }

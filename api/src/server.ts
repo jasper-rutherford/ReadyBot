@@ -5,7 +5,7 @@ import {
   GetScoresResponse,
   PostScoresRequestBody,
 } from './models/models';
-import { getScores } from './logic/logic';
+import { getScores } from './logic/logic.js';
 
 // TODO(jruth): add types to the returned stuff
 export function createServer() {
@@ -45,6 +45,9 @@ export function createServer() {
 
     Currently unused. Created as part of the api POC. 
     Probably used later - especially for song stats/charts in a frontend
+    TODO(jruth) also return song_name...
+      ok so nowwww i'm thinking if song_name is null we should 404
+      but like whats the use case like? what problem do we solve by 404ing?
   */
   server.get(
     '/scores',
@@ -88,7 +91,7 @@ export function createServer() {
 
       // otherwise, construct response
       const response: GetScoresResponse = {
-        // TODO(jruth) this should return song_name too...
+        songName: result.songName,
         totalScore: Number(result.totalScore),
         intervalScore: Number(result.intervalScore),
       };

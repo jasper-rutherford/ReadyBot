@@ -135,7 +135,8 @@ const upvoter = (bot, themoji) => {
         })
         // log the upvote
         .then(async (data) => {
-            resolve(await fetch('https://api.example.com/scores', {
+            console.log("logging score")
+            resolve(await fetch(`localhost:${process.env.API_PORT}/scores`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: {
@@ -148,6 +149,7 @@ const upvoter = (bot, themoji) => {
         })
         //  bot.logScore(data.body.item.uri, data.body.item.name, themoji, 1)
         .then(function (scores) {
+            console.log("upvote logged")
             // update the vote message to reflect latest score change
             bot.updateVoteMessage(`[${scores.songName}] has a score of [|| ${scores.intervalScore} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.totalScore} ||] for ${themoji}`)
             console.log(`[${scores.songName}] has a score of [ ${scores.intervalScore} ] over the last ${bot.baseInterval} and has an all time score of [ ${scores.totalScore} ] for ${themoji}`)
