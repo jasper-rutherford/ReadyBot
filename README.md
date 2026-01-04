@@ -1,10 +1,10 @@
-# there was an idea:
+# 💡 there was an idea:
 
 ok so the idea is you can be listening to a song and go "oh hey i like this song. this is a good song." and then you can do a "like" and record like, the mood you were in when you liked the song. and then those moody likes get recorded to a database, and then you can like. filter a playlist based on all the songs that fit a particular vibe, within a certain timeframe. 
 
 its on discord only for like, a hyper lazy cross platform interface. 
 
-# Current project structure, notes, and loose upcoming ideas:
+# 📓 Current project structure, notes, and loose upcoming ideas:
 
 ## There's Microservices...
 
@@ -80,7 +80,7 @@ its on discord only for like, a hyper lazy cross platform interface.
 
 <br>
 
-# Setup instructions:
+# 📜 Setup instructions:
 
 ### 0. Brush yo teeth
 
@@ -208,17 +208,43 @@ which is silly.
 
 ### - A way to automagically deploy to raspi could be really really cool. 
 
-# Planning and immediate next steps:
-- From a higher level, I think next steps are to:
-    - make endpoints. one or two at a time, with unit tests in ci/cd
-        - and documentation (?)
-    - pull shitbot logic out into api, have shitbot call api
-    - look at what remains of shitbot, start thinking about rebirthing shitbot into properbot
-    - further steps are too far into the future to think about
+# ⭐ Current North Stars:
 
+## ☠ Kill Shitbot
 
+- I want the shitbot service gone.
 
-# Various todos...
+- have a second discord bot, which is ReadyBot. this is where we will migrate/build good discord bot code into.
+- update existing shitbot to be a separate discord bot called "shitbot".
+
+- dev env should have two dev bots. name all 4 bots appropriately, and give em all profile pics. 
+
+- commands
+    - use the built in "/" stuff.
+    - i want a command for setting interval. beginning and end. 
+    - i want a command for setting score value interval. minimum and maximum. can set either to null.
+
+- keep the ballots
+    - an "action" is triggered by a ballot reaction
+        - can make spotify api calls (via the custom client)
+        - can make internal api calls (to access the postgres db)
+            - potentially make my own internal client for internal api? maybe?
+        - some "actions" change the bot's "mode"? ie shuffle vs order vs upvote. 
+
+- custom spotify client thing
+    - within the bot the only spotify shenanigans should be "make a client" and "call things on the client"
+        - ie: any login page stuff should exist within the client code/library, in another file from the discord bot.
+    - token management? hmmm. build in a refresh call, but setup your own clock to call it. or something. 
+        - actually, put this in the client if possible. maybe like a "kick off refresh" thing. but its all managed within the client. how possible is that? idk. 
+
+- use a .env
+
+## 📊 Song Visuals
+
+tbd
+
+## ❓ Clean up these various todos...?
+
 - bruno setup instructions
 - bruno generally
 - postgres health check in regular docker like in ci/cd ?

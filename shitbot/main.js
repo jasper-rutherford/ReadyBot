@@ -65,9 +65,6 @@ var bot = {
     barrelID: '4jCZqEM3AdWj3uSpjuY9IK',                     // the playlistID of the barrel playlist
     minScore: 0,
 
-    autoOrderPeriodically: false,
-    autoOrderInterval: 1000 * 60 * 60 * 24 * 3,
-
     // a map of emoji that can be reacted to the utility message to immediately perform an action
     actions: new Map([
         ["⏮", prevSong],
