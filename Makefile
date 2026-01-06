@@ -5,12 +5,12 @@ export
 .PHONY: arbie docker lint-api pretty-api clean-api postgres postgres-readybot run-migrations new-migration
 
 # 1. check that the rclone config exists
-# 2. run all the docker containers except the shitbot
+# 2. run all the docker containers except migrations and the shitbot 
 # 3. run migrations
 # 4. run the shitbot container
 start:
 	@test -f db-backups/rclone/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
-	docker compose up --build -d api postgres db-backups migrations
+	docker compose up --build -d api postgres db-backups
 	$(MAKE) run-migrations
 	docker compose up --build -d shitbot
 	@echo "If you aren't seeing the ballot messages, consider going to http://localhost:8888/login to authenticate spotify."
@@ -21,7 +21,8 @@ nuke:
 	@echo "⚠️  This will completely destroy your Postgres data."
 	@read -p "Are you sure you want to continue? Type 'yes' to confirm: " confirm && \
 	if [ "$$confirm" = "yes" ]; then \
-		docker compose down -v; \
+		docker compose down -v --remove-orphans; \
+		docker network prune -f; \
 	else \
 		echo "Aborted."; \
 	fi

@@ -214,11 +214,6 @@ which is silly.
 
 - I want the shitbot service gone.
 
-- have a second discord bot, which is ReadyBot. this is where we will migrate/build good discord bot code into.
-- update existing shitbot to be a separate discord bot called "shitbot".
-
-- dev env should have two dev bots. name all 4 bots appropriately, and give em all profile pics. 
-
 - commands
     - use the built in "/" stuff.
     - i want a command for setting interval. beginning and end. 
