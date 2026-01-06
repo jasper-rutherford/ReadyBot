@@ -214,17 +214,54 @@ which is silly.
 
 - I want the shitbot service gone.
 
+- create truebot service "Arbie"
+    - has basic empty discord bot. 
+    - typescript
+    - discord.js
+    - similar setup as api
+    - linter
+    - prettier
+
 - commands
     - use the built in "/" stuff.
-    - i want a command for setting interval. beginning and end. 
-    - i want a command for setting score value interval. minimum and maximum. can set either to null.
+    - All
+        - /christmas    ⭐ ez
+        - /e            ⭐ ez
+        - /ping
+    - Music
+        - /interval time (beginning, end) <can unbound either end>
+        - /interval score (minimum, maximum) <can unbound either end>
+        - /ballots
+    - Admin
+        - /eval
 
 - keep the ballots
+    - one bot sends the ballot(S),
+        - a particular reaction to a message from one bot can signal to the other that this is ballot 1 or two
     - an "action" is triggered by a ballot reaction
         - can make spotify api calls (via the custom client)
         - can make internal api calls (to access the postgres db)
             - potentially make my own internal client for internal api? maybe?
         - some "actions" change the bot's "mode"? ie shuffle vs order vs upvote. 
+    - actions:
+        - previous song
+        - upvote
+        - downvote
+        - skip
+        - order
+        - shuffle
+        - reverse order
+        - interval hot swap
+        - new playlist
+        - delete playlist
+        - barrel, deprecated
+        - help
+        - resend ballots
+    - ⭐ im imagining i suppose that in each bot is a list of all the total reaction actions across both bots ⭐
+        - each bot also has a list of the ones that that particular bot can handle
+            - so then they each like, react their next reaction if the one they're waiting for comes in.
+
+- do we want to still read in all the themojis and keep them in memory?
 
 - custom spotify client thing
     - within the bot the only spotify shenanigans should be "make a client" and "call things on the client"

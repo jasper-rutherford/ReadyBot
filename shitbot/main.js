@@ -18,8 +18,6 @@ const interval = "2 months"; // the range of time to include song votes in the q
 
 // object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
-    testbuild: true, // true is correct for arbie. false will awaken ReadyBot from his slumber. dont do that.
-    temp: true,
     tokenDiscord: process.env.DISCORD_BOT_TOKEN, // moving away from config.json to .env
     prefix: '~',
     altPrefix: '\\',

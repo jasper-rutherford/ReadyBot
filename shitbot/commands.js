@@ -1,5 +1,3 @@
-const { getRandomInt } = require('./helpers')
-
 const sendBallots = async (bot, message, words) => {
     // get the channel
     let channel = bot.client.channels.cache.get(bot.spotifyChannel)
@@ -23,7 +21,7 @@ const sendBallots = async (bot, message, words) => {
     let dancers = ["💃", "🕺"]
     let message2Content = ``
     for (let i = 0; i < 8; i++) {
-        message2Content += `${dancers[getRandomInt(2)]}  `
+        message2Content += `${dancers[Math.floor(Math.random() * 2)]}  `
     }
     try {
         bot.multiVoteMessage = await channel.send(message2Content)

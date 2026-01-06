@@ -1,3 +1,8 @@
+// this is broken because i switched over to shitbot which is a new bot and has a new jasper dm channel id
+// in theory i think like. in future the system would be better if there was one coded super admin in the .env
+// and then that person could do /admin person
+// and then whenever an admin messages the bot for the first time, the bot saves the channel id to the db and says like
+// "Admin Channel ID saved to DB"
 const relayMsgToJaspa = (bot, message) => {
     var jaspaChannel = bot.client.channels.cache.get(bot.jaspaDM);
 
@@ -45,11 +50,6 @@ const relayMsgToJaspa = (bot, message) => {
     // }
 }
 
-const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
-}
-
 module.exports = {
     relayMsgToJaspa,
-    getRandomInt
 }
