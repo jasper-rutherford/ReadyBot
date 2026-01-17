@@ -2,7 +2,7 @@
 include .env
 export
 
-.PHONY: arbie docker lint-api pretty-api clean-api postgres postgres-readybot run-migrations new-migration
+.PHONY: arbie docker lint-% pretty-% fix-% postgres postgres-readybot run-migrations new-migration
 
 # 1. check that the rclone config exists
 # 2. run all the docker containers except migrations and the shitbot 
@@ -12,7 +12,7 @@ start:
 	@test -f db-backups/rclone/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
 	docker compose up --build -d api postgres db-backups
 	$(MAKE) run-migrations
-	docker compose up --build -d shitbot
+	docker compose up --build -d shitbot discord
 	@echo "If you aren't seeing the ballot messages, consider going to http://localhost:8888/login to authenticate spotify."
 
 # this will stop and wipe everything
@@ -38,16 +38,29 @@ redeploy-service-:
 redeploy-service-%:
 	docker compose up --build -d $*
 
-# do prettier to the typescript in the api
-pretty-api:
-	cd api && npx prettier --write "**/*.ts"
+# These are the services we currently support the linting/prettying of
+FIXABLE := api discord
 
-# Run linter in the api directory using its own config
-lint-api:
-	cd api && npx eslint . --fix
+# lint a supported service
+lint-%:
+	@if ! echo "$(FIXABLE)" | grep -qw "$*"; then \
+		echo "error: invalid target '$*' (allowed: $(FIXABLE))"; \
+		exit 1; \
+	fi
+	npx eslint "$*/**/*.ts" --fix --config ./eslint.config.js
 
-# lint and format the api
-clean-api: pretty-api lint-api 
+# pretty up a supported service
+pretty-%:
+	@if ! echo "$(FIXABLE)" | grep -qw "$*"; then \
+		echo "error: invalid target '$*' (allowed: $(FIXABLE))"; \
+		exit 1; \
+	fi
+	npx prettier --write "$*/**/*.ts"
+
+# lint and pretty a supported service
+fix-%:
+	$(MAKE) lint-$*
+	$(MAKE) pretty-$*
 
 # connect to postgres in the docker container as admin
 postgres:

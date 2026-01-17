@@ -8,7 +8,7 @@ services:
       - .env
     ports:
       - "${API_PORT}:${API_PORT}"
-      - "${DEBUG_PORT}:${DEBUG_PORT}"
+      - "${API_DEBUG_PORT}:${API_DEBUG_PORT}"
   postgres:
     build:
       context: ./db
@@ -58,6 +58,15 @@ services:
       - "8888:8888" # for spotify web login (http://localhost:8888/login)
     volumes:
       - shitbotdata:/data # persist the spotify refresh token file (and nothing else)
+  discord:
+    build:
+      context: ./discord
+    restart: always
+    env_file:
+      - ./discord/.env
+      - .env
+    ports:
+      - "${DISCORD_DEBUG_PORT}:${DISCORD_DEBUG_PORT}"
 
 volumes:
   shitbotdata:

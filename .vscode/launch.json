@@ -19,9 +19,23 @@
             "type": "node",
             "request": "attach",
             "address": "localhost",
-            "port": 9229,
+            "port": 3301, // this MUST match "API_DEBUG_PORT" in the .env
             "restart": true,
             "localRoot": "${workspaceFolder}/api",
+            "remoteRoot": "/app",
+            "skipFiles": [
+                "<node_internals>/**",
+                "node_modules/**"
+            ]
+        },
+        {
+            "name": "Attach to the Discord Bot (Docker)",
+            "type": "node",
+            "request": "attach",
+            "address": "localhost",
+            "port": 3302, // this MUST match "DISCORD_DEBUG_PORT" in the .env
+            "restart": true,
+            "localRoot": "${workspaceFolder}/discord",
             "remoteRoot": "/app",
             "skipFiles": [
                 "<node_internals>/**",
