@@ -294,7 +294,7 @@ tbd
     - TODO(jruth): check if .husky in the root folder is used/needed
 - would be nice to add a pre commit to prevent committing to main branch
 - add types to the return values of createServer
-
+- standardize uri -> spotify_uri everywhere
 
 # Pull Request Merge Process
 
