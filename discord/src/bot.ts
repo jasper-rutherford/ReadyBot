@@ -11,6 +11,14 @@ import {
 // env shenanigans
 dotenv.config();
 const token = process.env.BOT_TOKEN || "bruh";
+if (token === "bruh") {
+  throw new Error("token not set...");
+}
+
+const clientID = process.env.BOT_CLIENT_ID || "bruh";
+if (clientID === "bruh") {
+  throw new Error("client id not set...");
+}
 
 // make the client
 const client = new Client({
@@ -31,10 +39,7 @@ async function registerCommands() {
     .setDescription("Replies with Pong!");
 
   await rest.put(
-    Routes.applicationGuildCommands(
-      "1457214627875393669",
-      "254631721620733952",
-    ),
+    Routes.applicationGuildCommands(clientID, "254631721620733952"),
     { body: [pingCommand.toJSON()] },
   );
 
