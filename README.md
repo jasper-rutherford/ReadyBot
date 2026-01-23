@@ -1,6 +1,6 @@
 # 💡 there was an idea:
 
-ok so the idea is you can be listening to a song and go "oh hey i like this song. this is a good song." and then you can do a "like" and record like, the mood you were in when you liked the song. and then those moody likes get recorded to a database, and then you can like. filter a playlist based on all the songs that fit a particular vibe, within a certain timeframe. 
+The idea is you can be listening to a song and go "Oh hey I like this song. This is a good song." and then you can do a "like" and record like, the mood you were in when you liked the song. and then those moody likes get recorded to a database, and then you can like. Filter a playlist based on all the songs that fit a particular vibe, within a certain timeframe. 
 
 its on discord only for like, a hyper lazy cross platform interface. 
 
@@ -8,12 +8,18 @@ its on discord only for like, a hyper lazy cross platform interface.
 
 ## There's Microservices...
 
-### 1. Shitbot
-- it connects directly to the postgres service 
-- we want to slowly disassemble this into other services
-    - creating endpoints with tests, when endpoints are "good" redirect shitbot throught them.
+### 1. Shitbot 💩
+- this is a bad service. this project was originally just this javascript bot, and there were approximately 9999999 examples of terrible dev practices.
+- a few examples of bad practice:
+    - it connects directly to postgres
+    - some core functionality (setting query parameters) is done via a literal admin only backdoor command that runs arbitrary javascript code
+    - i did not understand how to write async code. theres an ungodly amount of unreadable promise chaining.
+    - main.js is entirely too long
+    - theres a huge singleton "bot" struct which contains everything, does everything, and is passed around all over the place
+    - there is no consistent formatting. brackets can be at the end of a line or on the next. many things like that. 
+- we want to ~~destroy~~ slowly disassemble this into the other services.
 
-### 2. Backend/API
+### 2. API
 - theres good bones here. it exists. theres a few endpoints. they get... sorta tested. 
 - testing exists in ci/cd. bruno exists. 
 - existing endpoints:
@@ -25,17 +31,20 @@ its on discord only for like, a hyper lazy cross platform interface.
         - a test exists. more needed. very very wip.
 - Will act as middleware between postgres and things that want access to postgres data
 - Will slowly port functionality over from the shitbot into this so that like, the discord bot does 90% on its own, and 10% via api, moving towards 0% shitbot and 100% api or whatever.
+- linting and prettying are supported/enforced
 
-### 3. The proper discord bot
-- this doesnt exist yet at all
-- linted, prettiered, etc
-- this discord bot calls the api as needed.
-- will slowly port functionality out of shitbot into this one.
-- i guess this means for a while we will run the shitbot and this in parallel? so i can do things slowly and surely. 
-- This is farther into the future, and thoughts will change. wip.
+### 3. Discord
+- Exists in a very barebones POC state. more to come.
+- plans:
+    - this discord bot calls the api as needed.
+    - will slowly port functionality out of shitbot into this one.
+    - for a while we will run the shitbot and this in parallel so i can do things slowly and surely. 
+    - thoughts/plans are subject to change. very wip.
+- linting and prettying are supported/enforced
+- Commands
+    - Ping
 
 ### 4. Postgres
-- this exists
 - Want to hide this behind the api.
 - currently accessed directly via shitbot.
 - users:
@@ -45,7 +54,6 @@ its on discord only for like, a hyper lazy cross platform interface.
         - planning to delete this later once shitbot has been fully melted down
 
 ### 5. Migrations
- - this service exists
  - they go through dbmate. 
  - to create a new migration do `make new-migration`. input a name for your migration. there should be a new file. edit it.
  - run migrations by doing `make run-migrations` WHILE THE DOCKER SERVICES ARE RUNNING. it should just work. even with backups. 
@@ -60,7 +68,7 @@ its on discord only for like, a hyper lazy cross platform interface.
  - theres short term backups and long term backups
      - short term backups: the (up to) 14 most recent backups
      - long term backups: whenever theres more than 14 short term backups, the old ones are either deleted or promoted to long term. they get promoted iff the time between the most recent long term backup and the oldest short term backup is more than ~5 months.
-
+<br>
 - to make a backup do `make backup`
 - to restore a backup do `make restore-backup`
     - this should hold your hand along the process quite nicely
@@ -77,6 +85,37 @@ its on discord only for like, a hyper lazy cross platform interface.
     - todo: wording here kinda sucks lmao
 - `make test-backup` used to exist, and it. had vibes. it seems broken now. so it's commented out.
     - future work: fix it or delete it (hopefully fix it. maybe a canary or something could be fun?)
+
+## VSCode Debugger
+- You can connect the vscode debugger directly into select services as they run in docker.
+    - Currently only `api` and `discord` are supported
+- How do I use the debug stuff?
+    - in the root .env update `<service>_DEBUG` flag to true
+    - restart docker service
+    - docker will read var and start differently
+    - use the appropriate vscode debugger launch config
+    - profit
+
+## Port conventions
+- Each service that gets a custom port shall increment up from the custom port of the previous service.
+    - (these start at 3001)
+- Debug ports exist. a service's debug port is its service port but you replace the initial 30 with 33. 
+- EX:
+    - Normal Port:    30XX
+    - Debug Port:     33XX
+- if you update these conventions here, please also update them in the root `template.env`
+
+## Pre-commits, Linting, Prettier
+- We have pre-commits with husky
+- husky calls `lint-staged`
+    - config is the `lint-staged` block in the root `package.json`
+        - lints and pretties the api and discord services (Read only... it'll complain)
+- helper make targets:
+    - `lint-<service>`, `pretty-<service>`, and `fix-<service>`
+        - currently only api and discord are supported
+        - lint will try to fix things, but probably just yell at you
+        - pretty will write all the pretty fixes for you
+        - fix just calls lint and pretty in one go
 
 <br>
 
@@ -102,9 +141,15 @@ sudo apt install make
 cp template.env .env
 vi .env
 
-# do that for each service (currently just api has one)
+# do that for each service...
+
+# api...
 cp api/template.env api/.env
 vi api/.env
+
+# discord...
+cp discord/template.env discord/.env
+vi discord/.env
 ```
 
 ### 2. Install node
@@ -132,8 +177,11 @@ npm -v
 # once in the root folder
 npm install
 
-# once in root/api
+# once in api
 ( cd api && npm install )
+
+# once in discord
+( cd discord && npm install )
 ```
 
 ### 4. Setup rclone
@@ -169,7 +217,8 @@ todo (include link to download)
 ### - Make nice readme
 - This is an ongoing goal. I think we're moving towards something shapely here. keep at it.
 
-### - Make the website display information from the database. popular songs, filters, sliders, charts. and i want song album thumbnails or whatever. getting those is big. 
+### - Make the website display information from the database. 
+- popular songs, filters, sliders, charts. and i want song album thumbnails or whatever. getting those is big. 
 
 ### - Have nice easy setup instructions!
 - some exist. theyre up above. think about improving them
@@ -185,10 +234,13 @@ considerations:
 - currently you can see them with `docker compose logs <service>`
 - idk how viable something like datadog would be. but. that would be cool.
 
-### - CI/CD
+### would love a restart song button
+
+### - self hosted CI/CD
 - we currently do github actions, but we could do some sort of self hosted runner thing perchance
 
-### - ??? profit
+### build typescript to js somewhere that isn't on the raspi.
+- perhaps ci/cd could build the js and put it somewhere, or something. idk. 
 
 ### - keybinds or something. 
 - when i'm busy doing something, and i hear a song come on that i like, but i cant log a score. because my hands are busy or im playing a game or something. voice controls would go crazy, but i think a simple hotkey(s) would be a fantastic start
@@ -196,7 +248,9 @@ considerations:
 ### - we could maybe use the github issues stuff?
 - seems like that would maybe be neat and practice, but also would mean not having one nice central place to find everything (this readme)
 
-### - Think about test vs dev vs prod. when i run this on my laptop i see:
+### - Think about test vs dev vs prod. 
+
+when i run this on my laptop i see:
 
 ```
 db-backups-1  | ⚠️  Running in PROD mode with DB=readybase_dev
@@ -214,20 +268,12 @@ which is silly.
 
 - I want the shitbot service gone.
 
-- create truebot service "Arbie"
-    - has basic empty discord bot. 
-    - typescript
-    - discord.js
-    - similar setup as api
-    - linter
-    - prettier
-
 - commands
     - use the built in "/" stuff.
     - All
         - /christmas    ⭐ ez
         - /e            ⭐ ez
-        - /ping
+        - /ping ✅
     - Music
         - /interval time (beginning, end) <can unbound either end>
         - /interval score (minimum, maximum) <can unbound either end>
@@ -292,7 +338,6 @@ tbd
 - from server.ts:
     - TODO(jruth): make linter require types?
     - TODO(jruth): check if .husky in the root folder is used/needed
-- would be nice to add a pre commit to prevent committing to main branch
 - add types to the return values of createServer
 
 

@@ -1,5 +1,4 @@
-// api/eslint.config.js
-import js from '@eslint/js';
+// I put this at root level because we have multiple services that follow the same linting rules
 import ts from '@typescript-eslint/eslint-plugin';
 import parser from '@typescript-eslint/parser';
 

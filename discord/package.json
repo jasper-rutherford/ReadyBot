@@ -1,0 +1,22 @@
+{
+  "name": "readybot",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "the bot that was promised",
+  "main": "dist/bot.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"this doesnt exist yet. todo...\" && exit 1"
+  },
+  "author": "jbird",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
