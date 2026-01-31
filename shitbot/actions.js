@@ -137,8 +137,8 @@ const upvoter = (bot, themoji) => {
         .then((data) => bot.logScore(data.body.item.uri, data.body.item.name, themoji, 1))
         .then(function (scores) {
             // update the vote message to reflect latest score change
-            bot.updateVoteMessage(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.total_score} ||] for ${themoji}`)
-            console.log(`[${scores.name}] has a score of [ ${scores.interval_score} ] over the last ${bot.baseInterval} and has an all time score of [ ${scores.total_score} ] for ${themoji}`)
+            bot.updateVoteMessage(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.queryInterval} and has an all time score of [|| ${scores.total_score} ||] for ${themoji}`)
+            console.log(`[${scores.name}] has a score of [ ${scores.interval_score} ] over the last ${bot.queryInterval} and has an all time score of [ ${scores.total_score} ] for ${themoji}`)
         })
         .catch((error) => {
             if (error === "No song playing") {
@@ -182,8 +182,8 @@ const downvoter = (bot, themoji) => {
         .then((data) => bot.logScore(data.body.item.uri, data.body.item.name, themoji, -1))
         // update the vote message to reflect latest score change
         .then(function (scores) {
-            bot.updateVoteMessage(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.baseInterval} and has an all time score of [|| ${scores.total_score} ||] for ${themoji}`)
-            console.log(`[${scores.name}] has a score of [ ${scores.interval_score} ] over the last ${bot.baseInterval} and has an all time score of [ ${scores.total_score} ] for ${themoji}`)
+            bot.updateVoteMessage(`[${scores.name}] has a score of [|| ${scores.interval_score} ||] over the last ${bot.queryInterval} and has an all time score of [|| ${scores.total_score} ||] for ${themoji}`)
+            console.log(`[${scores.name}] has a score of [ ${scores.interval_score} ] over the last ${bot.queryInterval} and has an all time score of [ ${scores.total_score} ] for ${themoji}`)
         })
         .catch((error) => {
             if (error === "No song playing") {

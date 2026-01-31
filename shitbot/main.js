@@ -1,8 +1,20 @@
 require('dotenv').config();
 
-const Discord = require('discord.js');
 const SpotifyWebApi = require('spotify-web-api-node');
-const client = new Discord.Client();
+const Discord = require('discord.js');
+const client = new Discord.Client({
+  intents: [
+    Discord.GatewayIntentBits.Guilds, // see basic information about discord servers
+    Discord.GatewayIntentBits.GuildMessages,
+    Discord.GatewayIntentBits.MessageContent,
+    Discord.GatewayIntentBits.GuildMessageReactions,
+  ],
+  partials: [
+    Discord.Partials.Message,
+    Discord.Partials.Channel,
+    Discord.Partials.Reaction,
+  ],
+});
 const fs = require('fs');
 const express = require('express');
 
@@ -19,6 +31,7 @@ const interval = "2 months"; // the range of time to include song votes in the q
 // object that lets me send stuff to other files and still do references to this one. I also do my functions here apparently 
 var bot = {
     tokenDiscord: process.env.DISCORD_BOT_TOKEN, // moving away from config.json to .env
+    clientID_Discord: process.env.DISCORD_BOT_CLIENT_ID,
     prefix: '~',
     altPrefix: '\\',
     client: client,
@@ -406,7 +419,7 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
         let query = `
         SELECT
             SUM(score) AS total_score,
-            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '${bot.baseInterval}' THEN score ELSE 0 END) AS interval_score
+            SUM(CASE WHEN stamp >= CURRENT_TIMESTAMP - INTERVAL '${bot.queryInterval}' THEN score ELSE 0 END) AS interval_score
         FROM scores
         WHERE spotify_uri = '${uri}'
         
@@ -471,11 +484,56 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
     }
 }
 
-client.once('ready', () => {
-    bot.initialUpdates();
+client.once("ready", () => {
+  bot.initialUpdates();
+
+  const rest = new Discord.REST({ version: "10" }).setToken(bot.tokenDiscord);
+
+  // send in the commands
+  const guildID = "254631721620733952";
+
+  rest
+    .put(
+      Discord.Routes.applicationGuildCommands(
+        bot.clientID_Discord,
+        guildID
+      ),
+      {
+        body: [
+          new Discord.SlashCommandBuilder()
+            .setName("interval")
+            .setDescription("interval stuff")
+            .addStringOption(option =>
+              option
+                .setName("time_interval")
+                .setDescription("Optional message")
+                .setRequired(true)
+            )
+            .toJSON(),
+
+          new Discord.SlashCommandBuilder()
+            .setName("score")
+            .setDescription("score thing")
+            .addIntegerOption(option =>
+              option
+                .setName("count")
+                .setDescription("minimum")
+                .setRequired(true)
+            )
+            .toJSON()
+        ],
+      }
+    )
+    .then(() => {
+      console.log("Slash commands registered successfully");
+    })
+    .catch((err) => {
+      console.error("Failed to register slash commands:", err);
+    });
 });
 
-client.on('message', message => {
+
+client.on('messageCreate', message => {
     // ignore messages from itself
     if (message.author.bot) return;
 
@@ -519,6 +577,48 @@ client.on('messageReactionAdd', (reaction, user) => {
     reaction.users.remove(user);
     return
 });
+
+client.on("interactionCreate", async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  try {
+    if (interaction.commandName === "interval") {
+      bot.queryInterval = interaction.options.getString("time_interval", true);
+
+      await interaction.reply({
+        content: `✅ Interval set to: ${bot.queryInterval}`,
+        ephemeral: true,
+      });
+      return;
+    }
+
+    if (interaction.commandName === "score") {
+      bot.minScore = interaction.options.getInteger("count", true);
+
+      await interaction.reply({
+        content: `✅ Min score set to: ${bot.minScore}`,
+        ephemeral: true,
+      });
+      return;
+    }
+  } catch (err) {
+    console.error("interaction handler error:", err);
+
+    // If we already replied/deferred, use followUp/editReply; otherwise reply.
+    if (interaction.deferred || interaction.replied) {
+      await interaction.followUp({
+        content: "❌ Something went wrong handling that command.",
+        ephemeral: true,
+      });
+    } else {
+      await interaction.reply({
+        content: "❌ Something went wrong handling that command.",
+        ephemeral: true,
+      });
+    }
+  }
+});
+
 
 const scopes = [
     'ugc-image-upload',
