@@ -279,7 +279,7 @@ which is silly.
         - /interval score (minimum, maximum) <can unbound either end>
         - /ballots
     - Admin
-        - /eval
+        - /something
 
 - keep the ballots
     - one bot sends the ballot(S),
