@@ -454,7 +454,7 @@ TO_TIMESTAMP(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM stam
         const words = message.content.slice(bot.prefix.length).split(/ +/);
         const command = words.shift().toLowerCase();
 
-        if (message.channel.type != 'dm' && message.channel.type != 'text') {
+         if (!message.channel.isTextBased()) {
             console.log("message sent in unsupported channel type: " + message.channel.type)
             return
         }
