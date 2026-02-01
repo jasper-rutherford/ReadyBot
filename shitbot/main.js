@@ -491,7 +491,8 @@ client.once("ready", () => {
 
   // send in the commands
   const guildID = "254631721620733952";
-
+  console.log("bot.clientID_Discord")
+  console.log(bot.clientID_Discord)
   rest
     .put(
       Discord.Routes.applicationGuildCommands(
