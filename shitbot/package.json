@@ -1,5 +1,6 @@
 {
-  "name": "arbie",
+  "name": "@readybot/shitbot",
+  "private": true,
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {

@@ -1,3 +1,5 @@
+import { createApiClient } from "@readybot/api-client";
+
 import {
   MessageReaction,
   PartialMessageReaction,
@@ -10,6 +12,7 @@ import {
   UTILITY_BALLOT_EMOJI,
   VOTE_BALLOT_EMOJI,
 } from "./env.js";
+import { BallotType } from "@readybot/api-contracts";
 
 export async function detectBallots(
   reaction: MessageReaction | PartialMessageReaction,
@@ -21,7 +24,7 @@ export async function detectBallots(
   }
 
   // check if emoji is ballot1 or ballot2
-  let ballotType: string; // TODO(jruth): type this eventually
+  let ballotType: BallotType;
   if (reaction.emoji.name === mustGetEnv(UTILITY_BALLOT_EMOJI)) {
     ballotType = "utility";
   } else if (reaction.emoji.name === mustGetEnv(VOTE_BALLOT_EMOJI)) {
@@ -30,8 +33,6 @@ export async function detectBallots(
     return;
   }
 
-  // TODO(jruth): this is where we plug in the call to the api to post the ballot to db
-  console.log(
-    `Detected ${ballotType} ballot with message ID ${reaction.message.id}`,
-  );
+  // if we get here, we have a reaction indicating a ballot, so we post it to the API
+  await createApiClient().postBallot(ballotType, reaction.message.id);
 }

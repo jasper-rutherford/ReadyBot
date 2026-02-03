@@ -1,3 +1,58 @@
 update the readme (this goal should be in every goals.txt...)
 
 future work: api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
+----------------------------------------------------
+
+
+1. basic ballot sync placeholder ✅
+2. migration
+3. ... api? or package rearrange. for api. or tests? or client. 
+
+
+----
+
+THIS PR...
+
+- both bots have the id of the ballots
+    - make shitbot add 📓 to front of first ballot message ✅
+    - make shitbot add 📒 to front of second ballot message ✅
+    - have readybot listen for those from shitbot and save the message ids somewhere
+        - in db
+    - migration that adds a ballot-info table to db ✅
+    - api call to write to database ✅
+    - tests 
+    - api call to read from database
+    - tests 
+    - api client package, with contracts/structs used by api. 
+        - lets you make calls to api. as simple functions. just do the ballot calls for now. 
+
+we have to remove a emoji from the message. otherwise the extra one to label the message makes it break. ✅
+and the delete command doesnt work. so fix that. ✅
+
+ok. so. good points from chathew. workspaces.  ✅
+
+update the readme (this goal should be in every goals.txt...)
+
+
+PROD DEPLOY NOTES:
+- delete node_modules and npm install at root
+- delete emoji in prod
+
+---------------------------------------------------------------
+
+FUTURE WORK:
+
+- structure folders better. root folder is becoming a mess. apps, packages, libraries, tools. idk. think about it. and then do it.
+    - // TODO(jruth): think clever structure/precedent for how we organize files/subfolders. "logic" folder, perhaps? dunnor.
+- manage npm versions???? of my packages??? dependencies??
+- zod
+- store baseurl somewhere? for api?
+- could have a conversation about errors and wrapping
+- the mustgetenv only exists in discord.... shdfushdfsh
+- build should not be in make fix
+- we need to make auth a priority on the api side.
+- shitbot and arbie should only listen/exist in their designated channel
+- have both bots add nonzero emojis to each ballot. in a particular order
+    - properbot will just add a dummy hello world poc one that does a console.log or something
+    - shitbot adds the same emojis as usual, readybot adds ✔ and ✅ on both ballots, always second emoji and second last emoji
+

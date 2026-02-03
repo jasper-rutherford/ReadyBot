@@ -3,8 +3,8 @@ import { Pool } from 'pg';
 import {
   GetScoreRequestParams,
   GetScoreResponse,
-  PostBallotsRequestBody,
-} from './models/models';
+  PostBallotRequestBody,
+} from '@readybot/api-contracts';
 
 // TODO(jruth): add types to the returned stuff
 export function createServer() {
