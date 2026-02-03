@@ -66,7 +66,7 @@ var bot = {
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
     utilityEmojis:                                          // the emoji who perform actions for the utility message
-        ["⏮", "⬆", "⬇", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔", "📜"],
+        ["📓", "⏮", "⬆", "⬇", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔", "📜"],
     deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
     deleteMessage: null,                                    // the message warning the user about their potential deletion
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
