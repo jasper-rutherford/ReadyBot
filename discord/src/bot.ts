@@ -3,7 +3,7 @@ import {
   handleCommand,
   registerCommands,
 } from "./command-logic/handle-commands.js";
-import { BOT_TOKEN, mustGetEnv } from "./env.js";
+import { BALLOT_CHANNEL_ID, BOT_TOKEN, mustGetEnv } from "./env.js";
 
 // make the client
 const client = new Client({
@@ -19,8 +19,9 @@ client.once("clientReady", async () => {
   await registerCommands();
 
   // just send a poc message for now
-  let testChannel = "1399872069168009369"; // leaving this hardcoded for now,,, will fix as we leave poc stage
-  let channel = client.channels.cache.get(testChannel) as TextChannel;
+  let channel = client.channels.cache.get(
+    mustGetEnv(BALLOT_CHANNEL_ID),
+  ) as TextChannel;
   channel.send("ready!");
 });
 
@@ -29,5 +30,10 @@ client.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
   await handleCommand(interaction);
 });
+
+// // Handle reactions
+// client.on("messageReactionAdd", async (reaction, user) => {
+//   ballotID
+// });
 
 client.login(mustGetEnv(BOT_TOKEN));

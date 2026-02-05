@@ -1,4 +1,3 @@
-update the readme (this goal should be in every goals.txt...)
 
 1. both bots have the id of the ballots
     - one sends both, reacts a special emoji to indicate which is which, and then the other
@@ -8,7 +7,11 @@ update the readme (this goal should be in every goals.txt...)
 
     - make shitbot add 📓 to front of first ballot message ✅
     - make shitbot add 📒 to front of second ballot message ✅
+    - have readybot listen for those from shitbot and save the message ids somewhere
+        - where? in memory 
 
 2. have both bots add nonzero emojis to each ballot. in a particular order
     - properbot will just add a dummy hello world poc one that does a console.log or something
     - shitbot adds the same emojis as usual, readybot adds ✔ and ✅ on both ballots, always second emoji and second last emoji
+
+update the readme (this goal should be in every goals.txt...)
