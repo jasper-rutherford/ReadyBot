@@ -9,6 +9,7 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/shitbot/main.js",
+            "envFile": "${workspaceFolder}/.env",
             "env": {
                 "DB_HOST": "localhost",
                 "SPOTIFY_REFRESH_TOKEN_LOCATION": "${workspaceFolder}/shitbot/debug/spotify_refresh_token.txt",

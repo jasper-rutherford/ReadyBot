@@ -122,7 +122,7 @@ const upvoter = (bot, themoji) => {
     bot.spotifyApi.getMyCurrentPlaybackState()
         .then(function (data) {
             console.log("getting current state")
-            // if a song is playling
+            // if a song is playing
             if (data.body && data.body.is_playing) {
                 // get current song
                 return bot.spotifyApi.getMyCurrentPlayingTrack()
@@ -136,7 +136,7 @@ const upvoter = (bot, themoji) => {
         // log the upvote
         .then(async (data) => {
             console.log("logging score")
-            resolve(await fetch(`localhost:${process.env.API_PORT}/scores`, {
+            resolve(await fetch(`http://localhost:3001/scores`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: {
