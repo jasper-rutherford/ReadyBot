@@ -11,5 +11,5 @@ export interface GetScoreResponse {
 
 export interface PostBallotRequestBody {
   ballotType: 'utility' | 'vote'; // Type of ballot being cast
-  messageID: number; // Message ID associated with the ballot
+  messageID: string; // Message ID associated with the ballot
 }

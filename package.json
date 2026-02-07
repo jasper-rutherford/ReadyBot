@@ -2,7 +2,12 @@
   "name": "readybot",
   "type": "module",
   "private": true,
-  "description": "Just here for global linterizing",
+  "workspaces": [
+    "api",
+    "discord",
+    "shitbot"
+  ],
+  "description": "Here for global linterizing and to. do something. with contract? workspace. yes.",
   "lint-staged": {
     "{api,discord}/**/*.{ts,js}": [
       "eslint --config eslint.config.js",

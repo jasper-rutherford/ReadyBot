@@ -1,6 +1,7 @@
 {
-  "name": "readybot",
+  "name": "@readybot/discord",
   "type": "module",
+  "private": true,
   "version": "1.0.0",
   "description": "the bot that was promised",
   "main": "dist/bot.js",

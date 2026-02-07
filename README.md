@@ -176,12 +176,6 @@ npm -v
 ```
 # once in the root folder
 npm install
-
-# once in api
-( cd api && npm install )
-
-# once in discord
-( cd discord && npm install )
 ```
 
 ### 4. Setup rclone
