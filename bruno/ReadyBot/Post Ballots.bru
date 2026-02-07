@@ -1,0 +1,23 @@
+meta {
+  name: Post Ballots
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:{{API_PORT}}/ballots
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ballotType": "utislity",
+    "messageID": 1469811534963146858
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
