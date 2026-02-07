@@ -8,3 +8,8 @@ export interface GetScoreResponse {
   totalScore: number; // Total score for the given URI and themoji across all time
   intervalScore: number; // Total score for the given URI and themoji within the specified interval
 }
+
+export interface PostBallotRequestBody {
+  ballotType: 'utility' | 'vote'; // Type of ballot being cast
+  messageID: string; // Message ID associated with the ballot
+}

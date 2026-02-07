@@ -25,6 +25,7 @@ const sendBallots = async (bot, message, words) => {
     }
     try {
         bot.multiVoteMessage = await channel.send(message2Content)
+        bot.reactAll(["📒"], bot.multiVoteMessage)
         bot.reactAll(bot.getThemojis(), bot.multiVoteMessage)
     } catch (err) {
         throw new Error(`Vote message flow failed: ${err.message}`);

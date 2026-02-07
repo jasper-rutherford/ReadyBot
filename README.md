@@ -176,12 +176,6 @@ npm -v
 ```
 # once in the root folder
 npm install
-
-# once in api
-( cd api && npm install )
-
-# once in discord
-( cd discord && npm install )
 ```
 
 ### 4. Setup rclone
@@ -280,6 +274,10 @@ which is silly.
         - /ballots
     - Admin
         - /something
+
+ballot+commannds use flow:
+- keep ballot message saved. dont send a new one on startup by default.
+- interval + score commands are ephemeral - you send them, they do stuff, they dont leave a message in chat. 
 
 - keep the ballots
     - one bot sends the ballot(S),
