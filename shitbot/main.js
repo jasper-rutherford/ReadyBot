@@ -53,7 +53,6 @@ var bot = {
         clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
         redirectUri: 'http://localhost:8888/callback'
     }),
-    spotifyUserID: process.env.SPOTIFY_USER_ID,             //my user id
 
     // NEW 12/17 - keep
     commandMessage: null,                                   // the message from the user which requested a command

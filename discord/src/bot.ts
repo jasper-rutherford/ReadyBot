@@ -1,9 +1,15 @@
-import { Client, GatewayIntentBits, TextChannel } from "discord.js";
+import {
+  Client,
+  GatewayIntentBits,
+  Interaction,
+  TextChannel,
+} from "discord.js";
 import {
   handleCommand,
   registerCommands,
 } from "./command-logic/handle-commands.js";
 import { BALLOT_CHANNEL_ID, BOT_TOKEN, mustGetEnv } from "./env.js";
+import { detectBallots } from "./ballot-logic.js";
 
 // make the client
 const client = new Client({
@@ -26,14 +32,19 @@ client.once("clientReady", async () => {
 });
 
 // Handle commands
-client.on("interactionCreate", async (interaction) => {
+client.on("interactionCreate", async (interaction: Interaction) => {
   if (!interaction.isChatInputCommand()) return;
   await handleCommand(interaction);
 });
 
-// // Handle reactions
-// client.on("messageReactionAdd", async (reaction, user) => {
-//   ballotID
-// });
+// Handle reactions
+client.on("messageReactionAdd", async (reaction, user) => {
+  let ballotType = detectBallots(reaction, user);
+  if (ballotType) {
+    console.log(`detected ${ballotType} ballot!`);
+  } else {
+    console.log("detected non-ballot reaction...");
+  }
+});
 
 client.login(mustGetEnv(BOT_TOKEN));

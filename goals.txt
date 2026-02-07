@@ -8,7 +8,8 @@
     - make shitbot add 📓 to front of first ballot message ✅
     - make shitbot add 📒 to front of second ballot message ✅
     - have readybot listen for those from shitbot and save the message ids somewhere
-        - where? in memory 
+        - in db
+    - migration that adds a ballot-info table to db... this grows quick. lets store in memory for now.
 
 2. have both bots add nonzero emojis to each ballot. in a particular order
     - properbot will just add a dummy hello world poc one that does a console.log or something
