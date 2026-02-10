@@ -1,0 +1,11 @@
+{
+  "name": "@readybot/api-client",
+  "version": "1.0.0",
+  "description": "stuff that is like. api. but. shared. contractual. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jasper",
+  "license": "ISC"
+}
