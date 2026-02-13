@@ -1,4 +1,4 @@
-// TODO(jruth): think clever structure/precedent for how we organize files/subfolders. "logic" folder, perhaps? dunnor.
+import { createApiClient } from "@readybot/api-client";
 
 import {
   MessageReaction,
@@ -12,19 +12,19 @@ import {
   UTILITY_BALLOT_EMOJI,
   VOTE_BALLOT_EMOJI,
 } from "./env.js";
+import { BallotType } from "@readybot/api-contracts";
 
-export function detectBallots(
+export async function detectBallots(
   reaction: MessageReaction | PartialMessageReaction,
   user: User | PartialUser,
-): string | undefined {
+): Promise<void> {
   // check if user is shitbot
   if (user.id !== mustGetEnv(SHITBOT_USER_ID)) {
     return;
   }
 
-  let ballotType = "";
-
   // check if emoji is ballot1 or ballot2
+  let ballotType: BallotType;
   if (reaction.emoji.name === mustGetEnv(UTILITY_BALLOT_EMOJI)) {
     ballotType = "utility";
   } else if (reaction.emoji.name === mustGetEnv(VOTE_BALLOT_EMOJI)) {
@@ -32,4 +32,7 @@ export function detectBallots(
   } else {
     return;
   }
+
+  // if we get here, we have a reaction indicating a ballot, so we post it to the API
+  await createApiClient().postBallot(ballotType, reaction.message.id);
 }

@@ -4,23 +4,26 @@ FROM node:22-slim
 # Set working dir
 WORKDIR /app
 
-# Install dependencies
-RUN apt-get update \
-  && apt-get install -y wget sqlite3 ca-certificates postgresql-client
-
-# Copy package.json and install dependencies
+# Copy package.json files 
 COPY package*.json ./
+COPY api/package*.json ./api/
+COPY api-contracts/package*.json ./api-contracts/
+
+# install dependencies
 RUN npm install
 
 # Copy the rest of the code
-COPY . .
+COPY api/ ./api/
+COPY api-contracts/ ./api-contracts/
 
 # compile TypeScript to JavaScript
-RUN npm run build
+RUN npm run -w @readybot/api-contracts build
+RUN npm run -w @readybot/api build
+
+# set working dir to api for entrypoint
+WORKDIR /app/api
 
 ENTRYPOINT ["/bin/sh"]
 
 # command the api to begin
 CMD ["./docker-entrypoint.sh"]
-
-

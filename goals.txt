@@ -31,6 +31,14 @@ PROD DEPLOY NOTES:
 
 FUTURE WORK:
 
+- structure folders better. root folder is becoming a mess. apps, packages, libraries, tools. idk. think about it. and then do it.
+    - // TODO(jruth): think clever structure/precedent for how we organize files/subfolders. "logic" folder, perhaps? dunnor.
+- manage npm versions???? of my packages??? dependencies??
+- zod
+- store baseurl somewhere? for api?
+- could have a conversation about errors and wrapping
+- the mustgetenv only exists in discord.... shdfushdfsh
+- build should not be in make fix
 - we need to make auth a priority on the api side.
 - shitbot and arbie should only listen/exist in their designated channel
 - have both bots add nonzero emojis to each ballot. in a particular order

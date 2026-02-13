@@ -1,7 +1,8 @@
 services:
   api:
     build:
-      context: ./api
+      context: .
+      dockerfile: api/Dockerfile
     restart: always
     env_file:
       - ./api/.env
@@ -60,7 +61,8 @@ services:
       - shitbotdata:/data # persist the spotify refresh token file (and nothing else)
   discord:
     build:
-      context: ./discord
+      context: .
+      dockerfile: discord/Dockerfile
     restart: always
     env_file:
       - ./discord/.env

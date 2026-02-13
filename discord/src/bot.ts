@@ -16,6 +16,7 @@ const client = new Client({
   intents: [
     GatewayIntentBits.Guilds, // see basic information about discord servers
     GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessageReactions,
   ],
 });
 
@@ -39,12 +40,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
 
 // Handle reactions
 client.on("messageReactionAdd", async (reaction, user) => {
-  let ballotType = detectBallots(reaction, user);
-  if (ballotType) {
-    console.log(`detected ${ballotType} ballot!`);
-  } else {
-    console.log("detected non-ballot reaction...");
-  }
+  await detectBallots(reaction, user);
 });
 
 client.login(mustGetEnv(BOT_TOKEN));
