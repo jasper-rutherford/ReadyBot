@@ -1,11 +1,12 @@
 {
   "name": "@readybot/api-client",
+  "type": "module",
+  "private": true,
   "version": "1.0.0",
-  "description": "stuff that is like. api. but. shared. contractual. ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "This is a client that lets you use the api.",
   "author": "jasper",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@readybot/api-contracts": "^1.0.0"
+  }
 }

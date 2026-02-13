@@ -39,7 +39,7 @@ redeploy-service-%:
 	docker compose up --build -d $*
 
 # These are the services we currently support the linting/prettying of
-FIXABLE := api discord
+FIXABLE := api api-contracts api-client discord
 
 # lint a supported service
 lint-%:

@@ -1,0 +1,9 @@
+{
+  "name": "@readybot/api-contracts",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is where we put the definitions for api requests and responses.",
+  "author": "jasper",
+  "license": "ISC"
+}

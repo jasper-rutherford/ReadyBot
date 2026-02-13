@@ -13,6 +13,7 @@
   "author": "jbird",
   "license": "ISC",
   "dependencies": {
+    "@readybot/api-contracts": "^1.0.0",
     "date-fns": "^4.1.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
