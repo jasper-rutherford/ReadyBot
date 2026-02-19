@@ -66,7 +66,7 @@ var bot = {
     multiVoteMessage: null,                                 // the message which the user can react to for voting on themes/scores
     multiUtilityMessage: null,                              // the message which the user can react to for doing various utility operations (skip, back, order, shuffle)
     utilityEmojis:                                          // the emoji who perform actions for the utility message
-        ["⏮", "⬆", "⬇", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔", "📜"],
+              ["📓", "⏮", "⬆", "⬇", "⏭", "🔼", "🔀", "🔽", "📅", "🆕", "🗑", "🥫", "❔", "📜"],
     deletingEmoji: null,                                    // the emoji to be deleted (used to warn the user/prevent accidental deletion)
     deleteMessage: null,                                    // the message warning the user about their potential deletion
     deleteEmojis: ["✅", "❌"],                             // the emoji options for on the delete warning message
@@ -145,7 +145,10 @@ var bot = {
     // saves the mapping of themoji to playlistID to db
     saveToDB: async function () {
         console.log(`Saving themoji mappings to db`)
+        // wipe the whole table first
+        await this.query("DELETE FROM playlist_emojis;");
 
+        // then we're gonna stick everything into the table
         let queryMsg = "INSERT INTO playlist_emojis (emoji, spotify_playlist_id) VALUES "
 
         for (let i = 0; i < bot.multiThemes.length; i++) {
@@ -155,6 +158,7 @@ var bot = {
             }
         }
 
+   // dont really need this anymore but i fucking hate working in shitbot so. leaving this.
         queryMsg += `ON CONFLICT (emoji) DO UPDATE SET spotify_playlist_id = EXCLUDED.spotify_playlist_id;`
 
         try {
@@ -574,7 +578,10 @@ client.on('messageReactionAdd', (reaction, user) => {
         bot.actions.get(reaction.emoji.name)(bot)
     }
 
-    reaction.users.remove(user);
+    // remove the user's reaction 
+    reaction.users.remove(user).catch((error) => {
+        console.log("Error removing reaction: ", error)
+    })
     return
 });
 

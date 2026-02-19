@@ -281,6 +281,10 @@ which is silly.
     - Admin
         - /something
 
+ballot+commannds use flow:
+- keep ballot message saved. dont send a new one on startup by default.
+- interval + score commands are ephemeral - you send them, they do stuff, they dont leave a message in chat. 
+
 - keep the ballots
     - one bot sends the ballot(S),
         - a particular reaction to a message from one bot can signal to the other that this is ballot 1 or two
@@ -347,7 +351,8 @@ tbd
     - :.,$s/pick/s
 - one nice explanation of what is happening in the squashed commit
 - format the width of the message to 80
-    - todo: put the vim command here
+    - :set textwidth=80
+    - gggqG
 - when you merge the pr, leave the name and body of the "merge" commit as default 
     - idea is the commit history will go 
         - "squashed commit with explanation of stuff"
