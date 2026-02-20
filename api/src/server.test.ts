@@ -186,3 +186,157 @@ describe('GET /scores', () => {
     expect(res2.status).toBe(400);
   });
 });
+
+// test post ballots
+describe('POST /ballots', () => {
+  let tests = [
+    {
+      name: 'none supplied',
+      body: {},
+      expectedStatus: 400,
+      errorResponse: {
+        error: 'Missing body parameters',
+        missing: ['ballotType', 'messageID'],
+      },
+    },
+    {
+      name: 'only ballotType supplied',
+      body: { ballotType: 'utility' },
+      expectedStatus: 400,
+      errorResponse: {
+        error: 'Missing body parameters',
+        missing: ['messageID'],
+      },
+    },
+    {
+      name: 'only messageID supplied',
+      body: { messageID: '12345' },
+      expectedStatus: 400,
+      errorResponse: {
+        error: 'Missing body parameters',
+        missing: ['ballotType'],
+      },
+    },
+    {
+      name: 'invalid ballotType and invalid messageID',
+      body: { ballotType: 'invalid', messageID: '' },
+      expectedStatus: 400,
+      errorResponse: {
+        error: 'Invalid body parameters',
+        errors: [
+          "Invalid ballotType: 'invalid' (must be 'utility' or 'vote')",
+          "Invalid messageID: '' (must be a non-empty string)",
+        ],
+      },
+    },
+    {
+      name: 'invalid ballotType, valid messageID',
+      body: { ballotType: 'invalid', messageID: '12345' },
+      expectedStatus: 400,
+      errorResponse: {
+        error: 'Invalid body parameters',
+        errors: ["Invalid ballotType: 'invalid' (must be 'utility' or 'vote')"],
+      },
+    },
+    {
+      name: 'valid ballotType, invalid messageID',
+      body: { ballotType: 'utility', messageID: '' },
+      expectedStatus: 400,
+      errorResponse: {
+        error: 'Invalid body parameters',
+        errors: ["Invalid messageID: '' (must be a non-empty string)"],
+      },
+    },
+    {
+      name: 'valid ballotType and messageID, utility',
+      body: { ballotType: 'utility', messageID: 'utilitymessage1' },
+      expectedStatus: 204,
+      // check the db to make sure the message ID was set correctly
+      after: async () => {
+        const res = await pool.query(
+          `SELECT message_id FROM ballot_messages WHERE ballot_type = 'utility';`
+        );
+        expect(res.rows.length).toBe(1);
+        expect(res.rows[0].message_id).toBe('utilitymessage1');
+      },
+    },
+    {
+      name: 'valid ballotType and messageID, vote',
+      body: { ballotType: 'vote', messageID: 'votemessage1' },
+      expectedStatus: 204,
+      // check the db to make sure the message ID was set correctly
+      after: async () => {
+        const res = await pool.query(
+          `SELECT message_id FROM ballot_messages WHERE ballot_type = 'vote';`
+        );
+        expect(res.rows.length).toBe(1);
+        expect(res.rows[0].message_id).toBe('votemessage1');
+      },
+    },
+    {
+      name: 'confirm duplicate utility inserts do not error',
+      body: { ballotType: 'utility', messageID: 'utilitymessage1' },
+      expectedStatus: 204,
+      // check the db to make sure the value is still correct
+      after: async () => {
+        const res = await pool.query(
+          `SELECT message_id FROM ballot_messages WHERE ballot_type = 'utility';`
+        );
+        expect(res.rows.length).toBe(1);
+        expect(res.rows[0].message_id).toBe('utilitymessage1');
+      },
+    },
+    {
+      name: 'confirm duplicate vote inserts do not error',
+      body: { ballotType: 'vote', messageID: 'votemessage1' },
+      expectedStatus: 204,
+      // check the db to make sure the value is still correct
+      after: async () => {
+        const res = await pool.query(
+          `SELECT message_id FROM ballot_messages WHERE ballot_type = 'vote';`
+        );
+        expect(res.rows.length).toBe(1);
+        expect(res.rows[0].message_id).toBe('votemessage1');
+      },
+    },
+    {
+      name: 'confirm sequential utility inserts overwrite previous values',
+      body: { ballotType: 'utility', messageID: 'utilitymessage2' },
+      expectedStatus: 204,
+      // check the db to make sure the value is updated correctly
+      after: async () => {
+        const res = await pool.query(
+          `SELECT message_id FROM ballot_messages WHERE ballot_type = 'utility';`
+        );
+        expect(res.rows.length).toBe(1);
+        expect(res.rows[0].message_id).toBe('utilitymessage2');
+      },
+    },
+    {
+      name: 'confirm sequential vote inserts overwrite previous values',
+      body: { ballotType: 'vote', messageID: 'votemessage2' },
+      expectedStatus: 204,
+      // check the db to make sure the value is updated correctly
+      after: async () => {
+        const res = await pool.query(
+          `SELECT message_id FROM ballot_messages WHERE ballot_type = 'vote';`
+        );
+        expect(res.rows.length).toBe(1);
+        expect(res.rows[0].message_id).toBe('votemessage2');
+      },
+    },
+  ];
+
+  tests.forEach((test) => {
+    it(test.name, async () => {
+      const res = await request(server).post('/ballots').send(test.body);
+      expect(res.status).toBe(test.expectedStatus);
+      if (test.errorResponse) {
+        expect(res.body).toEqual(test.errorResponse);
+      }
+      if (test.after) {
+        await test.after();
+      }
+    });
+  });
+});

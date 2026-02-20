@@ -51,7 +51,7 @@ var bot = {
     spotifyApi: new SpotifyWebApi({
         clientId: process.env.SPOTIFY_CLIENT_ID,
         clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-        redirectUri: 'http://localhost:8888/callback'
+        redirectUri: 'http://127.0.0.1:8888/callback'
     }),
     spotifyUserID: process.env.SPOTIFY_USER_ID,             //my user id
 
@@ -727,7 +727,7 @@ app.get('/callback', (req, res) => {
 
 app.listen(8888, () =>
     console.log(
-        'HTTP Server up, http://localhost:8888/login is now available.'
+        'HTTP Server up, http://127.0.0.1:8888/login is now available.'
     )
 );
 client.login(bot.tokenDiscord);
@@ -782,7 +782,7 @@ let kickOffTokenRefresh = () => {
 
     // worst case - no tokens available. Login needed.
     else {
-        console.log("No refresh token found. Go to https://localhost:8888/login to login")
+        console.log("No refresh token found. Go to https://127.0.0.1:8888/login to login")
         return
     }
 

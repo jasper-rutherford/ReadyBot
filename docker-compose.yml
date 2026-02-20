@@ -55,7 +55,7 @@ services:
     env_file:
       - .env
     ports:
-      - "8888:8888" # for spotify web login (http://localhost:8888/login)
+      - "8888:8888" # for spotify web login (http://127.0.0.1:8888/login)
     volumes:
       - shitbotdata:/data # persist the spotify refresh token file (and nothing else)
   discord:
