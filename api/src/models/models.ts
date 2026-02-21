@@ -8,3 +8,11 @@ export interface GetScoreResponse {
   totalScore: number; // Total score for the given URI and themoji across all time
   intervalScore: number; // Total score for the given URI and themoji within the specified interval
 }
+
+// dont think this really enforces anything, something something TODO(jruth): eventually zod maybe
+export type BallotType = 'utility' | 'vote';
+
+export interface PostBallotsRequestBody {
+  ballotType: BallotType; // Type of ballot being cast
+  messageID: string; // Message ID associated with the ballot
+}

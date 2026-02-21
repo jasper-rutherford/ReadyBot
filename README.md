@@ -29,6 +29,9 @@ its on discord only for like, a hyper lazy cross platform interface.
     - GET /scores
         - gets score values. we should do documentation
         - a test exists. more needed. very very wip.
+    - POST /ballots
+        - inserts information for a ballot message into the db.
+        - tests ✅
 - Will act as middleware between postgres and things that want access to postgres data
 - Will slowly port functionality over from the shitbot into this so that like, the discord bot does 90% on its own, and 10% via api, moving towards 0% shitbot and 100% api or whatever.
 - linting and prettying are supported/enforced
@@ -95,6 +98,7 @@ its on discord only for like, a hyper lazy cross platform interface.
     - docker will read var and start differently
     - use the appropriate vscode debugger launch config
     - profit
+- also, you can debug the unit tests. 
 
 ## Port conventions
 - Each service that gets a custom port shall increment up from the custom port of the previous service.

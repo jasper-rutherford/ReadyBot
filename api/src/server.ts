@@ -1,10 +1,15 @@
 import express, { Request, Response } from 'express';
 import { Pool } from 'pg';
-import { GetScoreRequestParams, GetScoreResponse } from './models/models';
+import {
+  GetScoreRequestParams,
+  GetScoreResponse,
+  PostBallotsRequestBody,
+} from './models/models';
 
 // TODO(jruth): add types to the returned stuff
 export function createServer() {
   const server = express();
+  server.use(express.json());
 
   // this is the postgres client
   // TODO(jruth): close this somewhere...
@@ -88,6 +93,78 @@ export function createServer() {
 
       // send response
       res.json(response);
+    }
+  );
+
+  // post /ballots
+  // update the messageID for a particular ballot type (utility or vote) in the db
+  // this is gonna be called by the discord bot when it sees that shitbot posted a new ballot message
+  // ballotType must be either "utility" or "vote"
+  // messageID must be a non-empty string, because I can't think of any good reason to allow an empty messageID.
+  server.post(
+    '/ballots',
+    async (
+      req: Request<unknown, unknown, PostBallotsRequestBody, unknown>,
+      res: Response
+    ) => {
+      // handle missing parameters
+      if (
+        req.body.ballotType === undefined ||
+        req.body.messageID === undefined
+      ) {
+        const missing = [];
+        if (!req.body.ballotType) missing.push('ballotType');
+        if (!req.body.messageID) missing.push('messageID');
+
+        res.status(400).json({
+          error: 'Missing body parameters',
+          missing,
+        });
+        return;
+      }
+
+      // check if ballotType is valid
+      let ballotTypeValid: boolean =
+        req.body.ballotType === 'utility' || req.body.ballotType === 'vote';
+
+      // check if messageID is valid
+      let messageIDValid: boolean = req.body.messageID !== '';
+
+      // handle invalid parameters
+      if (!ballotTypeValid || !messageIDValid) {
+        const errors = [];
+        if (!ballotTypeValid)
+          errors.push(
+            `Invalid ballotType: '${req.body.ballotType}' (must be 'utility' or 'vote')`
+          );
+        if (!messageIDValid)
+          errors.push(
+            `Invalid messageID: '${req.body.messageID}' (must be a non-empty string)`
+          );
+
+        res.status(400).json({
+          error: 'Invalid body parameters',
+          errors,
+        });
+        return;
+      }
+
+      // if we get here then we're good to go...
+
+      // the query to set the message ID for the ballot type
+      const query = `UPDATE ballot_messages SET message_id = $1 WHERE ballot_type = $2;`;
+
+      // query the db
+      try {
+        await pool.query(query, [req.body.messageID, req.body.ballotType]);
+      } catch (e) {
+        console.error('Database query error:', e);
+        res.status(500).json({ error: 'Internal server error' });
+        return;
+      }
+
+      // send response
+      res.sendStatus(204); // no content
     }
   );
 

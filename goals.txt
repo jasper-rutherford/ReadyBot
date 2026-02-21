@@ -1,1 +1,3 @@
 update the readme (this goal should be in every goals.txt...)
+
+future work: api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
