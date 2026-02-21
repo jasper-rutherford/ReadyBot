@@ -1,0 +1,23 @@
+{
+  "name": "@readybot/api-client",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is a client that lets you use the api.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "jasper",
+  "license": "ISC",
+  "dependencies": {
+    "@readybot/api-contracts": "^1.0.0",
+    "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -22,10 +22,12 @@
             "port": 3301, // this MUST match "API_DEBUG_PORT" in the .env
             "restart": true,
             "localRoot": "${workspaceFolder}/api",
-            "remoteRoot": "/app",
+            "remoteRoot": "/app/api",
+            "sourceMaps": true,
+            "outFiles": ["${workspaceFolder}/api/dist/**/*.js"],
             "skipFiles": [
                 "<node_internals>/**",
-                "node_modules/**"
+                "${workspaceFolder}/api/node_modules/**"
             ]
         },
         {
@@ -36,10 +38,12 @@
             "port": 3302, // this MUST match "DISCORD_DEBUG_PORT" in the .env
             "restart": true,
             "localRoot": "${workspaceFolder}/discord",
-            "remoteRoot": "/app",
+            "remoteRoot": "/app/discord",
+            "sourceMaps": true,
+            "outFiles": ["${workspaceFolder}/discord/dist/**/*.js"],
             "skipFiles": [
                 "<node_internals>/**",
-                "node_modules/**"
+                "${workspaceFolder}/discord/node_modules/**"
             ]
         },
         {

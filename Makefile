@@ -39,7 +39,7 @@ redeploy-service-%:
 	docker compose up --build -d $*
 
 # These are the services we currently support the linting/prettying of
-FIXABLE := api discord
+FIXABLE := api api-contracts api-client discord
 
 # lint a supported service
 lint-%:
@@ -59,8 +59,20 @@ pretty-%:
 
 # lint and pretty a supported service
 fix-%:
+	@if ! echo "$(FIXABLE)" | grep -qw "$*"; then \
+		echo "error: invalid target '$*' (allowed: $(FIXABLE))"; \
+		exit 1; \
+	fi
+	npm run -w @readybot/$* build
 	$(MAKE) lint-$*
 	$(MAKE) pretty-$*
+
+# fix all supported services
+fix-all:
+	@for svc in $(FIXABLE); do \
+		echo "==> fixing $$svc"; \
+		$(MAKE) fix-$$svc || exit 1; \
+	done
 
 # connect to postgres in the docker container as admin
 postgres:

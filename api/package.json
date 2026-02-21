@@ -1,9 +1,11 @@
 {
-  "name": "api",
+  "name": "@readybot/api",
   "type": "module",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --runInBand"
@@ -12,6 +14,7 @@
   "author": "jbird",
   "license": "ISC",
   "dependencies": {
+    "@readybot/api-contracts": "^1.0.0",
     "date-fns": "^4.1.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",

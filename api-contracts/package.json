@@ -1,0 +1,19 @@
+{
+  "name": "@readybot/api-contracts",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is where we put the definitions for api requests and responses.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "jasper",
+  "license": "ISC",
+    "devDependencies": {
+    "@types/node": "^25.0.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
