@@ -268,6 +268,11 @@ which is silly.
 
 # ⭐ Current North Stars:
 
+## Spotify is changing their api
+
+- gonna break a bunch of stuff. 
+https://developer.spotify.com/documentation/web-api/references/changes/february-2026
+
 ## ☠ Kill Shitbot
 
 - I want the shitbot service gone.
