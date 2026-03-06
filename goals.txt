@@ -1,3 +1,34 @@
 update the readme (this goal should be in every goals.txt...)
 
 future work: api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
+
+
+
+rambling. thoughts.
+
+spotify is changing their shit. which. is fucking annoying. 
+
+i want to switch api from typescript to golang while thats still straightforwardish. 
+
+i want to bring in all the relevant bits from what remains in that huge ballot-sync pr.
+
+i want to kill shitbot
+
+i want to make some sort of special spotify client thing. 
+
+i dont want to do development in shitbot
+
+a dream sort of world: all new/updated spotify api code is implemented in a way that i can just use in the api.
+- rules out updating shitbot, or any sort of javascript spotify client stuff.
+- consider: list all the functionality that will break, and prioritize getting that into goodbot first.
+    - this means:
+        - shifting over to a golang api before spotify breaks on the 6th. 
+        - getting broken/fixed stuff into goodbot
+
+
+stuff i want to work:
+- get info about current song for upvote/downvote ✅
+- MAYBE skip/prev ✅
+- shuffle a playlist
+    - clear a playlist `clearPlaylist`
+    - `addSongsToPlaylist`
