@@ -11,7 +11,7 @@ const getTracks = (playlistID) => {
         bot.spotifyApi.getPlaylist(playlistID)
 
             //send the length of the playlist into this.reading so that reading knows how much to scan
-            .then((playlistInfo) => gettingTracks(playlistInfo.body.tracks.total, playlistID))
+            .then((playlistInfo) => gettingTracks(playlistInfo.body.items.total, playlistID))
 
             //resolve the tracks back out to the promise
             .then((tracks) => resolve(tracks))
@@ -54,10 +54,22 @@ const gettingTracks = (goal, playlistID, totTracks = [], newTracks = []) => {
         //otherwise
         else {
             //get the next batch of tracks
-            bot.spotifyApi.getPlaylistTracks(playlistID, { offset: totTracks.length })
 
+            // direct api call here because spotify changed the api and the wrapper isnt maintained and we're gonna do something smart when shitbot is dead 
+            fetch(`https://api.spotify.com/v1/playlists/${playlistID}/items?offset=${totTracks.length}`, {
+                headers: { 'Authorization': `Bearer ${bot.spotifyApi.getAccessToken()}` }
+            })
+                .then(res => {
+                    if (!res.ok) {
+                        const err = new Error('HTTP error');
+                        err.statusCode = res.status;
+                        throw err;
+                    }
+                    return res.json();
+                })
+                
                 //pass that next batch into the next step of this.reading
-                .then((tracksInfo) => gettingTracks(goal, playlistID, totTracks, tracksInfo.body.items))
+                .then(data => gettingTracks(goal, playlistID, totTracks, data.items))
 
                 //the results of that step will be the final results (recursion go brrr)
                 .then((result) => resolve(result))
@@ -236,18 +248,30 @@ const adjust = (adjustments) => {
 
             //if the adjustment is a clear
             if (template.adjustment === "clear") {
-                //convert the uris to a list of objects (api is stupid)
-                let objectUris = [];
-
-                uris.forEach(uri => {
-                    objectUris.push({ uri: uri });
-                });
-
-                console.log("removing " + objectUris.length + " songs from playlist " + template.id);
+                console.log("removing " + uris.length + " songs from playlist " + template.id);
 
                 //remove the provided uris from the template's playlist
-                bot.spotifyApi.removeTracksFromPlaylist(template.id, objectUris)
+                // direct api call here because spotify changed the api and the wrapper isnt maintained and we're gonna do something smart when shitbot is dead 
+                const body = JSON.stringify({ items: uris.map(uri => ({ uri })) });
+                console.log("DELETE body:", body);
 
+                fetch(`https://api.spotify.com/v1/playlists/${template.id}/items`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${bot.spotifyApi.getAccessToken()}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: body
+                }).then(res => {
+                    if (!res.ok) {
+                        return res.json().then(body => {
+                            const err = new Error('HTTP error');
+                            err.statusCode = res.status;
+                            err.spotifyError = body;
+                            throw err;
+                        });
+                    }
+                })
                     //on success, adjust the remaining adjustments
                     .then(() => adjust(adjustments))
 
@@ -256,6 +280,8 @@ const adjust = (adjustments) => {
 
                     //error handling
                     .catch(function (error) {
+                        console.log('spotify error body:', error.spotifyError);
+
                         //if it is a server error we can just retry
                         if (error.statusCode === 500 || error.statusCode === 502) {
                             //report server error to console
@@ -284,7 +310,21 @@ const adjust = (adjustments) => {
                 console.log("adding " + uris.length + " songs to playlist " + template.id);
 
                 //add the provided uris to the template's playlist
-                bot.spotifyApi.addTracksToPlaylist(template.id, uris)
+                // direct api call here because spotify changed the api and the wrapper isnt maintained and we're gonna do something smart when shitbot is dead 
+                fetch(`https://api.spotify.com/v1/playlists/${template.id}/items`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${bot.spotifyApi.getAccessToken()}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ uris })
+                }).then(res => {
+                    if (!res.ok) {
+                        const err = new Error('HTTP error');
+                        err.statusCode = res.status;
+                        throw err;
+                    }
+                })
 
                     //on success, adjust the remaining adjustments
                     .then(() => adjust(adjustments))

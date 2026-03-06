@@ -1,3 +1,6 @@
 update the readme (this goal should be in every goals.txt...)
 
-future work: api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
+Ongoing...
+- api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
+- i want to switch api from typescript to golang while thats still straightforwardish. 
+- i want to bring in all the relevant bits from what remains in that huge ballot-sync pr.

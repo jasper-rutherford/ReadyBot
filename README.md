@@ -336,6 +336,7 @@ tbd
 
 ## ❓ Clean up these various todos...?
 
+- restoring prod backups into a dev env is really fucking annoying and sucks
 - bruno setup instructions
 - bruno generally
 - postgres health check in regular docker like in ci/cd ?
