@@ -62,7 +62,7 @@ const nextSong = (bot) => {
 
 // toggles whether or not to use the query interval or to go by all time
 const toggleInterval = (bot) => {
-    bot.queryInterval = bot.queryInterval == "" ? bot.baseInterval : ""
+    bot.queryInterval = bot.queryInterval !== bot.baseInterval ? bot.baseInterval : ""
     bot.updateUtilityMessage()
 }
 
