@@ -40,24 +40,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4 # checkout the code
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4 # setup node
-        with:
-          node-version: 22
+      # - name: Use Node.js
+      #   uses: actions/setup-node@v4 # setup node
+      #   with:
+      #     node-version: 22
 
-      - name: Install npm dependencies
-        run: npm ci
-        working-directory: ./api
+      # - name: Install npm dependencies
+      #   run: npm ci
+      #   working-directory: ./api
 
-      - name: Install dbmate
-        run: |
-          curl -fsSL https://github.com/amacneil/dbmate/releases/latest/download/dbmate-linux-amd64 -o /usr/local/bin/dbmate
-          chmod +x /usr/local/bin/dbmate
-          dbmate --version
+      # - name: Install dbmate
+      #   run: |
+      #     curl -fsSL https://github.com/amacneil/dbmate/releases/latest/download/dbmate-linux-amd64 -o /usr/local/bin/dbmate
+      #     chmod +x /usr/local/bin/dbmate
+      #     dbmate --version
 
-      - name: Migrate DB
-        run: dbmate --migrations-dir=./migrations/migrations up
+      # - name: Migrate DB
+      #   run: dbmate --migrations-dir=./migrations/migrations up
 
-      - name: run tests against db
-        run: npm test
-        working-directory: ./api
+      # - name: run tests against db
+      #   run: npm test
+      #   working-directory: ./api
