@@ -20,6 +20,7 @@ its on discord only for like, a hyper lazy cross platform interface.
 - we want to ~~destroy~~ slowly disassemble this into the other services.
 
 ### 2. API
+- we are shifting from ts to golang. service is currently commented out in docker compose as wip. under construction.
 - theres good bones here. it exists. theres a few endpoints. they get... sorta tested. 
 - testing exists in ci/cd. bruno exists. 
 - existing endpoints:
