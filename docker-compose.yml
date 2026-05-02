@@ -1,14 +1,15 @@
 services:
-  # api: commented out as first steps away from ts and towards golang
-  #   build:
-  #     context: ./api
-  #   restart: always
-  #   env_file:
-  #     - ./api/.env
-  #     - .env
-  #   ports:
-  #     - "${API_PORT}:${API_PORT}"
-  #     - "${API_DEBUG_PORT}:${API_DEBUG_PORT}"
+  api: 
+    build:
+      context: ./api
+    # commented while migrating to golang. uncomment as necessary. 
+    # restart: always 
+    # env_file:
+    #   - ./api/.env
+    #   - .env
+    # ports:
+    #   - "${API_PORT}:${API_PORT}"
+    #   - "${API_DEBUG_PORT}:${API_DEBUG_PORT}"
   postgres:
     build:
       context: ./db

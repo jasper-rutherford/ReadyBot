@@ -211,7 +211,42 @@ rclone config
 cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
 
-### 5. Bruno stuff.
+### 5. Install Golang
+
+```
+# find latest
+GOTAR=$(wget -qO- 'https://go.dev/dl/?mode=json' | grep -o 'go[0-9.]*linux-amd64.tar.gz' | head -1)
+rm index.html
+
+# download
+wget https://go.dev/dl/$GOTAR
+
+# extract
+sudo tar -C /usr/local -xzf $GOTAR
+
+# add to PATH
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+source ~/.bashrc
+
+# verify
+go version
+```
+
+### 5.1 Are you using zsh? If so, do this
+
+```
+# add to zshrc instead so it persists in zsh
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+source ~/.zshrc
+
+# delete the tarball since you don't need it anymore
+rm $GOTAR
+
+# verify
+go version
+```
+
+### N. Bruno stuff.
 
 ```
 todo (include link to download)

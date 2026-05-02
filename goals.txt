@@ -17,7 +17,9 @@ tests
 
 cicd
 
-i say lets just turn off the ts api but keep the code ✅
+
+do empty golang service ✅
+- just a main.go which like. logs hello world. and then dies. ✅
 
 build new service to replace
 - does a golang api
@@ -25,7 +27,6 @@ build new service to replace
 - get a basic/empty golang api service hello world that just prints hello world and doesnt do api server yet
 - then build server on top of that
 
-list endpoints ✅
 existing ts endpoints:
     - GET /hello - responds "hello world" or something
         - migrate to golang
@@ -37,7 +38,6 @@ existing ts endpoints:
         - migrate to golang
         - migrate test
 
-think about cicd ✅
 - what does it do and what is in it
     - starts postgres db up and going
     - runs test file
@@ -50,10 +50,24 @@ think about cicd ✅
     - new test file/framework (some golang test thing)
     - that starts a golang api (todo) and runs tests against that
 
-rename current api to api-ts? no
-- just move contents to new folder api-ts ✅
-- new stuff goes in new api folder
-- cicd just comment out for now ✅
-
 make sure to update precommit/linter stuff to not care about api anymore
 - makefile too probs
+
+
+# we should upgrade the raspi. 
+
+```
+➜  ReadyBot git:(main) dpkg --print-architecture
+armhf
+➜  ReadyBot git:(main) uname -m
+cat /etc/os-release | grep PRETTY_NAME
+aarch64
+PRETTY_NAME="Raspbian GNU/Linux 11 (bullseye)"
+```
+
+we can make it better. 
+- gotta save all the configs
+    - .env
+    - rclone
+- flash it
+- and then redeploy
