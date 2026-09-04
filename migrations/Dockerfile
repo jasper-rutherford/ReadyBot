@@ -1,4 +1,4 @@
-FROM golang:1.24-bullseye AS builder
+FROM golang:1.25-bookworm AS builder
 
 # Get dbmate source and build it
 RUN git clone https://github.com/amacneil/dbmate.git /dbmate && \

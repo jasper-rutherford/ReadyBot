@@ -1,59 +1,29 @@
 update the readme (this goal should be in every goals.txt...)
 
-Ongoing...
-- api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
-    - worry about this after switch to golang
-- i want to switch api from typescript to golang while thats still straightforwardish. 
-- i want to bring in all the relevant bits from what remains in that huge ballot-sync pr.
+In this pr I want to implement/move the back and skip buttons from shitbot to ReadyBot
 
 
-alllways with the goals
+This involves several ideas:
+    - How do I have readybot and shitbot control emojis on the message in the proper order?
+        - have readybot add all emojis to ballot, and update shitbot to ignore rb emojis?
+        - leave initial control emojis in shitbot, have arbie listen instead? ✅
+    - How will readybot access spotify?
+        - authentication?
 
-so. yeah. golang api. we do it. 
+The plan is:
+1. set up spotify client/auth in arbie on startup
+2. have arbie listen for control emojis, and do back/skip accordingly
+3. erase back/skip in shitbot
 
-endpoints
 
-tests
+Spotify Auth
+1. Ideally, on demand a link is provided where I can log in. 
 
-cicd
+on bot startup, try to make a client with a refresh token. 
+if that fails, prompt the user to login at blah/login
 
-i say lets just turn off the ts api but keep the code ✅
-
-build new service to replace
-- does a golang api
-- look over ts api service setup, 
-- get a basic/empty golang api service hello world that just prints hello world and doesnt do api server yet
-- then build server on top of that
-
-list endpoints ✅
-existing ts endpoints:
-    - GET /hello - responds "hello world" or something
-        - migrate to golang
-        - migrate test
-    - GET /scores - gets score values. we should do documentation
-        - migrate to golang
-        - migrate test
-    - POST /ballots - inserts information for a ballot message into the db.
-        - migrate to golang
-        - migrate test
-
-think about cicd ✅
-- what does it do and what is in it
-    - starts postgres db up and going
-    - runs test file
-        - makes connection to db
-        - makes a server
-        - runs tests against server
-        - notably, feels weird that startserver doesnt take vars? it reads vars internally. idk. vibe is weird.
-- and what needs to change
-    - db can stay
-    - new test file/framework (some golang test thing)
-    - that starts a golang api (todo) and runs tests against that
-
-rename current api to api-ts? no
-- just move contents to new folder api-ts ✅
-- new stuff goes in new api folder
-- cicd just comment out for now ✅
-
-make sure to update precommit/linter stuff to not care about api anymore
-- makefile too probs
+there's kind of two spotify things. 
+1. there's the express app which handles the creation of refresh tokens
+    - could this tell arbie when the refresh token exists?
+    - triggering arbie to drop a message saying "hey login worked"
+2. there's spotify clients which login with refresh tokens
