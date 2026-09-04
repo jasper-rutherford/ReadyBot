@@ -1,6 +1,6 @@
 # 💡 there was an idea:
 
-The idea is you can be listening to a song and go "Oh hey I like this song. This is a good song." and then you can do a "like" and record like, the mood you were in when you liked the song. and then those moody likes get recorded to a database, and then you can like. Filter a playlist based on all the songs that fit a particular vibe, within a certain timeframe. 
+The idea is you can be listening to a song and go "Oh hey I like this song. This is a good song." and then you can do a "like" and record the mood you were in when you liked the song. and then those moody likes get recorded to a database, and then you can filter a playlist based on all the songs that fit a particular vibe, within a certain timeframe. 
 
 its on discord only for like, a hyper lazy cross platform interface. 
 
@@ -12,7 +12,7 @@ its on discord only for like, a hyper lazy cross platform interface.
 - this is a bad service. this project was originally just this javascript bot, and there were approximately 9999999 examples of terrible dev practices.
 - a few examples of bad practice:
     - it connects directly to postgres
-    - some core functionality (setting query parameters) is done via a literal admin only backdoor command that runs arbitrary javascript code
+    - ~~some core functionality (setting query parameters) is done via a literal admin only backdoor command that runs arbitrary javascript code~~ ✅
     - i did not understand how to write async code. theres an ungodly amount of unreadable promise chaining.
     - main.js is entirely too long
     - theres a huge singleton "bot" struct which contains everything, does everything, and is passed around all over the place
@@ -47,6 +47,16 @@ its on discord only for like, a hyper lazy cross platform interface.
 - linting and prettying are supported/enforced
 - Commands
     - Ping
+- Has a custom spotify client!
+    - uses the spotify api
+    - Create one with `let client = new SpotifyClient()`
+    - Kick off token refresh with client.kickOffTokenRefresh(channel);
+        - takes a discord channel -> this is where it will send the login page to the user
+    - Manages token refresh all on its own
+        - First tries to grab one from disk
+        - If that fails, directs the user to a login page
+        - Valid tokens are kept valid
+    - Nothing else yet! More to come.
 
 ### 4. Postgres
 - Want to hide this behind the api.
@@ -149,8 +159,8 @@ vi .env
 # do that for each service...
 
 # api...
-cp api/template.env api/.env
-vi api/.env
+cp api-ts/template.env api-ts/.env
+vi api-ts/.env
 
 # discord...
 cp discord/template.env discord/.env
@@ -183,7 +193,7 @@ npm -v
 npm install
 
 # once in api
-( cd api && npm install )
+( cd api-ts && npm install )
 
 # once in discord
 ( cd discord && npm install )
@@ -211,7 +221,64 @@ rclone config
 cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
 
-### 5. Bruno stuff.
+### 5. Install Golang
+#### This snuck its way out of a future golang related pr, and ended up in a pr unrelated to golang. It is not clear to me that this works, but I'm too lazy to figure out where this came from and send it back home. So I'm going to leave this here. Future me: if you do golang things, please check that this works. thanks you.
+```
+# find latest
+GOTAR=$(wget -qO- 'https://go.dev/dl/?mode=json' | grep -o 'go[0-9.]*linux-amd64.tar.gz' | head -1)
+rm index.html
+
+# download
+wget https://go.dev/dl/$GOTAR
+
+# extract
+sudo tar -C /usr/local -xzf $GOTAR
+
+# add to PATH
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+source ~/.bashrc
+
+# verify
+go version
+```
+
+### 5.1 Are you using zsh? If so, do this
+
+```
+# add to zshrc instead so it persists in zsh
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+source ~/.zshrc
+
+# delete the tarball since you don't need it anymore
+rm $GOTAR
+
+# verify
+go version
+```
+
+### 6. Docker... this is not well written... todo...
+#### It is not clear to me that this is completely true and correct,, but it's probably a good starting point. Future me: if you use this and it totally works, please update this heading.
+```
+# Set up Docker's official repository
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+# Install Docker Engine + CLI
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+### N. Bruno stuff.
 
 ```
 todo (include link to download)
@@ -291,7 +358,35 @@ https://developer.spotify.com/documentation/web-api/references/changes/february-
     - Admin
         - /something
 
-ballot+commannds use flow:
+### There is an idea involving switching the api from typescript to golang
+
+- endpoints
+- tests
+- cicd
+- i say lets just turn off the ts api but keep the code ✅
+- build new service to replace
+- does a golang api
+- look over ts api service setup, 
+- get a basic/empty golang api service hello world that just prints hello world and doesnt do api server yet
+- then build server on top of that
+- list endpoints ✅
+- existing ts endpoints:
+    - GET /hello - responds "hello world" or something
+        - migrate to golang
+        - migrate test
+    - GET /scores - gets score values. we should do documentation
+        - migrate to golang
+        - migrate test
+    - POST /ballots - inserts information for a ballot message into the db.
+        - migrate to golang
+        - migrate test
+- make sure to update precommit/linter stuff to not care about api anymore
+- makefile too probs
+- api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
+    - worry about this after switch to golang
+
+
+### There are ideas about ballot+commands use flow:
 - keep ballot message saved. dont send a new one on startup by default.
 - interval + score commands are ephemeral - you send them, they do stuff, they dont leave a message in chat. 
 
@@ -323,13 +418,25 @@ ballot+commannds use flow:
 
 - do we want to still read in all the themojis and keep them in memory?
 
-- custom spotify client thing
-    - within the bot the only spotify shenanigans should be "make a client" and "call things on the client"
-        - ie: any login page stuff should exist within the client code/library, in another file from the discord bot.
-    - token management? hmmm. build in a refresh call, but setup your own clock to call it. or something. 
-        - actually, put this in the client if possible. maybe like a "kick off refresh" thing. but its all managed within the client. how possible is that? idk. 
+### there are ideas of ci/cd
+think about cicd ✅
+- what does it do and what is in it
+    - starts postgres db up and going
+    - runs test file
+        - makes connection to db
+        - makes a server
+        - runs tests against server
+        - notably, feels weird that startserver doesnt take vars? it reads vars internally. idk. vibe is weird.
+- and what needs to change
+    - db can stay
+    - new test file/framework (some golang test thing)
+    - that starts a golang api (todo) and runs tests against that
+- cicd just comment out for now ✅
 
+### Misc other ideas
 - use a .env
+- i want to bring in all the relevant bits from what remains in that huge ballot-sync pr.
+    - https://github.com/jasper-rutherford/ReadyBot/pull/47
 
 ## 📊 Song Visuals
 
@@ -359,6 +466,7 @@ tbd
 # Pull Request Merge Process
 
 - squash all the commits
+    - git rebase main -i  
     - :.,$s/pick/s
 - one nice explanation of what is happening in the squashed commit
 - format the width of the message to 80

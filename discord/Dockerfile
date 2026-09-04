@@ -1,6 +1,9 @@
 # Use a slim Node base image
 FROM node:22-slim
 
+# Recieve the arg that was passed in
+ARG DISCORD_PORT
+
 # Set working dir
 WORKDIR /app
 
@@ -13,6 +16,9 @@ COPY . .
 
 # compile TypeScript to JavaScript
 RUN npm run build
+
+# Port used for spotify web login
+EXPOSE $DISCORD_PORT
 
 ENTRYPOINT ["/bin/sh"]
 

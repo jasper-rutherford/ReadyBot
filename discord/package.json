@@ -12,10 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.25.1",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "open": "^11.0.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^25.0.9",
+    "@types/spotify-web-api-node": "^5.0.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
