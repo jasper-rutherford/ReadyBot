@@ -10,6 +10,7 @@ import {
 } from "./command-logic/handle-commands.js";
 import { BALLOT_CHANNEL_ID, BOT_TOKEN, mustGetEnv } from "./env.js";
 import { detectBallots } from "./ballot-logic.js";
+import { getRefreshToken } from "./spotify-logic/web-page.js";
 
 // make the client
 const client = new Client({
@@ -46,3 +47,9 @@ client.on("messageReactionAdd", async (reaction, user) => {
 
 // let the games begin
 client.login(mustGetEnv(BOT_TOKEN));
+
+console.log("getting token! login at http://127.0.0.1:8888/login");
+
+let token = await getRefreshToken();
+
+console.log("Spotify refresh token:", token);

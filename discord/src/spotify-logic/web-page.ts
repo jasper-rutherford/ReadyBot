@@ -2,6 +2,13 @@ import express, { Request, Response } from "express";
 import querystring from "querystring";
 import open from "open";
 import crypto from "crypto";
+import {
+  SPOTIFY_CLIENT_ID,
+  SPOTIFY_CLIENT_SECRET,
+  SPOTIFY_LOGIN_BASE_URL,
+  BOT_CLIENT_ID,
+  mustGetEnv,
+} from "../env.js";
 
 // high level perspective:
 // discord bot will call getRefreshToken() to get a valid access token for spotify.
@@ -14,7 +21,7 @@ export async function getRefreshToken(): Promise<string> {
   const refreshTokenPromise = createWebServer();
 
   // open the login page in the browser
-  await open("http://127.0.0.1:8888/login"); // todo: read base url from env var
+  await open(mustGetEnv(SPOTIFY_LOGIN_BASE_URL) + "/login");
 
   // wait for the refresh token to be returned from the web server
   try {
@@ -28,8 +35,8 @@ export async function getRefreshToken(): Promise<string> {
 }
 
 // This function creates a web server that handles the Spotify login flow.
-// - /login redirects to the Spotify login page
-// - /callback
+// - /login: redirects to the Spotify login page
+// - /callback:
 //   - handles the redirect back from Spotify after login
 //   - resolves the refresh token into the promise
 //   - closes the server
@@ -40,6 +47,9 @@ function createWebServer(): Promise<string> {
   // we declare this early so that /callback can close the server after it gets the refresh token
   let server: import("http").Server;
 
+  // generated once per server instance, this will be checked against the callback's state
+  const state = crypto.randomBytes(16).toString("hex");
+
   // create the promise that will be resolved when the refresh token exists
   let resolvePromise: (value: string) => void;
   let rejectPromise: (reason?: Error) => void;
@@ -47,9 +57,6 @@ function createWebServer(): Promise<string> {
     resolvePromise = resolve;
     rejectPromise = reject;
   });
-
-  // generated once per server instance, checked against the callback's state param
-  const state = crypto.randomBytes(16).toString("hex");
 
   // this login page redirects to the spotify login page, and then spotify redirects back to /callback
   app.get("/login", function (_req: Request, res: Response) {
@@ -60,8 +67,8 @@ function createWebServer(): Promise<string> {
       "https://accounts.spotify.com/authorize?" +
         querystring.stringify({
           response_type: "code",
-          client_id: process.env.SPOTIFY_CLIENT_ID,
-          redirect_uri: process.env.SPOTIFY_REDIRECT_URI,
+          client_id: mustGetEnv(BOT_CLIENT_ID),
+          redirect_uri: mustGetEnv(SPOTIFY_LOGIN_BASE_URL) + "/callback",
           scope: scope,
           state: state,
         }),
@@ -85,7 +92,7 @@ function createWebServer(): Promise<string> {
       return;
     }
 
-    // handle error
+    // handle errors
     if (error) {
       console.error("Callback Error:", error);
       res.send(`Callback Error: ${error}`);
@@ -112,18 +119,18 @@ function createWebServer(): Promise<string> {
             Authorization:
               "Basic " +
               Buffer.from(
-                `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`,
+                `${mustGetEnv(SPOTIFY_CLIENT_ID)}:${mustGetEnv(SPOTIFY_CLIENT_SECRET)}`,
               ).toString("base64"),
           },
           body: new URLSearchParams({
             code: code,
-            redirect_uri: process.env.SPOTIFY_REDIRECT_URI as string,
+            redirect_uri: mustGetEnv(SPOTIFY_LOGIN_BASE_URL) + "/callback",
             grant_type: "authorization_code",
           }),
         },
       );
 
-      // check if the response is ok
+      // check that the response is ok
       if (!tokenResponse.ok) {
         const errorBody = await tokenResponse.text();
         throw new Error(

@@ -15,5 +15,8 @@
     "eslint": "^9.39.2",
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1"
+  },
+  "dependencies": {
+    "open": "^11.0.2"
   }
 }
