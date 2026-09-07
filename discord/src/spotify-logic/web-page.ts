@@ -1,27 +1,22 @@
 import express, { Request, Response } from "express";
 import querystring from "querystring";
-import open from "open";
 import crypto from "crypto";
 import {
   SPOTIFY_CLIENT_ID,
   SPOTIFY_CLIENT_SECRET,
   SPOTIFY_LOGIN_BASE_URL,
-  BOT_CLIENT_ID,
   mustGetEnv,
 } from "../env.js";
 
 // high level perspective:
 // discord bot will call getRefreshToken() to get a valid access token for spotify.
-// this will put up the webpage and open it in a browser at url/login
+// this will put up the webpage where the user can log in to spotify and authorize the bot to access their account.
 // /login redirects to spotify login page, and then spotify redirects back to /callback
 // when /callback is called, it will return out of getRefreshToken() with a valid access token for spotify or an error
 // then the discord bot can save that token and create a spotify client and do whatever it wants to do.
 export async function getRefreshToken(): Promise<string> {
   // create the web server and receive the refresh token promise
   const refreshTokenPromise = createWebServer();
-
-  // open the login page in the browser
-  await open(mustGetEnv(SPOTIFY_LOGIN_BASE_URL) + "/login");
 
   // wait for the refresh token to be returned from the web server
   try {
@@ -67,7 +62,7 @@ function createWebServer(): Promise<string> {
       "https://accounts.spotify.com/authorize?" +
         querystring.stringify({
           response_type: "code",
-          client_id: mustGetEnv(BOT_CLIENT_ID),
+          client_id: mustGetEnv(SPOTIFY_CLIENT_ID),
           redirect_uri: mustGetEnv(SPOTIFY_LOGIN_BASE_URL) + "/callback",
           scope: scope,
           state: state,

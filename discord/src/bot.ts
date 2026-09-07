@@ -48,6 +48,7 @@ client.on("messageReactionAdd", async (reaction, user) => {
 // let the games begin
 client.login(mustGetEnv(BOT_TOKEN));
 
+// TODO delete this...
 console.log("getting token! login at http://127.0.0.1:8888/login");
 
 let token = await getRefreshToken();
