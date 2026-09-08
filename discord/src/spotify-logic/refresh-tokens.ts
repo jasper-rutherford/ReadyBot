@@ -1,4 +1,4 @@
-import { TextChannel } from "discord.js";
+import { TextChannel, Client } from "discord.js";
 import fs from "fs";
 import express, { Request, Response } from "express";
 import querystring from "querystring";
@@ -11,8 +11,8 @@ import {
   mustGetEnv,
 } from "../env.js";
 
-// TODO: standardize "refresh token" vs "refresh token data" etc...
 // helper function that does exactly what it says on the tin
+// if no 
 function readRefreshTokenDataFromFile(): {
   token: string;
   expirationTimestamp: number;
@@ -275,4 +275,26 @@ function closeWebPage(res: Response) {
         </body>
         </html>
     `);
+}
+
+// use a refresh token to get a fresh access token...
+export async function refreshAccessToken(refreshToken: string): Promise<string> {
+  const result = await fetch("https://accounts.spotify.com/api/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      grant_type: "refresh_token",
+      refresh_token: refreshToken,
+      client_id: mustGetEnv(SPOTIFY_CLIENT_ID),
+    }),
+  });
+  const response = await result.json();
+
+  if (!result.ok) {
+    throw new Error(`Token refresh failed: ${response.error}`);
+  }
+
+  return response.access_token;
 }
