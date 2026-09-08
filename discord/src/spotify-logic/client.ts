@@ -1,6 +1,5 @@
-import { TextChannel } from "discord.js";
-import { getRefreshToken } from "./refresh-token.js";
-import { mustGetEnv, SPOTIFY_CLIENT_ID } from "../env.js";
+import { TextChannel, Client } from "discord.js";
+import { getRefreshToken, refreshAccessToken } from "./refresh-tokens.js";
 
 // the plan is this:
 // 1. a constant spotify client declared in bot.ts
@@ -13,8 +12,7 @@ export class SpotifyClient {
     this.accessToken = "";
   }
 
-  // channel is used to alert the user to log in to spotify when the refresh token expires
-  // todo: write that nicer
+  // this function starts a background process which will always keep the access token refreshed and goodly
   public async kickOffTokenRefresh(channel: TextChannel) {
     // set initial access token
     let refreshToken = await getRefreshToken(channel);
@@ -37,26 +35,4 @@ export class SpotifyClient {
   public printAccessToken() {
     console.log(`access token is: [${this.accessToken}]`);
   }
-}
-
-// get a fresh access token...
-async function refreshAccessToken(refreshToken: string): Promise<string> {
-  const result = await fetch("https://accounts.spotify.com/api/token", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      grant_type: "refresh_token",
-      refresh_token: refreshToken,
-      client_id: mustGetEnv(SPOTIFY_CLIENT_ID),
-    }),
-  });
-  const response = await result.json();
-
-  if (!result.ok) {
-    throw new Error(`Token refresh failed: ${response.error}`);
-  }
-
-  return response.access_token;
 }
