@@ -50,15 +50,17 @@ function saveRefreshTokenDataToFile(
 }
 
 // discord bot will call getRefreshToken() to get a valid access token for spotify
-export async function getRefreshTokenData(
-  channel: TextChannel,
-): Promise<{ token: string; expirationTimestamp: number }> {
+export async function getRefreshToken(channel: TextChannel): Promise<string> {
   // read refresh token and expiration timestamp from file
   let tokenData = readRefreshTokenDataFromFile();
 
   // if token exists and is not expired, return it
-  if (tokenData && tokenData.expirationTimestamp > Date.now()) {
-    return tokenData;
+  // buffer of 20 minutes on the expiry, just to be extra safe
+  if (
+    tokenData &&
+    tokenData.expirationTimestamp > Date.now() + 1000 * 60 * 20
+  ) {
+    return tokenData.token;
   }
 
   // tell user to log in to spotify to authorize the bot
@@ -68,13 +70,13 @@ export async function getRefreshTokenData(
 
   // get new refresh token/expiration timestamp
   let token = await getNewRefreshTokenData();
-  let timestamp = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5.5; // 5.5 months in the future, just to be safe
+  let timestamp = Date.now() + 1000 * 60 * 60 * 24 * 30 * 6; // expires every 6 months
 
   // save new token/expiration timestamp to file
   saveRefreshTokenDataToFile(token, timestamp);
 
   // return token
-  return { token: token, expirationTimestamp: timestamp };
+  return token;
 }
 
 // this will put up the webpage where the user can log in to spotify and authorize the bot to access their account.
