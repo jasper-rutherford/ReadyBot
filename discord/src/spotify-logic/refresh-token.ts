@@ -1,3 +1,5 @@
+import { TextChannel } from "discord.js";
+
 import express, { Request, Response } from "express";
 import querystring from "querystring";
 import crypto from "crypto";
@@ -8,13 +10,48 @@ import {
   mustGetEnv,
 } from "../env.js";
 
-// high level perspective:
-// discord bot will call getRefreshToken() to get a valid access token for spotify.
+// discord bot will call getRefreshToken() to get a valid access token for spotify
+export async function getRefreshToken(
+  channel: TextChannel,
+): Promise<{ token: string; expirationTimestamp: number }> {
+  // read refresh token and expiration timestamp from file
+  let tokenData = getRefreshTokenFromFile();
+
+  // if token exists and is not expired, return it
+  if (tokenData && tokenData.expirationTimestamp > Date.now()) {
+    return tokenData;
+  }
+
+  // tell user to log in to spotify to authorize the bot
+  channel.send(
+    `New refresh token is needed. Login to Spotify here: ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}/login`,
+  );
+
+  // get new refresh token/expiration timestamp
+  let token = await getNewRefreshToken();
+  let timestamp = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5.5; // 5.5 months in the future, just to be safe
+
+  // save to file
+  // todo...
+
+  // return token
+  return { token: token, expirationTimestamp: timestamp };
+}
+
+// TODO...
+function getRefreshTokenFromFile(): {
+  token: string;
+  expirationTimestamp: number;
+} | null {
+  // read refresh token and expiration timestamp from file
+  // todo...
+  return null; // return null if no token exists
+}
+
 // this will put up the webpage where the user can log in to spotify and authorize the bot to access their account.
 // /login redirects to spotify login page, and then spotify redirects back to /callback
 // when /callback is called, it will return out of getRefreshToken() with a valid access token for spotify or an error
-// then the discord bot can save that token and create a spotify client and do whatever it wants to do.
-export async function getRefreshToken(): Promise<string> {
+async function getNewRefreshToken(): Promise<string> {
   // create the web server and receive the refresh token promise
   const refreshTokenPromise = createWebServer();
 
@@ -29,7 +66,9 @@ export async function getRefreshToken(): Promise<string> {
   }
 }
 
-// This function creates a web server that handles the Spotify login flow.
+// This function creates a web server which the user can log into to produce a refresh token.
+// returns a promise that resolves to the refresh token when the user finishes logging in,
+// or rejects if there is an error
 // - /login: redirects to the Spotify login page
 // - /callback:
 //   - handles the redirect back from Spotify after login
@@ -53,7 +92,8 @@ function createWebServer(): Promise<string> {
     rejectPromise = reject;
   });
 
-  // this login page redirects to the spotify login page, and then spotify redirects back to /callback
+  // setup a login page which redirects the user to the spotify login page.
+  // spotify will redirect the user to /callback when the user finishes logging in.
   app.get("/login", function (_req: Request, res: Response) {
     // the minimum scopes that are needed for the spotify api
     const scope = "user-read-private user-read-email"; // TODO
@@ -70,7 +110,7 @@ function createWebServer(): Promise<string> {
     );
   });
 
-  // this callback page is redirected to by spotify after you log in.
+  // spotify will redirect the user here when the user finishes logging in.
   // it does some validation, trades the code for a refresh token,
   // and then resolves the refresh token out to the promise that was returned by createWebServer
   app.get("/callback", async (req: Request, res: Response) => {
@@ -157,7 +197,7 @@ function createWebServer(): Promise<string> {
   server = app.listen(8888, () =>
     // maybe return this message/message discord or something?
     console.log(
-      "HTTP Server up, http://127.0.0.1:8888/login is now available.",
+      `HTTP Server up, ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}/login is now available.`,
     ),
   );
 
@@ -165,6 +205,7 @@ function createWebServer(): Promise<string> {
   return refreshTokenPromise;
 }
 
+// TODO: this doesnt work...
 function closeWebPage(res: Response) {
   // send an html page to the user that closes after a few seconds
   res.send(`

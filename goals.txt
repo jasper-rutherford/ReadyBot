@@ -27,3 +27,9 @@ there's kind of two spotify things.
     - could this tell arbie when the refresh token exists?
     - triggering arbie to drop a message saying "hey login worked"
 2. there's spotify clients which login with refresh tokens
+
+flow:
+bot.ts...
+
+// get refresh token from file
+// 

@@ -10,9 +10,12 @@ import {
 } from "./command-logic/handle-commands.js";
 import { BALLOT_CHANNEL_ID, BOT_TOKEN, mustGetEnv } from "./env.js";
 import { detectBallots } from "./ballot-logic.js";
-import { getRefreshToken } from "./spotify-logic/web-page.js";
+import { getRefreshToken } from "./spotify-logic/refresh-token.js";
 
-// make the client
+// declare a spotify client - once the bot is running it will initialize this
+// todo...
+
+// make the discord client
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds, // see basic information about discord servers
@@ -26,10 +29,25 @@ client.once("clientReady", async () => {
   // register all the commands
   await registerCommands();
 
-  // just send a poc message for now
+  // get the channel where ballots are posted
   let channel = client.channels.cache.get(
     mustGetEnv(BALLOT_CHANNEL_ID),
   ) as TextChannel;
+
+  // get a spotify refresh token
+  console.log("getting spotify refresh token...");
+  let tokenData = await getRefreshToken(channel);
+
+  console.log("spotify refresh token: " + tokenData.token);
+  console.log(
+    "spotify refresh token expiration timestamp: " +
+      tokenData.expirationTimestamp,
+  );
+
+  // initialize the spotify client with the refresh token
+  // todo...
+
+  // just send a poc message for now
   channel.send("ready!");
 });
 
@@ -47,10 +65,3 @@ client.on("messageReactionAdd", async (reaction, user) => {
 
 // let the games begin
 client.login(mustGetEnv(BOT_TOKEN));
-
-// TODO delete this...
-console.log("getting token! login at http://127.0.0.1:8888/login");
-
-let token = await getRefreshToken();
-
-console.log("Spotify refresh token:", token);
