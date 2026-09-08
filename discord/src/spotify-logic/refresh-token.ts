@@ -1,5 +1,5 @@
 import { TextChannel } from "discord.js";
-
+import fs from "fs";
 import express, { Request, Response } from "express";
 import querystring from "querystring";
 import crypto from "crypto";
@@ -7,15 +7,54 @@ import {
   SPOTIFY_CLIENT_ID,
   SPOTIFY_CLIENT_SECRET,
   SPOTIFY_LOGIN_BASE_URL,
+  SPOTIFY_REFRESH_TOKEN_LOCATION,
   mustGetEnv,
 } from "../env.js";
 
+// TODO: standardize "refresh token" vs "refresh token data" etc...
+// helper function that does exactly what it says on the tin
+function readRefreshTokenDataFromFile(): {
+  token: string;
+  expirationTimestamp: number;
+} | null {
+  try {
+    // read the data from the file and parse it as JSON
+    const data = fs.readFileSync(
+      mustGetEnv(SPOTIFY_REFRESH_TOKEN_LOCATION),
+      "utf8",
+    );
+    const parsedData = JSON.parse(data);
+    return {
+      token: parsedData.token,
+      expirationTimestamp: parsedData.expirationTimestamp,
+    };
+  } catch (err) {
+    console.error("Error reading refresh token from file:", err);
+    return null;
+  }
+}
+
+// helper function that does exactly what it says on the tin
+// TODO: make sure this saves to somewhere in docker that also exists outside of docker
+function saveRefreshTokenDataToFile(
+  token: string,
+  expirationTimestamp: number,
+): void {
+  try {
+    const data = JSON.stringify({ token, expirationTimestamp });
+    fs.writeFileSync(mustGetEnv(SPOTIFY_REFRESH_TOKEN_LOCATION), data, "utf8");
+    console.log("Refresh token saved to file");
+  } catch (err) {
+    console.error("Error saving refresh token to file:", err);
+  }
+}
+
 // discord bot will call getRefreshToken() to get a valid access token for spotify
-export async function getRefreshToken(
+export async function getRefreshTokenData(
   channel: TextChannel,
 ): Promise<{ token: string; expirationTimestamp: number }> {
   // read refresh token and expiration timestamp from file
-  let tokenData = getRefreshTokenFromFile();
+  let tokenData = readRefreshTokenDataFromFile();
 
   // if token exists and is not expired, return it
   if (tokenData && tokenData.expirationTimestamp > Date.now()) {
@@ -28,30 +67,20 @@ export async function getRefreshToken(
   );
 
   // get new refresh token/expiration timestamp
-  let token = await getNewRefreshToken();
+  let token = await getNewRefreshTokenData();
   let timestamp = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5.5; // 5.5 months in the future, just to be safe
 
-  // save to file
-  // todo...
+  // save new token/expiration timestamp to file
+  saveRefreshTokenDataToFile(token, timestamp);
 
   // return token
   return { token: token, expirationTimestamp: timestamp };
 }
 
-// TODO...
-function getRefreshTokenFromFile(): {
-  token: string;
-  expirationTimestamp: number;
-} | null {
-  // read refresh token and expiration timestamp from file
-  // todo...
-  return null; // return null if no token exists
-}
-
 // this will put up the webpage where the user can log in to spotify and authorize the bot to access their account.
 // /login redirects to spotify login page, and then spotify redirects back to /callback
 // when /callback is called, it will return out of getRefreshToken() with a valid access token for spotify or an error
-async function getNewRefreshToken(): Promise<string> {
+async function getNewRefreshTokenData(): Promise<string> {
   // create the web server and receive the refresh token promise
   const refreshTokenPromise = createWebServer();
 
@@ -205,7 +234,8 @@ function createWebServer(): Promise<string> {
   return refreshTokenPromise;
 }
 
-// TODO: this doesnt work...
+// TODO: this doesnt work... sometimes.
+// TODO also put this in a separate file mayhaps?
 function closeWebPage(res: Response) {
   // send an html page to the user that closes after a few seconds
   res.send(`

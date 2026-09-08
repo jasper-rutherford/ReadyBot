@@ -10,10 +10,11 @@ import {
 } from "./command-logic/handle-commands.js";
 import { BALLOT_CHANNEL_ID, BOT_TOKEN, mustGetEnv } from "./env.js";
 import { detectBallots } from "./ballot-logic.js";
-import { getRefreshToken } from "./spotify-logic/refresh-token.js";
+import { getRefreshTokenData } from "./spotify-logic/refresh-token.js";
+import { SpotifyClient } from "./spotify-logic/client.js";
 
 // declare a spotify client - once the bot is running it will initialize this
-// todo...
+const spotifyClient = new SpotifyClient();
 
 // make the discord client
 const client = new Client({
@@ -36,8 +37,7 @@ client.once("clientReady", async () => {
 
   // get a spotify refresh token
   console.log("getting spotify refresh token...");
-  let tokenData = await getRefreshToken(channel);
-
+  let tokenData = await getRefreshTokenData(channel);
   console.log("spotify refresh token: " + tokenData.token);
   console.log(
     "spotify refresh token expiration timestamp: " +
@@ -45,7 +45,10 @@ client.once("clientReady", async () => {
   );
 
   // initialize the spotify client with the refresh token
-  // todo...
+  spotifyClient.setRefreshToken(tokenData.token);
+  console.log(
+    `spotify client initialized with refresh token: ${spotifyClient.getRefreshToken()}`,
+  );
 
   // just send a poc message for now
   channel.send("ready!");

@@ -12,6 +12,7 @@ export const SHITBOT_USER_ID = "SHITBOT_USER_ID";
 export const SPOTIFY_CLIENT_ID = "SPOTIFY_CLIENT_ID";
 export const SPOTIFY_CLIENT_SECRET = "SPOTIFY_CLIENT_SECRET";
 export const SPOTIFY_LOGIN_BASE_URL = "SPOTIFY_LOGIN_BASE_URL";
+export const SPOTIFY_REFRESH_TOKEN_LOCATION = "SPOTIFY_REFRESH_TOKEN_LOCATION";
 
 // retrieves an environment variable or throws an error if it is not set
 export function mustGetEnv(env: string): string {
