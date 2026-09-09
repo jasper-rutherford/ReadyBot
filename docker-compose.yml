@@ -67,7 +67,11 @@ services:
       - .env
     ports:
       - "${DISCORD_DEBUG_PORT}:${DISCORD_DEBUG_PORT}"
+      - "8888:8888" # for spotify web login (http://127.0.0.1:8888/login)
+    volumes:
+      - discorddata:/data # persist the spotify refresh token data (and nothing else)
 
 volumes:
   shitbotdata:
+  discorddata:
   pgdata:
