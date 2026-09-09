@@ -323,8 +323,6 @@ which is silly.
 
 ### - A way to automagically deploy to raspi could be really really cool. 
 
-## easier way to auth spotify, they made it so you have to log in more frequently
-
 # ⭐ Current North Stars:
 
 ## Spotify is changing their api

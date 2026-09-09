@@ -1,4 +1,4 @@
-import { TextChannel, Client } from "discord.js";
+import { TextChannel } from "discord.js";
 import { getRefreshToken, refreshAccessToken } from "./refresh-tokens.js";
 
 // the plan is this:
@@ -6,9 +6,6 @@ import { getRefreshToken, refreshAccessToken } from "./refresh-tokens.js";
 // 2. on startup the bot will set a ballot channel
 // 3. on every api call the spotify client will ensure access token, which will ensure refresh token.
 export class SpotifyClient {
-
-
-  
   private accessToken: string;
 
   constructor() {

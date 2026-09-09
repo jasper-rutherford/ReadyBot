@@ -16,7 +16,7 @@ import { SpotifyClient } from "./spotify-logic/client.js";
 const spotifyClient = new SpotifyClient();
 
 // make the discord client
-const client = new Client({
+const discordClient = new Client({
   intents: [
     GatewayIntentBits.Guilds, // see basic information about discord servers
     GatewayIntentBits.GuildMessages,
@@ -25,12 +25,12 @@ const client = new Client({
 });
 
 // tell it what to do when its up and ready
-client.once("clientReady", async () => {
+discordClient.once("clientReady", async () => {
   // register all the commands
   await registerCommands();
 
   // get the channel where ballots are posted
-  let channel = client.channels.cache.get(
+  let channel = discordClient.channels.cache.get(
     mustGetEnv(BALLOT_CHANNEL_ID),
   ) as TextChannel;
 
@@ -42,16 +42,16 @@ client.once("clientReady", async () => {
 });
 
 // Handle commands
-client.on("interactionCreate", async (interaction: Interaction) => {
+discordClient.on("interactionCreate", async (interaction: Interaction) => {
   // only support / commands for now
   if (!interaction.isChatInputCommand()) return;
   await handleCommand(interaction);
 });
 
 // Handle reactions
-client.on("messageReactionAdd", async (reaction, user) => {
+discordClient.on("messageReactionAdd", async (reaction, user) => {
   await detectBallots(reaction, user);
 });
 
 // let the games begin
-client.login(mustGetEnv(BOT_TOKEN));
+discordClient.login(mustGetEnv(BOT_TOKEN));

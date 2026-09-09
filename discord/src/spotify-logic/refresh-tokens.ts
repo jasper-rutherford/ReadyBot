@@ -1,4 +1,4 @@
-import { TextChannel, Client } from "discord.js";
+import { TextChannel } from "discord.js";
 import fs from "fs";
 import express, { Request, Response } from "express";
 import querystring from "querystring";
@@ -12,7 +12,7 @@ import {
 } from "../env.js";
 
 // helper function that does exactly what it says on the tin
-// if no 
+// if no data is found then this will return null
 function readRefreshTokenDataFromFile(): {
   token: string;
   expirationTimestamp: number;
@@ -35,7 +35,6 @@ function readRefreshTokenDataFromFile(): {
 }
 
 // helper function that does exactly what it says on the tin
-// TODO: make sure this saves to somewhere in docker that also exists outside of docker
 function saveRefreshTokenDataToFile(
   token: string,
   expirationTimestamp: number,
@@ -49,9 +48,12 @@ function saveRefreshTokenDataToFile(
   }
 }
 
-// discord bot will call getRefreshToken() to get a valid access token for spotify
+// One way or another, this will get you a valid refresh token.
+// 1. It will try to load a valid token from the disk
+// 2. If that fails, it will put up a web server and prompt the user to login
+// if a new token is created via option 2), then that token will be saved to disk.
 export async function getRefreshToken(channel: TextChannel): Promise<string> {
-  // read refresh token and expiration timestamp from file
+  // read refresh token data from file
   let tokenData = readRefreshTokenDataFromFile();
 
   // if token exists and is not expired, return it
@@ -64,15 +66,15 @@ export async function getRefreshToken(channel: TextChannel): Promise<string> {
   }
 
   // otherwise, tell user to log in to spotify to authorize the bot
-  channel.send(
+  await channel.send(
     `New refresh token is needed. Login to Spotify here: ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}/login`,
   );
 
-  // get new refresh token/expiration timestamp
-  let token = await getNewRefreshTokenData();
+  // get new refresh token data
+  let token = await getNewRefreshToken();
   let timestamp = Date.now() + 1000 * 60 * 60 * 24 * 30 * 6; // expires every 6 months
 
-  // save new token/expiration timestamp to file
+  // save new token data to file
   saveRefreshTokenDataToFile(token, timestamp);
 
   // return token
@@ -82,14 +84,14 @@ export async function getRefreshToken(channel: TextChannel): Promise<string> {
 // this will put up the webpage where the user can log in to spotify and authorize the bot to access their account.
 // /login redirects to spotify login page, and then spotify redirects back to /callback
 // when /callback is called, it will return out of getRefreshToken() with a valid access token for spotify or an error
-async function getNewRefreshTokenData(): Promise<string> {
+async function getNewRefreshToken(): Promise<string> {
   // create the web server and receive the refresh token promise
   const refreshTokenPromise = createWebServer();
 
   // wait for the refresh token to be returned from the web server
   try {
     const refreshToken = await refreshTokenPromise;
-    console.log("refresh token received from web server: " + refreshToken);
+    console.log(`refresh token received from web server: ${refreshToken}`);
     return refreshToken;
   } catch (error) {
     console.error("error getting refresh token from web server: " + error);
@@ -98,8 +100,8 @@ async function getNewRefreshTokenData(): Promise<string> {
 }
 
 // This function creates a web server which the user can log into to produce a refresh token.
-// returns a promise that resolves to the refresh token when the user finishes logging in,
-// or rejects if there is an error
+// returns a promise that will resolve as the refresh token when the user finishes logging in,
+// or will reject if there is an error
 // - /login: redirects to the Spotify login page
 // - /callback:
 //   - handles the redirect back from Spotify after login
@@ -226,7 +228,6 @@ function createWebServer(): Promise<string> {
 
   // start the server
   server = app.listen(8888, () =>
-    // maybe return this message/message discord or something?
     console.log(
       `HTTP Server up, ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}/login is now available.`,
     ),
@@ -277,8 +278,10 @@ function closeWebPage(res: Response) {
     `);
 }
 
-// use a refresh token to get a fresh access token...
-export async function refreshAccessToken(refreshToken: string): Promise<string> {
+// use a refresh token to get a fresh access token
+export async function refreshAccessToken(
+  refreshToken: string,
+): Promise<string> {
   const result = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {
