@@ -63,7 +63,7 @@ export async function getRefreshToken(channel: TextChannel): Promise<string> {
     return tokenData.token;
   }
 
-  // tell user to log in to spotify to authorize the bot
+  // otherwise, tell user to log in to spotify to authorize the bot
   channel.send(
     `New refresh token is needed. Login to Spotify here: ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}/login`,
   );
