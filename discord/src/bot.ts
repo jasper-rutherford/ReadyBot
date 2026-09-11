@@ -38,7 +38,7 @@ discordClient.once("clientReady", async () => {
   await spotifyClient.kickOffTokenRefresh(channel);
 
   // just send a poc message for now
-  channel.send("ready!");
+  await channel.send("ready!");
 });
 
 // Handle commands

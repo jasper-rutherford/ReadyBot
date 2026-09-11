@@ -4,6 +4,7 @@ import express, { Request, Response } from "express";
 import querystring from "querystring";
 import crypto from "crypto";
 import {
+  DISCORD_PORT,
   SPOTIFY_CLIENT_ID,
   SPOTIFY_CLIENT_SECRET,
   SPOTIFY_LOGIN_BASE_URL,
@@ -67,7 +68,7 @@ export async function getRefreshToken(channel: TextChannel): Promise<string> {
 
   // otherwise, tell user to log in to spotify to authorize the bot
   await channel.send(
-    `New refresh token is needed. Login to Spotify here: ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}/login`,
+    `New refresh token is needed. Login to Spotify here: ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}:${mustGetEnv(DISCORD_PORT)}/login`,
   );
 
   // get new refresh token data
@@ -81,14 +82,13 @@ export async function getRefreshToken(channel: TextChannel): Promise<string> {
   return token;
 }
 
-// this will put up the webpage where the user can log in to spotify and authorize the bot to access their account.
-// /login redirects to spotify login page, and then spotify redirects back to /callback
-// when /callback is called, it will return out of getRefreshToken() with a valid access token for spotify or an error
+// this will get a fresh refresh token by putting up a webpage for a user to login to.
 async function getNewRefreshToken(): Promise<string> {
-  // create the web server and receive the refresh token promise
+  // when the server is created, it returns a promise which will resolve to
+  // a valid refresh token once a user has successfully logged in
   const refreshTokenPromise = createWebServer();
 
-  // wait for the refresh token to be returned from the web server
+  // wait for the refresh token to be resolved from the web server
   try {
     const refreshToken = await refreshTokenPromise;
     console.log(`refresh token received from web server: ${refreshToken}`);
@@ -125,6 +125,9 @@ function createWebServer(): Promise<string> {
     rejectPromise = reject;
   });
 
+  // this is a surprise tool that will help us later
+  const redirectUri = `${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}:${mustGetEnv(DISCORD_PORT)}/callback`
+
   // setup a login page which redirects the user to the spotify login page.
   // spotify will redirect the user to /callback when the user finishes logging in.
   app.get("/login", function (_req: Request, res: Response) {
@@ -136,7 +139,7 @@ function createWebServer(): Promise<string> {
         querystring.stringify({
           response_type: "code",
           client_id: mustGetEnv(SPOTIFY_CLIENT_ID),
-          redirect_uri: mustGetEnv(SPOTIFY_LOGIN_BASE_URL) + "/callback",
+          redirect_uri: redirectUri,
           scope: scope,
           state: state,
         }),
@@ -192,7 +195,7 @@ function createWebServer(): Promise<string> {
           },
           body: new URLSearchParams({
             code: code,
-            redirect_uri: mustGetEnv(SPOTIFY_LOGIN_BASE_URL) + "/callback",
+            redirect_uri: redirectUri,
             grant_type: "authorization_code",
           }),
         },
@@ -227,9 +230,9 @@ function createWebServer(): Promise<string> {
   });
 
   // start the server
-  server = app.listen(8888, () =>
+  server = app.listen(mustGetEnv(DISCORD_PORT), () =>
     console.log(
-      `HTTP Server up, ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}/login is now available.`,
+      `HTTP Server up, ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}:${mustGetEnv(DISCORD_PORT)}/login is now available.`,
     ),
   );
 
@@ -246,7 +249,7 @@ function closeWebPage(res: Response) {
         <head>
             <title>Redirecting...</title>
             <style>
-                #timer {
+                #success {
                     font-size: 20px;
                     text-align: center;
                     margin-top: 100px;
@@ -254,19 +257,16 @@ function closeWebPage(res: Response) {
             </style>
         </head>
         <body>
-            <div id="timer">Successfully logged into Spotify! Closing page in <span id="countdown">5</span> seconds...</div>
+            <div id="success">Successfully logged into Spotify! You may now close this window.</div>
             <script>
-                const countdownElement = document.getElementById('countdown');
-                let countdown = 5; // Change this value to adjust the countdown duration
-
+                // in 5 seconds, try to close the window
+                let countdown = 5;
                 function updateCountdown() {
                     countdown--;
-                    countdownElement.textContent = countdown;
-                    
                     if (countdown === 0) {
                         window.close();
                     } else {
-                        setTimeout(updateCountdown, 1000); // Update countdown every second
+                        setTimeout(updateCountdown, 1000);
                     }
                 }
 
@@ -282,22 +282,34 @@ function closeWebPage(res: Response) {
 export async function refreshAccessToken(
   refreshToken: string,
 ): Promise<string> {
+  // set headers...
+  let headers = {
+    "Content-Type": "application/x-www-form-urlencoded",
+    Authorization: `Basic ${Buffer.from(`${mustGetEnv(SPOTIFY_CLIENT_ID)}:${mustGetEnv(SPOTIFY_CLIENT_SECRET)}`).toString("base64")}`,
+  };
+
+  // set body stuff...
+  let body = new URLSearchParams({
+    grant_type: "refresh_token",
+    refresh_token: refreshToken,
+    client_id: mustGetEnv(SPOTIFY_CLIENT_ID),
+  });
+
+  // send the request
   const result = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      grant_type: "refresh_token",
-      refresh_token: refreshToken,
-      client_id: mustGetEnv(SPOTIFY_CLIENT_ID),
-    }),
+    headers: headers,
+    body: body,
   });
+
+  // parse response as json
   const response = await result.json();
 
+  // check no error
   if (!result.ok) {
     throw new Error(`Token refresh failed: ${response.error}`);
   }
 
+  // great work everyone
   return response.access_token;
 }
