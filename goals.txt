@@ -1,35 +1,12 @@
 update the readme (this goal should be in every goals.txt...)
 
-In this pr I want to implement/move the back and skip buttons from shitbot to ReadyBot
-
+Current Goal: implement/move the back and skip buttons from shitbot to ReadyBot
 
 This involves several ideas:
     - How do I have readybot and shitbot control emojis on the message in the proper order?
         - have readybot add all emojis to ballot, and update shitbot to ignore rb emojis?
         - leave initial control emojis in shitbot, have arbie listen instead? ✅
-    - How will readybot access spotify?
-        - authentication?
 
 The plan is:
-1. set up spotify client/auth in arbie on startup
 2. have arbie listen for control emojis, and do back/skip accordingly
 3. erase back/skip in shitbot
-
-
-Spotify Auth
-1. Ideally, on demand a link is provided where I can log in. 
-
-on bot startup, try to make a client with a refresh token. 
-if that fails, prompt the user to login at blah/login
-
-there's kind of two spotify things. 
-1. there's the express app which handles the creation of refresh tokens
-    - could this tell arbie when the refresh token exists?
-    - triggering arbie to drop a message saying "hey login worked"
-2. there's spotify clients which login with refresh tokens
-
-flow:
-bot.ts...
-
-// get refresh token from file
-// 
