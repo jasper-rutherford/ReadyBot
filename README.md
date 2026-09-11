@@ -149,8 +149,8 @@ vi .env
 # do that for each service...
 
 # api...
-cp api/template.env api/.env
-vi api/.env
+cp api-ts/template.env api-ts/.env
+vi api-ts/.env
 
 # discord...
 cp discord/template.env discord/.env
@@ -183,7 +183,7 @@ npm -v
 npm install
 
 # once in api
-( cd api && npm install )
+( cd api-ts && npm install )
 
 # once in discord
 ( cd discord && npm install )
@@ -211,7 +211,63 @@ rclone config
 cp ~/.config/rclone/rclone.conf ./db-backups/rclone/rclone.conf
 ```
 
-### 5. Bruno stuff.
+### 5. Install Golang
+
+```
+# find latest
+GOTAR=$(wget -qO- 'https://go.dev/dl/?mode=json' | grep -o 'go[0-9.]*linux-amd64.tar.gz' | head -1)
+rm index.html
+
+# download
+wget https://go.dev/dl/$GOTAR
+
+# extract
+sudo tar -C /usr/local -xzf $GOTAR
+
+# add to PATH
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+source ~/.bashrc
+
+# verify
+go version
+```
+
+### 5.1 Are you using zsh? If so, do this
+
+```
+# add to zshrc instead so it persists in zsh
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+source ~/.zshrc
+
+# delete the tarball since you don't need it anymore
+rm $GOTAR
+
+# verify
+go version
+```
+
+### 6. Docker... this is not well written... todo...
+```
+# Set up Docker's official repository
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+# Install Docker Engine + CLI
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+### N. Bruno stuff.
 
 ```
 todo (include link to download)
@@ -291,7 +347,35 @@ https://developer.spotify.com/documentation/web-api/references/changes/february-
     - Admin
         - /something
 
-ballot+commannds use flow:
+### There is an idea involving switching the api from typescript to golang
+
+- endpoints
+- tests
+- cicd
+- i say lets just turn off the ts api but keep the code ✅
+- build new service to replace
+- does a golang api
+- look over ts api service setup, 
+- get a basic/empty golang api service hello world that just prints hello world and doesnt do api server yet
+- then build server on top of that
+- list endpoints ✅
+- existing ts endpoints:
+    - GET /hello - responds "hello world" or something
+        - migrate to golang
+        - migrate test
+    - GET /scores - gets score values. we should do documentation
+        - migrate to golang
+        - migrate test
+    - POST /ballots - inserts information for a ballot message into the db.
+        - migrate to golang
+        - migrate test
+- make sure to update precommit/linter stuff to not care about api anymore
+- makefile too probs
+- api tests for all endpoints should not all be in the same folder, same for endpoints being defined in server.ts 
+    - worry about this after switch to golang
+
+
+### There are ideas about ballot+commands use flow:
 - keep ballot message saved. dont send a new one on startup by default.
 - interval + score commands are ephemeral - you send them, they do stuff, they dont leave a message in chat. 
 
@@ -323,13 +407,32 @@ ballot+commannds use flow:
 
 - do we want to still read in all the themojis and keep them in memory?
 
+### Spotify client?
 - custom spotify client thing
     - within the bot the only spotify shenanigans should be "make a client" and "call things on the client"
         - ie: any login page stuff should exist within the client code/library, in another file from the discord bot.
     - token management? hmmm. build in a refresh call, but setup your own clock to call it. or something. 
         - actually, put this in the client if possible. maybe like a "kick off refresh" thing. but its all managed within the client. how possible is that? idk. 
 
+### there are ideas of ci/cd
+think about cicd ✅
+- what does it do and what is in it
+    - starts postgres db up and going
+    - runs test file
+        - makes connection to db
+        - makes a server
+        - runs tests against server
+        - notably, feels weird that startserver doesnt take vars? it reads vars internally. idk. vibe is weird.
+- and what needs to change
+    - db can stay
+    - new test file/framework (some golang test thing)
+    - that starts a golang api (todo) and runs tests against that
+- cicd just comment out for now ✅
+
+### Misc other ideas
 - use a .env
+- i want to bring in all the relevant bits from what remains in that huge ballot-sync pr.
+    - https://github.com/jasper-rutherford/ReadyBot/pull/47
 
 ## 📊 Song Visuals
 
