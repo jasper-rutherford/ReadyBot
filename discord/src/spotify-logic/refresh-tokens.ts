@@ -45,6 +45,8 @@ function saveRefreshTokenDataToFile(
     fs.writeFileSync(mustGetEnv(SPOTIFY_REFRESH_TOKEN_LOCATION), data, "utf8");
     console.log("Refresh token saved to file");
   } catch (err) {
+    // we can just log this because even if this doesn't save we can
+    // just get another new one as needed
     console.error("Error saving refresh token to file:", err);
   }
 }
@@ -71,7 +73,7 @@ export async function getRefreshToken(channel: TextChannel): Promise<string> {
     `New refresh token is needed. Login to Spotify here: ${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}:${mustGetEnv(DISCORD_PORT)}/login`,
   );
 
-  // get new refresh token data
+  // get new refresh token data from login
   let token = await getNewRefreshToken();
   let timestamp = Date.now() + 1000 * 60 * 60 * 24 * 30 * 6; // expires every 6 months
 
@@ -126,7 +128,7 @@ function createWebServer(): Promise<string> {
   });
 
   // this is a surprise tool that will help us later
-  const redirectUri = `${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}:${mustGetEnv(DISCORD_PORT)}/callback`
+  const redirectUri = `${mustGetEnv(SPOTIFY_LOGIN_BASE_URL)}:${mustGetEnv(DISCORD_PORT)}/callback`;
 
   // setup a login page which redirects the user to the spotify login page.
   // spotify will redirect the user to /callback when the user finishes logging in.
@@ -225,7 +227,7 @@ function createWebServer(): Promise<string> {
 
     // close the server
     server.close(() => {
-      console.log("Web server closed");
+      console.log("server closed");
     });
   });
 
