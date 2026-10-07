@@ -4,7 +4,7 @@
   "private": true,
   "description": "Just here for global linterizing",
   "lint-staged": {
-    "{api,discord}/**/*.{ts,js}": [
+    "{discord,web}/**/*.{ts,js,tsx}": [
       "eslint --config eslint.config.js",
       "prettier --check"
     ]

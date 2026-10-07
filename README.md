@@ -440,7 +440,7 @@ think about cicd ✅
 
 ## 📊 Song Visuals
 
-tbd
+start with a simple graph - pull data from the db and display an ordered list of songs. songs that are in rotation, ordered by total score. bonus points for a slider/text box for interval + min score
 
 ## ❓ Clean up these various todos...?
 
