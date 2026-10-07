@@ -12,7 +12,7 @@ start:
 	@test -f db-backups/rclone/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
 	docker compose up --build -d postgres db-backups
 	$(MAKE) run-migrations
-	docker compose up --build -d shitbot discord
+	docker compose up --build -d shitbot discord web
 	@echo "If you aren't seeing the ballot messages, consider going to http://127.0.0.1:8888/login to authenticate shitbot's spotify."
 
 # this will stop and wipe everything
@@ -32,11 +32,14 @@ start-with-nuke: nuke start
 
 # this is just here so I can press tab and auto-complete most of the target
 redeploy-service-:
-	echo "Redeploy a service by name, e.g. 'redeploy-service-api'"
+	@echo "Redeploy a service by name, e.g. 'redeploy-service-api'"
 
 # Redeploy a specific service by name
 redeploy-service-%:
 	docker compose up --build -d $*
+
+web-dev:
+	(cd ./web && npm run dev)
 
 # These are the services we currently support the linting/prettying of
 FIXABLE := discord web

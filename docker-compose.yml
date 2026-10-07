@@ -72,6 +72,16 @@ services:
       - "${DISCORD_DEBUG_PORT}:${DISCORD_DEBUG_PORT}"
     volumes:
       - discorddata:/data # persist the spotify refresh token data (and nothing else)
+  web:
+    build: 
+      context: ./web
+      args:
+        WEB_PORT: ${WEB_PORT}
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    env_file:
+      - .env
+    restart: always
 
 volumes:
   shitbotdata:
