@@ -61,13 +61,19 @@ services:
   discord:
     build:
       context: ./discord
+      args:
+        DISCORD_PORT: ${DISCORD_PORT}
     restart: always
     env_file:
       - ./discord/.env
       - .env
     ports:
+      - "${DISCORD_PORT}:${DISCORD_PORT}" # for spotify web login (base_url:port/login)
       - "${DISCORD_DEBUG_PORT}:${DISCORD_DEBUG_PORT}"
+    volumes:
+      - discorddata:/data # persist the spotify refresh token data (and nothing else)
 
 volumes:
   shitbotdata:
+  discorddata:
   pgdata:
