@@ -10,6 +10,10 @@
     "{discord,web}/**/*.{ts,js,tsx}": [
       "eslint --config eslint.config.js",
       "prettier --check"
+    ],
+    "{web}/**/*.css": [
+      "stylelint",
+      "prettier --check"
     ]
   },
   "devDependencies": {
