@@ -12,3 +12,11 @@ The plan is:
 3. erase back/skip in shitbot
 
 so i realized that the spotify client needs to be behind the api so that the website AND the discord bot can call/access spotify things. 
+
+
+UI
+Interval:
+- text box (number) + dropdown (hours, days, weeks, months, years)
+score: slider, 0 to [max score in interval] 
+themoji: dropdown
+Go button: send call to api to rebuild playlist accordingly

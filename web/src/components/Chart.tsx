@@ -1,5 +1,5 @@
 import { BarChart } from "@mui/x-charts/BarChart";
-import type { ScoreData } from "./dummydata";
+import type { ScoreData } from "../dummydata";
 
 type Props = { data: ScoreData[] };
 
@@ -34,6 +34,9 @@ export default function ScoreChart({ data }: Props) {
           barLabelPlacement: "outside",
         },
       ]}
+      slotProps={{
+        tooltip: { trigger: "axis" },
+      }}
     />
   );
 }

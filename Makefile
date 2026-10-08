@@ -52,6 +52,7 @@ lint-%:
 		exit 1; \
 	fi
 	npx eslint "$*/**/*.{ts,tsx}" --fix --config ./eslint.config.js
+	npx stylelint "$*/**/*.css"
 
 # pretty up a supported service
 pretty-%:
@@ -59,7 +60,7 @@ pretty-%:
 		echo "error: invalid target '$*' (allowed: $(FIXABLE))"; \
 		exit 1; \
 	fi
-	npx prettier --write "$*/**/*.{ts,tsx}"
+	npx prettier --write "$*/**/*.{ts,tsx,css}"
 
 # lint and pretty a supported service
 fix-%:
