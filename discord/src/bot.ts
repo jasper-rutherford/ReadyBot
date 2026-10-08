@@ -14,6 +14,7 @@ import { SpotifyClient } from "./spotify-logic/client.js";
 
 // initialize this here - the discord bot will kick off token refresh on startup
 const spotifyClient = new SpotifyClient();
+const unused = new SpotifyClient();
 
 // make the discord client
 const discordClient = new Client({
