@@ -35,7 +35,7 @@ discordClient.once("clientReady", async () => {
   ) as TextChannel;
 
   // kick off the spotify client's refresh of tokens
-  await spotifyClient.kickOffTokenRefresh(channel);
+  await spotifyClient.kickOffTokenRefresh(channel);    
 
   // just send a poc message for now
   await channel.send("ready!");
