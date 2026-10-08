@@ -14,7 +14,6 @@ import { SpotifyClient } from "./spotify-logic/client.js";
 
 // initialize this here - the discord bot will kick off token refresh on startup
 const spotifyClient = new SpotifyClient();
-const unused = new SpotifyClient();
 
 // make the discord client
 const discordClient = new Client({
@@ -36,7 +35,7 @@ discordClient.once("clientReady", async () => {
   ) as TextChannel;
 
   // kick off the spotify client's refresh of tokens
-  await spotifyClient.kickOffTokenRefresh(channel);    
+  await spotifyClient.kickOffTokenRefresh(channel);
 
   // just send a poc message for now
   await channel.send("ready!");

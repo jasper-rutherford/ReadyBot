@@ -7,7 +7,6 @@ const ROW_HEIGHT = 40;
 
 export default function ScoreChart({ data }: Props) {
   const sorted = [...data].sort((a, b) => b.score - a.score);
-  const unsorted = [...data].sort((a, b) => b.score - a.score);
   const maxScore = Math.max(...data.map((d) => d.score));
 
   return (
@@ -22,10 +21,12 @@ export default function ScoreChart({ data }: Props) {
           width: 120,
         },
       ]}
-      xAxis={[{ 
-        label: "Score",
-         max: Math.ceil(maxScore * 1.15)
-         }]}
+      xAxis={[
+        {
+          label: "Score",
+          max: Math.ceil(maxScore * 1.15),
+        },
+      ]}
       series={[
         {
           data: sorted.map((d) => d.score),

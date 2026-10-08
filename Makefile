@@ -66,6 +66,11 @@ fix-%:
 	$(MAKE) lint-$*
 	$(MAKE) pretty-$*
 
+fix-everything:
+	@for service in $(FIXABLE); do \
+		$(MAKE) fix-$$service; \
+	done
+
 # connect to postgres in the docker container as admin
 postgres:
 	docker exec -it readybot-postgres-1 psql --username "$(POSTGRES_USER)" --dbname "$(POSTGRES_DB)"

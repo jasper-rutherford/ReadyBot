@@ -3,9 +3,9 @@ import ScoreChart from "./ChartComponent";
 import { dummyScores } from "./dummydata";
 
 function App() {
-  return ( 
+  return (
     <>
-      <ScoreChart data={dummyScores} />    
+      <ScoreChart data={dummyScores} />
     </>
   );
 }
