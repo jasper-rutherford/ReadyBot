@@ -12,7 +12,7 @@ start:
 	@test -f db-backups/rclone/rclone.conf || (echo "Missing ReadyBot/db-backups/rclone.conf - check Readybot/README.md for details" && exit 1)
 	docker compose up --build -d postgres db-backups
 	$(MAKE) run-migrations
-	docker compose up --build -d shitbot discord
+	docker compose up --build -d shitbot discord web
 	@echo "If you aren't seeing the ballot messages, consider going to http://127.0.0.1:8888/login to authenticate shitbot's spotify."
 
 # this will stop and wipe everything
@@ -32,14 +32,18 @@ start-with-nuke: nuke start
 
 # this is just here so I can press tab and auto-complete most of the target
 redeploy-service-:
-	echo "Redeploy a service by name, e.g. 'redeploy-service-api'"
+	@echo "Redeploy a service by name, e.g. 'redeploy-service-api'"
 
 # Redeploy a specific service by name
 redeploy-service-%:
 	docker compose up --build -d $*
 
+web-dev:
+	docker compose down web
+	(cd ./web && npm run dev)
+
 # These are the services we currently support the linting/prettying of
-FIXABLE := api discord
+FIXABLE := discord web
 
 # lint a supported service
 lint-%:
@@ -47,7 +51,8 @@ lint-%:
 		echo "error: invalid target '$*' (allowed: $(FIXABLE))"; \
 		exit 1; \
 	fi
-	npx eslint "$*/**/*.ts" --fix --config ./eslint.config.js
+	npx eslint "$*/**/*.{ts,tsx}" --fix --config ./eslint.config.js
+	npx stylelint "$*/**/*.css"
 
 # pretty up a supported service
 pretty-%:
@@ -55,12 +60,17 @@ pretty-%:
 		echo "error: invalid target '$*' (allowed: $(FIXABLE))"; \
 		exit 1; \
 	fi
-	npx prettier --write "$*/**/*.ts"
+	npx prettier --write "$*/**/*.{ts,tsx,css}"
 
 # lint and pretty a supported service
 fix-%:
 	$(MAKE) lint-$*
 	$(MAKE) pretty-$*
+
+fix-everything:
+	@for service in $(FIXABLE); do \
+		$(MAKE) fix-$$service; \
+	done
 
 # connect to postgres in the docker container as admin
 postgres:

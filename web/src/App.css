@@ -1,0 +1,30 @@
+.controls {
+  background: #f1f1f1;
+  display: flex;
+  gap: 16px; /* Spacing between the inner divs */
+  width: 100%; /* Or whatever width the parent is */
+}
+
+.score-slider {
+  flex: 1;
+  background: #fff8ef;
+}
+
+.interval {
+  flex: 1;
+  background: #effff0;
+
+  .flex {
+    display: flex;
+  }
+}
+
+.sort-button {
+  flex: 1;
+  background: #eff7ff;
+}
+
+.unused {
+  flex: 1;
+  background: #eff7ff;
+}

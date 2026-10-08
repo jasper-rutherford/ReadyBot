@@ -3,9 +3,16 @@
   "type": "module",
   "private": true,
   "description": "Just here for global linterizing",
+  "scripts": {
+    "prepare": "husky"
+  },
   "lint-staged": {
-    "{api,discord}/**/*.{ts,js}": [
+    "{discord,web}/**/*.{ts,js,tsx}": [
       "eslint --config eslint.config.js",
+      "prettier --check"
+    ],
+    "{web}/**/*.css": [
+      "stylelint",
       "prettier --check"
     ]
   },
@@ -13,7 +20,11 @@
     "@typescript-eslint/eslint-plugin": "^8.53.1",
     "@typescript-eslint/parser": "^8.53.1",
     "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
