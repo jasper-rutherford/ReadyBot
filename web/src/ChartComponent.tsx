@@ -7,6 +7,7 @@ const ROW_HEIGHT = 40;
 
 export default function ScoreChart({ data }: Props) {
   const sorted = [...data].sort((a, b) => b.score - a.score);
+  const unsorted = [...data].sort((a, b) => b.score - a.score);
   const maxScore = Math.max(...data.map((d) => d.score));
 
   return (
