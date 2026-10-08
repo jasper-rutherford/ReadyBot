@@ -10,9 +10,10 @@
   background: #fff8ef;
 }
 
-.interval       {
+.interval        {
   flex: 1;
   background: #effff0;
+  color: red;
   color: red;
   color: red;
 }
