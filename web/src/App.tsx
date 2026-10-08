@@ -5,7 +5,7 @@ import { dummyScores } from "./dummydata";
 function App() {
   return ( 
     <>
-      <ScoreChart data={dummyScores} />
+      <ScoreChart data={dummyScores} />    
     </>
   );
 }
