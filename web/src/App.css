@@ -5,7 +5,7 @@
   width: 100%; /* Or whatever width the parent is */
 }
 
-.score {
+.score-slider {
   flex: 1;
   background: #fff8ef;
 }
@@ -13,10 +13,13 @@
 .interval {
   flex: 1;
   background: #effff0;
-  color: red;
+
+  .flex {
+    display: flex;
+  }
 }
 
-.go-button {
+.sort-button {
   flex: 1;
   background: #eff7ff;
 }

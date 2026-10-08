@@ -2,20 +2,17 @@ import "./App.css";
 import ScoreChart from "./components/Chart";
 import { dummyScores } from "./dummydata";
 import ScoreSlider from "./components/ScoreSlider";
-import IntervalTextField from "./components/IntervalTextBox";
+import IntervalDropdown from "./components/Interval";
+import SortButton from "./components/SortButton";
 
 function App() {
   return (
     <>
       <ScoreChart data={dummyScores} />
       <div className="controls">
-        <div className="score">
-          <ScoreSlider />
-        </div>
-        <div className="interval">
-          <IntervalTextField />
-        </div>
-        <div className="go-button">Go</div>
+        <ScoreSlider />
+        <IntervalDropdown />
+        <SortButton />
       </div>
     </>
   );

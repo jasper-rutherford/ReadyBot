@@ -6,18 +6,18 @@ function valuetext(value: number) {
   return `${value}°C`;
 }
 
-function onSliderChange(event: Event, value: number | number[]) {
-  let scoreText = document.getElementById("score-label");
-  if (scoreText) {
-    scoreText.innerHTML = `Score: ${value}`;
+function onSliderChange(_event: Event, value: number | number[]) {
+  let scoreDiv = document.getElementById("score-label");
+  if (scoreDiv) {
+    scoreDiv.innerHTML = `Score: ${value}`;
   }
 }
 
 export default function ScoreSlider() {
   return (
-    <div>
+    <div className="score-slider">
       <Box sx={{ width: 300 }}>
-        <text id="score-label">Score: 0</text>
+        <div id="score-label">Score: 0</div>
         <Slider
           aria-label="score"
           defaultValue={0}
