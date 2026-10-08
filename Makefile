@@ -39,6 +39,7 @@ redeploy-service-%:
 	docker compose up --build -d $*
 
 web-dev:
+	docker compose down web
 	(cd ./web && npm run dev)
 
 # These are the services we currently support the linting/prettying of

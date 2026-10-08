@@ -14,9 +14,9 @@ import { defineConfig, loadEnv } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, path.resolve(__dirname, ".."), ""); 
+  const env = loadEnv(mode, path.resolve(__dirname, ".."), "");
 
-  return  {
+  return {
     plugins: [react()],
     server: {
       host: true,
@@ -30,5 +30,5 @@ export default defineConfig(({ mode }) => {
       //   },
       // },
     },
-  }
+  };
 });

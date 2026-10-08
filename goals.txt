@@ -10,3 +10,5 @@ This involves several ideas:
 The plan is:
 2. have arbie listen for control emojis, and do back/skip accordingly
 3. erase back/skip in shitbot
+
+so i realized that the spotify client needs to be behind the api so that the website AND the discord bot can call/access spotify things. 
