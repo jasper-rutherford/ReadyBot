@@ -1,27 +1,23 @@
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-
-// todo rename
-function valuetext(value: number) {
-  return `${value}°C`;
-}
-
-function onSliderChange(_event: Event, value: number | number[]) {
-  let scoreDiv = document.getElementById("score-label");
-  if (scoreDiv) {
-    scoreDiv.innerHTML = `Score: ${value}`;
-  }
-}
+import { useState } from "react";
 
 export default function ScoreSlider() {
+  // state to hold the score value
+  const [score, setScore] = useState(0);
+
+  // handler for slider change event
+  function onSliderChange(_event: Event, value: number | number[]) {
+    setScore(value as number);
+  }
+
   return (
     <div className="score-slider">
       <Box sx={{ width: 300 }}>
-        <div id="score-label">Score: 0</div>
+        <div id="score-label">Score: {score}</div>
         <Slider
           aria-label="score"
-          defaultValue={0}
-          getAriaValueText={valuetext}
+          defaultValue={score}
           valueLabelDisplay="auto"
           shiftStep={1}
           step={1}

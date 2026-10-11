@@ -1,8 +1,8 @@
 .controls {
   background: #f1f1f1;
   display: flex;
-  gap: 16px; /* Spacing between the inner divs */
-  width: 100%; /* Or whatever width the parent is */
+  gap: 16px;
+  width: 100%;
 }
 
 .score-slider {
